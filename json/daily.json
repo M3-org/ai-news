@@ -6,7 +6,7 @@
       "title": "Crypto Market Overview",
       "content": [
         {
-          "text": "The cryptocurrency market includes various assets with different price points. Wrapped Bitcoin (WBTC) is currently valued at $80,488.74, while Wrapped Ethereum (WETH) is priced at $2,018.31. Solana (SOL) is trading at $126.42, and ai16z is valued at $0.1925.",
+          "text": "The cryptocurrency market includes a variety of assets with different price points. Wrapped Bitcoin (WBTC) is currently valued at $80,488.74, reflecting its close relationship with Bitcoin. Wrapped Ethereum (WETH) is priced at $2,018.31, maintaining its role as a tokenized version of Ethereum. Solana (SOL) is trading at $126.42, continuing to be a key player in the blockchain ecosystem. Meanwhile, ai16z, a lesser-known asset, is priced at $0.1925.",
           "sources": [
             "WBTC: $80,488.74",
             "WETH: $2,018.31",
@@ -23,7 +23,7 @@
       "title": "ElizaOS Build Fixes and Issues",
       "content": [
         {
-          "text": "A fix was implemented to resolve a missing moment rollup external issue in the-org build.",
+          "text": "A fix has been implemented to resolve a missing moment rollup external issue in the-org build.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3876"
           ],
@@ -33,7 +33,7 @@
           "videos": []
         },
         {
-          "text": "Core types were added to enable the generation of index.d.ts in the /dist directory, addressing errors related to missing types in imports.",
+          "text": "Core types have been added to enable the generation of index.d.ts in the /dist directory, addressing errors related to missing types in imports.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3875"
           ],
@@ -43,7 +43,7 @@
           "videos": []
         },
         {
-          "text": "A user reported being unable to get past the pnpm install and build process due to an issue with switching pnpm to version 9.15.7. Despite forcing the version switch, build commands failed due to missing pnpm CLI files.",
+          "text": "A user is experiencing issues with pnpm install and build while switching from eliza-starter to the main eliza repository. The error indicates a failure to switch pnpm to version 9.15.7, with missing CLI files causing build failures in multiple packages. Despite forcing pnpm to switch versions, the issue persists.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/3882"
           ],
@@ -56,10 +56,10 @@
       "topic": "build"
     },
     {
-      "title": "Issues and Fixes in ElizaOS Plugins",
+      "title": "Issues with Twitter Plugin and Telegram Plugin Fix",
       "content": [
         {
-          "text": "A user reported an issue with the '@elizaos-plugins/client-twitter' plugin, which fails to process Twitter actions despite all other plugins working correctly. The issue persists regardless of whether 'ragKnowledge' is enabled or disabled. Logs indicate potential problems with embedding inputs and invalid message structures. Additionally, there is a missing package error for '@elizaos-plugins/client-telegram'.",
+          "text": "A user reported an issue with the '@elizaos-plugins/client-twitter' plugin, which fails to process Twitter actions despite all plugins working correctly in previous launches. The issue persists regardless of whether 'ragKnowledge' is enabled or disabled. Logs indicate warnings and errors related to deprecated modules and invalid embedding inputs. Additionally, an error message states 'Error processing tweet undefined.'",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/3877"
           ],
@@ -69,7 +69,7 @@
           "videos": []
         },
         {
-          "text": "A fix was introduced for the '@elizaos-plugins/client-telegram' plugin, adding a 'serviceType' property to support multi-platform functionality for Ruby. This minor change allows for cross-platform testing.",
+          "text": "A fix was introduced for the '@elizaos-plugins/client-telegram' plugin by adding a 'serviceType' property. This change allows multi-platform support for Ruby, enabling cross-platform testing. The fix consists of a single line of code defining 'static serviceType = TELEGRAM_SERVICE_NAME'.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3878"
           ],
@@ -85,7 +85,7 @@
       "title": "ElizaOS Development Updates and Issues",
       "content": [
         {
-          "text": "A fix was implemented to address a missing moment rollup external dependency in the ElizaOS build.",
+          "text": "A fix was implemented to address a missing moment rollup external dependency in the ElizaOS build system.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3876"
           ],
@@ -95,7 +95,7 @@
           "videos": []
         },
         {
-          "text": "Core types were added to enable the generation of index.d.ts in the /dist directory, resolving missing type errors in imports.",
+          "text": "Core types were added to enable the generation of `index.d.ts` in the `/dist` directory, resolving missing type errors in imports.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3875"
           ],
@@ -105,7 +105,7 @@
           "videos": []
         },
         {
-          "text": "A user reported being unable to complete the pnpm install and build process due to an issue with switching to pnpm v9.15.7. The error persisted despite manually forcing the version switch.",
+          "text": "A user reported being unable to complete `pnpm install` and build due to an issue with switching to `pnpm v9.15.7`. The error persisted despite manually forcing the version switch.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/3882"
           ],
@@ -130,7 +130,7 @@
           ]
         },
         {
-          "text": "A user encountered an 'Error processing tweet undefined' issue while using the Twitter plugin. Despite ensuring the fork was up to date, Twitter actions failed to process.",
+          "text": "A user encountered an 'Error processing tweet undefined' issue when using the Twitter plugin. The error persisted despite ensuring the fork was up to date and checking various configurations.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/3877"
           ],
@@ -150,7 +150,7 @@
           "videos": []
         },
         {
-          "text": "A minor fix was made to the Telegram plugin, adding a serviceType to support multi-platform functionality for Ruby.",
+          "text": "A minor fix was made to the Telegram plugin, adding `serviceType` to support multi-platform functionality for Ruby.",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/3878"
           ],
