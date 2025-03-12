@@ -6,7 +6,7 @@
       "title": "Crypto Market Overview",
       "content": [
         {
-          "text": "The current cryptocurrency market shows varying prices across different assets. Wrapped Bitcoin (WBTC) is trading at $78,368.58, while Wrapped Ethereum (WETH) is priced at $1,862.91. Solana (SOL) stands at $118.22, and ai16z is valued at $0.181.",
+          "text": "The current cryptocurrency market shows varying prices across different assets. Wrapped Bitcoin (WBTC) is trading at $78,368.58, while Wrapped Ethereum (WETH) is priced at $1,862.91. Solana (SOL) is valued at $118.22, and ai16z is at $0.181.",
           "sources": [
             "WBTC: $78,368.58",
             "WETH: $1,862.91",
@@ -20,30 +20,10 @@
       "topic": "crypto market"
     },
     {
-      "title": "Recent Updates and Fixes in ElizaOS",
+      "title": "ElizaOS Community Updates and Discussions",
       "content": [
         {
-          "text": "A fix for chat bubbles has been implemented, addressing issues related to their display.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/pull/3883"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3883"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A bug related to JSON null value conversion was reported. Previously, `{ \"name\": null }` was being converted to `{ \"name\": \"null\" }`, which is incorrect.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/issues/3886"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3886"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A Chinese AI Agent community discussion group has been introduced.",
+          "text": "A new Chinese AI Agent community group has been introduced.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/3885"
           ],
@@ -53,8 +33,212 @@
           "videos": []
         },
         {
-          "text": "Three contributors merged one pull request, bringing various improvements to the project.",
+          "text": "Newsletter aggregation and processing system shared by `dankvr`, summarizing daily AI news and publishing it weekly via HackMD for peer review.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Rebranding efforts for `<@1300745997625982977>OS` are incomplete due to missing updated contracts for `$ai16z` and `$degenai`.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Discussion on whether BTC, ETH, and SOL price overviews should be included in the newsletter, with concerns about unnecessary noise.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "HackMD collaboration features were discussed, including comments and suggested edits for easier newsletter review.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Proposal for an AIpprentice hackathon game show where AI agents compete as interns, potentially forking Clank Tank to build a demo.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Concerns raised about the project's ticker and branding, with suggestions for a rebrand post-v2 to improve perception.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Discussion on renaming the project to 'ElizaOS' instead of 'ELIZA' to avoid confusion with another brand.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Offer to help deploy an Op Stack rollup using Rollkit.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Speculation on AI eventually determining tokenomics for ElizaOS.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Governance mapping project initiated, potentially involving the Stanford Blockchain Club.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "ai"
+    },
+    {
+      "title": "Fix Chat Bubbles",
+      "content": [
+        {
+          "text": "A fix for chat bubbles has been proposed.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3883"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3883"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A request for a relevant Discord chat transcript was made, but no transcript was provided.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1326603270893867064"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "chat"
+    },
+    {
+      "title": "JSON Data Handling and Automation Issues",
+      "content": [
+        {
+          "text": "A bug was reported where JSON null values are being converted to string 'null'. For example, `{ \"name\": null }` is incorrectly transformed into `{ \"name\": \"null\" }`. This issue needs to be addressed to ensure proper data integrity.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3886"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3886"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A JSON feed issue was identified where `https://m3-org.github.io/ai-news/json/daily.json` returned a 404 error. The issue was resolved. Additionally, there was a discussion on automating the news update process to run continuously instead of requiring manual execution. Other topics included GPU rental considerations for hosting, media screen readiness, and the creation of a contestant introduction template using After Effects or DaVinci Resolve.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1313222089271939102"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "json"
+    },
+    {
+      "title": "ElizaOS Development Updates and Community Discussions",
+      "content": [
+        {
+          "text": "A pull request was merged to fix chat bubbles in ElizaOS.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3883"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3883"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A bug was reported where JSON null values were being converted to string 'null'.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3886"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3886"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A Chinese AI Agent community group was shared.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3885"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3885"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Three contributors merged one pull request, with various improvements made.",
           "sources": [],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A Discord discussion covered multiple technical issues, including Discord client connection problems, Twitter plugin registration, model switching issues, and plugin installation errors. Solutions and troubleshooting steps were provided.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The team decided to integrate Spartan (formerly Degen Spartan) into ElizaOS v2 for trading, LP management, and intel gathering. Codebase consolidation into a monorepo was completed, and bug-fixing is ongoing.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1308149076893630555"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A newsletter aggregation system was discussed, along with rebranding concerns and contract updates for $ai16z and $degenai. A hackathon game show idea called AIpprentice was proposed.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1328592959444095038"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Discussions on rebranding ElizaOS, deploying an Op Stack rollup, AI-driven tokenomics, and a governance mapping project took place.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A JSON feed issue was resolved, and suggestions were made for automating news updates. A contestant introduction template was requested, with software recommendations provided.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1313222089271939102"
+          ],
           "images": [],
           "videos": []
         }
