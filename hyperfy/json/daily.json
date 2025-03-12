@@ -3,13 +3,65 @@
   "title": "Daily Summary for 2025-03-11",
   "categories": [
     {
-      "title": "Solana (SOL) Price Update",
+      "title": "Technical Discussions and Decisions in Hyperfy Development",
       "content": [
         {
-          "text": "The current price of Solana (SOL) is $118.22.",
+          "text": "The discussion covered various technical topics related to Hyperfy development, including updates to UIImage documentation, precompiled binaries for HypTool, and the effectiveness of fine-tuned models versus contextual hyp inputs. Other key topics included refining cursor rules, implementing a third-party plugin system, enabling model loading from URLs, and setting up a Cloudflare worker for hyp hosting.",
           "sources": [
-            "Symbol: SOL, Current Price: $118.223092078"
+            "https://discord.com/channels/958209073277456457/994775534733115412"
           ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Concrete solutions discussed included a structured third-party plugin system, direct hyp downloads via Cloudflare, live script editing through an in-world chat interface, and auto-reloading apps using `App.build()`. Additionally, a local development sync system was proposed to streamline real-time editing.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/994775534733115412"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A separate chat transcript contained no meaningful technical discussions, only a shared link and a brief comment about Blender 3.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/1031058655581323324"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "technical discussions"
+    },
+    {
+      "title": "Technical Discussions and Updates from Discord",
+      "content": [
+        {
+          "text": "A variety of technical discussions and decisions were made, including updates to UIImage documentation, precompiled binaries for HypTool, and considerations for fine-tuned models versus contextual hyp inputs. Other topics included third-party plugin systems, model loading from URLs, Cloudflare worker setup for hyp hosting, and an in-world media manager. Additionally, live script editing, auto-reloading apps, and local development sync were explored.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/994775534733115412"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "No significant technical discussions, decisions, or problem-solving occurred in this chat segment.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/958209074045026327"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The provided chat transcript does not contain any meaningful technical discussions, decisions, or problem-solving. It only includes a link shared by the user `toxsam` and a brief comment about Blender 3.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/1031058655581323324"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Symbol: SOL, Current Price: $118.2230920777866",
+          "sources": [],
           "images": [],
           "videos": []
         }
