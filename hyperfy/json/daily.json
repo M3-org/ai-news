@@ -3,52 +3,29 @@
   "title": "Daily Report - 2025-04-12",
   "categories": [
     {
-      "title": "Hyperfy Platform Development and Features",
+      "title": "Recent Hyperfy Platform Updates",
       "content": [
         {
-          "text": "Hyperfy is developing new video functionality with significant technical advancements. A key highlight is the introduction of 360-degree video support and curved video viewers. Implementation details shared by ashxn.eth include a platform for viewing 360 videos in development environments, methods to download 360 videos from YouTube using socialplug.io, and support for m3u8 streaming. There are file size limitations in worlds that may need adjustment for videos to save properly. Documentation for the new video node has been shared, and there are plans to add screensharing functionality to these video components.",
-          "sources": "https://discord.com/channels/958209073277456457/994775534733115412",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The community is discussing Hyperfy's V2 platform development while sharing experiences with V1 worlds. Members express excitement about V2's potential, noting that it's building a \"VERY strong Foundation\" with \"Palletes\" of apps similar to V1 Worlds. Regarding world ownership, while creators own their world content and code, V2 worlds don't yet have \"Perpetual State\" from \"Rented\" servers, suggesting future \"Decentralized Hosting\" solutions may emerge. Technical issues have been identified with iOS compatibility, particularly with \"video/audio streams.\" The platform's spatial audio system has received positive feedback, and there's interest in highlighting intuitive features for new users.",
-          "sources": "https://discord.com/channels/958209073277456457/958209074045026327",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Several feature requests and technical tasks have been identified across discussions. These include implementing screensharing functionality for video components, addressing world upload file size limitations, developing solutions for \"Perpetual State\" of V2 worlds beyond rented servers, implementing decentralized hosting options, and adding intuitive feature highlights for first-time users. There's also interest in a potential game idea called \"Pump.World\" with an \"Only Up\" style mechanic where users pay to play and can add to the world upon reaching the top.",
-          "sources": "https://discord.com/channels/958209073277456457/994775534733115412, https://discord.com/channels/958209073277456457/958209074045026327",
+          "text": "The Hyperfy platform has introduced new video functionality with several notable features. A key technical highlight is the addition of 360-degree video support and curved video viewers. Implementation details shared by user 'ashxn.eth' include:\n\n- A platform for viewing 360 videos in development environment\n- A method to download 360 videos from YouTube using socialplug.io\n- Information about file size limitations in worlds that may need adjustment\n- Support for m3u8 streaming\n- A curved video viewer implementation\n- Documentation for the new video node\n\nThere are plans to add screensharing functionality to these video components. Additionally, there was a brief discussion about a potential game idea called 'Pump.World' with an 'Only Up' style mechanic.\n\nIn a separate conversation, it was mentioned that something (unspecified) is currently available for Python with Java support coming soon.",
+          "sources": [
+            "https://discord.com/channels/958209073277456457/994775534733115412",
+            "https://discord.com/channels/958209073277456457/1330373197203505185"
+          ],
           "images": [],
           "videos": []
         }
       ],
-      "topic": "hyperfy"
+      "topic": "discord"
     },
     {
-      "title": "Hyperfy Platform Development Updates",
+      "title": "Hyperfy Platform Development and Features",
       "content": [
         {
-          "text": "Hyperfy is actively developing new features for their platform, with significant focus on video functionality. Recent technical highlights include 360-degree video support and curved video viewers. Users can test these features in the development environment by downloading 360 videos from YouTube using socialplug.io. The platform supports m3u8 streaming for live content, though developers should be aware of file size limitations in worlds that may need adjustment for videos to save properly. Documentation for the new video node is available, and there are plans to add screensharing functionality to these video components.",
+          "text": "# Hyperfy Platform Development and Features\n\nThe Hyperfy platform is undergoing significant development with new features being added to enhance user experience and functionality.\n\n## Video Functionality\n\nA major technical highlight is the introduction of 360-degree video support and curved video viewers. Implementation details include:\n\n- A platform for viewing 360 videos in development environment\n- A method to download 360 videos from YouTube using socialplug.io\n- Support for m3u8 streaming\n- A curved video viewer implementation\n- Documentation for the new video node\n\nThere are plans to add screensharing functionality to these video components. Users should be aware of file size limitations in worlds that may need adjustment for videos to save properly.\n\n## V2 Platform Development\n\nThe community is excited about Hyperfy's V2 platform, which is building a \"VERY strong Foundation\" according to users. Features include:\n\n- \"Palletes\" of apps similar to V1 Worlds being created\n- World content and code ownership by creators\n- Current limitations regarding \"Perpetual State\" from \"Rented\" servers, with potential future \"Decentralized Hosting\" solutions\n\n## Technical Issues\n\nSome technical issues have been identified:\n\n- iOS compatibility issues, particularly with video/audio streams\n- Platform-specific loading problems (iPhone users experiencing issues while Android users load perfectly)\n\n## Additional Features\n\n- Positive feedback about Hyperfy's spatial audio system\n- Potential game idea called \"Pump.World\" with an \"Only Up\" style mechanic\n- Python support is currently available with Java support coming soon for an unspecified tool",
           "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The community is discussing both V1 and upcoming V2 platforms. While world content and code is owned by creators, V2 worlds currently don't have \"Perpetual State\" from \"Rented\" servers, suggesting future decentralized hosting solutions may be developed. Technical challenges exist, particularly with iOS compatibility issues related to video/audio streams. The platform has received positive feedback for its spatial audio system, and there's interest in highlighting intuitive features for new users in tutorial experiences.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Community members are also exploring creative applications, including a conceptual game idea called \"Pump.World\" with an \"Only Up\" style mechanic where users would pay to play and could add to the world upon reaching the top.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412"
+            "https://discord.com/channels/958209073277456457/994775534733115412",
+            "https://discord.com/channels/958209073277456457/958209074045026327",
+            "https://discord.com/channels/958209073277456457/1330373197203505185"
           ],
           "images": [],
           "videos": []
