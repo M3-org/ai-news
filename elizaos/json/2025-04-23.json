@@ -1,37 +1,50 @@
 {
-  "type": "dailySummary",
+  "type": "elizaosDailySummary",
   "title": "Daily Report - 2025-04-23",
   "categories": [
     {
-      "title": "Discord Activity Summary - April 23, 2025",
+      "title": "Discord Community Updates: April 23-24, 2025",
       "content": [
         {
-          "text": "## Auto.fun Updates\n\nThe Auto.fun platform is currently in maintenance mode while the team completes upgrades. Many users are eagerly awaiting its return, with some expressing frustration about the delay. The team has stated they want to ensure there are no more scaling issues before relaunching.\n\nA team member confirmed: \"we want to make sure we can release with no more scaling issues and don't have to pull the site again so being extra careful about the release. When it's ready, we'll give the heads up here and in the announcements channel before we do any kind of public marketing.\"\n\nSome tokens created on April 22 cannot currently be queried or traded on the website. The team is aware and has added certain tokens to the import list for when the site returns.\n\nAccess to certain channels appears to be token-gated, with the \"no access\" channel reserved for holders of 100k+ tokens.",
-          "sources": "https://discord.com/channels/1253563208833433701/1361442528813121556, https://discord.com/channels/1253563208833433701/1362864274862768450",
+          "text": "## Auto.fun Status Update\n\nAuto.fun remains in maintenance mode following scaling issues during its initial launch. The team is working through backend upgrades to improve cache and database systems to handle increased workload. Team member Ben shared a detailed go-to-market strategy for the relaunch:\n\n- Launch partners remain engaged and excited despite scheduling delays\n- When live again, the community will be informed first before wider marketing\n- Launch communications will include articles on platform purpose and tokenomics\n- Launch partner spotlight campaign will begin with FightFI on Monday, followed by one launch per day over two weeks\n\nTeam members described the technical challenges as a \"hydra\" where solving one issue reveals additional problems. Some community members have expressed frustration about the lack of specific timeline updates.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1361442528813121556",
+            "https://discord.com/channels/1253563208833433701/1362864274862768450"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "## Eliza Development Discussion\n\nThere were discussions about the upcoming v2 migration for Eliza, with users asking if it was supposed to happen this week. One user noted that the v2-develop branch doesn't have the agent.json file referenced in documentation.\n\nA user reported issues with plugin development, questioning why it only supports local models rather than OpenAI integration. They shared error logs showing problems with the local model:\n\nTypeError: text.match is not a function\n\n\nAnother user asked about URL-to-markdown tools, with recommendations for \"markitdown\" and \"defuddle\" (https://github.com/kepano/defuddle), with defuddle being highlighted as the best option for websites.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "text": "## Eliza v2 Development\n\nEliza v2 is in active development with documentation available at www.eliza.how. Projects are already building on V2, including bioDAO which used it for their BioAgents hackathon. Key features mentioned include:\n\n- Swarm integration enabling agent collaboration\n- Multi-agent Coordination Protocol (MCP)\n- Project manager agent with Trello/Asana integration\n\nDevelopers in the coders channel discussed various technical challenges with the v2 implementation, particularly around plugin development. Several users reported issues with the plugin system in v2, noting that many plugins in the registry don't work with v2 yet. One user mentioned that removing the starterPlugin from index.ts resolved their issues.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "## Discord Summarization Pipeline\n\nUser dankvr (jin) shared that they had \"refactored the discord summarization pipeline today, really dialed it in, nailed it\" and are \"summarizing multiple eliza / partner discords daily, results look fantastic.\" They shared a sample of the output format, noting it was \"perfectly structured for LLMs to ingest.\"\n\nDankvr mentioned the next steps would be \"RAG / AI agent integrations\" and that \"jintern boutta level up fr.\" They also republished a related post to Mirror: https://mirror.xyz/m3org.eth/Cg79LR5HTIomTs_O_YStj6sw6lkhCxop3vTyovnOSKQ\n\nAnother user expressed interest in deploying the tool to their AWS box.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "text": "## DegenSpartan AI Updates\n\nOdilitime confirmed that Spartan is still being actively developed and has not been abandoned. The team achieved several milestones last week and is working on a linktree-like service to consolidate all Spartan/degenai links. \n\nSpartan v2 is integrated with Eliza v2, and its official launch is planned to coincide with the Eliza v2 release. The team plans to have the Spartan Twitter account announced and promoted alongside the AutoFun relaunch.\n\nOdilitime emphasized that information shared in the spartan_holders channel should be considered confidential unless it appears in the normal Spartan room or announcements.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1308149076893630555"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "## Discord Verification Issues\n\nSeveral users reported problems with Discord verification and channel access. Some users lost their verified tags and couldn't see certain channels. A moderator manually assigned verified tags to help resolve these issues, though at least one user reported they could type in channels but still couldn't see content.\n\nUsers were advised to try verifying again, with one user suggesting they might need to connect a different wallet than the one they used when joining.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "text": "## Discord Summarization Tool\n\nUser dankvr mentioned refactoring a Discord summarization pipeline that creates structured summaries optimized for LLM ingestion. He shared a sample of the output format, describing it as \"perfectly structured for LLMs to ingest.\" The next steps mentioned were RAG/AI agent integrations with the summarization pipeline.\n\nDankvr also republished a post to mirror.xyz about this tool: https://mirror.xyz/m3org.eth/Cg79LR5HTIomTs_O_YStj6sw6lkhCxop3vTyovnOSKQ",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "## Token-Gated Access Discussion\n\nThere was a discussion about token-gated access systems, with one user noting that AI16z was among the first to implement token-gated access for partners. Another user pointed out this wasn't a new concept, referencing \"Crypto Kingdom\" from 11 years ago that required 10,000 BTC for top-tier access (\"supernode\" clique), with lesser amounts granting other noble titles.\n\nUsers discussed how proper token-gating of partner groups could drive genuine demand for tokens, but noted they would need to \"step our game up on benefits and privileges of being a partner.\" One user jokingly suggested a \"Premium Prudent Spartan Lounge,\" while another noted that the only tangible benefit over the past 6 months was \"the gold badge\" and a Hyperfy airdrop.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "text": "## Community Suggestions\n\nSeveral community members offered technical suggestions and assistance:\n\n- Implementing token-gated access to auto.fun during the scaling issues (suggested by doriand0963)\n- Creating a better maintenance page with clearer messaging (suggested by mikekme8243)\n- Implementing autoscaling/k8s for stability (offered by yikesawjeez)\n- Moving toward community governance for token policy decisions (suggested by yikesawjeez)\n\nUser osintmao9 shared a technique for using Mistral LLM with uploaded documentation to extract information about Eliza's capabilities, demonstrating how to upload Eliza v2 documentation to Mistral's storage and query it for specific information.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
           "images": [],
           "videos": []
         }
@@ -39,26 +52,125 @@
       "topic": "discord"
     },
     {
+      "title": "Recent ElizaOS Updates and Improvements",
+      "content": [
+        {
+          "text": "# Bug Fixes\n\nSeveral important bug fixes have been implemented in recent pull requests:\n\n- Fixed the \"agent not found\" error that occurred after GUI creation (PR #4337)\n- Improved agent unregistration process with service stop handling (PR #4360)\n- Fixed a small GUI issue (PR #4358)\n- Resolved issues with the TTS API (PR #4352)\n- Fixed CLI agent start functionality (PR #4351)\n- Added a null check for agents (PR #4347)",
+          "sources": "https://github.com/elizaOS/eliza/pull/4337, https://github.com/elizaOS/eliza/pull/4360, https://github.com/elizaOS/eliza/pull/4358, https://github.com/elizaOS/eliza/pull/4352, https://github.com/elizaOS/eliza/pull/4351, https://github.com/elizaOS/eliza/pull/4347",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# New Features\n\nElizaOS has been enhanced with several new features:\n\n- Added support for path parameter routes in plugins (PR #4335)\n- Implemented a feature to skip displaying banner if not UTF-8 (PR #4344)\n- Restored support for Cloudflare LLM logging and tracking (PR #4354)\n- Added docstrings to the cloudflare-logging module (PR #4355)\n- Implemented CLI upgrade suggestions (PR #4350)\n- Added support for relative character paths (PR #4349)\n- Introduced various quality-of-life improvements for V2 (PR #4348)",
+          "sources": "https://github.com/elizaOS/eliza/pull/4335, https://github.com/elizaOS/eliza/pull/4344, https://github.com/elizaOS/eliza/pull/4354, https://github.com/elizaOS/eliza/pull/4355, https://github.com/elizaOS/eliza/pull/4350, https://github.com/elizaOS/eliza/pull/4349, https://github.com/elizaOS/eliza/pull/4348",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Refactoring and Documentation\n\nThe codebase has undergone some refactoring and documentation improvements:\n\n- Improved Telegram markdown parsing (PR #4279)\n- Refactored sidebar and implemented general UI improvements (PR #4353)\n- Added documentation on deploying Eliza to TEE with Oasis ROFL app (PR #4334)\n- Added a blog post about any-provider functionality (PR #4356)\n- Fixed an issue with .gitignore not being copied from plugin-starter (PR #4345)",
+          "sources": "https://github.com/elizaOS/eliza/pull/4279, https://github.com/elizaOS/eliza/pull/4353, https://github.com/elizaOS/eliza/pull/4334, https://github.com/elizaOS/eliza/pull/4356, https://github.com/elizaOS/eliza/pull/4345",
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
       "title": "Recent Pull Requests in elizaOS/eliza Repository",
       "content": [
         {
-          "text": "Several pull requests have been submitted to the elizaOS/eliza repository:\n\n1. PR #4343 by ShahafGaimin adds a new AI Model Provider called Gaimin AI to the platform.\n\n2. PR #4344 by wtfsayo implements a feature to skip displaying the banner if the terminal doesn't support UTF-8 encoding, improving compatibility across different environments.\n\n3. PR #4337 by tcm390 fixes an issue where agents were not found after GUI creation and resolves merge conflicts in the codebase.\n\n4. PR #4345 by yungalgo addresses a problem with the .gitignore file not being properly copied from the plugin-starter template.",
+          "text": "Several pull requests have been submitted to the elizaOS/eliza repository, focusing on new features, bug fixes, and improvements:\n\n- PR #4343 adds Gaimin AI as a new AI Model Provider\n- PR #4344 implements a feature to skip displaying the banner if not using UTF-8\n- PR #4337 fixes an issue where agents were not found after GUI creation and resolves merge conflicts\n- PR #4345 addresses a problem with .gitignore not being copied from the plugin-starter\n- PR #4353 refactors the sidebar and implements general UI improvements\n- PR #4348 adds Quality of Life improvements for V2\n- PR #4279 improves Telegram markdown parsing\n- PR #4361 updates dependencies via Dependabot, bumping the pip group across one directory with two updates",
           "sources": [
             "https://github.com/elizaOS/eliza/pull/4343",
             "https://github.com/elizaOS/eliza/pull/4344",
             "https://github.com/elizaOS/eliza/pull/4337",
-            "https://github.com/elizaOS/eliza/pull/4345"
+            "https://github.com/elizaOS/eliza/pull/4345",
+            "https://github.com/elizaOS/eliza/pull/4353",
+            "https://github.com/elizaOS/eliza/pull/4348",
+            "https://github.com/elizaOS/eliza/pull/4279",
+            "https://github.com/elizaOS/eliza/pull/4361"
           ],
           "images": [
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4343",
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4344",
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4337",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4345"
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4345",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4353",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4348",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4279",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4361"
           ],
           "videos": []
         }
       ],
       "topic": "pull_request"
+    },
+    {
+      "title": "Recent Issues in elizaOS/eliza GitHub Repository",
+      "content": [
+        {
+          "text": "Several issues have been reported in the elizaOS/eliza GitHub repository:\n\n1. Issue #4346: Users are encountering an error when sending messages without an ANTHROPIC_API_KEY, resulting in an \"x-api-key header is required\" error message.\n\n2. Issue #4342: Users are unable to install the @elizaos/plugin-solana plugin, with all installation attempts failing.\n\n3. Issue #4339: The local model is not working properly in plugin development environments.\n\n4. Issue #4357: The @elizaos/plugin-evm plugin is not functioning as expected.\n\nThese issues suggest there may be problems with API key requirements, plugin installation processes, and plugin functionality in the elizaOS/eliza project.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/4346",
+            "https://github.com/elizaOS/eliza/issues/4342",
+            "https://github.com/elizaOS/eliza/issues/4339",
+            "https://github.com/elizaOS/eliza/issues/4357"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4346",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4342",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4339",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4357"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Crypto Market Update",
+      "content": [
+        {
+          "text": "The crypto market shows price fluctuations for key cryptocurrencies. WETH (Wrapped Ethereum) has increased from $1,757.29 to $1,795.58, representing a gain of approximately 2.18%. Similarly, SOL (Solana) has risen from $148.81 to $151.21, showing a gain of about 1.61%. Both cryptocurrencies are demonstrating positive price movement in the latest data.",
+          "sources": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "crypto market"
+    },
+    {
+      "title": "DegenAI/Spartan Development Updates",
+      "content": [
+        {
+          "text": "The Discord chat reveals key information about DegenAI/Spartan development:\n\n- Spartan V2 is integrated into ElizaOS V2, with launch expected within 1-2 weeks\n- A version of Spartan exists on the v2-develop branch of the elizaos/eliza repository\n- The team is developing a \"linktree-like service\" to consolidate Spartan/DegenAI links\n- There's a connection between ai16z transactions and DegenAI, where ai16z transactions create buy pressure for DegenAI\n- The team is planning coordinated announcements with AutoFun for official updates\n- Development continues with \"several milestones achieved last week\"\n- Information shared in the Spartan holder channel is considered confidential until officially announced\n\nUsers have requested more regular updates about DegenAI development on official channels and equal prominence to ai16z in ElizaOS communications.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1308149076893630555"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "communication"
+    },
+    {
+      "title": "3D-AI-TV Channel Activity",
+      "content": [
+        {
+          "text": "On April 24, 2025, user 'boom' (godfreyart) shared a new episode in the 3D-AI-TV channel, mentioning that HD processing was still in progress. The video was shared with two other users (jin and SM Sith Lord). SM Sith Lord commented positively about 'Ai Marc's vismes' in the video. The channel is described as a 'Soundstage for generative content and special 3D projects' within the Working Groups category.",
+          "sources": "https://discord.com/channels/1253563208833433701/1313222089271939102",
+          "images": [],
+          "videos": [
+            "https://www.youtube.com/watch?v=iHDtrpCNB4g"
+          ]
+        }
+      ],
+      "topic": "3d"
     },
     {
       "title": "Discord Chat Analysis: ElizaOS Issues and System Upgrades",
@@ -91,59 +203,12 @@
       "topic": "issues"
     },
     {
-      "title": "Recent GitHub Issues in elizaOS/eliza Repository",
+      "title": "Top contributors for elizaOS/eliza",
       "content": [
         {
-          "text": "Two recent issues have been reported in the elizaOS/eliza GitHub repository:\n\n1. Issue #4346: A user reported an error when attempting to send messages without an ANTHROPIC_API_KEY. The system returns an error message stating \"x-api-key header is required\". This suggests there may be an issue with how the application handles missing API keys or with the error messaging when the key is not provided.\n\n2. Issue #4342: A user is experiencing failures when attempting to install the @elizaos/plugin-solana plugin. All installation attempts have failed, though the specific error details aren't provided in the issue title.",
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the contributors to the elizaOS/eliza project.",
           "sources": [
-            "https://github.com/elizaOS/eliza/issues/4346",
-            "https://github.com/elizaOS/eliza/issues/4342"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4346",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4342"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "issue"
-    },
-    {
-      "title": "Crypto Market Update",
-      "content": [
-        {
-          "text": "Current cryptocurrency prices:\n\n- WETH (Wrapped Ethereum) is trading at $1,757.29\n- SOL (Solana) is trading at $148.81\n\nThese prices reflect the current market values of these popular cryptocurrencies.",
-          "sources": [
-            "Symbol: WETH\n Current Price: $1757.29493119",
-            "Symbol: SOL\n Current Price: $148.81240835"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "crypto market"
-    },
-    {
-      "title": "Bugfix: Agent Not Found Error After GUI Creation",
-      "content": [
-        {
-          "text": "A bug was fixed that addressed an 'agent not found' error that occurred after GUI creation. The fix was implemented in pull request #4337, which also resolved a merge conflict.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/pull/4337"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "completed_items"
-    },
-    {
-      "title": "Top Contributors for elizaOS/eliza",
-      "content": [
-        {
-          "text": "The provided source only mentions 'Top contributors for elizaOS/eliza' without providing any specific details about who these contributors are or their contributions. Without additional information, it's not possible to generate a detailed summary of the top contributors to the elizaOS/eliza project.",
-          "sources": [
-            "text: Top contributors for elizaOS/eliza"
+            "Top contributors for elizaOS/eliza"
           ],
           "images": [],
           "videos": []
@@ -152,40 +217,16 @@
       "topic": "contributors"
     },
     {
-      "title": "ElizaOS Development and Community Updates",
+      "title": "AI-Generated Comedy Concept",
       "content": [
         {
-          "text": "## ElizaOS Development Challenges\n\nUsers are experiencing various technical issues with ElizaOS, particularly regarding the transition between different versions (main branch vs v2-develop). Key challenges include:\n\n- Confusion about wallet integration for multi-user agents\n- Problems with Twitter client functionality for handling replies\n- Discrepancies between documentation and actual code implementation\n- Plugin integration difficulties in v2\n- Local model setup challenges\n- UI functionality issues with image processing\n\nThe v2-develop branch appears to have significant structural changes compared to the main branch (0.x), causing compatibility issues with existing plugins. Users are struggling to understand how to properly implement custom plugins in v2 due to unclear documentation and changing folder structures. There's also confusion about model provider support, with some users noting that v2 seems to primarily support OpenAI and Anthropic while lacking support for other models.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "## Auto.fun Website Updates\n\nThe auto.fun website is currently down for upgrades. Community members are eager for the release, especially given the current market conditions. A team member clarified that they're being cautious with the release to avoid having to take the site down again due to scaling problems:\n\n\"We want to make sure we can release with no more scaling issues and don't have to pull the site again so being extra careful about the release. When it's ready, we'll give the heads up here before we do any kind of public marketing.\"\n\nThere are also token visibility issues, with a team member confirming they've added specific tokens to an import list that will be visible once the site is back up. The team is selectively adding tokens based on liquidity requirements, declining to add test tokens with insufficient liquidity.",
-          "sources": "https://discord.com/channels/1253563208833433701/1361442528813121556, https://discord.com/channels/1253563208833433701/1362864274862768450",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "## Discord Summarization Pipeline\n\nA user named \"dankvr\" mentioned refactoring a Discord summarization pipeline that creates structured summaries optimized for LLM ingestion. This appears to be a significant technical development, with the user sharing a sample of the output format and stating: \"perfectly structured for LLMs to ingest.\"\n\nThe user also mentioned plans for RAG/AI agent integrations with the summarization pipeline, noting \"now the fun part, RAG / AI agent integrations\" and that \"jintern boutta level up fr.\" Another user expressed interest in deploying the summarization tool to AWS.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "## Token-Gated Access Discussions\n\nSeveral users discussed the concept of token-gated partner access, noting historical precedents like \"Crypto Kingdom\" from 11 years ago that required 10,000 BTC for top-tier access. Users suggested that proper token-gating of partner groups could drive genuine demand for tokens, but emphasized the need to improve partner benefits and privileges.\n\nOne user suggested creating a \"Premium Prudent Spartan Lounge\" for partners, while another noted that the only tangible benefit over the past 6 months was \"the gold badge (admittedly, a cool colour)\" and a Hyperfy airdrop.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "## Discord Verification Issues\n\nSeveral users reported issues with Discord channel access and verification. A moderator manually assigned verified tags to restore access for affected users. One user reported being able to type in channels after receiving the tag but still couldn't see content.\n\nThe issue appears to be related to the verification system, with one moderator noting: \"I think there's maybe something up with the verification -- had a few people flag they have been not able to see channels and they lost their tag.\"",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "text": "User 'godfreyart' proposed creating an AI-based comedy project called 'StAInd up' that would combine the best comedians into one AI system with an avatar. The concept involves training an AI on content from top comedians and implementing it on blockchain technology. The user emphasized the importance of delivery and pacing in comedy and suggested implementing this as a virtual room in the Hyperfy platform. The stated goal is to 'save comedy from the woke mind virus' and provide genuine laughs. No technical implementation details were discussed beyond the initial concept.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300756641406521416",
           "images": [],
           "videos": []
         }
       ],
-      "topic": "Misceleanous"
+      "topic": "comedy"
     }
   ],
   "date": 1745366400
