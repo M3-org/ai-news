@@ -1,114 +1,39 @@
 {
-  "type": "dailySummary",
-  "title": "Daily Report - 2025-03-17",
+  "server": "Hyperfy",
+  "title": "Hyperfy Discord - 2025-03-17",
+  "date": 1742169600,
+  "stats": {
+    "totalMessages": 367,
+    "totalUsers": 35
+  },
   "categories": [
     {
-      "title": "Hyperfy Development Updates and Discussions",
-      "content": [
-        {
-          "text": "### Technical Discussions & Decisions\n- **Projector Update:** A new on/off switch and sound effects were added, but there are loading issues on play.hyperfy.xyz.\n- **Drum Pad Improvement:** Refinements to colliders and visual effects were suggested.\n- **Hyperfy V2 Aggregator:** A catalog of Hyperfy V2 URLs is being compiled.\n- **Authentication System:** A session-based authentication system was built using Quart-auth, but JWT-based authentication was recommended for stateless sessions.\n- **Plugin System for Mods:** Work is ongoing to convert mods to a new plugin system, with discussions on injection methods.\n- **RigidBody Physics Enhancements:** New force application methods (`addForce()`, `addTorque()`) are live, with `addForceAtPos()` planned for vehicles.\n- **Hyperfy Documentation Update:** Improvements to the README, including repo links and better accessibility, were discussed.\n- **MCP Bridge for Hyperfy:** A bridge was developed to allow live script updates between MCP and Hyperfy.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Concrete Solutions & Implementations\n- **Auth System:** Session storage in PostgreSQL with cookies was implemented.\n- **Plugin Injection:** `inject()` was recommended to avoid conflicts in mod systems.\n- **Physics API:** Force application methods for rigid bodies were confirmed.\n- **Hyperfy Docs Update:** A PR was submitted to improve documentation accessibility.\n- **MCP Bridge:** A working prototype for live script updates between MCP and Hyperfy was created.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Hyperfy on Apple Vision Pro\n- Hyperfy v1 worked on Apple Vision Pro, but v2 is untested and may need tweaks.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Avatar System Enhancements\n- **Avatar Auto-Assignment:** A system was developed to assign random avatars to new users, persisting across sessions.\n- **Avatar Database Integration:** Plans to integrate avatars from opensourceavatars.com directly instead of manual downloads, reducing .hyp file size.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Three.js and Hyperfy\n- **Hyperfy Unlocked Branch:** A command was shared to clone the unlocked branch, exposing Three.js and CSS3D features.\n- **Three.js Support:** Some primitives work, but full support is still in progress. Using GLB models with code was suggested instead of embedding full HTML.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### AI Integration in Hyperfy\n- AI features are being developed, with links to AI-related guides shared.\n- Developers use Claude and Cursor for AI-assisted coding.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### GameJam Participation\n- A suggestion was made to join a GameJam for Hyperfy visibility, requiring the unlocked version.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Action Items\n#### Technical Tasks\n1. Fix projector loading issue on play.hyperfy.xyz.\n2. Improve drum pad colliders and add visual effects.\n3. Convert all mods to the new plugin injection system.\n4. Implement `rigidbody.addForceAtPos()` for vehicles.\n5. Improve MCP-Hyperfy bridge for live script updates.\n6. Test Hyperfy on Apple Vision Pro v2.\n7. Optimize .hyp file size by loading avatars from URLs.\n8. Expand Three.js support in Hyperfy.\n\n#### Documentation Needs\n9. Add Hyperfy repo link to README.\n10. Clarify Three.js capabilities in Hyperfy docs.\n11. Document the avatar auto-assignment system.\n12. Update AI integration documentation.\n\n#### Feature Requests\n13. Enable full Three.js object support in Hyperfy.\n14. Improve AI-assisted coding in Hyperfy.\n15. Develop a UI for selecting avatars from a database.\n16. Improve error handling for Three.js scripts in Hyperfy.\n17. Create a GameJam-friendly version of Hyperfy.\n18. Improve onboarding documentation for new users.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412",
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "hyperfy"
+      "channelId": "994775534733115412",
+      "channelName": "💻│developers",
+      "summary": "# Analysis of 💻│developers Discord Chat\n\n## 1. Summary\nThe chat primarily focused on development activities within the Hyperfy platform. Key technical discussions included:\n\nCru shared updates on interactive objects like a projector with on/off functionality and sound effects, and a drum pad with potential for improved colliders and visual feedback. Devilsadvocate.sol worked on authentication implementation, sharing code for session management using PostgreSQL and discussing the tradeoffs between stateful sessions and stateless tokens. Peezy developed an MCP (Model-Code-Prompt) integration with Cursor IDE that allows real-time code updates to Hyperfy entities, enabling developers to modify scripts without manual copy-pasting.\n\nSeveral Hyperfy repository improvements were discussed, with Jin and Omka submitting PRs to enhance documentation with better links. Ashxn provided guidance on the plugin system architecture, explaining how to use the inject method to extend functionality while avoiding conflicts. The chat also covered PhysX capabilities, with confirmation that rigidbodies support addForce() and addTorque() methods, with plans for addForceAtPos() in future vehicle implementations.\n\n## 2. FAQ\nQ: How do I add systems in the plugin architecture? (asked by peezy) A: Add systems in createClientWorld/createServerWorld and use the inject method in the system's init() to extend functionality (answered by Ashxn)\nQ: Why use stateful sessions with a session ID instead of stateless tokens? (asked by mattimus) A: Stateful sessions are useful when you need to attach additional information within a session, while stateless is simpler for basic user auth validation (answered by mattimus)\nQ: How many lights can be used in a world? (asked by ᲼) A: Ideally one light (including the world sun) is best for performance, but two lights won't make a huge difference (answered by Ashxn)\nQ: Can we add forces to rigidbodies? (asked by Shiffty) A: Yes, rigidbody.addForce(force: Vector3) and rigidbody.addTorque(force: Vector3) are available, with plans to add rigidbody.addForceAtPos(force, pos) for vehicles (answered by Ashxn)\nQ: How does the MCP on Cursor integration work? (asked by Ashxn) A: It adds MCP functionality to the server with tools for querying the database and changing entity scripts in real-time (answered by peezy)\n\n## 3. Help Interactions\nHelper: Ashxn | Helpee: peezy | Context: Understanding how to convert mods to the plugin system | Resolution: Explained how to add systems in createClientWorld/createServerWorld and use inject method with code example\nHelper: mattimus | Helpee: devilsadvocate.sol | Context: Authentication implementation choices between stateful and stateless sessions | Resolution: Explained use cases for both approaches and when each is appropriate\nHelper: Omka | Helpee: treed | Context: How to study Hyperfy components | Resolution: Provided instructions on using build mode, inspecting hyps, and using Blender tools\nHelper: peezy | Helpee: devilsadvocate.sol | Context: Web3 authentication implementation | Resolution: Shared a step-by-step approach for wallet-based authentication with JWT\nHelper: Ashxn | Helpee: ApeironCreations | Context: Adding physics interactions between objects | Resolution: Confirmed rigidbody.addForce and rigidbody.addTorque methods are available\n\n## 4. Action Items\nType: Technical | Description: Improve projector sound loop to eliminate delays | Mentioned By: cru\nType: Technical | Description: Enhance drum pad with better colliders and visual feedback when activated | Mentioned By: cru\nType: Documentation | Description: Add links to docs, website, and playable demo in GitHub repo README | Mentioned By: jin\nType: Technical | Description: Implement addForceAtPos() method for rigidbodies to support vehicle physics | Mentioned By: Ashxn\nType: Feature | Description: Create a \"studio\" repo with MCP bridge between IDE and Hyperfy world | Mentioned By: peezy\nType: Feature | Description: Add namespace support (world.solana, world.ethereum) to avoid plugin conflicts | Mentioned By: Ashxn\nType: Technical | Description: Convert existing mods to the new plugin system | Mentioned By: peezy\nType: Feature | Description: Enable water balloons to affect other PhysX objects (like bowling pins) | Mentioned By: ApeironCreations\nType: Documentation | Description: Create a landing page that directs to v1, v2, playworld, docs, and marketplace | Mentioned By: Omka",
+      "messageCount": 203,
+      "userCount": 16
     },
     {
-      "title": "Hyperfy Development Updates and Technical Discussions",
-      "content": [
-        {
-          "text": "### Technical Discussions & Decisions\n- **Projector Update:** A new on/off switch and sound effects were added, but there are issues loading on play.hyperfy.xyz.\n- **Drum Pad Improvement:** Refinements to colliders and visual effects were suggested.\n- **Authentication System:** A session-based authentication system was built using Quart-auth, but a JWT-based stateless approach was recommended.\n- **Plugin System for Mods:** Work is ongoing to convert mods to a new plugin system, with discussions on injection methods.\n- **RigidBody Physics Enhancements:** New force application methods (`addForce()`, `addTorque()`) are live, with `addForceAtPos()` planned for vehicles.\n- **Hyperfy Documentation Update:** Improvements to the README were discussed, including adding repo links and better accessibility.\n- **MCP Bridge for Hyperfy:** A bridge was developed to allow live script updates between MCP and Hyperfy.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/994775534733115412"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Hyperfy Features & Compatibility\n- **Hyperfy on Apple Vision Pro:** v1 worked, but v2 is untested and may need tweaks.\n- **Avatar Auto-Assignment System:** A system was developed to assign random avatars to new users, persisting across sessions.\n- **Avatar Database Integration:** Plans to integrate avatars directly from a database instead of manual downloads.\n- **Three.js in Hyperfy:** Some primitives work, but full support is still in progress. Using GLB models with code is recommended.\n- **AI Integration:** AI features are being developed, with guides available.\n- **GameJam Participation:** Hyperfy could be used for a GameJam but requires an unlocked version.",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/958209074045026327"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### VR & UI Enhancements\n- **Building Generation & Optimization:** AI-assisted 3D modeling is being used to construct 500 buildings, with atlasing and instancing for performance optimization.\n- **Texture Customization:** Krea allows for flexible texture modifications.\n- **VR Compatibility Issue:** VR mode is not fully loading, but a fix was pushed in the latest dev branch.\n- **UI & Interaction Enhancements:** Updates to padding and margins improve image layout, and a proximity trigger version was created.\n- **Device Compatibility:** The project runs on an iPhone 12, suggesting it should work on newer devices like the Snapdragon XR2 (Quest 3).",
-          "sources": [
-            "https://discord.com/channels/958209073277456457/1031058655581323324"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "### Market Update\n- **SOL Price:** The current price of SOL is $126.12.",
-          "sources": [],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "Misceleanous"
+      "channelId": "958209074045026327",
+      "channelName": "⚡│general",
+      "summary": "# Discord Chat Analysis\n\n## 1. Summary\nThe chat primarily revolves around Hyperfy, a platform built on top of Three.js for creating virtual experiences. Key technical discussions include:\n\n- Random avatar assignment functionality that persists between sessions using storage features\n- Integration with opensourceavatars.com\n- Discussion about Hyperfy's \"unlocked\" branch that exposes Three.js completely\n- Limitations of Three.js implementation in Hyperfy's current scripting runtime\n- A user (treed) experiencing difficulties with implementing Three.js code in Hyperfy\n- Clarification that Hyperfy engine is built on Three.js but doesn't yet fully expose all Three.js objects\n- References to AI integration capabilities within Hyperfy\n- Mention of using Claude/Cursor for prompting code generation\n\nThe conversation reveals Hyperfy is undergoing updates with plans to improve Three.js flexibility while maintaining performance. Community members shared resources including tutorials, example code, and documentation links.\n\n## 2. FAQ\nQ: Is it possible to access Hyperfy from Apple Vision Pro? (asked by Ricky) A: People have tried on v1 and it worked, v2 is untested but should be possible with tweaks if developers have access (answered by Ashxn)\nQ: Is it normal that I don't see apps in my Hyperfy setup? (asked by treed) A: You have to make apps; worlds don't come with any preinstalled (answered by ᲼)\nQ: Can I use Three.js inside Hyperfy? (asked by treed) A: You can do some things with Three.js but not everything is exposed yet; Hyperfy is working on achieving maximum performance and flexibility (answered by peezy)\nQ: Are there any plans to integrate AI in Hyperfy? (asked by early) A: Yes, there are several AI integrations available (answered by Omka)\n\n## 3. Help Interactions\nHelper: peezy | Helpee: treed | Context: Understanding Hyperfy's Three.js implementation limitations | Resolution: Explained that only some Three.js features are available, shared video examples of what's possible\nHelper: Mugenomics | Helpee: treed | Context: HTML code error in Three.js implementation | Resolution: Identified duplicate opening HTML tags in the code\nHelper: mattimus | Helpee: treed | Context: Needed code examples for Hyperfy | Resolution: Directed to check all .hyps for examples\nHelper: Omka | Helpee: treed | Context: Needed guidance on Hyperfy implementation | Resolution: Shared tutorial links and offered direct help via voice chat\n\n## 4. Action Items\nTechnical: Implement loading random avatars from URLs to reduce .hyp file size | Mentioned By: peezy\nTechnical: Expose more Three.js objects in Hyperfy runtime | Mentioned By: peezy\nDocumentation: Create simple code examples (rotating object, changing color) for beginners | Mentioned By: treed\nFeature: Integration with opensourceavatars.com database | Mentioned By: Omka\nFeature: Develop \"hypergolf\" game | Mentioned By: cru",
+      "messageCount": 98,
+      "userCount": 21
+    },
+    {
+      "channelId": "1326789867312775290",
+      "channelName": "🪙│hyper",
+      "summary": "# Discord Chat Analysis for \"🪙│hyper\" Channel\n\n## 1. Summary\nThis Discord chat segment contains minimal technical discussion or problem-solving. The conversation primarily consists of brief comments about token prices, market sentiment, and some cryptocurrency commentary. Users express concerns about the HYPER token price not increasing, with one user checking the current price (approximately 0.00696699). There are mentions of other cryptocurrencies (ETH, HBAR, XRP, SOL, DOT, ADA) but without substantive technical discussion. One user asks about Base and Sui blockchains but receives no meaningful technical response. Overall, this chat segment lacks concrete technical content, solutions, or implementations.\n\n## 2. FAQ\nQ: So is dead at the end? I see price never increased in the last months (asked by johan) A: Unanswered\nQ: anyone here a base or sui maxi who can explain it to me like I'm five? (asked by devilsadvocate.sol) A: Unanswered\n\n## 3. Help Interactions\nHelper: Rick | Helpee: Omka | Context: Omka wanted to check HYPER token price | Resolution: Rick provided the current price information showing HYPER/SOL at 6.9M with -4% change\n\n## 4. Action Items\nNo specific technical tasks, documentation needs, or feature requests were identified in this chat segment.",
+      "messageCount": 20,
+      "userCount": 9
+    },
+    {
+      "channelId": "1031058655581323324",
+      "channelName": "🧊│3d-design",
+      "summary": "# Discord Chat Analysis for 🧊│3d-design Channel\n\n## 1. Summary:\nThe chat primarily revolves around 3D design techniques for building virtual environments, particularly a city-building project by 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎. They discuss using AI as a helper for 3D design, with plans to build 500 building blocks. The technique involves atlasing, instancing, and light baking to create visually appealing yet performant environments. 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎 mentions using Krea to alter base textures to achieve different building styles. There's discussion about a VR compatibility issue with a specific website (vox.b34k3r.com) that loads on PC and mobile but fails in VR mode. Ashxn later confirms this was fixed in the latest dev branch. The chat also touches on UI improvements for image fitting and proximity triggers. Performance is noted to be good on iPhone 12, suggesting it should run well on newer VR hardware like Quest 3.\n\n## 2. FAQ:\nQ: Can anyone get this running in VR? (asked by 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎) A: Fixed in latest dev branch (answered by Ashxn)\nQ: What makes the building technique impressive? (asked by peezy) A: It's powerful and allows baking light spills on windowframes; atlasing and instancing make it big but fast and good looking (answered by 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎)\n\n## 3. Help Interactions:\nHelper: Ashxn | Helpee: 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎 | Context: VR mode not working on vox.b34k3r.com | Resolution: Fixed in latest dev branch\nHelper: Omka | Helpee: Valiant | Context: UI image fitting on a pyramid | Resolution: Shared information about ash's updates to padding margin on UI and offered a proximity trigger example\n\n## 4. Action Items:\nTechnical: Fix VR compatibility issues with vox.b34k3r.com | Description: VR mode not fully loading despite being clickable | Mentioned By: 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎\nFeature: Build proper car apps with good physics and sounds | Description: Need for realistic vehicle functionality in environments | Mentioned By: 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎\nDocumentation: Create tutorials for 3D building techniques | Description: Share methods for building, atlasing, instancing and light baking | Mentioned By: 𝚟𝚘𝚡𝚟𝚒𝚎𝚗𝚗𝚎",
+      "messageCount": 46,
+      "userCount": 10
     }
-  ],
-  "date": 1742169600
+  ]
 }
