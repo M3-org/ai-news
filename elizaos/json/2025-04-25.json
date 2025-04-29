@@ -1,0 +1,75 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-04-25",
+  "categories": [
+    {
+      "title": "Recent Pull Requests in elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several pull requests have been submitted to the elizaOS/eliza repository addressing various features and fixes:\n\n1. PR #4364 by standujar adds a new feature to the Discord plugin, enabling typing indicators when Eliza is responding to messages.\n\n2. PR #4363 by HashWarlock fixes an issue with PostgreSQL database configuration for Docker containers and updates GitHub Actions.\n\n3. PR #4359 by michavie addresses further fixes for agent entity relations, improving how agents interact with different entities in the system.\n\n4. PR #4362 by PixelPil0t1 fixes broken image paths in the codebase, ensuring images display correctly throughout the application.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/4364",
+            "https://github.com/elizaOS/eliza/pull/4363",
+            "https://github.com/elizaOS/eliza/pull/4359",
+            "https://github.com/elizaOS/eliza/pull/4362"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4364",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4363",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4359",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4362"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Recent GitHub Issues in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Two issues have been reported in the elizaOS/eliza GitHub repository:\n\n1. Issue #4339: A user named cxp-13 reported that the local model on plugin development is not working.\n\n2. Issue #4365: User srpiroliro encountered an error where the system cannot read properties of undefined (specifically when reading 'sendStandartTweet').\n\nBoth issues appear to be technical problems with the eliza software that need to be addressed by the development team.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/4339",
+            "https://github.com/elizaOS/eliza/issues/4365"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4339",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4365"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "elizaos/eliza GitHub Activity (April 25-26, 2025)",
+      "content": [
+        {
+          "text": "Between April 25-26, 2025, the elizaos/eliza repository saw moderate activity with 3 new pull requests (none of which were merged), 1 new issue, and contributions from 7 active developers.",
+          "sources": [
+            "text: From 2025-04-25 to 2025-04-26, elizaos/eliza had 3 new PRs (0 merged), 1 new issues, and 7 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top Contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided source only mentions 'Top contributors for elizaOS/eliza' without providing any specific details about who these contributors are or their contributions. Without additional information, I cannot provide a detailed summary of the top contributors to the elizaOS/eliza project.",
+          "sources": [
+            "text: Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1745539200
+}
