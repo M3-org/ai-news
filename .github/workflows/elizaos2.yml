@@ -182,7 +182,6 @@ jobs:
           # Create the target directory structure within ./public
           mkdir -p ./public/data
           mkdir -p ./public/elizaos/discord
-          mkdir -p ./public/elizaos/daily
 
           # Copy the encrypted database
           if [ -f "data/elizaos2.sqlite.enc" ]; then
@@ -198,7 +197,7 @@ jobs:
 
           # Copy ElizaOS daily summaries  
           echo "Copying ElizaOS daily summaries to ./public/elizaos/daily"
-          cp -r output/elizaos/* ./public/elizaos/daily/ 2>/dev/null || echo "No ElizaOS daily summary files to copy."
+          cp -r output/elizaos/* ./public/elizaos/ 2>/dev/null || echo "No ElizaOS daily summary files to copy."
 
           # Create daily.json for Discord summaries
           JSON_FILE="output/discord/summaries/${YESTERDAY}.json"
@@ -221,8 +220,8 @@ jobs:
           # Create daily.json for ElizaOS daily summaries
           ELIZAOS_JSON="output/elizaos/${YESTERDAY}.json"
           if [ -f "$ELIZAOS_JSON" ]; then
-            echo "Copying $ELIZAOS_JSON to ./public/elizaos/daily/daily.json"
-            cp "$ELIZAOS_JSON" ./public/elizaos/daily/daily.json
+            echo "Copying $ELIZAOS_JSON to ./public/elizaos/json/daily.json"
+            cp "$ELIZAOS_JSON" ./public/elizaos/json/daily.json
           else
             echo "Warning: Yesterday's ElizaOS daily JSON ($ELIZAOS_JSON) not found."
           fi
