@@ -77,7 +77,7 @@ jobs:
           done
           
           # Set environment variables
-          jq -r 'to_entries[] | "\(.key)=\(.value"' env_secrets.json > env_vars.txt
+          jq -r 'to_entries[] | "\(.key)=\(.value)"' env_secrets.json > env_vars.txt
           while IFS= read -r line; do
             if [ -n "$line" ]; then
               echo "$line" >> $GITHUB_ENV
