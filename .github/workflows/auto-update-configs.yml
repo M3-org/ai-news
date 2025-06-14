@@ -1,4 +1,4 @@
-name: Auto-Update Configs from Channel Changes
+name: Config Auto-Update
 
 on:
   push:

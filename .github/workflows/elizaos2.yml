@@ -1,4 +1,4 @@
-name: ElizaOS Unified (Discord + Daily Summary)
+name: ElizaOS Daily Data Collection
 
 on:
   schedule:
