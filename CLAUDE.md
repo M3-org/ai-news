@@ -24,6 +24,12 @@ npm start -- --source=discord-raw.json --output=./custom-output
 
 # Historical data for date range
 npm run historical -- --source=elizaos.json --after=2024-01-10 --before=2024-01-16
+
+# Channel discovery
+npm run discover-channels
+
+# Update configs from checklist
+npm run update-configs
 ```
 
 ### HTML Frontend (in html/ directory)
@@ -71,7 +77,8 @@ The system uses five plugin types:
 ### Configuration
 JSON configuration files in `config/` directory:
 - `sources.json` - Default configuration
-- `discord-raw.json`, `elizaos.json`, etc. - Specialized configurations
+- `elizaos2.json` - Unified ElizaOS configuration (Discord + GitHub + Codex analytics)
+- `hyperfy-discord.json`, `ai16zdao.json` - Specialized configurations
 
 Each config contains: `settings`, `sources`, `ai`, `enrichers`, `storage`, `generators` arrays.
 
@@ -94,3 +101,24 @@ src/
 ```
 
 The system supports specialized modes: `--onlyFetch` (no AI processing), `--onlyGenerate` (process existing data), and configurable output directories.
+
+## Channel Discovery System
+Automated Discord channel discovery generates a daily checklist showing all visible channels and their tracking status:
+- **Daily Updates**: GitHub Action runs at 6:00 AM UTC to update `scripts/CHANNELS.md`
+- **Manual Discovery**: `npm run discover-channels` to run locally
+- **Test Mode**: `npm run discover-channels -- --test-configs` to validate configurations without Discord API
+- **Debug Mode**: `npm run discover-channels -- --test-configs --debug` to see detailed guild and channel information
+- **Checklist Format**: Markdown checklist organized by guild with tracked/untracked channels clearly marked
+
+### Config Updates from Checklist
+Update configuration files based on checked channels in the checklist:
+- **Update Configs**: `npm run update-configs` - adds checked channels to their respective config files
+- **Dry Run**: `npm run update-configs -- --dry-run` - preview changes without applying them
+- **Workflow**: Check boxes in `scripts/CHANNELS.md` → run update script → channels automatically added to configs
+
+### Analytics Reminder System
+Automated reminders to review Discord analytics for channel activity:
+- **28-Day Cycle**: Countdown appears at top of `scripts/CHANNELS.md` every 28 days
+- **Direct Link**: Analytics URL with proper date range automatically generated
+- **Smart Reset**: Timer resets when you run `npm run update-configs` (implying you reviewed and acted on analytics)
+- **Purpose**: Identify low-activity channels to reduce tracking noise and focus on active discussions
