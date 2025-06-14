@@ -1,0 +1,195 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-04-26",
+  "categories": [
+    {
+      "title": "Shaw Discusses Auto.fun Platform Issues, Memecoins, and Community Engagement",
+      "content": [
+        {
+          "text": "Shaw addresses bugs in Auto.fun's migration system that allowed scammers to exploit the platform. He acknowledges the issues and confirms his team is working on fixes, stating: 'We had some bugs in the UI which caused some people to get fk'd during migrations. Contracts are fine, was related to how we were parsing chain data which could be abused by scammers frontrunning the LP creation.'",
+          "sources": "https://twitter.com/shawmakesmagic/status/1916256322594672701",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Shaw clarifies his relationship with various tokens, particularly addressing confusion about Nous, stating: 'People blaming Nous for rugging a token that they had nothing to do with + was created by some random anon on pumpfun is peak unseriousness.' He explains that Nous isn't a crypto company and has no plans for a token.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1916277908257353899, https://twitter.com/shawmakesmagic/status/1916279064551428159",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "On his role as a developer, Shaw emphasizes: 'I'm a dev. I build stuff. I like making products. I make free open source stuff. I get accused of farming and rugging on projects I've never even [known about].' He notes that the Auto.fun code is open source so people can hold him accountable.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1916262600360530392, https://twitter.com/shawmakesmagic/status/1916252001589203400",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Shaw discusses his approach to community building and engagement through memecoins: 'They think I'm farming them for money. I never sell the coins. I'm farming engagement and not ashamed of it. That is the value of memecoins for builders.' He actively engages with the community by offering tokens and bounties for various projects.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1915942422481408343, https://twitter.com/shawmakesmagic/status/1915941830837072265, https://twitter.com/shawmakesmagic/status/1915926992605884757",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "On his work ethic, Shaw admits: 'I've become a total workaholic. No life, no friends, just endless grind. I am my most investable self. My most reliable shipper self.' He mentions working 40 hours straight for a launch and emphasizes the importance of persistence: 'Lock in and build. Nothing great is made in months. It takes years. The real builders are still gonna be here building.'",
+          "sources": "https://twitter.com/shawmakesmagic/status/1916034799804027013, https://twitter.com/shawmakesmagic/status/1916259923836735555, https://twitter.com/shawmakesmagic/status/1916017811211837899",
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "ElizaOS Discord Summary - April 26, 2025",
+      "content": [
+        {
+          "text": "The ElizaOS community is discussing several key topics today. The main focus is on auto.fun, a token launching platform that was recently released. There was a bug with the Quill token migration that allowed someone to drain the LP pool by selling Quill at a premium. The team has deployed a fix and promised to refund affected users in SOL. Token creation on auto.fun appears to be temporarily paused while the team addresses these issues.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1362864274862768450",
+            "https://discord.com/channels/1253563208833433701/1361442528813121556"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "There's ongoing discussion about a potential token migration for ai16z to ElizaOS. Shaw (new.moon) mentioned they are working on a voting module that would allow the community to vote on this change. Some partners are debating the timing and approach to this migration, with concerns about potential impacts on liquidity and price action. The team is also considering how to handle DegenAI in relation to ElizaOS.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A moderation incident occurred where a community member (DorianD) was temporarily banned by a moderator but has since been unbanned. The team is reviewing moderation permissions to prevent similar issues in the future.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Developers are working on various projects including a plugin for v2, an AI Text based RPG, and 3D AI content with visemes for character animation. There's also interest in creating an eli5 bot based on Shaw's bounty post.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1300756641406521416",
+            "https://discord.com/channels/1253563208833433701/1313222089271939102",
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The community is discussing the relationship between ai16z and DegenAI, with some suggesting that auto.fun should display both tokens on its website. There's also mention that auto.fun was designed to help both tokens through liquidity pools and buybacks.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1308149076893630555",
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Discord Channel Historical Summary",
+      "content": [
+        {
+          "text": "# ElizaOS Ecosystem Overview\n\nElizaOS (formerly ai16z) is developing a suite of AI and crypto tools. The main components discussed in the Discord include:\n\n## Auto.fun Platform\n- Recently launched token launchpad that has been open-sourced\n- Generates fees from tokens launched on the platform\n- Creates liquidity for ai16z through buy fees\n- Some users reported technical issues including infinite loading, tokens stuck in migration, and a critical bug with the Quill token that misrepresented token-to-SOL ratio\n- Platform representatives acknowledged issues, deployed fixes, and promised refunds to affected users\n\n## Token Structure\n- Current tokens include ai16z and degenai (contract addresses were shared)\n- Community discussions about a potential token migration from ai16z to ElizaOS due to frustrations with the current platform developer\n- Debates about migration mechanics, including swap ratios, exchange coordination, and treasury considerations\n\n## Development Focus\n- Team is working on Eliza v2 alongside auto.fun development\n- Project follows an open-source approach, inviting developer contributions\n- Some users expressed interest in developing revenue-generating AI agents rather than just entertainment agents\n- A Livepeer plugin (PR #48) was submitted offering \"free incentivized inference\"\n- Character animation system using JSON and visemes (mouth shapes for speech) is being developed\n\n## Community Concerns\n- Some users questioned the long-term utility of auto.fun and its similarity to pump.fun\n- Frustration about lack of promised governance features\n- Moderation incidents in the Discord server\n- Need for better documentation on token verification process and creation procedures",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241, https://discord.com/channels/1253563208833433701/1300025221834739744, https://discord.com/channels/1253563208833433701/1308149076893630555, https://discord.com/channels/1253563208833433701/1362864274862768450, https://discord.com/channels/1253563208833433701/1301363808421543988, https://discord.com/channels/1253563208833433701/1313222089271939102",
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordchannelhistoricalsummary"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several pull requests have been submitted to the elizaOS/eliza repository recently:\n\n1. Documentation improvements: PR #4366 by samihao11 clarifies the paths for framework users versus core contributors.\n\n2. New functionality: PR #3894 by mindxploit adds permanent knowledge capability to the system.\n\n3. Bug fixes: \n   - PR #3890 by daniel-trevino fixes loading character plugins from remote URLs\n   - PR #4367 by PixelPil0t1 corrects a broken Pump.fun link\n   - PR #4369 by Vid201 adds default project text to the create CLI\n\n4. Development improvements: PR #4370 by ai16z-demirix adds test coverage and setup for the Anthropic plugin.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/4366",
+            "https://github.com/elizaOS/eliza/pull/3894",
+            "https://github.com/elizaOS/eliza/pull/3890",
+            "https://github.com/elizaOS/eliza/pull/4367",
+            "https://github.com/elizaOS/eliza/pull/4370",
+            "https://github.com/elizaOS/eliza/pull/4369"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4366",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3894",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3890",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4367",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4370",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/4369"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Crypto Market Update",
+      "content": [
+        {
+          "text": "The crypto market shows price fluctuations for major cryptocurrencies. WETH (Wrapped Ethereum) has increased from $1,786.73 to $1,821.64, representing a gain of approximately 1.95%. Meanwhile, SOL (Solana) has decreased from $150.94 to $149.24, showing a slight decline of about 1.13%.",
+          "sources": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "crypto market"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "Over the past two days (April 26-28, 2025), the elizaos/eliza repository has shown consistent activity with 4 new pull requests opened, though none were merged during this period. There was 1 new issue created on April 26-27, with no new issues the following day. The project maintained active contributor engagement, with 6 contributors active during April 26-27, decreasing to 3 active contributors during April 27-28.",
+          "sources": [
+            "From 2025-04-26 to 2025-04-27, elizaos/eliza had 2 new PRs (0 merged), 1 new issues, and 6 active contributors.",
+            "From 2025-04-27 to 2025-04-28, elizaos/eliza had 2 new PRs (0 merged), 0 new issues, and 3 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    },
+    {
+      "title": "Issue #4368: What is required in token swap using evm plugin?",
+      "content": [
+        {
+          "text": "GitHub issue #4368 was opened by user 0xopsdev regarding requirements for token swaps using the EVM plugin in the elizaOS/eliza repository. The specific details of the issue would require accessing the GitHub issue directly.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/4368"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/4368"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    }
+  ],
+  "date": 1745625600
+}

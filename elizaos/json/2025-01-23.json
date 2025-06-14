@@ -1,0 +1,224 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-23",
+  "categories": [
+    {
+      "title": "Eliza OS GitHub Updates Summary",
+      "content": [
+        {
+          "text": "# New Plugins\n\nEliza OS has added several new plugins to enhance functionality:\n\n- **Hyperbolic-plugin** (PR #2701)\n- **Eliza OmniFlix Plugin** (PR #2693)\n- **Suno music generation** (PR #2679)\n- **Samsung SmartThings plugin** (PR #2678)\n- **Udio music generation** (PR #2660)\n- **SimsAI Release V1.0** (PR #2618)\n- **Football plugin** (PR #2461)\n- **Adapter-qdrant** (PR #2322)\n- **Chainbase plugin** (PR #2162)\n- **Holdstation swap plugin** (PR #2741)\n- **Ethstorage plugin** (PR #2737)\n- **Sei Plugin** (PR #2720)\n- **Imgflip plugin** for generating memes (PR #2711)\n- **Lit plugin** (PR #2703)\n- **Mina blockchain support** (PR #2702)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2701",
+            "https://github.com/elizaOS/eliza/pull/2693",
+            "https://github.com/elizaOS/eliza/pull/2679",
+            "https://github.com/elizaOS/eliza/pull/2678",
+            "https://github.com/elizaOS/eliza/pull/2660",
+            "https://github.com/elizaOS/eliza/pull/2618",
+            "https://github.com/elizaOS/eliza/pull/2461",
+            "https://github.com/elizaOS/eliza/pull/2322",
+            "https://github.com/elizaOS/eliza/pull/2162",
+            "https://github.com/elizaOS/eliza/pull/2741",
+            "https://github.com/elizaOS/eliza/pull/2737",
+            "https://github.com/elizaOS/eliza/pull/2720",
+            "https://github.com/elizaOS/eliza/pull/2711",
+            "https://github.com/elizaOS/eliza/pull/2703",
+            "https://github.com/elizaOS/eliza/pull/2702"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Bug Fixes\n\nSeveral bugs were addressed in recent updates:\n\n- Fixed duplicated handlePendingTweet (PR #2715)\n- Fixed unexpected JSON Metadata in Twitter Bot Replies (PR #2712)\n- Corrected STT plugin userId type (PR #2704)\n- Fixed aesthetic issues with bullets and numbered lists (PR #2698)\n- Fixed types syntax issue (PR #2694)\n- Ensured scoped IDs are properly used for existing knowledge checks (PR #2690)\n- Fixed debug targets to show elizalogger debug messages (PR #2685)\n- Removed wrong comment (PR #2683)\n- Fixed TON plugin build issues (PR #2757, PR #2755)\n- Deleted plugin-bootstrap sex message to prevent API sensitivity alerts (PR #2748)\n- Resolved @ai-sdk/provider version conflicts (PR #2714)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2715",
+            "https://github.com/elizaOS/eliza/pull/2712",
+            "https://github.com/elizaOS/eliza/pull/2704",
+            "https://github.com/elizaOS/eliza/pull/2698",
+            "https://github.com/elizaOS/eliza/pull/2694",
+            "https://github.com/elizaOS/eliza/pull/2690",
+            "https://github.com/elizaOS/eliza/pull/2685",
+            "https://github.com/elizaOS/eliza/pull/2683",
+            "https://github.com/elizaOS/eliza/pull/2757",
+            "https://github.com/elizaOS/eliza/pull/2755",
+            "https://github.com/elizaOS/eliza/pull/2748",
+            "https://github.com/elizaOS/eliza/pull/2714"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Feature Enhancements\n\nSignificant feature improvements were implemented:\n\n- Added error message functionality (PR #2717)\n- Improved handling of user IDs and memory storage for Space (PR #2686)\n- Implemented runProcess function in test library (PR #2672)\n- Added custom S3 endpoint URL for 'plugin-node' (PR #2176)\n- Enhanced TON plugin with debug scripts and transfer fixes (PR #2744)\n- Restricted Discord bot to respond only in allowed channels (PR #2743)\n- Added minimal workflow to resolve ephemeral check (PR #2735)\n- Implemented biome automation via Python with reporting (PR #2733)\n- Moved cleanJsonResponse to parsing (PR #2732)\n- Improved Twitter parsing (PR #2730)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2717",
+            "https://github.com/elizaOS/eliza/pull/2686",
+            "https://github.com/elizaOS/eliza/pull/2672",
+            "https://github.com/elizaOS/eliza/pull/2176",
+            "https://github.com/elizaOS/eliza/pull/2744",
+            "https://github.com/elizaOS/eliza/pull/2743",
+            "https://github.com/elizaOS/eliza/pull/2735",
+            "https://github.com/elizaOS/eliza/pull/2733",
+            "https://github.com/elizaOS/eliza/pull/2732",
+            "https://github.com/elizaOS/eliza/pull/2730"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Other Changes\n\n- Removed log that could potentially cause app crashes (PR #2716)\n- Improved GitBook Provider Output by including query context (PR #2659)\n- Performed lint pass (PR #2580)\n- Added Hyperliquid environment variables to env example (PR #2736)\n- Added source example links to core/evaluators (PR #2724)\n- Updated test configuration and coverage for client-eliza-home (PR #2719)\n- Updated to latest allora-sdk version in the Allora Plugin (PR #2707)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2716",
+            "https://github.com/elizaOS/eliza/pull/2659",
+            "https://github.com/elizaOS/eliza/pull/2580",
+            "https://github.com/elizaOS/eliza/pull/2736",
+            "https://github.com/elizaOS/eliza/pull/2724",
+            "https://github.com/elizaOS/eliza/pull/2719",
+            "https://github.com/elizaOS/eliza/pull/2707"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Twitter Activity from @dankvr and @shawmakesmagic",
+      "content": [
+        {
+          "text": "Twitter users @dankvr and @shawmakesmagic have been active on various crypto, AI, and political topics. @dankvr shared content about anonymity in crypto, referencing a 'tornado cash shirt' that became a bestseller, and discussed trading activities related to @0xPolygon and @degenspartanai.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1882526536454324455",
+            "https://twitter.com/dankvr/status/1882514261374910670",
+            "https://twitter.com/dankvr/status/1882446896918368661"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiAGw7iWcAA-VIV.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "@shawmakesmagic discussed forms of capital, ranking mindshare/attention, competence, trust, authenticity, and network above money. He also congratulated the Moemate team on their token launch and engaged with @VitalikButerin about democratizing lobbying through memecoins.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1882478335403639168",
+            "https://twitter.com/shawmakesmagic/status/1882562071675720123",
+            "https://twitter.com/shawmakesmagic/status/1882560703338553570",
+            "https://twitter.com/shawmakesmagic/status/1882563516403773817"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A significant thread from @shawmakesmagic addressed conspiracy theories about election manipulation, emphatically stating 'GUYS WE DIDN'T RIG THE ELECTION' and explaining that 'Elon has no idea Eliza exists, X doesn't use/need Eliza.' He described the conspiracy as 'obviously a LARP by some troll' and expressed frustration about fake GitHub claims.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1882455120715423912",
+            "https://twitter.com/shawmakesmagic/status/1882455837106716899",
+            "https://twitter.com/shawmakesmagic/status/1882218390879920213"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/Gh_TmyCXMAAlgKT.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "@shawmakesmagic also shared thoughts on authenticity, stating 'You should really just allow characters to be characters' and 'If you're not crashing out sometimes you're not being real,' advocating for people to 'be yourself and stop trying to control other people's behavior.'",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1882349308391072003"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent Issues in the ElizaOS GitHub Repository",
+      "content": [
+        {
+          "text": "Several issues have been reported in the ElizaOS GitHub repository related to package dependencies, plugin functionality, and client operations. These include:\n\n1. Package dependency issues:\n   - Issue #2721: The @elizaos/plugin-tee-log@0.1.8 package has an incorrect workspace dependency reference\n   - Issue #2729: The @elizaos/plugin-rabbi-trader plugin has not been published to npm\n\n2. Client and plugin functionality problems:\n   - Issue #2700: Error in fetching tweets in client-twitter\n   - Issue #2754: Image vision/description not working on Twitter client\n   - Issue #2695: Plugins field appears to be unusable in character.json\n   - Issue #2697: Difficulty creating hardcoded responses in actions\n\n3. Build and integration issues:\n   - Issue #2727: Failed client build when running 'pnpm build'\n   - Issue #2722: Request for Deepseek support in the Eliza eliza-starter repository\n\n4. User assistance requests:\n   - Issue #2745: Question about Twitter API requirements\n   - Issue #2746: General request for help",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/2721",
+            "https://github.com/elizaOS/eliza/issues/2722",
+            "https://github.com/elizaOS/eliza/issues/2700",
+            "https://github.com/elizaOS/eliza/issues/2697",
+            "https://github.com/elizaOS/eliza/issues/2695",
+            "https://github.com/elizaOS/eliza/issues/2745",
+            "https://github.com/elizaOS/eliza/issues/2727",
+            "https://github.com/elizaOS/eliza/issues/2746",
+            "https://github.com/elizaOS/eliza/issues/2754",
+            "https://github.com/elizaOS/eliza/issues/2729"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2721",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2722",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2700",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2697",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2695",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2745",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2727",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2746",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2754",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2729"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several new plugins and features have been proposed for the Eliza project through recent pull requests. These include:\n\n- A lit plugin (PR #2703)\n- The official SimsAI plugin release V1.0 (PR #2618)\n- An OmniFlix plugin (PR #2693)\n- A Form chain plugin (PR #2728)\n- The plugin-feel which is still in progress (PR #867)\n\nAdditionally, there are improvements to GitHub functionality:\n- GitHub plugins unique rooms feature (PR #2767)\n- GitHub client multi-user support (PR #2752)\n\nOther technical enhancements include:\n- Removing hardcoded branch names when committing changes (PR #2705)\n- Biome automation via Python with reporting capabilities (PR #2733)\n\nThese pull requests represent ongoing development efforts to expand Eliza's capabilities and improve its functionality.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2705",
+            "https://github.com/elizaOS/eliza/pull/2703",
+            "https://github.com/elizaOS/eliza/pull/2618",
+            "https://github.com/elizaOS/eliza/pull/2693",
+            "https://github.com/elizaOS/eliza/pull/2767",
+            "https://github.com/elizaOS/eliza/pull/2752",
+            "https://github.com/elizaOS/eliza/pull/867",
+            "https://github.com/elizaOS/eliza/pull/2728",
+            "https://github.com/elizaOS/eliza/pull/2733"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2705",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2703",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2618",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2693"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed consistent activity over a two-day period. From January 23-24, 2025, there were 28 new pull requests with 24 merged, 9 new issues created, and 62 active contributors. The following day (January 24-25, 2025) saw 24 new pull requests with 20 merged, 17 new issues, and a slight increase to 64 active contributors. Overall, the project maintained strong development momentum with high PR merge rates and steady contributor engagement.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are, their contributions, or any statistics related to the project. Without additional information, it's not possible to generate a detailed summary about the top contributors to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1737590400
+}

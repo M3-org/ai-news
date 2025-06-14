@@ -1,0 +1,154 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-02-06",
+  "categories": [
+    {
+      "title": "ElizaOS GitHub Repository Updates",
+      "content": [
+        {
+          "text": "# Plugin System Overhaul\n\nA major restructuring of the plugin system has occurred. The verifiable inference concept has been removed in favor of plugin loading (#3344). All plugins were deleted (#3342) to support a new dynamic plugin loading system (#3339). This allows plugins to interact with the messengerManager to post on Telegram (#3314). Plugin imports have been removed from the agent (#3346).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3344, https://github.com/elizaOS/eliza/pull/3342, https://github.com/elizaOS/eliza/pull/3339, https://github.com/elizaOS/eliza/pull/3314, https://github.com/elizaOS/eliza/pull/3346",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Character and Agent Updates\n\nThe default character has been fixed (#3345) and moved to the agent (#3343). The system now properly reads modelConfig from character files (#3313).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3345, https://github.com/elizaOS/eliza/pull/3343, https://github.com/elizaOS/eliza/pull/3313",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Model and Provider Improvements\n\nThe system now supports Anthropic provider (#3364) and has improved OpenAI-like provider endpoint resolution (#3281). A fix was implemented for the Google API key handling (#3274). Several model-related unit tests were fixed (#3312), and the build in core now targets node23 (#3371).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3364, https://github.com/elizaOS/eliza/pull/3281, https://github.com/elizaOS/eliza/pull/3274, https://github.com/elizaOS/eliza/pull/3312, https://github.com/elizaOS/eliza/pull/3371",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Package and Dependency Management\n\nThe package publish access has been set to public (#3330), and a missing version property was added to package.json (#3325). The project has replaced pnpm with Bun (#2852) and added adapter-sqlite to dependencies (#3357). The version was bumped to 0.25.6-alpha.1 (#3306).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3330, https://github.com/elizaOS/eliza/pull/3325, https://github.com/elizaOS/eliza/pull/2852, https://github.com/elizaOS/eliza/pull/3357, https://github.com/elizaOS/eliza/pull/3306",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Bug Fixes and Documentation\n\nSeveral bugs were fixed, including a Twitter logging bug (#3327), JSON normalization (#3301), Docker and types issues (#3220), and parsing unit test failures (#3311). Documentation improvements included fixing typos in plugins.md (#3324) and updating functions documentation (#3317).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3327, https://github.com/elizaOS/eliza/pull/3301, https://github.com/elizaOS/eliza/pull/3220, https://github.com/elizaOS/eliza/pull/3311, https://github.com/elizaOS/eliza/pull/3324, https://github.com/elizaOS/eliza/pull/3317",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Repository Maintenance\n\nSeveral maintenance PRs were merged, including develop to main merges (#3332, #3307), removal of remnant files/folders (#3326), and resolution of merge conflicts (#3367). A significant code cleanup was also performed (#3116).",
+          "sources": "https://github.com/elizaOS/eliza/pull/3332, https://github.com/elizaOS/eliza/pull/3307, https://github.com/elizaOS/eliza/pull/3326, https://github.com/elizaOS/eliza/pull/3367, https://github.com/elizaOS/eliza/pull/3116",
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Recent GitHub Issues in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several users have reported build failures in the elizaOS/eliza repository. Issues #3322, #3300, and #3316 all describe different build failures. User Mer-idium reported the latest build failing, lincheoll identified build errors related to Zod dependency issues, and vishal0316 reported a pnpm build failure.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3322",
+            "https://github.com/elizaOS/eliza/issues/3300",
+            "https://github.com/elizaOS/eliza/issues/3316"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3322",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3300",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3316"
+          ],
+          "videos": []
+        },
+        {
+          "text": "UI and functionality issues have also been reported. In issue #3360, Mer-idium noted that the UI doesn't appear to load. Issue #3319 by InAMooD discusses the default download of the Hermes llama model. Issue #3362 by creazy231 reports that the command 'pnpm dev --characters' doesn't load characters as expected.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3360",
+            "https://github.com/elizaOS/eliza/issues/3319",
+            "https://github.com/elizaOS/eliza/issues/3362"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3360",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3319",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3362"
+          ],
+          "videos": []
+        },
+        {
+          "text": "There are also feature requests and dependency issues. Mouradif suggested creating an Eliza CLI where plugins are opt-in only (similar to Shadcn) in issue #3356. In issue #3365, sekmet reported missing cors and multer dependencies in the @elizaos/agent package. Issue #3353 by Jovian-Dsouza addresses a placeholder mismatch and image description format in the Twitter search template.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3356",
+            "https://github.com/elizaOS/eliza/issues/3365",
+            "https://github.com/elizaOS/eliza/issues/3353"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3356",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3365",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3353"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several pull requests have been submitted to the elizaOS/eliza repository, focusing on plugin management, feature additions, and system improvements:\n\n- DarrenZal added a safe plugin (PR #3340)\n- lalalune made changes to move the default character to agent (PR #3343) and also proposed deleting all plugins (PR #3342)\n- romain-lfg contributed to the bounty system with two PRs: adding a bounty board (PR #3320) and implementing bounty detail functionality (PR #3361)\n- 0xgloria updated the deepseek component (PR #3127)\n- monilpat added a trading view provider (PR #3372)\n\nThese changes reflect ongoing development efforts to enhance the Eliza system's functionality and structure.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3340",
+            "https://github.com/elizaOS/eliza/pull/3343",
+            "https://github.com/elizaOS/eliza/pull/3342",
+            "https://github.com/elizaOS/eliza/pull/3320",
+            "https://github.com/elizaOS/eliza/pull/3127",
+            "https://github.com/elizaOS/eliza/pull/3372",
+            "https://github.com/elizaOS/eliza/pull/3361"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3340",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3343",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3342",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3320",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3127",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3372",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3361"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From February 6-7, 2025, there were 39 new pull requests with 24 merged, 10 new issues created, and 105 active contributors. Activity decreased slightly on the following day (February 7-8, 2025) with 16 new pull requests (7 merged), 8 new issues, and 65 active contributors.",
+          "sources": [
+            "From 2025-02-06 to 2025-02-07, elizaos/eliza had 39 new PRs (24 merged), 10 new issues, and 105 active contributors.",
+            "From 2025-02-07 to 2025-02-08, elizaos/eliza had 16 new PRs (7 merged), 8 new issues, and 65 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1738800000
+}

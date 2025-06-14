@@ -1,0 +1,217 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-05",
+  "categories": [
+    {
+      "title": "ElizaOS GitHub Repository Updates",
+      "content": [
+        {
+          "text": "# New Features\n\nElizaOS has added several new plugins and features to enhance functionality:\n\n- Added Stargaze plugin (PR #1861)\n- Added Infera as an inference provider (PR #1860)\n- Added Cosmos plugin (PR #1826)\n- Added Avail plugin (PR #1241)\n- Added GenLayer plugin (PR #975)\n- Implemented Marlin TEE remote attestations plugin (PR #935)\n- Added devcontainer support (PR #1807)\n- Added OpenWeather plugin (PR #1880)\n- Added GoPlus Security Plugin to enhance security (PR #1898)\n- Added Hyperfy support (PR #1896)\n- Added Binance plugin (PR #1812)\n- Added zktls-reclaim plugin (PR #1558)\n- Added remote attestation action (PR #1885)\n- Optimized Agent Action Processing by prioritizing timelines and limiting actions per cycle (PR #1824)\n- Added support for wildcard in TWITTER_TARGET_USERS (PR #1884)\n- Implemented recommended settings in Jupiter swap (PR #1882)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1861",
+            "https://github.com/elizaOS/eliza/pull/1860",
+            "https://github.com/elizaOS/eliza/pull/1826",
+            "https://github.com/elizaOS/eliza/pull/1241",
+            "https://github.com/elizaOS/eliza/pull/975",
+            "https://github.com/elizaOS/eliza/pull/935",
+            "https://github.com/elizaOS/eliza/pull/1807",
+            "https://github.com/elizaOS/eliza/pull/1880",
+            "https://github.com/elizaOS/eliza/pull/1898",
+            "https://github.com/elizaOS/eliza/pull/1896",
+            "https://github.com/elizaOS/eliza/pull/1812",
+            "https://github.com/elizaOS/eliza/pull/1558",
+            "https://github.com/elizaOS/eliza/pull/1885",
+            "https://github.com/elizaOS/eliza/pull/1824",
+            "https://github.com/elizaOS/eliza/pull/1884",
+            "https://github.com/elizaOS/eliza/pull/1882"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Bug Fixes\n\n- Fixed postinstall script (PR #1872)\n- Fixed FAQ link on contributing.md (PR #1847)\n- Fixed Solana token provider to await cached data (PR #1828)\n- Removed Twitter profile caching (PR #1782)\n- Fixed broken CI docs with out-of-sync frozen pnpm file (PR #1798)\n- Fixed typo in CHANGELOG.md (PR #1922)\n- Added handling for empty input text to avoid memory content empty error (PR #1919)\n- Fixed core evaluators check for null (PR #1918)\n- Resolved type-related errors and ensured project compiles (PR #1917)\n- Fixed SUMMARIZE prompt in Discord client (PR #1916)\n- Fixed Twitter result object undefined properties (PR #1905)\n- Fixed integrations and smoke tests (PR #1893)\n- Removed case sensitive path (PR #1892)\n- Fixed broken API Documentation URL (PR #1881)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1872",
+            "https://github.com/elizaOS/eliza/pull/1847",
+            "https://github.com/elizaOS/eliza/pull/1828",
+            "https://github.com/elizaOS/eliza/pull/1782",
+            "https://github.com/elizaOS/eliza/pull/1798",
+            "https://github.com/elizaOS/eliza/pull/1922",
+            "https://github.com/elizaOS/eliza/pull/1919",
+            "https://github.com/elizaOS/eliza/pull/1918",
+            "https://github.com/elizaOS/eliza/pull/1917",
+            "https://github.com/elizaOS/eliza/pull/1916",
+            "https://github.com/elizaOS/eliza/pull/1905",
+            "https://github.com/elizaOS/eliza/pull/1893",
+            "https://github.com/elizaOS/eliza/pull/1892",
+            "https://github.com/elizaOS/eliza/pull/1881"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Documentation and Internationalization\n\n- Added DAO donation ask & dev discord information (PR #1867)\n- Added Romanian README translation (PR #1770)\n- Added Dutch (Nederlands) translation (PR #1909)\n- Updated diagrams (PR #1907)\n- Added \"What Did You Get Done This Week? #8\" notes (PR #1894)\n- Corrected FAQ docs link in both contribution MD files (PR #1839)\n- Updated Korean README (PR #1835)\n- Fixed typo in README (PR #1832)\n- Created new README.md (PR #1787)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1867",
+            "https://github.com/elizaOS/eliza/pull/1770",
+            "https://github.com/elizaOS/eliza/pull/1909",
+            "https://github.com/elizaOS/eliza/pull/1907",
+            "https://github.com/elizaOS/eliza/pull/1894",
+            "https://github.com/elizaOS/eliza/pull/1839",
+            "https://github.com/elizaOS/eliza/pull/1835",
+            "https://github.com/elizaOS/eliza/pull/1832",
+            "https://github.com/elizaOS/eliza/pull/1787"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Testing and Infrastructure\n\n- Added more tests for goals, memory, and provider (PR #1840)\n- Added tests for discord-client (PR #1927)\n- Added test setup for telegram client (PR #1879)\n- Added callback to evaluators for client-telegram (PR #1908)\n- Refactored model config (PR #1805)\n- Updated bootstrap plugin export (PR #1836)\n- Updated C3PO character JSON (PR #1827)\n- Added support for more Debian distros (PR #1875)\n- Updated API route (PR #1923)\n- Enabled strict null checks in core (PR #1878)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1840",
+            "https://github.com/elizaOS/eliza/pull/1927",
+            "https://github.com/elizaOS/eliza/pull/1879",
+            "https://github.com/elizaOS/eliza/pull/1908",
+            "https://github.com/elizaOS/eliza/pull/1805",
+            "https://github.com/elizaOS/eliza/pull/1836",
+            "https://github.com/elizaOS/eliza/pull/1827",
+            "https://github.com/elizaOS/eliza/pull/1875",
+            "https://github.com/elizaOS/eliza/pull/1923",
+            "https://github.com/elizaOS/eliza/pull/1878"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "dankvr's Twitter Activity",
+      "content": [
+        {
+          "text": "dankvr trained LoRAs on @degenspartanai and @pmairca, expressing excitement about potential applications in writing. They also engaged in discussions about DAOs, specifically mentioning the opportunity for DAOs that combine human teams with AI agents, referencing @ai16zdao as an example of this collaboration in open source and community management.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1876036966346887566",
+            "https://twitter.com/dankvr/status/1875953463059947820"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GgkFUoNXYAAFyvK.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "dankvr shared thoughts on cryptocurrency, praising @lopp for consistently sharing knowledge about digital security, privacy, and cypherpunk lore across multiple crypto cycles. They also commented on market dynamics, noting that they 'flipped worldcoin in marketcap and google in open source agent activity on github.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875942440525516923",
+            "https://twitter.com/dankvr/status/1875909763873243538"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In various replies, dankvr shared images related to cryptocurrency discussions, including what appears to be a reference to a scam. They also shared the philosophical insight that 'The best way to clone yourself is to write documentation.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875992031820120391",
+            "https://twitter.com/dankvr/status/1875940448029786623",
+            "https://twitter.com/dankvr/status/1875774075735544280",
+            "https://twitter.com/dankvr/status/1875757345990733917"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GgjcyDcXsAARspN.png",
+            "https://pbs.twimg.com/media/Ggit0uPXMAApAwI.jpg",
+            "https://pbs.twimg.com/media/GggWkqTWQAAKS8s.jpg"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent Issues in the Eliza GitHub Repository",
+      "content": [
+        {
+          "text": "The Eliza GitHub repository is experiencing several issues reported by users. These range from security concerns to functionality problems and integration requests.\n\nSecurity and technical issues include a code analysis report highlighting security vulnerabilities (#1862), embeddings errors when accessing localhost (#1870), and problems with CUDA detection in llama-local (#1926). There's also a reported issue with concurrent updates in the postgres adapter causing random agent startup failures (#1914).\n\nFunctionality problems include repetitive and irrelevant answers (#1900), issues with generating new tweets (#1859), and incorrect formatting of Twitter posts (#1920).\n\nUsers have also submitted feature requests and questions, such as a proposal for Algorand Blockchain Integration (#1866), browser+client functionality (#1864), and inquiries about contributing to the project (#1891).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1862",
+            "https://github.com/elizaOS/eliza/issues/1864",
+            "https://github.com/elizaOS/eliza/issues/1859",
+            "https://github.com/elizaOS/eliza/issues/1870",
+            "https://github.com/elizaOS/eliza/issues/1866",
+            "https://github.com/elizaOS/eliza/issues/1926",
+            "https://github.com/elizaOS/eliza/issues/1900",
+            "https://github.com/elizaOS/eliza/issues/1920",
+            "https://github.com/elizaOS/eliza/issues/1891",
+            "https://github.com/elizaOS/eliza/issues/1914"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1862",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1870",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1926"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository has seen several new feature additions and improvements through recent pull requests. These include:\n\n- Addition of Infera as a new inference provider (PR #1860)\n- Implementation of a GenLayer plugin (PR #975)\n- Integration of OpenTelemetry (OTEL) functionality, currently in draft stage (PR #1853)\n- Addition of an OpenWeather plugin for weather data access (PR #1880)\n- General updates to Eliza (PR #1911)\n- Integration of a new zktls-reclaim plugin (PR #1558)\n- Addition of a Binance plugin for cryptocurrency data (PR #1812)\n- Fixes for integrations and smoke tests to improve system reliability (PR #1893)\n\nThese contributions demonstrate ongoing development to expand Eliza's capabilities through new plugins, providers, and system improvements.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1860",
+            "https://github.com/elizaOS/eliza/pull/975",
+            "https://github.com/elizaOS/eliza/pull/1853",
+            "https://github.com/elizaOS/eliza/pull/1880",
+            "https://github.com/elizaOS/eliza/pull/1911",
+            "https://github.com/elizaOS/eliza/pull/1558",
+            "https://github.com/elizaOS/eliza/pull/1812",
+            "https://github.com/elizaOS/eliza/pull/1893"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1860",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/975",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1853",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1880",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1911",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1558",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1812",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1893"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed increased activity over a two-day period. From January 5-6, 2025, there were 25 new pull requests (with 23 merged), 12 new issues, and 62 active contributors. Activity increased the following day (January 6-7, 2025) with 30 new pull requests (26 merged), 16 new issues, and 78 active contributors. This represents a 20% increase in pull requests, 33% increase in new issues, and 26% increase in active contributors day-over-day.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1736035200
+}

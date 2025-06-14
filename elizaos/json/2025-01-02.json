@@ -1,0 +1,201 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-02",
+  "categories": [
+    {
+      "title": "Recent Updates to the Eliza Project",
+      "content": [
+        {
+          "text": "The Eliza project has seen numerous improvements across various areas:\n\n**Features and Enhancements:**\n- Added support for SUI blockchain with the SuiPrivateKey0x account type (PR #1693)\n- Improved GOAT integration by enabling tool calling when using generateText (PR #1403)\n- Added web search capabilities to the agent (PR #1676, #1577)\n- Added documentation for the story plugin (PR #1672)\n- Added echochambers to agent functionality (PR #1719)\n- Enhanced EVM plugin wallet provider and transfer actions (PR #1701)\n- Implemented custom conditions for live monorepo types (PR #1365)\n- Added support for EternalAI provider to write request/response log information (PR #1740)\n- Replaced console.log with Eliza logger in the NEAR plugin (PR #1745)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1693",
+            "https://github.com/elizaOS/eliza/pull/1403",
+            "https://github.com/elizaOS/eliza/pull/1676",
+            "https://github.com/elizaOS/eliza/pull/1577",
+            "https://github.com/elizaOS/eliza/pull/1672",
+            "https://github.com/elizaOS/eliza/pull/1719",
+            "https://github.com/elizaOS/eliza/pull/1701",
+            "https://github.com/elizaOS/eliza/pull/1365",
+            "https://github.com/elizaOS/eliza/pull/1740",
+            "https://github.com/elizaOS/eliza/pull/1745"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "**Bug Fixes:**\n- Fixed URL issues in ImageDescriptionService (PR #1696)\n- Resolved smoke test failures (PR #1695)\n- Fixed Twitter image link issues (PR #1671)\n- Improved image description service (PR #1667, #1664)\n- Updated Supabase schema.sql (PR #1660)\n- Enhanced Windows compatibility for Vite dev server (PR #1760)\n- Fixed build lint errors (PR #1759)\n- Addressed multiple web search import in agent (PR #1718)\n- Added support for non-OpenAI models in token trimming (PR #1605)\n- Removed unnecessary await in trimTokens function (PR #1686)\n- Disabled trust provider for PostgreSQL database (PR #1536)\n- Removed nonsensical schema check in postgres-adapter (PR #1377)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1696",
+            "https://github.com/elizaOS/eliza/pull/1695",
+            "https://github.com/elizaOS/eliza/pull/1671",
+            "https://github.com/elizaOS/eliza/pull/1667",
+            "https://github.com/elizaOS/eliza/pull/1664",
+            "https://github.com/elizaOS/eliza/pull/1660",
+            "https://github.com/elizaOS/eliza/pull/1760",
+            "https://github.com/elizaOS/eliza/pull/1759",
+            "https://github.com/elizaOS/eliza/pull/1718",
+            "https://github.com/elizaOS/eliza/pull/1605",
+            "https://github.com/elizaOS/eliza/pull/1686",
+            "https://github.com/elizaOS/eliza/pull/1536",
+            "https://github.com/elizaOS/eliza/pull/1377"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "**Documentation and Maintenance:**\n- Added Serbian README translation (PR #1757)\n- Updated Korean README with missing sections and improved translations (PR #1683, #1739)\n- Updated FAQ documentation (PR #1746)\n- Fixed spelling in README.md (PR #1690)\n- Renamed repository references from ai16z/eliza to elizaOS/eliza (PR #1679)\n- Updated Twitter username validation message (PR #1698)\n- Updated web search plugin export (PR #1688)\n- Removed unused imports in ZKSync Era module (PR #1716)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1757",
+            "https://github.com/elizaOS/eliza/pull/1683",
+            "https://github.com/elizaOS/eliza/pull/1739",
+            "https://github.com/elizaOS/eliza/pull/1746",
+            "https://github.com/elizaOS/eliza/pull/1690",
+            "https://github.com/elizaOS/eliza/pull/1679",
+            "https://github.com/elizaOS/eliza/pull/1698",
+            "https://github.com/elizaOS/eliza/pull/1688",
+            "https://github.com/elizaOS/eliza/pull/1716"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Recent Issues in the elizaOS/eliza GitHub Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza GitHub repository is experiencing several technical issues across different components of the system. These include:\n\n1. Database connectivity problems: Users are facing issues starting the agent with PostgreSQL (#1687).\n\n2. Build failures: The @elizaos/client-lens package is failing to build (#1680).\n\n3. Image processing limitations: The Image Description Service is encountering problems with unsupported image formats (#1694).\n\n4. Model compatibility issues: The Google Model integration is not functioning properly (#1709), and there are discrepancies when using different models for image processing versus base functionality (#1772).\n\n5. Performance concerns: Users are reporting very slow pnpm start times (#1758).\n\n6. API and proxy errors: HTTP proxy errors are occurring with specific message endpoints (#1669).\n\n7. Wallet integration problems: Public Solana Wallet cannot be found by the system (#1780).\n\n8. Runtime exceptions: Jetson Runtime is experiencing exceptions related to sqlite-vec extension load failures (#1747).\n\n9. Documentation improvements: There's a request to serve docusaurus docs from a docker container for quicker documentation verification (#1720).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1687",
+            "https://github.com/elizaOS/eliza/issues/1680",
+            "https://github.com/elizaOS/eliza/issues/1694",
+            "https://github.com/elizaOS/eliza/issues/1709",
+            "https://github.com/elizaOS/eliza/issues/1669",
+            "https://github.com/elizaOS/eliza/issues/1758",
+            "https://github.com/elizaOS/eliza/issues/1772",
+            "https://github.com/elizaOS/eliza/issues/1780",
+            "https://github.com/elizaOS/eliza/issues/1747",
+            "https://github.com/elizaOS/eliza/issues/1720"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1687",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1680",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1694",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/1709"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository has seen significant development activity with multiple pull requests focused on enhancing documentation, adding new blockchain integrations, and improving existing functionality.\n\nDocumentation improvements include PR #1551 adding JSDoc documentation for the repository and PR #1675 introducing a multilingual Agentic Eliza Plugin Documenter supporting English, Spanish, and French.\n\nSeveral new blockchain integrations have been added through pull requests, including support for Ordinals and Runes (PR #1699), an EVM OZ governance plugin (PR #1710), an Injective plugin (PR #1764), and a Cardano Blockchain Plugin (PR #1768).\n\nFunctionality improvements include PR #1403 enhancing GOAT integration by enabling tool calling when using generateText, and PR #1750 fixing PGVector embedding validation issues.\n\nThe repository also had a version release with PR #1717 merging develop into main for the 1.7.0 release, and a new contribution with PR #1771 introducing Kavi functionality.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1551",
+            "https://github.com/elizaOS/eliza/pull/1710",
+            "https://github.com/elizaOS/eliza/pull/1675",
+            "https://github.com/elizaOS/eliza/pull/1699",
+            "https://github.com/elizaOS/eliza/pull/1403",
+            "https://github.com/elizaOS/eliza/pull/1764",
+            "https://github.com/elizaOS/eliza/pull/1717",
+            "https://github.com/elizaOS/eliza/pull/1768",
+            "https://github.com/elizaOS/eliza/pull/1750",
+            "https://github.com/elizaOS/eliza/pull/1771"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1551",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1710",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1675",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1699",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1403",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1764",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1717",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1768",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1750",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1771"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Recent Twitter Activity from @dankvr",
+      "content": [
+        {
+          "text": "@dankvr shared several images in replies to other Twitter users, including responses to @Rewkang, @SOLsesame, and @palis, each with attached images.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1874943440829739382",
+            "https://twitter.com/dankvr/status/1874909542284439944",
+            "https://twitter.com/dankvr/status/1874837319263646115"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GgUjH6MWsAASdDo.jpg",
+            "https://pbs.twimg.com/media/GgUEF78WcAAj6EN.jpg",
+            "https://pbs.twimg.com/media/GgTCm1uWMAAiMKZ.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "@dankvr commented on search tools, suggesting that people shouldn't be blamed for asking questions they could find answers to since search tools like Google, Twitter, and Discord have limitations. They recommended using Grok as an alternative to Google for starting searches.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1874693865690820757"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "@dankvr expressed positive sentiment about the AI industry shifting toward open source, specifically mentioning @ai16zdao as leading this transition.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1874686870195683697"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In response to @shawmakesmagic, @dankvr suggested adding more default character file templates, particularly for practical applications like code assistants and project managers.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1874628971385729334"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed increased activity over two consecutive days. On January 3, 2025, there were 31 new PRs (18 merged), 11 new issues, and 61 active contributors. Activity increased the following day with 43 new PRs (14 merged), 24 new issues, and 69 active contributors. While the number of new PRs and issues grew, the percentage of merged PRs decreased from approximately 58% to 33%.",
+          "sources": [
+            "From 2025-01-02 to 2025-01-03, elizaos/eliza had 31 new PRs (18 merged), 11 new issues, and 61 active contributors.",
+            "From 2025-01-03 to 2025-01-04, elizaos/eliza had 43 new PRs (14 merged), 24 new issues, and 69 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are, their contributions, or any statistics related to the project. Without additional information, it's not possible to generate a detailed summary about the top contributors to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1735776000
+}

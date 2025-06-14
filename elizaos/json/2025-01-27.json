@@ -1,0 +1,246 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-27",
+  "categories": [
+    {
+      "title": "Eliza Project Updates: New Plugins, Bugfixes, and Testing Improvements",
+      "content": [
+        {
+          "text": "## New Features and Plugins\n\nThe Eliza project has added several new plugins and features:\n\n- A new plugin for the Zilliqa blockchain (#2842)\n- Telegram account client integration (#2839)\n- MultiversX Plugin with Access Token Management (#2810)\n- Gelato plugin relay (#2799)\n- BTC Fun Plugin (#2797)\n- APRO plugin support (#2794)\n- XMTP Client (#2786)\n- Arbitrage plugin with example character (#2784)\n- Trikon plugin (#2653)\n- Deva client integration (#1238)\n- Twitter media posting capability (#2818)\n- New model provider for LM Studio (#2913)\n- Public access to packages (#2933)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2842",
+            "https://github.com/elizaOS/eliza/pull/2839",
+            "https://github.com/elizaOS/eliza/pull/2810",
+            "https://github.com/elizaOS/eliza/pull/2799",
+            "https://github.com/elizaOS/eliza/pull/2797",
+            "https://github.com/elizaOS/eliza/pull/2794",
+            "https://github.com/elizaOS/eliza/pull/2786",
+            "https://github.com/elizaOS/eliza/pull/2784",
+            "https://github.com/elizaOS/eliza/pull/2653",
+            "https://github.com/elizaOS/eliza/pull/1238",
+            "https://github.com/elizaOS/eliza/pull/2818",
+            "https://github.com/elizaOS/eliza/pull/2913",
+            "https://github.com/elizaOS/eliza/pull/2933"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Bug Fixes\n\nNumerous bug fixes have been implemented across various plugins and components:\n\n- Updated bs58 version to resolve integration test dependency issues (#2848)\n- Simplified and fixed exports in Imgflip meme generation plugin (#2846)\n- Fixed issues in multiple plugins including Story, Sui, Suno, Akash splash, TEE-Marlin, TEE-Verifiable-Log, ThirdWeb, TON, TTS, Twitter, Udio, Video-Generation, Zerion, ZkSync-Era, Arbitrage, Omniflix, Opacity, Open-Weather, OpenAI, Primus, Quai, Quick-Intel, Sei, SGX, Spheron, Squid-Router, and Starknet\n- Updated cookie dependency to v0.7.0 for security (#2834)\n- Fixed Farcaster client loop to continue running even after errors (#2830)\n- Fixed NVIDIA NIM environment (#2817)\n- Fixed JSON parsing bug with single quotes (#2802)\n- Fixed client server port (#2886)\n- Fixed LOG_JSON_FORMAT environment variable setting (#2881)\n- Changed default character from OpenAI to LlamaLocal (#2880)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2848",
+            "https://github.com/elizaOS/eliza/pull/2846",
+            "https://github.com/elizaOS/eliza/pull/2844",
+            "https://github.com/elizaOS/eliza/pull/2843",
+            "https://github.com/elizaOS/eliza/pull/2840",
+            "https://github.com/elizaOS/eliza/pull/2838",
+            "https://github.com/elizaOS/eliza/pull/2837",
+            "https://github.com/elizaOS/eliza/pull/2836",
+            "https://github.com/elizaOS/eliza/pull/2834",
+            "https://github.com/elizaOS/eliza/pull/2833",
+            "https://github.com/elizaOS/eliza/pull/2832",
+            "https://github.com/elizaOS/eliza/pull/2830",
+            "https://github.com/elizaOS/eliza/pull/2829",
+            "https://github.com/elizaOS/eliza/pull/2827",
+            "https://github.com/elizaOS/eliza/pull/2824",
+            "https://github.com/elizaOS/eliza/pull/2823",
+            "https://github.com/elizaOS/eliza/pull/2822",
+            "https://github.com/elizaOS/eliza/pull/2819",
+            "https://github.com/elizaOS/eliza/pull/2817",
+            "https://github.com/elizaOS/eliza/pull/2802",
+            "https://github.com/elizaOS/eliza/pull/2886",
+            "https://github.com/elizaOS/eliza/pull/2881",
+            "https://github.com/elizaOS/eliza/pull/2880",
+            "https://github.com/elizaOS/eliza/pull/2905",
+            "https://github.com/elizaOS/eliza/pull/2902",
+            "https://github.com/elizaOS/eliza/pull/2900",
+            "https://github.com/elizaOS/eliza/pull/2899",
+            "https://github.com/elizaOS/eliza/pull/2898",
+            "https://github.com/elizaOS/eliza/pull/2893",
+            "https://github.com/elizaOS/eliza/pull/2892",
+            "https://github.com/elizaOS/eliza/pull/2890",
+            "https://github.com/elizaOS/eliza/pull/2877",
+            "https://github.com/elizaOS/eliza/pull/2872",
+            "https://github.com/elizaOS/eliza/pull/2870",
+            "https://github.com/elizaOS/eliza/pull/2868",
+            "https://github.com/elizaOS/eliza/pull/2866"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Testing Improvements\n\nTest coverage and configuration have been enhanced for several plugins:\n\n- Added test configuration and coverage for plugin-anyone (#2854)\n- Added test configuration and coverage for plugin-3d generation (#2850)\n- Added test configuration and coverage for plugin-0x (#2807)\n- Added test configuration and coverage for plugin-0g (#2805)\n- Added test configuration and coverage for plugin-asterai (#2860)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2854",
+            "https://github.com/elizaOS/eliza/pull/2850",
+            "https://github.com/elizaOS/eliza/pull/2807",
+            "https://github.com/elizaOS/eliza/pull/2805",
+            "https://github.com/elizaOS/eliza/pull/2860"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Documentation and Other Updates\n\n- Added new READMEs and moved others for consistency (#2828)\n- Updated embedding function documentation (#2821)\n- Updated client-telegram README.md (#2814)\n- Created client-discord readme.md (#2812)\n- Added exclusion for extra folder for faster future rebase (#2813)\n- Updated pnpm to v9.15.0 for security (#2888)\n- Updated systeminformation dependency to v5.23.8 for security (#2887)\n- Bumped version to 0.1.9 (#2883)\n- Fixed inconsistent folder naming convention (#2931)\n- Fixed invalid npm package naming convention (#2930)\n- Fixed missing version property in package.json (#2929)\n- Made changes to allow package scoping to public (#2928)\n- Fixed spelling errors (#2909)\n- Updated LICENSE (#2903)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2828",
+            "https://github.com/elizaOS/eliza/pull/2821",
+            "https://github.com/elizaOS/eliza/pull/2814",
+            "https://github.com/elizaOS/eliza/pull/2812",
+            "https://github.com/elizaOS/eliza/pull/2813",
+            "https://github.com/elizaOS/eliza/pull/2888",
+            "https://github.com/elizaOS/eliza/pull/2887",
+            "https://github.com/elizaOS/eliza/pull/2883",
+            "https://github.com/elizaOS/eliza/pull/2931",
+            "https://github.com/elizaOS/eliza/pull/2930",
+            "https://github.com/elizaOS/eliza/pull/2929",
+            "https://github.com/elizaOS/eliza/pull/2928",
+            "https://github.com/elizaOS/eliza/pull/2909",
+            "https://github.com/elizaOS/eliza/pull/2903"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Open Source AI and Crypto Developments",
+      "content": [
+        {
+          "text": "Open source AI is gaining momentum with DeepSeek models making waves in the AI community. The release of these models has sparked optimism about the future of open source AI, with users noting how it feels to use DeepSeek models with Eliza. This development is seen as a win for open source technology in general.",
+          "sources": "https://twitter.com/dankvr/status/1883900392628752427, https://twitter.com/dankvr/status/1883935328593129832",
+          "images": "https://pbs.twimg.com/ext_tw_video_thumb/1883899121838202880/pu/img/MnHre3DyvjMqvkR1.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1883899121838202880/pu/vid/avc1/1280x720/Efn5FUD3nYF9Tozj.mp4?tag=12"
+        },
+        {
+          "text": "The impact of DeepSeek's advancements is significant for the AI ecosystem. As noted by Shaw, DeepSeek's success is making VCs more willing to invest in smaller labs, potentially leading to hundreds of new labs getting funded. This is particularly bullish for teams who have been developing AI solutions and are about to have their moment.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1884002809382924784",
+          "images": "",
+          "videos": ""
+        },
+        {
+          "text": "There's a strong sentiment that open source AI improvements benefit everyone in the ecosystem. As models get better and cheaper, AI products and agents become smarter at no additional cost. The trend shows AI labs leapfrogging each other in capabilities, with DeepSeek currently leading the pack.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1883831555392770470, https://twitter.com/shawmakesmagic/status/1883704494879559789",
+          "images": "",
+          "videos": ""
+        },
+        {
+          "text": "The intersection of AI and crypto is highlighted with mentions of collaborative training of open source models coordinated on Solana. There's enthusiasm about DAOs, open source, AI, and crypto working together, with calls for more people from big AI companies to join this 'wild west' ecosystem.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1884011621988851862, https://twitter.com/dankvr/status/1883692238884254096",
+          "images": "",
+          "videos": ""
+        },
+        {
+          "text": "AI16z DAO is mentioned as a 'hyperbolic time chamber' where teams are 'eating their own dog food' while speed running development stages. There's also discussion about tools like Dework, described as a blend of GitHub, Discord, Trello with bounties that make it easy to attach crypto to tasks.",
+          "sources": "https://twitter.com/dankvr/status/1883694865466433922, https://twitter.com/dankvr/status/1883706963336556932",
+          "images": "https://pbs.twimg.com/media/GiQ5jvGXgAAYSYG.png",
+          "videos": ""
+        },
+        {
+          "text": "The sentiment toward market fluctuations remains positive with statements like 'Nice shakeout, Not selling' and questions about why AI advancements would negatively impact crypto AI space when it's 'unbelievably bullish.' There's also excitement about 'Season 2' beginning, suggesting a new phase in the AI/crypto landscape.",
+          "sources": "https://twitter.com/dankvr/status/1883696911141711915, https://twitter.com/shawmakesmagic/status/1883830918357692486, https://twitter.com/shawmakesmagic/status/1883676926008778941",
+          "images": "https://pbs.twimg.com/media/GiQ8QkgXIAAwKJX.jpg, https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent Issues in the elizaOS/eliza GitHub Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza GitHub repository has several open issues related to plugins, functionality, and technical problems:\n\n1. Plugin Development Issues:\n   - Issue #2851: Request to publish plugin-sui\n   - Issue #2859: plugin-asterai needs test configuration and improved test coverage\n   - Issue #2815: Integration with node-llama-cpp\n\n2. Feature Requests:\n   - Issue #2856: A feature to collect information from Telegram groups or Discord channels\n   - Issue #2918: Proposal to consolidate RAG Knowledge into a unified Knowledge system (marked as V2)\n\n3. Technical Problems:\n   - Issue #2864: Btcfun crash reported\n   - Issue #2885: Eliza chatbot client not running on localhost:5173\n   - Issue #2871: Error after updating to the latest version\n   - Issue #2891: Second tweet from agent incorrectly replies to user instead of initial agent tweet\n   - Issue #2914: ragKnowledge functionality causing problems by retrieving entire documents, which bloats the prompt",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/2851",
+            "https://github.com/elizaOS/eliza/issues/2864",
+            "https://github.com/elizaOS/eliza/issues/2856",
+            "https://github.com/elizaOS/eliza/issues/2815",
+            "https://github.com/elizaOS/eliza/issues/2859",
+            "https://github.com/elizaOS/eliza/issues/2885",
+            "https://github.com/elizaOS/eliza/issues/2891",
+            "https://github.com/elizaOS/eliza/issues/2871",
+            "https://github.com/elizaOS/eliza/issues/2918",
+            "https://github.com/elizaOS/eliza/issues/2914"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2851",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2864",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2856",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2815",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2859",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2885",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2891",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2871",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2918",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2914"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests to the Eliza Framework",
+      "content": [
+        {
+          "text": "The Eliza framework has seen several new plugin integrations and feature additions through recent pull requests. These contributions expand Eliza's capabilities across various domains:\n\n- A new Storyteller feature (PR #2831) has been proposed by Mettulus\n- AIFlowML added Hyperliquid plugin integration with WebSocket support (PR #1497)\n- Julian-dev28 contributed an OKX DEX integration (PR #2865)\n- An arbitrage plugin with example character was added by mmarfinetz (PR #2784)\n- Lit Protocol plugin was introduced by madschristensen99 (PR #2912)\n- Tarnadas developed an Orderly Network plugin (PR #2925)\n- A draft PR for model refactoring was submitted by lalalune (PR #2910)\n- Aman-14 integrated Hash Network Plugin for verifiable inference (PR #2894)\n- General Eliza updates were contributed by magacek (PR #2874)\n\nThese contributions demonstrate the active development of the Eliza framework, with a particular focus on expanding its plugin ecosystem for various blockchain, DeFi, and AI-related functionalities.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2831",
+            "https://github.com/elizaOS/eliza/pull/1497",
+            "https://github.com/elizaOS/eliza/pull/2865",
+            "https://github.com/elizaOS/eliza/pull/2784",
+            "https://github.com/elizaOS/eliza/pull/2912",
+            "https://github.com/elizaOS/eliza/pull/2925",
+            "https://github.com/elizaOS/eliza/pull/2910",
+            "https://github.com/elizaOS/eliza/pull/2894",
+            "https://github.com/elizaOS/eliza/pull/2874"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2831",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1497",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2865",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2784",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2912",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2925",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2910",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2894",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2874"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From January 27-28, 2025, there were 39 new pull requests with 42 merged, 11 new issues created, and 40 active contributors. Activity increased the following day (January 28-29, 2025) with 50 new pull requests, 37 merged pull requests, 15 new issues, and 44 active contributors. Overall, the project maintained strong development momentum with consistent contributor engagement.",
+          "sources": [
+            "From 2025-01-27 to 2025-01-28, elizaos/eliza had 39 new PRs (42 merged), 11 new issues, and 40 active contributors.",
+            "From 2025-01-28 to 2025-01-29, elizaos/eliza had 50 new PRs (37 merged), 15 new issues, and 44 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1737936000
+}

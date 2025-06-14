@@ -1,0 +1,213 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-09",
+  "categories": [
+    {
+      "title": "Eliza Project Updates Summary",
+      "content": [
+        {
+          "text": "# Major Features\n\nThe Eliza project has undergone significant enhancements with a full client overhaul (PR #2038) and the addition of several new plugins and integrations:\n\n- **Proof of Pizza**: Agentic Dominos ordering capability was added but later reverted (PR #2042, #2075)\n- **Blockchain & Web3 Integrations**:\n  - CoinGecko plugin with pro API support and trending coins functionality (PR #1761, #2068)\n  - Lens Network Plugin for social media integration (PR #2101)\n  - Improved zkstack-based plugins (PR #1821)\n  - NFT generation plugin with EVM chain support (PR #1763)\n  - Akash Network plugin with autonomous deployment capabilities (PR #2111)\n  - Irys plugin for decentralized storage (PR #1708)\n- **AI & Model Support**:\n  - Added nineteen.ai LLM & image support (PR #2022)\n  - Heurist embedding model integration (PR #2093)\n  - Gemini added to image vision capabilities (PR #2099)\n  - Autonome platform support (PR #2121)\n- **Security & Infrastructure**:\n  - TEE logging and Intel SGX support (PR #1470)\n  - Verified Inference documentation (PR #2125)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2038",
+            "https://github.com/elizaOS/eliza/pull/1761",
+            "https://github.com/elizaOS/eliza/pull/2042",
+            "https://github.com/elizaOS/eliza/pull/2075",
+            "https://github.com/elizaOS/eliza/pull/2022",
+            "https://github.com/elizaOS/eliza/pull/1821",
+            "https://github.com/elizaOS/eliza/pull/1763",
+            "https://github.com/elizaOS/eliza/pull/2101",
+            "https://github.com/elizaOS/eliza/pull/2111",
+            "https://github.com/elizaOS/eliza/pull/1708",
+            "https://github.com/elizaOS/eliza/pull/2068",
+            "https://github.com/elizaOS/eliza/pull/2093",
+            "https://github.com/elizaOS/eliza/pull/2099",
+            "https://github.com/elizaOS/eliza/pull/2121",
+            "https://github.com/elizaOS/eliza/pull/1470",
+            "https://github.com/elizaOS/eliza/pull/2125"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Bug Fixes\n\nNumerous bug fixes have been implemented to improve stability and functionality:\n\n- Fixed LetzAI Plugin's missing named export and Plugin-type (PR #2062)\n- Fixed case-sensitive column reference in knowledge table CHECK constraint (PR #2058)\n- Categorized and formatted .env.example (PR #2052)\n- Updated regex to allow Unicode characters in message processing (PR #2048), though this was later reverted (PR #2059)\n- Updated Key Derive in TEE (PR #2039), which was also reverted (PR #2049)\n- Fixed Slack client readme manifest (PR #2044)\n- Improved RPC URL specificity (PR #2018)\n- Fixed MultiversX plugin (PR #2017)\n- Fixed PGVector embedding validation (PR #1750)\n- Fixed syntax issues on autonome plugin and updated lock file (PR #2131)\n- Prevented repeated login by reusing client-twitter session (PR #2129)\n- Applied model settings for images and removed duplicate files (PR #2118)\n- Removed unused imports (PR #2112)\n- Fixed clientConfig.telegram.isPartOfTeam mistype (PR #2103)\n- Fixed plugin loading from character.json file (PR #2095)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2062",
+            "https://github.com/elizaOS/eliza/pull/2058",
+            "https://github.com/elizaOS/eliza/pull/2052",
+            "https://github.com/elizaOS/eliza/pull/2048",
+            "https://github.com/elizaOS/eliza/pull/2059",
+            "https://github.com/elizaOS/eliza/pull/2039",
+            "https://github.com/elizaOS/eliza/pull/2049",
+            "https://github.com/elizaOS/eliza/pull/2044",
+            "https://github.com/elizaOS/eliza/pull/2018",
+            "https://github.com/elizaOS/eliza/pull/2017",
+            "https://github.com/elizaOS/eliza/pull/1750",
+            "https://github.com/elizaOS/eliza/pull/2131",
+            "https://github.com/elizaOS/eliza/pull/2129",
+            "https://github.com/elizaOS/eliza/pull/2128",
+            "https://github.com/elizaOS/eliza/pull/2118",
+            "https://github.com/elizaOS/eliza/pull/2112",
+            "https://github.com/elizaOS/eliza/pull/2103",
+            "https://github.com/elizaOS/eliza/pull/2095",
+            "https://github.com/elizaOS/eliza/pull/2091"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "# Documentation & Testing\n\nThe project has seen improvements in documentation and testing:\n\n- Updated README_KOR.md (PR #2074)\n- Updated README_CN to match latest English README (PR #2069)\n- Updated Galadriel docs and .env.example (PR #2061)\n- General documentation improvements (PR #2138)\n- Added name and description to SttTtsPlugin (PR #2117)\n- Enhanced integration tests and added Coinbase Commerce integration (PR #1767)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2074",
+            "https://github.com/elizaOS/eliza/pull/2069",
+            "https://github.com/elizaOS/eliza/pull/2061",
+            "https://github.com/elizaOS/eliza/pull/2138",
+            "https://github.com/elizaOS/eliza/pull/2117",
+            "https://github.com/elizaOS/eliza/pull/1767"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "DankVR on AI16Z DAO, Token Tributes, and Open Source AGI",
+      "content": [
+        {
+          "text": "DankVR (@dankvr) discusses the concept of 'token tributes' in relation to @ai16zdao, explaining that developers with tokenized projects can send tokens to the fund address to align with thousands of others who have incentives to collaborate. He believes this simple token tribute model has been crucial to the DAO's trajectory and success.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1877386977676247389",
+            "https://twitter.com/dankvr/status/1877413549141565862",
+            "https://twitter.com/dankvr/status/1877410199444554051"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "He explains that @daosdotfun is a special platform where tickers like ai16z can function like memecoins, but also represent DAOs that can buy, sell, and hold other tokens. Since the beginning, people have sent tokens to these DAOs to appear on the platform under Assets Under Management (AUM).",
+          "sources": [
+            "https://twitter.com/dankvr/status/1877286346303087069",
+            "https://twitter.com/dankvr/status/1877240062116556955",
+            "https://twitter.com/dankvr/status/1877364480310473164"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "DankVR defends the token tribute concept when challenged, describing them as 'voluntary memecoin tributes' and emphasizing that there are 'no free rides' in the ecosystem - everyone must contribute either code or tribute tokens. He also clarifies that the percentage for tributes is negotiable, stating that 'starting high is the first rule of negotiations.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1877162816940974566",
+            "https://twitter.com/dankvr/status/1877397955423944938",
+            "https://twitter.com/dankvr/status/1877407887196045366"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In other interactions, DankVR expresses support for open source AGI, mentions using Obsidian web clipper for tokenomics notes, and comments on GitHub metrics, noting that stars alone aren't a useful metric without considering activity, forks, issues, PRs, and contributors.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1877400342356230518",
+            "https://twitter.com/dankvr/status/1877436179563352221",
+            "https://twitter.com/dankvr/status/1877293028534030455"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent GitHub Issues in elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several issues have been reported in the elizaOS/eliza GitHub repository, primarily related to plugins and error messages:\n\n1. Plugin-related issues:\n   - Issue #2078: Users are encountering \"Cannot read properties of undefined (reading 'actions')\" errors when testing the WhatsApp plugin\n   - Issue #2077: A request for a Nillion nilDB Plugin has been submitted\n   - Issue #2114: The Twitter plugin (@elizaos/plugin-twitter) has not been published to npm\n   - Issue #2126: A proposal to refactor and separate data providers into plugins\n\n2. Platform integration problems:\n   - Issue #2076: The bot fails to process Telegram messages from other bots despite having the \"shouldIgnoreBotMessages: false\" setting\n   - Issue #2089: Users are experiencing double responses when interacting on Telegram\n\n3. Technical errors:\n   - Issue #2080: CUDA errors when using \"llama_local\" with error code ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL and exit code 3221226505\n   - Issue #2127: Users encountering ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL errors\n\n4. Security and feature requests:\n   - Issue #2050: A security fix to prevent forged public keys from using valid attestations as proof to deceive users\n   - Issue #2109: Feature request for a Response Format capability",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/2078",
+            "https://github.com/elizaOS/eliza/issues/2080",
+            "https://github.com/elizaOS/eliza/issues/2077",
+            "https://github.com/elizaOS/eliza/issues/2076",
+            "https://github.com/elizaOS/eliza/issues/2050",
+            "https://github.com/elizaOS/eliza/issues/2127",
+            "https://github.com/elizaOS/eliza/issues/2089",
+            "https://github.com/elizaOS/eliza/issues/2114",
+            "https://github.com/elizaOS/eliza/issues/2126",
+            "https://github.com/elizaOS/eliza/issues/2109"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2078",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2080",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2077",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2076",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2050",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2127",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2089",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2114",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2126",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/2109"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository has seen several significant pull requests recently, focusing on feature additions and improvements. These PRs can be categorized into several key areas:\n\n1. **Core System Improvements**:\n   - PR #2060 by yueliao11 addresses conflict resolution in the codebase\n   - PR #2041 by juansebsol focuses on general development\n   - PR #2038 by JoeyKhd implements a complete overhaul of the client\n\n2. **New Functionality**:\n   - Two PRs (#2042 by bayological and #1005 by ropresearch) implement \"Proof of Pizza\" - an agentic Dominos ordering system\n   - PR #2108 by tomguluson92 adds Text to Speech (TTS) capabilities\n\n3. **Plugin Ecosystem Expansion**:\n   - PR #2113 by indowebdeveloper modifies the web-search plugin to use google.serper.dev\n   - PR #2111 by AIFlowML adds an Akash Network plugin with autonomous deployment capabilities\n   - PR #1665 by boolkeys introduces a Twilio plugin for voice and text interactions\n   - PR #2084 by FiberInEliza adds a CKB Fiber plugin\n\nThese contributions demonstrate active development across multiple aspects of the eliza platform, from core functionality to integration with external services.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2060",
+            "https://github.com/elizaOS/eliza/pull/2041",
+            "https://github.com/elizaOS/eliza/pull/2038",
+            "https://github.com/elizaOS/eliza/pull/2042",
+            "https://github.com/elizaOS/eliza/pull/1005",
+            "https://github.com/elizaOS/eliza/pull/2108",
+            "https://github.com/elizaOS/eliza/pull/2113",
+            "https://github.com/elizaOS/eliza/pull/2111",
+            "https://github.com/elizaOS/eliza/pull/1665",
+            "https://github.com/elizaOS/eliza/pull/2084"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2060",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2038",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2042",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2108",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2111"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed consistent development activity over a two-day period. From January 9-10, 2025, there were 37 new pull requests with 21 merged, 7 new issues created, and 83 active contributors. The following day (January 10-11, 2025) saw increased PR activity with 42 new pull requests (21 merged), 12 new issues, but a slight decrease to 75 active contributors.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1736380800
+}
