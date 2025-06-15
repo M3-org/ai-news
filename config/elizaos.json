@@ -79,7 +79,7 @@
       "type": "SQLiteStorage",
       "name": "SQLiteStorage",
       "params": {
-        "dbPath": "data/elizaos2.sqlite"
+        "dbPath": "data/elizaos.sqlite"
       }
     }
   ],
