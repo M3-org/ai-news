@@ -1,13 +1,13 @@
 # Discord Channel Tracking Status
-*Updated: 2025-06-25 06:26:44 UTC*
+*Updated: 2025-06-26 06:26:41 UTC*
 
 ## 📊 Analytics Reminder
-⏰ Next analytics review in **17 days** (2025-07-12)
+⏰ Next analytics review in **16 days** (2025-07-12)
 
 📈 [Discord Analytics](https://discord.com/developers/servers/1253563208833433701/analytics/engagement) | Review channel activity every 28 days
 
 ## elizaOS (1253563208833433701)
-**Total Channels**: 101 | **Currently Tracking**: 10 | **New Channels**: 91
+**Total Channels**: 100 | **Currently Tracking**: 10 | **New Channels**: 90
 
 ### Channels
 - [ ] #rules-and-faq (1285103549944168450) **NEW**
@@ -17,7 +17,7 @@
 - [ ] #verify-now (1361911606967144528) **NEW**
 - [ ] #bot-commands (1307450932296028202) **NEW**
 - [ ] #moderator-audit-logs (1285103939007811594) **NEW**
-- [ ] #collabland-optional-roles (1300245650180669472) **NEW**
+- [ ] #select-role (1300245650180669472) **NEW**
 - [ ] #collabland-config (1300245647789916190) **NEW**
 - [ ] #waiting-room (1361911608841994402) **NEW**
 
@@ -29,7 +29,6 @@
 - [ ] #spartan-dev (1341224194687500402) **NEW**
 - [ ] #elizaos-github (1377733240449925150) **NEW**
 - [ ] #plugins-github (1377733306594099371) **NEW**
-- [ ] #fun-dev (1378714080973553685) **NEW**
 
 **THE ARENA:**
 - [x] #discussion (1253563209462448241)
