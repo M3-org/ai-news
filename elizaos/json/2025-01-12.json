@@ -1,0 +1,180 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-12",
+  "categories": [
+    {
+      "title": "elizaOS GitHub Repository Updates",
+      "content": [
+        {
+          "text": "# Recent Updates to elizaOS\n\n## Major Features\n\n- Added NFT plugin support (PR #2167)\n- Added external router path and new tweet generation functionality (PR #2081)\n- Implemented file upload security measures (PR #1806)\n- Added CoinGecko price per address functionality (PR #2262)\n- Added support for gravity chain in EVM plugin (PR #2228)\n- Added AGW support to the Abstract plugin (PR #2207)\n- Merged Eliza Installer with the current start.sh script (PR #2229)\n- Added plugin for TEE verifiable log (PR #1369)\n\n## Documentation Improvements\n\n- Added Greek translation for README (PR #2199)\n- Added Persian/Farsi README file (PR #2182, #2260)\n- Added \"What Did You Get Done This Week? #9\" notes (PR #2243)\n\n## Bug Fixes\n\n- Fixed installation issue by not forcing root (PR #2221)\n- Fixed Twitter plugin prompt to ensure it returns JSON (PR #2196)\n- Fixed postgres adapter migration extension creation (PR #2188)\n- Fixed missing LETZAI model (PR #2187)\n- Fixed DeepSeek API bug with missing API key setting (PR #2186)\n- Cleaned up Twitter mention deduplication (PR #2185, #2178)\n- Fixed release 0.1.8 issues (PR #2184)\n- Fixed deepseek support in getTokenForProvider (PR #2179)\n- Fixed missing langdetect on plugin-tts package.json (PR #2175)\n- Fixed invalid Together AI medium model (PR #2173)\n- Fixed RAG knowledge for postgres (PR #2153)\n- Fixed chat infinite loop issue (PR #1755)\n\n## Other Changes\n\n- Renamed ai16z to elizaOS (PR #2211)\n- Added tests for WhatsApp plugin (PR #2213)\n- Released version 0.1.8 and 0.1.8.build.1 (PR #2171, #2193, #2194)\n- Improved file nesting for md and DockerFile in VSCode (PR #2177)\n- Performed linting and fixes on develop branch (PR #2180)\n- Added API input parameter validations to API server (PR #2051)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2221",
+            "https://github.com/elizaOS/eliza/pull/2213",
+            "https://github.com/elizaOS/eliza/pull/2211",
+            "https://github.com/elizaOS/eliza/pull/2199",
+            "https://github.com/elizaOS/eliza/pull/2196",
+            "https://github.com/elizaOS/eliza/pull/2194",
+            "https://github.com/elizaOS/eliza/pull/2193",
+            "https://github.com/elizaOS/eliza/pull/2188",
+            "https://github.com/elizaOS/eliza/pull/2187",
+            "https://github.com/elizaOS/eliza/pull/2186",
+            "https://github.com/elizaOS/eliza/pull/2185",
+            "https://github.com/elizaOS/eliza/pull/2184",
+            "https://github.com/elizaOS/eliza/pull/2182",
+            "https://github.com/elizaOS/eliza/pull/2180",
+            "https://github.com/elizaOS/eliza/pull/2179",
+            "https://github.com/elizaOS/eliza/pull/2178",
+            "https://github.com/elizaOS/eliza/pull/2177",
+            "https://github.com/elizaOS/eliza/pull/2175",
+            "https://github.com/elizaOS/eliza/pull/2173",
+            "https://github.com/elizaOS/eliza/pull/2171",
+            "https://github.com/elizaOS/eliza/pull/2167",
+            "https://github.com/elizaOS/eliza/pull/2153",
+            "https://github.com/elizaOS/eliza/pull/2081",
+            "https://github.com/elizaOS/eliza/pull/2051",
+            "https://github.com/elizaOS/eliza/pull/1806",
+            "https://github.com/elizaOS/eliza/pull/1755",
+            "https://github.com/elizaOS/eliza/pull/2262",
+            "https://github.com/elizaOS/eliza/pull/2260",
+            "https://github.com/elizaOS/eliza/pull/2243",
+            "https://github.com/elizaOS/eliza/pull/2229",
+            "https://github.com/elizaOS/eliza/pull/2228",
+            "https://github.com/elizaOS/eliza/pull/2207",
+            "https://github.com/elizaOS/eliza/pull/1369"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "DankVR's Crypto Enthusiasm and Projects",
+      "content": [
+        {
+          "text": "DankVR expresses strong optimism about cryptocurrency, stating they 'refuse to be cynical' about the industry they participate in daily. They 'deeply believe crypto is good for the world and will free anybody that has the self belief to go all in.'",
+          "sources": "https://twitter.com/dankvr/status/1878585190546853955, https://twitter.com/dankvr/status/1878588243551088769",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "They advocate for privacy-focused alternatives to mainstream tools, recommending Brave browser instead of Google Chrome, and suggesting HackMD or Fileverse for collaborative documents instead of Google Docs, noting these support markdown which is 'preferable for LLMs.'",
+          "sources": "https://twitter.com/dankvr/status/1878301365635526761, https://twitter.com/dankvr/status/1878478999694786971",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "DankVR is actively involved with Eliza, which they describe as starting as 'a solo project for years before there was a token' that now 'has hundreds of contributors' with 'No VCs + fair launch.' They're seeking help with the 'awesome-eliza list' and offering bounties to organize projects and resources in the ecosystem.",
+          "sources": "https://twitter.com/dankvr/status/1878283655920943435, https://twitter.com/dankvr/status/1878264390824169562",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "They highlight Eliza agents' capabilities, mentioning they have '46 plugins / 24+ blockchain integrations, more than any other agent frameworks' and can automate protocol tasks.",
+          "sources": "https://twitter.com/dankvr/status/1878255572035805369",
+          "images": [
+            "https://pbs.twimg.com/media/GhDmxSMWMAA-PYZ.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "DankVR shares humorous content about DAOs, showing the contrast between 'Year 1 in DAOs vs 3+ years in DAOs' with an accompanying image.",
+          "sources": "https://twitter.com/dankvr/status/1878472978247156071",
+          "images": [
+            "https://pbs.twimg.com/media/GhGtOD2WcAAWkk-.jpg"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent GitHub Issues in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository is experiencing several installation and dependency-related issues. Multiple users have reported problems with pnpm, including installation errors (#2203), outdated lockfile errors (#2215), and lock file errors or missing dependencies (#2183). There are also issues with building Docker images (#2192) and missing modules for specific architectures (#2242).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/2203",
+            "https://github.com/elizaOS/eliza/issues/2215",
+            "https://github.com/elizaOS/eliza/issues/2183",
+            "https://github.com/elizaOS/eliza/issues/2192",
+            "https://github.com/elizaOS/eliza/issues/2242"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Users are also encountering runtime and functionality issues. These include Twitter authentication failures on Cloud with Error 399 (#2225), client-direct deployment failures to npm creating inconsistencies (#2227), and React errors such as 'Uncaught TypeError: Cannot read properties of null (reading 'useState')' (#2226). Additionally, there are feature requests like RAG/Knowledge support for Twitter Spaces characters (#2202) and bugs with the getRecentPostInteractions function returning all memory (#2253).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/2225",
+            "https://github.com/elizaOS/eliza/issues/2227",
+            "https://github.com/elizaOS/eliza/issues/2226",
+            "https://github.com/elizaOS/eliza/issues/2202",
+            "https://github.com/elizaOS/eliza/issues/2253"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several new features and improvements have been proposed to the elizaOS/eliza repository through recent pull requests:\n\n1. A new character named Nayari has been added (PR #2217).\n\n2. NFT functionality has been expanded with methods for getting owned NFTs, creating listings, and retrieving floor listings (PR #2189).\n\n3. Twitter follow functionality has been implemented (PR #2224).\n\n4. ARM64 support for FastEmbed has been added, improving performance on ARM-based systems (PR #2259).\n\n5. A plugin for TEE (Trusted Execution Environment) verifiable logging has been proposed (PR #1369).\n\n6. Integration with NEAR Protocol Intents has been added (PR #2244).\n\n7. A fix for the Supabase adapter has been implemented (PR #2258).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2217",
+            "https://github.com/elizaOS/eliza/pull/2189",
+            "https://github.com/elizaOS/eliza/pull/2224",
+            "https://github.com/elizaOS/eliza/pull/2259",
+            "https://github.com/elizaOS/eliza/pull/1369",
+            "https://github.com/elizaOS/eliza/pull/2244",
+            "https://github.com/elizaOS/eliza/pull/2258"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2217",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2189",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2224",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2259",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1369",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2244",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2258"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From January 12-13, 2025, there were 30 new pull requests with 26 merged, 19 new issues created, and 61 active contributors. The following day (January 13-14, 2025) saw 27 new pull requests with 7 merged, 12 new issues, and a slight increase to 66 active contributors. Overall, the project maintained strong engagement with a growing contributor base.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1736640000
+}

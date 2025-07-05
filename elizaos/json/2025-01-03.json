@@ -1,0 +1,166 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-03",
+  "categories": [
+    {
+      "title": "Recent Updates to Eliza Project",
+      "content": [
+        {
+          "text": "Several bug fixes have been implemented to improve compatibility and functionality. These include enhancing Windows compatibility for the Vite dev server (#1760), fixing build lint errors (#1759), resolving line break handling in chat (#1784), and addressing token trimming support for non-OpenAI models (#1605). Additionally, the project fixed issues with PostgreSQL by removing a nonsensical schema check (#1377) and disabling trust provider (#1536), though a vector extension creation fix (#1743) was later reverted (#1799).",
+          "sources": "https://github.com/elizaOS/eliza/pull/1760, https://github.com/elizaOS/eliza/pull/1759, https://github.com/elizaOS/eliza/pull/1784, https://github.com/elizaOS/eliza/pull/1605, https://github.com/elizaOS/eliza/pull/1377, https://github.com/elizaOS/eliza/pull/1536, https://github.com/elizaOS/eliza/pull/1743, https://github.com/elizaOS/eliza/pull/1799",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The project has seen several feature enhancements, including the addition of a Serbian README translation (#1757), replacing console.log with Eliza logger in the NEAR plugin (#1745), adding support for EternalAI provider to write request/response log info (#1740), adding echochambers to agent (#1719), and implementing custom conditions for live monorepo types (#1365). Google model configurations have been updated (#1815), and Discord now simulates typing while generating responses (#1712).",
+          "sources": "https://github.com/elizaOS/eliza/pull/1757, https://github.com/elizaOS/eliza/pull/1745, https://github.com/elizaOS/eliza/pull/1740, https://github.com/elizaOS/eliza/pull/1719, https://github.com/elizaOS/eliza/pull/1365, https://github.com/elizaOS/eliza/pull/1815, https://github.com/elizaOS/eliza/pull/1712",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Documentation improvements include updates to the FAQ (#1746), Korean README (#1739), and the addition of an Agentic Eliza Plugin Documenter with multilingual support (#1675). Various client-specific fixes were made, including implementing Media type properties in Slack message attachments (#1741), standardizing ACTION_INTERVAL unit to minutes in the Twitter client (#1738), and fixing port listening issues (#1616).",
+          "sources": "https://github.com/elizaOS/eliza/pull/1746, https://github.com/elizaOS/eliza/pull/1739, https://github.com/elizaOS/eliza/pull/1675, https://github.com/elizaOS/eliza/pull/1741, https://github.com/elizaOS/eliza/pull/1738, https://github.com/elizaOS/eliza/pull/1616",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Other maintenance updates include replacing console.log with elizaLogger (#1834), updating the .env.example file (#1829), bumping the version to v0.1.7 (#1804), removing unused imports and variables (#1797), and merging develop branch into main for the 1.7.0 release (#1717). The project also removed the FerePro plugin (#1795) and refactored the client API (#1713).",
+          "sources": "https://github.com/elizaOS/eliza/pull/1834, https://github.com/elizaOS/eliza/pull/1829, https://github.com/elizaOS/eliza/pull/1804, https://github.com/elizaOS/eliza/pull/1797, https://github.com/elizaOS/eliza/pull/1717, https://github.com/elizaOS/eliza/pull/1795, https://github.com/elizaOS/eliza/pull/1713",
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Recent GitHub Issues in elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several issues have been reported in the elizaOS/eliza GitHub repository covering various aspects of the system:\n\n1. Performance Issues:\n   - Issue #1758 reports very slow pnpm start times\n   - Issue #1747 describes a Jetson Runtime Exception with sqlite-vec extension load failure\n\n2. Configuration and Feature Requests:\n   - Issue #1772 addresses resolving discrepancies between image models and base models\n   - Issue #1813 requests better X Agent configuration options (e.g., disabling retweets and likes)\n   - Issue #1809 proposes implementing a PgLite database adapter\n\n3. Wallet Integration:\n   - Issue #1780 reports a problem with public Solana wallet not being found\n\n4. Documentation Improvements:\n   - Issue #1720 suggests serving Docusaurus docs from a Docker container for quick verification\n   - Issue #1838 reports a broken FAQ link in Contributing.MD\n\n5. Code Quality:\n   - Issues #1842 and #1843 (duplicates) request adding more granular try-catch blocks in the /plugin-coinbase component",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1758",
+            "https://github.com/elizaOS/eliza/issues/1772",
+            "https://github.com/elizaOS/eliza/issues/1780",
+            "https://github.com/elizaOS/eliza/issues/1747",
+            "https://github.com/elizaOS/eliza/issues/1720",
+            "https://github.com/elizaOS/eliza/issues/1813",
+            "https://github.com/elizaOS/eliza/issues/1838",
+            "https://github.com/elizaOS/eliza/issues/1809",
+            "https://github.com/elizaOS/eliza/issues/1843",
+            "https://github.com/elizaOS/eliza/issues/1842"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository has seen several recent pull requests that add new features, fix issues, and prepare for releases:\n\n- New blockchain integrations with PR #1764 adding an Injective plugin and PR #1768 adding a Cardano Blockchain Plugin\n- Release preparation with PR #1717 merging develop into main for the 1.7.0 release\n- Bug fixes including PR #1750 addressing PGVector embedding validation issues and PR #1798 fixing broken CI documentation due to out-of-sync frozen pnpm files\n- Feature implementations with PR #1790 (and the related PR #1783) implementing a feature for issue #1725\n- Code improvements with PR #1817 focused on reducing modules\n- A new contribution labeled as 'Kavi' in PR #1771\n\nThese pull requests demonstrate active development across various aspects of the eliza project, from new blockchain integrations to infrastructure improvements and bug fixes.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1764",
+            "https://github.com/elizaOS/eliza/pull/1717",
+            "https://github.com/elizaOS/eliza/pull/1768",
+            "https://github.com/elizaOS/eliza/pull/1750",
+            "https://github.com/elizaOS/eliza/pull/1771",
+            "https://github.com/elizaOS/eliza/pull/1798",
+            "https://github.com/elizaOS/eliza/pull/1790",
+            "https://github.com/elizaOS/eliza/pull/1783",
+            "https://github.com/elizaOS/eliza/pull/1817"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1764",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1717",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1768",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1750",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1771",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1798",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1790",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1783",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1817"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "DankVR's Thoughts on AI Technology and Development",
+      "content": [
+        {
+          "text": "DankVR discusses the importance of AI interfaces, noting that 'ChatGPT is a wrapper of GPT, which nobody cared about until ChatGPT' and emphasizing that 'The interface is what exploded AI tech into the mainstream.' He argues that calling an AI agent framework 'just a GPT wrapper' is an oversimplification, comparing it to the difference between cruise control and a self-driving car.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875171075988082836",
+            "https://twitter.com/dankvr/status/1875005905206661507"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "He shares a humorous post about the repetitive nature of coding improvement, showing a cycle of being told to 'write better code' and then doing so, only to be told again to 'write better code.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875193948005880126"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GgYG30PWcAAD58N.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "DankVR mentions collaborating with a developer named Shaw who has worked on Eliza, describing him as 'one of the most cracked and hardest working devs I know.' He also hints at upcoming projects, saying he's 'cooking up stuff' that people might 'really like' and that there's 'much dank content in the pipeline.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875244454455791632",
+            "https://twitter.com/dankvr/status/1875173927343022433"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GgY05C4WcAAvbto.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "He also makes a brief comment about 'corpo AIs coming online' and identifies a fake scam in response to another user.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875321409205149919",
+            "https://twitter.com/dankvr/status/1875177183293157704"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From January 3-4, 2025, there were 43 new pull requests with 14 merged, 24 new issues created, and 69 active contributors. The following day (January 4-5, 2025) saw 46 new pull requests with 21 merged, 18 new issues, and 61 active contributors. Overall, the project maintained strong development momentum with a high number of contributors and an increasing PR merge rate (from 33% to 46%).",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1735862400
+}

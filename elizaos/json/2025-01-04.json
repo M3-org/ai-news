@@ -1,0 +1,217 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-04",
+  "categories": [
+    {
+      "title": "Recent ElizaOS GitHub Updates",
+      "content": [
+        {
+          "text": "## Features and Enhancements\n\nElizaOS has added several new plugins and features:\n- Added Stargaze plugin (#1861)\n- Added Infera as an inference provider (#1860)\n- Added Cosmos plugin (#1826)\n- Added Avail plugin (#1241)\n- Added GenLayer plugin (#975)\n- Implemented a plugin for retrieving Marlin TEE remote attestations (#935)\n- Added Discord typing simulation while generating responses (#1712)\n- Updated Google model configurations (#1815)\n- Added default export to plugin-image-generation (#1831)\n- Added devcontainer support (#1807)\n- Added Romanian README translation (#1770)\n- Added DAO donation ask & dev discord information (#1867)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1861",
+            "https://github.com/elizaOS/eliza/pull/1860",
+            "https://github.com/elizaOS/eliza/pull/1826",
+            "https://github.com/elizaOS/eliza/pull/1241",
+            "https://github.com/elizaOS/eliza/pull/975",
+            "https://github.com/elizaOS/eliza/pull/935",
+            "https://github.com/elizaOS/eliza/pull/1712",
+            "https://github.com/elizaOS/eliza/pull/1815",
+            "https://github.com/elizaOS/eliza/pull/1831",
+            "https://github.com/elizaOS/eliza/pull/1807",
+            "https://github.com/elizaOS/eliza/pull/1770",
+            "https://github.com/elizaOS/eliza/pull/1867"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Bug Fixes\n\nNumerous bugs were addressed:\n- Fixed postinstall script (#1872)\n- Fixed FAQ link in contributing.md (#1847)\n- Fixed generation tests for trimTokens (#1803)\n- Fixed line break handling in chat (#1784)\n- Fixed Solana token provider to await cached data (#1828)\n- Fixed Twitter profile caching issues (#1782)\n- Fixed port listening issue (changed from 80 to 3000) (#1616)\n- Fixed plugins.md formatting for docs with dockerized docs validation (#1722)\n- Fixed standardization of ACTION_INTERVAL unit to minutes in Twitter client (#1738)\n- Implemented Media type properties in Slack message attachments (#1741)\n- Fixed broken CI docs due to out-of-sync frozen PNPM file (#1798)\n- Added more tests for goals, memory, and provider, fixing generation.test.ts (#1840)\n- Removed FerePro plugin (#1795)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1872",
+            "https://github.com/elizaOS/eliza/pull/1847",
+            "https://github.com/elizaOS/eliza/pull/1803",
+            "https://github.com/elizaOS/eliza/pull/1784",
+            "https://github.com/elizaOS/eliza/pull/1828",
+            "https://github.com/elizaOS/eliza/pull/1782",
+            "https://github.com/elizaOS/eliza/pull/1616",
+            "https://github.com/elizaOS/eliza/pull/1722",
+            "https://github.com/elizaOS/eliza/pull/1738",
+            "https://github.com/elizaOS/eliza/pull/1741",
+            "https://github.com/elizaOS/eliza/pull/1798",
+            "https://github.com/elizaOS/eliza/pull/1840",
+            "https://github.com/elizaOS/eliza/pull/1795"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Refactoring and Documentation\n\nThe codebase underwent several improvements:\n- Refactored client API (#1713)\n- Refactored model configuration (#1805)\n- Fixed typo in README (#1832)\n- Added multilingual Agentic Eliza Plugin Documenter (English, Spanish, French) (#1675)\n- Replaced console.log with elizaLogger (#1834)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1713",
+            "https://github.com/elizaOS/eliza/pull/1805",
+            "https://github.com/elizaOS/eliza/pull/1832",
+            "https://github.com/elizaOS/eliza/pull/1675",
+            "https://github.com/elizaOS/eliza/pull/1834"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Maintenance and Other Updates\n\nGeneral maintenance tasks were completed:\n- Added support for more Debian distros (#1875)\n- Updated bootstrap plugin export (#1836)\n- Updated Korean README (#1835)\n- Updated .env.example (#1829)\n- Updated develop branch from main (#1823)\n- Bumped version to v0.1.7 (#1804)\n- Installed with no frozen-lockfile flag (#1802)\n- Removed unused imports and variables (#1797)\n- Merged develop into main for 1.7.0 release (#1717)\n- Created new README.md (#1787)\n- Updated C3PO character JSON (#1827)\n- Corrected FAQ docs link in contribution MD files (#1839)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1875",
+            "https://github.com/elizaOS/eliza/pull/1836",
+            "https://github.com/elizaOS/eliza/pull/1835",
+            "https://github.com/elizaOS/eliza/pull/1829",
+            "https://github.com/elizaOS/eliza/pull/1823",
+            "https://github.com/elizaOS/eliza/pull/1804",
+            "https://github.com/elizaOS/eliza/pull/1802",
+            "https://github.com/elizaOS/eliza/pull/1797",
+            "https://github.com/elizaOS/eliza/pull/1717",
+            "https://github.com/elizaOS/eliza/pull/1787",
+            "https://github.com/elizaOS/eliza/pull/1827",
+            "https://github.com/elizaOS/eliza/pull/1839"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Database Changes\n\nThere were changes related to the PostgreSQL database:\n- Reverted \"Handle vector extension creation properly\" (#1799)\n- Fixed PostgreSQL vector extension creation (#1743)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1799",
+            "https://github.com/elizaOS/eliza/pull/1743"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Recent GitHub Issues in the Eliza Project",
+      "content": [
+        {
+          "text": "Several feature requests and bug reports have been submitted to the Eliza project on GitHub. Users are requesting improved X Agent configuration options (#1813) to control behaviors like retweets and likes. There's also a request to implement a PgLite database adapter (#1809) and integrate with Algorand Blockchain (#1866).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1813",
+            "https://github.com/elizaOS/eliza/issues/1809",
+            "https://github.com/elizaOS/eliza/issues/1866"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Several bugs have been identified, including a broken FAQ link in Contributing.MD (#1838), issues with generating new tweets (#1859), and embeddings errors when accessing localhost (#1870).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1838",
+            "https://github.com/elizaOS/eliza/issues/1859",
+            "https://github.com/elizaOS/eliza/issues/1870"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "There are also code quality concerns, with requests to add more granular try-catch blocks in the Coinbase plugin (#1842, #1843) and a comprehensive code analysis report highlighting security issues and vulnerabilities (#1862).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1842",
+            "https://github.com/elizaOS/eliza/issues/1843",
+            "https://github.com/elizaOS/eliza/issues/1862"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "One issue (#1864) titled 'browser+client' was reported but lacks detailed description in the provided sources.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/1864"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several pull requests have been submitted to the elizaOS/eliza repository, focusing on bug fixes and new features:\n\n- PR #1798 by marcellodesales addresses broken CI documentation by fixing an out-of-sync frozen pnpm file.\n\n- PR #1790 and PR #1783, both by monilpat, implement a feature related to issue #1725.\n\n- PR #1817 by jmikedupont2 aims to reduce modules in the project.\n\n- PR #1860 by inferanetwork adds Infera as an inference provider.\n\n- PR #975 by AgustinRamiroDiaz introduces a GenLayer plugin.\n\n- PR #1853 by jmikedupont2 is a draft PR related to OpenTelemetry (OTEL) implementation.\n\n- PR #1880 by kylebuildsstuff adds an OpenWeather plugin to the project.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/1798",
+            "https://github.com/elizaOS/eliza/pull/1790",
+            "https://github.com/elizaOS/eliza/pull/1783",
+            "https://github.com/elizaOS/eliza/pull/1817",
+            "https://github.com/elizaOS/eliza/pull/1860",
+            "https://github.com/elizaOS/eliza/pull/975",
+            "https://github.com/elizaOS/eliza/pull/1853",
+            "https://github.com/elizaOS/eliza/pull/1880"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1798",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1790",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1783",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1817",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1860",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/975",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1853",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/1880"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Twitter Interactions by @dankvr",
+      "content": [
+        {
+          "text": "@dankvr engaged in several Twitter conversations, responding to various users. They recommended @ardriveapp as the best Arweave CLI tool to @gakonst. They suggested that Ethereum meeting notes and forum content could be used to create AI agents with minimal development time. They called out @ai16retardedz as 'grifters' claiming there is no partnership, with a screenshot as evidence. They also responded to other users with brief comments, including suggesting a 'characterfile template' to @nateliason and asking @dystopiabreaker about their work with TEE (Trusted Execution Environment).",
+          "sources": [
+            "https://twitter.com/dankvr/status/1875642551040143417",
+            "https://twitter.com/dankvr/status/1875613082921361874",
+            "https://twitter.com/dankvr/status/1875607632381435961",
+            "https://twitter.com/dankvr/status/1875582852966052015",
+            "https://twitter.com/dankvr/status/1875335799232983163",
+            "https://twitter.com/dankvr/status/1875334393679745218",
+            "https://twitter.com/dankvr/status/1875331535165079916"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/Ggdocv7WkAAjOyD.png"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From January 4-5, 2025, there were 46 new pull requests with 21 merged, along with 18 new issues and 61 active contributors. The following day (January 5-6, 2025) saw 25 new pull requests with 23 merged, 12 new issues, and a slight increase to 62 active contributors. Overall, the project maintained strong development momentum with consistent contributor engagement.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1735948800
+}

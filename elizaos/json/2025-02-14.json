@@ -1,0 +1,185 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-02-14",
+  "categories": [
+    {
+      "title": "Recent ElizaOS Updates and Improvements",
+      "content": [
+        {
+          "text": "## Documentation Updates\n\nA new remote deployment guide has been added to the documentation (PR #3501). Additionally, weekly contributor meeting notes for February 4 and 11, 2025 have been published (PR #3484). A fix was implemented for incorrect image paths in the Korean documentation (PR #3489).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3501",
+            "https://github.com/elizaOS/eliza/pull/3484",
+            "https://github.com/elizaOS/eliza/pull/3489"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Feature Enhancements\n\nDiscord integration has seen significant improvements with both a new Discord test implementation (PR #3478) and enhancements to the existing test (PR #3498). A new ElevenLabs plugin has been added to the system (PR #3452).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3478",
+            "https://github.com/elizaOS/eliza/pull/3498",
+            "https://github.com/elizaOS/eliza/pull/3452"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Bug Fixes\n\nSeveral important fixes have been implemented, including client UI improvements (PR #3496), ensuring the test runner continues execution after failures (PR #3490), and removing the '--no-frozen-lockfile' flag from the Dockerfile (PR #3428).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3496",
+            "https://github.com/elizaOS/eliza/pull/3490",
+            "https://github.com/elizaOS/eliza/pull/3428"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "## Testing and Infrastructure\n\nThe test suite for OpenAI integration has been completed (PR #3495). Additional improvements include adding the right parameters for caching and length for local embedding on Anthropic (PR #3497), and adding Compass plugin environment variables (PR #3494).",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3495",
+            "https://github.com/elizaOS/eliza/pull/3497",
+            "https://github.com/elizaOS/eliza/pull/3494"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Recent Twitter Activity from @dankvr",
+      "content": [
+        {
+          "text": "The user is currently reading and recommending a book about DAOs, maintaining a beginner mindset despite 4 years of experience in the field. They shared an image of the book.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1890528303171174416"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GjyBeLxW8AAFuC6.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The user decided to download Cursor, a development tool.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1890505687471419456"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The user commented on the intersection of crypto and AI, sharing an image that appears to show time distortion in these fields.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1890239151523651700"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/Gjt6Z7_XYAAoa3J.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The user described a dramatic cryptocurrency collapse, noting a $9B market cap dropping 99.998% in value within 24 hours, comparing it to 'Apple going from $3T to $57M overnight' and calling it 'just another day in brypto.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1890225033534140765"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The user made several brief replies to other Twitter users and suggested that NEAR could be a platform for 'AI waifus and anon image generation.'",
+          "sources": [
+            "https://twitter.com/dankvr/status/1890446808872095965",
+            "https://twitter.com/dankvr/status/1890446563236893074",
+            "https://twitter.com/dankvr/status/1890235002845356445",
+            "https://twitter.com/shawmakesmagic/status/1890467838806077736",
+            "https://twitter.com/shawmakesmagic/status/1890467743364727093",
+            "https://twitter.com/shawmakesmagic/status/1890467619104334281"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "Several significant pull requests have been made to the elizaOS/eliza repository recently, focusing on architecture improvements and feature updates:\n\n- PR #3508 by normand1 proposes to delete plugins from the codebase.\n\n- PR #3486 by 0xbbjoker introduces Vector Dimensions and Character Schema Updates, suggesting improvements to the character data structure.\n\n- PR #3509 by odilitime moves characters out to a submodule, which likely helps with organization and maintainability of the codebase.\n\n- PR #3482 by Bijan-Massoumi adds a plugin for Messari Copilot, introducing new functionality.\n\n- PR #3512 by HashWarlock updates the 'tee' feature.\n\n- PR #3511 by tenthirtyone refactors the hardcoded 'http://localhost' string literal to use the SERVER_URL environment variable in the client, improving configuration flexibility.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3508",
+            "https://github.com/elizaOS/eliza/pull/3486",
+            "https://github.com/elizaOS/eliza/pull/3509",
+            "https://github.com/elizaOS/eliza/pull/3482",
+            "https://github.com/elizaOS/eliza/pull/3512",
+            "https://github.com/elizaOS/eliza/pull/3511"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3508",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3486",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3509",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3482",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3512",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/3511"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Recent GitHub Issues in the Eliza Project",
+      "content": [
+        {
+          "text": "Several users have reported technical issues with the Eliza AI project on GitHub:\n\n1. Issue #3504: A user named MehmoodSheikh reported problems with Twitter profile fetching when using the Eliza AI Agent with ProtonVPN on Ubuntu.\n\n2. Issue #3503: User wolfskyknight requested assistance with an Obsidian Plugin related to Eliza.\n\n3. Issue #3513: User kon-rad encountered a problem where the client displays a blank page and generates errors.\n\n4. Issue #3514: User Etette reported a port scanning error when using Eliza on the Render platform.\n\nThese issues highlight various integration, connectivity, and rendering problems that users are experiencing with the Eliza system across different environments and configurations.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3504",
+            "https://github.com/elizaOS/eliza/issues/3503",
+            "https://github.com/elizaOS/eliza/issues/3513",
+            "https://github.com/elizaOS/eliza/issues/3514"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3504",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3503",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3513",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/3514"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From February 14-15, 2025, there were 20 new pull requests with 12 merged, 4 new issues created, and 24 active contributors working on the project. Activity decreased the following day (February 15-16, 2025) with only 2 new pull requests (none merged), 2 new issues, and 9 active contributors.",
+          "sources": [
+            "From 2025-02-14 to 2025-02-15, elizaos/eliza had 20 new PRs (12 merged), 4 new issues, and 24 active contributors.",
+            "From 2025-02-15 to 2025-02-16, elizaos/eliza had 2 new PRs (0 merged), 2 new issues, and 9 active contributors."
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1739491200
+}

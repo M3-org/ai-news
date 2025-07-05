@@ -1,0 +1,153 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-01-20",
+  "categories": [
+    {
+      "title": "Recent Updates to the Eliza Project",
+      "content": [
+        {
+          "text": "The Eliza project has seen significant development activity with numerous feature additions, bug fixes, and infrastructure improvements.\n\nNew plugins have been implemented, including:\n- A client-agnostic Devin plugin (#2549)\n- Lightning plugin (#2429)\n- NVIDIA NIM plugin (#2599)\n- Holdstation swap plugin (#2596)\n- Router Nitro plugin (#2590)\n- Cronos EVM plugin (#2585)\n- Initia plugin (#2448)\n- 0x plugin for swapping on EVMs (#2329)\n- Enhanced Abstract Plugin with more actions (#2531)\n\nVision and language capabilities were expanded with:\n- Anthropic image provider for vision (#2524)\n- Three new languages added to TTS (#2562)\n\nWorkflow and infrastructure improvements include:\n- Optimization of pnpm cache configuration (#2555, later reverted in #2556)\n- Removal of cleanup steps from integration tests workflow (#2551, #2553)\n- Updated integration tests workflow with improved caching (#2589)\n- Security updates to Vite dependency (#2627, #2629)\n\nBug fixes addressed:\n- Fixed build/start failures in the develop branch (#2545, #2546)\n- Fixed incorrect boolean parsing for ENABLE_OPEN_AI_COMMUNITY_PLUGIN setting (#2560)\n\nDocumentation was enhanced with:\n- Updated README with prerequisites for enabling Telegram bot (#2547)\n- Added \"What Did You Get Done This Week? #10\" notes (#2558)\n- Instructions to escape quotes on JSON generation (#2604)\n\nAdditional features include:\n- Implementation of agent creation, storage, and restoration in the filesystem (#2389)\n- Improved X Spaces functionality to wait for silence instead of mute (#2576)\n- Test configurations for various plugins including client-lens (#2534), AgentKit (#2573), and Farcaster (#2567)",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2556",
+            "https://github.com/elizaOS/eliza/pull/2555",
+            "https://github.com/elizaOS/eliza/pull/2553",
+            "https://github.com/elizaOS/eliza/pull/2551",
+            "https://github.com/elizaOS/eliza/pull/2549",
+            "https://github.com/elizaOS/eliza/pull/2547",
+            "https://github.com/elizaOS/eliza/pull/2546",
+            "https://github.com/elizaOS/eliza/pull/2545",
+            "https://github.com/elizaOS/eliza/pull/2534",
+            "https://github.com/elizaOS/eliza/pull/2531",
+            "https://github.com/elizaOS/eliza/pull/2524",
+            "https://github.com/elizaOS/eliza/pull/2429",
+            "https://github.com/elizaOS/eliza/pull/2389",
+            "https://github.com/elizaOS/eliza/pull/2629",
+            "https://github.com/elizaOS/eliza/pull/2627",
+            "https://github.com/elizaOS/eliza/pull/2626",
+            "https://github.com/elizaOS/eliza/pull/2604",
+            "https://github.com/elizaOS/eliza/pull/2599",
+            "https://github.com/elizaOS/eliza/pull/2597",
+            "https://github.com/elizaOS/eliza/pull/2596",
+            "https://github.com/elizaOS/eliza/pull/2590",
+            "https://github.com/elizaOS/eliza/pull/2589",
+            "https://github.com/elizaOS/eliza/pull/2585",
+            "https://github.com/elizaOS/eliza/pull/2576",
+            "https://github.com/elizaOS/eliza/pull/2573",
+            "https://github.com/elizaOS/eliza/pull/2568",
+            "https://github.com/elizaOS/eliza/pull/2567",
+            "https://github.com/elizaOS/eliza/pull/2562",
+            "https://github.com/elizaOS/eliza/pull/2560",
+            "https://github.com/elizaOS/eliza/pull/2448",
+            "https://github.com/elizaOS/eliza/pull/2558",
+            "https://github.com/elizaOS/eliza/pull/2329"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "completed_items"
+    },
+    {
+      "title": "Twitter Updates from dankvr and shawmakesmagic",
+      "content": [
+        {
+          "text": "dankvr mentioned that Hyperfy uses PhysX, the same physics engine as Unity, and shared a link to a project by CryptoEternalAI. They also commented that aipool_tee will face competition.",
+          "sources": [
+            "https://twitter.com/dankvr/status/1881411335671730553",
+            "https://twitter.com/dankvr/status/1881231558671306752",
+            "https://twitter.com/dankvr/status/1881160750666002473"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "shawmakesmagic issued a disclaimer clarifying that he is not creating or endorsing new coins that people might associate with him. He explained that scammers are creating coins based on his tweets and falsely attributing them to him, leading to threats against his family. He emphasized multiple times that he has no involvement with these coins.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1881309549577298224",
+            "https://twitter.com/shawmakesmagic/status/1881304296094142756",
+            "https://twitter.com/shawmakesmagic/status/1881302753768780048",
+            "https://twitter.com/shawmakesmagic/status/1881301992775254363",
+            "https://twitter.com/shawmakesmagic/status/1881301762474406052",
+            "https://twitter.com/shawmakesmagic/status/1881301104946020420",
+            "https://twitter.com/shawmakesmagic/status/1881300435740623269"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "shawmakesmagic shared that Devin wrote an Eliza plugin for Devin and mentioned he's 'shipping v2' with plans to show more soon. He also made various comments about memes, agents, and responded to other users' posts.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1881300207838892310",
+            "https://twitter.com/shawmakesmagic/status/1881211903969747217",
+            "https://twitter.com/shawmakesmagic/status/1881299426595213411",
+            "https://twitter.com/shawmakesmagic/status/1881297129064558795",
+            "https://twitter.com/shawmakesmagic/status/1881260701639233852",
+            "https://twitter.com/shawmakesmagic/status/1881246969546563755",
+            "https://twitter.com/shawmakesmagic/status/1881232021567197513",
+            "https://twitter.com/shawmakesmagic/status/1881138775029690682",
+            "https://twitter.com/shawmakesmagic/status/1881138417050022384",
+            "https://twitter.com/shawmakesmagic/status/1881247137872433604"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "tweet"
+    },
+    {
+      "title": "Recent Pull Requests in the elizaOS/eliza Repository",
+      "content": [
+        {
+          "text": "The elizaOS/eliza repository has seen several new pull requests focused on plugin development and system improvements. Notable additions include:\n\n- A client-agnostic Devin plugin (PR #2549)\n- A Truth Social plugin (PR #2537)\n- A CoinGecko plugin for cryptocurrency data (PR #1382)\n- A Chainbase plugin (PR #2586)\n- A MongoDB adapter (PR #2605)\n\nThere have also been technical fixes such as package.json updates to support multiple React versions (PR #2574), and significant releases including SIMSAI OFFICIAL RELEASE (PR #2614) and Release/v1.1-edits (PR #2607).\n\nThese pull requests demonstrate ongoing development to expand the platform's capabilities through new integrations and technical improvements.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/2574",
+            "https://github.com/elizaOS/eliza/pull/2536",
+            "https://github.com/elizaOS/eliza/pull/2549",
+            "https://github.com/elizaOS/eliza/pull/2537",
+            "https://github.com/elizaOS/eliza/pull/1382",
+            "https://github.com/elizaOS/eliza/pull/2586",
+            "https://github.com/elizaOS/eliza/pull/2607",
+            "https://github.com/elizaOS/eliza/pull/2614",
+            "https://github.com/elizaOS/eliza/pull/2605"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2549",
+            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/2614"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "ElizaOS GitHub Activity Update",
+      "content": [
+        {
+          "text": "The elizaos/eliza repository showed significant activity over a two-day period. From January 20-21, 2025, there were 31 new pull requests with 13 merged, 11 new issues created, and 50 active contributors. Activity increased the following day (January 21-22, 2025) with 29 new pull requests (19 merged), 18 new issues, and a jump to 66 active contributors. Overall, the project saw growth in both merged PRs and community participation between these two consecutive days.",
+          "sources": [
+            0,
+            1
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "github_summary"
+    },
+    {
+      "title": "Top contributors for elizaOS/eliza",
+      "content": [
+        {
+          "text": "The provided sources mention 'Top contributors for elizaOS/eliza' but do not provide any specific details about who these contributors are or their contributions to the project. Without additional information, it's not possible to generate a detailed summary about the individual contributors, their roles, or the nature of their contributions to the elizaOS/eliza project.",
+          "sources": [
+            "Top contributors for elizaOS/eliza"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "contributors"
+    }
+  ],
+  "date": 1737331200
+}
