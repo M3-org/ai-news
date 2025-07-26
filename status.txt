@@ -1,4 +1,4 @@
-AI News Aggregator Pipeline Status (2025-07-26 22:34:31 UTC)
+AI News Aggregator Pipeline Status (2025-07-26 22:55:45 UTC)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ⚠️  2 workflow failure(s)
@@ -7,13 +7,13 @@ AI News Aggregator Pipeline Status (2025-07-26 22:34:31 UTC)
 
 RECENT WORKFLOW FAILURES:
 ├─ ElizaOS Daily Data Collection - 1h ago
-├─ Discord Channel Management - 1h ago
+├─ Discord Channel Management - 2h ago
 
 CHANNEL TRACKING:
 ├─ Total: 155 channels across 2 guilds
 ├─ Tracking: 11 (7%)
 ├─ Untracked: 144 (93%)
-└─ Last updated: 2025-07-26 22:34:30 UTC
+└─ Last updated: 2025-07-26 22:55:44 UTC
 
 GENERATED FILES:
 ├─ ❌ /elizaos/discord/daily.json (missing)
@@ -30,4 +30,4 @@ QUICK LINKS:
 ├─ Workflow logs: https://github.com/m3-org/ai-news/actions
 └─ Discord analytics: https://discord.com/developers/servers/1253563208833433701/analytics/engagement
 
-💡 curl https://m3-org.github.io/ai-news/status.txt
+💡 curl https://m3-org.github.io/ai-news/status.txt  # ai-news
