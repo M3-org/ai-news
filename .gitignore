@@ -1,3 +1,6 @@
+.cursor
 /node_modules/
 .env
 data/discord-raw.sqlite
+data/elizaos.sqlite
+data/hyperfy-discord.sqlite
