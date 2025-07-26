@@ -1,0 +1,126 @@
+{
+  "channel": {
+    "id": "1300025221834739744",
+    "name": "💻-coders",
+    "topic": "Technical support and conversation for elizaOS contributors and builders - Non-related messages may be deleted",
+    "category": "DEV"
+  },
+  "date": "2025-07-26T00:00:00.000Z",
+  "users": {
+    "1232007346688098425": {
+      "name": "33coded",
+      "nickname": "33coded"
+    },
+    "369856319659966475": {
+      "name": "snapper.sol",
+      "nickname": "Snapper"
+    },
+    "1324740858477809758": {
+      "name": "samuelchauche",
+      "nickname": "Samuel Chauche"
+    },
+    "705992469426339841": {
+      "name": ".starlord0",
+      "nickname": "starlord"
+    },
+    "555035784378318875": {
+      "name": "elizabaoger",
+      "nickname": "ElizaBAO🌟"
+    },
+    "498273781589213185": {
+      "name": "new.moon",
+      "nickname": "shaw"
+    }
+  },
+  "messages": [
+    {
+      "id": "1398484703954079895",
+      "ts": "2025-07-26T01:58:56.012Z",
+      "uid": "369856319659966475",
+      "content": "Is it correct that Eliza is a single response model by default? We need to build custom orchestration patterns if we want the agent to deliver multiple responses? (Eg. a manager agent sending status updates when helper agents have completed their tasks)",
+      "mentions": []
+    },
+    {
+      "id": "1398520083554373692",
+      "ts": "2025-07-26T04:19:31.166Z",
+      "uid": "498273781589213185",
+      "content": "no, it can plan multiple actions in response, run them in order, and pass their actions down the chain. also we have websockets in most cases so it can send a message *not* as a response",
+      "type": "Reply",
+      "mentions": [
+        "369856319659966475"
+      ],
+      "ref": "1398484703954079895",
+      "reactions": [
+        {
+          "emoji": "👍",
+          "count": 1
+        },
+        {
+          "emoji": "💯",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "1398612512802607217",
+      "ts": "2025-07-26T10:26:48.016Z",
+      "uid": "1324740858477809758",
+      "content": "We have a problem with Eliza's response format. She should answer us in a specific json format, but she's hallucinating and answers us in another format. She replaces or moves single quotes. And this is causing us problems displaying data in our extension. The prompt is solid, but maybe we're forgetting a setting to ensure that she always respects the correct format, without hallucinating. We're using OPENIA.",
+      "mentions": []
+    },
+    {
+      "id": "1398674780051341353",
+      "ts": "2025-07-26T14:34:13.685Z",
+      "uid": "555035784378318875",
+      "content": "hi <@498273781589213185> sorry for tagging you . because i stuck at this part :create.tsx:1203 Transaction failed due to instruction deserialization error.\ncreateTokenOnChain @ create.tsx:120\n\nfor the auto.fun launchpad . and odin did create a group with autofun team,but the reply was slow and i paying 2 vps for monthly. untill now .i still stuck here.hope you can guide me,how to solve this.",
+      "mentions": [
+        "498273781589213185"
+      ]
+    },
+    {
+      "id": "1398682157781880833",
+      "ts": "2025-07-26T15:03:32.673Z",
+      "uid": "555035784378318875",
+      "content": "yup",
+      "mentions": []
+    },
+    {
+      "id": "1398733126863163434",
+      "ts": "2025-07-26T18:26:04.649Z",
+      "uid": "705992469426339841",
+      "content": "your running a local model I assume",
+      "type": "Reply",
+      "mentions": [
+        "1324740858477809758"
+      ],
+      "ref": "1398612512802607217"
+    },
+    {
+      "id": "1398733441981354139",
+      "ts": "2025-07-26T18:27:19.779Z",
+      "uid": "705992469426339841",
+      "content": "the problem when you run locally is that the model your running has to have enought context size to fully understand its whole ecosystem, not hallucinate, and generate a proper response. So my advice is try a larger model. and if you cant, buy a cloud GPU or use openai",
+      "mentions": []
+    },
+    {
+      "id": "1398734511956824104",
+      "ts": "2025-07-26T18:31:34.881Z",
+      "uid": "1324740858477809758",
+      "content": "<@705992469426339841> i'm using open ai, and i clean elizadb folder each time",
+      "mentions": [
+        "705992469426339841"
+      ]
+    },
+    {
+      "id": "1398737258882007221",
+      "ts": "2025-07-26T18:42:29.799Z",
+      "uid": "1232007346688098425",
+      "content": "manager agent JIMMY aura",
+      "type": "Reply",
+      "mentions": [
+        "369856319659966475"
+      ],
+      "ref": "1398484703954079895"
+    }
+  ]
+}
