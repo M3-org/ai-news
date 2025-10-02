@@ -1,15 +1,15 @@
-AI News Aggregator Pipeline Status (2025-10-01 06:33:36 UTC)
+AI News Aggregator Pipeline Status (2025-10-02 06:32:34 UTC)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ Workflows healthy
-🔴 HIGH DRIFT: 155 untracked (93%)
+🔴 HIGH DRIFT: 156 untracked (93%)
 🔴 3 missing files
 
 CHANNEL TRACKING:
-├─ Total: 166 channels across 2 guilds
+├─ Total: 167 channels across 2 guilds
 ├─ Tracking: 11 (7%)
-├─ Untracked: 155 (93%)
-└─ Last updated: 2025-10-01 06:33:35 UTC
+├─ Untracked: 156 (93%)
+└─ Last updated: 2025-10-02 06:32:32 UTC
 
 GENERATED FILES:
 ├─ ❌ /elizaos/discord/daily.json (missing)
