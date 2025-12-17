@@ -1,0 +1,169 @@
+{
+  "date": "2025-12-16",
+  "source": "elizaos",
+  "generated_at": "2025-12-17T18:00:52.982Z",
+  "base_path": "elizaos-media",
+  "files": [
+    {
+      "url": "https://media.tenor.com/tU3Gj7zNcSYAAAAe/pepe-christmas.png",
+      "filename": "embed-thumbnail-1450545056908968016.png",
+      "unique_name": "embed-thumbnail-1450545056908968016_b421a1bdcb6a.png",
+      "hash": "b421a1bdcb6a",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1450545056908968016",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "699264581729779733",
+      "timestamp": "2025-12-16",
+      "message_content": "https://tenor.com/view/pepe-christmas-solo-cozy-gif-23569512"
+    },
+    {
+      "url": "https://media.tenor.com/tU3Gj7zNcSYAAAPo/pepe-christmas.mp4",
+      "filename": "embed-video-1450545056908968016.mp4",
+      "unique_name": "embed-video-1450545056908968016_89e67e794f45.mp4",
+      "hash": "89e67e794f45",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1450545056908968016",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "699264581729779733",
+      "timestamp": "2025-12-16",
+      "message_content": "https://tenor.com/view/pepe-christmas-solo-cozy-gif-23569512"
+    },
+    {
+      "url": "https://media.tenor.com/t-LFiq203l8AAAAe/kim-jongun-hi.png",
+      "filename": "embed-thumbnail-1450563879946944574.png",
+      "unique_name": "embed-thumbnail-1450563879946944574_ad56290e97fa.png",
+      "hash": "ad56290e97fa",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1450563879946944574",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "807727820355797062",
+      "timestamp": "2025-12-16",
+      "message_content": "https://tenor.com/view/kim-jongun-hi-hello-dictador-gif-12672400"
+    },
+    {
+      "url": "https://media.tenor.com/t-LFiq203l8AAAPo/kim-jongun-hi.mp4",
+      "filename": "embed-video-1450563879946944574.mp4",
+      "unique_name": "embed-video-1450563879946944574_a873ebbff96a.mp4",
+      "hash": "a873ebbff96a",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1450563879946944574",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "807727820355797062",
+      "timestamp": "2025-12-16",
+      "message_content": "https://tenor.com/view/kim-jongun-hi-hello-dictador-gif-12672400"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1450463384884613211/image.png?ex=6943498b&is=6941f80b&hm=5a0ce7dcf3e20ee1cc6e91cbd98ed0236e6b96c51e1b547a3c9f829a1ec3e261&",
+      "filename": "image.png",
+      "unique_name": "image_bb6cb9fd9967.png",
+      "hash": "bb6cb9fd9967",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 204424,
+      "content_type": "image/png",
+      "width": 1372,
+      "height": 914,
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1450463384884613211/image.png?ex=6943498b&is=6941f80b&hm=5a0ce7dcf3e20ee1cc6e91cbd98ed0236e6b96c51e1b547a3c9f829a1ec3e261&",
+      "message_id": "1450463385232736347",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "755871293974249513",
+      "timestamp": "2025-12-16",
+      "message_content": ""
+    },
+    {
+      "url": "https://opengraph.githubassets.com/f5124c7688b66cb9acc10486ec0d5f690524feed3ead3dd0ffaa26b043212ee7/carlrannaberg/claudekit",
+      "filename": "embed-thumbnail-1450495800080728135.com/f5124c7688b66cb9acc10486ec0d5f690524feed3ead3dd0ffaa26b043212ee7/carlrannaberg/claudekit",
+      "unique_name": "claudekit_43d13a422125",
+      "hash": "43d13a422125",
+      "type": "document",
+      "media_type": "embed_thumbnail",
+      "message_id": "1450495800080728135",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "670165773465026580",
+      "timestamp": "2025-12-16",
+      "message_content": "check the ones here, i use this daily in my claude code\n\nhttps://github.com/carlrannaberg/claudekit",
+      "reactions": [
+        {
+          "emoji": "👀",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1377726087789940836/1450495832024420584/Enregistrement_de_lecran_2025-12-16_a_15.30.38.mov?ex=6942bf03&is=69416d83&hm=26308f38bc6744a4b478ab82a4f4128ed65d7db59bf0a626b0565239f494fb26&",
+      "filename": "Enregistrement_de_lecran_2025-12-16_a_15.30.38.mov",
+      "unique_name": "Enregistrement_de_lecran_2025-12-16_a_15.30.38_4c28a24964a7.mov",
+      "hash": "4c28a24964a7",
+      "type": "video",
+      "media_type": "attachment",
+      "size": 17553492,
+      "content_type": "video/quicktime",
+      "width": 2552,
+      "height": 1322,
+      "proxy_url": "https://media.discordapp.net/attachments/1377726087789940836/1450495832024420584/Enregistrement_de_lecran_2025-12-16_a_15.30.38.mov?ex=6942bf03&is=69416d83&hm=26308f38bc6744a4b478ab82a4f4128ed65d7db59bf0a626b0565239f494fb26&",
+      "message_id": "1450495833220059209",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "177801706963337216",
+      "timestamp": "2025-12-16",
+      "message_content": "<@518836633483739151> cloud streaming. adding some more test, and cleaning, and should be ready 🙂",
+      "reactions": [
+        {
+          "emoji": "🔥",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "url": "https://pbs.twimg.com/media/G8Ou9acacAAVBfT.jpg:large",
+      "filename": "embed-image-1450633304469671998.jpg:large",
+      "unique_name": "embed-image-1450633304469671998_1de9e4a8ece4.jpg:large",
+      "hash": "1de9e4a8ece4",
+      "type": "document",
+      "media_type": "embed_image",
+      "message_id": "1450633304469671998",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "573475033515819009",
+      "timestamp": "2025-12-16",
+      "message_content": "https://x.com/burwicklaw/status/2000635043421835390?s=46"
+    }
+  ],
+  "stats": {
+    "total_files": 8,
+    "by_type": {
+      "image": 3,
+      "video": 3,
+      "document": 2
+    },
+    "total_size_bytes": 17757916
+  }
+}
