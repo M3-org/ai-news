@@ -1,8 +1,8 @@
-AI News Aggregator Pipeline Status (2025-12-21 06:36:06 UTC)
+AI News Aggregator Pipeline Status (2025-12-22 06:40:29 UTC)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔴 4 WORKFLOW FAILURES
-🔴 HIGH DRIFT: 135 untracked (96%)
+🔴 HIGH DRIFT: 136 untracked (96%)
 🔴 3 missing files
 
 RECENT WORKFLOW FAILURES:
@@ -12,10 +12,10 @@ RECENT WORKFLOW FAILURES:
 ├─ Hyperfy Discord - 7h ago
 
 CHANNEL TRACKING:
-├─ Total: 141 channels across 2 guilds
+├─ Total: 142 channels across 2 guilds
 ├─ Tracking: 6 (4%)
-├─ Untracked: 135 (96%)
-└─ Last updated: 2025-12-21 06:36:05 UTC
+├─ Untracked: 136 (96%)
+└─ Last updated: 2025-12-22 06:40:28 UTC
 
 GENERATED FILES:
 ├─ ❌ elizaos/json/daily.json (missing)
