@@ -1,0 +1,21 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2025-12-23",
+  "categories": [
+    {
+      "title": "Discord Discussion Highlights",
+      "content": [
+        {
+          "text": "This is a summary of a Discord conversation in the #💬-discussion channel from December 23, 2025. The conversation includes several users discussing various topics. One user mentioned that Spartan has returned to Twitter and is posting independently while still working on DegenAI. Another user shared statistics about elizaos (24m) and degenai (537k). A user named pluto promoted their AI gaming assistant called GAMEBORO on Steam, requesting wishlists to help with the algorithm. Another user asked how to become a student. The conversation appears casual and includes brief updates on projects and personal inquiries.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "Misceleanous"
+    }
+  ],
+  "date": 1766448000
+}
