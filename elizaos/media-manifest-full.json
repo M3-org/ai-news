@@ -1,7 +1,7 @@
 {
   "date": "all",
   "source": "elizaos",
-  "generated_at": "2026-01-04T04:42:58.742Z",
+  "generated_at": "2026-01-05T00:58:31.213Z",
   "base_path": "elizaos-media",
   "files": [
     {
@@ -46605,15 +46605,404 @@
           "count": 1
         }
       ]
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1253563209462448241/1457224445474115869/snaptik_7590462424902290696_v2.mp4?ex=695be245&is=695a90c5&hm=fa023e16fe682c83f1b6ae8d1a33b69f2166f14e9a7dc463e18d4ac40f979996&",
+      "proxy_url": "https://media.discordapp.net/attachments/1253563209462448241/1457224445474115869/snaptik_7590462424902290696_v2.mp4?ex=695be245&is=695a90c5&hm=fa023e16fe682c83f1b6ae8d1a33b69f2166f14e9a7dc463e18d4ac40f979996&",
+      "filename": "snaptik_7590462424902290696_v2.mp4",
+      "unique_name": "snaptik_7590462424902290696_v2_449744fa.mp4",
+      "hash": "449744fa",
+      "type": "video",
+      "media_type": "attachment",
+      "size": 2398525,
+      "content_type": "video/mp4",
+      "width": 576,
+      "height": 1024,
+      "message_id": "1457224445960786003",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "807727820355797062",
+      "timestamp": "2026-01-04",
+      "message_content": ""
+    },
+    {
+      "url": "https://media.tenor.com/yhgBGmZxhewAAAAe/yes-cheering.png",
+      "filename": "embed-thumbnail-1457268060896628780.png",
+      "unique_name": "embed-thumbnail-1457268060896628780_b02cdd25.png",
+      "hash": "b02cdd25",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1457268060896628780",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/yes-cheering-excited-baby-fan-gif-14215662",
+      "reactions": [
+        {
+          "emoji": "🥴",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://media.tenor.com/yhgBGmZxhewAAAPo/yes-cheering.mp4",
+      "filename": "embed-video-1457268060896628780.mp4",
+      "unique_name": "embed-video-1457268060896628780_dcb01c1c.mp4",
+      "hash": "dcb01c1c",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1457268060896628780",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/yes-cheering-excited-baby-fan-gif-14215662",
+      "reactions": [
+        {
+          "emoji": "🥴",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://media.tenor.com/_LpTqGIRVLkAAAAe/lois-lois-griffin.png",
+      "filename": "embed-thumbnail-1457470390812147976.png",
+      "unique_name": "embed-thumbnail-1457470390812147976_d9a38977.png",
+      "hash": "d9a38977",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1457470390812147976",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/lois-lois-griffin-scared-stan-twitter-family-guy-gif-18210960025890935993"
+    },
+    {
+      "url": "https://media.tenor.com/_LpTqGIRVLkAAAPo/lois-lois-griffin.mp4",
+      "filename": "embed-video-1457470390812147976.mp4",
+      "unique_name": "embed-video-1457470390812147976_7cc71ba9.mp4",
+      "hash": "7cc71ba9",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1457470390812147976",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/lois-lois-griffin-scared-stan-twitter-family-guy-gif-18210960025890935993"
+    },
+    {
+      "url": "https://media.tenor.com/sY2gS8LFnsQAAAAe/you-guys-are-boring-dion-warren.png",
+      "filename": "embed-thumbnail-1457492692903919768.png",
+      "unique_name": "embed-thumbnail-1457492692903919768_89b3e25c.png",
+      "hash": "89b3e25c",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1457492692903919768",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/you-guys-are-boring-dion-warren-raising-dion-you-vs-me-you-bore-me-gif-25248441",
+      "reactions": [
+        {
+          "emoji": "🖕",
+          "count": 1
+        },
+        {
+          "emoji": "👎",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://media.tenor.com/sY2gS8LFnsQAAAPo/you-guys-are-boring-dion-warren.mp4",
+      "filename": "embed-video-1457492692903919768.mp4",
+      "unique_name": "embed-video-1457492692903919768_5e1e3ccb.mp4",
+      "hash": "5e1e3ccb",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1457492692903919768",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "894828425225863179",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/you-guys-are-boring-dion-warren-raising-dion-you-vs-me-you-bore-me-gif-25248441",
+      "reactions": [
+        {
+          "emoji": "🖕",
+          "count": 1
+        },
+        {
+          "emoji": "👎",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://media.tenor.com/5trk2fHZnWoAAAAe/even-magic-has-its-limit-fabulous-godmother.png",
+      "filename": "embed-thumbnail-1457502618107646053.png",
+      "unique_name": "embed-thumbnail-1457502618107646053_d466c226.png",
+      "hash": "d466c226",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1457502618107646053",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "544156658276892692",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/even-magic-has-its-limit-fabulous-godmother-cinderella-movie-magic-cant-do-everything-magic-has-limitations-gif-23032846",
+      "reactions": [
+        {
+          "emoji": "👎",
+          "count": 1
+        },
+        {
+          "emoji": "👍",
+          "count": 1
+        },
+        {
+          "emoji": "🥒",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://media.tenor.com/5trk2fHZnWoAAAPo/even-magic-has-its-limit-fabulous-godmother.mp4",
+      "filename": "embed-video-1457502618107646053.mp4",
+      "unique_name": "embed-video-1457502618107646053_cec6eb2f.mp4",
+      "hash": "cec6eb2f",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1457502618107646053",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "544156658276892692",
+      "timestamp": "2026-01-04",
+      "message_content": "https://tenor.com/view/even-magic-has-its-limit-fabulous-godmother-cinderella-movie-magic-cant-do-everything-magic-has-limitations-gif-23032846",
+      "reactions": [
+        {
+          "emoji": "👎",
+          "count": 1
+        },
+        {
+          "emoji": "👍",
+          "count": 1
+        },
+        {
+          "emoji": "🥒",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1457165183356108943/Capture_decran_2025-12-15_114707.png?ex=695c53d4&is=695b0254&hm=b8185713adeca975b09d5d1f054cf7aba0584218814655da8295065f6808a78a&",
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1457165183356108943/Capture_decran_2025-12-15_114707.png?ex=695c53d4&is=695b0254&hm=b8185713adeca975b09d5d1f054cf7aba0584218814655da8295065f6808a78a&",
+      "filename": "Capture_decran_2025-12-15_114707.png",
+      "unique_name": "capture_decran_2025-12-15_114707_f7eb64aa.webp",
+      "hash": "f7eb64aa",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 72706,
+      "content_type": "image/webp",
+      "width": 1586,
+      "height": 1448,
+      "message_id": "1457165183624679565",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "165187986735104001",
+      "timestamp": "2026-01-04",
+      "message_content": "Without fullplayload preshot like this and a homemade builder on a powerful algorithm, I don't see how an agent can react."
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1457167549782294711/Capture_decran_2025-12-01_020204.png?ex=695c5608&is=695b0488&hm=e0482833bdc44e28cd0c15c345f8cd49a4f7e51f2adccd2b6dcb4582cfd6f5ce&",
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1457167549782294711/Capture_decran_2025-12-01_020204.png?ex=695c5608&is=695b0488&hm=e0482833bdc44e28cd0c15c345f8cd49a4f7e51f2adccd2b6dcb4582cfd6f5ce&",
+      "filename": "Capture_decran_2025-12-01_020204.png",
+      "unique_name": "capture_decran_2025-12-01_020204_f7bd4b69.webp",
+      "hash": "f7bd4b69",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 96298,
+      "content_type": "image/webp",
+      "width": 1809,
+      "height": 1183,
+      "message_id": "1457167551669735545",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "165187986735104001",
+      "timestamp": "2026-01-04",
+      "message_content": "Mine works, but I wouldn't give it away for anything in the world... it's an insane amount of work."
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1457167550151655610/Capture_decran_2025-12-01_020235.png?ex=695c5608&is=695b0488&hm=7171b4bfc65a5fa01e1a1112c7a9447dc2d1bf46f5c785fe0c7febdfd992c078&",
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1457167550151655610/Capture_decran_2025-12-01_020235.png?ex=695c5608&is=695b0488&hm=7171b4bfc65a5fa01e1a1112c7a9447dc2d1bf46f5c785fe0c7febdfd992c078&",
+      "filename": "Capture_decran_2025-12-01_020235.png",
+      "unique_name": "capture_decran_2025-12-01_020235_06cfa496.webp",
+      "hash": "06cfa496",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 104848,
+      "content_type": "image/webp",
+      "width": 1880,
+      "height": 1264,
+      "message_id": "1457167551669735545",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "165187986735104001",
+      "timestamp": "2026-01-04",
+      "message_content": "Mine works, but I wouldn't give it away for anything in the world... it's an insane amount of work."
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1457167550566629386/Capture_decran_2025-12-04_223746.png?ex=695c5608&is=695b0488&hm=b18ec54731c1e80c12c769562bf13ebb5ce9bc9410ccd12ee501ad9cf528e4a7&",
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1457167550566629386/Capture_decran_2025-12-04_223746.png?ex=695c5608&is=695b0488&hm=b18ec54731c1e80c12c769562bf13ebb5ce9bc9410ccd12ee501ad9cf528e4a7&",
+      "filename": "Capture_decran_2025-12-04_223746.png",
+      "unique_name": "capture_decran_2025-12-04_223746_08da86d1.webp",
+      "hash": "08da86d1",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 33100,
+      "content_type": "image/webp",
+      "width": 1296,
+      "height": 497,
+      "message_id": "1457167551669735545",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "165187986735104001",
+      "timestamp": "2026-01-04",
+      "message_content": "Mine works, but I wouldn't give it away for anything in the world... it's an insane amount of work."
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1300025221834739744/1457167551284117635/Capture_decran_2025-12-04_225842.png?ex=695c5609&is=695b0489&hm=268afa259ffbf57098e3b97e845e7309ae5c5a5eac1d8ca168b4d2a860151cef&",
+      "proxy_url": "https://media.discordapp.net/attachments/1300025221834739744/1457167551284117635/Capture_decran_2025-12-04_225842.png?ex=695c5609&is=695b0489&hm=268afa259ffbf57098e3b97e845e7309ae5c5a5eac1d8ca168b4d2a860151cef&",
+      "filename": "Capture_decran_2025-12-04_225842.png",
+      "unique_name": "capture_decran_2025-12-04_225842_ecb1b93f.webp",
+      "hash": "ecb1b93f",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 81676,
+      "content_type": "image/webp",
+      "width": 1509,
+      "height": 1254,
+      "message_id": "1457167551669735545",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "165187986735104001",
+      "timestamp": "2026-01-04",
+      "message_content": "Mine works, but I wouldn't give it away for anything in the world... it's an insane amount of work."
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1377726087789940836/1457176797786406952/Screenshot_2026-01-03_at_4.58.49_PM.png?ex=695bb5e5&is=695a6465&hm=3cda26f57170e9c0e4e721bb8f7098ccf9becd3bd188cabb0d8af457ff50ffe1&",
+      "proxy_url": "https://media.discordapp.net/attachments/1377726087789940836/1457176797786406952/Screenshot_2026-01-03_at_4.58.49_PM.png?ex=695bb5e5&is=695a6465&hm=3cda26f57170e9c0e4e721bb8f7098ccf9becd3bd188cabb0d8af457ff50ffe1&",
+      "filename": "Screenshot_2026-01-03_at_4.58.49_PM.png",
+      "unique_name": "screenshot_2026-01-03_at_4-58-49_pm_af435f5b.png",
+      "hash": "af435f5b",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 114889,
+      "content_type": "image/png",
+      "width": 2596,
+      "height": 292,
+      "message_id": "1457176798059299049",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "580487826420793364",
+      "timestamp": "2026-01-04",
+      "message_content": "turbo using 21gb of memory on build"
+    },
+    {
+      "url": "https://media.discordapp.net/stickers/1091606129907339294.png",
+      "filename": "latepepe.png",
+      "unique_name": "latepepe_a98f9f5e.png",
+      "hash": "a98f9f5e",
+      "type": "image",
+      "media_type": "sticker",
+      "content_type": "image/png",
+      "message_id": "1457270786623537324",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "213767993153290250",
+      "timestamp": "2026-01-04",
+      "message_content": ""
+    },
+    {
+      "url": "https://i.ytimg.com/vi/F64BLTOwQ2s/maxresdefault.jpg",
+      "filename": "embed-thumbnail-1457351949287428120.jpg",
+      "unique_name": "embed-thumbnail-1457351949287428120_7be47e81.jpg",
+      "hash": "7be47e81",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1457351949287428120",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "573475033515819009",
+      "timestamp": "2026-01-04",
+      "message_content": "https://youtu.be/F64BLTOwQ2s"
+    },
+    {
+      "url": "https://www.youtube.com/embed/F64BLTOwQ2s",
+      "filename": "embed-video-1457351949287428120.com/embed/F64BLTOwQ2s",
+      "unique_name": "f64bltowq2s_75b559a6.mp4",
+      "hash": "75b559a6",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1457351949287428120",
+      "channel_id": "1377726087789940836",
+      "channel_name": "core-devs",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "573475033515819009",
+      "timestamp": "2026-01-04",
+      "message_content": "https://youtu.be/F64BLTOwQ2s"
     }
   ],
   "stats": {
-    "total_files": 2288,
+    "total_files": 2306,
     "by_type": {
-      "video": 479,
-      "image": 1188,
+      "video": 485,
+      "image": 1200,
       "document": 621
     },
-    "total_size_bytes": 1791163845
+    "total_size_bytes": 1794065887
   }
 }
