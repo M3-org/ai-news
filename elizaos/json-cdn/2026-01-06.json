@@ -19,10 +19,18 @@
             {
               "url": "https://cdn.elizaos.news/imgflip/agrd0p.jpg",
               "summary": "Message dated 2026."
+            },
+            {
+              "url": "https://cdn.elizaos.news/imgflip/agrd10.jpg",
+              "summary": "One user has 23 roles."
+            },
+            {
+              "url": "https://cdn.elizaos.news/imgflip/agrd1u.jpg",
+              "summary": "k_carv has God role."
             }
           ],
           "posters": [
-            "https://cdn.elizaos.news/posters/2026-01-06/poster-1.png"
+            "https://cdn.elizaos.news/posters/2026-01-06/discordrawdata.png"
           ]
         },
         {
@@ -103,16 +111,7 @@
           "images": [
             "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6332"
           ],
-          "videos": [],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/agrd10.jpg",
-              "summary": "One user has 23 roles."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/2026-01-06/poster-2.jpg"
-          ]
+          "videos": []
         },
         {
           "text": "**Issue #6331: Model Not Found Error with Agent ID**\n\nA bug has been identified where using an agent ID with API endpoints results in a \"Model not found\" error. This issue was reported by madjin and affects API endpoint functionality when attempting to reference models using agent IDs.",
@@ -136,16 +135,7 @@
             "From 2026-01-06 to 2026-01-07, elizaos/eliza had 0 new PRs (0 merged), 2 new issues, and 2 active contributors."
           ],
           "images": [],
-          "videos": [],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/agrd1u.jpg",
-              "summary": "k_carv has God role."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/2026-01-06/poster-3.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "github_summary"
