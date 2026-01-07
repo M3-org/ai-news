@@ -6,7 +6,7 @@
       "title": "ElizaOS Development Updates and Technical Discussions (January 6-7, 2026)",
       "content": [
         {
-          "text": "## Discord Plugin Issues and Fixes\n\nA user (DigitalDiva) encountered persistent issues with the Discord plugin not detecting server IDs, usernames, or server ownership despite proper configuration. The error \"No server ID found 10\" was traced to version compatibility issues between ElizaOS 1.7.0 and plugin-discord 1.3.3. Odilitime identified the problem as a transition from `serverId` to `messageServerId` in the codebase and created a fix branch (odi-17) to address bootstrap actions/providers issues. A PR (#6333) was submitted to fix plugin-bootstrap for version 1.7.0, though additional work was needed for full Discord 1.3.3 compatibility. The team recommended users either wait for the fix or downgrade to core version 1.6.5 as a temporary workaround.",
+          "text": "## Discord Plugin Issues and Fixes\n\nA user (DigitalDiva) encountered persistent issues with the Discord plugin not detecting server IDs, usernames, or server ownership despite proper configuration. The error \"No server ID found 10\" was traced to version compatibility issues between ElizaOS 1.7.0 and plugin-discord 1.3.3. Odilitime identified the problem as a transition from `serverId` to `messageServerId` in the codebase and created a fix branch (odi-17) to address bootstrap actions/providers issues. A formal PR (#6333) was submitted to fix plugin-bootstrap and SQL minor actions/providers for serverId compatibility. The team recommended users experiencing similar issues either wait for the fix or temporarily use version 1.6.5.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
@@ -17,7 +17,7 @@
           "videos": [],
           "memes": [
             {
-              "url": "https://cdn.elizaos.news/imgflip/agrpp0.jpg",
+              "url": "https://cdn.elizaos.news/imgflip/agrxkt.jpg",
               "summary": "Date set in 2026."
             }
           ],
@@ -26,15 +26,17 @@
           ]
         },
         {
-          "text": "## New Contributor Onboarding\n\nA blockchain and AI engineer (aicodeflow.dev) joined the community expressing interest in contributing to ElizaOS, particularly around agent autonomy with constraints, onchain execution layers with guardrails, prediction markets/event-driven systems, and observability tooling. Odilitime recommended starting by reading the code and working on existing plugins, directing them to github.com/elizaos-plugins/ for available plugins. The lead developer also suggested connecting to discuss the Spartan project, which focuses on DeFi utilities. The community welcomed the new contributor and encouraged exploration of the open-source codebase.",
+          "text": "## New Contributor Onboarding\n\nA blockchain and AI engineer (aicodeflow.dev) joined the community expressing interest in contributing to ElizaOS, particularly around agent autonomy with constraints, onchain execution layers with guardrails, prediction markets/event-driven systems, and observability tooling. Odilitime welcomed them and suggested starting by reading the code and working on plugins, directing them to github.com/elizaos-plugins/ for available plugins. The lead developer of the Spartan project (https://github.com/elizaos/spartan) offered to collaborate on DeFi utilities. K_carv recommended connecting with Odilitime and mentioned upcoming open sessions for contributors.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
-          "images": [],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/spartan_51a19af8.jpg"
+          ],
           "videos": []
         },
         {
-          "text": "## Database Migration Issues\n\nA developer encountered destructive migration errors when running `elizaos start` a second time, with the system blocking changes that would drop columns. The error required either deleting the `.eliza` folder or setting `ELIZA_ALLOW_DESTRUCTIVE_MIGRATIONS=true`. Community helper stackweaver explained this is a safety feature to prevent data loss and recommended using `ELIZA_ALLOW_DESTRUCTIVE_MIGRATIONS=true elizaos start` for local development. Omid Sa suggested using `elizaos dev` command instead of `elizaos start` for continuous monitoring during development.",
+          "text": "## Database Migration Issues\n\nUsers reported destructive migration errors when running `elizaos start` a second time. The error indicated that columns would be dropped unless `ELIZA_ALLOW_DESTRUCTIVE_MIGRATIONS=true` was set. A community helper explained this occurs because ElizaOS detects destructive database migrations and provided the solution: explicitly allow migrations by setting the environment variable. For continuous development monitoring, the team recommended using `elizaos dev` instead of `elizaos start` to avoid repeatedly triggering migration checks.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
@@ -42,7 +44,7 @@
           "videos": []
         },
         {
-          "text": "## Token Contract Address Visibility\n\nCommunity members raised concerns about the difficulty of finding official ElizaOS contract addresses (CA) on X/Twitter accounts. Users noted it was too hard for most people to find the right CAs within 10 seconds. Shaw acknowledged the feedback and committed to posting the CA across official accounts. However, Kenk pushed back on the idea of pinning CAs in bios or tweets, noting that top crypto projects typically don't do this and instead link to websites where token info is one click away. The team confirmed they're refreshing their Linktree to point to CoinGecko for easier access to contract information.",
+          "text": "## Token Migration and Contract Address Visibility\n\nCommunity members raised concerns about the difficulty of finding official ElizaOS contract addresses (CA) across team-managed social media accounts. Users noted it was too hard for most people to find the right CAs within 10 seconds on the website or Twitter. Shaw acknowledged the feedback and committed to posting the CA more prominently. K_carv defended the current approach, noting that most top 50 projects don't have CAs in their bios and that the linktree would be refreshed to point to CoinGecko. The team discussed that pinned tweets might be a solution, though some argued it could make the project appear scam-like. Regarding migration, it was clarified that only users who held tokens at the November 11 snapshot are eligible to migrate.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
@@ -50,35 +52,39 @@
           "videos": []
         },
         {
-          "text": "## Core Development Updates\n\nThe core development team discussed several technical improvements:\n\n- Odilitime created PR #6333 to fix plugin-bootstrap and SQL minor actions/providers for serverId issues in version 1.7.0\n- Stan submitted PRs for unified messaging API implementation in both Telegram (#22) and Discord (#41) plugins\n- Stan prepared an RFC document on hybrid architecture with persistent workers exploration for team review\n- Discussion of Discord gateway architecture, with Odilitime recommending review of the Jeju cloud branch containing Shaw's preferred implementation\n- Stan working on cloud fixes for TOCTOU race conditions using a deduct-before, reconcile-after approach\n- Runtime initialization optimizations in progress\n\nThe team also discussed scaling considerations for event pumps, noting that voice connections will need higher priority/bandwidth than text, and preprocessing will be important.",
+          "text": "## Core Development Updates\n\nThe core development team discussed several technical improvements:\n\n- **Cursor AI Integration**: Odilitime shared that using your own Claude API key in Cursor doesn't provide the Cursor-optimized version of Claude (where they use tricks to improve output)\n\n- **Cloud Architecture**: Stan submitted an RFC-001 document on Hybrid Architecture with Persistent Workers Exploration for team review (https://hackmd.io/@0PzDTGXqRg6nOCDoEwaN-A/SyDNAAiVWe). He's working on cloud fixes to handle TOCTOU race conditions using a deduct-before, reconcile-after approach, plus runtime initialization optimizations\n\n- **Messaging API Refactoring**: Stan submitted PRs for unified messaging API implementation in both Telegram and Discord plugins, moving from deprecated `sendMessage` to `handleMessage`\n\n- **Gateway Architecture**: Discussion around Discord bridge implementation, with Odilitime recommending review of the Jeju cloud branch (https://github.com/elizaOS/eliza-cloud-v2/tree/jeju/apps/discord-gateway) for Shaw's preferred implementation. The team discussed scaling considerations for event pumps, noting voice connections will need higher priority/bandwidth than text\n\n- **Documentation**: Jin shared the team's HackMD workspace at https://hackmd.io/@elizaos/book",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1377726087789940836"
           ],
           "images": [
             "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-06_at_5-16-54_pm_a21ac9df.png",
             "https://cdn.elizaos.news/elizaos-media/6333_8d0c296c.jpg",
-            "https://cdn.elizaos.news/elizaos-media/img_2990_b56f0838.jpg"
+            "https://cdn.elizaos.news/elizaos-media/22_df803f0d.jpg",
+            "https://cdn.elizaos.news/elizaos-media/41_b6de2c4f.jpg"
           ],
           "videos": []
         },
         {
-          "text": "## Technical Resources and Tools\n\nSeveral useful resources were shared:\n\n- Jin shared GitHub's agentics workflow documentation for updating docs\n- A developer shared their x402 protocol library for ElizaOS integration: `npm i @alleyboss/micropay-solana-x402-paywall`\n- Jin shared the ElizaOS HackMD workspace: https://hackmd.io/@elizaos/book\n- Discussion of Cursor AI optimization, noting that using your own Claude API key doesn't provide Cursor's optimized version of Claude\n- Stan published an RFC on hybrid architecture for team review: https://hackmd.io/@0PzDTGXqRg6nOCDoEwaN-A/SyDNAAiVWe",
+          "text": "## Community Resources and Integrations\n\n- **X402 Protocol**: AlleyBoss announced an updated library for experimenting with x402 protocol integrated with ElizaOS: `npm i @alleyboss/micropay-solana-x402-paywall`\n\n- **GitHub Agentic Workflows**: Jin shared GitHub's agentics workflow documentation (https://github.com/githubnext/agentics/blob/main/workflows/update-docs.md) as a useful resource\n\n- **HackMD Partnership**: A representative from HackMD reached out expressing support for ElizaOS builders using their platform\n\n- **Zoey Framework**: Odilitime shared that Neo rolled out a Rust-inspired ElizaOS alternative called Zoey (https://zoey.xyz/), described as a privacy-first, local-first AI agent framework",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744",
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [
-            "https://cdn.elizaos.news/elizaos-media/agentics_e2a30a8f.jpg",
-            "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-06_at_2-42-57_pm_167a7b46.png"
+            "https://cdn.elizaos.news/elizaos-media/agentics_e2a30a8f.jpg"
           ],
           "videos": []
         },
         {
-          "text": "## Migration and Token Questions\n\nUsers had questions about the AI16Z to ElizaOS migration:\n\n- A user asked if buying AI16Z now would result in 120x returns after migration, misunderstanding the 1:6 conversion ratio\n- Omid Sa clarified that only tokens held at the November 11 snapshot are eligible for migration\n- Questions about token utility in the new version and value accrual for holders were raised but not fully addressed in the excerpts\n- Some confusion about DegenAI's relationship to ElizaOS, with suggestions to add more utility to ElizaOS",
+          "text": "## Miscellaneous Technical Notes\n\n- A user discovered an incorrect fact about EigenLayer on the website that LLMs were picking up and propagating\n- NVIDIA announced the Rubin platform with six new chips, making Blackwell \"old news\" according to community discussion\n- The team featured in a video compilation about AI development\n- Rumble announced a proposed acquisition of Northern Data's GPUs and data centers to boost cloud services and AI capabilities",
           "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836",
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
-          "images": [],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/image0_27b1a76a.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1458233135245430876_65eaa6de.jpg"
+          ],
           "videos": []
         }
       ],
@@ -88,17 +94,20 @@
       "title": "Recent Issues in elizaOS/eliza Repository",
       "content": [
         {
-          "text": "Issue #6332 reports a performance problem where Turbo build is consuming excessive memory, reaching over 21GB. This issue was reported by madjin and indicates a significant memory leak or inefficiency in the build process that needs to be addressed.",
+          "text": "Issue #6332 reports a performance problem where Turbo build is consuming excessive memory, reaching 21GB or more. This memory consumption issue was reported by madjin and needs investigation to optimize resource usage during the build process.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/6332"
           ],
           "images": [
             "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6332"
           ],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/2026-01-06/issue.jpg"
+          ]
         },
         {
-          "text": "Issue #6331 describes a bug where users encounter a \"Model not found\" error when attempting to use agent ID with API endpoints. This issue was also reported by madjin and suggests a problem with the API's ability to properly recognize or route requests using agent identifiers.",
+          "text": "Issue #6331 describes a bug where a \"Model not found\" error occurs when using agent ID with API endpoints. This issue, also reported by madjin, indicates a problem with the API's ability to properly recognize or handle agent IDs in endpoint requests.",
           "sources": [
             "https://github.com/elizaOS/eliza/issues/6331"
           ],
@@ -114,12 +123,15 @@
       "title": "elizaos/eliza Repository Activity Summary (January 6-7, 2026)",
       "content": [
         {
-          "text": "During the period from January 6 to January 7, 2026, the elizaos/eliza repository showed minimal development activity. There were no new pull requests created or merged during this timeframe. However, the repository did see 2 new issues opened and had 2 active contributors participating in the project.",
+          "text": "During the period from January 6 to January 7, 2026, the elizaos/eliza repository showed minimal development activity. There were no new pull requests created or merged during this timeframe. However, the repository did see 2 new issues opened, indicating some user engagement or bug reports. The project had 2 active contributors participating during these two days.",
           "sources": [
             "From 2026-01-06 to 2026-01-07, elizaos/eliza had 0 new PRs (0 merged), 2 new issues, and 2 active contributors."
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/2026-01-06/github_summary.jpg"
+          ]
         }
       ],
       "topic": "github_summary"
@@ -133,7 +145,10 @@
             "text: Top contributors for elizaOS/eliza"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/2026-01-06/contributors.jpg"
+          ]
         }
       ],
       "topic": "contributors"
