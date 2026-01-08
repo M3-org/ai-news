@@ -35,6 +35,10 @@
           "meme": {
             "url": "https://cdn.elizaos.news/imgflip/agsawx.jpg",
             "summary": "Prediction markets for agents."
+          },
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agscmy.jpg",
+            "summary": "Prediction markets for agents."
           }
         },
         {
@@ -43,6 +47,10 @@
           "image": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457698711219208213_3b99ab70.png",
           "meme": {
             "url": "https://cdn.elizaos.news/imgflip/agsaxc.jpg",
+            "summary": "AI agents fight in colosseum."
+          },
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agscnj.jpg",
             "summary": "AI agents fight in colosseum."
           }
         },
@@ -57,6 +65,10 @@
           "meme": {
             "url": "https://cdn.elizaos.news/imgflip/agsaxp.jpg",
             "summary": "Nano Banana impresses with images."
+          },
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agscph.jpg",
+            "summary": "Nano Banana generates impressive images."
           }
         },
         {
@@ -70,6 +82,10 @@
           "meme": {
             "url": "https://cdn.elizaos.news/imgflip/agsay2.jpg",
             "summary": "Market-driven emotional states for AI."
+          },
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agscq2.jpg",
+            "summary": "Talking to Claude on phone about code."
           }
         },
         {
@@ -79,7 +95,11 @@
             "url": "https://cdn.elizaos.news/imgflip/agsayj.jpg",
             "summary": "Anthropic keys shared with developers."
           },
-          "poster": "https://cdn.elizaos.news/posters/1767837563994-tidtum.jpg"
+          "poster": "https://cdn.elizaos.news/posters/1767837563994-tidtum.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agscqe.jpg",
+            "summary": "Anthropic keys shared with developers."
+          }
         }
       ],
       "topic": "discordrawdata"
