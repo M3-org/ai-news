@@ -4,27 +4,21 @@
   "categories": [
     {
       "title": "Recent ElizaOS GitHub Updates",
-      "content": [
-        {
-          "text": "The ElizaOS team has implemented several important updates to their codebase:\n\n1. A new unified hooks system with multi-transport support was added, enabling compatibility across HTTP, SSE, and WebSocket protocols (PR #6300).\n\n2. Two SQL plugin fixes were implemented:\n   - Fixed parameterization issues with SQL SET LOCAL commands by using sql.raw() (PR #6316)\n   - Added pool configuration, error handling, and fixed PGLite shutdown issues (PR #6323)\n\n3. CI improvements include:\n   - Updated permissions to allow the cursor bot to trigger Claude workflows (PR #6328)\n   - Upgraded Claude workflows to use Opus 4.5 and added new security and maintenance jobs (PR #6324)",
-          "sources": [
-            "https://github.com/elizaOS/eliza/pull/6300",
-            "https://github.com/elizaOS/eliza/pull/6316",
-            "https://github.com/elizaOS/eliza/pull/6323",
-            "https://github.com/elizaOS/eliza/pull/6328",
-            "https://github.com/elizaOS/eliza/pull/6324"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9b5.jpg",
-              "summary": "Upgraded Claude workflows to Opus 4.5."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1767836202098-1qbp8i.jpg"
-          ]
-        }
-      ],
+      "content": {
+        "text": "The ElizaOS team has implemented several important updates to their codebase:\n\n1. A new unified hooks system with multi-transport support was added, enabling compatibility across HTTP, SSE, and WebSocket protocols (PR #6300).\n\n2. Two SQL plugin fixes were implemented:\n   - Fixed parameterization issues with SQL SET LOCAL commands by using sql.raw() (PR #6316)\n   - Added pool configuration, error handling, and fixed PGLite shutdown issues (PR #6323)\n\n3. CI improvements include:\n   - Updated permissions to allow the cursor bot to trigger Claude workflows (PR #6328)\n   - Upgraded Claude workflows to use Opus 4.5 and added new security and maintenance jobs (PR #6324)",
+        "sources": [
+          "https://github.com/elizaOS/eliza/pull/6300",
+          "https://github.com/elizaOS/eliza/pull/6316",
+          "https://github.com/elizaOS/eliza/pull/6323",
+          "https://github.com/elizaOS/eliza/pull/6328",
+          "https://github.com/elizaOS/eliza/pull/6324"
+        ],
+        "meme": {
+          "url": "https://cdn.elizaos.news/imgflip/agsavv.jpg",
+          "summary": "Claude workflows use Opus 4.5."
+        },
+        "poster": "https://cdn.elizaos.news/posters/1767837506845-t8jsl8.jpg"
+      },
       "topic": "completed_items"
     },
     {
@@ -37,28 +31,20 @@
             "https://cdn.elizaos.news/elizaos-media/embed-image-1457775625489219595_72257f50.jpg",
             "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457775915437261017_9c337b2d.jpg"
           ],
-          "videos": [
-            "https://cdn.elizaos.news/elizaos-media/7udqooi2ra8_1b676a71.mp4"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9ce.jpg",
-              "summary": "Prediction markets for agents."
-            }
-          ]
+          "video": "https://cdn.elizaos.news/elizaos-media/7udqooi2ra8_1b676a71.mp4",
+          "meme": {
+            "url": "https://cdn.elizaos.news/imgflip/agsawx.jpg",
+            "summary": "Prediction markets for agents."
+          }
         },
         {
           "text": "## Babylon - AI Prediction Game\n\nBabylon, a fast social prediction game where humans and AI agents react to live events in real time, is close to launch. The platform will allow users to bet on AI agent competitions, creating a colosseum-like environment for AI agents to compete while implementing betting features.",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457698711219208213_3b99ab70.png"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9cp.jpg",
-              "summary": "AI agents fight in colosseum."
-            }
-          ]
+          "image": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457698711219208213_3b99ab70.png",
+          "meme": {
+            "url": "https://cdn.elizaos.news/imgflip/agsaxc.jpg",
+            "summary": "AI agents fight in colosseum."
+          }
         },
         {
           "text": "## Developer Updates\n\n- Anthropic API integration requires OpenAI API key for embeddings when using MCP servers\n- Core developers are considering turning every plugin into a skill\n- New tools like Claude Code Voice Skill allow talking to Claude about projects over the phone\n- Nano Banana image generation tool is receiving positive feedback for its impressive results\n- The council is implementing monthly/quarterly/annual retrospective discussions",
@@ -68,12 +54,10 @@
             "https://cdn.elizaos.news/elizaos-media/image0_5b168737.jpg",
             "https://cdn.elizaos.news/elizaos-media/image0_a621cd6a.jpg"
           ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9d0.jpg",
-              "summary": "Nano Banana image tool impresses."
-            }
-          ]
+          "meme": {
+            "url": "https://cdn.elizaos.news/imgflip/agsaxp.jpg",
+            "summary": "Nano Banana impresses with images."
+          }
         },
         {
           "text": "## Open Source Projects\n\n- Oh-My-OpenCode: A battery-included OpenCode plugin with async subagents, curated agents with proper models, and crafted tools\n- Claude Code Voice Skill: A skill to talk to Claude about your projects over the phone\n- ERC-8004 contracts are being finalized\n- Community members are building and sharing their own AI projects, including market-driven emotional states for AI characters",
@@ -83,121 +67,91 @@
             "https://cdn.elizaos.news/elizaos-media/claude-code-voice-skill_4fc3852f.jpg",
             "https://cdn.elizaos.news/elizaos-media/ercs_3ae7bf74.jpg"
           ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9de.jpg",
-              "summary": "Phone Claude about code projects."
-            }
-          ]
+          "meme": {
+            "url": "https://cdn.elizaos.news/imgflip/agsay2.jpg",
+            "summary": "Market-driven emotional states for AI."
+          }
         },
         {
           "text": "## Community Reminders\n\n- The only official ticket system is through the designated channel\n- Users are warned to be cautious of scammers - no team member from ElizaOS will initiate direct messages\n- Anthropic keys have been rotated and shared with core developers",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241, https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9du.jpg",
-              "summary": "Anthropic keys shared with developers."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1767836259496-oiwhcf.jpg"
-          ]
+          "meme": {
+            "url": "https://cdn.elizaos.news/imgflip/agsayj.jpg",
+            "summary": "Anthropic keys shared with developers."
+          },
+          "poster": "https://cdn.elizaos.news/posters/1767837563994-tidtum.jpg"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "Recent ElizaOS GitHub Issues",
-      "content": [
-        {
-          "text": "The ElizaOS GitHub repository has several open issues related to system functionality and API improvements. These include issues focused on lifecycle management and utilities (#5929), core hooks implementation (#5928), fixing double processing in the messaging API and aligning transports (#6298), and implementing JWT authentication with user management (#6327). These issues represent ongoing development efforts to enhance the ElizaOS platform's functionality and security.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/issues/5929",
-            "https://github.com/elizaOS/eliza/issues/5928",
-            "https://github.com/elizaOS/eliza/issues/6298",
-            "https://github.com/elizaOS/eliza/issues/6327"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/5929",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/5928",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6298",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6327"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9f6.jpg",
-              "summary": "Issue 6327 still open."
-            }
-          ]
+      "content": {
+        "text": "The ElizaOS GitHub repository has several open issues related to system functionality and API improvements. These include issues focused on lifecycle management and utilities (#5929), core hooks implementation (#5928), fixing double processing in the messaging API and aligning transports (#6298), and implementing JWT authentication with user management (#6327). These issues represent ongoing development efforts to enhance the ElizaOS platform's functionality and security.",
+        "sources": [
+          "https://github.com/elizaOS/eliza/issues/5929",
+          "https://github.com/elizaOS/eliza/issues/5928",
+          "https://github.com/elizaOS/eliza/issues/6298",
+          "https://github.com/elizaOS/eliza/issues/6327"
+        ],
+        "images": [
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/5929",
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/5928",
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6298",
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6327"
+        ],
+        "meme": {
+          "url": "https://cdn.elizaos.news/imgflip/agsazo.jpg",
+          "summary": "Issues numbered over 6300."
         }
-      ],
+      },
       "topic": "issue"
     },
     {
       "title": "Recent Pull Requests in the elizaOS/eliza Repository",
-      "content": [
-        {
-          "text": "Three recent pull requests have been submitted to the elizaOS/eliza repository, focusing on SQL plugin improvements and CI workflow upgrades:\n\n1. PR #6329 by 0xbbjoker adds a CachedDatabaseAdapter with LRU caching capabilities to the SQL plugin, enhancing database performance.\n\n2. PR #6323 by wtfsayo fixes several issues in the SQL plugin, including adding pool configuration options, implementing an error handler, and resolving PGLite shutdown problems.\n\n3. PR #6324 by wtfsayo upgrades Claude workflows with Opus 4.5 and introduces new security and maintenance jobs to the CI pipeline.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/pull/6329",
-            "https://github.com/elizaOS/eliza/pull/6323",
-            "https://github.com/elizaOS/eliza/pull/6324"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6329",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6323",
-            "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6324"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9gf.jpg",
-              "summary": "PGLite shutdown problems fixed."
-            }
-          ]
+      "content": {
+        "text": "Three recent pull requests have been submitted to the elizaOS/eliza repository, focusing on SQL plugin improvements and CI workflow upgrades:\n\n1. PR #6329 by 0xbbjoker adds a CachedDatabaseAdapter with LRU caching capabilities to the SQL plugin, enhancing database performance.\n\n2. PR #6323 by wtfsayo fixes several issues in the SQL plugin, including adding pool configuration options, implementing an error handler, and resolving PGLite shutdown problems.\n\n3. PR #6324 by wtfsayo upgrades Claude workflows with Opus 4.5 and introduces new security and maintenance jobs to the CI pipeline.",
+        "sources": [
+          "https://github.com/elizaOS/eliza/pull/6329",
+          "https://github.com/elizaOS/eliza/pull/6323",
+          "https://github.com/elizaOS/eliza/pull/6324"
+        ],
+        "images": [
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6329",
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6323",
+          "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6324"
+        ],
+        "meme": {
+          "url": "https://cdn.elizaos.news/imgflip/agsb0g.jpg",
+          "summary": "wtfsayo made consecutive PRs."
         }
-      ],
+      },
       "topic": "pull_request"
     },
     {
       "title": "elizaos/eliza GitHub Activity (Jan 5-6, 2026)",
-      "content": [
-        {
-          "text": "Between January 5-6, 2026, the elizaos/eliza repository saw significant activity with 5 new pull requests, all of which were successfully merged. Additionally, 2 new issues were opened during this period. The repository maintained an active community with 10 contributors participating during these two days.",
-          "sources": [
-            "text: From 2026-01-05 to 2026-01-06, elizaos/eliza had 5 new PRs (5 merged), 2 new issues, and 10 active contributors."
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9gv.jpg",
-              "summary": "Repo thrived in 2026."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1767836333698-5b431s.png"
-          ]
-        }
-      ],
+      "content": {
+        "text": "Between January 5-6, 2026, the elizaos/eliza repository saw significant activity with 5 new pull requests, all of which were successfully merged. Additionally, 2 new issues were opened during this period. The repository maintained an active community with 10 contributors participating during these two days.",
+        "source": "text: From 2026-01-05 to 2026-01-06, elizaos/eliza had 5 new PRs (5 merged), 2 new issues, and 10 active contributors.",
+        "meme": {
+          "url": "https://cdn.elizaos.news/imgflip/agsb0p.jpg",
+          "summary": "GitHub repo active in 2026."
+        },
+        "poster": "https://cdn.elizaos.news/posters/1767837626847-gdm6vn.png"
+      },
       "topic": "github_summary"
     },
     {
       "title": "Top Contributors for elizaOS/eliza",
-      "content": [
-        {
-          "text": "The provided source only mentions 'Top contributors for elizaOS/eliza' without providing any specific details about who these contributors are or their contributions. Without additional information, it's not possible to generate a detailed summary of the top contributors to the elizaOS/eliza project.",
-          "sources": [
-            "text: Top contributors for elizaOS/eliza"
-          ],
-          "memes": [
-            {
-              "url": "https://cdn.elizaos.news/imgflip/ags9i7.jpg",
-              "summary": "No details on top contributors."
-            }
-          ],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1767836357546-m6m08q.jpg"
-          ]
-        }
-      ],
+      "content": {
+        "text": "The provided source only mentions 'Top contributors for elizaOS/eliza' without providing any specific details about who these contributors are or their contributions. Without additional information, it's not possible to generate a detailed summary of the top contributors to the elizaOS/eliza project.",
+        "source": "text: Top contributors for elizaOS/eliza",
+        "meme": {
+          "url": "https://cdn.elizaos.news/imgflip/agsb1v.jpg",
+          "summary": "Contributors unnamed despite mention."
+        },
+        "poster": "https://cdn.elizaos.news/posters/1767837666201-irzktw.png"
+      },
       "topic": "contributors"
     }
   ],
