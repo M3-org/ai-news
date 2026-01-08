@@ -14,8 +14,15 @@
             "https://github.com/elizaOS/eliza/pull/6328",
             "https://github.com/elizaOS/eliza/pull/6324"
           ],
-          "images": [],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9b5.jpg",
+              "summary": "Upgraded Claude workflows to Opus 4.5."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767836202098-1qbp8i.jpg"
+          ]
         }
       ],
       "topic": "completed_items"
@@ -27,46 +34,74 @@
           "text": "## ElizaOS Ecosystem Overview\n\nSeppmos released a comprehensive video deep-dive on ElizaOS covering the full AI agent stack, Eliza Cloud (for launching your own agents), Babylon (prediction markets for agents), and the revamped $ElizaOS tokenomics. The video is available on both Twitter and YouTube for sharing with friends outside of Crypto Twitter.",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/2008207357524721664/img/oHYY5iWn0AfzuaNQ.jpg:large",
-            "https://i.ytimg.com/vi/7uDQoOi2ra8/maxresdefault.jpg"
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1457775625489219595_72257f50.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457775915437261017_9c337b2d.jpg"
           ],
           "videos": [
-            "https://www.youtube.com/embed/7uDQoOi2ra8"
+            "https://cdn.elizaos.news/elizaos-media/7udqooi2ra8_1b676a71.mp4"
+          ],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9ce.jpg",
+              "summary": "Prediction markets for agents."
+            }
           ]
         },
         {
           "text": "## Babylon - AI Prediction Game\n\nBabylon, a fast social prediction game where humans and AI agents react to live events in real time, is close to launch. The platform will allow users to bet on AI agent competitions, creating a colosseum-like environment for AI agents to compete while implementing betting features.",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://babylon.market/assets/images/og-image.png"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1457698711219208213_3b99ab70.png"
           ],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9cp.jpg",
+              "summary": "AI agents fight in colosseum."
+            }
+          ]
         },
         {
           "text": "## Developer Updates\n\n- Anthropic API integration requires OpenAI API key for embeddings when using MCP servers\n- Core developers are considering turning every plugin into a skill\n- New tools like Claude Code Voice Skill allow talking to Claude about projects over the phone\n- Nano Banana image generation tool is receiving positive feedback for its impressive results\n- The council is implementing monthly/quarterly/annual retrospective discussions",
           "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744, https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1457832584313835698/image.png?ex=695d6fe5&is=695c1e65&hm=6a8a84635a4375e752dd4305bb912f5f16c45163c357b1aaf55d595bbbc6080c&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1457742079068209297/image0.jpg?ex=695d1b9b&is=695bca1b&hm=2d2977ca7d26e26d20c0418f79cc9b4a17ed808d0575f00dd045c43667c866ff&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1457742562998620234/image0.jpg?ex=695d1c0e&is=695bca8e&hm=24cc8ce5973b2e77a9e864ba66d18ece58a5d2674f05448f203bc58459432cb5&"
+            "https://cdn.elizaos.news/elizaos-media/image_5aef142b.webp",
+            "https://cdn.elizaos.news/elizaos-media/image0_5b168737.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image0_a621cd6a.jpg"
           ],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9d0.jpg",
+              "summary": "Nano Banana image tool impresses."
+            }
+          ]
         },
         {
           "text": "## Open Source Projects\n\n- Oh-My-OpenCode: A battery-included OpenCode plugin with async subagents, curated agents with proper models, and crafted tools\n- Claude Code Voice Skill: A skill to talk to Claude about your projects over the phone\n- ERC-8004 contracts are being finalized\n- Community members are building and sharing their own AI projects, including market-driven emotional states for AI characters",
           "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836, https://discord.com/channels/1253563208833433701/1300025221834739744",
           "images": [
-            "https://repository-images.githubusercontent.com/1108837393/513cc740-aafa-4a23-9679-159e2dace92c",
-            "https://opengraph.githubassets.com/8d46b85201eae1e2b39b11b589a11311bc174073f76ffec85d67d410d46400cd/abracadabra50/claude-code-voice-skill",
-            "https://opengraph.githubassets.com/c1b3c150aecf72dcc113902c15a9046905d321ae129317dedf1edda6c04d5d72/MarcoMetaMask/ERCs"
+            "https://cdn.elizaos.news/elizaos-media/513cc740-aafa-4a23-9679-159e2dace92c_d78399cf.jpg",
+            "https://cdn.elizaos.news/elizaos-media/claude-code-voice-skill_4fc3852f.jpg",
+            "https://cdn.elizaos.news/elizaos-media/ercs_3ae7bf74.jpg"
           ],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9de.jpg",
+              "summary": "Phone Claude about code projects."
+            }
+          ]
         },
         {
           "text": "## Community Reminders\n\n- The only official ticket system is through the designated channel\n- Users are warned to be cautious of scammers - no team member from ElizaOS will initiate direct messages\n- Anthropic keys have been rotated and shared with core developers",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241, https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "images": [],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9du.jpg",
+              "summary": "Anthropic keys shared with developers."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767836259496-oiwhcf.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -88,7 +123,12 @@
             "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6298",
             "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6327"
           ],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9f6.jpg",
+              "summary": "Issue 6327 still open."
+            }
+          ]
         }
       ],
       "topic": "issue"
@@ -108,7 +148,12 @@
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6323",
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6324"
           ],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9gf.jpg",
+              "summary": "PGLite shutdown problems fixed."
+            }
+          ]
         }
       ],
       "topic": "pull_request"
@@ -121,8 +166,15 @@
           "sources": [
             "text: From 2026-01-05 to 2026-01-06, elizaos/eliza had 5 new PRs (5 merged), 2 new issues, and 10 active contributors."
           ],
-          "images": [],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9gv.jpg",
+              "summary": "Repo thrived in 2026."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767836333698-5b431s.png"
+          ]
         }
       ],
       "topic": "github_summary"
@@ -135,8 +187,15 @@
           "sources": [
             "text: Top contributors for elizaOS/eliza"
           ],
-          "images": [],
-          "videos": []
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags9i7.jpg",
+              "summary": "No details on top contributors."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767836357546-m6m08q.jpg"
+          ]
         }
       ],
       "topic": "contributors"
