@@ -14,7 +14,13 @@
           "images": [
             "https://cdn.discordapp.com/attachments/1253563209462448241/1458256023931322388/Screenshot_2026-01-06_at_4.28.45_PM.png?ex=695fa301&is=695e5181&hm=e72ce5cae5165775d235190524271a639900e41c8b9b2f95f4d88ab6bf60e9ab&"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6d8.jpg",
+              "summary": "Migration loses server ID."
+            }
+          ]
         },
         {
           "text": "## Contract Address (CA) Visibility Discussion\n\nCommunity members raised concerns about the difficulty of finding official ElizaOS contract addresses on X/Twitter accounts. The team acknowledged this issue and committed to addressing it. Shaw confirmed they will post the CA across official accounts. Discussion ensued about best practices, with some noting that top projects don't typically put CAs in bios as it can appear scam-like. The consensus was that a pinned tweet on the Eliza account or better website integration would be more appropriate. The linktree is being refreshed to point to CoinGecko for token information.",
@@ -22,7 +28,16 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6ed.jpg",
+              "summary": "CAs in bios look scammy."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767833849512-tp6spg.png"
+          ]
         },
         {
           "text": "## ElizaOS Cloud API Integration Issues\n\nA developer reported getting \"Model not found\" errors when building ElizaOS cloud agents into their website using agent IDs and API endpoints. The solution provided was to use proper model parameter formatting with provider prefixes when calling agent API endpoints:\n- openai/gpt-4o-mini\n- anthropic/claude-sonnet-4.5\n- google/gemini-2.5-flash",
@@ -30,7 +45,16 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6gb.jpg",
+              "summary": "Fictional models fix real errors."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767833875306-v5v89n.jpg"
+          ]
         },
         {
           "text": "## Development Tools and Resources\n\nJin shared GitHub's agentics workflow documentation for updating docs, highlighting useful patterns for the team. HackMD was mentioned as a collaboration platform, with the team having a workspace at https://hackmd.io/@elizaos/book. A developer from HackMD reached out expressing support for Eliza builders using their platform.",
@@ -41,7 +65,13 @@
           "images": [
             "https://opengraph.githubassets.com/991ed075f030457bcb1993f53388667b64cd0e1990efaffe3d82f162fa3bb93a/githubnext/agentics"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6hd.jpg",
+              "summary": "GitHub's agentics workflow exists."
+            }
+          ]
         },
         {
           "text": "## Unified Messaging API Updates\n\nStan submitted pull requests for both Telegram and Discord plugins implementing unified messaging API with elizaOS support. The Discord PR specifically fixes the API to use handleMessage instead of the deprecated sendMessage method. Stan also shared an RFC document for review on Hybrid Architecture - Persistent Workers Exploration.",
@@ -52,7 +82,13 @@
             "https://opengraph.githubassets.com/a05945963fd9632a4fd4fbaacfe3f37caa9ac2c002ce736b26f4ff43f76a5b74/elizaos-plugins/plugin-telegram/pull/22",
             "https://opengraph.githubassets.com/13c1126df2a7723365ad4fc6b26134ccf08a796e25ae81f9b27196fe55a0d6c0/elizaos-plugins/plugin-discord/pull/41"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6ht.jpg",
+              "summary": "elizaOS in Telegram Discord plugins."
+            }
+          ]
         },
         {
           "text": "## Cloud Infrastructure Work\n\nStan provided an update on cloud infrastructure improvements, working on fixes to handle TOCTOU (Time-of-check to time-of-use) race conditions using a deduct-before, reconcile-after approach. Parallel work includes optimizations on runtime initialization. The team discussed Discord bridge implementation, with Odilitime recommending review of the Jeju cloud branch which contains Shaw's preferred implementation. Discussion touched on scaling considerations for event pumps, noting that voice connections will need higher priority/bandwidth than text, and preprocessing will be important.",
@@ -60,7 +96,13 @@
             "https://discord.com/channels/1253563208833433701/1377726087789940836"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6ic.jpg",
+              "summary": "Jeju cloud branch preferred."
+            }
+          ]
         },
         {
           "text": "## Development Tool Insights\n\nOdilitime shared a finding from a Cursor call: when using your own Claude API key in Cursor, you don't get the Cursor-optimized version of Claude where they apply tricks to improve output. A humorous observation was made that ElizaOS documentation incorrectly described it as \"a revolutionary peer to peer agent framework that you start in golang but code it in python.\"",
@@ -71,7 +113,13 @@
             "https://cdn.discordapp.com/attachments/1377726087789940836/1458268156681523201/Screenshot_2026-01-06_at_5.16.54_PM.png?ex=695fae4d&is=695e5ccd&hm=cad3fc64b92d6580b25b123f0998657347ae0c93eb90a41b78954dca20bc1b39&",
             "https://cdn.discordapp.com/attachments/1377726087789940836/1458321009630249103/IMG_2990.jpg?ex=695fdf86&is=695e8e06&hm=1b1e88b461ab3ece062a75796c7a5666108ede999604e6a23e89bb0e4f60cdcd&"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6jx.jpg",
+              "summary": "ElizaOS: Golang start, Python code."
+            }
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -89,7 +137,13 @@
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6333",
             "https://opengraph.githubassets.com/1/elizaOS/eliza/pull/6339"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6k9.jpg",
+              "summary": "PGLite skips pgcrypto extension."
+            }
+          ]
         }
       ],
       "topic": "pull_request"
@@ -103,7 +157,16 @@
             "From 2026-01-07 to 2026-01-08, elizaos/eliza had 2 new PRs (1 merged), 7 new issues, and 7 active contributors."
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6kh.jpg",
+              "summary": "Repository activity from 2026."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767833968396-5ym9e.png"
+          ]
         }
       ],
       "topic": "github_summary"
@@ -119,7 +182,13 @@
           "images": [
             "https://opengraph.githubassets.com/1/elizaOS/eliza/issues/6310"
           ],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6mg.jpg",
+              "summary": "Chat box defaults to one line."
+            }
+          ]
         }
       ],
       "topic": "issue"
@@ -133,7 +202,16 @@
             "https://github.com/elizaOS/eliza/pull/6333"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6mt.jpg",
+              "summary": "Renamed serverId to messageServerId."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767834006150-mr9yys.jpg"
+          ]
         }
       ],
       "topic": "completed_items"
@@ -147,7 +225,16 @@
             "text: Top contributors for elizaOS/eliza"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "memes": [
+            {
+              "url": "https://cdn.elizaos.news/imgflip/ags6o5.jpg",
+              "summary": "No contributor data available."
+            }
+          ],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1767834031242-ngr8hc.jpg"
+          ]
         }
       ],
       "topic": "contributors"
