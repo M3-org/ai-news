@@ -4,48 +4,63 @@
 
 ### Critical Bug Fixes and Version 1.7.0 Issues
 
-A major technical crisis emerged around ElizaOS version 1.7.0, requiring immediate attention from the core development team. DigitalDiva reported Discord bot integration failures with "No server ID found 10" errors related to the bootstrap plugin. Error logs revealed problems with the serverId to messageServerId migration in the plugin-discord component.
+ElizaOS version 1.7.0 introduced significant compatibility issues requiring urgent attention. The core development team identified critical bugs necessitating an emergency release (PR #6333). The primary issue involved incomplete serverId to messageServerId migration in the codebase, causing Discord bot integration failures.
 
-Odilitime diagnosed the root cause as incomplete fixes in the 1.7.0 core release, specifically compatibility issues between the bootstrap plugin's actions/providers and plugin-discord 1.3.3. He created a fix branch (odi-17) on GitHub with patches to resolve these compatibility issues and recommended either downgrading to core 1.6.5 or waiting for the branch to be fully tested. An urgent release was planned (PR #6333) to address these critical issues, though testing across multiple Discord branches remained necessary before cutting a new Discord release.
+**DigitalDiva** encountered "No server ID found 10" errors when running their Discord bot with ElizaOS 1.7.0 and the bootstrap plugin. **Odilitime** diagnosed the problem as stemming from incomplete fixes in the 1.7.0 core release, specifically compatibility issues between the bootstrap plugin's actions/providers and plugin-discord 1.3.3.
 
-### Architectural Decisions for Scaling and Connectors
+**Resolution approach:** Odilitime created a fix branch (odi-17) on GitHub with patches for bootstrap's actions/providers. He recommended users either downgrade to core version 1.6.5 or wait for the fixes to be tested and merged. The team planned to test the Discord fix across various Discord branches before cutting a new Discord release.
 
-A significant architectural discussion unfolded in the core-devs channel regarding connector gateways and scaling strategies. Odilitime recommended reviewing the Jeju cloud branch containing Shaw's preferred Discord bridge implementation. The conversation evolved into scaling considerations, with Odilitime proposing **simple event pumps** as the direction forward.
+### Architectural Decisions for Scaling
 
-Key architectural decisions included:
-- **Multiple daemon instances per service** to handle scale requirements
-- **Differentiated event pumps** for voice connections (requiring higher bandwidth/priority) versus text connections
-- **Preprocessing as an optimization strategy** for event handling
-- Moving away from complex gateway architectures toward simpler event pump models
+A significant architectural discussion emerged in the core-devs channel regarding connector gateways and scaling strategies. **Odilitime** proposed moving toward simple event pumps as the primary direction, emphasizing the need for multiple daemon instances per service to handle scale effectively.
 
-### Cloud Infrastructure and Race Condition Fixes
+Key architectural considerations included:
+- Differentiated requirements between voice connections (requiring higher bandwidth/priority event pumps) and text connections
+- Preprocessing as a valuable optimization strategy
+- Review of the Jeju cloud branch containing Shaw's preferred Discord bridge implementation
 
-Stan provided a standup update detailing critical work on cloud fixes addressing **TOCTOU (Time-of-Check-Time-of-Use) race conditions** using a deduct-before, reconcile-after approach. He also worked on runtime initialization optimizations, creating corresponding Linear tickets for tracking. Stan submitted plugin PRs for Telegram (#22) and Discord (#41) and shared documentation for review on HackMD.
+### Cloud Infrastructure Improvements
 
-### API Integration and Model Configuration
+**Stan** provided a comprehensive standup update on cloud fixes addressing TOCTOU (Time-of-Check-Time-of-Use) race conditions. The solution implemented a deduct-before, reconcile-after approach, along with runtime initialization optimizations. Linear tickets were created to track these improvements.
 
-ElizaBAO encountered a "Model not found" error when integrating elizaoscloud agents into their website using agent IDs and API endpoints. cjft provided the solution by explaining the correct format for the model parameter: using provider prefix formats like `openai/gpt-4o-mini`, `anthropic/claude-sonnet-4.5`, or `google/gemini-2.5-flash`. This provider/model-name format was confirmed as the recommended approach.
+### ElizaOS Cloud Integration
 
-### Community and Documentation Concerns
+**ElizaBAO** encountered a "Model not found" error when integrating elizaoscloud agents into their website using agent IDs and API endpoints. **cjft** provided the solution: using provider prefix formats for the model parameter (e.g., openai/gpt-4o-mini, anthropic/claude-sonnet-4.5, or google/gemini-2.5-flash).
 
-Multiple community members raised concerns about the discoverability of the ElizaOS contract address. Broccolex and degenwtf flagged that the current flow makes it too difficult for users to find the correct CA within 10 seconds. Kenk mentioned the linktree is being refreshed to point to CoinGecko for token information, and shaw confirmed the team would address posting the contract address across all official X accounts.
+### Community Visibility and Documentation
 
-Jin shared valuable resources including the ElizaOS book documentation on HackMD and a GitHub resource from githubnext/agentics regarding workflow documentation for updating docs.
+Multiple community members raised concerns about the discoverability of the ElizaOS contract address (CA). **degenwtf** and **Broccolex** noted that users struggle to find the official CA on X/Twitter accounts, highlighting that the current discoverability flow doesn't work well for most users. **Kenk** mentioned the linktree is being refreshed to point to CoinGecko for token information, and **shaw** confirmed the team would address posting the CA across official channels.
 
-### Token Migration Questions
+**jin** shared valuable documentation resources, including the ElizaOS book on HackMD and a GitHub resource from githubnext/agentics regarding workflow documentation patterns.
 
-Nancy asked about ai16z migration timing, with Omid Sa clarifying that purchases made after the November 11 snapshot are not eligible for migration.
+### Plugin Development
+
+**Stan** submitted two plugin PRs for review:
+- Telegram plugin (#22)
+- Discord plugin (#41)
+
+He also shared documentation for review on HackMD, contributing to the team's collaborative documentation efforts.
+
+### Token Migration Clarification
+
+**nancy** asked about ai16z token migration timing. **Omid Sa** clarified that purchases made after the November 11 snapshot are not eligible for migration, addressing confusion about the 120X migration opportunity.
 
 ## Key Questions & Answers
 
-**Q: How should I format the model parameter when calling agent API endpoints?**  
-A: Use provider prefix format like `openai/gpt-4o-mini`, `anthropic/claude-sonnet-4.5`, or `google/gemini-2.5-flash` (answered by cjft)
+**Q: Why does the agent need admin privileges?**  
+A: DigitalDiva gave admin permissions when the bot wouldn't respond or see server ID and usernames (answered by DigitalDiva)
 
 **Q: What version of ElizaOS are you using?**  
-A: Version 1.7.0 with plugin-discord 1.3.3 (answered by DigitalDiva)
+A: Version 1.7.0 (answered by DigitalDiva)
 
-**Q: Does that mean I can keep this version?**  
-A: You could try cloning the odi-17 branch which should work with plugin-discord 1.3.3, but still testing (answered by Odilitime)
+**Q: Should I use version 1.6.5 instead?**  
+A: Yes, might be easier to use older core like 1.6.5, or use the odi-17 branch with fixes (answered by Odilitime)
+
+**Q: Does the fix branch mean I can keep this version?**  
+A: You could clone the odi-17 branch which should work with plugin-discord 1.3.3, but still testing (answered by Odilitime)
+
+**Q: How do I fix "Model not found" error when building elizaoscloud agents to website with agent ID and API endpoints?**  
+A: Use provider prefix format for the model parameter: openai/gpt-4o-mini, anthropic/claude-sonnet-4.5, or google/gemini-2.5-flash (answered by cjft)
 
 **Q: Why hasn't the ElizaOS contract address been posted across all official X accounts?**  
 A: The team will get on it (answered by shaw)
@@ -53,73 +68,53 @@ A: The team will get on it (answered by shaw)
 **Q: If I buy ai16z now and migrate after 30 days, will I get 120X?**  
 A: If you buy after the snapshot (November 11) you can't migrate (answered by Omid Sa)
 
+**Q: Is the Babylon that a16z invested in made by ElizaOS?**  
+A: Nope (answered by degenwtf)
+
 **Q: Do we have a team or workspace on hackmd?**  
 A: Yes (answered by jin, sharing https://hackmd.io/@elizaos/book)
 
 **Q: So each problematic connector would need its own gateway?**  
 A: Direction is simple event pumps, and we'll need more than one daemon instance per service due to scale (answered by Odilitime)
 
-**Q: Why does the agent need admin privileges?**  
-A: DigitalDiva gave admin permissions when the bot wouldn't respond or see server ID and usernames (answered by DigitalDiva)
-
 ## Community Help & Collaboration
 
-**shaw → DigitalDiva**  
-Context: Discord bot not responding or seeing server IDs  
-Resolution: Suggested creating minimal hello world script with discord.js to log server IDs and env vars, isolating permission issues from code issues
+**shaw helped DigitalDiva** with Discord bot integration issues by suggesting creation of a minimal hello world script with discord.js to isolate whether the problem was Discord portal permissions or code-related. He noted that Discord developer portal permission configuration is a common source of errors and recommended checking Discord dev portal permissions and logging environment variables.
 
-**Odilitime → DigitalDiva**  
-Context: "No server ID found 10" error with ElizaOS 1.7.0 and bootstrap plugin  
-Resolution: Diagnosed serverId to messageServerId migration issue, suggested downgrading to 1.6.5 or using fix branch odi-17, and created GitHub branch (odi-17) with fixes for bootstrap's actions/providers
+**Odilitime helped DigitalDiva** diagnose the "No server ID found 10" error with ElizaOS 1.7.0 and bootstrap plugin. He identified the serverId to messageServerId migration issue, created a fix branch (odi-17) on GitHub, and suggested either downgrading to version 1.6.5 or using the fix branch.
 
-**Casino → DigitalDiva**  
-Context: Discord bot permission problems  
-Resolution: Suggested limiting scope/permissions and working back to desired features
+**Casino helped DigitalDiva** with Discord bot permission problems by suggesting limiting scope/permissions and incrementally working back to desired features to isolate the issue.
 
-**cjft → ElizaBAO**  
-Context: "Model not found" error when building elizaoscloud agents into website with agent IDs and API endpoints  
-Resolution: Provided correct model parameter format using provider prefix (e.g., `openai/gpt-4o-mini`, `anthropic/claude-sonnet-4.5`, `google/gemini-2.5-flash`)
+**cjft helped ElizaBAO** resolve the "Model not found" error when integrating elizaoscloud agents by providing the correct model parameter format using provider prefixes.
 
-**Odilitime → Stan ⚡**  
-Context: Stan working on Discord connector implementation  
-Resolution: Recommended reviewing Jeju cloud branch with Shaw's preferred Discord bridge implementation at elizaOS/eliza-cloud-v2/tree/jeju/apps/discord-gateway
+**Odilitime helped Stan** with Discord connector implementation by recommending review of the Jeju cloud branch with Shaw's preferred Discord bridge implementation.
 
-**jin → Stan ⚡**  
-Context: Stan asking about HackMD team workspace  
-Resolution: Confirmed existence and shared link to https://hackmd.io/@elizaos/book
+**jin helped Stan** by confirming the existence of a HackMD team workspace and sharing the link to the ElizaOS book workspace.
 
-**The Light → henry**  
-Context: Need help migrating tokens held in Tangem at snapshot time  
-Resolution: Directed to migration channel
-
-**Kenk → S_ling Clement**  
-Context: Looking to connect about liquidity management and market making partnerships  
-Resolution: Suggested connecting with specific user for Voidix collaboration
+**Kenk helped S_ling Clement** by directing them to connect with a specific user for collaboration discussion regarding liquidity management.
 
 ## Action Items
 
 ### Technical
 
-- **Rush out release with 1.7.0 fix from PR #6333** (Mentioned by: Odilitime)
-- **Test Discord fix with various Discord branches and cut new Discord release** (Mentioned by: Odilitime)
+- **Rush out release with fix from PR #6333 for version 1.7.0** (Mentioned by: Odilitime)
 - **Test and merge odi-17 branch fixes for bootstrap plugin compatibility with plugin-discord 1.3.3** (Mentioned by: Odilitime)
+- **Test Discord fix with various Discord branches to resolve compatibility issues with Discord 1.3.3** (Mentioned by: Odilitime)
+- **Cut new Discord release after branch testing** (Mentioned by: Odilitime)
 - **Complete serverId to messageServerId migration across ElizaOS codebase** (Mentioned by: Odilitime)
-- **Review Telegram plugin PR #22** (Mentioned by: Stan ⚡)
-- **Review Discord plugin PR #41** (Mentioned by: Stan ⚡)
-- **Implement cloud fixes for TOCTOU race conditions using deduct-before, reconcile-after approach** (Mentioned by: Stan ⚡)
-- **Optimize runtime initialization** (Mentioned by: Stan ⚡)
-- **Plan scaling architecture for event pumps with multiple daemon instances per service** (Mentioned by: Odilitime)
-- **Implement higher priority/bandwidth event pumps for voice connections versus text** (Mentioned by: Odilitime)
-- **Implement preprocessing for event pumps** (Mentioned by: Odilitime)
+- **Implement cloud fixes for TOCTOU race conditions using deduct-before, reconcile-after approach** (Mentioned by: Stan)
+- **Complete runtime initialization optimizations** (Mentioned by: Stan)
+- **Plan scaling architecture for multiple daemon instances per service** (Mentioned by: Odilitime)
+- **Design higher priority/bandwidth event pumps for voice connections versus text** (Mentioned by: Odilitime)
 
 ### Documentation
 
-- **Post ElizaOS contract address on official X accounts** (Mentioned by: degenwtf, shaw)
+- **Review and potentially incorporate workflow documentation patterns from github.com/githubnext/agentics/workflows/update-docs.md** (Mentioned by: jin)
+- **Review documentation at https://hackmd.io/@0PzDTGXqRg6nOCDoEwaN-A/SyDNAAIVWe** (Mentioned by: Stan)
+- **Improve discoverability of ElizaOS contract address on official channels** (Mentioned by: degenwtf, Broccolex)
 - **Refresh linktree to point to CoinGecko for token information** (Mentioned by: Kenk)
-- **Make contract address findable within 10 seconds on website/Twitter** (Mentioned by: Broccolex)
-- **Review documentation at https://hackmd.io/@0PzDTGXqRg6nOCDoEwaN-A/SyDNAAVWe** (Mentioned by: Stan ⚡)
-- **Review agentics workflow documentation for updating docs at github.com/githubnext/agentics** (Mentioned by: jin)
 
 ### Feature
 
+- **Post ElizaOS contract address on official X accounts** (Mentioned by: shaw)
 - **Explore Polymarket-based agent plugins following Predict post mention** (Mentioned by: meltingsnow)
