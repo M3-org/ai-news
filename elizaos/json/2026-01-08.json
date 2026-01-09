@@ -7,51 +7,49 @@
       "content": [
         {
           "text": "Korean Exchange Delisting Controversy: Multiple Korean exchanges including Bithumb, Coinone, and Korbit announced termination of trading support for AI16Z and ElizaOS. The delisting was attributed to concerns about transparency and proper disclosure of material changes during the rebranding process. Korean community members explained that due to regulatory sensitivity in Korea and the migration controversies, there is virtually no chance of ElizaOS being listed on Korean exchanges in the near future. Some users disputed whether this was confirmed or just FUD, but Korean exchange notices were shared confirming the decision. The trading service termination is scheduled for February 12, 2026, with deposit and withdrawal services ending March 12, 2026.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw06n.jpg",
+            "summary": "Delisting scheduled February 12, 2026."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1767930995820-yo4egg.jpg"
         },
         {
           "text": "Token Utility and Migration Questions: Community members raised concerns about the lack of clear token utility for ElizaOS within the ecosystem. Users questioned why the token is not being used for payments or gas fees, and expressed confusion about the purpose of increasing supply without clear utility integration. One user specifically asked when ElizaOS would implement token-based features as previously mentioned. Migration issues continued with users reporting problems migrating AI16Z tokens from liquidity pools, with some receiving max amount reached errors. Users were directed to migration support channels for assistance.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw07h.jpg",
+            "summary": "Supply increases without utility."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1767931024094-e7y7lg6.png"
         },
         {
           "text": "HyperScape Game Development: Community discussion centered around HyperScape, a game that has been in development for 6 years. Users expressed excitement about the potential for earning cryptocurrency through gameplay. The game features newly added skills including Fishing, Mining, Cooking, Firemaking, and Smithing, with Prayer coming next. Community members discussed the importance of having active players for the games long-term success and encouraged participation. References were made to classic games like RuneScape and comparisons to playing with legendary player Zezima.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/G-IhqtQXUAAmrW3.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1458834580374163579_2e8af354.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw08h.jpg",
+            "summary": "6-year dev adds fishing skill now."
+          }
         },
         {
           "text": "Jeju Layer 2 and The Bazaar: Discussion revealed that Jeju is a decentralized Layer 2 blockchain focused on powering AI applications and connecting everything ElizaOS is building. The Bazaar was described as a decentralized marketplace application running on Jeju, functioning as an app store for agents. Community members expressed strong bullish sentiment about Jeju, stating that if people understand what Jeju will do, they would recognize the significant opportunity. The technology was described as being 100 times better with expectations of 100 times better price performance.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/2009176942595973120/img/5A8Sg4tVeOdmtdEE.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1458877100328095825_c5c4c70b.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw08t.jpg",
+            "summary": "Technology 100 times better."
+          }
         },
         {
           "text": "Data Collection and AI Training Concepts: Community members discussed innovative ideas for collecting real-world data for AI training. Proposals included creating an Eliza Phone App that would allow users to share their data in exchange for reputation points and rewards. Specific use cases mentioned included motion capture suits for activities like fishing, haircutting, and even battlefield scenarios, where people could earn royalties from inference when androids use those trained models. The concept extended to partnerships with companies like McDonalds to integrate Inertial Motion Capture Suits into uniforms, allowing employees to capture data while working. Discussion emphasized that grayscale video might be sufficient for movement analysis rather than full color.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://media.tenor.com/NOHR6Zg97GYAAAAe/terminator-terminator-robot.png"
-          ],
-          "videos": [
-            "https://media.tenor.com/NOHR6Zg97GYAAAPo/terminator-terminator-robot.mp4"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1458934710192574464_aee1f528.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1458934710192574464_87f42d32.mp4",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw08y.jpg",
+            "summary": "McDonalds motion capture uniforms."
+          }
         },
         {
           "text": "Context Graphs and Data Foundation: Core developers shared an article about context graphs representing a trillion-dollar opportunity for AI. The team emphasized that ElizaOS has a very strong data foundation to build context graphs, with high-quality daily, weekly, and monthly insights generated from agentic workflows. The focus is on integrating these insights into last-mile applications including agents, webhooks, and apps. Developers noted they have one of the strongest data foundations to build AI agents that can actually help as collaborators.",
@@ -59,63 +57,65 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744",
             "https://discord.com/channels/1253563208833433701/1377726087789940836"
           ],
-          "images": [
-            "https://foundationcapital.com/wp-content/uploads/2025/12/The-Trillion-Dollar-Question_Blog-Header.jpg"
-          ],
-          "videos": []
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1458710029447463036_c3451681.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw095.jpg",
+            "summary": "Trillion-dollar context graphs opportunity."
+          }
         },
         {
           "text": "New Projects and Integrations: KAMIYO AI launched using the ElizaOS plugin, described as trust infrastructure for autonomous agents with escrow-protected payments and on-chain dispute resolution. The plugin includes 5 actions (createEscrow, releaseEscrow, fileDispute, consumeApi, checkReputation), 3 providers (wallet, escrow, reputation context), and 2 evaluators (quality threshold, provider trust). Additionally, BountyBoard was shared as a decentralized platform designed to streamline Web3 community activities that uses Eliza.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
           "images": [
-            "https://opengraph.githubassets.com/8450c1b6ebb650798f881bd6e42345e7d9e450160d8b178ea2f7b8be83aafcd6/kamiyo-ai/kamiyo-protocol/commit/15815ae7089bddd32895cef22c8e6c91ceb73754",
-            "https://opengraph.githubassets.com/9328d0b6f84618c5ed6afea6b8d7e84769a378038e76d75182bdd207cc364593/veithly/BountyBoard"
+            "https://cdn.elizaos.news/elizaos-media/15815ae7089bddd32895cef22c8e6c91ceb73754_b139fdbf.jpg",
+            "https://cdn.elizaos.news/elizaos-media/bountyboard_47432442.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw09g.jpg",
+            "summary": "Plugin lists 5 actions 3 providers 2 evaluators."
+          }
         },
         {
           "text": "Technical Issues and Support: Users reported that ElizaCloud documentation was down. Questions arose about deploying in ElizaCloud via containers, specifically whether to use Pglite or PostgreSQL, with confirmation that either option would work. Users also asked about using Eliza for X (Twitter) functionality and whether the X API subscription is required or if Eliza has scraping capabilities to avoid the 200 dollar monthly fee. An ElizaBao account was suspended on X after purchasing a blue checkmark and posting about ElizaOS, with the user waiting for X support response.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw09o.jpg",
+            "summary": "Account suspended post-blue checkmark purchase."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1767931087888-jpks8.png"
         },
         {
           "text": "Inference Market Discussion: Core developers discussed Fleeks 2026 outlook focusing on efficient inference. A developer noted that the inference market is not the most profitable market to be in, based on experience with models offered over the last year including those on OpenRouter. Despite the challenging road ahead, they wished Fleek good luck in their endeavors.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/G-Jl0HFWAAEyKLC.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1458880622712852543_813ffdaf.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw0aw.jpg",
+            "summary": "Inference market not profitable."
+          }
         },
         {
           "text": "Community Sentiment and Culture: Throughout the discussions, community members maintained positive sentiment despite market challenges and delisting news. Users emphasized the importance of not investing more than one can afford to lose and encouraged those spreading FUD to sell and leave. There were lighthearted conversations about AI, aliens, gaming, and pop culture references. The community showed strong belief in the long-term vision, with members expressing confidence that the technology improvements will lead to significant price appreciation. Several users emphasized staying positive and focusing on building rather than complaining about market conditions.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/agw0bd.jpg",
+            "summary": "Community discusses aliens."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1767931124242-ti34.jpg"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "Miscellaneous",
-      "content": [
-        {
-          "text": "On January 8, 2026, ElizaOS made significant progress in expanding its plugin ecosystem and enhancing core functionality. A new plugin, @kamiyo/eliza, was added to the registry, demonstrating continued growth in available integrations. The SQL plugin received important updates including Neon serverless support and improved Row-Level Security (RLS), enhancing both security and scalability of database interactions. However, several issues were identified that require attention, including inconsistent box sizes in the UI, intermittent web search functionality problems, and needed improvements to the agent builder interface such as capitalizing default agent names on mobile and updating copy text for both the agent edit and agent builder interfaces.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "On January 8, 2026, ElizaOS made significant progress in expanding its plugin ecosystem and enhancing core functionality. A new plugin, @kamiyo/eliza, was added to the registry, demonstrating continued growth in available integrations. The SQL plugin received important updates including Neon serverless support and improved Row-Level Security (RLS), enhancing both security and scalability of database interactions. However, several issues were identified that require attention, including inconsistent box sizes in the UI, intermittent web search functionality problems, and needed improvements to the agent builder interface such as capitalizing default agent names on mobile and updating copy text for both the agent edit and agent builder interfaces.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json",
+        "memes": {
+          "url": "https://cdn.elizaos.news/imgflip/agw0ch.jpg",
+          "summary": "Capitalizing agent names on mobile."
+        },
+        "posters": "https://cdn.elizaos.news/posters/1767931164089-ikzopk.png"
+      },
       "topic": "Misceleanous"
     }
   ],
