@@ -7,30 +7,33 @@
       "content": [
         {
           "text": "Community members engaged in casual morning greetings and personal conversations. Users discussed topics ranging from hairline recession and shaving heads to humorous anecdotes about everyday life. One user shared excitement about playing Runescape again and mentioned difficulty recovering an old account. There were also philosophical discussions about influence, consequences, and societal issues, with users sharing perspectives on trust, action and reaction, and the nature of power dynamics.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://media.tenor.com/GFc5k2GwIXUAAAAe/coming-to-america-eddie-murphy.png",
-            "https://media.tenor.com/mLEsPJQIKcwAAAAe/laugh-laughing.png"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459277107073908806_357eddee.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459010375449317459_f37e958c.png"
           ],
           "videos": [
-            "https://media.tenor.com/GFc5k2GwIXUAAAPo/coming-to-america-eddie-murphy.mp4",
-            "https://media.tenor.com/mLEsPJQIKcwAAAPo/laugh-laughing.mp4",
-            "https://media.tenor.com/QBMNRLc2FmAAAAPo/sorry-im-sorry.mp4"
-          ]
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1459277107073908806_9e13edca.mp4",
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1459010375449317459_4e2e99fc.mp4",
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1459012741338501232_96984298.mp4"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19nt.jpg",
+            "summary": "Difficulty recovering old Runescape account."
+          }
         },
         {
           "text": "A discussion emerged about mental health monitoring technology. Users shared information about Behavidence and their AI algorithm called Dopa One, which monitors and detects fluctuations in brain dopamine levels using mobile phones and wearable devices. The technology provides digital behavior similarity scores for ADHD, Depression, and Anxiety. Community members suggested integrating this type of mental health monitoring into future ElizaOS Phone applications, noting that with 5 years of progress in LLMs and better smartwatch devices, it may be easier for AI to monitor mental health indicators. Research papers and app links were shared for reference.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://static.wixstatic.com/media/629163_7bb55bc1f7e14ddeb58183f31104387a~mv2.png/v1/fill/w_500,h_349,al_c/629163_7bb55bc1f7e14ddeb58183f31104387a~mv2.png",
-            "https://play-lh.googleusercontent.com/kPYRg11Oya8GJ11jqbConW4rcbPsNNrjfzqd3VdhXsmxdg4tJw7YfnVnCQX-TjdHSA",
-            "https://cdn.ncbi.nlm.nih.gov/pmc/cms/images/pmc-card-share.jpg?_=0"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459232908811436145_317a2f0f.png",
+            "https://cdn.elizaos.news/elizaos-media/kpyrg11oya8gj11jqbconw4rcbpsnnrjfzqd3vdhxsmxdg4tjw_38738dde.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459235682957393942_3b1580dc.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19oa.jpg",
+            "summary": "Phones detect brain dopamine levels."
+          }
         },
         {
           "text": "An announcement was made about an upcoming Twitter Space scheduled for Tuesday January 13th at 7pm UTC. The space will be hosted with the Solana Foundation, PayAI, and Quantu, focusing on deep diving into 8004 and discussing how it will be utilized by Eliza Cloud. Community members were encouraged to set reminders for the event.",
@@ -38,61 +41,63 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19p9.jpg",
+            "summary": "Deep diving into 8004."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768083868381-fkabz.jpg"
         },
         {
           "text": "In the coders channel, a developer sought collaboration for converting ElizaOS plugins into skills to make them interoperable with ElizaOS and other agent tools. The plan involves testing with popular plugins like Discord and blockchain plugins. The skill structure would consist of a folder with markdown instructions and tools in scripts to make them deterministic. Challenges discussed include getting Claude to use skills without explicit instruction, with solutions involving hooks. One developer shared their experience building a skill factory for specialized workflows involving PDF manipulation and filesystem operations.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19qb.jpg",
+            "summary": "Skill factory manipulates PDFs."
+          }
         },
         {
           "text": "Users discussed ElizaCloud app creator functionality, with some experiencing operation failures while others confirmed it was working as an early feature. Questions were raised about billing pages and credit top-up capabilities in the cloud platform. A developer shared a GitHub repository for deepface, a lightweight face recognition and facial attribute analysis library for Python, as a starting point for certain use cases.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/f8844bb98b1490d5c169ce10cad27fe771fc8f80f6d68a520e36bdc3ba02f342/serengil/deepface"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/deepface_40fe3034.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19rs.jpg",
+            "summary": "Developer shared face recognition repo."
+          }
         },
         {
           "text": "In the core developers channel, discussion centered on MiniMax M2 and its interleaved thinking approach for long-running tasks. A developer shared documentation about agent generalization and rethinking alignment. The team discussed converting ElizaOS plugins into skills with a focus on making them Claude-friendly and deterministic. One developer successfully set up a VPS running Claude code with Kimi K2 and access via Happy on iOS.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://filecdn.minimax.chat/public/58eca777-e31f-448a-9823-e2220e49b426.png",
-            "https://share.redd.it/preview/post/1q3ogs5",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459223831414702102/image0.jpg?ex=69627f98&is=69612e18&hm=8c420018e94876afe081dd7df10a86ec89dcc14039bb98f33d26c1c520185f4d&"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459018009095049361_0b5b3484.png",
+            "https://cdn.elizaos.news/elizaos-media/1q3ogs5_8e23c5e3.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image0_744fc277.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19s4.jpg",
+            "summary": "VPS runs Claude with Kimi via iOS Happy."
+          }
         },
         {
           "text": "Shaw announced plans for Eliza 2.0, which would come in TypeScript, Rust, and Python with FFI plugin interop between languages. The new version would have no API, no server, no CLI, and no projects - just an extremely Claude-friendly documented runtime with the same abstractions in 3 languages and examples for common use cases. Shaw confirmed having already ported it with a branch available. Another developer announced exciting updates coming to the ElizaOS leaderboard and mentioned writing a blog post as a follow-up to The Meritverse article about digital threads and net credentials.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://media.tenor.com/OcuuyPgL7VAAAAAe/vince-mcmahon-intrigued.png",
-            "https://paragraph.com/api/og?title=The+Meritverse%3A+Digital+Threads+for+Net+Creds&blogName=Metaverse+Makers&coverPhotoUrl=https%3A%2F%2Fstorage.googleapis.com%2Fpapyrus_images%2F0d23e1c9e55342e1e2996918b81124f60b3f48f997db65bcf3b6095bb96a3e3c.png&blogImageUrl=https%3A%2F%2Fstorage.googleapis.com%2Fpapyrus_images%2F295589e45971a77e55ff772465b724f2c14bc2e59a6147371c59c91b719a7c55.jpg&publishedDate=1724511851000"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459232284405137428_da997b9e.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459233537084620892_4f6d0cd4.jpg"
           ],
-          "videos": [
-            "https://media.tenor.com/OcuuyPgL7VAAAAPo/vince-mcmahon-intrigued.mp4"
-          ]
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1459232284405137428_9ce04925.mp4",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19sg.jpg",
+            "summary": "Eliza 2.0 lacks API, server, CLI."
+          }
         },
         {
           "text": "A reference was made to Dan Boneh, described as the famous Stanford cryptographer, in relation to discussions about 8004 technology.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1459232559736160328/IMG_2246.png?ex=696287b9&is=69613639&hm=ab63e1e7f8ca232d95a54e959c4e9f3da8e3230056688ddd72a52577946a3c5b&"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/img_2246_5db87dd9.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19sr.jpg",
+            "summary": "Dan Boneh tied to 8004 tech."
+          }
         }
       ],
       "topic": "discordrawdata"
@@ -102,35 +107,39 @@
       "content": [
         {
           "text": "ElizaOS made significant progress in plugin development on January 9, 2026, with major enhancements to authentication, database support, and developer workflows. The plugin-twitter repository implemented OAuth2 PKCE authentication for enhanced security and backward compatibility for 3-legged login and approve Twitter/X authentication. The plugin-sql package gained Neon serverless database support and improved Row-Level Security (RLS), including a fix for pgcrypto extension installation with PGLite. Testing for plugin-sql was strengthened by integrating withEntityContext() into RLS tests and adding ENABLE_DATA_ISOLATION=true to continuous integration. A crucial bug fix enabled comprehensive hot reload functionality for backend development, streamlining the development process.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19t0.jpg",
+            "summary": "ElizaOS progressed January 9, 2026."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768083952996-x9wmsg.jpg"
         },
         {
           "text": "Several new pull requests were opened indicating ongoing work. The elizaos-plugins/registry repository received a PR to add @zane-archer/plugin-aimo-router to the registry. The elizaos/eliza repository has a V2.0.0 PR likely introducing significant changes for a new major version release, and a PR to optimize build task inputs in turbo.json to improve build performance. The elizaos/elizaos.github.io repository has a PR to add an MMORPG-style character system to the leaderboard API.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19u5.jpg",
+            "summary": "Leaderboard adds MMORPG characters."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768083977461-g1cgi.png"
         },
         {
           "text": "Multiple new issues were created focusing on user interface improvements and feature enhancements. For the elizaos/eliza repository, issues include refining input fields for personality traits and topics of interest by removing the '+' button, enhancing visibility and clarity of public/private agent statuses in the dashboard, making the 'Sign up for free' prompt in agent messages a clickable hyperlink, and redirecting users back to their previous agent chat session after login/signup.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19vf.jpg",
+            "summary": "Phones detect brain dopamine levels."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768084005603-oh2gjm.png"
         },
         {
           "text": "The elizaos/elizaos.github.io repository received several issues related to implementing an MMORPG-style character progression system. These include implementing a full Orders and Evolution class tree with progression paths, allowing users to choose their evolution path at tier thresholds, tracking class evolution history for rich profile lore display, adding a unique visual identity system for each Order, allowing class respec with history preservation for lore purposes, making character class thresholds configurable via config/example.json, and extending the grouped organization/repository format to day, week, and month summaries.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah19wo.jpg",
+            "summary": "Respec preserves history for lore."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768084027843-rlgeg.jpg"
         }
       ],
       "topic": "miscellaneous"
