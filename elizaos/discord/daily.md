@@ -1,97 +1,128 @@
-# elizaOS Discord - 2026-01-09
+# elizaOS Discord - 2026-01-10
 
 ## Overall Discussion Highlights
 
-### Platform Development & Infrastructure
+### Infrastructure & Platform Development
 
-**Eliza Cloud Evolution**: The Eliza Cloud platform showed signs of active development with new billing pages enabling credit top-ups. ElizaBAO initially reported operational failures with the app creator feature, but cjft confirmed it's functional though still in early stages. The platform continues to evolve as a core infrastructure component for the ElizaOS ecosystem.
+**Jeju Layer Launch Announcement**
+The most significant announcement was the planned launch of Jeju, a new layer targeting deployment by H2 2026 (potentially sooner). The design emphasizes utility, adoption, and agent activity, with gas fees denominated in $elizaOS tokens while supporting additional tokens for gas payments.
 
-**Eliza 2.0 Radical Redesign**: Shaw proposed a significant architectural overhaul for Eliza 2.0, featuring multi-language support (TypeScript, Rust, Python) with FFI plugin interoperability. The vision eliminates traditional API, server, CLI, and project structures in favor of an extremely Claude-friendly documented runtime with unified abstractions across all three languages. Shaw confirmed having already ported the implementation with a branch available for review.
+**ElizaCloud Progress**
+ElizaCloud continues to evolve with new capabilities:
+- Weather data API integration now enabled
+- Payment infrastructure operational with first cloud payment transactions completed
+- Daily updates being performed by cloud agents
+- Users reporting positive experiences with platform access and plugin functionality
 
-**Cloud Infrastructure**: Stan announced delays in cloud cleanup work due to medical issues, indicating ongoing optimization efforts for the platform's backend infrastructure.
+**Decentralized Infrastructure Cost Analysis**
+Partners discussed developing a sophisticated cost calculator for decentralized infrastructure that goes beyond simple AWS pricing comparisons. The proposed methodology incorporates:
+- Revenue loss calculations from system downtime
+- Reputational damage multipliers derived from public company financial data
+- Example framework: analyzing annual AWS spend against total revenue to calculate business impact of outages
 
-### Skills & Plugin Interoperability
+### Agent Technology & Game Automation
 
-**Cross-Platform Skills Initiative**: Jin initiated a major collaboration effort to convert ElizaOS plugins into skills for testing interoperability across different agent tools, focusing on Discord and blockchain integrations. This aims to establish cross-platform compatibility standards.
+**LLM-Free Agent Architecture**
+Shaw demonstrated significant technical innovations in agent design:
+- Rust implementation of Eliza
+- LLM-free agents using text/state parsing instead of language models
+- 40 agents running simultaneously in Game of Life simulation using in-memory database
+- Agents playing adventure games including Tamagotchi simulations
 
-**Skills Architecture**: R0am outlined a technical approach where skills are organized as folders containing .md instruction files and deterministic scripts in any language. The key technical challenge identified was enabling Claude to use skills implicitly rather than explicitly, which R0am claims to have solved using hooks.
+**Hyperscape Project**
+The Hyperscape project (github.com/hyperscapeai/hyperscape) showcases agents playing MMO games including RuneScape and Roblox. A novel anti-detection technique for World of Warcraft was presented: encoding game API calls into pixels via Lua addon and decoding 200 screenshots per second to bypass traditional bot detection.
 
-**Workflow Complexity**: Agent Joshua highlighted the complexity of chaining skills together, providing a concrete example workflow: specialized skill → PDF manipulation → filesystem storage → display. The community acknowledged this as a difficult problem requiring further exploration.
+### Token Economics & Branding
 
-### AI & Mental Health Integration
+**Token Value Proposition Concerns**
+Critical questions emerged about token economics:
+- Current token utility limited to planned (but not yet implemented) gas fees
+- Daily minting of additional tokens for contributors creating structural downward price pressure
+- Community concerns about multiple token deployments and reputational impact
 
-**Dopamine Monitoring Proposal**: DorianD proposed integrating the "Dopa One" AI algorithm by Behavidence into a future ElizaOS Phone app. This technology monitors brain dopamine levels through mobile phone and wearable device interactions to detect mental health fluctuations (ADHD, Depression, Anxiety). DorianD noted that 5 years of LLM progress and improved smartwatch technology could make this more feasible than when the company went dormant during COVID.
+**Branding Discussion**
+Multiple suggestions emerged for clarifying the "ElizaOS" naming:
+- Emphasis on "open system" vs "operating system" to highlight open-source nature
+- Proposal for "Eliza Open Systems" (plural) reflecting multiple OSI stack layers
+- Alternative suggestion to keep it simple as "Just Eliza, like Linux"
+- Note that "Eliza" alone is trademarked by Shaw
 
-**AI Image Analysis**: DorianD also suggested implementing AI agents for image analysis use cases, with Jin providing the deepface library from GitHub as a technical starting point.
+### Technical Challenges
 
-### Technical Experiments
+**Agent Behavior Issues**
+A significant problem was identified where agents continuously reintroduce themselves instead of following defined prompts in character.ts, failing to progress through intended 5-phase flows (engage to execute). This appears to be a prompt engineering or state management issue requiring investigation.
 
-**MiniMax M2 Integration**: R0am explored using MiniMax M2's Anthropic-compatible endpoint with Claude Code, sharing an "interleaved thinking" approach for long-running tasks. They successfully deployed a VPS running Claude Code with Kimi K2, accessible via Happy on iOS.
-
-### Community Events & Announcements
-
-**Solana Foundation Twitter Space**: Kenk announced an upcoming Twitter Space scheduled for Tuesday, January 13th at 7pm UTC featuring Solana Foundation, PayAI, and Quantu. The event will deep-dive into protocol 8004 and its integration with Eliza Cloud. Jin added credibility by noting that Dan Boneh, a renowned Stanford cryptographer, mentioned 8004.
-
-**Leaderboard Updates**: Jin teased upcoming enhancements to the elizaos leaderboard as part 2 of the meritverse initiative.
-
-**JEJU Platform Context**: DorianD explained that Jeju is a Korean island traditionally used for testing new technology before nationwide rollout, providing context for platform naming.
+**Enterprise Adoption Barriers**
+Discussion acknowledged limitations in targeting existing enterprise customers, particularly large organizations where CIOs resist AI agent-driven code replacement due to complexity and risk aversion.
 
 ## Key Questions & Answers
 
-**Q: Why is the platform named JEJU?**  
-A: Jeju is a Korean island where they usually use for running new stuff before they roll out the tech in the rest of Korea (answered by DorianD)
+**Q: What is Jeju and when will it launch?**
+A: A new layer targeting launch by H2 2026 (potentially sooner) with gas fees denominated in $elizaOS tokens, designed with emphasis on utility, adoption, and agent activity.
 
-**Q: Is the elizacloud app creator functioning?**  
-A: Yes, it's working but it's an early feature (answered by cjft)
+**Q: How should the cost calculator account for downtime beyond AWS pricing?**
+A: Factor in lost revenues from outages and include a multiplier for reputational losses, calculated by analyzing company's annual revenue against AWS spending.
 
-**Q: What's the structure for skills implementation?**  
-A: Folder with .md instructions and tools in scripts (any language) to make them deterministic (answered by R0am)
+**Q: Are the Game of Life agents using LLMs?**
+A: No, they use text/state parsing without LLM calls, enabling 40 agents to run simultaneously.
 
-**Q: What's the real challenge with skills?**  
-A: Getting Claude to use skills without explicit instruction, solved using hooks (answered by R0am)
+**Q: How are you avoiding detection in World of Warcraft?**
+A: Using a Lua addon that encodes every public game API into pixels, then decoding 200 screenshots per second to bypass traditional bot detection methods.
 
-**Q: How to build effective workflows for chaining skills?**  
-A: Acknowledged as difficult; example workflow shared: specialized skill → PDF manipulation → filesystem storage → display (partially answered by Agent Joshua)
+**Q: Can existing enterprise customers be convinced to switch to decentralized infrastructure?**
+A: Probably not the large ones - it's too complicated and CIOs won't let AI agents rip and replace code.
 
-### Unanswered Questions
-
-- How do I set Discord Timer/Interval Settings for my elizaos agents in discord? (asked by DigitalDiva)
-- Do you need Twitter API to use Eliza to run a Twitter agent? (asked by Psyxh)
-- Can I top up credit into the cloud now with the billing pages? (asked by ElizaBAO)
+**Q: Is elizaos the only official account?**
+A: Yes, elizaos is the only official account (clarifying confusion about multiple accounts).
 
 ## Community Help & Collaboration
 
-**Skills Development Collaboration**: Jin's call for collaboration on converting ElizaOS plugins to skills received immediate response from R0am, who volunteered and shared their technical approach using folders with .md instructions and deterministic scripts. Stan also confirmed doing similar work.
+**Token Clarification**
+- **Helper:** e | **Helpee:** ElizaBAO
+- Explained gudtek token spike to 170-200k market cap with no links, identified as possible larp
 
-**Platform Naming Clarification**: DorianD helped Skullcross understand the JEJU platform naming origin, explaining Jeju's role as a Korean technology testing ground and providing pronunciation guidance.
+**Account Verification**
+- **Helper:** ElizaBAO | **Helpee:** shadowforceone
+- Clarified that elizaos is the only official account on X.com
 
-**Cloud Platform Support**: cjft assisted ElizaBAO with elizacloud app creator issues, confirming functionality and suggesting retry while acknowledging the early-stage nature of the feature.
+**MMO Bot Development Collaboration**
+- **Helper:** shaw | **Helpee:** Stan ⚡
+- Shared Hyperscape project for MMO game bots, offering collaboration opportunity for World of Warcraft development
 
-**AI Implementation Guidance**: Jin provided DorianD with a technical starting point for AI image analysis implementation by sharing the deepface library GitHub repository.
-
-**Workflow Complexity Discussion**: Agent Joshua shared insights with jin and R0am about skill workflow complexity, providing concrete examples from their skill factory implementation. R0am reciprocated by providing a Reddit reference about successfully linking subagents.
+**Enterprise Migration Reality Check**
+- **Helper:** DorianD | **Helpee:** shaw
+- Acknowledged that large enterprises are unlikely targets due to complexity and CIO resistance to AI-driven code replacement
 
 ## Action Items
 
 ### Technical
 
-- Experiment converting elizaos plugins (Discord + blockchain) into skills for interoperability testing (mentioned by jin)
-- Implement skills as folders with .md instructions and deterministic scripts (mentioned by R0am)
-- Develop hooks solution to enable Claude to use skills implicitly (mentioned by R0am)
-- Complete cloud cleanups and optimizations (mentioned by Stan)
-- Review and merge shaw's Eliza port branch (mentioned by shaw)
-- Solve effective workflow patterns for chaining skills back and forth (mentioned by Agent Joshua)
-- Investigate and resolve elizacloud app creator operation failures for stability (mentioned by ElizaBAO)
+- **Deploy Jeju layer by H2 2026** with $elizaOS denominated gas fees and support for additional tokens | *Mentioned by: stoikol*
+
+- **Investigate and fix agent behavior issue** where agents continuously reintroduce themselves instead of following character.ts prompts and progressing through 5-phase flow | *Mentioned by: MRT0B13*
+
+- **Complete AI project deployment** (first step completed) | *Mentioned by: aicodeflow*
+
+- **Develop methodology to calculate revenue loss multiplier** using public company financial data and AWS spending | *Mentioned by: DorianD*
+
+- **Continue development on Hyperscape agents** for MMO games, needs more focus and love | *Mentioned by: shaw*
+
+- **Complete World of Warcraft bot** using Lua addon pixel encoding/decoding technique | *Mentioned by: Stan ⚡*
+
+- **Implement gas fee functionality** using $elizaOS token as currently only planned but not active | *Mentioned by: gby*
 
 ### Feature
 
-- Integrate Dopa One AI algorithm (mental health monitoring via mobile interaction patterns) into future ElizaOS Phone app to monitor users' dopamine levels and mental well-being (mentioned by DorianD)
-- Build Eliza 2.0 with TS, Rust, Python support and FFI plugin interop, eliminating API/server/CLI/projects (mentioned by shaw)
-- Implement AI agent for image analysis use cases using deepface or similar libraries (mentioned by DorianD)
+- **Build cost calculator** that factors revenue loss and reputational damage multipliers for downtime, not just AWS pricing comparison | *Mentioned by: DorianD*
+
+- **Build macOS menu bar widget** for Eliza after browser widget completion | *Mentioned by: R0am | tip.md*
+
+- **Share game bots powered by Eliza decisions** once completed | *Mentioned by: Stan ⚡*
 
 ### Documentation
 
-- Answer question about Discord Timer/Interval Settings configuration for ElizaOS agents (mentioned by DigitalDiva)
-- Document Twitter API requirements for running Twitter agents with Eliza (mentioned by Psyxh)
-- Create extremely Claude-friendly documentation for Eliza 2.0 runtime with examples for common use cases (mentioned by shaw)
-- Publish blog post about elizaos leaderboard updates (part 2 of meritverse) (mentioned by jin)
+- **Clarify token value proposition and economics** given current minting for contributors without gas fee implementation | *Mentioned by: gby*
+
+- **Document weather data API integration** and usage in ElizaCloud | *Mentioned by: ElizaBAO*
+
+- **Rebrand from "operating system" to "OpenSystems"** to highlight difference from proprietary solutions | *Mentioned by: DorianD*
