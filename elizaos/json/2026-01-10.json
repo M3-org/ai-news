@@ -7,11 +7,12 @@
       "content": [
         {
           "text": "Community members expressed concerns about the ElizaOS token economics. Users noted that the token is currently only being used for gas fees, with additional tokens being minted daily for contributors, creating downward price pressure. Questions were raised about the value proposition of the token, with some members unable to understand why anyone should buy it based on available information. One user mentioned that the token appears to only be used for gas fees rather than having broader utility.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1moy.jpg",
+            "summary": "Daily minting despite gas-only use."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768094586488-fm2s2c.png"
         },
         {
           "text": "Positive news emerged about ElizaOS development. Community members reported hearing that A16z invested in ElizaOS, and that the ElizaOS cloud app will launch next week. Users shared experiences with the ElizaOS cloud agents, noting daily updates and new plugin functionality. Weather data was enabled in the cloud platform. One user made their first cloud payment to ElizaOS cloud.",
@@ -19,10 +20,11 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1459604220566311043/Capture.PNG?ex=6963e1dc&is=6962905c&hm=a0f55b6a9db2a70932eea81b122d2ea4bf93941ea2886edbf23c5d7e35caeca0&"
-          ],
-          "videos": []
+          "images": "https://cdn.elizaos.news/elizaos-media/capture_e5566c05.png",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mqj.jpg",
+            "summary": "One user made first cloud payment."
+          }
         },
         {
           "text": "A comprehensive analysis of ElizaOS was shared highlighting the project's architecture for the sovereign web. The analysis covered the design philosophy for Jeju, which will launch focusing on utility, adoption, and agent activity. Gas fees will be denominated in ElizaOS tokens, with support for additional tokens. The target launch is H2 2026, potentially sooner. The analysis emphasized ElizaOS as an open system versus closed source proprietary alternatives. Discussion occurred about branding, with suggestions to use 'Open Systems' terminology to highlight the difference from proprietary solutions, similar to the OSI (Open Systems Interconnection) stack.",
@@ -30,99 +32,101 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
-          "images": [
-            "https://pbs.twimg.com/media/G-Sym3SasAM7oF5.jpg:large"
-          ],
-          "videos": []
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1459503248015884288_b6604ea6.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mqy.jpg",
+            "summary": "Target launch H2 2026."
+          }
         },
         {
           "text": "Concerns were raised about tokens being launched by Shaw. Multiple community members questioned what they called 'rugs' being launched, including utility and creator pump tokens. Users expressed that this behavior could be problematic for anyone affiliated with him and questioned whether automated bots were running amok. Some speculated these might be experimental tokens.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mr0.jpg",
+            "summary": "Bots running amok launching rugs."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768094629962-7n35qc.jpg"
         },
         {
           "text": "Shaw shared significant technical achievements with Eliza in multiple programming languages. He demonstrated chat functionality with an Eliza agent in Rust in 50 lines of code, and similarly in Python in 50 lines of code. The implementations were praised by developers for being impressively concise. Shaw also mentioned having a cool Eliza coder agent rolled out.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://pbs.twimg.com/media/G-R_YoFWoAEPbxx.jpg:large",
-            "https://pbs.twimg.com/media/G-RzqwPasAMPh7Q.jpg:large"
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1459430229658570763_981de865.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1459430264731336970_3eeef39f.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mrs.jpg",
+            "summary": "Eliza coder agent rolled out."
+          }
         },
         {
           "text": "Shaw demonstrated LLM-free Eliza agents running simulations. He showed a Game of Life simulation with Eliza agents and Tamagotchi implementations, both running without LLMs using only in-memory databases and state parsing. The simulation ran 40 agents simultaneously. He also created an agent playing adventure games. These demonstrations showed the versatility of the Eliza framework beyond traditional LLM-based implementations.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459490148692787331/image.png?ex=6964205f&is=6962cedf&hm=508378ebc4f6932c8b6e42d684b669823dffeb79c7e8d58849c4c42a8f390b6e&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459593056440422502/Screenshot_from_2026-01-10_09-01-02.png?ex=6963d776&is=696285f6&hm=151c6b32de3f9fe1979855b86361832259a63d61bd8b59819dd0e5d038e0f5fa&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459593056817778850/Screenshot_from_2026-01-10_08-56-57.png?ex=6963d776&is=696285f6&hm=69266fdc3fba9a1f6d2c05fc4220c4fe37cf4f8759bc323eae660575603ea586&"
+            "https://cdn.elizaos.news/elizaos-media/image_6bdaece5.webp",
+            "https://cdn.elizaos.news/elizaos-media/screenshot_from_2026-01-10_09-01-02_e0cd8038.webp",
+            "https://cdn.elizaos.news/elizaos-media/screenshot_from_2026-01-10_08-56-57_955a56a1.png"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1ms5.jpg",
+            "summary": "40 LLM-free agents ran simultaneously."
+          }
         },
         {
           "text": "Developers discussed building game bots and MMO agents powered by Eliza. One developer mentioned building game bots powered by Eliza decisions. Shaw revealed the Hyperscape project, an MMORPG for humans and agents powered by ElizaOS, with agents already playing Runescape MMO. Roblox support was also added. Another developer shared they are working on World of Warcraft agents using a Lua addon that encodes game API into pixels, then decodes 200 screenshots per second to avoid detection. The team is actively developing agents for various gaming platforms.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459594229297844285/Screenshot_from_2026-01-10_09-06-08.png?ex=6963d88e&is=6962870e&hm=4d998be0d9dd2bcb3a14e8fcfa9780bb216e550217e71d2bdd3c1a7d8a8c69ad&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459594338861580308/image.png?ex=6963d8a8&is=69628728&hm=6ee30e8c88954df3d649f4ed05ef58965570d8bab500d6cb50434d52caeaf840&"
+            "https://cdn.elizaos.news/elizaos-media/screenshot_from_2026-01-10_09-06-08_56d49f04.webp",
+            "https://cdn.elizaos.news/elizaos-media/image_3c05f64e.png"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1msb.jpg",
+            "summary": "WoW agents decode 200 screenshots per second."
+          }
         },
         {
           "text": "Developers discussed creative AI agent applications. Ideas included a dating app using AI to detect characteristics, a 'CheaterFace' relationship advisor app that analyzes photos to predict cheating likelihood, and leveraging viral growth through friend networks. Discussion also covered AI wearables like Nirva AI jewelry for journaling and emotion tracking. One developer asked about using Eliza Cloud with Claude Code for automated project development.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://framerusercontent.com/assets/pyzYKjzRqNIPRcLYfoX1Uk1hSQ.png"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459479186325635094_00f20ad5.png",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mso.jpg",
+            "summary": "CheaterFace predicts cheating from photos."
+          }
         },
         {
           "text": "Technical discussions covered enterprise adoption challenges and cost comparisons. Developers noted that AWS will always be cheaper than decentralized solutions, but argued that cost calculations should factor in revenue loss from downtime and reputational damage. They discussed using multipliers based on public company revenue and AWS spending data. However, they concluded that convincing existing large enterprises would be difficult, especially as CIOs would not allow AI agents to rip and replace code.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
           "images": [
-            "https://cdn.discordapp.com/attachments/1301363808421543988/1459471847811846205/IMG_1979.png?ex=69640f54&is=6962bdd4&hm=43e91c5b41dc74b9f7e5d071bc6ac70adc8c59403944c15714bdff6ade909713&",
-            "https://cdn.discordapp.com/attachments/1301363808421543988/1459628157417033878/IMG_1980.jpg?ex=6963f827&is=6962a6a7&hm=7a768fbe51eb3b9b0b092fae75f6351884ec220ca2365b03751691175e9da384&"
+            "https://cdn.elizaos.news/elizaos-media/img_1979_b1a7a2ee.jpg",
+            "https://cdn.elizaos.news/elizaos-media/img_1980_f6a22363.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mt1.jpg",
+            "summary": "WoW agents decode 200 screenshots per second."
+          }
         },
         {
           "text": "A developer shared a tip for using Claude Opus 4.5 effectively: asking Claude to make state machine diagrams of existing components causes it to map out all paths rather than being lazy, and helps verify if it is doing things correctly at a systems level.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/G-TnYola0AADW9E.png:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1459607975994855557_d90d8f41.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ah1mtg.jpg",
+            "summary": "Claude is lazy without diagrams."
+          }
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "Development Activity Summary for January 10, 2026",
-      "content": [
-        {
-          "text": "On January 10, 2026, development activity was concentrated exclusively on the elizaos.github.io repository, with no activity recorded in the eliza repository. The primary focus was on enhancing the leaderboard API with significant new features. Developers implemented an MMORPG-style character progression system inspired by Ragnarok Online, which represents a major architectural change to how user progression is tracked and displayed. Additionally, focus areas were transformed from simple data points into rich objects that include detailed scores and percentages, providing more granular insights into user performance. These changes required modifications across multiple parts of the codebase, including files in src/lib, src/app, cli, drizzle, and public directories.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-10.json"
-          ],
-          "images": [],
-          "videos": []
+      "content": {
+        "text": "On January 10, 2026, development activity was concentrated exclusively on the elizaos.github.io repository, with no activity recorded in the eliza repository. The primary focus was on enhancing the leaderboard API with significant new features. Developers implemented an MMORPG-style character progression system inspired by Ragnarok Online, which represents a major architectural change to how user progression is tracked and displayed. Additionally, focus areas were transformed from simple data points into rich objects that include detailed scores and percentages, providing more granular insights into user performance. These changes required modifications across multiple parts of the codebase, including files in src/lib, src/app, cli, drizzle, and public directories.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-10.json",
+        "memes": {
+          "url": "https://cdn.elizaos.news/imgflip/ah1mto.jpg",
+          "summary": "Leaderboard adds Ragnarok progression system."
         }
-      ],
+      },
       "topic": "miscellaneous"
     }
   ],
