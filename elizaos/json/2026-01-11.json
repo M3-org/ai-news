@@ -1,0 +1,140 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-01-11",
+  "categories": [
+    {
+      "title": "ElizaOS Development Updates and Community Discussions - January 11, 2026",
+      "content": [
+        {
+          "text": "Community members engaged in discussions about decentralization and the future of AI systems. DearDaniel emphasized the importance of decentralized systems, noting that while Bitcoin has been around for 18 years, decentralized systems are still in their infancy. He highlighted the potential value of having AI systems that don't depend on centralized data centers, particularly in scenarios where infrastructure could be compromised. The conversation touched on the evolution of crypto from a political movement focused on technological change to its current state.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Shaw shared significant progress on Eliza's capabilities beyond crypto applications. He posted demonstrations showing Eliza being used as a bot, reinforcement learning agent, in-game NPC, and opponent. Shaw emphasized that while Eliza had initial product-market fit in the crypto market, it's time to move beyond being a big fish in a small pond, positioning Eliza as a general purpose agent. He showcased Eliza managing Claude Code instances without conversation management, with Eliza handling task management autonomously. Shaw also demonstrated agents capable of chopping wood in game environments.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G-Z3387aQAA7dfO.png:large",
+            "https://pbs.twimg.com/media/G-Z0PKnXYAAulbu.png:large",
+            "https://pbs.twimg.com/media/G-Z4HE9asAIFZfZ.png:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Jin (dankvr) announced new features for the contributor leaderboard system. A beta feature for lifetime summarization was added to help the AI council review updates and progress from contributors. The feature provides full history context when reviewing contributor names and is now available in the API. Jin also announced improvements to the Jedai council system, which will resume soon with better and smarter functionality. Plans include creating a Discord channel where people can talk to the agents after each meeting for human-in-the-loop feedback.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1459972664260296846/promo_1.mp4?ex=69653900&is=6963e780&hm=fb84f2e2399413efa29f8570849a7e13b1dc57feae364df27647a1bb1abca423&"
+          ]
+        },
+        {
+          "text": "Core developers shared visual updates and avatar generation work. Jin posted AI-generated avatars for various team members including Stan, sam, Neodotneo, 0xbbjoker, and Agent Joshua. The system even successfully generated an avatar for Odilitime. A low poly mode was also discovered for the avatar generation. Sayonara jokingly announced that AGI has been achieved locally based on their work.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459793933239586929/public.png?ex=69653b4b&is=6963e9cb&hm=4957083a7cd7b8b46b2d1445531258543d34909857a5578578b1e4bcc0e40626&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459793933709344838/public.png?ex=69653b4b&is=6963e9cb&hm=c5f78a8fc5a2ebdaa01f2cad0d134b684f682284741db559f9dc30436d8c12f3&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795326813732945/public.png?ex=69653c97&is=6963eb17&hm=3c9aa7e261d37187a9adb0bf77939f48f9beb2ed11d841f817f6f57e93910e04&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795327241556173/public.png?ex=69653c97&is=6963eb17&hm=23bca3902b7d9f65d3b1fa3e4d7d2727f3a9135b485774c4446b7c96e16459c0&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795327627300915/public.png?ex=69653c97&is=6963eb17&hm=230823fef53cffef19c3e09f64f342d388e6a0bc37d5fd511cdd8480ec9d5b34&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459971873432404020/odilitime.png?ex=69653843&is=6963e6c3&hm=3be9f6773a40bcefe3e0aa8df36ef5660b6acbf875285e3075f023a296984e66&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1459930954792439960/image.png?ex=69651227&is=6963c0a7&hm=56130d19ae052790ef02d3234f2ee395544b78d9555b4b86bd31655bf08a5904&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Technical support issues were addressed in the community. Users reported problems with deploying agents in the cloud and issues with the AI16z to ElizaOS migration where the max button wasn't working. The community directed users to appropriate support channels and reminded them about official links and security practices. One user repeatedly requested SOL fees for transactions, which was flagged as spam.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1459771132138885141/IMG_3235.png?ex=6965260f&is=6963d48f&hm=0baf4fcc95a0a42c73160f282398e767c617a8e554bbde4e209d98048d4b6acb&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Jin expressed interest in developing a local-first alternative to Claude Code that would be usable everywhere, including Discord, Telegram, web, and CLI. He shared a link to clawdbot, an open-source personal AI assistant project on GitHub that works across any OS and platform. The discussion highlighted the desire for more decentralized and locally-run AI tools rather than relying on managed services.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community engagement included discussions about X platform updates, with news that X will launch built-in price tracking for crypto tokens and stocks directly from the timeline. Members shared memes and GIFs celebrating crypto market movements and altseason. The community maintained a positive atmosphere with regular good morning greetings and supportive interactions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G-X1LGXWAAAMjgt.jpg:large",
+            "https://pbs.twimg.com/amplify_video_thumb/2005712335185604608/img/VLKJ6aPcQwyu6i81.jpg:large",
+            "https://pbs.twimg.com/media/G-aL182WEAEPVp2.png:large"
+          ],
+          "videos": [
+            "https://media.tenor.com/fu2CJmc4vO8AAAPo/hi-rebecca.mp4",
+            "https://media.tenor.com/6vjzHxepwDkAAAPo/pout-kiss.mp4"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Project Updates - January 11, 2026",
+      "content": [
+        {
+          "text": "On January 11, 2026, ElizaOS made significant progress across two main repositories: elizaos.github.io and eliza. The day's work focused on infrastructure improvements, performance optimization, and user interface enhancements.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The elizaos.github.io repository received critical updates to its CI/CD pipeline and dependencies. GitHub Actions dependencies were updated including actions/configure-pages from v4 to v5, actions/checkout from v4 to v6, and actions/upload-pages-artifact from v3 to v4, enhancing reliability and security. Core dependencies were also upgraded, notably drizzle-orm from version 0.41.0 to 0.45.1 and lucide-react, improving overall project stability and compatibility. Several issues were closed including deployment testing documentation, rate limit mitigation efforts, and a proposal regarding summary format extensions.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The eliza repository focused heavily on performance and database optimization. Runtime initialization was optimized by adding missing checks, removing redundant lookups, and exploring parallelization of independent operations. Database queries were improved by implementing UPSERT patterns using onConflictDoNothing() to replace check-then-insert operations, and getEntitiesByIds() was optimized to prevent cartesian products.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Multiple UI/UX improvements were completed in the eliza repository. Display box sizes were standardized, intermittent web search functionality problems were resolved, and the mobile agent builder was updated to default agent names to start with a capital letter. Textual content was updated for both the agent edit interface and the agent builder interface.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Two new pull requests were initiated in the eliza repository: one introducing core documentation guides and another adding plugin-blockrun for x402 micropayment support, indicating ongoing development in documentation and payment integration features.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1768089600
+}

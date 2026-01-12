@@ -1,128 +1,87 @@
-# elizaOS Discord - 2026-01-10
+# elizaOS Discord - 2026-01-11
 
 ## Overall Discussion Highlights
 
-### Infrastructure & Platform Development
+### Leaderboard & AI Council Enhancements
 
-**Jeju Layer Launch Announcement**
-The most significant announcement was the planned launch of Jeju, a new layer targeting deployment by H2 2026 (potentially sooner). The design emphasizes utility, adoption, and agent activity, with gas fees denominated in $elizaOS tokens while supporting additional tokens for gas payments.
+**Jin** announced a major new beta feature for the ElizaOS leaderboard: lifetime summarization for contributor profiles. This feature provides comprehensive historical context about contributors, accessible through the API at https://elizaos.github.io/profile/madjin. The AI council can now access full contributor histories when evaluating updates and progress, significantly improving the review process.
 
-**ElizaCloud Progress**
-ElizaCloud continues to evolve with new capabilities:
-- Weather data API integration now enabled
-- Payment infrastructure operational with first cloud payment transactions completed
-- Daily updates being performed by cloud agents
-- Users reporting positive experiences with platform access and plugin functionality
+Plans were also announced to resume the "jedai council" with several improvements:
+- Enhanced site functionality
+- New Discord channel for post-meeting agent interactions
+- Human-in-the-loop feedback capabilities
 
-**Decentralized Infrastructure Cost Analysis**
-Partners discussed developing a sophisticated cost calculator for decentralized infrastructure that goes beyond simple AWS pricing comparisons. The proposed methodology incorporates:
-- Revenue loss calculations from system downtime
-- Reputational damage multipliers derived from public company financial data
-- Example framework: analyzing annual AWS spend against total revenue to calculate business impact of outages
+### Agent Architecture & Visual Generation
 
-### Agent Technology & Game Automation
+The **core-devs** channel showcased impressive visual generation capabilities, with **jin** demonstrating a 3D model or avatar generation system featuring a "low poly mode." The technical quality exceeded expectations for certain user profiles.
 
-**LLM-Free Agent Architecture**
-Shaw demonstrated significant technical innovations in agent design:
-- Rust implementation of Eliza
-- LLM-free agents using text/state parsing instead of language models
-- 40 agents running simultaneously in Game of Life simulation using in-memory database
-- Agents playing adventure games including Tamagotchi simulations
+An important architectural clarification emerged when **sayonara** explained their agent design approach to **Stan**, noting they use separate human simulator/evaluator components rather than a subagent architecture pattern.
 
-**Hyperscape Project**
-The Hyperscape project (github.com/hyperscapeai/hyperscape) showcases agents playing MMO games including RuneScape and Roblox. A novel anti-detection technique for World of Warcraft was presented: encoding game API calls into pixels via Lua addon and decoding 200 screenshots per second to bypass traditional bot detection.
+**Jin** articulated a specific technical requirement for a local-first Claude Code implementation that works across multiple platforms (Discord, Telegram, web, CLI) rather than having Eliza manage Claude Code directly. A reference implementation was shared at github.com/clawdbot/clawdbot.
 
-### Token Economics & Branding
+### Migration & Deployment Issues
 
-**Token Value Proposition Concerns**
-Critical questions emerged about token economics:
-- Current token utility limited to planned (but not yet implemented) gas fees
-- Daily minting of additional tokens for contributors creating structural downward price pressure
-- Community concerns about multiple token deployments and reputational impact
+Multiple users reported technical problems with the AI16z to ElizaOS token migration interface. **Mattish** encountered issues where the max button wasn't functioning and manual input of token amounts was prevented. This issue remains unresolved.
 
-**Branding Discussion**
-Multiple suggestions emerged for clarifying the "ElizaOS" naming:
-- Emphasis on "open system" vs "operating system" to highlight open-source nature
-- Proposal for "Eliza Open Systems" (plural) reflecting multiple OSI stack layers
-- Alternative suggestion to keep it simple as "Just Eliza, like Linux"
-- Note that "Eliza" alone is trademarked by Shaw
+**MDMnvest** reported cloud deployment problems with their agent, while **MRT0B13** experienced issues with an agent refusing to follow prompts specified in configuration files, suggesting potential prompt engineering or configuration parsing problems.
 
-### Technical Challenges
+### Community Safety & Communication
 
-**Agent Behavior Issues**
-A significant problem was identified where agents continuously reintroduce themselves instead of following defined prompts in character.ts, failing to progress through intended 5-phase flows (engage to execute). This appears to be a prompt engineering or state management issue requiring investigation.
+**MDMnvest** actively warned users against scam links, directing **mattish** to only trust links from official announcement or links channels. The team coordinated responses to external inquiries about elizaCloud, with **ElizaBAO** noting that a Solana figure (Toly) followed someone asking questions about the platform.
 
-**Enterprise Adoption Barriers**
-Discussion acknowledged limitations in targeting existing enterprise customers, particularly large organizations where CIOs resist AI agent-driven code replacement due to complexity and risk aversion.
+### Social & Philosophical Discussions
+
+The **💬-discussion** channel included conversations about crypto adoption timelines, with **DorianD** suggesting crypto adoption would take 50+ years across generations. **Shaw** and **Error P015-A** discussed the strategy of separating political content from project accounts to avoid alienating potential investors, though acknowledging crypto's historically political nature.
 
 ## Key Questions & Answers
 
-**Q: What is Jeju and when will it launch?**
-A: A new layer targeting launch by H2 2026 (potentially sooner) with gas fees denominated in $elizaOS tokens, designed with emphasis on utility, adoption, and agent activity.
+**Q: Evaluator? / Sub agent?** (asked by Stan ⚡)  
+**A:** Not subagent - separate human simulator / evaluator (answered by sayonara)
 
-**Q: How should the cost calculator account for downtime beyond AWS pricing?**
-A: Factor in lost revenues from outages and include a multiplier for reputational losses, calculated by analyzing company's annual revenue against AWS spending.
+**Q: How do I get a response after opening a Ticket in official ElizaOs support? In the opened ticket or through the DM?** (asked by mattish)  
+**A:** Team will respond. Just be patient (answered by MDMnvest)
 
-**Q: Are the Game of Life agents using LLMs?**
-A: No, they use text/state parsing without LLM calls, enabling 40 agents to run simultaneously.
+### Unanswered Questions
 
-**Q: How are you avoiding detection in World of Warcraft?**
-A: Using a Lua addon that encodes every public game API into pixels, then decoding 200 screenshots per second to bypass traditional bot detection methods.
-
-**Q: Can existing enterprise customers be convinced to switch to decentralized infrastructure?**
-A: Probably not the large ones - it's too complicated and CIOs won't let AI agents rip and replace code.
-
-**Q: Is elizaos the only official account?**
-A: Yes, elizaos is the only official account (clarifying confusion about multiple accounts).
+- I'm trying to migrate my AI16z to ElizaOS but the max button doesn't work and I'm not able to put the number of AI16Z for swap. Is there any fix or help for this? (mattish)
+- Having issues deploying agent in cloud. Anyone experiencing similar issues? (MDMnvest)
+- What model you use for the generation? (Agent Joshua ₱ | TEE)
+- Can this be done in Eliza cloud now? Or local installation? How do? (DearDaniel)
+- What price level is the foundation targeting for 2026? (Uchi)
 
 ## Community Help & Collaboration
 
-**Token Clarification**
-- **Helper:** e | **Helpee:** ElizaBAO
-- Explained gudtek token spike to 170-200k market cap with no links, identified as possible larp
+**MDMnvest → mattish**  
+Prevented a potential scam by directing the user to never click links unless in official announcement or links channels, providing proper channel references after mattish almost fell for scammers.
 
-**Account Verification**
-- **Helper:** ElizaBAO | **Helpee:** shadowforceone
-- Clarified that elizaos is the only official account on X.com
+**sayonara → Stan ⚡**  
+Clarified agent architecture design patterns, explaining the system uses separate human simulator/evaluator components rather than subagent architecture.
 
-**MMO Bot Development Collaboration**
-- **Helper:** shaw | **Helpee:** Stan ⚡
-- Shared Hyperscape project for MMO game bots, offering collaboration opportunity for World of Warcraft development
+**$cott → Unknown**  
+Diagnosed an agent loop issue, identifying the problem as a loop-related malfunction.
 
-**Enterprise Migration Reality Check**
-- **Helper:** DorianD | **Helpee:** shaw
-- Acknowledged that large enterprises are unlikely targets due to complexity and CIO resistance to AI-driven code replacement
+**cjft → ElizaBAO**  
+Coordinated response to external post about elizaCloud functionality.
 
 ## Action Items
 
 ### Technical
 
-- **Deploy Jeju layer by H2 2026** with $elizaOS denominated gas fees and support for additional tokens | *Mentioned by: stoikol*
-
-- **Investigate and fix agent behavior issue** where agents continuously reintroduce themselves instead of following character.ts prompts and progressing through 5-phase flow | *Mentioned by: MRT0B13*
-
-- **Complete AI project deployment** (first step completed) | *Mentioned by: aicodeflow*
-
-- **Develop methodology to calculate revenue loss multiplier** using public company financial data and AWS spending | *Mentioned by: DorianD*
-
-- **Continue development on Hyperscape agents** for MMO games, needs more focus and love | *Mentioned by: shaw*
-
-- **Complete World of Warcraft bot** using Lua addon pixel encoding/decoding technique | *Mentioned by: Stan ⚡*
-
-- **Implement gas fee functionality** using $elizaOS token as currently only planned but not active | *Mentioned by: gby*
+- **Investigate and resolve cloud deployment issues for agents** (mentioned by MDMnvest)
+- **Fix agent prompt following issue where agent refuses to follow prompts in configuration file** (mentioned by MRT0B13)
+- **Fix max button functionality in AI16z to ElizaOS migration interface** (mentioned by mattish)
+- **Review clawdbot implementation at github.com/clawdbot/clawdbot as potential reference** (mentioned by jin)
+- **Complete site improvements for leaderboard/council system** (mentioned by jin)
 
 ### Feature
 
-- **Build cost calculator** that factors revenue loss and reputational damage multipliers for downtime, not just AWS pricing comparison | *Mentioned by: DorianD*
-
-- **Build macOS menu bar widget** for Eliza after browser widget completion | *Mentioned by: R0am | tip.md*
-
-- **Share game bots powered by Eliza decisions** once completed | *Mentioned by: Stan ⚡*
+- **Create local-first Claude Code implementation usable across Discord, Telegram, web, and CLI platforms** (mentioned by jin)
+- **Resume jedai council with improvements and enhanced intelligence** (mentioned by jin)
+- **Create Discord channel for post-meeting agent interactions to enable human-in-the-loop feedback** (mentioned by jin)
+- **Consider separate social media accounts for political content vs project updates** (mentioned by Error P015-A)
 
 ### Documentation
 
-- **Clarify token value proposition and economics** given current minting for contributors without gas fee implementation | *Mentioned by: gby*
-
-- **Document weather data API integration** and usage in ElizaCloud | *Mentioned by: ElizaBAO*
-
-- **Rebrand from "operating system" to "OpenSystems"** to highlight difference from proprietary solutions | *Mentioned by: DorianD*
+- **Clarify official support ticket response process and communication channels** (mentioned by mattish)
+- **Document Eliza cloud vs local installation setup procedures** (mentioned by DearDaniel)
+- **Respond to external questions about elizaCloud functionality** (mentioned by ElizaBAO)
