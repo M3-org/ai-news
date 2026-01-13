@@ -1,133 +1,119 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-01-11",
+  "title": "Daily Report - 2026-01-12",
   "categories": [
     {
-      "title": "ElizaOS Development Updates and Community Discussions - January 11, 2026",
+      "title": "ElizaOS Development Updates and Technical Discussions - January 12, 2026",
       "content": [
         {
-          "text": "Community members engaged in discussions about decentralization and the future of AI systems. DearDaniel emphasized the importance of decentralized systems, noting that while Bitcoin has been around for 18 years, decentralized systems are still in their infancy. He highlighted the potential value of having AI systems that don't depend on centralized data centers, particularly in scenarios where infrastructure could be compromised. The conversation touched on the evolution of crypto from a political movement focused on technological change to its current state.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Shaw shared significant progress on Eliza's capabilities beyond crypto applications. He posted demonstrations showing Eliza being used as a bot, reinforcement learning agent, in-game NPC, and opponent. Shaw emphasized that while Eliza had initial product-market fit in the crypto market, it's time to move beyond being a big fish in a small pond, positioning Eliza as a general purpose agent. He showcased Eliza managing Claude Code instances without conversation management, with Eliza handling task management autonomously. Shaw also demonstrated agents capable of chopping wood in game environments.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/G-Z3387aQAA7dfO.png:large",
-            "https://pbs.twimg.com/media/G-Z0PKnXYAAulbu.png:large",
-            "https://pbs.twimg.com/media/G-Z4HE9asAIFZfZ.png:large"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Jin (dankvr) announced new features for the contributor leaderboard system. A beta feature for lifetime summarization was added to help the AI council review updates and progress from contributors. The feature provides full history context when reviewing contributor names and is now available in the API. Jin also announced improvements to the Jedai council system, which will resume soon with better and smarter functionality. Plans include creating a Discord channel where people can talk to the agents after each meeting for human-in-the-loop feedback.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1459972664260296846/promo_1.mp4?ex=69653900&is=6963e780&hm=fb84f2e2399413efa29f8570849a7e13b1dc57feae364df27647a1bb1abca423&"
-          ]
-        },
-        {
-          "text": "Core developers shared visual updates and avatar generation work. Jin posted AI-generated avatars for various team members including Stan, sam, Neodotneo, 0xbbjoker, and Agent Joshua. The system even successfully generated an avatar for Odilitime. A low poly mode was also discovered for the avatar generation. Sayonara jokingly announced that AGI has been achieved locally based on their work.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459793933239586929/public.png?ex=69653b4b&is=6963e9cb&hm=4957083a7cd7b8b46b2d1445531258543d34909857a5578578b1e4bcc0e40626&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459793933709344838/public.png?ex=69653b4b&is=6963e9cb&hm=c5f78a8fc5a2ebdaa01f2cad0d134b684f682284741db559f9dc30436d8c12f3&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795326813732945/public.png?ex=69653c97&is=6963eb17&hm=3c9aa7e261d37187a9adb0bf77939f48f9beb2ed11d841f817f6f57e93910e04&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795327241556173/public.png?ex=69653c97&is=6963eb17&hm=23bca3902b7d9f65d3b1fa3e4d7d2727f3a9135b485774c4446b7c96e16459c0&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459795327627300915/public.png?ex=69653c97&is=6963eb17&hm=230823fef53cffef19c3e09f64f342d388e6a0bc37d5fd511cdd8480ec9d5b34&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459971873432404020/odilitime.png?ex=69653843&is=6963e6c3&hm=3be9f6773a40bcefe3e0aa8df36ef5660b6acbf875285e3075f023a296984e66&",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459930954792439960/image.png?ex=69651227&is=6963c0a7&hm=56130d19ae052790ef02d3234f2ee395544b78d9555b4b86bd31655bf08a5904&"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Technical support issues were addressed in the community. Users reported problems with deploying agents in the cloud and issues with the AI16z to ElizaOS migration where the max button wasn't working. The community directed users to appropriate support channels and reminded them about official links and security practices. One user repeatedly requested SOL fees for transactions, which was flagged as spam.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1459771132138885141/IMG_3235.png?ex=6965260f&is=6963d48f&hm=0baf4fcc95a0a42c73160f282398e767c617a8e554bbde4e209d98048d4b6acb&"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Jin expressed interest in developing a local-first alternative to Claude Code that would be usable everywhere, including Discord, Telegram, web, and CLI. He shared a link to clawdbot, an open-source personal AI assistant project on GitHub that works across any OS and platform. The discussion highlighted the desire for more decentralized and locally-run AI tools rather than relying on managed services.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Community engagement included discussions about X platform updates, with news that X will launch built-in price tracking for crypto tokens and stocks directly from the timeline. Members shared memes and GIFs celebrating crypto market movements and altseason. The community maintained a positive atmosphere with regular good morning greetings and supportive interactions.",
+          "text": "Community Discussion on ElizaOS Token Value and Future Development: Users discussed concerns about ElizaOS token price performance and lack of compelling reasons to buy. DorianD explained that the token's value proposition will emerge when it becomes usable on the Jeju network for gas fees, once developers build agents that utilize the network. The conversation highlighted that unlike VC-backed coins, ElizaOS won't be artificially pumped, and its value will depend on actual utility - becoming the go-to decentralized network for AI agents and apps that can generate revenue through ICOs or advertising. Users noted that serious investors would only enter if they believe ElizaOS will become the standard for AI agent networks with sufficient demand for profitable exits. The discussion also touched on the Creator coin and COM token connections, with mentions of Shaw's influence on various projects.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [
-            "https://pbs.twimg.com/media/G-X1LGXWAAAMjgt.jpg:large",
-            "https://pbs.twimg.com/amplify_video_thumb/2005712335185604608/img/VLKJ6aPcQwyu6i81.jpg:large",
-            "https://pbs.twimg.com/media/G-aL182WEAEPVp2.png:large"
+            "https://pbs.twimg.com/media/G-fI1I1XAAEMfvf.jpg:large",
+            "https://media.tenor.com/Lssr-Q7nzTkAAAAe/kick-sparta.png",
+            "https://pbs.twimg.com/amplify_video_thumb/2010784150362398720/img/Fko7aNWuVbHhzr-y.jpg:large"
           ],
           "videos": [
-            "https://media.tenor.com/fu2CJmc4vO8AAAPo/hi-rebecca.mp4",
-            "https://media.tenor.com/6vjzHxepwDkAAAPo/pout-kiss.mp4"
+            "https://media.tenor.com/Lssr-Q7nzTkAAAPo/kick-sparta.mp4"
           ]
+        },
+        {
+          "text": "ElizaCloud App Creator Testing and Bug Reports: Extensive testing and feedback on the ElizaCloud app creator feature revealed multiple issues. Users reported sandbox timeout errors after 300 seconds, problems with file visibility in the Files tab, git commit functionality being inconsistent, and rate limiting issues with 5 sandbox sessions per hour. DorianD tested building apps that interface with X API and agents, encountering deployment issues and caching problems. The development team acknowledged these are expected issues as the app creator is a new feature introduced for team testing, not yet marketed publicly. CJFT explained that saves are managed automatically at the end of state executions, and commits happen after batches of file updates. The team is working on better error reporting, adding features like a stop button for agents, console CLI access for direct command input, and proper git tool support. CJFT noted that achieving 99.9% SLA on any bash-instructed prompt with any type of code is challenging, and guardrails are being developed for the app kit.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://i.ytimg.com/vi/_IK18goX4X8/maxresdefault.jpg",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1460264179721175185/Screenshot_2026-01-12_at_10.28.21.png",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1460269220968267940/image.png",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1460269993152348337/Screenshot_2026-01-12_at_10.50.52.png",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1460275786262253611/Screenshot_2026-01-12_at_11.13.51.png"
+          ],
+          "videos": [
+            "https://www.youtube.com/embed/_IK18goX4X8?start=1"
+          ]
+        },
+        {
+          "text": "Plugin Knowledge and Dynamic Facts Implementation: A developer asked about dynamically adding facts to agents without restarting, specifically for a portfolio agent. They tried knowledge files with LOAD_DOCS_ON_STARTUP=true but markdown files weren't loading, Sessions API only creates messages not facts, and the Memory API POST endpoint doesn't exist. The solution provided was to add plugin-knowledge to the agent's plugins configuration. The developer encountered an error about the module not being found and asked which branch or release to use.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Core Development Infrastructure Updates: Stan reported that the ANTHROPIC_API_KEY in GitHub Actions had expired, causing CI jobs to fail on Claude analysis. Borko created a separate dedicated key for CI/CD to avoid using personal API keys. The team discussed potential performance optimizations using Rust runtime with Vercel functions for faster serverless execution. Shaw noted that most latency comes from APIs, network, and database rather than runtime overhead, and mentioned having workerd with Bun in Jeju, questioning whether to submit a PR to Cloudflare since Bun is Rust-fast.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/b527d37eaee2c7a1396b4e68e67ab93c0990081c3e060f6709f1438f8d0c6f88/elizaos-plugins/plugin-google-genai/issues/6",
+            "https://vercel.com/api/dynamic-og?title=Using%20the%20Rust%20Runtime%20with%20Vercel%20functions&format=docs"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Twitter OAuth Relay Infrastructure Planning: Odilitime reported that Vivek from recent X spaces wants ElizaOS to host an OAuth relay for plugin-twitter. Vivek will provide the code for audit at the twitter-broker repository, and the service will use PostgreSQL. The team discussed hosting options, with Shaw mentioning OAuth3 APIs are already in the cloud branch. They considered using an ElizaOS subdomain like twitter-broker.elizaos.ai for the service. Shaw explained the cloud could become the callback handler, and noted that OAuth3 in Jeju will eventually serve as this broker in the future, making the current solution temporary. The implementation will use VERCEL_OIDC_TOKEN for authentication.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Google GenAI Plugin Issue: An issue was reported regarding outdated model listings in the plugin-google-genai code, including references to models like Gemini 2.5 pro preview, which caused the plugin to malfunction.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/b527d37eaee2c7a1396b4e68e67ab93c0990081c3e060f6709f1438f8d0c6f88/elizaos-plugins/plugin-google-genai/issues/6"
+          ],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Project Updates - January 11, 2026",
+      "title": "ElizaOS Development Update - January 12, 2026",
       "content": [
         {
-          "text": "On January 11, 2026, ElizaOS made significant progress across two main repositories: elizaos.github.io and eliza. The day's work focused on infrastructure improvements, performance optimization, and user interface enhancements.",
+          "text": "ElizaOS achieved significant performance improvements on January 12, 2026, with runtime initialization becoming up to 40% faster. The optimization of runtime.initialize() in the elizaos/eliza repository implemented atomic upserts and parallelized independent operations, reducing cold start times by 30% and warm start times by 40%. These changes affected the plugin-sql, server, and core packages.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-12.json"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "The elizaos.github.io repository received critical updates to its CI/CD pipeline and dependencies. GitHub Actions dependencies were updated including actions/configure-pages from v4 to v5, actions/checkout from v4 to v6, and actions/upload-pages-artifact from v3 to v4, enhancing reliability and security. Core dependencies were also upgraded, notably drizzle-orm from version 0.41.0 to 0.45.1 and lucide-react, improving overall project stability and compatibility. Several issues were closed including deployment testing documentation, rate limit mitigation efforts, and a proposal regarding summary format extensions.",
+          "text": "A new feature was added to configure embedding dimensions via the EMBEDDING_DIMENSION setting in elizaos/eliza, eliminating approximately 500ms embedding API call during agent initialization. This enhancement further contributes to improved startup performance.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-12.json"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "The eliza repository focused heavily on performance and database optimization. Runtime initialization was optimized by adding missing checks, removing redundant lookups, and exploring parallelization of independent operations. Database queries were improved by implementing UPSERT patterns using onConflictDoNothing() to replace check-then-insert operations, and getEntitiesByIds() was optimized to prevent cartesian products.",
+          "text": "The elizaos-plugins/registry repository expanded its ecosystem with a new pull request to add the @blockrun/elizaos-plugin for x402 micropayments functionality.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-12.json"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Multiple UI/UX improvements were completed in the eliza repository. Display box sizes were standardized, intermittent web search functionality problems were resolved, and the mobile agent builder was updated to default agent names to start with a capital letter. Textual content was updated for both the agent edit interface and the agent builder interface.",
+          "text": "The elizaos/elizaos.github.io repository received multiple updates including a critical fix to render markdown in the profile summary card and numerous dependency updates. Updated packages include zod (3.25.76 to 4.3.5), tailwind-merge (2.6.0 to 3.4.0), @types/node (22.19.5 to 25.0.6), react-markdown (9.1.0 to 10.1.0), eslint-config-next (15.1.4 to 16.1.1), p-retry (6.2.1 to 7.1.1), lint-staged (15.5.2 to 16.2.7), @types/minimatch (5.1.2 to 6.0.0), recharts (2.15.4 to 3.6.0), and task-master-ai (0.40.1 to 0.41.0).",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-12.json"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Two new pull requests were initiated in the eliza repository: one introducing core documentation guides and another adding plugin-blockrun for x402 micropayment support, indicating ongoing development in documentation and payment integration features.",
+          "text": "The issue concerning Unslop Apps in the elizaos/eliza repository was closed on this date.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-11.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-12.json"
           ],
           "images": [],
           "videos": []
@@ -136,5 +122,5 @@
       "topic": "miscellaneous"
     }
   ],
-  "date": 1768089600
+  "date": 1768176000
 }
