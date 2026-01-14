@@ -1,82 +1,134 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-01-13",
+  "title": "Daily Report - 2026-01-08",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - January 13, 2026",
+      "title": "ElizaOS Development Updates and Community Discussions - January 8-9, 2026",
       "content": [
         {
-          "text": "Community members discussed various topics in the discussion channel. A Twitter Spaces event titled 'WTF is 8004?' was hosted, with participants experiencing technical difficulties including audio dropouts and connection issues. Users noted that Twitter Spaces has been buggy, particularly on desktop, with mobile iOS working more reliably. The ELIZAOSNY Twitter account shared content criticizing Solana's finance 2.0 messaging and promoting memecoin culture. There was discussion about ElizaBAO, a community member's project that is a Polymarket affiliate. ElizaBAO shared proof of real user registrations and deposits through their affiliate link. Community members also discussed partnership opportunities and developer availability.",
+          "text": "Token Utility and Migration Concerns: Community members raised questions about ElizaOS token utility within the ecosystem, asking why it is not being used for payments or gas fees. Users expressed confusion about the token's purpose beyond rewards. Migration issues were discussed, with some users reporting problems migrating AI16Z tokens purchased before November 2025. Korean exchange delistings were mentioned, with Bithumb, Coinone, and Korbit announcing termination of trading support for AI16Z/ElizaOS due to transparency concerns and failure to disclose material information appropriately. Team members clarified that exchanges supporting migration would handle the swap automatically.",
           "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1460738683669053626_c1721f01.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1460576589975912448_e2f934ef.jpg"
-          ],
-          "videos": "https://cdn.discordapp.com/attachments/1253563209462448241/1460781034600665364/boom-veg.mp4?ex=696829da&is=6966d85a&hm=3ca8f2b715c13d4e573e1ad7fc155a5d3cd90f4c2d39e61411f285405585a136&",
           "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbary.jpg",
-            "summary": "Twitter Spaces titled \"WTF is 8004?\""
+            "url": "https://cdn.elizaos.news/imgflip/ahbbq8.jpg",
+            "summary": "AI16Z tokens before November 2025."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768370161640-qllsr.jpg"
+        },
+        {
+          "text": "Technical Development and Infrastructure: Shaw announced Eliza 2.0 plans, which will come in TypeScript, Rust, and Python with FFI plugin interop between languages. The new version will have no API, server, CLI, or projects - just an extremely Claude-friendly documented runtime with same abstractions in three languages and examples for common use cases. Jin discussed building context graphs from decision traces, noting ElizaOS has a strong data foundation to build AI agents that can help as collaborators. The daily, weekly, and monthly insights generated from agentic workflows are high quality and need integration into last mile applications. Jin is looking for collaborators to convert ElizaOS plugins into skills and make them interoperable with other agent tools, testing with Discord and blockchain plugins.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/bountyboard_47432442.jpg",
+            "https://cdn.elizaos.news/elizaos-media/img_2246_5db87dd9.jpg"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbr3.jpg",
+            "summary": "No API, server, CLI, projects."
           }
         },
         {
-          "text": "In the coders channel, developers discussed technical implementations and shared research. A significant discussion centered on DeepMind's Recursive Language Models (RLMs), a new AI architecture that doesn't require RAG and has perfect memory of everything it has read. The system can process prompts up to two orders of magnitude beyond model context windows. A developer shared instructions for uploading knowledge to the monorepo using the plugin-knowledge system, including creating a docs directory and configuring the character file. Another developer mentioned modifying plugin-bootstrap to search global facts without roomId and adding a post route for creating new memories. ElizaBAO announced a second top-up on elizaoscloud. Multiple developers posted looking for work opportunities.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "text": "Jeju Platform and Data Collection: The Jeju platform was explained as a Layer 2 blockchain that is decentralized and focused on powering AI applications, connecting everything ElizaOS is building. The name comes from a Korean island used for testing new technology before rolling it out to the rest of Korea. Community members discussed the need for data collection, with suggestions for an ElizaOS phone app that lets people give agents access to their data for LLM training and earning reputation points. Ideas included collecting motion capture data from various professions like fishing, cooking, and factory work to train robots. A mental health monitoring concept was discussed using AI algorithms to detect dopamine level fluctuations through mobile phone interactions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
           "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1460449779883442373_e9f88604.jpg",
-            "https://cdn.elizaos.news/elizaos-media/capture2_13815ddb.png"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459232908811436145_317a2f0f.png",
+            "https://cdn.elizaos.news/elizaos-media/kpyrg11oya8gj11jqbconw4rcbpsnnrjfzqd3vdhxsmxdg4tjw_38738dde.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459235682957393942_3b1580dc.jpg"
           ],
           "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbas8.jpg",
-            "summary": "AI perfectly remembers everything read."
+            "url": "https://cdn.elizaos.news/imgflip/ahbbra.jpg",
+            "summary": "AI detects dopamine via phone."
           }
         },
         {
-          "text": "Core developers discussed infrastructure and technical issues. There was an ongoing problem with the claude-review.yml workflow failing with a 401 Unauthorized error during OIDC token exchange. A developer shared Google's Universal Commerce Protocol (UCP) documentation. Stan provided a standup update indicating work on monorepo improvements, reviewing test architecture on cloud, investigating plugin-sql migration simplifications, and working on credit top-up idempotency fixes. Borko directed focus away from version 2.0 work to concentrate on cloud improvements. The team discussed DeepSeek pricing and encountered some technical issues that required retrying operations.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/ucp_diagram_detailed_1-original_131f77e7.png",
-            "https://cdn.elizaos.news/elizaos-media/image_ae62cb61.png",
-            "https://cdn.elizaos.news/elizaos-media/image_a060188e.png"
+          "text": "ElizaCloud and Documentation: Users reported that ElizaCloud agents were performing well. Questions arose about using Eliza for Twitter without paying for the Twitter API. The documentation site was temporarily down. Users asked about deploying in ElizaCloud via containers and whether to use PGlite or PostgreSQL. Team members confirmed both would work and that the app creator feature is functional but still an early feature. A billing page was added to allow credit top-ups.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbase.jpg",
-            "summary": "Google's commerce protocol shared."
+            "url": "https://cdn.elizaos.news/imgflip/ahbbrn.jpg",
+            "summary": "Users want free Twitter API."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768370205479-5j8kn.jpg"
+        },
+        {
+          "text": "Community Events and Partnerships: A space event was announced with the Solana Foundation, PayAI, and Quantu scheduled for Tuesday January 13th at 7pm UTC to discuss 8004 protocol and how it will be utilized by Eliza Cloud. The Kamiyo AI project launched using an ElizaOS plugin for autonomous agent payments with escrow-protected x402 payments and on-chain dispute resolution. Jin mentioned exciting updates coming to the ElizaOS leaderboard and referenced work on the Meritverse concept combining MMORPG lessons for a unified, rewarding, and meritocratic online ecosystem.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/deepface_40fe3034.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459233537084620892_4f6d0cd4.jpg"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbsm.jpg",
+            "summary": "Space event Tuesday January 13th."
+          }
+        },
+        {
+          "text": "Technical Discussions and Tools: Developers discussed using MiniMax M2 for coding with interleaved thinking for long-running tasks. Work on skills and subagents was mentioned, with challenges around building effective workflows to ensure skills can be called back and forth. A VPS setup running Claude Code with Kimi K2 and access via Happy on iOS was shared. Context graphs were discussed as AI's trillion-dollar opportunity, with ElizaOS having a strong foundation to build these from decision traces. The BountyBoard project using Eliza was highlighted as a decentralized platform for Web3 community activities.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459018009095049361_0b5b3484.png",
+            "https://cdn.elizaos.news/elizaos-media/1q3ogs5_8e23c5e3.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image0_744fc277.jpg",
+            "https://foundationcapital.com/wp-content/uploads/2025/12/The-Trillion-Dollar-Question_Blog-Header.jpg"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbsx.jpg",
+            "summary": "Context graphs trillion-dollar opportunity."
           }
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Development Update - January 13, 2026",
+      "title": "ElizaOS Development Progress: January 8-9, 2026",
       "content": [
         {
-          "text": "On January 13, 2026, ElizaOS made significant improvements to multi-step workflows by implementing robust retry logic for XML parsing and enhanced parameter extraction. These changes boost reliability and flexibility for complex agent interactions.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json",
+          "text": "On January 8-9, 2026, ElizaOS made significant progress in expanding its plugin ecosystem and enhancing core functionality. The plugin registry grew with the addition of the @kamiyo/eliza plugin and the @zane-archer/plugin-aimo-router plugin. Major improvements were made to the plugin-sql module, including Neon serverless database support and enhanced Row-Level Security (RLS), with fixes for pgcrypto extension installation with PGLite. The plugin-twitter repository implemented OAuth2 PKCE authentication for enhanced security and backward compatibility. A critical bug fix enabled comprehensive hot reload functionality for backend development, streamlining the development workflow. Testing for plugin-sql was strengthened by integrating withEntityContext() into RLS tests and adding ENABLE_DATA_ISOLATION=true to CI.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json",
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
+          ],
           "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbasj.jpg",
+            "url": "https://cdn.elizaos.news/imgflip/ahbbta.jpg",
             "summary": "ElizaOS updated in 2026."
-          }
-        },
-        {
-          "text": "The team focused on user experience improvements by resolving several UI/UX issues. They fixed the display of public/private icons in the dashboard and agent pages, converted the 'Sign up for free' message into a clickable hyperlink to streamline registration, and closed the apps promotion feature issue.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbatn.jpg",
-            "summary": "'Sign up for free' now clickable."
-          }
-        },
-        {
-          "text": "Several new features and fixes are currently under review, including a WebAssembly agent runtime proposal, CLI fixes to ensure dependencies use the latest version, prevention of infinite rebuild loops in dev-watch mode, fixes to prevent shell environment variable leakage into agent secrets, and Python example testing for version 2.0.0.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahbaut.jpg",
-            "summary": "Infinite rebuild loops in dev-watch."
           },
-          "posters": "https://cdn.elizaos.news/posters/1768369195702-p14wek.png"
+          "posters": "https://cdn.elizaos.news/posters/1768370264852-flh937o.png"
+        },
+        {
+          "text": "Several new issues were identified across the ElizaOS repositories, focusing on UI/UX improvements and functionality enhancements. In the elizaos/eliza repository, issues were raised regarding inconsistent box sizes, intermittent web search failures, default agent naming conventions on mobile, and updates needed for agent builder and edit interface copy. Additional issues requested refinement of input fields for personality traits, enhanced visibility of public/private agent statuses, making signup prompts clickable hyperlinks, and redirecting users back to their previous chat sessions after login.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json",
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbuo.jpg",
+            "summary": "Signup prompts not hyperlinks."
+          }
+        },
+        {
+          "text": "Planning commenced for an MMORPG-style character system for the leaderboard API in the elizaos.github.io repository. Multiple issues were created to implement a full Orders and Evolution class tree with progression paths, allow users to choose evolution paths at tier thresholds, track class evolution history for profile lore display, add unique visual identities for each Order, enable class respec with history preservation, make character class thresholds configurable, and extend the grouped organization/repository format to day, week, and month summaries. Work also began on a V2.0.0 release and optimization of build task inputs in turbo.json.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbvk.jpg",
+            "summary": "MMORPG classes for leaderboard API."
+          }
         }
       ],
-      "topic": "miscellaneous"
+      "topic": "github_other"
     }
   ],
-  "date": 1768262400
+  "date": 1767830400
 }

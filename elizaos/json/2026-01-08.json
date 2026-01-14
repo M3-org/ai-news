@@ -7,11 +7,12 @@
       "content": [
         {
           "text": "Token Utility and Migration Concerns: Community members raised questions about ElizaOS token utility within the ecosystem, asking why it is not being used for payments or gas fees. Users expressed confusion about the token's purpose beyond rewards. Migration issues were discussed, with some users reporting problems migrating AI16Z tokens purchased before November 2025. Korean exchange delistings were mentioned, with Bithumb, Coinone, and Korbit announcing termination of trading support for AI16Z/ElizaOS due to transparency concerns and failure to disclose material information appropriately. Team members clarified that exchanges supporting migration would handle the swap automatically.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbq8.jpg",
+            "summary": "AI16Z tokens before November 2025."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768370161640-qllsr.jpg"
         },
         {
           "text": "Technical Development and Infrastructure: Shaw announced Eliza 2.0 plans, which will come in TypeScript, Rust, and Python with FFI plugin interop between languages. The new version will have no API, server, CLI, or projects - just an extremely Claude-friendly documented runtime with same abstractions in three languages and examples for common use cases. Jin discussed building context graphs from decision traces, noting ElizaOS has a strong data foundation to build AI agents that can help as collaborators. The daily, weekly, and monthly insights generated from agentic workflows are high quality and need integration into last mile applications. Jin is looking for collaborators to convert ElizaOS plugins into skills and make them interoperable with other agent tools, testing with Discord and blockchain plugins.",
@@ -20,10 +21,13 @@
             "https://discord.com/channels/1253563208833433701/1377726087789940836"
           ],
           "images": [
-            "https://opengraph.githubassets.com/9328d0b6f84618c5ed6afea6b8d7e84769a378038e76d75182bdd207cc364593/veithly/BountyBoard",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1459232559736160328/IMG_2246.png?ex=696287b9&is=69613639&hm=ab63e1e7f8ca232d95a54e959c4e9f3da8e3230056688ddd72a52577946a3c5b&"
+            "https://cdn.elizaos.news/elizaos-media/bountyboard_47432442.jpg",
+            "https://cdn.elizaos.news/elizaos-media/img_2246_5db87dd9.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbr3.jpg",
+            "summary": "No API, server, CLI, projects."
+          }
         },
         {
           "text": "Jeju Platform and Data Collection: The Jeju platform was explained as a Layer 2 blockchain that is decentralized and focused on powering AI applications, connecting everything ElizaOS is building. The name comes from a Korean island used for testing new technology before rolling it out to the rest of Korea. Community members discussed the need for data collection, with suggestions for an ElizaOS phone app that lets people give agents access to their data for LLM training and earning reputation points. Ideas included collecting motion capture data from various professions like fishing, cooking, and factory work to train robots. A mental health monitoring concept was discussed using AI algorithms to detect dopamine level fluctuations through mobile phone interactions.",
@@ -32,11 +36,14 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [
-            "https://static.wixstatic.com/media/629163_7bb55bc1f7e14ddeb58183f31104387a~mv2.png/v1/fill/w_500,h_349,al_c/629163_7bb55bc1f7e14ddeb58183f31104387a~mv2.png",
-            "https://play-lh.googleusercontent.com/kPYRg11Oya8GJ11jqbConW4rcbPsNNrjfzqd3VdhXsmxdg4tJw7YfnVnCQX-TjdHSA",
-            "https://cdn.ncbi.nlm.nih.gov/pmc/cms/images/pmc-card-share.jpg?_=0"
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459232908811436145_317a2f0f.png",
+            "https://cdn.elizaos.news/elizaos-media/kpyrg11oya8gj11jqbconw4rcbpsnnrjfzqd3vdhxsmxdg4tjw_38738dde.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459235682957393942_3b1580dc.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbra.jpg",
+            "summary": "AI detects dopamine via phone."
+          }
         },
         {
           "text": "ElizaCloud and Documentation: Users reported that ElizaCloud agents were performing well. Questions arose about using Eliza for Twitter without paying for the Twitter API. The documentation site was temporarily down. Users asked about deploying in ElizaCloud via containers and whether to use PGlite or PostgreSQL. Team members confirmed both would work and that the app creator feature is functional but still an early feature. A billing page was added to allow credit top-ups.",
@@ -44,8 +51,11 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbrn.jpg",
+            "summary": "Users want free Twitter API."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768370205479-5j8kn.jpg"
         },
         {
           "text": "Community Events and Partnerships: A space event was announced with the Solana Foundation, PayAI, and Quantu scheduled for Tuesday January 13th at 7pm UTC to discuss 8004 protocol and how it will be utilized by Eliza Cloud. The Kamiyo AI project launched using an ElizaOS plugin for autonomous agent payments with escrow-protected x402 payments and on-chain dispute resolution. Jin mentioned exciting updates coming to the ElizaOS leaderboard and referenced work on the Meritverse concept combining MMORPG lessons for a unified, rewarding, and meritocratic online ecosystem.",
@@ -54,10 +64,13 @@
             "https://discord.com/channels/1253563208833433701/1377726087789940836"
           ],
           "images": [
-            "https://opengraph.githubassets.com/f8844bb98b1490d5c169ce10cad27fe771fc8f80f6d68a520e36bdc3ba02f342/serengil/deepface",
-            "https://paragraph.com/api/og?title=The+Meritverse%3A+Digital+Threads+for+Net+Creds&blogName=Metaverse+Makers&coverPhotoUrl=https%3A%2F%2Fstorage.googleapis.com%2Fpapyrus_images%2F0d23e1c9e55342e1e2996918b81124f60b3f48f997db65bcf3b6095bb96a3e3c.png&blogImageUrl=https%3A%2F%2Fstorage.googleapis.com%2Fpapyrus_images%2F295589e45971a77e55ff772465b724f2c14bc2e59a6147371c59c91b719a7c55.jpg&publishedDate=1724511851000"
+            "https://cdn.elizaos.news/elizaos-media/deepface_40fe3034.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459233537084620892_4f6d0cd4.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbsm.jpg",
+            "summary": "Space event Tuesday January 13th."
+          }
         },
         {
           "text": "Technical Discussions and Tools: Developers discussed using MiniMax M2 for coding with interleaved thinking for long-running tasks. Work on skills and subagents was mentioned, with challenges around building effective workflows to ensure skills can be called back and forth. A VPS setup running Claude Code with Kimi K2 and access via Happy on iOS was shared. Context graphs were discussed as AI's trillion-dollar opportunity, with ElizaOS having a strong foundation to build these from decision traces. The BountyBoard project using Eliza was highlighted as a decentralized platform for Web3 community activities.",
@@ -66,12 +79,15 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [
-            "https://filecdn.minimax.chat/public/58eca777-e31f-448a-9823-e2220e49b426.png",
-            "https://share.redd.it/preview/post/1q3ogs5",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1459223831414702102/image0.jpg?ex=69627f98&is=69612e18&hm=8c420018e94876afe081dd7df10a86ec89dcc14039bb98f33d26c1c520185f4d&",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1459018009095049361_0b5b3484.png",
+            "https://cdn.elizaos.news/elizaos-media/1q3ogs5_8e23c5e3.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image0_744fc277.jpg",
             "https://foundationcapital.com/wp-content/uploads/2025/12/The-Trillion-Dollar-Question_Blog-Header.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbsx.jpg",
+            "summary": "Context graphs trillion-dollar opportunity."
+          }
         }
       ],
       "topic": "discordrawdata"
@@ -85,8 +101,11 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json",
             "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
           ],
-          "images": [],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbta.jpg",
+            "summary": "ElizaOS updated in 2026."
+          },
+          "posters": "https://cdn.elizaos.news/posters/1768370264852-flh937o.png"
         },
         {
           "text": "Several new issues were identified across the ElizaOS repositories, focusing on UI/UX improvements and functionality enhancements. In the elizaos/eliza repository, issues were raised regarding inconsistent box sizes, intermittent web search failures, default agent naming conventions on mobile, and updates needed for agent builder and edit interface copy. Additional issues requested refinement of input fields for personality traits, enhanced visibility of public/private agent statuses, making signup prompts clickable hyperlinks, and redirecting users back to their previous chat sessions after login.",
@@ -94,16 +113,18 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-01-08.json",
             "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
           ],
-          "images": [],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbuo.jpg",
+            "summary": "Signup prompts not hyperlinks."
+          }
         },
         {
           "text": "Planning commenced for an MMORPG-style character system for the leaderboard API in the elizaos.github.io repository. Multiple issues were created to implement a full Orders and Evolution class tree with progression paths, allow users to choose evolution paths at tier thresholds, track class evolution history for profile lore display, add unique visual identities for each Order, enable class respec with history preservation, make character class thresholds configurable, and extend the grouped organization/repository format to day, week, and month summaries. Work also began on a V2.0.0 release and optimization of build task inputs in turbo.json.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-09.json",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/ahbbvk.jpg",
+            "summary": "MMORPG classes for leaderboard API."
+          }
         }
       ],
       "topic": "github_other"
