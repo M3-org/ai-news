@@ -1,0 +1,79 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-01-13",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - January 13, 2026",
+      "content": [
+        {
+          "text": "Community members discussed various topics in the discussion channel. A Twitter Spaces event titled 'WTF is 8004?' was hosted, with participants experiencing technical difficulties including audio dropouts and connection issues. Users noted that Twitter Spaces has been buggy, particularly on desktop, with mobile iOS working more reliably. The ELIZAOSNY Twitter account shared content criticizing Solana's finance 2.0 messaging and promoting memecoin culture. There was discussion about ElizaBAO, a community member's project that is a Polymarket affiliate. ElizaBAO shared proof of real user registrations and deposits through their affiliate link. Community members also discussed partnership opportunities and developer availability.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/2011178703414575107/pu/img/8cvtHuc9NWMukrgU.jpg:large",
+            "https://pbs.twimg.com/media/G-h2PJCaoAAgFuo.png:large"
+          ],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1460781034600665364/boom-veg.mp4?ex=696829da&is=6966d85a&hm=3ca8f2b715c13d4e573e1ad7fc155a5d3cd90f4c2d39e61411f285405585a136&"
+          ]
+        },
+        {
+          "text": "In the coders channel, developers discussed technical implementations and shared research. A significant discussion centered on DeepMind's Recursive Language Models (RLMs), a new AI architecture that doesn't require RAG and has perfect memory of everything it has read. The system can process prompts up to two orders of magnitude beyond model context windows. A developer shared instructions for uploading knowledge to the monorepo using the plugin-knowledge system, including creating a docs directory and configuring the character file. Another developer mentioned modifying plugin-bootstrap to search global facts without roomId and adding a post route for creating new memories. ElizaBAO announced a second top-up on elizaoscloud. Multiple developers posted looking for work opportunities.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G-dwNnjbEAAxA9X.jpg:large",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1460726264263479479/Capture2.PNG?ex=6967f6d8&is=6966a558&hm=834047544268829db0c7e4b3340893e4d22fe8b5eaa1cef7f20e4012816a8415&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Core developers discussed infrastructure and technical issues. There was an ongoing problem with the claude-review.yml workflow failing with a 401 Unauthorized error during OIDC token exchange. A developer shared Google's Universal Commerce Protocol (UCP) documentation. Stan provided a standup update indicating work on monorepo improvements, reviewing test architecture on cloud, investigating plugin-sql migration simplifications, and working on credit top-up idempotency fixes. Borko directed focus away from version 2.0 work to concentrate on cloud improvements. The team discussed DeepSeek pricing and encountered some technical issues that required retrying operations.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1460526420487831552/UCP_Diagram_Detailed_1.original.png?ex=6967e579&is=696693f9&hm=20a0e13a7812b4eda0028f6ba7296c81c1ebe8fad2ccca934e9fbd0d57b5b220&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1460712753688744201/image.png?ex=6967ea43&is=696698c3&hm=4e5db7a2bff5e3394ae21cb91e55ddf5da147118cb0bcd423e821e8a1d87c93d&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1460717679999586376/image.png?ex=6967eed9&is=69669d59&hm=2421f169a41149309145d4a9ca17a1da893dbd324e28462082a6e5ad4a2db9f9&"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Development Update - January 13, 2026",
+      "content": [
+        {
+          "text": "On January 13, 2026, ElizaOS made significant improvements to multi-step workflows by implementing robust retry logic for XML parsing and enhanced parameter extraction. These changes boost reliability and flexibility for complex agent interactions.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The team focused on user experience improvements by resolving several UI/UX issues. They fixed the display of public/private icons in the dashboard and agent pages, converted the 'Sign up for free' message into a clickable hyperlink to streamline registration, and closed the apps promotion feature issue.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Several new features and fixes are currently under review, including a WebAssembly agent runtime proposal, CLI fixes to ensure dependencies use the latest version, prevention of infinite rebuild loops in dev-watch mode, fixes to prevent shell environment variable leakage into agent secrets, and Python example testing for version 2.0.0.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-13.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1768262400
+}
