@@ -1,134 +1,138 @@
-# elizaOS Discord - 2026-01-14
+# elizaOS Discord - 2026-01-15
 
 ## Overall Discussion Highlights
 
-### Eliza 2.0 Architecture Overhaul
+### Token Migration & Exchange Issues
 
-**Shaw** announced major architectural improvements for Eliza 2.0, representing a significant simplification of the framework:
+The ai16z to elizaos token migration dominated community discussions, with **February 4th confirmed as the official deadline** by moderator Kenk. Multiple users encountered technical difficulties during the migration process:
 
-- **Planning Plugin Integration**: The planning plugin has been merged directly into Eliza core, activated via `advancedPlanning: true` flag
-- **Extended Memory**: Integrated with similar flag-based activation system
-- **Bootstrap Capabilities**: Implemented `advancedCapabilities` with `basicCapabilities` (reply, etc.) defaulting to true
-- **Reduced Boilerplate**: Eliminated plugin configuration requirements for basic agent functionality
-- **Dynamic Loading**: Unused features never load, improving performance
-- **Default Room/World Handling**: Set to 00000 UUID, allowing messages without explicit room/world specification
+- **Trust Wallet users** experienced "serialized message is not a function" errors
+- **Phantom wallet users** reported non-functional migration buttons, resolved through clearing browser cache and site data
+- **Bithumb exchange** completed their token swap, resolving concerns about wallet movements and potential price suppression
 
-**0xbbjoker** raised optimization concerns about reducing LLM calls by making action params optional to eliminate the params extraction step, and noted database architecture issues requiring attention.
+The migration eligibility was clarified by Arceon: only users who purchased ai16z before the snapshot are eligible to migrate. Conflicting information between the migration bot and official announcements created confusion that required moderator intervention.
 
-### Voice-Controlled AI Interface Innovation
+### Market Sentiment & Project Positioning
 
-**M I A M I** demonstrated NIKITA, a voice-controlled AI interface that eliminates traditional navigation:
+Community members expressed significant concern over price performance, with mentions of -99.53% drops from peak values. DorianD noted the project's position outside the top 200 preventing auto-invest flows. Broccolex identified a lack of conscious effort to link the token with the project as contributing to price decline.
 
-- Uses **Deepgram** for speech-to-text recognition
-- Dynamically morphs between three modes (social, trade, cinema) based on voice input
-- Currently developing trading intents for voice-commanded swaps
-- Building data pool for agentic trading decisions
-- Available at sentientspace.io
-- Plans for mobile app and text-to-speech voice generation
+### Polymarket Trading Integration
 
-**DorianD** engaged in discussion about future AI interaction paradigms, predicting reduced reliance on traditional input methods in favor of voice and AR glasses like Meta Raybans.
+Shaw released an **Eliza 2.0.0 example plugin for Polymarket trading**, describing the evolution from "sloppy" initial implementation to "pretty good" using Claude code. Key technical insights included:
 
-### Polymarket Integration & Auto-Trading
+- Polymarket has an **official API** and automated trading is legitimate and above board
+- Alternative implementation available at github.com/Okay-Bet/plugin-polymarket
+- Recommended architecture: custom code with SDK, private nodes, inline stream mempool for constant flow, and parallel CLOB API usage
+- For multi-user scenarios: **BullMQ** suggested for worker management
 
-**ElizaBAO** and **sedano.npc** discussed implementing auto-trading capabilities with Polymarket:
+### Jeju Network Technical Vision
 
-- Existing plugin-polymarket provides market data and CLOB information but lacks built-in trade execution logic
-- **sedano.npc** identified a bug where the agent retrieves older markets instead of latest ones
-- Discussion centered on extending the plugin with order management actions (placing/canceling orders)
-- Strategy logic would need to be built on top of Polymarket API calls
-- **Shaw's** upcoming tutorial stream will cover polymarket plugin/tutorial setup
+DorianD provided substantive analysis of the planned Jeju decentralized compute network, acknowledging it as a "gargantuan undertaking" with uncertain timelines. The core technical challenge identified:
 
-### Technical Challenges & Solutions
+**Latency constraints** make parallelized inference across multi-node ad-hoc networks impractical for real-time LLM applications where users expect immediate responses.
 
-**Twitter Authentication Issues**: **NintyNine** reported problems with agent-twitter-client on VPS, where despite successfully loading cookies, isLoggedIn() returns false and sendTweet() fails with error code 34. The issue may be related to running on data center IP addresses.
+**Viable use cases proposed:**
+1. **Long-running agent tasks** with overnight execution windows where users check results asynchronously
+2. **Autonomous agents** performing independent economic activities without human time-sensitivity constraints
 
-**Vector DB & RAG Implementation**: **sedano.npc** sought guidance on implementing vector database and RAG features for local Eliza setup. They discovered the plugin-knowledge solution (https://github.com/elizaos-plugins/plugin-knowledge), though **cjft** noted that a subscription is now required for this functionality.
+These scenarios could effectively leverage decentralized networks for compute cycles and hardware resources.
 
-### Token Economics & Community Concerns
+### Socket.IO Integration & Plugin Development
 
-**averma** questioned the token's use case beyond buyback plans, noting lack of utility for development or agent creation. **Majid** raised concerns about price-development misalignment.
+Chucknorris encountered challenges accessing Socket.IO server from custom plugins to broadcast real-time events. The goal was pushing WebSocket data (tweets) to the frontend via `socketIO.emit()`. Issues included:
 
-**DorianD** explained that falling out of the top 100 cryptocurrencies by market cap blocks automated index investment flows, creating budget sustainability challenges. **DannyNOR NoFapArc** expressed the need to return to billion-dollar market cap status.
+- `getGlobalAgentServer()` not being exported
+- `MessageBusService.serverInstance` being private
 
-### Security & Migration Issues
+Shaw provided guidance pointing to the socketio implementation in the develop branch and plugin-knowledge frontend examples. Chucknorris resolved the issue independently within 5 minutes by navigating through dependencies directly.
 
-**코인케인** reported suspicious migration messages from fake support accounts. **DorianD** confirmed these as fake and directed users to check labs-announcements channel for official migration info.
+Supreem developed a **together.ai inference plugin** and sought contribution guidance, receiving documentation links to docs.elizaos.ai/plugins/development and docs.elizaos.ai/guides/contribute-to-core.
 
-**kiddala** experienced non-functional transfer buttons in Phantom wallet during migration. **Broccolex** directed them to the appropriate channel for migration help.
+### Platform Issues & Bugs
 
-### Alternative Frameworks
+**Discord Client Bug**: DigitalDiva reported a TypeError in the latest ElizaOS version where `this.runtime.elizaOS.sendMessage` is undefined, breaking Discord message handling.
 
-**MemeBroker** introduced the Open Souls framework as an alternative, highlighting its superior personality depth through "mental processes" and "cognitive steps" architecture, using internal dialogue, external dialogue, and memory relay systems, though it lacks Eliza's extensive tooling and integrations.
+**Windows/WSL Compatibility**: Casino struggled with Spartan setup on Windows without Docker, experiencing plugin path resolution errors. Chucknorris recommended WSL over PowerShell, though issues persisted in both environments.
+
+### Core Development Updates
+
+**PR #6113 Review**: Odilitime requested review for a PR pending since November, re-engineered to accommodate recent streaming work with focus on correctness over speed. Stan committed to reviewing and merging.
+
+**Hiscores API**: Jin announced the addition of an API to the hiscores feature, documented at elizaos.github.io/api. Concerns were raised about the "hiscores" naming (inspired by RuneScape) potentially creating perception of the project being a grindfest. Alternative suggestions included "rpg stats," "player card," or "character sheet."
 
 ## Key Questions & Answers
 
-**Q: Is the GitHub tips connect wallet safe?** (asked by ElizaBAO)  
-**A:** Yes, tip.md is Roam's app and it's safe (answered by Odilitime)
+**Q: Which info is true about migration deadline - Feb 4 or no deadline?**  
+A: Feb 4th is the deadline for the migration (answered by Kenk)
 
-**Q: What do you use for voice recognition?** (asked by DorianD)  
-**A:** Deepgram for speech-to-text; currently only users do STT, NIKITA's output is text only (answered by M I A M I)
+**Q: Migration buttons don't work in Phantom wallet, any ideas?**  
+A: Try disconnecting wallet, clear site data via Inspect > Application > Storage > Clear site data, then reload (answered by .)
 
-**Q: Is the "elizaOS live support" account official?** (asked by 코인케인)  
-**A:** Sounds fake, all migration stuff is in labs-announcements channel (answered by DorianD)
+**Q: How to access Socket.IO server from a custom plugin to broadcast events to the frontend?**  
+A: Check the socketio implementation at github.com/elizaOS/eliza/blob/develop/packages/server/src/socketio/index.ts and plugin routes example at github.com/elizaos-plugins/plugin-knowledge/tree/1.x/src/frontend (answered by shaw)
 
-**Q: What's the best way to setup a vector DB + RAG feature for Eliza local setup?** (asked by sedano.npc)  
-**A:** Use the plugin-knowledge from https://github.com/elizaos-plugins/plugin-knowledge, though it now requires a subscription (answered by sedano.npc, cjft)
+**Q: What's the status with Polymarket's ToS on automated trading?**  
+A: They have an official API and it's all above board - automated agents are fair game and benefit them by adding orders to the book (answered by shaw)
 
-**Q: Can the elizacloud agent auto trade at polymarket?** (asked by ElizaBAO)  
-**A:** Will be covered in Shaw's tutorial stream on YouTube showing polymarket plugin/tutorial setup (answered by sedano.npc)
+**Q: How to contribute a plugin to the community?**  
+A: docs.elizaos.ai/guides/contribute-to-core (answered by Chucknorris | ONYX P9 NODE RENT)
 
-**Q: Does the Polymarket plugin include any built-in trade execution logic?** (asked by ElizaBAO)  
-**A:** No, it mainly provides market data and CLOB info; would need to build strategy logic on top of Polymarket API calls and extend plugin for order management (answered by sedano.npc)
+**Q: Any update from Bithumb on the elizaos token movement?**  
+A: The issue has been resolved, they completed their swap yesterday (answered by jasyn_bjorn)
 
-**Q: Are you setting this up on cloud or within the cli + elizaOS framework?** (asked by Kenk)  
-**A:** cli + framework (answered by sedano.npc)
+**Q: What alternatives exist for the "hiscores" name?**  
+A: Suggested alternatives include "rpg stats," "player card," or "character sheet" to make it more fun and gamesy (answered by Odilitime)
+
+**Q: What is the status of PR #6113?**  
+A: Stan committed to review and merge it, though delayed to the next morning due to time constraints (answered by Stan ⚡)
 
 ## Community Help & Collaboration
 
-**DorianD → 코인케인**: Confirmed suspicious migration message from "elizaOS live support" was fake and directed to check labs-announcements channel for official migration info
+**Migration Support**
+- **Hexx 🌐** helped **ppckl** with ticket creation for ai16z change, suggesting connection to Migration link on official website
+- **Kenk** clarified migration deadline confusion for **chomppp**, confirming Feb 4th as official date
+- **.** (moderator) provided step-by-step troubleshooting to **Defi | Doctore** for non-functional Phantom wallet buttons
+- **Arceon** clarified migration eligibility for the general community
 
-**Odilitime → ElizaBAO**: Confirmed tip.md wallet connection safety, explaining it's Roam's app
+**Technical Development**
+- **shaw** guided **Chucknorris** on Socket.IO access patterns and provided implementation examples
+- **shaw** confirmed Polymarket API legitimacy for **Lxa**, addressing ToS concerns
+- **Chucknorris** provided comprehensive Polymarket architecture recommendations to **ElizaBAO**
+- **Chucknorris** supplied plugin development documentation to **Supreem**
+- **Chucknorris** recommended WSL and manual plugin installation to **Casino** for Windows issues
+- **sayonara** recommended alternative Polymarket plugin to **Lxa**
+- **shaw** shared Polymarket plugin code with **ElizaBAO**
 
-**Broccolex → kiddala**: Directed to appropriate channel for migration help with non-functional transfer buttons
+**Core Development**
+- **Odilitime** suggested alternative naming conventions to **jin** for hiscores feature
+- **Stan ⚡** committed to reviewing **Odilitime's** long-pending PR
 
-**M I A M I → DorianD**: Explained voice recognition implementation using Deepgram for STT with text-only output
-
-**Kenk → sedano.npc**: Helped clarify deployment environment for vector DB + RAG setup
-
-**sedano.npc → ElizaBAO**: Directed to upcoming Shaw tutorial stream and shared plugin-polymarket repository link for auto-trading questions
-
-**cjft → sedano.npc**: Informed that plugin-knowledge now requires a subscription
-
-**shaw → General team**: Provided detailed explanation of new 2.0 flag-based system and dynamic loading implementation
+**Exchange Issues**
+- **jasyn_bjorn** confirmed resolution of Bithumb token swap for **sayitaintso25**
 
 ## Action Items
 
 ### Technical
 
-- **Debug agent-twitter-client authentication failure on VPS** (isLoggedIn returns false, error code 34) - investigate data center IP blocking (Mentioned by: NintyNine)
-- **Fix polymarket plugin bug** where agent retrieves older markets instead of latest ones (Mentioned by: sedano.npc)
-- **Build data pool for agentic trading/decision making** based on trader semantics and habits (Mentioned by: M I A M I)
-- **Investigate migration transfer button functionality issues** in Phantom wallet (Mentioned by: kiddala)
-- **Add action params as optional** to reduce LLM calls by eliminating params extraction step (Mentioned by: 0xbbjoker)
-- **Address database architecture issues** in 2.0 (Mentioned by: 0xbbjoker)
-- **Build SQLite plugin** if message server is removed (Mentioned by: 0xbbjoker)
-
-### Feature
-
-- **Voice-commanded swap/trading functionality** for NIKITA interface (Mentioned by: M I A M I)
-- **Mobile app version** of sentientspace.io (Mentioned by: M I A M I)
-- **Text-to-speech voice generation** for NIKITA output (Mentioned by: M I A M I)
-- **Research assistant** that scans socials and news (Mentioned by: DorianD)
-- **AI launchpad** based on PumpFun implementation (Mentioned by: Mfairy)
-- **Extend plugin-polymarket** to add trade execution logic including placing and canceling orders (Mentioned by: ElizaBAO)
-- **Build strategy logic layer** on top of Polymarket API calls for auto-trading (Mentioned by: ElizaBAO)
-- **Investigate strategies** to return to billion-dollar market cap and top 100 ranking to restore automated index investment flows (Mentioned by: DannyNOR NoFapArc, DorianD)
+- **Fix Discord client TypeError** where this.runtime.elizaOS.sendMessage is undefined in latest ElizaOS version (Mentioned by: DigitalDiva)
+- **Resolve serialization error** "serialized message is not a function" in Trust Wallet during migration (Mentioned by: Sas)
+- **Fix non-functional migration buttons** in Phantom wallet interface (Mentioned by: Defi | Doctore)
+- **Resolve Spartan plugin path resolution issues** on Windows/WSL environments (Mentioned by: Casino)
+- **Implement full gRPC** with track tx/pnl based on real-time tweet feed WSS with token and trend detection (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
+- **Review and merge PR #6113** which addresses correctness issues and was re-engineered for streaming work (Mentioned by: Odilitime)
+- **Reconsider naming for hiscores API** to avoid negative perception (Mentioned by: jin)
+- **Implement Jeju network** for decentralized compute with focus on non-time-sensitive agent workloads (Mentioned by: DorianD)
+- **Improve Socket.IO server access pattern documentation** for custom plugins (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
 
 ### Documentation
 
-- **Clarify token use case and utility** for development/agent creation (Mentioned by: averma)
-- **Clarify whether message bus is still needed** in 2.0 architecture (Mentioned by: Stan ⚡)
-- **Document extended memory functionality** in 2.0 (Mentioned by: Odilitime)
-- **Clarify bootstrap plugin necessity** and BOOTSTRAP environment variables behavior (Mentioned by: Stan ⚡, Odilitime)
-- **Document policy layers, risk limits, and on-chain verification** for AI agent auto-trading safety (Mentioned by: aicodeflow)
-- **Provide update on NDA-related matter** status and progression (Mentioned by: hirong)
+- **Clarify official migration deadline information** to resolve conflicting messages between bot and announcements (Mentioned by: chomppp)
+- **Clarify Eliza 1.7 to 2.0 plugin compatibility** and migration path (Mentioned by: Supreem)
+- **API documentation published** at elizaos.github.io/api for hiscores feature (Mentioned by: jin)
+
+### Feature
+
+- **Publish together.ai inference plugin** to community (Mentioned by: Supreem)
+- **Convert pre-made Poly/Kalshi bot** into Eliza plugin and action (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
+- **Develop use cases for long-running agent tasks** that execute overnight without real-time latency requirements (Mentioned by: DorianD)
+- **Create infrastructure for autonomous agents** to utilize decentralized compute cycles and hardware for independent economic activities (Mentioned by: DorianD)

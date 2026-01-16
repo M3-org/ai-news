@@ -1,138 +1,155 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-01-14",
+  "title": "Daily Report - 2026-01-15",
   "categories": [
     {
-      "title": "ElizaOS Development Updates and Community Discussion - January 14, 2026",
+      "title": "ElizaOS Development Updates and Community Discussions - January 15, 2026",
       "content": [
         {
-          "text": "Community members discussed various AI agent projects and developments. Miami0x shared updates about Sentient Space, a platform with three modes: social, trade, and cinema. The platform now features voice command functionality through NIKITA, allowing users to navigate and control the interface using voice instead of buttons. The system uses Deepgram for speech-to-text recognition. Future plans include implementing trading intents that enable voice-commanded swaps and trades. Miami0x emphasized building a data pool to enable agentic trading and decision-making based on trader semantics and habits.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1460977647583625376_256a451d.jpg",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecg7.jpg",
-            "summary": "Voice-commanded crypto swaps."
-          }
+          "text": "Shaw released a Polymarket trading plugin for ElizaOS version 2.0.0, described as a Claude code implementation for Polymarket. The plugin was initially basic but received significant improvements. Community members discussed the plugin's functionality, with shaw clarifying that Polymarket has a public API and automated trading is above board. He noted that prediction markets are areas where LLMs and humans are on par, though sandwiches and MEV activities are possible. Another community plugin from Okay-Bet was also shared as a reference implementation. Multiple developers expressed interest in building Polymarket trading agents.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1461248379534311464/Screenshot_2026-01-14_at_6.30.50_PM.png?ex=696a85da&is=6969345a&hm=089be6f9105fa48e37fc671f65361e6b6571664511ff37594b0b1092429b39d8&",
+            "https://opengraph.githubassets.com/f8efb301998d8ba2ae394f568cd3a46f4e76619df46c0f9e1b28dd73adee2156/Okay-Bet/plugin-polymarket"
+          ],
+          "videos": []
         },
         {
-          "text": "Discussion about Grok's performance in Alpha Arena highlighted that it outperformed other frontier models like Gemini when trading real money, making profits while others experienced losses. Grok 4.20 won Season 1.5 with a 12 percent average gain, making money in all four competitions. GPT5.1 came in second place and Gemini 3 in third. All trades and model outputs were reported as 100 percent verifiable.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1461020519334678640_debb664f.jpg",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecgm.jpg",
-            "summary": "Grok traded real money profitably."
-          }
+          "text": "Developers discussed technical implementation details for ElizaOS plugins. A developer asked about accessing Socket.IO server from custom plugins to broadcast real-time events to the frontend, specifically for streaming tweet data from external WebSockets. Shaw provided guidance pointing to the socketio index implementation and plugin-knowledge frontend examples. The developer was working on integrating real-time data feeds with WebSocket connections and needed to emit events to connected clients. Discussion also covered using BullMQ for managing multi-user integration via workers and handling API limitations.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1461217729712357509/image.png?ex=696a694e&is=696917ce&hm=584c9d3438703f247c4b8574deeecec51dc451b8df2f91a85cd69f0d4485d827&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1461232136815120448/image.png?ex=696a76b9&is=69692539&hm=d09f5bae51a20b509b64db39debd6bbbe57f1ba396b6db3fa11b7cb8a6cc4677&"
+          ],
+          "videos": []
         },
         {
-          "text": "Community members discussed token economics and market performance. Concerns were raised about the token lacking a clear use case beyond future buyback plans from cloud earnings. The discussion noted that without requiring token holdings for development or agent creation, there is limited incentive for buying and holding. Market observations included Eliza being down while the broader market was up, with members expressing hope for the token to return to 2.5 billion dollar market cap levels. One member noted that dropping out of the top 100 cryptocurrencies stops automated index investment money from flowing in, making it harder for the project to sustain a budget.",
+          "text": "A user reported Discord integration errors with the latest version of ElizaOS. The error indicated that runtime.elizaOS.sendMessage is not a function, suggesting an undefined method in the unified messaging API. The error occurred when the Discord client attempted to handle messages using the ElizaOS messaging system.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A Windows user struggled to run Spartan without Docker, encountering plugin path resolution errors despite trying both monorepo and standalone setups. Community members recommended installing WSL (Windows Subsystem for Linux) for development instead of using PowerShell or Git Bash. The user reported experiencing the same plugin loading issues even after switching to WSL. Developers suggested manually installing plugins, using Docker for automatic plugin loading, or trying the Docker approach as an alternative.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1461490255038517532/Screenshot_2026-01-15_143836.png?ex=696abe5d&is=69696cdd&hm=8757646ee34e2900115338e7c1188a787e5f48e1adf22e1c2c64e0b821cf34ae&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Community members discussed the token price decline and market positioning. One user noted that not being in the top 200 prevents auto-invest flows during market movements, leaving the project stuck in no man's land. Another member commented that without conscious effort to associate the token with the project, the price will continue to decline. The token was reported to be down 99.53% from its peak. A chart showing significant price decline was shared in the partners channel.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahech7.jpg",
-            "summary": "Hoping for $2.5B market cap."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438553458-oj5axb.png"
+          "images": [
+            "https://cdn.discordapp.com/attachments/1301363808421543988/1461409534554804378/2F4D901C-0491-4CA6-84B4-F34189484F32.jpg?ex=696a7330&is=696921b0&hm=a93cb01da27f2c9d2ed11342529fd2487b869d53ecc25430d9a698cd6cf666b2&"
+          ],
+          "videos": []
         },
         {
-          "text": "Developers discussed Polymarket plugin integration and auto-trading capabilities. The current plugin provides market data and CLOB information but lacks built-in trade execution logic. Questions were raised about what would be required to support auto trading, including whether to build strategy logic on top of Polymarket API calls and whether to extend the plugin to add order management actions. One developer noted they were working on an issue where the agent retrieves older markets instead of the latest ones. Shaw was planning a tutorial stream on YouTube to cover Polymarket plugin setup.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/plugin-polymarket_2264dc6a.jpg",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecj1.jpg",
-            "summary": "Agent retrieves older markets."
-          }
+          "text": "The Bithumb delisting issue was discussed, with users asking if it was a scam. A moderator confirmed the issue has been resolved and Bithumb completed their token swap. Movement of ElizaOS tokens from Bithumb's wallet was observed on Solscan. Community members expressed hope that resolving this issue would help stabilize the price.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [
+            "https://statics.solscan.io/solscan-img/solscan_splash.png"
+          ],
+          "videos": []
         },
         {
-          "text": "A developer reported issues with the agent-twitter-client library on VPS in 2025. Despite cookies loading successfully, isLoggedIn returns false and sendTweet fails with error code 34. The developer tried fresh browser cookies, different cookie formats, and username/password login without success. Another developer confirmed that a subscription is now required for the Twitter client to work.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecjc.jpg",
-            "summary": "Twitter client requires paid subscription."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438600973-87ey0g.png"
+          "text": "Migration support continued with the February 4th deadline confirmed for the migration portal closure. Users reported various migration issues including problems with Trust Wallet showing serialized message errors and Phantom wallet button functionality issues. Support staff provided troubleshooting steps including disconnecting wallets, clearing site data through browser inspection tools, and reloading pages. Users were directed to the migration support channel for assistance.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "A developer asked about setting up vector database and RAG features for local Eliza setup. They found the plugin-knowledge repository which provides Eliza RAG Knowledge Plugin functionality for implementing retrieval-augmented generation capabilities.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/plugin-knowledge_2e9a2750.jpg",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecld.jpg",
-            "summary": "Eliza gets RAG capabilities."
-          }
+          "text": "Discussion about the Jeju network emerged, with mentions that the token will supposedly be used in this network. However, concerns were raised that this appears to be a massive undertaking with unclear timelines for actual implementation. The conversation touched on use cases for decentralized compute networks, suggesting that while current LLM applications are latency-sensitive, future agent applications running longer tasks or autonomous operations could benefit from decentralized hardware networks providing compute cycles.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Shaw announced major updates to Eliza 2.0 development. Computer use functionality is now working with Eliza after forking Screenpipe's terminator and porting it to Linux and Mac. The planning plugin has been merged into core Eliza and can be enabled with advancedPlanning: true. Extended memory has also been merged with the same configuration approach. Bootstrap functionality is now available for advancedCapabilities, with basicCapabilities being default features like reply. The system now dynamically loads components, eliminating boilerplate and plugin configuration requirements for agents to work. Rooms and worlds now default to the 00000 UUID for agents, allowing messages to work and respond without explicit configuration.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aheclt.jpg",
-            "summary": "Rooms default to 00000 UUID."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438655873-lzrdkd.png"
+          "text": "Jin introduced a new API for GitHub contributor analytics and leaderboard, initially called hiscores but reconsidering the name to avoid perception of being a grindfest similar to Kaito for GitHub. Community members suggested alternative names like RPG stats, player card, or character sheet to make it more fun and game-like. The API is accessible at elizaos.github.io/api.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Core developers discussed potential improvements for 2.0, including making action parameters optional to reduce LLM calls by eliminating the params extraction step. Concerns were raised about database organization, with suggestions to build a SQLite plugin if there is no message server. Questions were asked about whether the message bus and bootstrap plugin are still needed in the new architecture.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aheco1.jpg",
-            "summary": "SQLite plugin without message server."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438692966-ocek5e.jpg"
+          "text": "A pull request from November addressing correctness issues (not speed) was bumped for review and approval. The PR had been re-engineered to work with recent streaming updates. Stan committed to reviewing and attempting to merge the changes, though ran out of time and postponed the review to the following morning.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "A developer shared interest in the Open Souls framework, noting it provides personality depth but lacks the tooling and integrations that Eliza has. The framework uses mental processes and cognitive steps as a form of plugins, creating an architecture with internal dialogue, external dialogue, and memory relay between listening, talking to self, and responding to users.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecps.jpg",
-            "summary": "Framework includes talking to self."
-          }
+          "text": "Breaking news was shared about multiple InfoFi crypto projects crashing after X (Twitter) announced they will no longer allow apps that reward users for posting on the platform. X Head of Product Nikita Bier stated that these projects were paying millions for Enterprise API access but X does not want it anymore.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G-t9P8KbQAEx4hu.png:large"
+          ],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Project Activity - January 14, 2026",
+      "title": "ElizaOS Progress Summary - January 15, 2026",
       "content": [
         {
-          "text": "The ElizaOS project experienced significant activity on January 14, 2026, with a critical bug requiring urgent attention, ongoing development work, and new documentation efforts.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-14.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecr7.jpg",
-            "summary": "Activity on January 14, 2026."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438760876-p09med.png"
+          "text": "On January 15, 2026, ElizaOS made significant progress in documentation and core system stability. The team focused on making API documentation production-ready and implementing critical bug fixes that addressed infinite rebuild loops and environment variable security issues.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-15.json"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "URGENT: A critical reflection evaluator failure is impacting UPDATE_CONTACT operations across multiple repositories. The issue, tracked in both elizaos-plugins/plugin-discord#6364 and elizaos/eliza#6364, occurs because ensureConnection() is not being called before saving facts, resulting in 'Entity not found' errors. This is causing critical data handling problems that require immediate attention.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-14.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahect4.jpg",
-            "summary": "ensureConnection() skipped before facts."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438797681-hbk5t.png"
+          "text": "Documentation and Workflow Enhancements: The API documentation page received comprehensive improvements in the elizaos.github.io repository, including complete JSON response examples for all endpoints and realistic 200 responses, making it production-ready. Additionally, workflow configuration files (generate-summaries.yml and run-pipelines.yml) were updated.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-15.json"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Development work is progressing on two fronts. In the elizaos-plugins/plugin-discord repository, pull request #42 introduces new utilities and fixes for voice functionalities. Meanwhile, in the elizaos/eliza repository, pull request #6366 is refactoring the plugin-sql module by extracting domain stores from BaseDrizzleAdapter.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-14.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecum.jpg",
-            "summary": "Pull request #6366 exists."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438827316-hewhid.jpg"
+          "text": "Core System Stability and Security: Two critical fixes were implemented in the eliza repository. First, an infinite rebuild loop in dev-watch mode caused by generate-version.ts was resolved. Second, a security improvement was implemented to prevent shell environment variables from leaking into ElizaOS plugin loading decisions and agent secrets.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-15.json"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "A new comprehensive guide was introduced in elizaos/eliza#6365, documenting autonomous AI agent payments using Circle and Coinbase APIs. This highlights the project's expanding scope beyond core functionality.",
-          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-14.json",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/ahecw1.jpg",
-            "summary": "AI agents process crypto payments."
-          },
-          "posters": "https://cdn.elizaos.news/posters/1768438867549-q1s6w5.png"
+          "text": "Issue Triage: A new issue was opened in the elizaos.github.io repository to remove the unused dependency @radix-ui/react-accordion.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-15.json"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1768348800
+  "date": 1768435200
 }
