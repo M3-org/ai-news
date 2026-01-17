@@ -1,138 +1,131 @@
-# elizaOS Discord - 2026-01-15
+# elizaOS Discord - 2026-01-16
 
 ## Overall Discussion Highlights
 
-### Token Migration & Exchange Issues
+### Security & Authentication Concerns
 
-The ai16z to elizaos token migration dominated community discussions, with **February 4th confirmed as the official deadline** by moderator Kenk. Multiple users encountered technical difficulties during the migration process:
+**GitHub Repository Spoofing Incident**
+A significant security concern emerged when community members discovered a suspicious GitHub repository (hash-llm) and Twitter account (@ctrlshifthash) containing commits that appeared to be from legitimate team members. Odilitime clarified this was not evidence of a hack but rather manipulated Git commits, explaining that anyone can use any email when making commits and commits can be moved from other projects. He verified his account security by noting his commits showed PGP signatures and he had MFA enabled. The team emphasized that only announcements in official channels should be trusted.
 
-- **Trust Wallet users** experienced "serialized message is not a function" errors
-- **Phantom wallet users** reported non-functional migration buttons, resolved through clearing browser cache and site data
-- **Bithumb exchange** completed their token swap, resolving concerns about wallet movements and potential price suppression
+**Sparta Bot Security Confusion**
+Casino raised concerns about Sparta requiring crypto wallet seed phrases and maintaining $100-500 in wallets. Odilitime and Chucknorris clarified this was incorrect, explaining that bots typically only need private keys. Chucknorris recommended using HSM vault for improved security with key pair signing.
 
-The migration eligibility was clarified by Arceon: only users who purchased ai16z before the snapshot are eligible to migrate. Conflicting information between the migration bot and official announcements created confusion that required moderator intervention.
+### Advanced Trading Infrastructure Development
 
-### Market Sentiment & Project Positioning
+**Real-Time Solana Trading System**
+Chucknorris detailed an extensive real-time Solana trading system built in Rust, featuring:
+- gRPC streaming using Yellowstone Dragon's Mouth and Jito's ShredStream for ultra-low latency data ingestion
+- Processing ~600 transactions/second with sub-150ms transfer times
+- Real-time on-chain data streaming, bundle detection, KOL tracking
+- Developer/rug detection, holder analysis, automatic token tracker creation
+- Smart exits with trailing stops
+- Monitoring 5k Twitter accounts for narrative/trend analysis
+- Autonomous token launching based on hot narratives and breaking news
 
-Community members expressed significant concern over price performance, with mentions of -99.53% drops from peak values. DorianD noted the project's position outside the top 200 preventing auto-invest flows. Broccolex identified a lack of conscious effort to link the token with the project as contributing to price decline.
+Chucknorris critiqued Sparta as "very utopian" with only API-based data and no real-time on-chain capabilities. The discussion covered database choices (PostgreSQL vs Clickhouse for massive data ingestion) and the role of AI vs algorithmic trading, with AI deemed too slow for decision-making at <0.01ms signing speeds.
 
-### Polymarket Trading Integration
+### Token Economics & Market Dynamics
 
-Shaw released an **Eliza 2.0.0 example plugin for Polymarket trading**, describing the evolution from "sloppy" initial implementation to "pretty good" using Claude code. Key technical insights included:
+**Price Manipulation Analysis**
+Significant discussion occurred around token price manipulation and selling pressure. Community members identified approximately $2 million USD worth of tokens being sold by 3 addresses, causing rapid price decline. Biazs shared a trading strategy of selling 80% during pumps and buying back incrementally during dips, gaining 30% more tokens. The consensus was that the token showed unnatural price action with heavy whale manipulation, though Alexei clarified it was not classified as a rug pull but rather serious selling that liquidity couldn't absorb.
 
-- Polymarket has an **official API** and automated trading is legitimate and above board
-- Alternative implementation available at github.com/Okay-Bet/plugin-polymarket
-- Recommended architecture: custom code with SDK, private nodes, inline stream mempool for constant flow, and parallel CLOB API usage
-- For multi-user scenarios: **BullMQ** suggested for worker management
+### Development Priorities & Project Management
 
-### Jeju Network Technical Vision
+**Core Development Focus**
+Shaw clarified development priorities in the core-devs channel, stating that cloud and app creation features must be completed first before launch. Action params and messageService components are already implemented, and freelancers are currently reviewing examples and Rust/Python implementations.
 
-DorianD provided substantive analysis of the planned Jeju decentralized compute network, acknowledging it as a "gargantuan undertaking" with uncertain timelines. The core technical challenge identified:
+**PR Management Workflow**
+Stan ⚡ worked on PR #6366 and PR #6113, successfully rebasing #6113 with working tests. Odilitime indicated that Shaw suggested holding PR #6113 for version 2.x release, putting the merge on hold pending final decision.
 
-**Latency constraints** make parallelized inference across multi-node ad-hoc networks impractical for real-time LLM applications where users expect immediate responses.
+### Integration & Feature Development
 
-**Viable use cases proposed:**
-1. **Long-running agent tasks** with overnight execution windows where users check results asynchronously
-2. **Autonomous agents** performing independent economic activities without human time-sensitivity constraints
+**ChatVRM + ElizaOS Integration**
+Supreem demonstrated a ChatVRM + ElizaOS integration using together.ai for unmoderated models, Tavily web search plugin, and ElevenLabs for TTS.
 
-These scenarios could effectively leverage decentralized networks for compute cycles and hardware resources.
+**3D Character Development**
+The Void mentioned creating 3D characters with elizaos agents for Hyperscape integration.
 
-### Socket.IO Integration & Plugin Development
-
-Chucknorris encountered challenges accessing Socket.IO server from custom plugins to broadcast real-time events. The goal was pushing WebSocket data (tweets) to the frontend via `socketIO.emit()`. Issues included:
-
-- `getGlobalAgentServer()` not being exported
-- `MessageBusService.serverInstance` being private
-
-Shaw provided guidance pointing to the socketio implementation in the develop branch and plugin-knowledge frontend examples. Chucknorris resolved the issue independently within 5 minutes by navigating through dependencies directly.
-
-Supreem developed a **together.ai inference plugin** and sought contribution guidance, receiving documentation links to docs.elizaos.ai/plugins/development and docs.elizaos.ai/guides/contribute-to-core.
-
-### Platform Issues & Bugs
-
-**Discord Client Bug**: DigitalDiva reported a TypeError in the latest ElizaOS version where `this.runtime.elizaOS.sendMessage` is undefined, breaking Discord message handling.
-
-**Windows/WSL Compatibility**: Casino struggled with Spartan setup on Windows without Docker, experiencing plugin path resolution errors. Chucknorris recommended WSL over PowerShell, though issues persisted in both environments.
-
-### Core Development Updates
-
-**PR #6113 Review**: Odilitime requested review for a PR pending since November, re-engineered to accommodate recent streaming work with focus on correctness over speed. Stan committed to reviewing and merging.
-
-**Hiscores API**: Jin announced the addition of an API to the hiscores feature, documented at elizaos.github.io/api. Concerns were raised about the "hiscores" naming (inspired by RuneScape) potentially creating perception of the project being a grindfest. Alternative suggestions included "rpg stats," "player card," or "character sheet."
+**Project Updates**
+M I A M I posted updates about ongoing development work, claiming to set records and encouraging collaboration over competition.
 
 ## Key Questions & Answers
 
-**Q: Which info is true about migration deadline - Feb 4 or no deadline?**  
-A: Feb 4th is the deadline for the migration (answered by Kenk)
+**Q: Is the hash-llm GitHub repository legitimate or are team members hacked?**
+A: Not hacked - commits are faked/moved from other projects. Only trust official announcements. (Odilitime)
 
-**Q: Migration buttons don't work in Phantom wallet, any ideas?**  
-A: Try disconnecting wallet, clear site data via Inspect > Application > Storage > Clear site data, then reload (answered by .)
+**Q: How can commits appear from team members in a repo they never committed to?**
+A: You can use anyone's emails when making commits, and commits can be moved from other projects. PGP signed commits prove authenticity. (Odilitime)
 
-**Q: How to access Socket.IO server from a custom plugin to broadcast events to the frontend?**  
-A: Check the socketio implementation at github.com/elizaOS/eliza/blob/develop/packages/server/src/socketio/index.ts and plugin routes example at github.com/elizaos-plugins/plugin-knowledge/tree/1.x/src/frontend (answered by shaw)
+**Q: Does Sparta require giving out seed phrases and maintaining $100-500 in a wallet?**
+A: No, bots normally only work with private keys. For improved security, install an HSM vault for key pair signing. (Odilitime and Chucknorris)
 
-**Q: What's the status with Polymarket's ToS on automated trading?**  
-A: They have an official API and it's all above board - automated agents are fair game and benefit them by adding orders to the book (answered by shaw)
+**Q: Why is the token dumping?**
+A: Token is heavily manipulated by whales, with unnatural price action and forced selling pressure. (Biazs)
 
-**Q: How to contribute a plugin to the community?**  
-A: docs.elizaos.ai/guides/contribute-to-core (answered by Chucknorris | ONYX P9 NODE RENT)
+**Q: Is this a rug pull?**
+A: Not a rug but serious selling going on - liquidity cannot absorb the volume. 3 addresses took about $2 million USD worth of tokens. (Alexei)
 
-**Q: Any update from Bithumb on the elizaos token movement?**  
-A: The issue has been resolved, they completed their swap yesterday (answered by jasyn_bjorn)
+**Q: By real-time onchain data do you mean an oracle or indexer?**
+A: gRPC streaming using Yellowstone Dragon's Mouth and Jito's ShredStream. (Chucknorris)
 
-**Q: What alternatives exist for the "hiscores" name?**  
-A: Suggested alternatives include "rpg stats," "player card," or "character sheet" to make it more fun and gamesy (answered by Odilitime)
+**Q: Wouldn't building an MEV solution using this be more profitable?**
+A: MEV is more complex and nodes are subsequently banned. (Chucknorris)
 
-**Q: What is the status of PR #6113?**  
-A: Stan committed to review and merge it, though delayed to the next morning due to time constraints (answered by Stan ⚡)
+**Q: What are you looking into Eliza for?**
+A: To automate the process, understand runtime, memory, action, and how an agent functions independently to integrate advanced services. (Chucknorris)
+
+**Q: Do you use any API to retrieve information about tokens/bundlers/patterns, or do you process everything through gRPC and RPC?**
+A: Everything from gRPC. RPC is only used for signing, not fetching data. (Chucknorris)
+
+**Q: What is the current development priority?**
+A: Cloud and app creation need to be finished first before launch, then other features can be pulled in and reviewed. (Shaw)
+
+**Q: Should PR #6113 be merged now?**
+A: Shaw suggested saving it for 2.x, waiting for confirmation before merging. (Odilitime)
 
 ## Community Help & Collaboration
 
-**Migration Support**
-- **Hexx 🌐** helped **ppckl** with ticket creation for ai16z change, suggesting connection to Migration link on official website
-- **Kenk** clarified migration deadline confusion for **chomppp**, confirming Feb 4th as official date
-- **.** (moderator) provided step-by-step troubleshooting to **Defi | Doctore** for non-functional Phantom wallet buttons
-- **Arceon** clarified migration eligibility for the general community
+**Odilitime → Community (0xfreedom, Bard)**
+Addressed confusion about suspicious GitHub repository and potential hack, explaining Git commit manipulation, verifying account security with PGP signatures and MFA, and confirming only official announcements are trustworthy.
 
-**Technical Development**
-- **shaw** guided **Chucknorris** on Socket.IO access patterns and provided implementation examples
-- **shaw** confirmed Polymarket API legitimacy for **Lxa**, addressing ToS concerns
-- **Chucknorris** provided comprehensive Polymarket architecture recommendations to **ElizaBAO**
-- **Chucknorris** supplied plugin development documentation to **Supreem**
-- **Chucknorris** recommended WSL and manual plugin installation to **Casino** for Windows issues
-- **sayonara** recommended alternative Polymarket plugin to **Lxa**
-- **shaw** shared Polymarket plugin code with **ElizaBAO**
+**Chucknorris → Casino**
+Clarified security concerns about bot wallet access, explaining bots use private keys and recommending HSM vault for improved security.
 
-**Core Development**
-- **Odilitime** suggested alternative naming conventions to **jin** for hiscores feature
-- **Stan ⚡** committed to reviewing **Odilitime's** long-pending PR
+**Biazs → Community Investors**
+Helped community understand token price manipulation and shared successful trading strategy of selling 80% during pumps and buying back during dips for 30% gain.
 
-**Exchange Issues**
-- **jasyn_bjorn** confirmed resolution of Bithumb token swap for **sayitaintso25**
+**Alexei → 거북알**
+Addressed concerns about whether token situation was a rug pull, clarifying it's not a rug but identifying 3 addresses with $2M in sells causing liquidity issues.
+
+**Kenk → Chucknorris**
+Suggested Eliza is better for subjective trend analysis, citing VAIL's use case analyzing X spaces for alpha. Also informed that Spartan lead is active in channel and launching on Binance Square soon.
+
+**Stan ⚡ → User 580487826420793364**
+Provided positive feedback on their PR quality during code review.
+
+**Odilitime → Stan ⚡**
+Informed about Shaw's decision to potentially save PR #6113 for 2.x version.
 
 ## Action Items
 
 ### Technical
 
-- **Fix Discord client TypeError** where this.runtime.elizaOS.sendMessage is undefined in latest ElizaOS version (Mentioned by: DigitalDiva)
-- **Resolve serialization error** "serialized message is not a function" in Trust Wallet during migration (Mentioned by: Sas)
-- **Fix non-functional migration buttons** in Phantom wallet interface (Mentioned by: Defi | Doctore)
-- **Resolve Spartan plugin path resolution issues** on Windows/WSL environments (Mentioned by: Casino)
-- **Implement full gRPC** with track tx/pnl based on real-time tweet feed WSS with token and trend detection (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
-- **Review and merge PR #6113** which addresses correctness issues and was re-engineered for streaming work (Mentioned by: Odilitime)
-- **Reconsider naming for hiscores API** to avoid negative perception (Mentioned by: jin)
-- **Implement Jeju network** for decentralized compute with focus on non-time-sensitive agent workloads (Mentioned by: DorianD)
-- **Improve Socket.IO server access pattern documentation** for custom plugins (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
-
-### Documentation
-
-- **Clarify official migration deadline information** to resolve conflicting messages between bot and announcements (Mentioned by: chomppp)
-- **Clarify Eliza 1.7 to 2.0 plugin compatibility** and migration path (Mentioned by: Supreem)
-- **API documentation published** at elizaos.github.io/api for hiscores feature (Mentioned by: jin)
+- **Add gRPC option to plugin-Solana for real-time on-chain data streaming** (Mentioned by: Odilitime)
+- **Complete cloud and app creation features before launch** (Mentioned by: Shaw)
+- **Evaluate PostgreSQL vs Clickhouse for massive data ingestion workload** (Mentioned by: Chucknorris)
+- **Implement HSM vault for secure key pair signing in bot operations** (Mentioned by: Chucknorris)
+- **Integrate Shred forwarding to complete transactions ahead of bundlers and large holders** (Mentioned by: Chucknorris)
+- **Review PR #6366** (Mentioned by: Stan ⚡)
+- **Final review of rebased PR #6113 with working tests** (Mentioned by: Stan ⚡)
+- **Await Shaw's decision on whether to merge PR #6113 or save for 2.x** (Mentioned by: Odilitime)
+- **Continue development work on setting records with the project** (Mentioned by: M I A M I)
 
 ### Feature
 
-- **Publish together.ai inference plugin** to community (Mentioned by: Supreem)
-- **Convert pre-made Poly/Kalshi bot** into Eliza plugin and action (Mentioned by: Chucknorris | ONYX P9 NODE RENT)
-- **Develop use cases for long-running agent tasks** that execute overnight without real-time latency requirements (Mentioned by: DorianD)
-- **Create infrastructure for autonomous agents** to utilize decentralized compute cycles and hardware for independent economic activities (Mentioned by: DorianD)
+- **Create autonomous launcher agent based on hot trends/narratives with Twitter feed analysis of 5k accounts** (Mentioned by: Chucknorris)
+- **Create 3D characters with elizaos agents for Hyperscape integration** (Mentioned by: The Void)
+
+### Documentation
+
+- **Establish clearer communication about official channels and how to verify legitimate team announcements vs spoofs** (Mentioned by: Bard)
+- **Freelancers reviewing examples and Rust/Python implementations** (Mentioned by: Shaw)
