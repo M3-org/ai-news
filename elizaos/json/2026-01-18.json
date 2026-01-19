@@ -1,0 +1,43 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-01-18",
+  "categories": [
+    {
+      "title": "ElizaOS Project Status and Community Concerns - January 18, 2026",
+      "content": [
+        {
+          "text": "Community members expressed significant concerns about the project's direction and token performance. Multiple users questioned whether ElizaOS was dying, with the chart reflecting negative sentiment. One user noted the channel felt like a ghost town. A controversial tweet from shaw revealed budget constraints, stating they had to fire a Facebook hire to afford Claude API costs. Community member DorianD criticized the project for wasting money on inference and employees without finding token utility in a year, leading to layoffs as the token price declined. Some users discussed alternative tokens like elizatown as a potential play, suggesting if it hits 10M market cap, ElizaOS could reach 100M+. Other members encouraged perspective, with one user telling others to stop crying and treat it like a game rather than over-investing.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/5BM-8D4TuXgAAAAe/its-all-just-a-game-guy-tang.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/5BM-8D4TuXgAAAPo/its-all-just-a-game-guy-tang.mp4"
+          ]
+        },
+        {
+          "text": "In the coders channel, developers showed interest in contributing to game development for the project. User Figure pinged shaw expressing desire to help build a game, which received positive reactions. Another developer asked about opportunities for skilled web and AI developers. A technical question was raised about the elizaos-plugins/plugin-discord being potentially broken when working with ElizaCloud, specifically for creating a chatbot for a personal server.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Core developer jin proposed improvements to documentation for agentic use cases. They shared resources from kapa.ai about optimizing technical documentation for LLMs and writing best practices. Jin suggested having Claude read these guides as context to develop a plan and then review each documentation page systematically. This initiative aims to make the documentation more accessible and useful for AI agents interacting with the project.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1462314797512130612/image.png?ex=696e6708&is=696d1588&hm=037b5c0d525bbf8a32c9dcf883b2e324e6ae54de2e130660393ad131339bd8a7&"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1768694400
+}
