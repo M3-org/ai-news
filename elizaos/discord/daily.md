@@ -1,78 +1,132 @@
-# elizaOS Discord - 2026-01-19
+# elizaOS Discord - 2026-01-20
 
 ## Overall Discussion Highlights
 
-### Market Analysis & Investment Philosophy
+### Token Economics & Migration Concerns
 
-The community engaged in substantive discussion about cryptocurrency market dynamics and investment strategies. **Alexei** provided educational content on Quantitative Easing (QE) cycles, explaining that QE restarted in December after years of contraction that negatively impacted altcoins. He noted that increased liquidity typically causes asset prices to rise, citing the Russell index (tradfi micro caps) hitting all-time highs as an indicator for potential crypto market movement in coming months.
+The most significant discussion across channels centered on the ai16z to elizaOS token migration and the lack of clear tokenomics. In **💬-discussion**, community members expressed frustration that the token feels disconnected from the project's roadmap. DorianD explained the migration rationale: the daos.fun contract was closed source, not auditable, and wouldn't be accepted by major exchanges like Coinbase. The migration also created ecosystem funds and liquidity tokens.
 
-The discussion revealed concerns about token sustainability, with parallels drawn to past projects where teams sold tokens to cover operational costs until liquidity dried up. Community consensus emerged that only BTC and ETH qualify as true investments, while most altcoins are speculative due to excessive supply and insufficient liquidity. **Error P015-A** and **DorianD** debated investment psychology, with advocacy for long-term diversification strategies and thick-skinned approaches to volatility.
+However, this technical necessity hasn't translated into clear value propositions for investors. The **🥇-partners** channel saw heated exchanges about a 70% token price decline, with partners arguing that the team's "build, don't talk about the token" approach is being interpreted as disinterest in token development, creating zero demand.
 
-### AI-Powered Moderation Systems
+### Token Utility & Use Cases
 
-**ElBru** shared comprehensive details about an Eliza-based Telegram moderation bot called "Solimp" that automatically manages spam and scam content. The bot implements an exponential timeout system starting at 60 seconds for first offenses, doubling with each subsequent violation (120s, 240s, etc.). The system uses muting rather than banning, allowing users to learn acceptable behavior.
+Two primary use cases emerged from discussions:
 
-After one year of active learning, monitoring, and refinement, the bot's effectiveness varies by group. For SterlingOS, it performs perfectly with minimal false positives. The moderation approach includes manual review capabilities where admins can unmute users and repost legitimate content if needed. Users reportedly accept occasional false positives in exchange for a clean channel environment.
+**Jeju Network Integration**: DorianD identified this as the primary technical use case, where Shaw is making commits and has demonstrated ElizaOS working in Rust. The Jeju documentation mentions 60+ onchain "actions" requiring gas fees paid in elizaOS tokens. However, the timeline (latter half of 2025 for initial launch, ongoing through 2027) feels distant to investors.
 
-### Development Updates & Infrastructure
+**ElizaCloud Buybacks**: Alexei mentioned Shaw discussed utility including profits from ElizaCloud and other sources doing token buybacks, similar to Binance's BNB model. This would be a significant turning point when confirmed.
 
-**DorianD** expressed desire for "the network" to launch, specifically wanting to run nodes from Puerto Rico with plans for physical infrastructure including server racks and automated security systems.
+### Project Roadmap & Communication Strategy
 
-**Jin** announced plans to revive "jintern" with improved data pipelines, MCP integration, and better models for enhanced effectiveness. He also promoted the Eliza knowledge repository for developers building agents to serve the Eliza ecosystem.
+In **🥇-partners**, Odilitime clarified the project progression path: **Framework → Cloud → Jeju**, with framework in 2024/2025, cloud in 2025/2026, and Jeju initial launch likely in 2026 with ongoing development through 2027. The team acknowledged the roadmap has "trust me bro" elements they can't yet disclose, and that execution/communication need improvement.
 
-Version 1.7.2 was released and linked by **cjft**.
+DorianD proposed concrete solutions:
+- Establish **research.elizaos.ai** blog for thought leadership content showcasing experiments and technical work
+- Position core devs as industry thought leaders beyond just developers
+- Create regular technical updates that non-devs can understand
+- Bottle up Shaw's interviews into articles so people don't need to watch streams to understand the vision
 
-### Code Review & Technical Concerns
+Dr. Neuro volunteered to create visual explanations of the framework-to-Jeju progression.
 
-**Odilitime** reviewed pull request #6286 from the elizaOS/eliza repository, expressing concerns about the implementation approach. The specific critique focused on the need to review the complete runtime file and recommended refactoring to use an `ensureEntities` function that accepts a list rather than the current approach, suggesting the PR may be handling entity operations suboptimally (possibly processing entities individually rather than in batch).
+### Technical Development & Infrastructure
+
+**Agent Behavior Improvements**: In **💬-coders**, Jin identified two key areas for agent improvement: reducing anxiety/chattiness and minimizing hallucinations. DorianD proposed providing the LLM with the last 20 chat messages to help determine if messages are directed at the agent, allowing better decision-making about when inference costs are justified.
+
+**Deployment Infrastructure**: Odilitime discussed a "swarm" deployment - a large elizaOS instance running multiple bots on a single server for Babylon's Discord, offering cost savings when agents share the same environment. Plans exist to eventually integrate swarm technology into the Eliza Cloud platform.
+
+**Documentation Gaps**: In **core-devs**, Odilitime identified missing CLI documentation, specifically upgrade instructions. Stan confirmed the production documentation is synced with the main branch but acknowledged the gap.
+
+**NPM Repository Management**: Shaw provided a solution for creating multiple NPM repositories programmatically, noting that Claude has MCP capabilities and that NPM's publish command automatically creates repositories.
+
+### Platform Development
+
+M I A M I demonstrated "agentic onboarding" in **💬-discussion** - migrating a Twitter profile to "space" (sentient space platform) with a single prompt, showcasing the platform's capabilities.
 
 ## Key Questions & Answers
 
-**Q: What is a QE cycle?**  
-**A:** Quantitative Easing - liquidity filling markets causing assets to rise, restarted December after years of contraction that hurt altcoins *(answered by Alexei)*
+**Q: Why was ai16z migrated to elizaOS?**  
+A: The daos.fun contract was closed source, not auditable, and wouldn't be accepted by exchanges like Coinbase; migration also created ecosystem funds and liquidity tokens (DorianD)
 
-**Q: How does the Telegram mod bot work?**  
-**A:** Deletes spam/scam and mutes offenders with exponential timeout increases per offense *(answered by ElBru)*
+**Q: Are there any actual use cases for this token besides paying gas fees in Jeju?**  
+A: Jeju network for agent execution with 60+ onchain actions requiring gas fees, ElizaCloud buybacks mentioned (DorianD, Alexei)
 
-**Q: How do you know if the bot gets false positives?**  
-**A:** One year of active learning, monitoring and refinement; depends on the group, some get too many false positives *(answered by ElBru)*
+**Q: What is the project progression path?**  
+A: Framework → Cloud → Jeju, with framework in 2024/2025, cloud in 2025/2026, and Jeju initial launch likely in 2026 with ongoing development through 2027 (Odilitime)
 
-**Q: Is there opportunity for banned users to explain themselves?**  
-**A:** Bot uses muting not banning; first offense 60s timeout, second 120s, third 240s etc.; admin can unmute and repost if content was acceptable *(answered by ElBru)*
+**Q: Why should anyone buy/hold ElizaOS token right now?**  
+A: The real value isn't clear because investors need to watch Shaw's streams to understand the vision; what exists isn't "dressed up enough" (Odilitime)
 
-### Unanswered Questions
+**Q: Is the swarm a way to Ralph wiggum QA testing?**  
+A: No, it's a big elizaOS instance on a server running all bots for Babylon's discord (Odilitime)
 
-- Is youtoy an elizaos-backed project? *(asked by elizafan222)*
-- Does anyone here have a project idea or need a developer? *(asked by ! Alex !)*
-- Is there anyone looking for an AI and Full stack dev? *(asked by aicodeflow)*
-- Where is the Rust port mentioned? *(asked by Mike D.)*
-- What's your opinion on eliza agentic? *(asked by velja)*
-- Should this implementation use ensureEntities and take a list instead? *(asked by Odilitime)*
+**Q: Where is the page that lists everything the CLI can do?**  
+A: https://docs.elizaos.ai/cli-reference/overview (Stan ⚡)
+
+**Q: Anyone know of an MCP or programmatic utility to make NPM repos?**  
+A: Claude has MCP support, and npm publish creates repos automatically (shaw)
+
+**Q: What does "to space" mean in this context?**  
+A: Sentient space is the platform, short form is space, users are called spacers (M I A M I)
 
 ## Community Help & Collaboration
 
-**ElBru → ElizaBAO**  
-*Context:* Need for community moderation solution  
-*Resolution:* Offered free Eliza-based Telegram moderation bot with spam/scam detection and exponential timeout system
+**DorianD → Community (Token Migration & Utility)**  
+Provided comprehensive explanations about the migration rationale, Jeju network integration, and the 60+ onchain actions requiring gas fees. Also proposed the research.elizaos.ai blog solution for better communication.
 
-**ElBru → DorianD**  
-*Context:* Concerns about false positives in moderation bot  
-*Resolution:* Explained one year refinement process, muting-only approach with manual review capability, and user acceptance of tradeoff
+**Odilitime → Community (Roadmap Clarity)**  
+Clarified the Framework → Cloud → Jeju progression path with timeline estimates and acknowledged communication gaps. Engaged constructively with partner concerns.
 
-**Alexei → ElBru**  
-*Context:* Understanding QE (Quantitative Easing) cycles and market impact  
-*Resolution:* Explained QE as liquidity injection causing asset rises, noted December restart after contraction period, cited Russell index ATH as indicator for crypto
+**DorianD → Team (Communication Strategy)**  
+Explained how open source networks like BTC, ETH, Ripple built moats through first-mover advantage despite being open source, helping the team understand crypto network utility.
+
+**Alexei → gby (Token Utility)**  
+Mentioned Shaw's discussion of ElizaCloud profits doing buybacks, providing some clarity on future utility mechanisms.
+
+**Stan ⚡ → Odilitime (Documentation)**  
+Provided link to CLI reference page and confirmed upgrade info was missing, helping identify documentation gaps.
+
+**shaw → Odilitime (NPM Automation)**  
+Explained that npm publish automatically creates repos and Claude MCP can assist, solving the challenge of creating 50-70 repositories.
+
+**Odilitime → jin (Deployment Options)**  
+Offered to add jin's agent to the swarm for cost savings, though jin decided to try Eliza Cloud instead.
+
+**Dr. Neuro → Team (Visual Communication)**  
+Volunteered to create visual art explaining the framework-to-Jeju progression during travel.
 
 ## Action Items
 
-### Technical
-- **Review complete runtime file for PR #6286 and refactor to use ensureEntities function that takes a list** *(mentioned by Odilitime)*
-- **Launch the network infrastructure to enable node operation** *(mentioned by DorianD)*
+### Documentation
+
+- **Create comprehensive whitepaper for Jeju network** to attract serious investors and clarify vision (DorianD)
+- **Improve communications and messaging** around token utility and roadmap integration (DorianD)
+- **Clarify and publish official tokenomics** for elizaOS (gby)
+- **Rewrite and improve the public roadmap document** to be clearer and better laid out with stronger vision/importance messaging (Odilitime)
+- **Bottle up Shaw's interviews into articles and threads** so people don't need to watch streams to understand the vision (Odilitime)
+- **Create visual explanations** of the Framework → Cloud → Jeju progression path with timeline (Odilitime, Dr. Neuro)
+- **Provide regular small updates** that team is aware things aren't trending right and is working on solutions (Broccolex)
+- **Create content explaining current usable features** on cloud that users can see and touch (Odilitime)
+- **Develop narrative around framework** as precursor to Jeju with story people can visualize about decentralized AI robots (DorianD)
+- **Add CLI upgrade instructions** to documentation (Odilitime)
+- **Deploy main branch documentation updates** to production (Odilitime)
+- **Address partner concerns** about token allocation and migration structure (Broccolex)
 
 ### Feature
-- **Node running capability with physical infrastructure support** *(mentioned by DorianD)*
-- **Revive jintern with improved data pipelines, MCP integration, and better models** *(mentioned by jin)*
-- **Build community features inside app rather than external platforms** *(mentioned by ElizaBAO)*
 
-### Documentation
-- **Use Eliza knowledge repository for building agents serving Eliza ecosystem** *(mentioned by jin)*
+- **Create research.elizaos.ai blog** with posts about experiments, technical work, Jeju vision, and token economics to establish thought leadership (DorianD)
+- **Implement ElizaCloud buyback mechanism** to support token price (Alexei)
+- **Add cost calculator to elizaOS** for estimating running costs based on agent configuration and plugins (ElBru)
+- **Integrate swarm technology** into Eliza Cloud platform (Odilitime)
+- **Make cloud infrastructure more accessible** and easier for non-devs to interact with and understand (Odilitime)
+- **Implement prompting system** that provides LLM with last 20 chat messages for context to determine if messages are directed at agent and if inference cost is justified (DorianD)
+- **Create holistic vision** connecting AI agents as open source public resources with token utility (DorianD)
+
+### Technical
+
+- **Complete Jeju network development** with 60+ onchain actions for agent execution (DorianD)
+- **Continue Shaw's commits** to Jeju network and ElizaOS Rust implementation (DorianD)
+- **Reduce agent anxiety/chattiness and hallucinations** (jin)
+- **Investigate if entity tracking** from general chat already exists in codebase (DorianD)
+- **Create 50-70 NPM repositories** using automated tooling (Odilitime)
+- **Improve messaging and communication** around token utility and why people should buy/hold ElizaOS (Broccolex, DannyNOR NoFapArc)
+- **Follow up research blog posts** with X spaces, demos, and screenshares on topics (DorianD)
