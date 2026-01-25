@@ -7,68 +7,67 @@
       "content": [
         {
           "text": "Community members discussed various token-related topics including GOLD airdrop speculation for ElizaOS holders, with questions about whether a 10% allocation would go to holders. There was also discussion about CJFT token trading and price movements. Technical support scam warnings were shared, with users cautioning about fake migration requests asking users to send tokens to specific addresses. The community shared updates about Hyperscape AI features, including live vibe coding demonstrations and new functionality being tested.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/G_dKscSWUAEd-yf.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1464749143346905189_53a93717.jpg",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/aia22s.jpg",
+            "summary": "Live vibe coding demonstrations."
+          }
         },
         {
           "text": "Developers worked on integrating AI capabilities with DaVinci Resolve video editing software. A community member built an MCP server integration for DaVinci Resolve and outlined ambitious goals for an AI video editing agent that could analyze video content, create text animations, manage transitions, and intelligently handle audio mixing in Fairlight. The project aims to detect dialogue, music, and sound effects to automatically adjust levels. Discussion included the limitations of DaVinci Resolve's API and potential alternatives like Adobe Premiere Pro. Users experienced version update issues with ElizaOS CLI, with troubleshooting focused on migration errors and cache problems when updating from version 1.6.5 to 1.7.2. The Clawdbot project gained attention as a personal AI assistant that can be deployed on AWS and interfaces through WhatsApp, Discord, and Telegram.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/2014934261543907328/img/cdwq7tvm205mirFW.jpg:large",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464756807716044800/image.png?ex=6976a094&is=69754f14&hm=7209981f0c042fb22d256fc5d11d6aaf11a09039e1a7218aa8c266fabf091dad&",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464756808232210472/image.png?ex=6976a094&is=69754f14&hm=e2f4332c5e7b9374c58a85368aaffecbeb6c9ea876817e4a0b6b9abd3ba36867&",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464756808567488806/image.png?ex=6976a095&is=69754f15&hm=86686d4cfe32dc2178de3e0d6e707c790b06f452df106bf819b1349b402aa66a&",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464756808877998273/image.png?ex=6976a095&is=69754f15&hm=602a57c12d9115d610395f7e339dbeb22ab778f43a67ea532e30e6284414365d&"
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1464670130150703286_1dbf6cb0.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image_6d31f511.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image_0a66208c.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image_fc1f9c2b.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image_d33b4cf6.jpg"
           ],
           "videos": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464669897664757780/20260124-1713-19.9270253.mp4?ex=69764fa3&is=6974fe23&hm=a681f212271c2635e21006d8c37b15241a9e7071ea4e4997853e24459f5d2f03&",
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1464471950524153937/20260124-0407-22.3523131.mp4?ex=69764009&is=6974ee89&hm=6d2d05e317420b966ab4c6f2d1ae168065026a99881985d9ad71275f0e95b506&"
-          ]
+            "https://cdn.elizaos.news/elizaos-media/20260124-1713-19-9270253_d1cd6e33.mp4",
+            "https://cdn.elizaos.news/elizaos-media/20260124-0407-22-3523131_87a298d5.mp4"
+          ],
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/aia238.jpg",
+            "summary": "Clawdbot AI via WhatsApp, Discord, Telegram."
+          }
         },
         {
           "text": "Significant tension emerged in the partners channel regarding token launch strategy. Community members questioned why multiple coins were being launched instead of focusing on a single ElizaOS token, expressing concerns about dilution and scammy appearance. Shaw defended the strategy, explaining that ElizaOS has a 20 million market cap with 8 months of runway, and that Hyperscape needed separate funding as a game with its own team. He emphasized that GOLD serves as in-game currency for a RuneScape-like crypto game and that the team is building revenue-generating products including Cloud apps and Babylon with 375,000 users. Shaw expressed frustration with criticism, noting he made 400,000 dollars a year ago but held tokens that lost value, and stated he was considering leaving the server due to negativity. Partners suggested that attention should focus on making ElizaOS thrive first, with some proposing that ecosystem projects should airdrop to ElizaOS holders or create token utility connections rather than launching independent coins. The discussion highlighted strategic disagreements about ecosystem development and token economics.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1301363808421543988/1464486739685937315/Screenshot_2026-01-24_at_12.53.23.png?ex=69764dcf&is=6974fc4f&hm=5f3840ead6b4fff3ea04c8a780bd619f2082e36dc37827d266baad7af8b154a9&"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "images": "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-24_at_12-53-23_df6f911a.png",
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/aia23k.jpg",
+            "summary": "Shaw made $400k last year."
+          }
         },
         {
           "text": "Core developers shared updates on game generation technology using diffusion output for creating moon-like environments and flexible media assets. The Clawdbot project continued to gain traction with recommendations for installation on old laptops or computers with specific AI model subscriptions. A humorous post indicated that Shaw was found and remained connected to the ElizaOS Discord community despite earlier frustrations.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/2013708200177016832/img/5v_TvXjK6wPI5hYz.jpg:large",
-            "https://pbs.twimg.com/media/G_cN8GwWcAA-DnS.jpg:large",
-            "https://cdn.discordapp.com/attachments/1377726087789940836/1464671816470757637/IMG_3182.png?ex=6976516d&is=6974ffed&hm=6422ce4f2da174f41ce757187fa59ece01624be1812e563e7d27184db156237b&"
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1464620527539720222_466b473a.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1464656382467772649_fed787c8.jpg",
+            "https://cdn.elizaos.news/elizaos-media/img_3182_f7413a42.jpg"
           ],
-          "videos": []
+          "memes": {
+            "url": "https://cdn.elizaos.news/imgflip/aia23u.jpg",
+            "summary": "Shaw was found."
+          }
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "Activity Summary for 2026-01-24",
-      "content": [
-        {
-          "text": "No activity recorded for 2026-01-24.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-01-24.json"
-          ],
-          "images": [],
-          "videos": []
+      "content": {
+        "text": "No activity recorded for 2026-01-24.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-24.json",
+        "memes": {
+          "url": "https://cdn.elizaos.news/imgflip/aia244.jpg",
+          "summary": "No activity recorded for 2026-01-24."
         }
-      ],
+      },
       "topic": "miscellaneous"
     }
   ],
