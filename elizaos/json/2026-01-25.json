@@ -1,0 +1,47 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-01-25",
+  "categories": [
+    {
+      "title": "ElizaOS Development Discussions - January 25, 2026",
+      "content": [
+        {
+          "text": "Technical discussions in the coders channel focused on Eliza Cloud capabilities and external MCP integration. A user from Japan introduced themselves as an AI and full stack developer with 8 years of experience, offering development services. The main technical question centered on whether agents created within Eliza Cloud can access external MCP servers. After initial confusion, it was clarified that external MCP servers can be registered through the Eliza Cloud API using POST /api/v1/mcps endpoint, allowing agents to proxy calls to those endpoints. A security concern was raised when a user reported receiving a suspicious request for wallet address from a Create A Ticket bot, which was confirmed as a scam by Odilitime. Additional discussions touched on Claude code integration with Eliza, self-hosting options using mini PCs, and Oracle cloud free tier deployment with 4 vcpu and 24gb ram. ElizaBAO announced they are hiring developers with creator rewards and Polymarket affiliate profit sharing opportunities.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1464854640716812351/image.png?ex=6977a472&is=697652f2&hm=4948de87baf8ee79b0073fd823863cfbdffca19ad4069852c85bca087076eb63&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1464997791980982472/image.png?ex=69778103&is=69762f83&hm=c2d39470e72e66cc87b7fb712cbfb1fc71060db2e00ded790efa0cba50ce9d70&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Core developers discussed memory management solutions and business development opportunities. Odilitime shared two GitHub repositories focused on memory systems: supermemoryai/supermemory, described as an extremely fast and scalable memory engine and app for the AI era, and vectorize-io/hindsight, which implements agent memory that works like human memory. The team discussed a consultant named Vivek who has been participating in spaces with Shaw and Odilitime and is currently in direct communication. Vivek is described as a consultant similar to aiflow and is particularly interested in helping the team obtain an enterprise Twitter key. There was also discussion about interesting work being done by someone from the 8004 community. Additionally, there was a brief mention of Twitter now using shadcn on its web platform.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/891d917d7a380e5d89e0971c28395380df62311e41d994e5f5713885039a864c/supermemoryai/supermemory",
+            "https://opengraph.githubassets.com/421eb4a8ad339e92c7d5ec1fcd09ab37ca34c3e3f17869aa7558daf18bb04dd3/vectorize-io/hindsight"
+          ],
+          "videos": []
+        },
+        {
+          "text": "General community discussion covered various topics including token speculation and platform questions. Community members expressed optimism about STUDIO token having staying power, noting that the developer is actively building and Shaw has engaged with them. A user asked whether the various tokens have any impact on ElizaOS or if they are fully independent projects. There was discussion about Eliza Town and whether it has its own Discord channel, with clarification that the current server is the main Discord channel. One user suggested the team should implement a buyback program, though another member countered that cash might be better used elsewhere. A question was raised about why there are not more specialized, single-purpose Eliza agents being deployed, wondering if developers are keeping their use cases private. The community noted they have only had 4 green days in the last month but expressed optimism about better times ahead.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/5XNfYyBGDNgAAAAe/wazappp.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/5XNfYyBGDNgAAAPo/wazappp.mp4"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1769299200
+}

@@ -1,75 +1,47 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-01-24",
+  "title": "Daily Report - 2026-01-25",
   "categories": [
     {
-      "title": "ElizaOS Community Updates - January 24, 2026",
+      "title": "ElizaOS Development Discussions - January 25, 2026",
       "content": [
         {
-          "text": "Community members discussed various token-related topics including GOLD airdrop speculation for ElizaOS holders, with questions about whether a 10% allocation would go to holders. There was also discussion about CJFT token trading and price movements. Technical support scam warnings were shared, with users cautioning about fake migration requests asking users to send tokens to specific addresses. The community shared updates about Hyperscape AI features, including live vibe coding demonstrations and new functionality being tested.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1464749143346905189_53a93717.jpg",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aia22s.jpg",
-            "summary": "Live vibe coding demonstrations."
-          }
+          "text": "Technical discussions in the coders channel focused on Eliza Cloud capabilities and external MCP integration. A user from Japan introduced themselves as an AI and full stack developer with 8 years of experience, offering development services. The main technical question centered on whether agents created within Eliza Cloud can access external MCP servers. After initial confusion, it was clarified that external MCP servers can be registered through the Eliza Cloud API using POST /api/v1/mcps endpoint, allowing agents to proxy calls to those endpoints. A security concern was raised when a user reported receiving a suspicious request for wallet address from a Create A Ticket bot, which was confirmed as a scam by Odilitime. Additional discussions touched on Claude code integration with Eliza, self-hosting options using mini PCs, and Oracle cloud free tier deployment with 4 vcpu and 24gb ram. ElizaBAO announced they are hiring developers with creator rewards and Polymarket affiliate profit sharing opportunities.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1464854640716812351/image.png?ex=6977a472&is=697652f2&hm=4948de87baf8ee79b0073fd823863cfbdffca19ad4069852c85bca087076eb63&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1464997791980982472/image.png?ex=69778103&is=69762f83&hm=c2d39470e72e66cc87b7fb712cbfb1fc71060db2e00ded790efa0cba50ce9d70&"
+          ],
+          "videos": []
         },
         {
-          "text": "Developers worked on integrating AI capabilities with DaVinci Resolve video editing software. A community member built an MCP server integration for DaVinci Resolve and outlined ambitious goals for an AI video editing agent that could analyze video content, create text animations, manage transitions, and intelligently handle audio mixing in Fairlight. The project aims to detect dialogue, music, and sound effects to automatically adjust levels. Discussion included the limitations of DaVinci Resolve's API and potential alternatives like Adobe Premiere Pro. Users experienced version update issues with ElizaOS CLI, with troubleshooting focused on migration errors and cache problems when updating from version 1.6.5 to 1.7.2. The Clawdbot project gained attention as a personal AI assistant that can be deployed on AWS and interfaces through WhatsApp, Discord, and Telegram.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "text": "Core developers discussed memory management solutions and business development opportunities. Odilitime shared two GitHub repositories focused on memory systems: supermemoryai/supermemory, described as an extremely fast and scalable memory engine and app for the AI era, and vectorize-io/hindsight, which implements agent memory that works like human memory. The team discussed a consultant named Vivek who has been participating in spaces with Shaw and Odilitime and is currently in direct communication. Vivek is described as a consultant similar to aiflow and is particularly interested in helping the team obtain an enterprise Twitter key. There was also discussion about interesting work being done by someone from the 8004 community. Additionally, there was a brief mention of Twitter now using shadcn on its web platform.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
           "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1464670130150703286_1dbf6cb0.jpg",
-            "https://cdn.elizaos.news/elizaos-media/image_6d31f511.jpg",
-            "https://cdn.elizaos.news/elizaos-media/image_0a66208c.jpg",
-            "https://cdn.elizaos.news/elizaos-media/image_fc1f9c2b.jpg",
-            "https://cdn.elizaos.news/elizaos-media/image_d33b4cf6.jpg"
+            "https://opengraph.githubassets.com/891d917d7a380e5d89e0971c28395380df62311e41d994e5f5713885039a864c/supermemoryai/supermemory",
+            "https://opengraph.githubassets.com/421eb4a8ad339e92c7d5ec1fcd09ab37ca34c3e3f17869aa7558daf18bb04dd3/vectorize-io/hindsight"
+          ],
+          "videos": []
+        },
+        {
+          "text": "General community discussion covered various topics including token speculation and platform questions. Community members expressed optimism about STUDIO token having staying power, noting that the developer is actively building and Shaw has engaged with them. A user asked whether the various tokens have any impact on ElizaOS or if they are fully independent projects. There was discussion about Eliza Town and whether it has its own Discord channel, with clarification that the current server is the main Discord channel. One user suggested the team should implement a buyback program, though another member countered that cash might be better used elsewhere. A question was raised about why there are not more specialized, single-purpose Eliza agents being deployed, wondering if developers are keeping their use cases private. The community noted they have only had 4 green days in the last month but expressed optimism about better times ahead.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/5XNfYyBGDNgAAAAe/wazappp.png"
           ],
           "videos": [
-            "https://cdn.elizaos.news/elizaos-media/20260124-1713-19-9270253_d1cd6e33.mp4",
-            "https://cdn.elizaos.news/elizaos-media/20260124-0407-22-3523131_87a298d5.mp4"
-          ],
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aia238.jpg",
-            "summary": "Clawdbot AI via WhatsApp, Discord, Telegram."
-          }
-        },
-        {
-          "text": "Significant tension emerged in the partners channel regarding token launch strategy. Community members questioned why multiple coins were being launched instead of focusing on a single ElizaOS token, expressing concerns about dilution and scammy appearance. Shaw defended the strategy, explaining that ElizaOS has a 20 million market cap with 8 months of runway, and that Hyperscape needed separate funding as a game with its own team. He emphasized that GOLD serves as in-game currency for a RuneScape-like crypto game and that the team is building revenue-generating products including Cloud apps and Babylon with 375,000 users. Shaw expressed frustration with criticism, noting he made 400,000 dollars a year ago but held tokens that lost value, and stated he was considering leaving the server due to negativity. Partners suggested that attention should focus on making ElizaOS thrive first, with some proposing that ecosystem projects should airdrop to ElizaOS holders or create token utility connections rather than launching independent coins. The discussion highlighted strategic disagreements about ecosystem development and token economics.",
-          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-          "images": "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-24_at_12-53-23_df6f911a.png",
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aia23k.jpg",
-            "summary": "Shaw made $400k last year."
-          }
-        },
-        {
-          "text": "Core developers shared updates on game generation technology using diffusion output for creating moon-like environments and flexible media assets. The Clawdbot project continued to gain traction with recommendations for installation on old laptops or computers with specific AI model subscriptions. A humorous post indicated that Shaw was found and remained connected to the ElizaOS Discord community despite earlier frustrations.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1464620527539720222_466b473a.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1464656382467772649_fed787c8.jpg",
-            "https://cdn.elizaos.news/elizaos-media/img_3182_f7413a42.jpg"
-          ],
-          "memes": {
-            "url": "https://cdn.elizaos.news/imgflip/aia23u.jpg",
-            "summary": "Shaw was found."
-          }
+            "https://media.tenor.com/5XNfYyBGDNgAAAPo/wazappp.mp4"
+          ]
         }
       ],
       "topic": "discordrawdata"
-    },
-    {
-      "title": "Activity Summary for 2026-01-24",
-      "content": {
-        "text": "No activity recorded for 2026-01-24.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-01-24.json",
-        "memes": {
-          "url": "https://cdn.elizaos.news/imgflip/aia244.jpg",
-          "summary": "No activity recorded for 2026-01-24."
-        }
-      },
-      "topic": "miscellaneous"
     }
   ],
-  "date": 1769212800
+  "date": 1769299200
 }

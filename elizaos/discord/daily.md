@@ -1,110 +1,94 @@
-# elizaOS Discord - 2026-01-24
+# elizaOS Discord - 2026-01-25
 
 ## Overall Discussion Highlights
 
-### Critical Strategic Debate: Tokenomics & Ecosystem Development
+### MCP Integration & API Development
 
-The most significant discussion centered on ElizaOS's approach to ecosystem token launches, creating substantial tension between the core team and community members. **Shaw revealed critical financial context**: ElizaOS has a $20M market cap with 8 months runway remaining, and the team lacks budget to fund ecosystem projects like Hyperscape from existing Cloud and Babylon allocations.
+The primary technical focus was on Model Context Protocol (MCP) integration with Eliza Cloud. SATA explored adding external MCP servers to agents for AI Red Teaming with human-in-the-loop functionality. SOLOMON VANDY provided detailed guidance on registering external MCP servers through the Eliza Cloud API using the `POST /api/v1/mcps` endpoint, enabling Eliza to proxy calls to those endpoints for agent reasoning and task execution. Kenk requested adding Eliza MCP functionality to the channel, which Odilitime indicated was feasible.
 
-**The Core Issue**: The team launched a separate "gold" token for Hyperscape (a RuneScape-like crypto game built on Eliza agents) via a Pump.fun hackathon to fund development. This decision sparked community backlash, with members arguing it:
-- Dilutes attention from the main $elizaos token
-- Damages ecosystem reputation
-- Reduces investor confidence
+### Self-Hosting & Infrastructure
 
-**Community Counterproposals**:
-- Implement airdrops to elizaOS holders for ecosystem tokens
-- Require token pairing (similar to Virtuals ecosystem)
-- Use grants-based funding instead of team-launched tokens
-- Reference Vitalik's approach of never launching tokens beyond ETH
+LarpsAI shared insights about community deployment patterns, noting users are deploying Eliza on mini PCs to avoid keeping main systems running 24/7. A blog post was referenced detailing Oracle Cloud free tier deployment with specifications of 4 vCPU and 24GB RAM. This discussion highlighted growing interest in accessible self-hosting options for the community.
 
-**Technical Solution Proposed**: DorianD suggested integrating $elizaos utility directly into ecosystem apps by requiring platform fees for LLM compute and storage operations, with game item/agent creation triggering $elizaos burns or network fees.
+### Security & Scam Prevention
 
-**Critical Outcome**: Shaw expressed frustration with community negativity, noting personal financial sacrifices (held $200k in declining tokens without selling, facing tax obligations) and threatened to leave the server due to ongoing drama. The team is on a 2-week MVP schedule for Hyperscape, with cloud apps launching imminently and Babylon serving 375k users.
+A security incident was identified involving a "Create A Ticket" bot requesting wallet addresses from users. SATA reported receiving suspicious links after posting questions in the channel. Odilitime confirmed this as a scam operation, likely using automated astroturfing tactics, and warned the community.
 
-### Technical Development & Integration Projects
+### Community Engagement & Resources
 
-**DaVinci Resolve AI Integration**: Irie_Rubz initiated development of a DaVinci Resolve MCP integration (https://github.com/AyeRubz/davinci-resolve-mcp) to automate video editing tasks including timeline imports, effects, text animations, transitions, and audio management. PatoVeloso, a professional Resolve user, suggested:
-- Using transcription features to create trimmed sequences from longer content
-- Adding AI video transformation capabilities (e.g., converting real action to Pixar-style animation)
+In the core-devs channel, Odilitime shared two GitHub repositories: supermemory (a memory management tool) and hindsight (by vectorize-io). Discussion touched on Vivek, a consultant engaging with the team through DMs and community spaces, who recommended obtaining an enterprise Twitter API key for the project. There was also brief observation about Twitter's web platform now using shadcn UI component library.
 
-**Key Limitation Identified**: DaVinci has restricted API allocations preventing fully autonomous features. Adobe Premiere Pro was considered but dismissed due to subscription costs.
+### Product Development & Adoption
 
-**Clawd.bot Project**: DorianD shared the clawd.bot project, which runs on Mac minis with local models and features Meta Raybans integration for price comparison functionality. Clarified that Macs are not required—they're just commonly used for running local models.
+Skinny raised important questions about Eliza agent use cases, wondering why there aren't more specialized, single-purpose agents being deployed despite the framework's availability. This suggests potential concerns about adoption barriers or unclear value propositions for developers that remain unaddressed.
 
-### Version Migration & Technical Issues
+### Token & Ecosystem Questions
 
-**Eliza CLI Update Problems**: YogaFlame encountered persistent version conflicts when updating from 1.6.5 to 1.7.2, experiencing SQL migration failures and bootstrap errors with the Discord plugin. The issue stemmed from cached package.json references.
-
-**Solution Provided by 0xbbjoker**:
-1. Clear cache: `bun pm cache rm`
-2. Uninstall/reinstall CLI globally: `bun uninstall -g @elizaos/cli` then `bun i -g @elizaos/cli`
-3. Remove node_modules and bun.lock files
-4. Manually update package.json to 1.7.2 or create fresh project
-
-**Confirmed Fix**: Bootstrap issues resolved in elizaos 1.7.2 and discord plugin 1.3.8.
-
-### Security Alert
-
-**Token Migration Scam**: Jeburek12 received a fraudulent message claiming to be from technical support, requesting manual token migration from ai16z to elizaOS by sending tokens to wallet address `77qVj3adpxbKjLuD9FoeFvDxHuAsro1cjvLVjuPQcEZ5` with promises of receiving equivalent elizaOS tokens within 24 hours. Odilitime acknowledged awareness of this scam pattern.
+Alexei asked about the relationship between various tokens and ElizaOS, specifically whether they impact the core project or operate independently. This question went unanswered, indicating a need for clearer documentation about the token ecosystem. Brief discussion about $STUDIO token occurred, with The Void and MDMnvest expressing confidence based on developer activity.
 
 ## Key Questions & Answers
 
-**Q: Why launch coins for everything instead of focusing on singular $elizaos token?**  
-A: Shaw explained they have $20M market cap with 8 months runway, no budget to fund Hyperscape from existing allocations, so separate token launches fund development of games built on Eliza framework.
+**Q: Is it possible to give an agent created within Eliza Cloud access to an external MCP?**  
+*Asked by: SATA*  
+**A:** You can add external MCP servers by registering them through the Eliza Cloud API using POST /api/v1/mcps, and once registered, Eliza can proxy calls to those MCP endpoints.  
+*Answered by: SOLOMON VANDY*
 
-**Q: Has Vitalik ever launched any other coin besides ETH?**  
-A: No, and he's reluctant to even endorse tokens in the ETH ecosystem (noted by sayitaintso25 as a counterexample to current strategy).
+**Q: Can we add eliza mcp here?**  
+*Asked by: Kenk*  
+**A:** Probably no reason why we can't.  
+*Answered by: Odilitime*
 
-**Q: How do I fix the CLI showing 1.6.5 after updating to 1.7.2?**  
-A: Run `bun uninstall -g @elizaos/cli`, `bun pm cache rm`, `bun i -g @elizaos/cli`, remove node_modules & bun.lock, update package.json to 1.7.2 or create fresh project (answered by 0xbbjoker).
+**Q: Why would support bot need wallet address?**  
+*Asked by: SATA*  
+**A:** It's a scam.  
+*Answered by: Odilitime*
 
-**Q: How true is the limitation about DaVinci's API allocations preventing fully autonomous features?**  
-A: Confirmed as a limitation; DaVinci has limited API allocations preventing fully autonomous creation until they allow more (confirmed by Irie_Rubz via research).
+**Q: Does Eliza Town have its own Discord channel?**  
+*Asked by: Slothify⚡*  
+**A:** This is the discord channel.  
+*Answered by: Never Broke Again (NBA)*
 
-**Q: Do you need a Mac to run clawd.bot?**  
-A: No, people are just using Macs for running local models (answered by DorianD).
-
-**Q: What are the migration errors when updating to 1.7.2?**  
-A: Failed SQL migration errors and bootstrap errors with Discord plugin, caused by version caching issues (answered by 0xbbjoker).
+**Q: Who is the person doing interesting stuff?**  
+*Asked by: sayonara*  
+**A:** Vivek, a consultant similar to aiflow who attended spaces with Shaw and Odilitime.  
+*Answered by: Odilitime and Kenk*
 
 ## Community Help & Collaboration
 
-**0xbbjoker → YogaFlame**: Provided systematic troubleshooting for CLI version conflicts and migration errors, including cache clearing commands and confirmation that bootstrap fixes were implemented in latest versions (elizaos 1.7.2 and discord plugin 1.3.8).
+**MCP Integration Support**  
+SOLOMON VANDY provided comprehensive assistance to SATA regarding external MCP server integration with Eliza Cloud agents for AI Red Teaming. The helper provided specific API endpoint information (`POST /api/v1/mcps`) and explained the proxy functionality, enabling SATA to move forward with their implementation.
 
-**PatoVeloso → Irie_Rubz**: Offered professional guidance on DaVinci Resolve AI integration approach, suggesting transcription-based content trimming features and AI video transformation capabilities to enhance the project's value proposition.
+**Self-Hosting Guidance**  
+LarpsAI helped the general community with self-hosting questions by suggesting mini PCs for 24/7 operation and referencing an Oracle Cloud free tier deployment guide with detailed specifications (4 vCPU and 24GB RAM), providing accessible infrastructure options.
 
-**DorianD → shaw**: Proposed technical solution to address community concerns about ecosystem tokenomics by implementing network-level integration where game items/agents creation triggers $elizaos burns or platform fees, creating direct utility linkage.
+**Security Alert**  
+Odilitime protected SATA and the broader community by confirming suspicious wallet address requests from the "Create A Ticket" bot as a scam and warning about astroturfing tactics, preventing potential security incidents.
 
-**DorianD → ElizaBAO**: Clarified technical requirements for clawd.bot project, explaining that Macs are used for local models but not required for the project itself.
+**Community Navigation**  
+Never Broke Again (NBA) assisted Slothify⚡ in finding the correct Discord channel for Eliza Town discussions, clarifying that they were already in the appropriate location.
 
-**mawnst3r → shaw**: Provided encouragement during community tension, acknowledging shaw's past success and expressing continued support despite strategic disagreements.
-
-**DannyNOR NoFapArc → shaw**: Advised on ecosystem reputation management, suggesting focus on building relationships and potential value of external backing, encouraging a "let him cook" approach.
+**Consultant Identification**  
+Kenk and Odilitime collaborated to provide sayonara with background information about Vivek, a consultant engaging with the team, helping to clarify community connections and ongoing initiatives.
 
 ## Action Items
 
 ### Technical
-
-- **Complete DaVinci Resolve MCP integration and integrate with Eliza AI agents** (Mentioned by: Irie_Rubz)
-- **Implement AI-powered video editing features including text animations, transitions, and Fairlight audio management** (Mentioned by: Irie_Rubz)
-- **Implement network-level integration where game items/agents creation triggers $elizaos burns or platform fees** (Mentioned by: DorianD)
-- **Add platform fees in $elizaos for LLM compute and storage operations in ecosystem apps** (Mentioned by: DorianD)
-- **Complete 2-week MVP for Hyperscape game** (Mentioned by: shaw)
-- **Launch cloud apps (imminent)** (Mentioned by: shaw)
-- **Fix bootstrap errors in Discord plugin** - confirmed fixed in elizaos 1.7.2 and discord 1.3.8 (Mentioned by: 0xbbjoker)
-- **Investigate and warn community about fraudulent token migration scam targeting ai16z holders** (Mentioned by: Jeburek12)
-
-### Feature
-
-- **Add transcription-based content trimming feature for DaVinci Resolve to create optimized sequences** (Mentioned by: PatoVeloso)
-- **Develop AI video transformation capabilities (real action to animation styles like Pixar) for DaVinci Resolve** (Mentioned by: PatoVeloso)
-- **Consider airdrop mechanism for ecosystem tokens to elizaOS holders** (Mentioned by: sayitaintso25)
-- **Implement token pairing requirements for ecosystem projects similar to Virtuals ecosystem** (Mentioned by: sayitaintso25)
-- **Establish grants program for ecosystem teams as alternative to team-launched tokens** (Mentioned by: sayitaintso25)
-- **Clarify whether custom items can be created for hyperscape and sold for gold** (Mentioned by: Bless)
+- **Investigate Oracle Cloud free tier deployment for Eliza** (4 vCPU, 24GB RAM configuration)  
+  *Mentioned by: LarpsAI*
 
 ### Documentation
+- **Check documentation around /api/v1/mcps** for external MCP server registration  
+  *Mentioned by: SATA*
 
-- **Document DaVinci Resolve API limitations and workarounds for autonomous features** (Mentioned by: Irie_Rubz)
-- **Provide official guidance on legitimate token migration processes to prevent scam victims** (Mentioned by: Jeburek12)
-- **Clarify tokenomics strategy and relationship between $elizaos and ecosystem tokens** (Mentioned by: Broccolex)
+- **Clarify relationship between various tokens and ElizaOS** core project  
+  *Mentioned by: Alexei*
+
+### Feature
+- **Add Eliza MCP functionality** to the channel  
+  *Mentioned by: Kenk*
+
+- **Obtain an enterprise Twitter API key**  
+  *Mentioned by: Odilitime (via Vivek)*
+
+- **Investigate and address barriers** to creating specialized single-purpose Eliza agents  
+  *Mentioned by: Skinny*
