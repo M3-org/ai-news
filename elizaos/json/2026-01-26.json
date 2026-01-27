@@ -1,0 +1,89 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-01-26",
+  "categories": [
+    {
+      "title": "ElizaOS Development Updates and Community Discussions - January 26, 2026",
+      "content": [
+        {
+          "text": "Community members discussed integrating Eliza AI assistant into the Seeker phone app store. User exeplata suggested that Eliza would be a valuable addition to the Seeker phone's DApp store, noting that current apps on the platform are lacking and an Eliza AI assistant similar to Claude bot would attract attention. The Seeker phone features a DApp store similar to Apple or Google Play Store.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Technical discussions in the coders channel covered multiple topics. A developer reported issues with plugin action handler callbacks, noting that only the first callback was being sent instead of multiple callbacks as documented. Odilitime confirmed that multiple callbacks are possible and some actions do use them. User 0x_404 shared research on building AI companions using a tech stack combining Eliza, Clawde, Letta, and either local LLMs or Opus/GPT plus Cua, questioning why this stack couldn't create something similar to Digimon. Additionally, a user shared findings of 481K lines of unreleased code recovered from old ElizaOS branch repositories.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://media.tenor.com/Uyw3pe7DqJEAAAAe/garnett-kg.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/Uyw3pe7DqJEAAAPo/garnett-kg.mp4"
+          ]
+        },
+        {
+          "text": "Core developer sam announced his return to work after recovering from surgery, stating he is 80 percent recovered and ready to continue building cloud infrastructure and features for users. The announcement received positive reactions from the team. Additionally, Odilitime informed the core dev team that Shaw has returned to the Discord server.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7a466b50-e668-4731-e757-9ca7284a4800/original"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Community members expressed concerns about the ElizaOS token price reaching new all-time lows. User paolin asked whether the ElizaOS token is still valid and if the community remains interested, expressing frustration about the continuous price decline without team response. Other community members provided reassurance, noting that AI agents are the future and ElizaOS is among leading projects in the space. They emphasized that the entire market is experiencing volatility and downward trends, not just ElizaOS specifically. Some holders indicated they are taking a long-term view, looking at the next 4-year cycle.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Project Daily Progress - January 26, 2026",
+      "content": [
+        {
+          "text": "The ElizaOS project made significant progress on January 26, 2026, with critical infrastructure improvements and plugin integrations across two main repositories. A critical bug fix was implemented for the CLI import statement in the eliza repository, updating it to use a package alias for better module resolution. The team resolved a blocking issue with AI Gateway credits that had been preventing AI inference and development work. Multiple core plugins were successfully integrated, including the GitHub Plugin for code and repository management, and the Code Execution Plugin enabling Eliza to write and execute code. The project also completed competitive analysis research on Claudebot and Poke, and recruited consumer testers for quality assurance testing.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-26.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "An urgent issue requiring immediate attention emerged regarding model naming conventions. Discussions in both repositories indicate a proposed swap in the understanding of Opus and Sonnet model names, with clarification needed on the correct mapping of Opus to Ultra and Sonnet to Pro models. This affects both documentation and internal understanding across the project.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-26.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The elizaos.github.io repository saw extensive dependency maintenance with multiple pull requests for version updates, including commander, next, eslint-config-next, glob, ora, date-fns, and other packages in the minor-and-patch group. These updates ensure the project stays current with the latest library versions and security patches.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-26.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Numerous new issues were opened outlining the project roadmap, including implementation of Poke-style onboarding flow, conversation-based configuration, landing page creation, and integration of multiple messaging platforms such as Discord, Telegram, SMS/iMessage, Twilio, and WhatsApp. Additional planned features include dynamic plugin loading, user session isolation for multi-tenant architecture, secrets management, memory persistence, cross-agent messaging, and native iOS app development. The team also closed the plugin submission for Coin Railz x402 Micropayment Services and the exploration task for building a hosted Claudebot-like experience.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-01-26.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1769385600
+}

@@ -1,94 +1,68 @@
-# elizaOS Discord - 2026-01-25
+# elizaOS Discord - 2026-01-26
 
 ## Overall Discussion Highlights
 
-### MCP Integration & API Development
+### Platform Integration & Partnerships
+The partners channel explored a potential integration opportunity with the Seeker phone platform, which features a decentralized app (Dapp) store similar to Apple's App Store or Google Play Store. The proposal involves deploying Eliza as a Claude-style AI assistant on the platform, with the observation that current apps on the Seeker Dapp store are of poor quality, presenting an opportunity for Eliza to become a standout application.
 
-The primary technical focus was on Model Context Protocol (MCP) integration with Eliza Cloud. SATA explored adding external MCP servers to agents for AI Red Teaming with human-in-the-loop functionality. SOLOMON VANDY provided detailed guidance on registering external MCP servers through the Eliza Cloud API using the `POST /api/v1/mcps` endpoint, enabling Eliza to proxy calls to those endpoints for agent reasoning and task execution. Kenk requested adding Eliza MCP functionality to the channel, which Odilitime indicated was feasible.
+### Technical Development & Bug Reports
+**Plugin Action Handler Issues:** A significant technical discussion emerged around plugin action handler callbacks in Eliza framework version 1.7.2. The reported issue involved callbacks only sending the first response instead of multiple callbacks as documented, with callbacks being sent as action completion responses rather than immediate feedback. The investigation confirmed that multiple callbacks are indeed supported by the framework, with troubleshooting focusing on task planner configuration (onestep vs multistep).
 
-### Self-Hosting & Infrastructure
+**Team Updates:** Sam announced his return to work after medical leave for surgery, reporting 80% recovery and readiness to resume cloud-related projects. Shaw also rejoined the Discord server.
 
-LarpsAI shared insights about community deployment patterns, noting users are deploying Eliza on mini PCs to avoid keeping main systems running 24/7. A blog post was referenced detailing Oracle Cloud free tier deployment with specifications of 4 vCPU and 24GB RAM. This discussion highlighted growing interest in accessible self-hosting options for the community.
+### Community Concerns & Token Discussion
+The discussion channel saw significant community concern about ElizaOS token price performance, with multiple users expressing worry about continuous all-time lows. Key concerns included:
+- Token validity and long-term viability
+- Perceived lack of team communication during market downturns
+- Token migration procedures (from Ledger and from ai16z to ElizaOS)
 
-### Security & Scam Prevention
-
-A security incident was identified involving a "Create A Ticket" bot requesting wallet addresses from users. SATA reported receiving suspicious links after posting questions in the channel. Odilitime confirmed this as a scam operation, likely using automated astroturfing tactics, and warned the community.
-
-### Community Engagement & Resources
-
-In the core-devs channel, Odilitime shared two GitHub repositories: supermemory (a memory management tool) and hindsight (by vectorize-io). Discussion touched on Vivek, a consultant engaging with the team through DMs and community spaces, who recommended obtaining an enterprise Twitter API key for the project. There was also brief observation about Twitter's web platform now using shadcn UI component library.
-
-### Product Development & Adoption
-
-Skinny raised important questions about Eliza agent use cases, wondering why there aren't more specialized, single-purpose agents being deployed despite the framework's availability. This suggests potential concerns about adoption barriers or unclear value propositions for developers that remain unaddressed.
-
-### Token & Ecosystem Questions
-
-Alexei asked about the relationship between various tokens and ElizaOS, specifically whether they impact the core project or operate independently. This question went unanswered, indicating a need for clearer documentation about the token ecosystem. Brief discussion about $STUDIO token occurred, with The Void and MDMnvest expressing confidence based on developer activity.
+Community members provided reassurance by emphasizing ElizaOS's position as a leading AI agent project, contextualizing the price action within broader market volatility affecting all crypto assets, and sharing long-term investment strategies (4-year cycle approach).
 
 ## Key Questions & Answers
 
-**Q: Is it possible to give an agent created within Eliza Cloud access to an external MCP?**  
-*Asked by: SATA*  
-**A:** You can add external MCP servers by registering them through the Eliza Cloud API using POST /api/v1/mcps, and once registered, Eliza can proxy calls to those MCP endpoints.  
-*Answered by: SOLOMON VANDY*
+**Q: What is the seeker app?**  
+A: Seeker phone has a Dapp store kind of like Apple/Google Play App Store (answered by 𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠)
 
-**Q: Can we add eliza mcp here?**  
-*Asked by: Kenk*  
-**A:** Probably no reason why we can't.  
-*Answered by: Odilitime*
+**Q: Should it be possible to run multiple plugin action handler callbacks?**  
+A: Yes, you can callback multiple times and some actions do so (answered by Odilitime)
 
-**Q: Why would support bot need wallet address?**  
-*Asked by: SATA*  
-**A:** It's a scam.  
-*Answered by: Odilitime*
+**Q: Are you using onestep or multistep task planner?**  
+A: Default settings (answered by Victor Creed)
 
-**Q: Does Eliza Town have its own Discord channel?**  
-*Asked by: Slothify⚡*  
-**A:** This is the discord channel.  
-*Answered by: Never Broke Again (NBA)*
+**Q: Is the Elizaos token still valid? Is the community interested in it, or is it being left to die?**  
+A: The token is valid; the market downturn is affecting all crypto, not just ElizaOS specifically. The team is building the future of AI agents and ElizaOS is among leading projects in this space (answered by Matthib123, Rainman)
 
-**Q: Who is the person doing interesting stuff?**  
-*Asked by: sayonara*  
-**A:** Vivek, a consultant similar to aiflow who attended spaces with Shaw and Odilitime.  
-*Answered by: Odilitime and Kenk*
+**Q: How do I open a ticket?**  
+A: Use channel #1425417640071139358 (answered by The Void)
 
 ## Community Help & Collaboration
 
-**MCP Integration Support**  
-SOLOMON VANDY provided comprehensive assistance to SATA regarding external MCP server integration with Eliza Cloud agents for AI Red Teaming. The helper provided specific API endpoint information (`POST /api/v1/mcps`) and explained the proxy functionality, enabling SATA to move forward with their implementation.
+**Plugin Callback Troubleshooting**  
+Helper: Odilitime | Helpee: Victor Creed  
+Odilitime assisted Victor Creed with investigating why plugin action handler callbacks were only sending the first callback instead of multiple callbacks as documented. Confirmed that multiple callbacks are supported and began systematic troubleshooting by asking about task planner configuration.
 
-**Self-Hosting Guidance**  
-LarpsAI helped the general community with self-hosting questions by suggesting mini PCs for 24/7 operation and referencing an Oracle Cloud free tier deployment guide with detailed specifications (4 vCPU and 24GB RAM), providing accessible infrastructure options.
+**Platform Information**  
+Helper: 𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠 | Helpee: DorianD  
+Provided clarification about the Seeker app, explaining it's a phone platform with a Dapp store similar to Apple/Google Play Store.
 
-**Security Alert**  
-Odilitime protected SATA and the broader community by confirming suspicious wallet address requests from the "Create A Ticket" bot as a scam and warning about astroturfing tactics, preventing potential security incidents.
+**Token Price Concerns**  
+Helper: Matthib123 & Rainman | Helpee: paolin  
+Multiple community members provided perspective on token price concerns, explaining that ElizaOS is a high-risk/high-potential asset, the whole market is in downtrend, and shared long-term holding strategies. Emphasized ElizaOS's position as a leading AI agent project.
 
-**Community Navigation**  
-Never Broke Again (NBA) assisted Slothify⚡ in finding the correct Discord channel for Eliza Town discussions, clarifying that they were already in the appropriate location.
-
-**Consultant Identification**  
-Kenk and Odilitime collaborated to provide sayonara with background information about Vivek, a consultant engaging with the team, helping to clarify community connections and ongoing initiatives.
+**Migration Support**  
+Helper: The Void | Helpee: realist  
+Directed users needing token migration assistance (from Ledger and from ai16z to ElizaOS) to the appropriate ticket channel for formal support.
 
 ## Action Items
 
 ### Technical
-- **Investigate Oracle Cloud free tier deployment for Eliza** (4 vCPU, 24GB RAM configuration)  
-  *Mentioned by: LarpsAI*
+- **Investigate plugin action handler callback behavior** - Investigate why plugin action handler callbacks only send first callback in clean 1.7.2 project with default settings (Mentioned by: Victor Creed)
+- **Resume cloud project work** - Resume work on cloud projects following Sam's return from medical leave (Mentioned by: sam)
 
 ### Documentation
-- **Check documentation around /api/v1/mcps** for external MCP server registration  
-  *Mentioned by: SATA*
-
-- **Clarify relationship between various tokens and ElizaOS** core project  
-  *Mentioned by: Alexei*
+- **Verify callback documentation accuracy** - Verify documentation accuracy regarding callback behavior (immediate feedback vs action completion response) (Mentioned by: Victor Creed)
+- **Clarify token migration process** - Clarify token migration process from Ledger and from ai16z to ElizaOS (Mentioned by: Jeburek12, realist)
+- **Improve team communication** - Provide clearer communication about team activity and project status during market downturns (Mentioned by: paolin)
 
 ### Feature
-- **Add Eliza MCP functionality** to the channel  
-  *Mentioned by: Kenk*
-
-- **Obtain an enterprise Twitter API key**  
-  *Mentioned by: Odilitime (via Vivek)*
-
-- **Investigate and address barriers** to creating specialized single-purpose Eliza agents  
-  *Mentioned by: Skinny*
+- **Seeker platform integration** - Integrate Eliza on Seeker app as Claude bot style AI assistant to attract attention (Mentioned by: 𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠)
