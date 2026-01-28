@@ -1,12 +1,70 @@
 {
-  "date": "2026-01-26",
+  "date": "2026-01-27",
   "source": "hyperfy",
-  "generated_at": "2026-01-27T23:41:05.074Z",
+  "generated_at": "2026-01-28T23:45:47.619Z",
   "base_path": "hyperfy-media",
-  "files": [],
+  "files": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/958209074045026327/1465554738442408027/image.png?ex=697987b6&is=69783636&hm=e508f916f40af3d08f079c6fcdc0d5f6ea8ca61158c9718d481a6cb2f33b235a&",
+      "proxy_url": "https://media.discordapp.net/attachments/958209074045026327/1465554738442408027/image.png?ex=697987b6&is=69783636&hm=e508f916f40af3d08f079c6fcdc0d5f6ea8ca61158c9718d481a6cb2f33b235a&",
+      "filename": "image.png",
+      "unique_name": "image_273ff7b6.webp",
+      "hash": "273ff7b6",
+      "type": "image",
+      "media_type": "attachment",
+      "size": 24472,
+      "content_type": "image/webp",
+      "width": 854,
+      "height": 447,
+      "message_id": "1465554738715164888",
+      "channel_id": "958209074045026327",
+      "channel_name": "⚡│general",
+      "guild_id": "958209073277456457",
+      "guild_name": "Hyperfy",
+      "user_id": "213767993153290250",
+      "timestamp": "2026-01-27",
+      "message_content": ""
+    },
+    {
+      "url": "https://media.tenor.com/ASmjMYt_BEkAAAAe/let-him-cook-cook.png",
+      "filename": "embed-thumbnail-1465608425542258802.png",
+      "unique_name": "embed-thumbnail-1465608425542258802_b0ae3e4a.png",
+      "hash": "b0ae3e4a",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1465608425542258802",
+      "channel_id": "958209074045026327",
+      "channel_name": "⚡│general",
+      "guild_id": "958209073277456457",
+      "guild_name": "Hyperfy",
+      "user_id": "387714655331680259",
+      "timestamp": "2026-01-27",
+      "message_content": "https://tenor.com/view/let-him-cook-cook-cookin-big-wok-gif-83777501272147017"
+    },
+    {
+      "url": "https://media.tenor.com/ASmjMYt_BEkAAAPo/let-him-cook-cook.mp4",
+      "filename": "embed-video-1465608425542258802.mp4",
+      "unique_name": "embed-video-1465608425542258802_76b410c6.mp4",
+      "hash": "76b410c6",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1465608425542258802",
+      "channel_id": "958209074045026327",
+      "channel_name": "⚡│general",
+      "guild_id": "958209073277456457",
+      "guild_name": "Hyperfy",
+      "user_id": "387714655331680259",
+      "timestamp": "2026-01-27",
+      "message_content": "https://tenor.com/view/let-him-cook-cook-cookin-big-wok-gif-83777501272147017"
+    }
+  ],
   "stats": {
-    "total_files": 0,
-    "by_type": {},
-    "total_size_bytes": 0
+    "total_files": 3,
+    "by_type": {
+      "image": 2,
+      "video": 1
+    },
+    "total_size_bytes": 24472
   }
 }
