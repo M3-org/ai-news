@@ -1,54 +1,66 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-01-27",
-  "categories": {
-    "title": "ElizaOS Development Updates and Community Discussion - January 27, 2026",
-    "content": [
-      {
-        "text": "Community members expressed support for the development team amid token performance concerns. A supporter emphasized that the investment was always a bet on Shaw and the team's ability to deliver, highlighting their position as leading AI agent developers. They noted multiple products in development including Babylon, Hyperscape, Cloud, OTC desk, and Eliza Anime, with the strategy being to reward long-term holders through airdrops when one of these products goes viral. The message encouraged critics to sell if they don't believe in the vision and let developers continue building.",
-        "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-        "memes": {
-          "url": "https://cdn.elizaos.news/imgflip/aijm96.jpg",
-          "summary": "Eliza Anime product exists."
+  "title": "Daily Report - 2026-01-28",
+  "categories": [
+    {
+      "title": "ElizaOS Development Updates and Community Discussions - January 28, 2026",
+      "content": [
+        {
+          "text": "Community members discussed concerns about ClawdBot, an AI agent running a hot potato style game called ClawdFomo3D where tokens get burned each round. DorianD raised legal concerns about the project potentially facing gambling regulation issues and noted that the creator receives token vestings to participate without cost while others must buy in. The discussion highlighted this as an example of why fully decentralized agents are needed to avoid regulatory risks. There was also feedback that the ElizaOS Twitter account should have more personality and soul similar to other popular AI agents, rather than appearing too corporate.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/b7793eb84e8a997bf65b0d29a515c97a85e81b833c912975c115e8dd6e9d7e84/ripper234/Bitcoin-Potato"
+          ],
+          "videos": []
         },
-        "posters": "https://cdn.elizaos.news/posters/1769561902711-dtc849.jpg"
-      },
-      {
-        "text": "Developers discussed technical issues with the Knowledge plugin, reporting extremely high costs with OpenAI - tens of thousands of tokens per simple request costing 0.03 to 0.04 dollars per query. The issue was identified as contextual embeddings being enabled. A core developer provided a minimal configuration solution using OpenRouter and recommended using basic text embedding models. The team also shared cost data showing a 3.1MB PDF book with 517 chunks as a reference point for expected embedding costs.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/capture_3325adfe.png",
-          "https://cdn.elizaos.news/elizaos-media/image_e6eddd2c.png"
-        ],
-        "videos": "https://cdn.discordapp.com/attachments/1300025221834739744/1465844970975137792/20260127-2301-56.1789613.mp4?ex=697a9603&is=69794483&hm=69b5072de94f4f5ac0222b070df68284a0491bcafdaaff8bea8b28379efe693a&",
-        "memes": {
-          "url": "https://cdn.elizaos.news/imgflip/aijma7.jpg",
-          "summary": "Simple request: tens of thousands tokens."
+        {
+          "text": "Developers worked through various technical challenges with the Eliza framework. Multiple users reported issues with SSE streaming returning MIME type mismatch errors, with one developer successfully switching to socket.io as a better alternative. There were discussions about embedding providers, with users noting that OpenRouter embeddings caused errors and only OpenAI worked reliably, though Ollama and OpenRouter are also supported options. The team confirmed that version 2.x will move embeddings completely out of runtime into plugins. Developers also discussed model routing, with interest in building small models to intelligently route requests between available models based on cost and load parameters.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G_vdqjJWUAAWx27.jpg:large"
+          ],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1466075456309563496/20260128-1416-23.6330472.mp4?ex=697b6cab&is=697a1b2b&hm=e6014d817efa480cba5c3d9dba81f61f52f99d65006dfad8e108f7d5ac825f65&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1465939138963308649/Screen_Recording_2026-01-27_194428.mp4?ex=697b9676&is=697a44f6&hm=d07b9895407fde4e63a052eb3683e93f6a9f8037a05dd5de5fed7abc9d1c65bd&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1465949555236409464/20260128-0558-16.1622540.mp4?ex=697ba029&is=697a4ea9&hm=87598c1e4f50e267b3b05c788a8d0f70eda4aa67e34cdb1981387b8befe24f06&"
+          ]
+        },
+        {
+          "text": "Core developers discussed several infrastructure improvements. GitHub added an Agents tab to their platform, which was noted as significant for the ecosystem. Stan shared progress on the n8n workflow plugin, reporting it was 30 percent complete with regular commits for tracking. He coordinated with team members on OAuth specifications while taking time off for a family medical situation. The team discussed renaming the elizaos.github.io repository and improving the contributor tracking system to focus less on leaderboard rankings and more on understanding who is doing what and tracking codebase changes. Jin emphasized the importance of onboarding experience and reducing Time To Value for new users.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://grokipedia.com/icon-512x512.png",
+            "https://opengraph.githubassets.com/8c65cfa455a5b5ce7aab116354d00e4cecfd420547f714c5aa1590d61a247db4/elizaOS/elizaos.github.io",
+            "https://pbs.twimg.com/media/G_upzlrbAAECFFH.jpg:large",
+            "https://opengraph.githubassets.com/c6af5941e89e7f28d2cb0fe59e1e276bfd16ca8496d8612f9db46d0674c3e638/elizaos-plugins/plugin-n8n-workflow"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Jin added MCP support to the elizaos.github.io repository for agents to access knowledge about ElizaOS and elizaos-plugins GitHub activity. He emphasized that good documentation combined with skills can significantly improve agent capabilities, comparing docs to prompt engineering and the manuals that used to come with software. The team discussed implementing automatic configuration updates for tracking active and inactive repositories, with workflows that could review and update configs monthly. Jin stressed that reducing onboarding friction and providing agents with quality data sources like GitHub and Discord knowledge would enable better self-bootstrapping and troubleshooting.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community members discussed the ERC-8004 standard launching on Ethereum mainnet, with expectations that it would bring renewed attention to AI agents by providing onchain identity and reputation verification to distinguish legitimate agents from larps. There were questions about the migration process for ai16z tokens, with some users reporting issues with the migration site not detecting tokens in Phantom wallets. Users also inquired about building AI avatar networks similar to fetch.ai where avatars could automatically meet based on similarity and have ongoing discussions with reporting features.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
         }
-      },
-      {
-        "text": "Core developers pivoted strategy toward building Eliza as a comprehensive AI assistant application, inspired by Clawdbot's success. Shaw identified this as a golden opportunity, noting that Clawdbot was created by ai16z and Molt is not currently trending. The team decided to focus on n8n workflow integration as the primary approach, with Shaw publishing Eliza 2.0.0 to npm under the next tag. The vision is to create an AI workflow builder that allows users to connect services like Gmail, Calendar, Notion, and Linear through natural language commands with conditional logic. The team set up n8n cloud accounts and began integrating n8n-intelligence and n8n-workflow-builder open source projects. Developers emphasized that 95 percent of users want AI workflow building rather than auto-coding, with the goal of creating powerful abstractions that make integration easier.",
-        "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-27_at_2-10-49_pm_30757630.png",
-          "https://cdn.elizaos.news/elizaos-media/img_3038_08b4dce5.jpg",
-          "https://cdn.elizaos.news/elizaos-media/screenshot_2026-01-27_at_1-52-57_pm_18d6d2da.png"
-        ],
-        "memes": {
-          "url": "https://cdn.elizaos.news/imgflip/aijmam.jpg",
-          "summary": "95 percent want workflow over coding."
-        }
-      },
-      {
-        "text": "Community members inquired about Babylon airdrop details for ElizaOS holders. A team member confirmed the intention is to reward long-term holders but noted that final details have not been finalized and there may be additional requirements beyond just holding tokens. Questions were raised about whether trading on Solana DEXs would count for airdrops, but no official announcement has been made yet. Community members also discussed the need to restore ElizaOS memetic value and emphasized its nature as a community project.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "memes": {
-          "url": "https://cdn.elizaos.news/imgflip/aijmaw.jpg",
-          "summary": "Unfinalized airdrop needs extra requirements."
-        }
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1769472000
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1769558400
 }
