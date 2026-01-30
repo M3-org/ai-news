@@ -1,25 +1,25 @@
 {
   "server": "Hyperfy",
-  "title": "Hyperfy Discord - 2026-01-27",
-  "date": 1769472000,
+  "title": "Hyperfy Discord - 2026-01-29",
+  "date": 1769644800,
   "stats": {
-    "totalMessages": 27,
-    "totalUsers": 3
+    "totalMessages": 14,
+    "totalUsers": 7
   },
   "categories": [
     {
       "channelId": "958209074045026327",
       "channelName": "⚡│general",
-      "summary": "# Discord Chat Analysis\n\n## 1. Summary\nThe conversation primarily revolves around a V1 to V2 data conversion tool for Hyperfy worlds. Jin has developed a converter that outputs both V1 archived data and V2-ready files, packaged together with the conversion script itself. The tool creates a structured output with V2 folders containing db.sqlite, collections, and assets, alongside the original V1 data. Jin mentions that including V2 files adds only about 270kb per world, which is minimal compared to overall zip sizes. The discussion also touches on challenges with sharing .hyp files on Discord and GitHub, noting that binary formats are problematic for LLM understanding and security. Jin reports successfully porting Hyperfy sky presets and is working on hyperfy-vrm for in-world avatar changing, though this may require additional technical assistance.\n\n## 2. FAQ\nQ: What does the converter output? (asked by ash) A: A structured folder with V2 format files (db.sqlite, collections, assets), V1 archived data, README.txt, manifest.json, and the converter script itself (answered by jin)\nQ: How are .hyp files handled in git? (asked by jin) A: They're binary files that would require Git LFS (answered by ash)\n\n## 3. Help Interactions\nHelper: ash | Helpee: jin | Context: Asking about how to handle .hyp binary files in git repositories | Resolution: Suggested using Git LFS, though jin noted this requires payment info on GitHub\nHelper: jin | Helpee: ash | Context: Explaining the structure and functionality of the V1 to V2 converter | Resolution: Provided detailed folder structure output and explained the included Python script for conversion\n\n## 4. Action Items\nType: Technical | Description: Coordinate implementation of V1 data exporter on the website | Mentioned By: jin\nType: Technical | Description: Complete hyperfy-vrm implementation for in-world avatar changing | Mentioned By: jin\nType: Technical | Description: Consider developing a scraper for non-Hyperfy hosted assets | Mentioned By: jin\nType: Documentation | Description: Update documentation based on Discord analysis of .hyp files | Mentioned By: jin\nType: Technical | Description: Publish repository for the V1-V2 converter | Mentioned By: jin",
-      "messageCount": 26,
-      "userCount": 3
+      "summary": "# Analysis of ⚡│general Discord Channel\n\n## 1. Summary\nThe chat segment is brief with minimal technical discussion. There's a mention of a race setup in Hyperfy V2 similar to V1, with Dhin offering a rudimentary starter pack for this purpose. Jin mentions a batch exporter being ready and that they're preparing files. There's also a question about the state of Hyperfy documentation, noting that while some docs exist in the repository, they may not be the most complete.\n\n## 2. FAQ\nQ: Does V2 allows race setup similar to v1? Where you can custom vehicle settings, put trigger areas, timer and leaderboard? (asked by miguel_amargo) A: Unanswered directly, but Dhin offered a rudimentary starter pack\nQ: What's the state of hyperfy docs? I see some in the repo, but that's not where the most complete docs are (asked by jin) A: Unanswered\n\n## 3. Help Interactions\nHelper: Dhin | Helpee: miguel_amargo | Context: Request for race setup in Hyperfy V2 | Resolution: Offered a rudimentary starter pack with a link to a Twitter/X post showing the implementation\n\n## 4. Action Items\nTechnical: Batch exporter is ready and files are being prepared | Description: Preparing files for batch export | Mentioned By: jin\nDocumentation: Review and potentially update Hyperfy documentation | Description: Current docs in repo may not be the most complete | Mentioned By: jin",
+      "messageCount": 8,
+      "userCount": 5
     },
     {
       "channelId": "1031058655581323324",
       "channelName": "🧊│3d-design",
-      "summary": "The chat segment is extremely brief, containing only a single message from user \"jin\" saying \"gib water\" at 22:07. There is no technical discussion, problem-solving, or implementation details present in this limited exchange. The message appears to be a casual request for water, possibly in the context of 3D design (given the channel name), but lacks any substantive technical content to analyze.",
-      "messageCount": 1,
-      "userCount": 1
+      "summary": "# Analysis of 🧊│3d-design Channel\n\n## 1. Summary\nThe chat segment is very brief and contains minimal technical discussion. Fibelius shared references to what appear to be 3D models or designs labeled as \"Sleepy\" #92 and \"Grifters\" #969, along with a Twitter/X link. ToxSam - IBIH mentioned an upcoming Blender Addon release that will allow users to access content directly in Blender. No detailed technical discussions, problem-solving, or implementations were shared in this limited exchange.\n\n## 2. FAQ\nQ: (No significant questions with meaningful responses were present in the chat)\n\n## 3. Help Interactions\n(No significant help interactions were present in the chat)\n\n## 4. Action Items\nType: Feature | Description: Upcoming Blender Addon for direct content access in Blender | Mentioned By: ToxSam - IBIH",
+      "messageCount": 6,
+      "userCount": 2
     }
   ]
 }

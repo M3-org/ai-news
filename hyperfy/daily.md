@@ -1,52 +1,35 @@
-# Hyperfy Discord - 2026-01-27
+# Hyperfy Discord - 2026-01-29
 
 ## Overall Discussion Highlights
 
-### V1 to V2 Data Conversion
-- Jin developed a comprehensive converter tool for Hyperfy worlds that outputs both V1 archived data and V2-ready files
-- The converter packages everything together with the conversion script itself
-- Output structure includes V2 folders containing db.sqlite, collections, and assets, alongside the original V1 data
-- Including V2 files adds only about 270kb per world, which is minimal compared to overall zip sizes
-- The tool creates a structured output that preserves original data while making it ready for V2 compatibility
+### Development Updates
+- Jin mentioned that a batch exporter is ready and files are being prepared
+- ToxSam - IBIH announced an upcoming Blender Addon that will allow users to access content directly in Blender
 
-### Technical File Handling
-- Discussion about challenges with sharing .hyp files on Discord and GitHub
-- Binary formats were noted as problematic for LLM understanding and security
-- Git LFS was mentioned as a solution for handling binary files in repositories, though it requires payment info on GitHub
+### Project Sharing
+- Fibelius shared references to 3D models labeled "Sleepy" #92 and "Grifters" #969
+- Dhin offered a rudimentary starter pack for race setup in Hyperfy V2, sharing a Twitter/X post showing the implementation
 
-### Feature Development
-- Jin reported successfully porting Hyperfy sky presets
-- Work in progress on hyperfy-vrm for in-world avatar changing, though this may require additional technical assistance
+### Documentation Status
+- There was a brief discussion about Hyperfy documentation, noting that while some docs exist in the repository, they may not be the most complete
 
 ## Key Questions & Answers
 
-**Q: What does the converter output?** (asked by ash)  
-**A:** A structured folder with V2 format files (db.sqlite, collections, assets), V1 archived data, README.txt, manifest.json, and the converter script itself (answered by jin)
-
-**Q: How are .hyp files handled in git?** (asked by jin)  
-**A:** They're binary files that would require Git LFS (answered by ash)
+**Q: Does V2 allow race setup similar to v1? Where you can custom vehicle settings, put trigger areas, timer and leaderboard?**  
+*Asked by miguel_amargo*  
+A: While not directly answered, Dhin offered a rudimentary starter pack with a link to a Twitter/X post showing the implementation
 
 ## Community Help & Collaboration
 
-### Binary File Handling in Git
-- **Helper:** ash
-- **Helpee:** jin
-- **Context:** Discussing how to handle .hyp binary files in git repositories
-- **Resolution:** Ash suggested using Git LFS, though Jin noted this requires payment information on GitHub
-
-### V1-V2 Converter Explanation
-- **Helper:** jin
-- **Helpee:** ash
-- **Context:** Explaining the structure and functionality of the V1 to V2 converter
-- **Resolution:** Jin provided detailed folder structure output and explained the included Python script for conversion
+- **Race Setup Assistance**: Dhin helped miguel_amargo by providing a starter pack for race setup in Hyperfy V2, including a visual reference of the implementation
 
 ## Action Items
 
 ### Technical
-- Coordinate implementation of V1 data exporter on the website (mentioned by jin)
-- Complete hyperfy-vrm implementation for in-world avatar changing (mentioned by jin)
-- Consider developing a scraper for non-Hyperfy hosted assets (mentioned by jin)
-- Publish repository for the V1-V2 converter (mentioned by jin)
+- **Batch Export**: Batch exporter is ready and files are being prepared (Mentioned by Jin)
 
 ### Documentation
-- Update documentation based on Discord analysis of .hyp files (mentioned by jin)
+- **Documentation Review**: Review and potentially update Hyperfy documentation as current docs in repo may not be the most complete (Mentioned by Jin)
+
+### Feature
+- **Blender Integration**: Upcoming Blender Addon for direct content access in Blender (Mentioned by ToxSam - IBIH)
