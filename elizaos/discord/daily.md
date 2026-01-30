@@ -1,140 +1,122 @@
-# elizaOS Discord - 2026-01-28
+# elizaOS Discord - 2026-01-29
 
 ## Overall Discussion Highlights
 
-### AI Agent Architecture & Development
+### Token Economics and Migration Concerns
 
-The development team made significant progress on core infrastructure improvements. **jin** successfully merged MCP (Model Context Protocol) support and implemented dynamic tracking systems for GitHub repositories and Discord channels. This system automatically monitors active/inactive repos and new/archived channels, moving toward a self-maintaining configuration. The team emphasized improving developer onboarding by creating a bootstrapping skill that connects agents to knowledge repositories, documentation, and GitHub activity data, enabling agents to self-troubleshoot.
+The community raised significant concerns about token utility and distribution following the ai16z to elizaos migration. Key issues included:
 
-**DorianD** proposed building a small local model for intelligent request routing between available models based on complexity, cost, and load parameters. The current system alternates between small/large model selections from providers, but more sophisticated routing could optimize performance and costs.
+- **Token Allocation Controversy**: Community members questioned the 40% team allocation after a 1:10 token increase, where the community received only 6 tokens while the team received 40%
+- **Migration Technical Issues**: Users reported 98% losses when attempting to swap ElizaOS tokens on the ETH chain back to ETH or USDT due to zero liquidity
+- **Utility Clarification**: Odilitime clarified that the token serves as the accepted currency in their products, provides gas fees for Jeju, and includes buy-back mechanisms from credit card rail revenue
+- **Migration Rationale**: The migration from ai16z to elizaos was necessary for rebranding and multichain accessibility
 
-The **clawdbot** project was analyzed as a successful pattern, highlighting useful features including markdown-based configuration files (BOOTSTRAP.md, SOUL.md), skills integration, and structured home directories. The consensus was that good documentation combined with skills can significantly improve agent performance.
+### AI Routing and Framework Development
 
-### Technical Infrastructure & Tooling
+DorianD led an extensive exploration of AI model routing systems, proposing the creation of "ElizaRouter":
 
-**Embedding Provider Issues**: Multiple users reported problems with OpenRouter embeddings in the knowledge plugin, with only OpenAI working reliably. **Odilitime** clarified that Ollama, OpenAI, and OpenRouter are supported options, with plans to move embeddings completely to plugins in version 2.x.
+- **Existing Solutions Identified**: RouteLLM (Python-based for prompt complexity analysis), Latitude.so (prompt engineering platform), and MasRouter (multi-agent system management)
+- **Proposed Architecture**: Distributed routing mechanism where receiving nodes select optimal nodes with time decay for Quality of Service
+- **Model Evaluation**: Small open-source models considered include Microsoft Phi-4 Mini (3.8B-14B), Qwen2.5/Qwen3 (1.5B-7B), Mistral 7B, and DeepSeek-Coder for code-specific tasks
+- **Implementation Plan**: Rewrite existing routing frameworks to Rust or TypeScript
 
-**Development Tools**: **sedano.npc** reported issues with Cursor's AUTO mode breaking applications after 8+ hours of troubleshooting. **Odilitime** recommended using Composer 1 instead, which resolved deployment issues instantly.
+### Social Media Integration Development
 
-**SSE Streaming**: Users encountered MIME_TYPE_MISMATCH errors when setting up SSE streaming. **Chucknorris** recommended switching from SSE to socket.io for better results, with issues traced to incorrect backend deployment configuration.
+The core development team discussed implementing social media connection functionality:
 
-**Git Workflow**: **Odilitime** provided comprehensive guidance on basic Git operations, explaining commit vs pull request workflows, staging files, and branch management for OSS contributions.
+- **Connection Page Feature**: Sam announced plans to build a connection page where users can link social accounts before being redirected back to the bot
+- **Composio Integration**: The team explored using Composio, an open-source tool for authentication and social integrations
+- **Existing Resources**: Stan revealed he had created a Composio plugin months earlier and offered to share it along with an RFC document containing implementation ideas
 
-### Standards & Tokenization
+### Critical Bug in Eliza Framework
 
-**satsbased** announced the upcoming ERC-8004 mainnet launch on Ethereum, scheduled for the week. This standard enables agent identity and reputation tracking onchain, allowing verification of whether AI agents are legitimate or "larps" (fake). The implementation aims to bring trustless tokenization to AI agents, positioned as a significant development for the ecosystem.
+Victor Creed identified a significant bug in Eliza 1.7.2 affecting action callback execution:
 
-### Community Concerns & Governance
+- **Expected Behavior**: Callbacks should send messages sequentially: (1) initial feedback, (2) structured return text, (3) detailed callback message
+- **Actual Behavior**: Messages are sent in reverse order with the detailed callback first, then initial feedback, and the structured return message is completely omitted
+- **Impact**: Affects custom plugins using `plugin-sql`, `plugin-openai`, and `plugin-bootstrap`
+- **Status**: Remains unresolved with no community solutions provided
 
-**DorianD** raised serious concerns about a "hot potato" style FOMO dapp, identifying it as a variation of the Bitcoin Potato game where developers receive vestings of the participation coin, allowing them to profit from sales while having unlimited supply to reset the game without cost. He warned of potential legal risks including lawsuits from participants and government investigation for illegal gambling operations, emphasizing the need for truly decentralized agents to avoid legal liability.
+### Market Analysis
 
-The conversation shifted to constructive feedback about the ElizaOS Twitter presence. **DorianD** recommended that the @elizaos account adopt more personality and "soul" similar to successful AI personas like clawd.atg.eth and pippin, rather than appearing dry and corporate. **Odilitime** responded positively, mentioning they're building a Twitter agent that could fulfill this role.
-
-### Migration & Ecosystem
-
-Multiple users reported that the migration site failed to detect ai16z tokens in Phantom wallets. **Hexx** clarified that ai16z migrated to ElizaOS, and holders from before the November snapshot at 11:40 UTC should use the migration portal to convert tokens. Concerns were raised about token value proposition for investors.
-
-**timcoucou** proposed building a network similar to fetch.ai where members have AI avatars that automatically discover each other through similarity matching, conduct autonomous discussions, and send reports when interesting opportunities arise.
-
-### Plugin Development
-
-**Stan** made progress on the plugin-n8n-workflow (30% complete with regular commits) and coordinated OAuth specifications with team members. **Odilitime** identified a compatibility issue where plugin-anthropic 1.x doesn't work with the develop branch and later curated type fixes for a PR.
-
-### Documentation & Knowledge Management
-
-**sayonara** established a PR workflow for documentation updates through the elizaOS/docs repository. The team discussed renaming the elizaos.github.io repository, debating names like "leaders.elizaos.ai" or "leaderboard" but ultimately deciding against ranking implications in favor of showcasing contributor competencies and codebase evolution. **jin** emphasized treating documentation as code and prompt engineering, with knowledge bundled like game manuals.
+DorianD provided cryptocurrency market outlook suggesting the market is entering the final phase of a bear market, with an estimated 6 months until bottom, followed by 6-12 months of sideways movement, with potential recovery activity beginning in 2027.
 
 ## Key Questions & Answers
 
-**Q: What's the difference between commit and pull request?**  
-A: Commit is like save changes. Pull request is when working on someone else's OSS repo - you have to fork first. For your own repo, commit and push is sufficient. *(answered by Odilitime)*
+**Q: Why should anyone buy elizaos token?** (asked by gby)  
+**A:** Token is the currency accepted in products including gas for Jeju, with credit card revenue going into buy backs (answered by Odilitime)
 
-**Q: Does OpenRouter embedding work with the knowledge plugin?**  
-A: It kept giving errors; only OpenAI has worked so far. *(answered by YogaFlame)*
+**Q: Why was the migration from ai16z to elizaos necessary?** (asked by gby)  
+**A:** Had to rebrand the token and wanted to go multichain for easier access (answered by Odilitime)
 
-**Q: Are we forced to use OpenAI for embeddings now?**  
-A: Ollama, OpenAI, or OpenRouter are supported. Version 2.x will drop embeddings in runtime and move it completely to plugins. *(answered by Odilitime)*
+**Q: What is the actual use case for the token beyond Jeju gas fees?** (asked by gby)  
+**A:** Currency accepted in products, gas for Jeju, and buy-back mechanisms from credit card rails (answered by Odilitime)
 
-**Q: How do I fix MIME_TYPE_MISMATCH error with SSE streaming?**  
-A: Need to explore routes and understand how Eliza server handles SSE. Switching to socket.io is much better than SSE. *(answered by Chucknorris | ONYX P9 NODE RENT)*
+**Q: Why did hyperscape and babylon get their own tokens instead of using elizaos token?** (asked by g)  
+**A:** They're on-chain tokens for the currency in those games (answered by Odilitime)
 
-**Q: Does SEARCH_KNOWLEDGE action summarize doc fragments before returning?**  
-A: No summarization, it's just a query to fragments returning three most similar. You can easily build custom action to prepare queries and make summaries. *(answered by 0xbbjoker)*
+**Q: How to fix "Cannot find module '@elizaos/plugin-web-search'" error after plugin installation?** (asked by DigitalDiva)  
+**A:** Edit the project's package.json to include proper module resolution, try installing with bun (answered by Odilitime)
 
-**Q: Should I use Cursor AUTO mode or Composer?**  
-A: Don't use AUTO. Composer 1 is better than AUTO and lower cost. *(answered by Odilitime)*
+**Q: Should we use Composio for our authentication needs?** (asked by sam)  
+**A:** Stan shared that he created a plugin months ago and is writing an RFC with ideas on it (answered by Stan ⚡)
 
-**Q: What happened to ai16z?**  
-A: Ai16z migrated to ElizaOS. If holding Ai16z before snapshot time 11:40 UTC November, migrate through the migration portal. *(answered by Hexx 🌐)*
+**Q: Is your question regarding swaps on eth facing slippage or is it a migration question?** (asked by Kenk)  
+**A:** It's about 98% loss when converting ElizaOS tokens back to ETH or USDT (answered by Sarthak)
 
-**Q: Are you still the go to person for eliza.how?**  
-A: You can send PR to https://github.com/elizaOS/docs and I will merge. *(answered by sayonara)*
+**Q: How to bridge & migrate ElizaOS tokens from ETH chain when liquidity went zero?** (asked by Sarthak)  
+**A:** Check the migration channel for instructions (answered by MDMnvest)
 
-**Q: What should we name the repository - leaders.elizaos.ai or leaderboard?**  
-A: Neither - don't want it perceived as ranking people, philosophy is to see who is doing what and track codebase changes, will write an article to clarify. *(answered by jin)*
+### Unanswered Questions
 
-**Q: Does ElizaOS multiplex between models based on request complexity?**  
-A: No, we have small/large model selection from a provider but just alternate between those two. *(answered by Odilitime)*
-
-**Q: What is the connection between the FOMO dapp and the Bitcoin Potato game?**  
-A: The developer picked a variation of "hot potato" mechanism, similar to the original Bitcoin Potato game from the GitHub repository ripper234/Bitcoin-Potato. *(answered by DorianD)*
-
-**Q: What legal risks does the developer face?**  
-A: Potential lawsuits from participants and government investigation for illegal gambling, with possibility of profit clawback from gambling commissions. *(answered by DorianD)*
+- Are the wallets holding 40% of the supply known and do they have a vesting schedule? (asked by Jayzen)
+- Why did team get 40% when it is open source after the 1:10 token increase? (asked by averma)
+- What existing frameworks are available for AI model routing based on prompt complexity? (asked by DorianD)
+- What small open-source models are best for routing decisions? (asked by DorianD)
+- Why are action callbacks in Eliza 1.7.2 executing in reverse order compared to documentation? (asked by Victor Creed)
 
 ## Community Help & Collaboration
 
-**Odilitime** provided extensive Git workflow guidance to **Irie_Rubz**, explaining commit vs pull request workflows, staging processes, and confirming successful pushing to main branch.
+**Stan ⚡ → sam**  
+Context: Sam was exploring Composio for social authentication implementation  
+Resolution: Stan shared his existing Composio plugin repository (github.com/standujar/plugin-composio) and offered to share an RFC document with implementation ideas
 
-**Chucknorris | ONYX P9 NODE RENT** helped **sedano.npc** resolve MIME_TYPE_MISMATCH errors with SSE streaming by recommending a switch from SSE to socket.io for better performance.
+**MDMnvest → Sarthak**  
+Context: ElizaOS tokens on ETH chain showing zero liquidity and unable to migrate  
+Resolution: Directed to migration channel for assistance
 
-**0xbbjoker** assisted **Victor Creed** in understanding that SEARCH_KNOWLEDGE action doesn't summarize results, and suggested building custom actions with LLM queries and summaries.
+**Kenk → Sarthak**  
+Context: Unclear whether issue was slippage or migration related  
+Resolution: Helped clarify the specific problem (98% loss on conversion)
 
-**Odilitime** helped **sedano.npc** resolve Cursor AUTO mode issues that broke the application after 8+ hours of troubleshooting by recommending Composer 1, which fixed redeployment instantly.
+**Odilitime → DigitalDiva**  
+Context: Plugin web-search installation failing with module resolution error  
+Resolution: Suggested editing package.json and trying bun installation, directed to dev-support channel
 
-**jin** helped the community understand embedding requirements by clarifying that Ollama, OpenAI, and OpenRouter are all supported, with v2.x moving embeddings to plugins.
-
-**Hexx 🌐** assisted **Watcoinerist** by explaining the ai16z to ElizaOS migration and providing instructions for holders before the November snapshot.
-
-**sayonara** directed **Kenk** to send PRs to https://github.com/elizaOS/docs for documentation updates and tutorial publishing.
-
-**DorianD** provided constructive feedback to the ElizaOS team about improving Twitter presence by adopting more personality and soul similar to successful AI personas.
-
-**satsbased** shared detailed positioning strategy with **MATTIOBOY 🇦🇺**, including hyperscape, ERC-8004 launch expectations, and ecosystem tracking approach.
+**Chiko → joaointech**  
+Context: Looking for smart contract developers  
+Resolution: Directed to private DM conversation
 
 ## Action Items
 
 ### Technical
 
-- Fix plugin-anthropic 1.x compatibility with develop branch *(Odilitime)*
-- Open PR with curated type fixes *(Odilitime)*
-- Complete plugin-n8n-workflow development (currently 30% done) *(Stan ⚡)*
-- Implement OAuth specifications in coordination with team members *(Stan ⚡)*
-- Implement monthly workflow to review and update config based on active/inactive repos *(jin)*
-- Test OpenRouter embeddings to verify if issues persist across different users *(jin)*
-- Investigate and fix OpenRouter embedding errors in knowledge plugin *(YogaFlame)*
-- Complete plugin-autonomous to reduce costs of running multiple agents experiencing same messages *(Odilitime)*
-- Integrate Eliza work into ONYX project (relatively heavy work) *(Chucknorris | ONYX P9 NODE RENT)*
-- Create custom SEARCH_KNOWLEDGE action with LLM query preparation and summarization *(0xbbjoker)*
-- Investigate and fix migration site not detecting ai16z tokens in Phantom wallet *(ai16zbags, Never Broke Again (NBA))*
-- Monitor ERC-8004 mainnet launch on Ethereum for agent identity and reputation onchain verification *(satsbased)*
-- Ensure AI agents are fully decentralized to avoid legal liability for operators *(DorianD)*
+- **Fix callback execution order bug in Eliza 1.7.2** where messages are sent in reverse order and structured return text is omitted (Mentioned by: Victor Creed)
+- **Fix module resolution for @elizaos/plugin-web-search plugin installation** (Mentioned by: DigitalDiva)
+- **Work on connection page for social media integration** with redirect flow back to bot (Mentioned by: sam)
+- **Review Stan's existing Composio plugin** at github.com/standujar/plugin-composio (Mentioned by: Stan ⚡)
+- **Rewrite existing routing frameworks** (RouteLLM, Latitude.so, MasRouter) to Rust or TypeScript (Mentioned by: DorianD)
 
 ### Feature
 
-- Build Twitter agent with engaging personality for ElizaOS account *(Odilitime)*
-- Implement Eliza AI personality on X.com/elizaos account incorporating projective anime elements and soul similar to clawd.atg.eth *(DorianD)*
-- Build small local model for intelligent request routing between available models based on complexity, cost, and load *(DorianD)*
-- Implement more skills integration following clawdbot patterns *(jin)*
-- Build network where AI avatars meet through similarity searching with automatic discussion reports *(timcoucou)*
-- Create bootstrapping skill that connects to docs, knowledge repo, ai-news and hiscores *(jin)*
-- Implement automatic download of latest knowledge as part of default new user experience after connecting API key or local gateway *(jin)*
-- Rename elizaos.github.io repository to better reflect purpose *(jin)*
-- Build AI avatar network with automatic similarity matching, autonomous discussions, and meeting pre-qualification system similar to fetch.ai *(timcoucou)*
+- **Create ElizaRouter with distributed node selection** and time decay for QoS (Mentioned by: DorianD)
+- **Implement routing system using small models** like Phi-4 Mini, Qwen2.5, or Mistral 7B for prompt complexity analysis (Mentioned by: DorianD)
+- **Evaluate Composio for in-chat authentication implementation** (Mentioned by: sam)
 
 ### Documentation
 
-- Move quick start higher up in docs at https://docs.elizaos.ai/llms.txt *(jin)*
-- Write article clarifying philosophy behind the hiscores/tracking system *(jin)*
-- Publish 8004-related plugin tutorial *(Kenk)*
-- Clarify token value proposition for investors *(Taco)*
+- **Provide clear migration instructions** for ETH chain ElizaOS tokens with zero liquidity (Mentioned by: Sarthak)
+- **Clarify token utility beyond Jeju gas fees** and explain buy-back mechanisms (Mentioned by: gby)
+- **Disclose wallet addresses holding 40% supply** and vesting schedule (Mentioned by: Jayzen)
+- **Explain token distribution rationale** after 1:10 increase where community got 6 and team got 40% (Mentioned by: averma)
+- **Complete and share RFC document** about Composio implementation ideas (Mentioned by: Stan ⚡)
