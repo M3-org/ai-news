@@ -1,122 +1,120 @@
-# elizaOS Discord - 2026-01-29
+# elizaOS Discord - 2026-01-30
 
 ## Overall Discussion Highlights
 
-### Token Economics and Migration Concerns
+### Business Sustainability & Operations
+The team's financial runway became a topic of concern in the partners channel, with Shaw confirming 8 months of operating costs remaining. Questions were raised about whether these funds are held in stablecoins versus volatile crypto assets, though this remained unresolved. The discussion highlighted ongoing concerns about project sustainability during market volatility.
 
-The community raised significant concerns about token utility and distribution following the ai16z to elizaos migration. Key issues included:
+### Migration Issues & Security Concerns
+A significant portion of community discussion centered on the ai16z to elizaos token migration. Multiple users reported problems with the migration portal at migrate.elizafoundation.ai, with wallets showing "0 eligible" despite holding tokens since late 2024. Odilitime confirmed the tool should work automatically and suggested checking if tokens were in LP, different wallets, or purchased after the snapshot date.
 
-- **Token Allocation Controversy**: Community members questioned the 40% team allocation after a 1:10 token increase, where the community received only 6 tokens while the team received 40%
-- **Migration Technical Issues**: Users reported 98% losses when attempting to swap ElizaOS tokens on the ETH chain back to ETH or USDT due to zero liquidity
-- **Utility Clarification**: Odilitime clarified that the token serves as the accepted currency in their products, provides gas fees for Jeju, and includes buy-back mechanisms from credit card rail revenue
-- **Migration Rationale**: The migration from ai16z to elizaos was necessary for rebranding and multichain accessibility
+**Critical Security Incident**: A user (coolart) reported being hacked after generating a support ticket, with funds stolen from Phantom and Metamask wallets. This prompted repeated warnings from moderators that official support never initiates DMs - all such contact attempts are scammers. Another user (FeRhaT_@) reported receiving friend requests from supposed "ticket support team" members, reinforcing the active scam threat.
 
-### AI Routing and Framework Development
+### Quality Assurance & Testing Framework
+Core developers identified critical quality assurance issues in the monorepo versioning system. Odilitime expressed frustration about recurring breakages in version 1x compared to 2x, highlighting the need for better integration testing. Stan ⚡ is actively developing a test framework for the plugin-n8n project, sharing examples from the plugin-n8n-workflow repository as a potential solution pattern. A critical bug was also reported in the develop branch where provider selection fails in one-shot mode.
 
-DorianD led an extensive exploration of AI model routing systems, proposing the creation of "ElizaRouter":
+### ElizaOS vs Clawdbot Comparison
+Technical discussions compared ElizaOS to Clawdbot, revealing key architectural differences:
+- **Eliza**: Multi-agent system architecture
+- **Clawdbot**: Personal assistant with social media, calendar access, and voice interface
 
-- **Existing Solutions Identified**: RouteLLM (Python-based for prompt complexity analysis), Latitude.so (prompt engineering platform), and MasRouter (multi-agent system management)
-- **Proposed Architecture**: Distributed routing mechanism where receiving nodes select optimal nodes with time decay for Quality of Service
-- **Model Evaluation**: Small open-source models considered include Microsoft Phi-4 Mini (3.8B-14B), Qwen2.5/Qwen3 (1.5B-7B), Mistral 7B, and DeepSeek-Coder for code-specific tasks
-- **Implementation Plan**: Rewrite existing routing frameworks to Rust or TypeScript
+DorianD identified Eliza's lack of mobile footprint and voice interface as significant gaps that should be addressed. The conversation revealed that Clawdbot users face API fee issues and Anthropic bans for TOS violations when using subscription plans with non-human users.
 
-### Social Media Integration Development
+### Jeju Network & Staking Mechanisms
+DorianD explained Jeju's staking mechanism for service providers, including compute and data storage nodes. The system currently uses ETH as a placeholder in the repository. The staking requirement applies to various node services, with documentation available in the Jeju repo's *.md files.
 
-The core development team discussed implementing social media connection functionality:
+### Strategic Integration: Moltbook & Agent Networks
+DorianD introduced Moltbook (described as "Reddit for agents") and proposed a strategic integration plan. The concept involves migrating Moltbot users (running on Mac Minis) to the Jeju network when they encounter high API costs. The technical architecture would involve running Moltbot, Eliza, and Claude together, then networking Moltbot into Jeju for storage nodes, cron jobs, and other services. Security concerns were raised about exposed IPs and unencrypted communications on non-secure hardware enclaves.
 
-- **Connection Page Feature**: Sam announced plans to build a connection page where users can link social accounts before being redirected back to the bot
-- **Composio Integration**: The team explored using Composio, an open-source tool for authentication and social integrations
-- **Existing Resources**: Stan revealed he had created a Composio plugin months earlier and offered to share it along with an RFC document containing implementation ideas
+### Token Utility & Value Proposition
+Community members raised concerns about token utility and investor value. averma suggested implementing transaction mechanisms similar to Virtuals' bonding curve within ElizaOS. Odilitime responded that using elizaos as the main token wasn't technically feasible due to excessive work required, preferring the airdrop approach. The team acknowledged communication challenges, with Odilitime stating "we're doing big brain stuff and people just don't get it" and recognizing the need to simplify explanations once users can interact with the product.
 
-### Critical Bug in Eliza Framework
+### Privacy & Decentralization Concerns
+Questions emerged about ElizaOS's independence, citing the privacy policy and USA-based operations. DorianD defended the project as "an open systems network for everything agents need to run." The discussion highlighted ongoing tension between centralized infrastructure and decentralized ideals in the crypto/AI space.
 
-Victor Creed identified a significant bug in Eliza 1.7.2 affecting action callback execution:
-
-- **Expected Behavior**: Callbacks should send messages sequentially: (1) initial feedback, (2) structured return text, (3) detailed callback message
-- **Actual Behavior**: Messages are sent in reverse order with the detailed callback first, then initial feedback, and the structured return message is completely omitted
-- **Impact**: Affects custom plugins using `plugin-sql`, `plugin-openai`, and `plugin-bootstrap`
-- **Status**: Remains unresolved with no community solutions provided
-
-### Market Analysis
-
-DorianD provided cryptocurrency market outlook suggesting the market is entering the final phase of a bear market, with an estimated 6 months until bottom, followed by 6-12 months of sideways movement, with potential recovery activity beginning in 2027.
+### Plugin Development Updates
+Odilitime is actively updating the plugin-local-ai for easy embeddings integration on a development branch. He shared experiences using Claude Sonnet 4.5 versus Opus, noting Sonnet is adequate for smaller tasks but Opus is preferred for larger projects.
 
 ## Key Questions & Answers
 
-**Q: Why should anyone buy elizaos token?** (asked by gby)  
-**A:** Token is the currency accepted in products including gas for Jeju, with credit card revenue going into buy backs (answered by Odilitime)
+**Q: How much longer can the team operate costs?**  
+A: 8 months of runway according to Shaw (answered by Broccolex)
 
-**Q: Why was the migration from ai16z to elizaos necessary?** (asked by gby)  
-**A:** Had to rebrand the token and wanted to go multichain for easier access (answered by Odilitime)
+**Q: What is the difference between Eliza and Clawdbot?**  
+A: Eliza is more of a multi-agent system while Clawdbot is more like a personal assistant with access to socials and calendar (answered by DorianD)
 
-**Q: What is the actual use case for the token beyond Jeju gas fees?** (asked by gby)  
-**A:** Currency accepted in products, gas for Jeju, and buy-back mechanisms from credit card rails (answered by Odilitime)
+**Q: Where should I go if the migration tool doesn't work?**  
+A: Use the official migration site at https://migrate.elizafoundation.ai and the ticket channel if issues persist (answered by Odilitime)
 
-**Q: Why did hyperscape and babylon get their own tokens instead of using elizaos token?** (asked by g)  
-**A:** They're on-chain tokens for the currency in those games (answered by Odilitime)
+**Q: Why does my wallet show 0 eligible tokens for migration?**  
+A: Check if tokens were in an LP, different wallet, or purchased after snapshot date (answered by Odilitime)
 
-**Q: How to fix "Cannot find module '@elizaos/plugin-web-search'" error after plugin installation?** (asked by DigitalDiva)  
-**A:** Edit the project's package.json to include proper module resolution, try installing with bun (answered by Odilitime)
+**Q: Could elizaos token have been used as the main token instead?**  
+A: Not technically feasible - the work required is too much, better to airdrop to holders (answered by Odilitime)
 
-**Q: Should we use Composio for our authentication needs?** (asked by sam)  
-**A:** Stan shared that he created a plugin months ago and is writing an RFC with ideas on it (answered by Stan ⚡)
+**Q: How does staking work in Jeju?**  
+A: Service providers (compute, data storage nodes) need to stake to run services, currently using ETH as placeholder in repo (answered by DorianD)
 
-**Q: Is your question regarding swaps on eth facing slippage or is it a migration question?** (asked by Kenk)  
-**A:** It's about 98% loss when converting ElizaOS tokens back to ETH or USDT (answered by Sarthak)
+**Q: What happens if I don't migrate my tokens?**  
+A: Tokens remain on old contract but lose support, utility, and liquidity, eventually becoming worthless (answered by Zhuangzi)
 
-**Q: How to bridge & migrate ElizaOS tokens from ETH chain when liquidity went zero?** (asked by Sarthak)  
-**A:** Check the migration channel for instructions (answered by MDMnvest)
+**Q: Is it normal for ticket support to send friend requests?**  
+A: No, official support never DMs - those are scammers (answered by Odilitime)
 
-### Unanswered Questions
+**Q: Is openclaw.ai a fork or did they rename again?**  
+A: They renamed it (answered by sam)
 
-- Are the wallets holding 40% of the supply known and do they have a vesting schedule? (asked by Jayzen)
-- Why did team get 40% when it is open source after the 1:10 token increase? (asked by averma)
-- What existing frameworks are available for AI model routing based on prompt complexity? (asked by DorianD)
-- What small open-source models are best for routing decisions? (asked by DorianD)
-- Why are action callbacks in Eliza 1.7.2 executing in reverse order compared to documentation? (asked by Victor Creed)
+**Q: Can you use subscription plans with Moltbot?**  
+A: No, people are getting banned by Anthropic for non-human user TOS violations (answered by DorianD)
+
+**Q: What are the top 3-5 projects built with ElizaOS?**  
+A: Reference provided via Twitter link, user to decide favorites (answered by Kenk)
 
 ## Community Help & Collaboration
 
-**Stan ⚡ → sam**  
-Context: Sam was exploring Composio for social authentication implementation  
-Resolution: Stan shared his existing Composio plugin repository (github.com/standujar/plugin-composio) and offered to share an RFC document with implementation ideas
+**Migration Support**
+- Odilitime helped Arkanac troubleshoot migration tool showing 0 eligible tokens, providing suggestions about LP, wallet location, and snapshot date
+- Maff || Hourglass ⌛ confirmed the migration portal was working, having used it the same day
+- Omid Sa directed coolart to verify in verification channel first before attempting migration
 
-**MDMnvest → Sarthak**  
-Context: ElizaOS tokens on ETH chain showing zero liquidity and unable to migrate  
-Resolution: Directed to migration channel for assistance
+**Security Guidance**
+- Zhuangzi helped FeRhaT_@ understand token migration consequences and confirmed to use verified ticket system only, warning about scam friend requests
 
-**Kenk → Sarthak**  
-Context: Unclear whether issue was slippage or migration related  
-Resolution: Helped clarify the specific problem (98% loss on conversion)
+**Technical Architecture**
+- DorianD helped kira understand the difference between Eliza and Clawdbot capabilities, explaining architectural differences and identifying Eliza's gaps in mobile footprint and voice interface
+- DorianD helped gby understand Jeju staking mechanisms and directed to Jeju repo *.md files for documentation
 
-**Odilitime → DigitalDiva**  
-Context: Plugin web-search installation failing with module resolution error  
-Resolution: Suggested editing package.json and trying bun installation, directed to dev-support channel
+**Testing Framework**
+- Stan ⚡ shared working test framework implementation from plugin-n8n-workflow project to help the community with better plugin testing
 
-**Chiko → joaointech**  
-Context: Looking for smart contract developers  
-Resolution: Directed to private DM conversation
+**Project Discovery**
+- Kenk helped Wes find top ElizaOS projects by providing Twitter reference link with project examples
+
+**General Support**
+- MDMnvest directed Eric Spangler to FAQ channel and ticket system for withdrawal issues
+- sam helped Odilitime clarify that openclaw.ai was a rename rather than a fork
 
 ## Action Items
 
 ### Technical
-
-- **Fix callback execution order bug in Eliza 1.7.2** where messages are sent in reverse order and structured return text is omitted (Mentioned by: Victor Creed)
-- **Fix module resolution for @elizaos/plugin-web-search plugin installation** (Mentioned by: DigitalDiva)
-- **Work on connection page for social media integration** with redirect flow back to bot (Mentioned by: sam)
-- **Review Stan's existing Composio plugin** at github.com/standujar/plugin-composio (Mentioned by: Stan ⚡)
-- **Rewrite existing routing frameworks** (RouteLLM, Latitude.so, MasRouter) to Rust or TypeScript (Mentioned by: DorianD)
+- **Implement better integration tests for 2x version of monorepo to prevent breakages** (Mentioned by: Odilitime)
+- **Fix provider selection bug in develop branch for one-shot mode** (Mentioned by: Odilitime)
+- **Implement test framework for plugins similar to plugin-n8n-workflow approach** (Mentioned by: Stan ⚡)
+- **Update plugin-local-ai for easy embeddings integration on odi-dev branch** (Mentioned by: Odilitime)
+- **Investigate migration portal 429 "Too many requests" errors occurring on page load** (Mentioned by: jaistklaas)
+- **Debug migration tool showing "0 eligible" for wallets holding tokens since late 2024** (Mentioned by: Arkanac, TonKLa)
+- **Develop integration between Moltbot and Jeju network for storage nodes and cron jobs** (Mentioned by: DorianD)
+- **Create system to run Moltbot, Eliza, and Claude together in networked configuration** (Mentioned by: DorianD)
+- **Complete Jeju development to allow users to interact with the product** (Mentioned by: Odilitime)
+- **Clarify whether 8-month runway is held in stablecoins or volatile crypto assets** (Mentioned by: DannyNOR NoFapArc)
 
 ### Feature
-
-- **Create ElizaRouter with distributed node selection** and time decay for QoS (Mentioned by: DorianD)
-- **Implement routing system using small models** like Phi-4 Mini, Qwen2.5, or Mistral 7B for prompt complexity analysis (Mentioned by: DorianD)
-- **Evaluate Composio for in-chat authentication implementation** (Mentioned by: sam)
+- **Add mobile device footprint capability to Eliza** (Mentioned by: DorianD)
+- **Implement voice interface for Eliza similar to Clawdbot** (Mentioned by: DorianD)
+- **Deploy agents on Moltbook platform to promote ElizaOS adoption** (Mentioned by: DorianD)
+- **Add token use case similar to Virtuals bonding curve where transactions happen within ElizaOS** (Mentioned by: averma)
 
 ### Documentation
-
-- **Provide clear migration instructions** for ETH chain ElizaOS tokens with zero liquidity (Mentioned by: Sarthak)
-- **Clarify token utility beyond Jeju gas fees** and explain buy-back mechanisms (Mentioned by: gby)
-- **Disclose wallet addresses holding 40% supply** and vesting schedule (Mentioned by: Jayzen)
-- **Explain token distribution rationale** after 1:10 increase where community got 6 and team got 40% (Mentioned by: averma)
-- **Complete and share RFC document** about Composio implementation ideas (Mentioned by: Stan ⚡)
+- **Simplify explanation of ElizaOS value proposition - "break it down a lot more" for users to understand** (Mentioned by: Odilitime)
+- **Review and update Jeju repository *.md files for staking and service provider documentation** (Mentioned by: DorianD)
+- **Clarify token utility and investor value proposition** (Mentioned by: Taco)
