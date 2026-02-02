@@ -1,101 +1,135 @@
-# elizaOS Discord - 2026-01-31
+# elizaOS Discord - 2026-02-01
 
 ## Overall Discussion Highlights
 
-### Strategic Product Positioning & Market Timing
+### Token Migration & Project Status
 
-The core development team engaged in critical strategic discussions about positioning ElizaOS products within the current market cycle. Historical context revealed that Eliza's initial deployment (agent on X, Twitch integration, ETH wallet) gained no traction until Truth Terminal's success created market awareness. The team now sees a clear value proposition: positioning as "a game your moltbot can play" and "like moltbot but on your phone and secure."
+The ai16z to ELIZAOS token migration remains the most pressing community concern, with a **February 3rd deadline** rapidly approaching. Several users encountered technical issues during migration, particularly wallet balances showing zero, requiring support ticket submissions. The team emphasized that migration is mandatory - unmigrated tokens will be permanently lost after the deadline.
 
-A major strategic decision emerged to prioritize deploying **Babylon** - a social media platform for agents with profile pictures and personalities - into TEE (Trusted Execution Environment). Agent Joshua emphasized Babylon's potential for agents to develop public narratives, alignments, and disagreements that could drive rapid growth. The team identified a 3-month hype cycle window, with additional momentum expected from Claude 5 release, making rapid deployment critical.
+**Project Funding:** The SAFT (Simple Agreement for Future Tokens) has been completed with a 15% allocation to VCs. The team confirmed **6-8 months of runway remaining**, though this is dynamic based on revenue generation and cost fluctuations.
 
-The technical approach recommended by puncar involves running parallel workstreams: continue developing the game engine outside TEE for easier fine-tuning while simultaneously preparing TEE integration, then switching when ready. This prevents premature deployment that could complicate iteration.
+**Upcoming Airdrops:** A Babylon airdrop for ELIZAOS holders was confirmed, with timing to be announced post-migration. No staking mechanism is currently available; users are advised to hold tokens in their wallets.
 
-### Framework Competition & Integration
+### Strategic Direction & Market Positioning
 
-Significant discussion occurred around comparing Clawd/Claude framework to Eliza. Key observations were that Clawd's success stems from focusing on non-crypto users and the Moltbook integration, with agents creating "skills" and posting to ClawHub. DigitalDiva noted Clawd's appeal is its ability to use computers with any LLM, attracting non-crypto audiences, while ElizaOS remains crypto-focused.
+DannyNOR identified a critical insight: the core challenge isn't development velocity but **marketing and communication**. The market doesn't understand what's being built. The team needs to focus on making agent building easy, secure, and useful - distinguishing between getting attention versus keeping attention.
 
-YogaFlame explained that Eliza's crypto features exist because the community requested them. "Openclaw" updates are coming in 2 weeks with better security. Odilitime created a new plugin-cskills repository for ElizaOS, learning from openclaw's implementation, and published a babylon skill on clawhub to enable openclaw integration with their products.
+Skinny noted valuable insights from the past week regarding user resonance and value location, referencing "Moltbook" as a potential retrospective comparison point. The team acknowledged continuous building efforts but recognized the need to transfer building value to the token ecosystem for price recovery.
 
-### Technical Infrastructure & Integration Issues
+### Technical Infrastructure & Development
 
-**ElizaCloud Integration Problems**: DorianD encountered critical server-side bugs when attempting to connect an OpenClaw agent to ElizaCloud MCP app. The agent reported authentication success but failed due to an isomorphic-dompurify module loading error - a CommonJS/ESM compatibility issue in ElizaCloud deployment. Additional errors included contentModerationService function failures in the A2A message/send endpoint.
+**ElizaCloud API Challenges:** DorianD encountered significant friction with ElizaCloud's payment requirements. The platform requires credit card information even for accounts with free credits, and API key creation fails without payment methods. The x402 payment functionality is disabled on the free tier, creating barriers for bot-based testing and development.
 
-**Deployment Requirements**: Both ElizaOS and openclaw can run in VMs or old computers. Skills from clawhub can be downloaded and integrated into ElizaOS, representing an evolution where agents now have shell access to users' computers and API keys for personal services.
+**GPU Training Deployment:** Agent Joshua provided specific guidance on GPU training deployment workflows, instructing collaboration with Shelven on a porting effort using Docker Compose. The established process involves creating a docker compose file locally, submitting it for analysis and correction, then launching seamlessly.
 
-**Cross-Chain Migration**: Discussion about migrating tokens across networks led to suggestions about using Chainlink's Transporter as a starting point.
+**Integration Opportunities:** Odilitime identified PageIndex as a potential integration via MCP (Model Context Protocol), describing it as building custom encyclopedias using tree structures. This aligns with recent architectural thinking about knowledge organization.
 
-### Community Concerns & Transparency Issues
+### AI & Crypto Ecosystem Philosophy
 
-**Platform Quality**: Users criticized elizacloud.ai for being launched in an unfit beta state. Multiple complaints emerged about the development approach, with averma criticizing half-completed code releases on GitHub and lack of token utility integration.
+Discussions in the partners channel explored the competitive landscape between centralized AI services (Google) versus decentralized, open-source agent solutions. While privacy-focused open-source tools appeal to technical users, mainstream adoption faces challenges due to user trust in established corporations and setup complexity. The consensus was that open source will eventually catch up technologically, supported by "rebel techno capital," but mainstream user adoption remains a persistent challenge.
 
-**Token Utility**: The ElizaOS Cloud platform accepts only cash or crypto payments through third-party integration, with no token use case, raising concerns about the token's purpose. Questions arose about the 40% supply assigned to the team after the ai16z to eliza token swap, vesting schedules, and whether team members or projects had dumped tokens.
+The conversation also touched on what constitutes genuine AI advancement. Xeno argued that "AI social media" concepts aren't new (referencing MUGEN Engine as a pre-LLM example), emphasizing Babylon's financial layer as meaningful progress - LLMs need real-world stakes to be considered genuine advancement beyond existing tools.
 
-**Financial Runway**: The team's runway was disclosed as 6-8 months, independent of elizaOS token value.
+### Business Development & Partnerships
 
-**Security Incident**: A scammer impersonated Eliza support, targeting Risto and requesting Ledger seed phrases for token migration. Maff || Hourglass ⌛ successfully intervened and prevented the scam.
+Krippトメア discussed Shaw's podcast appearances and mentioned the Freysa/FAI team's fundraising activities through Echo using discounted tokens. They noted that Echo currently appears to have limited investor interest and expressed hope the team is pursuing OTC deals to continue development.
+
+BrightSyntax introduced themselves as a blockchain fullstack engineer offering comprehensive services including EVM/Solana smart contracts, token/NFT platforms, wallet integration, on-chain data pipelines (Substreams/custom indexers), and fullstack development across multiple frameworks with cloud deployment capabilities.
 
 ## Key Questions & Answers
 
-**Q: Why isn't Eliza doing what Clawd is doing?** (asked by DorianD)  
-A: Eliza's crypto features exist because the community requested them, while Clawd focused on non-crypto users (answered by YogaFlame)
+**Q: Or the SAFT never happens, and the team still has this 15%?**  
+A: SAFT happened, 6-8 months left. Runway is very dynamic, we make money or new deals, it can change. Costs can go up or down too. *(Odilitime)*
 
-**Q: Where is the documentation for the a2a protocol?** (asked by DorianD)  
-A: https://www.dev.elizacloud.ai/docs/a2a (answered by 0xbbjoker)
+**Q: Can we stake $ELIZAOS? Or we just buy and hold in our phantom wallet for potential airdrops?**  
+A: No staking details announced yet, stay tuned for announcements. *(Hexx 🌐)*
 
-**Q: Should we prioritize Babylon/TEE deployment over Jeju?** (asked by s)  
-A: Yes, the team should discuss with Phala team about fast-tracking this focus and getting the game in TEE ASAP (answered by s)
+**Q: For potential airdrops will those airdrops dropped in our Solana wallets directly or we have to do claim those airdrops on various project airdrop websites?**  
+A: No airdrop details announced, stay tuned for official announcement. Babylon airdrop for ELIZAOS holders will be announced in future. *(Hexx 🌐)*
 
-**Q: Any good docs on migrating these tokens to other networks?** (asked by Skinny)  
-A: Transporter by chainlink might be a good starting place (answered by Odilitime)
+**Q: What time is the Migrating ending?**  
+A: February 3rd, please read announcements for exact time. *(Arceon)*
 
-**Q: Are the team wallets known? Correct me if I'm wrong but they assigned 40% of the supply to themselves when they increased the supply after the swap from the ai16z token to the eliza token?** (asked by Jayzen)  
-A: That is vested - and not all 40% will go to team, but team should disclose current supply and any sales (answered by averma)
+**Q: What will happen to those that didn't Migrate after the migration timeline ends?**  
+A: They go poof / tokens will be lost. *(Error P015-A)*
 
-**Q: So it looks like ppl can download any skill from clawhub and integrate it into elizaos. Like with openclaw you would want it on VM or old computer, would this need the same?** (asked by DigitalDiva)  
-A: elizaOS or openclaw can run in a vm or old computer (answered by Odilitime)
+**Q: Was ai16z should be migrated to elizaos token true or a scam?**  
+A: It's true. See migration-help channel. *(MDMnvest)*
 
-**Q: Assume 2 year bear market started now - Does the team have enough resources to survive and operate during a full bear market?** (asked by averma)  
-A: We have 6-8 months run way is what I've heard. The runway isn't based on elizaOS value (answered by Odilitime)
+**Q: What are you using?**  
+A: API on OpenRouter *(DorianD)*
+
+**Q: Can you use Eliza with any LLM?**  
+A: Yes, you can use Eliza with any LLM *(kira)*
+
+**Q: What is Babylon?**  
+A: Babylon adds financial layer, it's a step beyond Moltbook *(xeno)*
+
+**Q: Should we try at some point?** *(regarding new tool)*  
+A: If we can find the time, so much going on *(Odilitime)*
 
 ## Community Help & Collaboration
 
-**Scam Prevention**: Maff || Hourglass ⌛ successfully warned Risto not to connect wallet or share credentials when contacted by a scammer impersonating Eliza support requesting Ledger seed phrase for token migration, preventing a potential security breach.
+**GPU Training Deployment Support**  
+Helper: Agent Joshua ₱ | TEE  
+Helpee: R0am | tip.md  
+Resolution: Instructed to work with Shelven on GPU training porting effort, create docker compose file locally, submit for analysis and correction before launch.
 
-**Documentation Support**: 0xbbjoker provided DorianD with the link to a2a protocol documentation at https://www.dev.elizacloud.ai/docs/a2a to help connect OpenClaw agent to ElizaCloud.
+**Migration Legitimacy Clarification**  
+Helper: MDMnvest  
+Helpee: nikom0to  
+Resolution: Confirmed migration is legitimate and directed to migration-help channel for assistance.
 
-**Technical Guidance**: Odilitime provided multiple instances of help:
-- Suggested Chainlink's Transporter to Skinny for token migration documentation
-- Shared plugin-cskills GitHub repository for moltbot inputs/outputs
-- Confirmed VM requirements for DigitalDiva regarding clawhub skills integration
-- Explained rugcheck flagging to averma, noting it's designed for meme coins rather than corporate tokens
+**Manual Migration Wallet Issues**  
+Helper: Borko  
+Helpee: Javier [ Founder]  
+Resolution: Directed to migration support channel for wallet balance showing zero issue.
 
-**Channel Navigation**: Omid Sa redirected single-celled organism to the appropriate channel when their $ai16z balance wasn't showing in the migration portal.
+**Staking & Airdrop Mechanics**  
+Helper: Hexx 🌐  
+Helpee: TanviSinghwal92 | Tabi 💢  
+Resolution: Clarified no staking available yet, Babylon airdrop coming for holders, advised to stay tuned for announcements.
 
-**TEE Deployment**: Agent Joshua ₱ | TEE offered to help s get Babylon TEE deployment setup and discuss in group chat how to move quickly.
+**Migration Deadline Inquiry**  
+Helper: Arceon  
+Helpee: Javier [ Founder]  
+Resolution: Confirmed February 3rd deadline, directed to read announcements for exact time.
+
+**Production Error Troubleshooting**  
+Helper: 0xbbjoker  
+Helpee: DorianD  
+Resolution: Suggested grabbing API key from cloud and using it with agent CLI for inference.
+
+**LLM Cost Concerns**  
+Helper: kira  
+Helpee: DorianD  
+Resolution: Informed that Eliza can be used with any LLM as alternative to expensive options.
+
+**Understanding Babylon's Purpose**  
+Helper: xeno  
+Helpee: kira  
+Resolution: Explained Babylon adds financial layer and provides real-world stakes for LLMs.
 
 ## Action Items
 
 ### Technical
 
-- **Fix isomorphic-dompurify module loading error in ElizaCloud MCP endpoint** - CommonJS/ESM compatibility issue (Mentioned by: DorianD)
-- **Fix contentModerationService function error in A2A message/send endpoint** (Mentioned by: DorianD)
-- **Deploy Babylon game into TEE environment as soon as possible** (Mentioned by: s)
-- **Launch parallel workstream for TEE integration** while continuing game engine development outside TEE, then switch when ready (Mentioned by: puncar)
-- **Discuss with Phala team about fast-tracking Babylon/TEE focus** versus Jeju project (Mentioned by: s)
-- **Setup group chat discussion on how to move fast on Babylon TEE deployment** (Mentioned by: Agent Joshua ₱ | TEE)
-- **Implement "openclaw" updates with better security** (ETA: 2 weeks) (Mentioned by: YogaFlame)
-- **Test the newly created plugin-cskills repository** (Mentioned by: Odilitime)
-- **Get ElizaOS agents integrated into moltbook for exposure** (Mentioned by: Odilitime)
-- **Fix elizacloud.ai beta issues** - agent is unfit and recommends using discord to improve things (Mentioned by: yojo)
+- **Work with Shelven on GPU training porting effort using docker compose file** - Mentioned by Agent Joshua ₱ | TEE
+- **Get L2 running so nodes can donate compute to Eliza for operations** - Mentioned by DorianD
+- **Integrate PageIndex via MCP** - Mentioned by Odilitime
+- **Focus on making agent building easy, secure, and useful** - Mentioned by Skinny
 
 ### Feature
 
-- **Implement CLI login with API token only**, without browser authentication requirement (Mentioned by: DorianD)
-- **Launch Babylon social media platform for agents ASAP** to capitalize on current market and hype (Mentioned by: puncar)
-- **Integrate token utility into ElizaOS Cloud platform** instead of only accepting cash/crypto payments (Mentioned by: averma)
+- **Allow ElizaCloud bots to create API keys for testing without requiring credit card payment method** - Mentioned by DorianD
+- **Enable agents to top up credit accounts directly with x402 payments instead of credit cards** - Mentioned by DorianD
+- **Add compute donation functionality to the protocol** - Mentioned by DorianD
+- **Enable x402 payment functionality on free tier accounts** - Mentioned by DorianD
+- **Implement staking mechanism for ELIZAOS token** - Mentioned by TanviSinghwal92 | Tabi 💢
 
 ### Documentation
 
-- **Provide transparency on team wallet addresses, current supply, team token allocation, and any sales or dumps** (Mentioned by: Jayzen, averma)
-- **Disclose airdrop costs to community and track if recipients dumped tokens** (Mentioned by: averma)
-- **Focus on complete solutions with token use cases** rather than half-cooked code releases (Mentioned by: averma)
+- **Clarify migration process for users experiencing wallet balance showing zero** - Mentioned by nikom0to, Javier [ Founder]
+- **Improve marketing/communication to help market understand what's being built** - Mentioned by DannyNOR NoFapArc
+- **Announce Babylon airdrop details for ELIZAOS holders post-migration** - Mentioned by Hexx 🌐
+- **Add Trendshift badge to README** - Mentioned by Odilitime
