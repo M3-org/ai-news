@@ -7,3 +7,9 @@ frontend/build/
 frontend/public/
 # Lock files - this project uses npm, not yarn
 yarn.lock
+
+# Whisper tools (local only, not committed)
+scripts/whisper/
+
+# Clip output
+episodes/clips/
