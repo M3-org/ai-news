@@ -292,7 +292,14 @@ class ShmotimeRecorder {
         if (eventData) this.processShowConfig(eventData);
         break;
       case 'load_episode':
-        if (eventData) this.processEpisodeData(eventData);
+        if (eventData) {
+          this.processEpisodeData(eventData);
+          // Debug: log first scene structure to verify in/out fields
+          if (eventData.scenes?.[0]) {
+            const s = eventData.scenes[0];
+            this.log(`DEBUG load_episode scene[0]: in="${s.in || s.transitionIn || ''}" out="${s.out || s.transitionOut || ''}" location="${s.location || ''}"`, 'debug');
+          }
+        }
         break;
       case 'start_intro':
         this.currentPhase = 'intro';
@@ -316,8 +323,20 @@ class ShmotimeRecorder {
       case 'scene_loaded':
         // Update scene index and reset dialogue counter
         if (eventData?.sceneIndex !== undefined) {
+          const now = Date.now();
+          const visualSec = this.recordingStartTime ? (now - this.recordingStartTime) / 1000 : 0;
+
+          // Set visualEndSec for previous scene
+          if (this.currentSceneIndex >= 0 && this.episodeData?.scenes?.[this.currentSceneIndex]) {
+            this.episodeData.scenes[this.currentSceneIndex].visualEndSec = visualSec;
+          }
+
+          // Set visualStartSec for new scene
           this.currentSceneIndex = eventData.sceneIndex;
           this.currentDialogueInScene = 0;
+          if (this.episodeData?.scenes?.[this.currentSceneIndex]) {
+            this.episodeData.scenes[this.currentSceneIndex].visualStartSec = visualSec;
+          }
         }
         break;
     }
@@ -504,17 +523,28 @@ class ShmotimeRecorder {
         // Scene-level timing (populated during recording)
         startSec: undefined,
         endSec: undefined,
-        dialogue: (scene.dialogue || []).map((dialogue, dialogueIdx) => ({
-          number: dialogue.number || dialogueIdx + 1,
-          action: dialogue.action || '',
-          line: dialogue.line || '',
-          actor: dialogue.actor || '',
-          // Dialogue-level timing (populated during recording)
-          startSec: undefined,
-          endSec: undefined,
-          // NEW in v6: Word-level timestamps (populated by speak_start)
-          words: []
-        })),
+        // NEW in v6: Visual timing from scene_loaded events
+        visualStartSec: undefined,
+        visualEndSec: undefined,
+        dialogue: (scene.dialogue || []).map((dialogue, dialogueIdx) => {
+          const actor = dialogue.actor || '';
+          // Mark media commands for clip extraction to skip
+          const mediaActors = ['aishaw', 'roll-commercial', 'roll-media', 'clear-media'];
+          const isMediaCommand = mediaActors.includes(actor.toLowerCase());
+          return {
+            number: dialogue.number || dialogueIdx + 1,
+            action: dialogue.action || '',
+            line: dialogue.line || '',
+            actor: actor,
+            // Dialogue-level timing (populated during recording)
+            startSec: undefined,
+            endSec: undefined,
+            // NEW in v6: Word-level timestamps (populated by speak_start)
+            words: [],
+            // NEW in v6: Flag for media commands (aishaw, roll-commercial, etc.)
+            isMediaCommand: isMediaCommand || undefined
+          };
+        }),
         length: scene.length || 0,
         totalInEpisode: scene.totalInEpisode || 0,
         total_dialogues: scene.total_dialogues || 0
@@ -535,13 +565,19 @@ class ShmotimeRecorder {
           filename: this.outputFile?.path || null
         });
 
-        // Finalize timing for last dialogue
+        // Finalize timing for last scene and dialogue
         if (this.episodeData?.scenes?.length > 0) {
           const lastScene = this.episodeData.scenes[this.episodeData.scenes.length - 1];
+          const now = Date.now();
+          const sec = this.recordingStartTime ? (now - this.recordingStartTime) / 1000 : 0;
+
+          // Set visualEndSec for final scene
+          if (!lastScene.visualEndSec) {
+            lastScene.visualEndSec = sec;
+          }
+
           if (lastScene?.dialogue?.length > 0) {
             const lastDialogue = lastScene.dialogue[lastScene.dialogue.length - 1];
-            const now = Date.now();
-            const sec = this.recordingStartTime ? (now - this.recordingStartTime) / 1000 : 0;
             if (lastDialogue && !lastDialogue.endSec) {
               lastDialogue.endSec = sec;
             }

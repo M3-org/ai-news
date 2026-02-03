@@ -42,6 +42,7 @@ interface Dialogue {
   startSec: number;
   endSec: number;
   words?: Word[];
+  isMediaCommand?: boolean;  // v6: marks aishaw/roll-commercial/roll-media/clear-media
 }
 
 interface Scene {
@@ -50,6 +51,8 @@ interface Scene {
   description: string;
   startSec: number;
   endSec: number;
+  visualStartSec?: number;  // v6: when scene visually appears (from scene_loaded)
+  visualEndSec?: number;    // v6: when scene visually ends
   dialogue: Dialogue[];
   transitionIn?: string;
   transitionOut?: string;
@@ -208,6 +211,24 @@ function formatTimePrecise(seconds: number): string {
 }
 
 /**
+ * Check if a dialogue entry is a media command (aishaw, roll-commercial, etc.).
+ * These should be skipped for timing calculations since they don't represent
+ * actual content with meaningful duration.
+ *
+ * Supports both:
+ * - v6+ format: dialogue.isMediaCommand flag
+ * - Legacy format: check dialogue.actor for known media command actors
+ */
+function isMediaCmd(dialogue: Dialogue): boolean {
+  // v6+ explicit flag
+  if (dialogue.isMediaCommand) return true;
+
+  // Backwards compatibility: check actor name for known media command actors
+  const mediaActors = new Set(["aishaw", "roll-commercial", "roll-media", "clear-media"]);
+  return mediaActors.has(dialogue.actor?.toLowerCase() || "");
+}
+
+/**
  * Resolve video path (handles glob patterns) and find corresponding data file.
  * Looks for session-log.json first (v6 format), falls back to episode-data-timed.json.
  */
@@ -312,12 +333,14 @@ function listScenes(data: TimedEpisodeData, videoPath?: string): void {
     const scene = data.scenes[i];
     const prevScene = data.scenes[i - 1];
 
-    // Visual start = when previous scene ends (actual visual transition)
-    const visualStart = prevScene ? prevScene.endSec : scene.startSec;
-    const duration = Math.round(scene.endSec - visualStart);
+    // Visual start: prefer visualStartSec (v6), fall back to previous scene end, then scene start
+    const visualStart = scene.visualStartSec ?? (prevScene ? prevScene.endSec : scene.startSec);
+    // Visual end: prefer visualEndSec (v6), fall back to scene endSec
+    const visualEnd = scene.visualEndSec ?? scene.endSec;
+    const duration = Math.round(visualEnd - visualStart);
 
-    // Get first speech line for preview
-    const firstSpeech = scene.dialogue.find(d => d.type === "speech" && d.line);
+    // Get first speech line for preview (skip media commands)
+    const firstSpeech = scene.dialogue.find(d => d.type === "speech" && d.line && !isMediaCmd(d));
     const preview = firstSpeech?.line || scene.description || "";
     const maxPreview = 70;
     const truncated = preview.length > maxPreview
@@ -386,8 +409,8 @@ function searchTranscript(data: TimedEpisodeData, query: string): SearchMatch[] 
 
   for (const scene of data.scenes) {
     for (const dialogue of scene.dialogue) {
-      // Skip non-speech entries (media, etc.) that don't have text
-      if (!dialogue.line) continue;
+      // Skip media commands and non-speech entries
+      if (!dialogue.line || isMediaCmd(dialogue)) continue;
 
       if (dialogue.line.toLowerCase().includes(queryLower)) {
         matches.push({
@@ -471,6 +494,11 @@ async function handleExtract(args: CliArgs): Promise<void> {
     const scene = data.scenes[sceneIdx];
     if (!scene) return 0;
 
+    // Prefer visualStartSec if available (v6 format)
+    if (scene.visualStartSec !== undefined) {
+      return scene.visualStartSec;
+    }
+
     // For first scene, use scene's startSec
     if (sceneIdx <= 0) {
       return scene.startSec;
@@ -480,9 +508,10 @@ async function handleExtract(args: CliArgs): Promise<void> {
     const visualStart = data.scenes[sceneIdx - 1].endSec;
 
     // Find first dialogue with audio that starts at or after visual transition
-    // Use first word's start time (actual audio) instead of dialogue startSec
+    // Skip media commands (aishaw, roll-commercial, etc.) - they don't have real timing
     const firstDialogueAfterTransition = scene.dialogue
       .filter(d => {
+        if (isMediaCmd(d)) return false;  // Skip media commands
         const audioStart = d.words?.[0]?.start ?? d.startSec;
         return audioStart >= visualStart;
       })
