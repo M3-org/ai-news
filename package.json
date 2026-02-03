@@ -25,9 +25,7 @@
     "merge-discord-dbs": "ts-node -r tsconfig-paths/register --transpile-only scripts/merge-discord-databases.ts",
     "build-user-registry": "ts-node -r tsconfig-paths/register --transpile-only scripts/build-discord-user-registry.ts",
     "webhook": "node scripts/server.js",
-    "analyze-channels": "npm run channels -- analyze",
-    "record6": "node scripts/recorder6.js",
-    "clip": "ts-node -r tsconfig-paths/register --transpile-only scripts/clip.ts"
+    "analyze-channels": "npm run channels -- analyze"
   },
   "keywords": [
     "news",
