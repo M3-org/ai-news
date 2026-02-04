@@ -1,84 +1,106 @@
-# elizaOS Discord - 2026-02-02
+# elizaOS Discord - 2026-02-03
 
 ## Overall Discussion Highlights
 
-### Agent Reliability and Skill Invocation
+### Eliza Framework Development & Integration
 
-A critical technical issue emerged around agent skill invocation reliability. R0am identified that in 56% of evaluation cases, skills were never triggered even when agents had access to documentation. They shared a working solution using a UserPromptSubmit hook that enforces a mandatory three-step activation sequence:
+**Plugin Development & Security**
+The coders channel saw significant discussion around plugin development and security concerns. Odilitime shared the plugin-cskills repository as a reference implementation for plugin capabilities. Security emerged as a critical concern when Jin raised issues about malicious skills on clawhub. In response, Odilitime outlined a multi-layered security approach including scanner skills, code rewriting phases for Eliza adaptation, and LLM-based skill review. Jin suggested sandboxing as an alternative security measure.
 
-1. Evaluate each skill with YES/NO reasoning
-2. Immediately activate relevant skills using the Skill() tool
-3. Only proceed with implementation after completing activation
+**OpenClaw/Eliza Integration**
+Lucas Alpes inquired about OpenClaw integration with Eliza. Borko confirmed a phased rollout approach where everyone will initially have access to Eliza, with custom agent capabilities becoming available a few weeks after launch.
 
-Stan confirmed implementing a similar pattern in Eliza Cloud and suggested that better skill descriptions might help mitigate the invocation problem. The approach was compared to logic used by Composio and Zapier MCP, though R0am noted it makes conversations "a bit weird but it works."
+**Data Infrastructure Integration**
+Lucas Alpes is developing a Data Infrastructure as a Service (DIaaS) platform for Solana tokens that analyzes on-chain data and delivers trading signals. The discussion confirmed that Eliza agents can consume such APIs through plugin development, with 0xbbjoker offering ongoing support for implementation.
 
-### Visual Generation and AI Capabilities
+### Development Tools & Repository Updates
 
-A significant limitation was identified in elizacloud.ai's image generation system - the inability to maintain visual consistency across multiple generations. When requesting modifications to generated images (e.g., same character in different contexts), the system regenerates entirely new visuals instead of preserving character features. This forces users to spend excessive time on prompt engineering or switch to external tools, breaking workflow continuity for storytelling and branding use cases.
+**Code Quality & Branch Management**
+In the core-devs channel, Odilitime recommended using the odi-dev branch instead of main, citing numerous improvements and bug fixes. This highlights ongoing active development with significant divergence between branches.
 
-DorianD suggested these visual consistency features should be implemented as apps built by agents or third-party developers, recommending LoRA (Low-Rank Adaptation) models as an existing solution.
+**Tool Compatibility Issues**
+The codex app was noted to be Apple Silicon only, limiting cross-platform compatibility. Discussion around cursor potentially coming to browsers suggested interest in expanding accessibility of development tools.
 
-### Agent Usability and User Adoption
+**AI Model Developments**
+Stan shared news about Claude Sonnet 5 potentially being a generation ahead of Google's offerings, indicating the team's awareness of evolving AI capabilities.
 
-DorianD discussed user adoption challenges, noting that high installation effort deterred users. They emphasized the value of agents that "relentlessly try to do stuff" and work autonomously rather than requiring extensive setup, highlighting this as a key factor in user adoption.
+### CICADA-71 Challenge Framework
 
-### Platform and Infrastructure Issues
+Mike D. introduced an ambitious distributed AI agent challenge framework featuring:
+- 497 cryptographic puzzles across 7 categories (Cryptography, Encryption, Prompt Injection, Multi-Agent Coordination, Reverse Engineering, Economic Security, Meta-Challenge)
+- 71-shard distribution system
+- Plugin tape system with ZK-RDF compression
+- Paxos consensus mechanism
+- Monster group mathematics
+- 71 total frameworks with 2 slots allocated for Eliza and Claw
 
-**ElizaCloud.ai Account Management**: yojo reported a critical account access problem where their agent disappeared from the dashboard after using two different email formats for the same Proton account ('x@proton.me' vs 'x@protonmail.com'), suspected to have created duplicate accounts.
+### Product & Marketing Insights
 
-**Token Migration Problems**: Multiple users encountered issues with AI16Z token migration and exchange:
-- kpat reported purchasing old AI16Z tokens at 2 SOL that depreciated to 0.02 value
-- Gumball experienced technical difficulties with the official bridge website not detecting pre-November 2025 tokens
-- StefanB encountered a "Max amount reached" error during migration
+**Privacy Product Challenges**
+Odilitime shared valuable business insights from their experience at sessionapp, highlighting the paradox of marketing privacy-focused products. Two key challenges were identified:
+1. Privacy solutions often introduce user experience friction
+2. Users tend to be overly trusting and may not perceive privacy as a critical need
 
-All support requests were redirected to dedicated support channels by moderators.
+### Migration Issues
 
-### New Tools and Projects
+**ai16z to elizaos Transition**
+The discussion channel revealed ongoing migration problems. Users reported significant financial losses (over 4k in one case) during the ai16z to elizaos migration. Multiple users were redirected to dedicated support channels, suggesting these issues require specialized handling.
 
-Odilitime introduced the GAP (GitHub Actions Protocol) project, though no detailed discussion or testing feedback was provided. Stan shared a Vercel blog post about agents.md outperforming skills in evaluations.
+### Pull Requests & Code Reviews
 
-### Ecosystem Concerns
-
-Krippトメア expressed concerns about potential future restrictions on homebrew API access by companies, which could force developers out of their ecosystems and networks, though acknowledged uncertainty about whether this scenario will actually occur.
+Two pull requests were submitted for review:
+- PR #6457 to the main eliza repository by 0xbbjoker
+- PR #278 to eliza-cloud-v2 by Stan
 
 ## Key Questions & Answers
 
-**Q: Can elizacloud.ai reuse the same key visual features when generating follow-up images for storytelling or branding?**  
-A: DorianD suggested these should be apps built by agents/third-party developers and recommended using LoRA models as a solution for visual consistency (asked by yojo)
+**Q: Are you building an OpenClaw version using Eliza, and can it integrate with existing Eliza agents?**
+A: Everyone will have access to Eliza initially, with the ability to use custom agents available a few weeks after launch (answered by Borko)
 
-**Q: Isn't this the same logic as composio or zappier MCP?**  
-A: Stan confirmed similar approach being used in Eliza Cloud (asked by R0am, answered by Stan)
+**Q: Is there a requirement or standard to make it easier for Eliza agents to consume my DIaaS API with signals?**
+A: You can make a plugin for this (answered by 0xbbjoker)
 
-**Q: Does anyone know if the hyperliquid plug in is working?**  
-A: Self-resolved by GraV coding their own solution within approximately 35 minutes (asked by GraV)
+**Q: What are the other frameworks in CICADA-71?**
+A: There are 71 frameworks total, with 2 slots allocated for Eliza and Claw (answered by Mike D.)
+
+**Q: How did your skill experiment go?**
+A: Working on adding scanner skills, implementing code rewriting phase for Eliza adaptation, and need LLM review of skills (answered by Odilitime)
+
+**Q: Are we going to make a game with Genie3?**
+A: Questioned feasibility due to time constraints (answered by Odilitime)
 
 ## Community Help & Collaboration
 
-**R0am helped the community** by sharing a working solution to skill invocation reliability issues through a UserPromptSubmit hook with mandatory 3-step skill activation sequence that forces explicit evaluation, addressing the 56% failure rate in skill triggering.
+**Plugin Development Support**
+0xbbjoker provided comprehensive support to Lucas Alpes regarding DIaaS platform integration with Eliza agents. After confirming that plugin development was the solution, 0xbbjoker offered ongoing assistance for implementation.
 
-**Stan helped the community** by suggesting better skill descriptions as a potential solution to skill invocation reliability issues and confirming implementation patterns in Eliza Cloud.
+**OpenClaw Integration Guidance**
+Borko helped Lucas Alpes understand the OpenClaw/Eliza integration timeline, clarifying the phased rollout approach with initial Eliza access for all users followed by custom agent integration capabilities.
 
-**DorianD helped yojo** with visual generation consistency problems in elizacloud.ai by suggesting building this as an app and recommending LoRA models as an existing solution for maintaining visual consistency across image generations.
+**Code Repository Guidance**
+Odilitime proactively directed the community to use the odi-dev branch instead of main, preventing users from working with outdated code that lacks important improvements and bug fixes. Additionally, Odilitime shared the plugin-cskills repository as a reference implementation for the community.
 
-**Moderators (Odilitime and Borko) helped multiple users** by redirecting token migration and exchange issues to appropriate support channels:
-- Assisted kpat with old AI16Z token exchange issues
-- Directed Gumball to support for bridge website token detection problems
-- Helped StefanB with migration error resolution
+**Migration Support**
+Both satsbased and Hexx 🌐 assisted kwi_vn with migration issues by directing them to appropriate support channels (#1423981231300935801 and #1425417640071139358).
 
 ## Action Items
 
 ### Technical
 
-- **Investigate and resolve account duplication issue** when using different Proton email formats (proton.me vs protonmail.com) causing agent loss (mentioned by yojo)
-- **Develop apps or integrations using LoRA models** for maintaining visual consistency in image generation (mentioned by DorianD)
-- **Investigate and potentially implement GAP (GitHub Actions Protocol) project** (mentioned by Odilitime)
-- **Evaluate UserPromptSubmit hook mandatory skill activation sequence** for implementation (mentioned by R0am)
-- **Improve skill descriptions** to enhance reliable skill invocation (mentioned by Stan)
-- **Investigate Hyperliquid plugin functionality issues** (mentioned by GraV)
-- **Debug bridge website token detection** for pre-November 2025 holdings (mentioned by Gumball)
-- **Resolve "Max amount reached" error** in migration process (mentioned by StefanB)
+- **Add scanner skills to plugin-cskills repository for security validation** (Mentioned by: Odilitime)
+- **Implement phase to rewrite and adapt packaged code in skills for Eliza compatibility** (Mentioned by: Odilitime)
+- **Implement LLM review system for skill validation to address malicious skills on clawhub** (Mentioned by: Odilitime)
+- **Consider sandboxing implementation for skill execution security** (Mentioned by: jin)
+- **Develop plugin for DIaaS platform to integrate Solana token signals with Eliza agents** (Mentioned by: Lucas Alpes)
+- **Review PR #6457 in elizaOS/eliza repository** (Mentioned by: 0xbbjoker)
+- **Review PR #278 in elizaOS/eliza-cloud-v2 repository** (Mentioned by: Stan ⚡)
+- **Investigate migration issues causing user financial losses during ai16z to elizaos transition** (Mentioned by: E S P E R A N Z A 🦋)
 
 ### Feature
 
-- **Implement visual consistency feature in elizacloud.ai** to preserve character/brand elements across multiple image generations for storytelling and branding (mentioned by yojo)
-- **Enable modification of specific elements in generated images** without regenerating entire visual (e.g., removing accessories while keeping character consistent) (mentioned by yojo)
+- **Enable custom agent integration with OpenClaw/Eliza framework post-launch** (Mentioned by: Borko)
+- **Consider developing a game with Genie3** (Mentioned by: Stan ⚡)
+
+### Documentation
+
+- **Improve migration documentation and support process to prevent user losses** (Mentioned by: E S P E R A N Z A 🦋)
