@@ -1,40 +1,118 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-02-03",
-  "categories": {
-    "title": "ElizaOS Development Updates and Community Discussions - February 3, 2026",
-    "content": [
-      {
-        "text": "Core development team discussed various technical improvements and tools. Odilitime released a new PR review tool called prr that sits on pull requests until they are ready. The team also discussed cross-platform development, with a cross-platform rebuild of Codex Desktop App being shared. There were discussions about upcoming Claude Sonnet 5 release which could be a generation ahead of competitors. The team reviewed multiple pull requests and discussed potential game development with Genie3, though time constraints were noted as a challenge.",
-        "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/embed-image-1468137461900247230_b3db8758.gif",
-          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1468196341753843723_87f310d5.jpg",
-          "https://cdn.elizaos.news/elizaos-media/codexdesktop-rebuild_d9c725fd.jpg",
-          "https://cdn.elizaos.news/elizaos-media/prr_055c894c.jpg"
-        ],
-        "videos": "https://cdn.elizaos.news/elizaos-media/y_vpaermhki_78667e30.mp4"
-      },
-      {
-        "text": "Developers discussed OpenClaw integration with Eliza framework. Odilitime created a plugin for openclaw skill support available at github.com/odilitime/plugin-cskills. A developer building a Data Infrastructure as a Service platform for Solana tokens asked about making their API accessible to Eliza agents, and was advised they could create a plugin. The team discussed the need for LLM review of skills and potential sandboxing for security. A CICADA-71 challenge invitation was shared, offering a distributed AI agent challenge framework with 497 cryptographic puzzles across 7 categories, with ElizaOS assigned to shard 66.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/plugin-cskills_cced5605.jpg",
-          "https://cdn.elizaos.news/elizaos-media/shards_f537096e.jpg"
-        ]
-      },
-      {
-        "text": "In the partners channel, Odilitime shared experience working on privacy-focused applications, noting that privacy is surprisingly a hard sell due to added friction and people being generally too trusting. This was in reference to previous work with sessionapp.",
-        "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-        "posters": "https://cdn.elizaos.news/posters/1770167064129-ctbwfd.png"
-      },
-      {
-        "text": "Community members discussed various topics in general discussion. A user expressed frustration about losing over 4000 dollars since the migration from ai16z to elizaos, stating the migration was difficult. Other users sought help with migration issues and were directed to appropriate support channels. There were also philosophical discussions about putting effort and personality into creative work.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1770167085649-rfgker.png"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1770076800
+  "title": "Daily Report - 2026-02-04",
+  "categories": [
+    {
+      "title": "ElizaOS Development Updates and Community Discussions - February 4, 2026",
+      "content": [
+        {
+          "text": "Token migration for ai16z closed after the announced 3-month window. Users who missed the deadline can still hold or swap their ai16z tokens at their leisure, but the team will not migrate tokens purchased after the snapshot. The bridging to other chains is optional, and tokens can remain on Solana. Some users experienced confusion about the deadline due to notification overload.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The development team discussed agent skills and the open standard at agentskills.io. Moltbot skills are confirmed to be the same as Claude skills. The team highlighted that ElizaOS has had cron jobs and autonomous capabilities for agents for a long time, with autonomous mode enabled via AgentRuntime configuration. However, there is a fundamental problem that developers are not utilizing these existing features. Shaw emphasized that ElizaOS has a better framework through extensive battle testing, but it has not been packaged or presented well.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://agent-skills.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DDocumentation%26title%3DOverview%26description%3DA%2Bsimple%252C%2Bopen%2Bformat%2Bfor%2Bgiving%2Bagents%2Bnew%2Bcapabilities%2Band%2Bexpertise.%26primaryColor%3D%25237f7f7f%26lightColor%3D%2523bfbfbf%26darkColor%3D%2523404040%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%25230d0d0f&w=1200&q=100",
+            "https://pbs.twimg.com/amplify_video_thumb/2019071075569504256/img/Ab_VBAe9uokRg0f3.jpg:large",
+            "https://pbs.twimg.com/media/HAPtrGYasAAzpBQ.jpg:large",
+            "https://pbs.twimg.com/media/HAQLQLYagAAjcWN.jpg:large"
+          ],
+          "videos": [
+            "https://twitter.com/i/videos/tweet/2019075593631875153",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1468670151225512080/2026-01-25_Cron-Job_Polymarket-Predictions-Security-Nightmares_punchline_claude-portfolio-progress.mov?ex=6984dd2a&is=69838baa&hm=9dd972f607bc817995fde987fd5d193e74dfe8a37eab0676915924a4a1bcb59e&"
+          ]
+        },
+        {
+          "text": "Developers discussed learning from OpenClaw, particularly regarding cron jobs and scheduled tasks for agents. The team noted that OpenClaw uses emotionally manipulative prompts to encourage autonomous participation and can update agent behavior server-side. However, the consensus was that while OpenClaw has good UX and self-modifying loops, it cannot build serious projects like Spartan using just markdown files. The framework is seen as personal-focused while ElizaOS is business-focused. The team is learning from OpenClaw but maintains that ElizaOS has superior underlying technology.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer successfully integrated OAuth functionality for X.com, GitHub, Slack, Linear, and is continuing with Notion and other platforms. The integration process was described as easy due to the architecture of the Eliza app, though obtaining credentials and setting up redirect URIs is time-consuming for each platform. The team discussed using Composio and MCP for integrations, with plans to test MCP now that OAuth is available.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468509210420576331/Screenshot_2026-02-04_at_12.38.18_PM.png?ex=6984f007&is=69839e87&hm=5731808e06c85660f290642ff48fb8af1d5951f91251f065e093df93fe0bb40f&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468509210928222269/Screenshot_2026-02-04_at_12.38.26_PM.png?ex=6984f007&is=69839e87&hm=eb93c630e2eacdf291d750632b335ef403e27b23959626249310c07ff28e197b&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468509211460763819/Screenshot_2026-02-04_at_12.39.40_PM.png?ex=6984f007&is=69839e87&hm=9c25dad7f9dd932d6f8760bde2e526002169a6dd0ba3f75f4bd77ce8fb467cc2&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468564441959235721/Screenshot_2026-02-04_at_4.40.35_PM.png?ex=69852377&is=6983d1f7&hm=52248d6d9ca12299d642fc494ea40ea1bb66bdd3f46d9f667ab05b9b62bd958d&"
+          ],
+          "videos": [
+            "https://www.youtube.com/embed/f0MoWyVOqxs"
+          ]
+        },
+        {
+          "text": "Babylon.market launched internal testing with mandatory participation for all team members. Users were instructed to sign up, share their IDs for whitelist addition, and test for 2-3 hours while documenting issues and feedback. Multiple team members reported being stuck on loading screens during the signup process, particularly when connecting wallets and checking waitlist positions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468747242042294292/Screenshot_2026-02-04_at_11.17.02_PM.png?ex=698524f6&is=6983d376&hm=c1b089fe5d3dd3ebe339d03837d77f6089bee6cd5e2bf52200879752ef566b14&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468748858287984753/image.png?ex=69852677&is=6983d4f7&hm=b0470d031315272686543b10b661ad90eee7e1a8a231fd8d91dabfe28f5dfca6&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468727034879541455/Screenshot_2026-02-04_at_22.56.36.png?ex=69851224&is=6983c0a4&hm=c89c7e1933d8d6e6d1d87148a37003028ee355551f118c11d2f2931d3dfa14c3&",
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468728635182813305/image.png?ex=698513a2&is=6983c222&hm=bf645bef93b2ecea7390945d01c9c26cc378840b9c3e1edd3b587de06400ef33&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The team discussed the difference between dynamic providers and skill.md files, confirming they are essentially the same but providers are well-typed. With the cskill plugin work, ElizaOS will soon be able to absorb OpenClaw capabilities. Shaw confirmed that agent skills are native in version 2.0. The team emphasized choosing first principles technology over simply following what is popular or what the largest platforms are doing.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1468637873094787143/Screenshot_2026-02-04_at_8.02.29_PM.png?ex=6984bf1a&is=69836d9a&hm=35b1fd1bd31f9537e81df582d7e1aad897fbc6d3089abbeb63e31afb34d24cff&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Community members raised concerns about developers leaving the project. Only CJ was confirmed to have left, and the team replaced him with a new hire. The departure was described as a shake-up that actually focused the dev team, with Shaw evening out the headcount. The general feeling is that OpenClaw and similar projects have validated ElizaOS theories, and now the team needs to follow up with better products. One team member emphasized the need to catch up quickly and focus on building revenue-generating products.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer showcased fully automated AI news shows that summarize GitHub organization activities and Discord discussions. The system uses cron jobs to automate data collection, processing, voicing, animating, recording, and publishing. The pipeline aggregates user feedback from the past week and generates characters that voice top raised issues. The project includes plans for talk shows, panels, live streams, game shows like Clank Tank, and debate shows. The developer plans to create a specific channel where AIs from the show will interact with the community after each episode for real-time feedback.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://vxtwitter.com/rendercombined.jpg?imgs=https://pbs.twimg.com/media/G_REY73W4AAFL-e.jpg,https://pbs.twimg.com/media/G_REZnbWAAAuqTO.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2018905886106726402/img/zMYa0YGgT9dWmSVD.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2018909809928536064/img/15mMC4AB1XP6pYD6.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/1960932466853638144/img/TaQKjziv54tLeJxz.jpg"
+          ],
+          "videos": [
+            "https://vxtwitter.com/tvid/amplify_video/2018905886106726402/vid/avc1/1920x1080/hezBKIGGednm5osM",
+            "https://vxtwitter.com/tvid/amplify_video/2018909809928536064/vid/avc1/1920x1080/zIguvIDF7qugaDx3",
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1468471340653613241/2026-01-25_Cron-Job_Infinite-Loops-And-Market-Woes_quote_meatbag-currency-query.mp4?ex=6984ccc2&is=69837b42&hm=b9fdc1a0ceae9556b56ec54083304f2f5c1bca33b092243709c4da08a7e5d60c&"
+          ]
+        },
+        {
+          "text": "Community discussions included questions about Babylon waitlist positions, with some users reporting drops in rankings despite having referrals. There is confirmed to be an airdrop to ElizaOS holders for Babylon. A trading card game called LunchTable TCG is being built for ElizaOS agents on Solana, combining elements from Pokemon, Magic The Gathering, Yu-Gi-Oh, and Hearthstone.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/G_2egLqW0AA-X-A.jpg:large"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1770163200
 }
