@@ -1,154 +1,155 @@
-# elizaOS Discord - 2026-02-05
+# elizaOS Discord - 2026-02-06
 
 ## Overall Discussion Highlights
 
-### Critical Platform Issues (elizacloud.ai)
+### ElizaCloud Platform Issues and Improvements
 
-**Account & Payment System Bugs**
+**Account Management Problems**: A critical issue was identified where users experienced duplicate account creation when attempting to claim the $5 welcome credit. The problem stemmed from email links directing users to the development environment (dev.elizacloud.ai) instead of production (elizacloud.ai), resulting in:
+- Separate accounts under the same email address
+- Failure to properly credit the promotional $5 (only $1 credited instead)
+- Agent fragmentation across multiple accounts
 
-A critical bug was identified in the elizacloud.ai welcome email system that poses a serious threat to customer retention. New users are not receiving the promised $5 credits, and clicking the "get started" button in welcome emails is overwriting existing accounts and agents, creating new accounts with only $1 balance instead. This represents a major blocker for customer onboarding and retention.
+**yojo** reported this issue with detailed documentation of the problem flow. **Odilitime** and **sam** offered to handle the resolution through direct messages to protect user privacy and consolidate accounts.
 
-**Payment & Recharging Limitations**
+**Dashboard Login Issues**: Another user reported ElizaCloud dashboard cycling problems where the interface kept looping between login and dashboard screens. **Odilitime** forwarded this to the cloud team for investigation and requested the user's email for follow-up.
 
-Multiple payment-related obstacles were identified:
-- Users cannot transfer tokens between accounts to help friends recharge
-- VPN users are blocked from accessing payment pages
-- Lack of easy payment options is causing customer loss at the critical conversion point when trial users want to become paying customers
+### Babylon Game Production Release
 
-A proposed solution involves implementing wallet addresses for each account to enable direct crypto token deposits without requiring wallet connections.
+**puncar** announced the production-ready version of Babylon, a game platform with agent-based trading functionality. The onboarding process requires:
+- Login at babylon.market using ElizaLabs email credentials for admin status
+- Access to play.babylon.market for gameplay
+- Ability to spin up agents, trade in the terminal, and explore the feed
 
-### Babylon.market Deployment & Debugging
+**Critical Bug Discovery and Resolution**: During initial testing, **ziflie** discovered a profile image upload failure returning "Failed to update profile" errors. **tcm390** quickly implemented and merged a fix, which **ziflie** confirmed resolved the issue. The team was encouraged to provide feedback through the integrated green feedback button or direct messages, with optional screen recordings using Google Meet.
 
-The core development team focused on deploying and debugging babylon.market, a platform with user authentication and reward systems. Multiple API endpoints were failing, affecting page functionality. Key issues identified:
+### ElizaOS Cross-Chain Expansion
 
-- **Username Creation Bug**: Users receiving "@userid:priv" as usernames instead of proper usernames
-- **Discord OAuth Broken**: Account linking functionality not working
-- **Twitter Follow Rewards**: Reward claiming system non-functional with error messages
+**The Void** confirmed that "Elizaos is crosschain now," announcing expansion beyond Solana to Ethereum. Discussion highlighted ElizaOS's utility for autonomous agents performing on-chain work, including:
+- Managing protocol liquidity
+- Orchestrating DeFi workflows
 
-A fix was pushed and merged to production during the discussion, allowing testing to proceed. Access is currently restricted to top 100 users, with requests for additional testing access being made.
+**chomppp** questioned the timeline for implementing these autonomous agent features, though no specific date was provided. The Babylon Monkey game is currently in beta testing for points farming and airdrops.
 
-### AI16Z to ELIZAOS Token Migration
+### Token Migration Controversy
 
-The token migration deadline became a major discussion point, with the migration window having been open since November (90 days) now closed. Key points of contention:
+Significant community discussion centered on the recently closed 90-day migration deadline. **TanviSinghwal92**, **V33**, and **Kenk** defended the timeline, noting:
+- Migration was communicated since March
+- Deadline was postponed from October to November
+- Ongoing maintenance overheads and human support costs justify the deadline
+- Users who missed the deadline were criticized for not monitoring holdings or opening support tickets
 
-- Community members frustrated about missing the deadline due to being away from wallets
-- Debate over whether the timeline was sufficient for investors who may be traveling
-- Clarification that this was a migration, not an airdrop
-- Unmigrated tokens will be locked for one year
-- Scammer activity targeting users with migration issues
+**Kenk** specifically explained that keeping the migration portal open indefinitely creates unsustainable overhead costs.
 
-### Project Updates
+### Community Tools and Announcements
 
-**DegenAI**: Confirmed to be actively developed and not abandoned. The project performed well in Babylon test games with real tests upcoming. The team is focused on the Babylon launch.
+**kirsten** launched **BuildAMolt**, a hosted solution for Moltbots and Moltbook on private VPS with 2-minute setup, eliminating the need for local instances.
 
-**Fake Projects Warning**: Concerns raised about fake projects launching on Babylon wallet falsely claiming association with Shaw, with requests for official clarification to prevent dev selling under his name.
+**memi** raised a security matter requiring private team discussion, though no resolution was documented in the public channels.
 
-### Developer Outreach & New Projects
+### Market Conditions
 
-- **CERBERUS-AGI**: Trollstore AI-Driven Software in beta shared by CT
-- **x402 Payment Gateway**: Beta testing sought for AI agent payment gateway on Solana
-- **rentasoul**: Platform where users can give their soul to AI agents, bring Eliza agents, or complete tasks for payment
-
-### Technical Discussions
-
-- Questions about which Eliza version works properly with the Twitter plugin locally (unanswered)
-- Interest expressed in Claude Opus 4.6 release from Anthropic at the same price point as 4.5
+**Arceon** noted Bitcoin's significant drop from 92k to 60k in under 3 weeks, attributing liquidity issues across all cryptocurrencies to capital leaving the market.
 
 ## Key Questions & Answers
 
-**Q: Any meta threads plugin?** (asked by sazilariel)  
-A: Not that I'm aware of (answered by Odilitime)
+**Q: How can I share my email to avoid getting spammed or phished on Discord?**  
+A: You can DM Odilitime or sam directly *(answered by Odilitime and sam)*
 
-**Q: Are you pushing new updates?** (asked by s)  
-A: Fixes were being pushed and merged to production (answered by SYMBiEX, tcm390)
+**Q: How do I access the Babylon game?**  
+A: Log in at babylon.market with ElizaLabs email for admin status, then go to play.babylon.market to start playing *(answered by puncar)*
 
-**Q: How do I get admin/mod access on babylon.market?** (asked by SYMBiEX)  
-A: Sign up with ElizaLabs.ai email for automatic access, or provide username for manual modding (answered by SYMBiEX)
+**Q: What can I do in the Babylon game?**  
+A: Spin up agents, talk to them, trade with them in the terminal, and explore the feed *(answered by puncar)*
 
-**Q: Why am I getting @userid:priv as username?** (asked by ziflie)  
-A: Username creation bug being investigated (answered by SYMBiEX)
+**Q: How should I provide feedback on Babylon?**  
+A: Use the green feedback button on screen or DM puncar directly *(answered by puncar)*
 
-**Q: Is Discord OAuth for account linking working?** (asked by Stan ⚡)  
-A: It's broken, being investigated (answered by SYMBiEX)
+**Q: How does ELIZAOS enable on Ethereum if it's on Solana?**  
+A: Elizaos is crosschain now *(answered by The Void)*
 
-**Q: Will the fix be merged today/tomorrow for testing?** (asked by Stan ⚡)  
-A: It has been merged (answered by tcm390)
+**Q: Where to download the Babylon monkey game for earning points and airdrop farming?**  
+A: It's in beta release currently being tested *(answered by The Void)*
 
-**Q: What's going on with degenai? Is anything being worked on, or has it been abandoned?** (asked by gby)  
-A: It has not been abandoned, still working on it, was owning the Babylon test game with real test coming up (answered by Odilitime)
+**Q: Is Eliza down?**  
+A: The login works but dashboard keeps cycling between login and dashboard screens; forwarded to cloud team *(answered by Odilitime)*
 
-**Q: What will happen to non migrated Eliza tokens do they stay locked up forever or something?** (asked by Biazs)  
-A: Locked for a year (answered by jasyn_bjorn)
-
-**Q: Why are there so many tokens, it should only be elizaos?** (asked by g)  
-A: What Shaw does in react to people reacting to him has nothing to do with elizaOS or labs, focused on Babylon launch (answered by Odilitime)
+**Q: Has the profile update bug been fixed?**  
+A: Yes, tested and confirmed working *(answered by ziflie)*
 
 ## Community Help & Collaboration
 
-**Migration Scam Prevention**  
-Helper: Odilitime | Helpee: shoemaker6765  
-Context: User experiencing migration issues was being contacted by scammers  
-Resolution: Warning issued that contact was a scammer, preventing potential fraud
+**ElizaCloud Account Issues**  
+- **Helper**: Odilitime and sam  
+- **Helpee**: yojo  
+- **Context**: Account duplication and missing $5 welcome credit on ElizaCloud platform  
+- **Resolution**: Offered to receive email via DM and forward issue to Sam for resolution
 
-**Migration Timeline Clarification**  
-Helper: Kenk, jasyn_bjorn | Helpee: sam.mrk  
-Context: Misunderstanding about migration deadline (thought it was 2 weeks)  
-Resolution: Clarified token migration has been open since November (90 days) and it's a migration not an airdrop
+**Babylon Profile Upload Bug**  
+- **Helper**: puncar  
+- **Helpee**: ziflie  
+- **Context**: Profile image upload failing with "Failed to update profile" error  
+- **Resolution**: Bug submitted for fixing
 
-**Token Lock Information**  
-Helper: jasyn_bjorn | Helpee: Biazs  
-Context: Question about what happens to non-migrated tokens  
-Resolution: Clarified tokens are locked for a year
+**Profile Update Fix Implementation**  
+- **Helper**: tcm390  
+- **Helpee**: ziflie  
+- **Context**: Profile update functionality broken  
+- **Resolution**: Fix merged and deployed, confirmed working by ziflie
 
-**DegenAI Project Status**  
-Helper: Odilitime | Helpee: gby  
-Context: Concerns about degenai project abandonment  
-Resolution: Confirmed project is not abandoned and still being worked on
+**ElizaCloud Dashboard Cycling**  
+- **Helper**: Odilitime  
+- **Helpee**: ∙∙·▫▫ᴼⒻⓄⓍⓏⓎᴼ▫▫·∙∙  
+- **Context**: ElizaCloud dashboard cycling between login and dashboard screens  
+- **Resolution**: Forwarded issue to cloud team and requested user's email via DM for follow-up
 
-**Platform Focus Clarification**  
-Helper: Odilitime | Helpee: g  
-Context: Confusion about multiple tokens diluting attention  
-Resolution: Explained Shaw's personal activities are separate from elizaOS/labs, team focused on Babylon launch
+**Cross-Chain Functionality Clarification**  
+- **Helper**: The Void  
+- **Helpee**: avi_rajput563 | TABI 💢  
+- **Context**: Question about how ELIZAOS works on Ethereum when it's on Solana  
+- **Resolution**: Explained that Elizaos is now crosschain
 
-**Babylon.market Bug Investigation**  
-Helper: SYMBiEX <<CidSociety>> | Helpee: ziflie, Stan ⚡  
-Context: Username creation and OAuth issues  
-Resolution: Committed to investigate issues, fix was pushed and merged to production
+**Babylon Game Beta Information**  
+- **Helper**: The Void  
+- **Helpee**: avi_rajput563 | TABI 💢  
+- **Context**: Question about downloading Babylon monkey game  
+- **Resolution**: Informed that game is in beta release and currently being tested
 
-**Production Deployment Confirmation**  
-Helper: tcm390 | Helpee: Stan ⚡  
-Context: Checking if fix was merged to production for testing  
-Resolution: Confirmed the fix has been merged to production
-
-**ElizaCloud Bug Investigation**  
-Helper: sam | Helpee: yojo  
-Context: Critical bug with welcome email not adding $5 credits and overwriting existing accounts  
-Resolution: Requested email/address to investigate the issue
+**Migration Deadline Rationale**  
+- **Helper**: Kenk  
+- **Helpee**: General community  
+- **Context**: Explaining migration deadline rationale  
+- **Resolution**: Clarified that there are overheads for ongoing maintenance of migration portal and human support costs, justifying the deadline
 
 ## Action Items
 
 ### Technical
 
-- **Fix critical bug where welcome email $5 credits are not added to new accounts** (Mentioned by: yojo)
-- **Fix bug where clicking "get started" in welcome email overwrites existing accounts and agents, creating new account with $1 balance** (Mentioned by: yojo)
-- **Stop sending welcome emails until account overwrite bug is fixed** (Mentioned by: yojo)
-- **Investigate username creation bug causing @userid:priv usernames** (Mentioned by: SYMBiEX <<CidSociety>>)
-- **Fix Discord OAuth for account linking** (Mentioned by: SYMBiEX <<CidSociety>>)
-- **Fix Twitter follow reward claiming errors** (Mentioned by: SYMBiEX <<CidSociety>>)
-- **Fix failing API endpoints affecting page functionality** (Mentioned by: sam)
-- **Approve hashwarlock user for testing outside top 100 restriction** (Mentioned by: Agent Joshua ₱ | TEE)
-- **Determine which Eliza version works properly with Twitter plugin locally** (Mentioned by: some)
-- **Continue development work on degenai for upcoming real Babylon test** (Mentioned by: Odilitime)
+- **Investigate and fix account duplication issue** where email links create separate accounts on dev.elizacloud.ai instead of using existing elizacloud.ai accounts | *Mentioned by: yojo*
 
-### Feature
+- **Resolve missing $5 welcome credit allocation** for yojo's account | *Mentioned by: yojo*
 
-- **Implement wallet addresses for each account to enable token deposits for account recharging without wallet connection** (Mentioned by: yojo)
-- **Enable token transfers between accounts to allow users to recharge friends' accounts** (Mentioned by: yojo)
-- **Fix VPN blocking issue on payment page linkout** (Mentioned by: yojo)
-- **Implement referral program with rewards for converting paying customers** (Mentioned by: yojo)
-- **Beta testing needed for x402 payment gateway for AI agents on Solana** (Mentioned by: Rishab)
-- **Review and provide feedback on CERBERUS-AGI Trollstore AI-Driven Software in beta** (Mentioned by: CT)
+- **Fix email link routing** to ensure "get started" links direct to production (elizacloud.ai) rather than development environment (dev.elizacloud.ai) | *Mentioned by: yojo*
+
+- **Implement account consolidation** for users with duplicate accounts under same email address | *Mentioned by: yojo*
+
+- **Test Babylon production version** and provide feedback via green button or DM | *Mentioned by: puncar*
+
+- **Create screen recordings with transcripts** of end-to-end Babylon experience using Google Meet | *Mentioned by: puncar*
+
+- **Fix profile image upload** "Failed to update profile" error | *Mentioned by: ziflie*
+
+- **Test merged profile update fix** for any further issues | *Mentioned by: tcm390*
+
+- **Investigate and fix ElizaCloud dashboard cycling issue** between login and dashboard screens | *Mentioned by: Odilitime*
+
+- **Complete beta testing for Babylon monkey game** and prepare for public release | *Mentioned by: The Void*
+
+- **Implement autonomous agent functionality** for managing protocol liquidity and orchestrating DeFi workflows | *Mentioned by: chomppp*
 
 ### Documentation
 
-- **Shaw needs to clarify via tweet that fake projects on Babylon wallet are not funded by him to prevent dev selling under his name** (Mentioned by: zelm1)
+- **Address security-related matter** raised by community member | *Mentioned by: memi*
+
+### Feature
+
+- **Increase liquidity on decentralized exchanges** | *Mentioned by: BOSSBEURNI*
