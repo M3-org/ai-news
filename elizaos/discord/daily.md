@@ -1,134 +1,108 @@
-# elizaOS Discord - 2026-02-08
+# elizaOS Discord - 2026-02-09
 
 ## Overall Discussion Highlights
 
-### Database Performance & Infrastructure
+### Community Concerns & Token Economics
 
-A critical performance bottleneck was identified in the Eliza framework's database architecture. The logs table in PostgreSQL is being hit excessively, causing significant slowdowns in Eliza response times. Stan confirmed that a major optimization plan is already in development to address these scalability challenges, indicating the team has prioritized this infrastructure work.
+The most prominent theme across channels was significant community anxiety about token performance and project direction. Multiple users in **💬-discussion** expressed frustration over:
 
-### Milaidy Integration & Plugin Compatibility
+- **Token price decline** and perceived lack of utility for holders
+- **Korean exchange delisting confusion**: Initial panic about ELIZAOS being delisted from Bithumb, Coinone, and Korbit was later clarified by **davidhq** and **paolin** - only the pre-rebrand AI16Z token was delisted, not the current ELIZAOS token
+- **Team communication gaps**: Community members felt disconnected from development progress and questioned team commitment
+- **Wallet monitoring**: Users tracked wallet address DScqtGwFoDTme2Rzdjpdb2w7CtuKc6Z8KF7hMhbx8ugQ (allegedly Shaw's) for potential token sales, though **ovo** and **davidhq** disputed selling claims and requested transaction proof
+- **Developer departures**: Concerns raised about CJ and another unnamed developer leaving the project
 
-The coders channel focused heavily on milaidy integration challenges. Several plugin compatibility issues emerged:
+**ovo** defended the team, noting Shaw covered unexpected costs to recover the X account and that the team burned 22M tokens. The discussion revealed a fundamental tension between open-source development work and token holder expectations for value appreciation.
 
-- Plugin integration bugs were acknowledged by the development team
-- **MAX_EMBEDDING_TOKENS** constant is missing from latest plugin versions, requiring either rollback to older versions or PRs to add the constant across all plugin repositories
-- Wallet fixes have been resolved locally but not yet deployed
+### Technical Issues & Bug Reports
 
-### Character Configuration Issues
+**💬-coders** surfaced several critical technical problems:
 
-Multiple users struggled with character customization in the agent system:
+- **Agent Skills Provider Crash**: **azsxdc** reported a fresh milaidy VPS installation crash in the "agent_skill_instructions" provider where `skill.description.toLowerCase is not a function`. **Odilitime** confirmed this as a known bug requiring a fix
+- **Normal vs. Critical Errors**: **Odilitime** clarified that server ID and ownership errors are normal and ignorable, while the pluginRegistryService 401 Unauthorized error represents work-in-progress functionality
+- **Token Migration Deadline**: **ufw** discovered they missed the ai16z to ELIZA token migration deadline, asking if tokens were lost - this critical question went unanswered
 
-- Agents defaulting to "eliza" personality instead of custom characters
-- Model selection issues where claude-haiku-3.5 was used despite different configurations
-- Character creation currently limited to onboarding setup only
-- Bill Ding announced implementation of a character editor to address these limitations
+### Product Development & Features
 
-### Twitter Plugin Limitations
+Several feature developments and requests emerged:
 
-The Twitter integration has functional gaps - quote repost feature doesn't work properly, only posting quoted text with a link instead of native quote tweets. The agent successfully connects and posts to Twitter but lacks proper character customization capabilities.
+- **SillyTavern Integration**: **Vega** announced development of a plugin to use SillyTavern character cards for openclaw, promising release later
+- **ElizaCloud.ai UX Optimization**: **yojo** provided detailed feedback suggesting prompt-only user features, visual generation optimization, plug-in marketplace, and crypto transfers without wallet connect
+- **Wallet Management**: **kira** inquired about wallet management plugins for openclaw game skill integration with security considerations (unanswered)
+- **Cardano Integration**: **Wes** questioned the need for Cardano wallet integration in ElizaOS (unanswered)
+- **Hackathon Project**: **ElizaBAO** promoted their Colosseum Agent Hackathon project combining ElizaBAO + Claw with Polymarket signal scanning, x402/SOL paywall, and Moltbook autoposters
 
-### Architectural Proposals
+### Marketing & Visibility Efforts
 
-MochinoLabs proposed a significant architectural change: integrating PM2 as an external process manager for websocket management. The proposal includes a new directory structure using symlinks for better git-managed workflows, with separate config directories for OpenClaw gateway, PM2 processes, and organized data/market directories.
+**🥇-partners** focused on strategic positioning:
 
-### Community Sentiment & Token Concerns
+- **DorianD** emphasized the need for "organic" promotional content, sharing a LinkedIn post about OpenClaw/MoltBot AI as an example
+- **Broccolex** shared a Twitter/X post from @joemccann to generate attention for Eliza
+- **Krippトメア** acknowledged regime and world-order change use cases as representing a "different beast" in complexity
 
-The discussion channel revealed significant community frustration with the ELIZAOS token project:
+### Project Updates
 
-- Token price reported at $0.0013 with continuous daily drops exceeding 5%
-- Upcoming delistings from three Korean exchanges scheduled for 3:00 PM KST
-- Community concerns about lack of communication, missing product deliverables, and team transparency
-- Questions about staking availability (confirmed unavailable), token use-cases, and status of five promised products
-- Allegations of key developers leaving and poor community management practices
+- **jin** shared weekly roundup videos of ElizaOS updates in both **core-devs** and **💬-discussion**
+- **Seppmos** shared a video covering Babylon and Hyperscape developments
+- **s** confirmed existing WebSocket functionality via plugin/server
 
-### Positive Developments
+### Security Concerns
 
-- Escrow payment implementation for agent rentals announced
-- Upcoming launches mentioned
-- Planned bullish video from "crypto gains" investor
-- High traffic to ai.com causing website crashes (indicating strong interest)
-- Community member ElBru planning to use milaidy setup as a homeschool project for his 10-year-old son
-
-### Historical Context
-
-DorianD shared a personal anecdote about currency devaluation during their great grandfather's migration from the Russian empire to Poland, illustrating the impact of hyperinflation on wealth preservation.
+Multiple users encountered scam attempts, with **azsxdc** and **Odilitime** acknowledging the need for better autoban systems for scam support tickets. **Monsgroow.** confirmed to **ufw** that the support desk discord was a scam.
 
 ## Key Questions & Answers
 
-**Q: Is there any places to stake $ELIZAOS?**  
-A: No, at the moment there is no staking available. (answered by Arceon)
+**Q: Is $ELIZAOS going to be delisted from the 3 Korean exchanges?**  
+**A:** Initial confusion was clarified by **davidhq** and **paolin** - only the pre-rebrand AI16Z token was delisted from Bithumb, Coinone, and Korbit, not the current ELIZAOS token. (Asked by avi_rajput563 | TABI 💢)
 
-**Q: Why does the logs table cause Eliza to slow down?**  
-A: The logs table gets hit excessively which slows down postgres and then makes Eliza responses slower. (answered by sayonara)
+**Q: Are these errors normal on a fresh install on VPS for milaidy?**  
+**A:** **Odilitime** confirmed that server ID and ownership errors are normal and ignorable, but the agent_skill_instructions crash is a bug needing fixing, and the pluginRegistryService 401 error is work-in-progress functionality. (Asked by azsxdc)
 
-**Q: Is there a plan to fix the database performance issues?**  
-A: Yes, we have a major optimization plan to implement, and that's part of it. (answered by Stan ⚡)
+**Q: Where can I bridge eliza token from solana to bsc?**  
+**A:** **EMERSON3S** confirmed there is currently NO official or safe bridge for Eliza from Solana to BSC. (Asked by clutch)
 
-**Q: Where should I put the character files? It keeps defaulting to eliza**  
-A: There isn't a way other than the one you make in the onboarding. (answered by Bill Ding)
+**Q: Is the support desk discord thing a scam?**  
+**A:** **Monsgroow.** confirmed it is a scam. (Asked by ufw)
 
-**Q: Does Twitter plugin not allow quote reposts?**  
-A: No idea, you're welcome to make an issue or attempt to fix yourself. (answered by Bill Ding)
-
-### Unanswered Questions
-
-- Would milaidy support the examples from elizaos? Or do we need to run both Eliza and milaidy for full functionality?
-- Did anyone put milaidy on a VPS? or running it locally only?
-- Should I submit PRs to all plugin repos to add MAX_EMBEDDING_TOKENS to the latest or what direction should we go?
-- What is cluster mode? (in context of PM2 suggestion)
-- Will team launch any token use-case or product which may use ElizaOS token?
-- What about 5 products this team was about to deliver in few weeks - months gone?
-- Do you even have a marketing team?
-- Why should anyone buy elizaos?
+**Q: Is Shaw selling his elizaos tokens?**  
+**A:** **gby** provided wallet address DScqtGwFoDTme2Rzdjpdb2w7CtuKc6Z8KF7hMhbx8ugQ claiming Shaw was selling; **ovo** and **davidhq** disputed this, requesting transaction IDs as proof. (Asked by gby)
 
 ## Community Help & Collaboration
 
-**Bill Ding → azsxdc**  
-Helped with agent defaulting to eliza personality issue by explaining that character editor is being wired in today, and currently only the onboarding method is available for character creation.
+**Odilitime → azsxdc**: Provided comprehensive troubleshooting for multiple errors on fresh milaidy VPS installation, distinguishing between critical bugs, normal errors, and work-in-progress features.
 
-**Bill Ding → azsxdc**  
-Addressed Twitter quote repost functionality issue by suggesting creating an issue or submitting a PR to fix it.
+**EMERSON3S → clutch**: Prevented potential security risk by confirming no official bridge exists for ELIZA from Solana to BSC.
 
-**s → Wes**  
-Acknowledged plugin integration issues and MAX_EMBEDDING_TOKENS problems, mentioned having wallet fixes locally to resolve. Encouraged Wes to proceed with his proposed solution ("let him cook").
+**Monsgroow. → ufw**: Protected user from scam by confirming support desk discord was fraudulent.
 
-**Stan ⚡ → sayonara**  
-Confirmed major optimization plan is being implemented to address database performance issues with logs table affecting Eliza response times.
+**davidhq & paolin → Community**: Clarified Korean exchange delisting confusion, preventing panic by explaining only AI16Z (pre-rebrand) was delisted, not ELIZAOS.
 
-**Arceon → mbat**  
-Clarified that staking is not currently available for $ELIZAOS tokens.
+**ovo → Community**: Defended team actions by providing context about Shaw covering X account recovery costs and the 22M token burn.
 
-### Community Engagement
-
-ElBru expressed interest in using the milaidy setup as a homeschool project for his 10-year-old son, aligning with the project's accessibility goals and demonstrating community enthusiasm for educational applications.
+**jin → Rainman**: Directed users to weekly roundup videos for project updates.
 
 ## Action Items
 
 ### Technical
 
-- **Implement major optimization plan for logs table** to reduce PostgreSQL load and improve Eliza response times (mentioned by Stan ⚡)
-- **Optimize database queries hitting the logs table** to prevent excessive load (mentioned by sayonara)
-- **Resolve plugin integration issues** into milaidy (mentioned by s)
-- **Resolve wallet fixes** that are currently local (mentioned by s)
-- **Decide whether to use older plugin versions or submit PRs** to add MAX_EMBEDDING_TOKENS to all plugin repos (mentioned by Wes)
-- **Wire in character editor functionality** (mentioned by Bill Ding)
-- **Fix Twitter quote repost functionality** to support native quote tweets instead of text+link (mentioned by azsxdc)
-- **Fix model selection issue** where claude-haiku-3.5 is used instead of configured model (mentioned by azsxdc)
-- **Fix character file loading** - agent defaults to eliza instead of custom characters (mentioned by azsxdc)
-- **Include PM2 as external process manager** for websocket management (mentioned by MochinoLabs)
-- **Implement proposed directory structure** with symlinks for git-managed workflow (config/openclaw, config/pm2, data/market structure) (mentioned by MochinoLabs)
-- **Address ai.com website crashes** due to high traffic (mentioned by The Void)
+- **Fix agent_skill_instructions provider crash** where skill.description.toLowerCase is not a function in @elizaos/plugin-agent-skills (Mentioned by: Odilitime)
+- **Implement autoban system** for scam support tickets (Mentioned by: azsxdc)
+- **Post weekly ElizaOS update videos** to dedicated channel using jintern (Mentioned by: jin)
 
 ### Feature
 
-- **Implement staking functionality** for $ELIZAOS tokens (mentioned by mbat)
+- **Generate organic promotional content** similar to the OpenClaw/MoltBot AI LinkedIn post (Mentioned by: DorianD)
+- **Leverage Joe McCann's post** to generate attention for Eliza project (Mentioned by: Broccolex)
+- **SillyTavern character cards plugin** for openclaw (Mentioned by: Vega)
+- **Cardano wallet integration** for ElizaOS (Mentioned by: Wes)
+- **Optimize elizacloud.ai UX** for prompt-only (zero coding) users including visual generation optimization, refer-to-friends offers, external agent interaction options, and crypto transfers without wallet connect (Mentioned by: yojo)
+- **Create certified/recommended plug-in-and-play section** for elizacloud.ai to enable non-technical users to create use cases (Mentioned by: yojo)
+- **Implement different up-selling packages** for elizacloud.ai users who prefer not to search for plugins themselves (Mentioned by: yojo)
 
 ### Documentation
 
-- **Provide updates on token use-cases and utility** (mentioned by averma)
-- **Deliver status update on 5 promised products** (mentioned by averma)
-- **Communicate clear value proposition** for why to buy elizaos (mentioned by gby)
-
----
-
-**Summary:** February 8, 2026 discussions centered on critical technical infrastructure challenges (database performance, plugin compatibility, character configuration) alongside significant community concerns about token economics and project transparency. The development team acknowledged key issues and confirmed optimization plans are underway, while community frustration highlighted the need for improved communication and product delivery.
+- **Review weekly roundup** of elizaos updates video for potential documentation updates (Mentioned by: jin)
+- **Clarify official position** on Korean exchange delisting situation (AI16Z vs ELIZAOS) (Mentioned by: davidhq, paolin)
+- **Provide clear communication** about token migration deadline and options for users who missed it (Mentioned by: ufw)
+- **Establish regular team updates** and communication channels for token holders (Mentioned by: Gem Hunter, averma, Rainman)
+- **Clarify token utility** and use cases for token holders beyond open-source development (Mentioned by: averma)
