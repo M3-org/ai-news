@@ -1,46 +1,68 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-02-09",
-  "categories": {
-    "title": "ElizaOS Community Updates and Developments - February 9, 2026",
-    "content": [
-      {
-        "text": "ElizaOS released their second weekly roundup video titled 'Cron Job S1E2' covering major developments including PageIndex achieving 98.7% RAG accuracy, the Milaidy personal AI assistant launch, Babylon's internal testing phase, token migration deadline issues, Claude Opus 4.6 integration, ElizaCloud bug fixes, and Ethereum officially welcoming ElizaOS cross-chain functionality. The team continues active development work despite market conditions.",
-        "sources": [
-          "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "https://discord.com/channels/1253563208833433701/1253563209462448241"
-        ],
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1470488393917010144_0680690a.jpg",
-        "videos": "https://cdn.elizaos.news/elizaos-media/vheyanhq7q4_cbc37eda.mp4"
-      },
-      {
-        "text": "Shaw appeared on the Green Pill podcast to discuss ElizaOS, covering topics including agent-native games, open source culture, abundance networks, and why software is getting cheaper while agency, ownership, and coordination matter more. A LinkedIn post highlighted security setup guides for Openclaw/Moltbot/Clawdbot aimed at non-technical users, demonstrating community efforts to make the technology more accessible.",
-        "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1470535093456998543_dac27349.jpg",
-          "https://cdn.elizaos.news/elizaos-media/1770084032454-e-2147483647-v-beta-t-ls30vl3ca372ch_052d3302.jpg"
-        ],
-        "videos": "https://cdn.elizaos.news/elizaos-media/2020929588004635022_262c9ce7.mp4"
-      },
-      {
-        "text": "Technical discussions in the developer channels focused on wallet management plugins for Openclaw, with developers working on game integrations. Users reported errors on fresh Milaidy installations including issues with the agent_skill_instructions provider and plugin registry service authorization failures. The team acknowledged some errors as normal and others requiring fixes. Questions arose about Cardano wallet integration possibilities for ElizaOS.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1770686361579-l5xg5.jpg"
-      },
-      {
-        "text": "Community sentiment showed significant frustration over token price decline and perceived lack of communication from the team. Multiple users expressed concerns about continuous price drops, with the token down significantly from highs. Confusion emerged around Korean exchange listings, with claims of delisting from Bithumb, Coinone, and Korbit, though some community members disputed these claims. Users debated whether the old AI16Z token or new ElizaOS token was affected. Token holders called for more transparency and concrete plans from the team regarding token utility and use cases.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1470426567187365972_fcd05399.jpg",
-        "videos": "https://cdn.elizaos.news/elizaos-media/2020871966706860466_ed2c44a0.mp4"
-      },
-      {
-        "text": "A community video analysis highlighted ElizaOS developments including Babylon (described as 'The City of AI Agents'), Hyperscape (the first MMO built for agents), and positioning for the next wave of AI agent adoption. The video covered why AI agents are now playing games and ElizaOS's strategic direction. Some community members emphasized the project's strong tokenomics with over 85% supply in circulation and encouraged patience during market downturns.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1470431640843980805_19f76079.jpg",
-        "videos": "https://cdn.elizaos.news/elizaos-media/2020871966706860466_ed2c44a0.mp4"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1770595200
+  "title": "Daily Report - 2026-02-10",
+  "categories": [
+    {
+      "title": "ElizaOS Development Updates and Community Discussion - February 10, 2026",
+      "content": [
+        {
+          "text": "Core development team worked on fixing CI issues with a pull request addressing bootstrap cache memory leaks and test failures. A bug was reported regarding Babylon's share to Farcaster link displaying incorrectly. The team shared interesting external developments including a reverse-engineered Claude Code binary that revealed a hidden SDK URL flag, enabling WebSocket client functionality accessible from browsers and mobile devices. Another notable share was agent-tail, a new dev tool that makes logs accessible to agents by wrapping dev server commands and installing skills to provide full context of browser, server, and other logs.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1470611633691693248/image.png?ex=698c9610&is=698b4490&hm=576ac65fa6c301ecdb76015d48195a13f534d4111569fe4f3f4a4cb087047d04&",
+            "https://opengraph.githubassets.com/a3adb4528ac7501875090c56012ca0bc43c5f00859baf931a238447505f1ad69/elizaOS/eliza/pull/6477",
+            "https://pbs.twimg.com/amplify_video_thumb/2020979592673050624/img/VUitEdSSqVDAYjmz.jpg",
+            "https://pbs.twimg.com/media/HAxBki4aAAAimUd.jpg?name=orig",
+            "https://pbs.twimg.com/amplify_video_thumb/2020937425024073728/img/5rkYU9YuaDs8BCRN.jpg:large"
+          ],
+          "videos": [
+            "https://api.fxtwitter.com/2/go?url=https%3A%2F%2Fvideo.twimg.com%2Famplify_video%2F2020979592673050624%2Fvid%2Favc1%2F1524x1080%2FCPWq35AUYt5ZBuah.mp4%3Ftag%3D21",
+            "https://twitter.com/i/videos/tweet/2020954913837285388"
+          ]
+        },
+        {
+          "text": "Multiple developers posted in the coders channel seeking opportunities and collaboration. One developer shared expertise in full-stack and AI development including React, Next.js, Python, LangChain, RAG, and AI Agents. Another AI and automation engineer with 8 years of experience expressed interest in joining projects or building new startups. A team member posted looking for coders to join an agentic payment app development team. Discussion also covered OpenClaw, an assistant that can take over computers and run system-level commands, with both consumer and highly technical versions in development. Users can select themes, avatars, and voice options for customization.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community members proposed improvements to project communication and user engagement. One suggestion involved implementing optional weekly or topical updates inside ElizaCloud.ai account dashboards to improve customer retention, transparency, and expectation management. The proposed format would focus on presenting relevant information about project progress, bug fixes, objectives, and timings in simple text suitable for newbies and non-coders. Another idea suggested creating an AI communications agent to automate customer service and updates across Discord, Twitter, GitHub, and user accounts, which could potentially be sold as a white-label B2B solution.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Significant community discussion centered on communication challenges and token price concerns. Members expressed frustration about irregular updates and lack of a clear public roadmap, with some noting that Babylon has been in a couple of weeks from release state for approximately 4 months. However, others defended the project by noting that the migration is completed, ElizaOS is actively developed with framework updates, agents, ElizaCloud, and cross-chain work ongoing. Weekly video updates and a roadmap exist in designated channels, though some community members felt these were not easily accessible or clearly summarized for non-developer token holders. The team emphasized that updates occur regularly through X posts and designated Discord channels, with roadmap updates provided when key milestones are reached.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/hclj3c4zkNMAAAAe/n-word-trying-not-to-say.png",
+            "https://pbs.twimg.com/ext_tw_video_thumb/2021191219528019968/pu/img/gKACYQ1ZbGNqEic9.jpg:large",
+            "https://pbs.twimg.com/media/HAuR7MRWUAAxT5D.jpg:large"
+          ],
+          "videos": [
+            "https://media.tenor.com/hclj3c4zkNMAAAPo/n-word-trying-not-to-say.mp4"
+          ]
+        },
+        {
+          "text": "Community members discussed competitive positioning and industry developments. One member noted that ElizaOS was ahead of its time as many are now creating agent worlds. Comparisons were made to OpenClaw regarding features like system command execution, startup wizards for quick setup, and WhatsApp or Telegram integration for mobile agent communication. External developments shared included an AI VTuber project that received lead funding from a16z, and Discord's upcoming age restriction policy requiring face scans or ID verification, prompting suggestions for alternative platforms like Telegram. Token holders expressed concerns about constant price decline, with discussions about whether buying tokens actually supports the team.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1770681600
 }
