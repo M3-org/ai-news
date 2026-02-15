@@ -1,0 +1,32 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-02-14",
+  "date": 1771027200,
+  "stats": {
+    "totalMessages": 65,
+    "totalUsers": 15
+  },
+  "categories": [
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment contains no technical discussions, development activities, or problem-solving content. The two messages consist of a scammer warning and a market price speculation comment. There are no coding-related conversations, technical implementations, architectural decisions, bug fixes, or development workflows discussed during this time period. No code snippets, debugging sessions, library recommendations, or technical assistance were exchanged. The channel appears to have been inactive for technical discussions during this timeframe.\n\n## 2. FAQ\n\nNo technical questions or answers were present in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nNo action items were identified in this chat segment.",
+      "messageCount": 2,
+      "userCount": 2
+    },
+    {
+      "channelId": "1377726087789940836",
+      "channelName": "core-devs",
+      "summary": "# Discord Chat Analysis - core-devs Channel\n\n## 1. Summary\n\nThis chat segment focused on a straightforward administrative task involving cloud platform credit management. The discussion centered around two users (s and Odilitime) requesting credits to be added to their cloud accounts. Stan provided the technical solution, indicating that credits can be added via an UPDATE operation in the user database. \n\nThe interaction revealed the account lookup process: Stan initially attempted to locate Odilitime's account using the provided email address (odi@elizalabs.ai) but couldn't find it in either production or preview environments. Odilitime clarified that the account was created using Google authentication and provided additional identifying information including the organization slug (odi-tngt6p0bp7) and Account ID (19fc31b7-c337-4024-894e-44a7d72a9602). Using this information, Stan successfully located the account and added 1000 credits.\n\nThe technical takeaway is that the platform's user database supports direct credit manipulation through UPDATE queries, and accounts created via OAuth providers like Google may not be immediately searchable by email alone, requiring alternative identifiers such as organization slug or Account ID for lookup.\n\n## 2. FAQ\n\nQ: Is there an easy way to give credits on the cloud? (asked by s) A: UPDATE inside user DB (answered by Stan ⚡)\n\nQ: Can you topup my account at odi@elizalabs.ai? (asked by Odilitime) A: Initially couldn't find account by email, but after receiving org slug and Account ID, added 1000 credits (answered by Stan ⚡)\n\n## 3. Help Interactions\n\nHelper: Stan ⚡ | Helpee: s | Context: Needed credits added to cloud account | Resolution: Provided technical method (UPDATE in user DB) and offered to perform topup\n\nHelper: Stan ⚡ | Helpee: Odilitime | Context: Needed credits added but account couldn't be found by email initially | Resolution: Successfully located account using org slug and Account ID, added 1000 credits\n\n## 4. Action Items\n\nType: Technical | Description: Add credits to user account via UPDATE in user DB | Mentioned By: Stan ⚡",
+      "messageCount": 14,
+      "userCount": 3
+    },
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "# Discord Chat Analysis for 💬-discussion\n\n## 1. Summary\n\nThe primary discussion centered around the ai16z to elizaOS token migration deadline and process. A user (crunchy_vertex) discovered they missed the 90-day migration window for converting ai16z tokens to elizaOS tokens. The migration was a manual process requiring users to open support tickets before the deadline. The conversion ratio was 1:6 (1 ai16z to 6 elizaOS tokens). The support ticket system and migration channel have been closed following the deadline, with only pre-deadline ticket holders still being processed by the team. Users who missed the deadline cannot migrate their tokens anymore.\n\nAdditional brief discussions included questions about elizaOS token price performance and team plans, with community members directing users to the appropriate announcement channel for official updates. The technical implementation details of the migration were not discussed beyond the ratio and deadline requirements.\n\n## 2. FAQ\n\nQ: How can I migrate my ai16z tokens to elizaOS if I missed the migration date? (asked by crunchy_vertex) A: Cannot migrate anymore unless a support ticket was opened before the deadline. The 90-day migration window has closed. (answered by Biazs)\n\nQ: What was the token swap ratio for ai16z to elizaOS? (asked by crunchy_vertex) A: 1:6 ratio - 1 ai16z to 6 elizaOS tokens (answered by Biazs and Odilitime)\n\nQ: How do I open a support ticket for migration? (asked by crunchy_vertex) A: The support ticket channel is now closed and locked after migration deadline (answered by Biazs)\n\nQ: What is the team's plan regarding elizaOS coin price? (asked by FeRhaT_@) A: No specific information provided; updates are in the announcement channel (answered by Grooving and Odilitime)\n\n## 3. Help Interactions\n\nHelper: Biazs | Helpee: crunchy_vertex | Context: User missed ai16z to elizaOS token migration deadline and needed information about the process | Resolution: Explained that migration is closed, was a 90-day manual process with 1:6 ratio, and support tickets are no longer accepted\n\nHelper: Odilitime | Helpee: FeRhaT_@ | Context: User seeking updates about elizaOS coin status | Resolution: Directed user to the appropriate announcement channel for official updates\n\n## 4. Action Items\n\nType: Documentation | Description: Clarify token migration deadline and process for users who may have missed announcements | Mentioned By: crunchy_vertex",
+      "messageCount": 49,
+      "userCount": 11
+    }
+  ]
+}

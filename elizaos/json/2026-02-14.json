@@ -1,0 +1,46 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-02-14",
+  "categories": [
+    {
+      "title": "ElizaOS Community Updates - February 14, 2026",
+      "content": [
+        {
+          "text": "In the coders channel, community members discussed market sentiment with Void Signal posting about an incoming all-time high prediction, which received positive reactions from other members.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1472297552455012444/IMG_1179.png?ex=69920f72&is=6990bdf2&hm=b1aecf55290d5aaa2eb4c631f56d39a20758a4b8f28d2fe1b106685bb798b53b&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Core developers discussed cloud platform credits management. Shawmakesmagic requested credits for the cloud platform, and Stan assisted by manually adding credits to user accounts. Odilitime provided account details including organization slug and account ID, and Stan successfully added 1000 credits to the account. The process involved updating the user database directly.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1377726087789940836/1472353910122479777/Screenshot_2026-02-14_at_2.08.42_PM.png?ex=699243ef&is=6990f26f&hm=531b075d430935714c3b23280bf69f08f6a01a242b6b60d79eba6e94bc36b8f4&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the general discussion channel, multiple users inquired about the ai16z to elizaOS token migration. A user who missed the migration deadline was informed that the migration window had closed after 90 days, and only users who opened support tickets before the deadline could still migrate. The migration ratio was 1 ai16z to 6 elizaOS tokens. The support ticket channel was locked after the migration period ended. Community members also discussed price concerns, with team members directing users to the announcements channel for updates and emphasizing the focus on continued building.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HBHCXMQaYAEhCKC.jpg:large",
+            "https://media.tenor.com/Mf0WhOBvf2YAAAAe/starvale.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/Mf0WhOBvf2YAAAPo/starvale.mp4"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1771027200
+}
