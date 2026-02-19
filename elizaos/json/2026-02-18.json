@@ -7,50 +7,33 @@
       "content": [
         {
           "text": "In the coders channel, developers discussed various technical topics including MVP development and Agentic AI-to-workflow integration. A question was raised about using ElizaOS plugins with the Milady personal AI assistant, with confirmation that it's possible if they have a next branch. ElizaBAO announced a meeting with Solana Foundation and SuperteamMYR, and shared that Clawlana submitted a Solana Grant. A live test successfully caught two major Solana rugpulls (DARKTRUMP and NVIDIA) 2 hours before the crash, with DARKTRUMP flagged as High-Risk while still trading at peak.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1473767711929532528/BEWARE_OF_20251030_120806_0000.mp4?ex=699768a3&is=69961723&hm=a89d163ee03c74a94d8d50ab545335330f7b8c88cf9db2a123ce880103ecaf0e&"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "videos": "https://cdn.elizaos.news/elizaos-media/beware_of_20251030_120806_0000_1a767a2f.mp4",
+          "posters": "https://cdn.elizaos.news/posters/1771463340391-u5o5a4.jpg"
         },
         {
           "text": "The core development team shared a new HackMD Model Context Protocol server integration for AI assistants. Stan suggested the team should use this tool for easier collaboration and note sharing, avoiding copy-paste workflows. The GitHub repository was shared and received positive reactions from team members.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/9d9a1af49a4a59f080b70d811488724c1a68604b9205417420c8dcc21404e78d/yuna0x0/hackmd-mcp"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/hackmd-mcp_01ea2946.jpg"
         },
         {
           "text": "In the general discussion channel, ChainPatrol reached out about connecting at EthDenver, with confirmation that Shaw is attending and participated in ETHBuilder talks. Jin improved mobile support for elizaos.news. A community member inquired about collaboration proposals, with guidance provided to build a plugin using the official documentation. ElizaBAO promoted a Milady launch on BSC and shared it with BNB and Chinese communities. Major news was shared about ElizaOS expanding to capital markets through an investment and partnership with TSX-V listed firm Secure Blockchain. A developer offered expertise in generative AI, agent systems, cloud-native infrastructure, cybersecurity, and zero-trust architecture.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://elizaos.news/media/daily/2026-02-17/overall.png",
-            "https://elizalabs.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DDevelopment%26title%3DCreate%2Ba%2BPlugin%26description%3DBuild%2Ba%2Bworking%2Bplugin%2Bin%2B20%2Bminutes%2B-%2Bfrom%2Bscaffold%2Bto%2Btest%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Felizalabs%252FbbIJsUzCDybj9a-t%252Flogo%252Flight.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DbbIJsUzCDybj9a-t%2526q%253D85%2526s%253Def25ef0a7ad0c2985928651085d3a8e2%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Felizalabs%252FbbIJsUzCDybj9a-t%252Flogo%252Fdark.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DbbIJsUzCDybj9a-t%2526q%253D85%2526s%253Dd696503a5eeb5ccddf46a3e2cdce0190%26primaryColor%3D%25230B35F1%26lightColor%3D%25230B35F1%26darkColor%3D%25230B35F1%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%2523090a10&w=1200&q=100"
-          ],
-          "videos": []
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1473591136491798639_41e10901.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1473652799027023944_38890184.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Project Progress - February 18, 2026",
-      "content": [
-        {
-          "text": "On February 18, 2026, the ElizaOS project made significant advances in its plugin ecosystem and core infrastructure. The project completed a critical bug fix in the plugin-n8n-workflow that ensures default property values are applied before visibility checks, resolving issues with dependent fields when structural fields are omitted by the LLM. Several new integrations are in progress, including the addition of the SAID Protocol plugin for on-chain Solana identity and the SolCex Exchange BD plugin to the registry. The core eliza repository is also receiving updates with dependency management improvements across multiple directories and the implementation of SAID Protocol on-chain Solana identity features for ElizaOS agents. Two new issues were reported: an Ollama plugin embedding error on Ubuntu 24.04 despite Ollama functioning correctly, and a tracking issue for enterprise sign-up inquiries from major technology companies including Microsoft and Google X.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-02-18.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "On February 18, 2026, the ElizaOS project made significant advances in its plugin ecosystem and core infrastructure. The project completed a critical bug fix in the plugin-n8n-workflow that ensures default property values are applied before visibility checks, resolving issues with dependent fields when structural fields are omitted by the LLM. Several new integrations are in progress, including the addition of the SAID Protocol plugin for on-chain Solana identity and the SolCex Exchange BD plugin to the registry. The core eliza repository is also receiving updates with dependency management improvements across multiple directories and the implementation of SAID Protocol on-chain Solana identity features for ElizaOS agents. Two new issues were reported: an Ollama plugin embedding error on Ubuntu 24.04 despite Ollama functioning correctly, and a tracking issue for enterprise sign-up inquiries from major technology companies including Microsoft and Google X.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-02-18.json",
+        "posters": "https://cdn.elizaos.news/posters/1771463359161-16ac1.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
