@@ -1,4 +1,5 @@
 /node_modules/
+data/*.sqlite
 .env
 data/discord-raw.sqlite
 */node_modules/
@@ -7,3 +8,4 @@ frontend/build/
 frontend/public/
 # Lock files - this project uses npm, not yarn
 yarn.lock
+tmp/

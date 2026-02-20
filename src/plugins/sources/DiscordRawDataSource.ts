@@ -799,20 +799,23 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     const targetTimestamp = Math.floor(targetDate.getTime() / 1000); // Keep as seconds for ContentItem
 
     // Pre-check which channels already have data for this date
+    const forceOverwrite = process.env.FORCE_OVERWRITE === 'true';
     const channelsToFetch: string[] = [];
     const skippedChannels: string[] = [];
 
     for (const channelId of this.channelIds) {
       const cid = `discord-raw-${channelId}-${date}`;
       const exists = await this.storage.getContentItem(cid);
-      if (exists) {
+      if (exists && !forceOverwrite) {
         skippedChannels.push(channelId);
       } else {
         channelsToFetch.push(channelId);
       }
     }
 
-    if (skippedChannels.length > 0) {
+    if (forceOverwrite) {
+      logger.info(`FORCE_OVERWRITE=true: refetching all ${channelsToFetch.length} channels for ${date}`);
+    } else if (skippedChannels.length > 0) {
       logger.info(`Skipping ${skippedChannels.length} channels with existing data for ${date}`);
     }
 

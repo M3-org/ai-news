@@ -21,6 +21,8 @@
     "fetch-channel": "ts-node -r tsconfig-paths/register --transpile-only scripts/fetch-channel.ts",
     "discover-channels": "npm run channels -- discover",
     "users": "ts-node -r tsconfig-paths/register --transpile-only scripts/users.ts",
+    "audit-raw": "ts-node -r tsconfig-paths/register --transpile-only scripts/audit-raw.ts",
+    "reconcile-raw": "ts-node -r tsconfig-paths/register --transpile-only scripts/reconcile-raw.ts",
     "enrich-nicknames": "ts-node -r tsconfig-paths/register --transpile-only scripts/enrich-nicknames.ts",
     "merge-discord-dbs": "ts-node -r tsconfig-paths/register --transpile-only scripts/merge-discord-databases.ts",
     "build-user-registry": "ts-node -r tsconfig-paths/register --transpile-only scripts/build-discord-user-registry.ts",

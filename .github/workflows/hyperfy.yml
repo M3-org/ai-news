@@ -19,6 +19,11 @@ on:
         type: boolean
         default: false
 
+# Prevent race conditions when deploying to gh-pages
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   sqlite-job:
     timeout-minutes: 90
@@ -188,6 +193,43 @@ jobs:
             --manifest-output ./output/hyperfy/media-manifest-full.json
           echo "✅ Full manifest generated"
 
+      - name: Audit discord raw parity
+        run: |
+          YESTERDAY=${{ steps.date.outputs.YESTERDAY }}
+          AFTER_DATE=$YESTERDAY
+          BEFORE_DATE=$YESTERDAY
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ -n "${{ inputs.after_date }}" ] && [ -n "${{ inputs.before_date }}" ]; then
+              AFTER_DATE=${{ inputs.after_date }}
+              BEFORE_DATE=${{ inputs.before_date }}
+            elif [ -n "${{ inputs.after_date }}" ]; then
+              AFTER_DATE=${{ inputs.after_date }}
+              BEFORE_DATE=${{ inputs.after_date }}
+            elif [ -n "${{ inputs.before_date }}" ]; then
+              AFTER_DATE=${{ inputs.before_date }}
+              BEFORE_DATE=${{ inputs.before_date }}
+            fi
+          fi
+
+          mkdir -p ./tmp
+
+          npm run audit-raw -- \
+            --db data/hyperfy-discord.sqlite \
+            --source hyperfy \
+            --after $AFTER_DATE \
+            --before $BEFORE_DATE \
+            --strict \
+            --report ./tmp/hyperfy-raw-audit-report.json
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyperfy-raw-audit-${{ github.run_id }}
+          path: ./tmp/hyperfy-raw-audit-report.json
+          if-no-files-found: warn
+
       - name: Encrypt database
         env:
           SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
@@ -284,4 +326,3 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: "Update Hyperfy data ${{ env.COMMIT_DATETIME }}"
-

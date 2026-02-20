@@ -107,7 +107,11 @@ export class SQLiteStorage implements StoragePlugin {
     logger.debug(`[SQLiteStorage:${operation}] Starting transaction for ${items.length} items.`);
 
     const updateStmt = await this.db.prepare(
-      `UPDATE items SET metadata = ? WHERE cid = ?`
+      `
+      UPDATE items
+      SET type = ?, source = ?, title = ?, text = ?, link = ?, topics = ?, date = ?, metadata = ?
+      WHERE cid = ?
+      `
     );
     const insertStmt = await this.db.prepare(
       `INSERT INTO items (type, source, cid, title, text, link, topics, date, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
@@ -153,10 +157,17 @@ export class SQLiteStorage implements StoragePlugin {
         if (existingRow) {
            // Log BEFORE run
            logger.debug(`[SQLiteStorage:${operation}] Preparing to UPDATE item: ${itemLogInfo}`);
+           const metadataStr = item.metadata ? JSON.stringify(item.metadata) : null;
+           const topicStr = item.topics ? JSON.stringify(item.topics) : null;
            await updateStmt.run(
-                item.metadata ? JSON.stringify(item.metadata) : null,
-                // Potentially add item.topics update here if needed:
-                // item.topics ? JSON.stringify(item.topics) : null,
+                item.type,
+                item.source,
+                item.title,
+                item.text,
+                item.link,
+                topicStr,
+                item.date,
+                metadataStr,
                 item.cid
            );
            item.id = existingRow.id;
@@ -327,7 +338,7 @@ export class SQLiteStorage implements StoragePlugin {
   /**
    * Retrieves content items within a specific time range.
    * @param startEpoch - Start timestamp in epoch seconds
-   * @param endEpoch - End timestamp in epoch seconds
+   * @param endEpoch - End timestamp in epoch seconds (exclusive)
    * @param includeType - Optional type to include in results
    * @returns Promise<ContentItem[]> Array of content items within the time range
    * @throws Error if database is not initialized
@@ -349,18 +360,17 @@ export class SQLiteStorage implements StoragePlugin {
       throw new Error("startEpoch must be less than or equal to endEpoch.");
     }
 
-    // Note: Query uses date BETWEEN ? AND ?, which is inclusive.
-    // The adjustment `startEpoch - 1` and `endEpoch + 1` might be overly broad.
-    // Let's use the exact epoch range for clarity in logging and querying.
-    let query = `SELECT * FROM items WHERE date >= ? AND date <= ?`; // Use >= and <= for inclusive range
+    // Query uses [startEpoch, endEpoch) to avoid cross-day overlap.
+    let query = `SELECT * FROM items WHERE date >= ? AND date < ?`;
     const params: any[] = [startEpoch, endEpoch]; 
-    logger.debug(`[SQLiteStorage:${operation}] Initial query range: date >= ${startEpoch} AND date <= ${endEpoch}`);
+    logger.debug(`[SQLiteStorage:${operation}] Initial query range: date >= ${startEpoch} AND date < ${endEpoch}`);
 
     if (includeType) {
       query += ` AND type = ?`;    
       params.push(includeType);
       logger.debug(`[SQLiteStorage:${operation}] Adding filter: AND type = ${includeType}`);
     }
+    query += ` ORDER BY date ASC, cid ASC`;
 
     try {
       logger.debug(`[SQLiteStorage:${operation}] Executing query: ${query} with params: ${JSON.stringify(params)}`);
