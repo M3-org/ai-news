@@ -1,90 +1,104 @@
-# elizaOS Discord - 2026-02-19
+# elizaOS Discord - 2026-02-20
 
 ## Overall Discussion Highlights
 
-### Token Clarification and Migration Issues
+### Product Updates & Releases
 
-A significant portion of discussion centered on confusion between $ai6z and $elizaos tokens. While initially confirmed as the same by community members, Odilitime clarified they are **different contracts** with ai16z worth significantly less than ElizaOS. Multiple users requested the ElizaOS contract address and were directed to the appropriate channel. Concerns were raised about:
+**Babylon Waitlist Opening**
+- Babylon platform is now accessible to the top 5,000 users on the waitlist, addressing community concerns about product delivery timelines following recent incidents with Autofun and Twitter issues
 
-- Users who missed the migration deadline seeking options to still migrate
-- Token mintability questions remaining unanswered
-- The rebrand from ai16z to ElizaOS losing "memetic value" by switching to a "non-memetic ticker" (noted by DorianD)
+### ElizaCloud Platform Issues
 
-### Technical Positioning and Comparisons
+**Critical UI/UX Bugs Identified**
+- Multiple scrolling functionality issues discovered on ElizaCloud dashboard
+- API explorer page (https://www.elizacloud.ai/dashboard/api-explorer) has broken mousepad scrolling, requiring manual use of a hard-to-see scrollbar
+- Similar scrolling problems affect other dashboard pages
+- "Send request" test feature returns "api key is required" error despite API key appearing to be present
 
-**ElizaOS vs OpenClaw:** When asked about differences, Odilitime provided concrete technical advantages:
-- ElizaOS performs better on benchmarks
-- Has more connectors available
-- More reliable due to not being self-configuring
+**Feature Clarity Needed**
+- Questions raised about the "use a different key" feature and whether it supports BYOK (Bring Your Own Key) functionality similar to OpenRouter
+- Pricing transparency concerns - users requesting per-model price breakdown in the dashboard
 
-This represents an important technical positioning statement for the project.
+### Communication & Community Management
 
-### Community Engagement and Demonstrations
+**Leadership Communication Strategy**
+- Shaw's update distribution clarified: AI/development content posted on Twitter, crypto-related updates shared on Farcaster
+- Community members need to monitor both platforms for complete information
+- Standard contact method for Shaw is using @ mentions in Discord
 
-- **Babylon Discord Demo:** Odilitime promoted "the hanging plaza" as the best current demonstration of agents in action, directing new users interested in learning about agents in human digital spaces
-- **Verification Milestone:** ElizaBAO announced ElizaOS received a golden checkmark verification
-- **Hackathon Entry:** The Milady team submitted an entry on BSC that was shared for community voting
+**Partnership Relations**
+- Weak communications identified as causing unnecessary negative sentiment from influential partner groups
 
-### Market Context and Community Concerns
+### Developer Community Activity
 
-Discussion acknowledged the broader crypto winter context, with most assets down 99%. Community members expressed concerns about:
-- Perceived lack of marketing follow-through after autofun issues
-- Questions about ElizaCloud status
-- General market performance of the token
-
-### Project Updates
-
-- **Cultanime Team:** Confirmed to be doing very well when asked about their status
-- **Building Interest:** intrepid expressed interest in building, though no specific project details were discussed
+**Developer Availability**
+- Multiple developers posted availability for project work
+- Expertise areas mentioned: Web3 infrastructure, backend services, security checks, and UX design
+- General development services offered to the community
 
 ## Key Questions & Answers
 
-**Q: Is $ai6z and $elizaos the same token?**
-A: No, they are different contracts with ai16z worth significantly less (Odilitime)
+**Q: Is there a way to get in contact with Shaw here?**
+- A: You can try and @ him, that's what others do *(answered by Odilitime)*
 
-**Q: How is this different from OpenClaw?**
-A: ElizaOS performs better on benchmarks, has more connectors, and is more reliable since it's not self-configuring (Odilitime)
+**Q: Where does Shaw post updates?**
+- A: Shaw posts AI/dev content on Twitter and crypto content on Farcaster - need to follow both platforms *(answered by Odilitime)*
 
-**Q: Can I have the contract address of ElizaOS?**
-A: Users were directed to check the appropriate channel for contract information (MDMnvest)
-
-**Q: Is the Cultanime team doing well?**
-A: They're doing very well (Odilitime)
+**Q: What's the status of Babylon?**
+- A: Babylon is now open to the top 5,000 users on the waitlist *(answered by Odilitime)*
 
 ### Unanswered Questions
 
-- Why is Ai16z coin pumping if the new migrated coin is ElizaOS?
-- Why is the token mintable?
-- Is there any way to migrate ai16z after missing the deadline?
-- What happened to the promised marketing and ElizaCloud after autofun issues?
+- Is there still a live Eliza agent that can answer questions about the most recent ElizaOS codebase? *(asked by DorianD)*
+- Does "use a different key" mean users can enter their own API keys (like OpenAI key for gpt-4o) similar to OpenRouter BYOK? *(asked by DorianD)*
+- For Milady, we have BNB and Solana - are both valid? *(asked by alex_wukar, asked twice)*
+- How many users still need to migrate? *(asked by Odilitime)*
 
 ## Community Help & Collaboration
 
-**Token Information Assistance:**
-- MDMnvest helped multiple users (Yoree, NintyNine) by directing them to appropriate channels for contract addresses and official social media handles
-- Maxx Truant and Farzeen arif initially attempted to help Drizello with token confusion (later corrected by Odilitime)
+**Bug Reporting Process**
+- **Helper:** Odilitime
+- **Helpee:** DorianD
+- **Context:** DorianD conducted informal testing of ElizaCloud dashboard and identified multiple UI/UX issues
+- **Resolution:** Odilitime acknowledged the bug reports and forwarded them to the development team
 
-**Technical Guidance:**
-- Odilitime provided comprehensive help to C0rrupt1 on technical differences between ElizaOS and OpenClaw
-- Odilitime welcomed AIKO444 (new user) and directed them to the Babylon Discord demo for learning about agents
+**Contacting Leadership**
+- **Helper:** Odilitime
+- **Helpee:** k1kkoS
+- **Context:** User needed to contact Shaw
+- **Resolution:** Suggested using @ mentions as the standard method
 
-**Resource Sharing:**
-- Odilitime helped Quaser M find Shaw's statement by providing links to relevant channels and fixupx posts
-- dEXploarer shared Twitter/X content, with Wes requesting permission to use it as background imagery
+**Product Updates Clarification**
+- **Helper:** Odilitime
+- **Helpee:** Community (Thanos💨 and others)
+- **Context:** Concerns about product delivery and communication following recent incidents
+- **Resolution:** Clarified Babylon waitlist status and explained Shaw's multi-platform communication strategy
 
 ## Action Items
 
 ### Technical
-- Building interest expressed but needs clarification on specific project or scope (intrepid)
-- Address token migration process for users who missed the deadline (Jüju)
-- Clarify token mintability concerns for ElizaOS (Yoree)
+
+- **Fix scrolling functionality on ElizaCloud API explorer page** - mousepad scrolling broken, scrollbar hard to see
+  - *Mentioned by: DorianD*
+
+- **Fix "send request" test feature** - currently returning "api key is required" error when API key appears to be present
+  - *Mentioned by: DorianD*
+
+- **Complete migration process** for remaining users
+  - *Mentioned by: Odilitime*
 
 ### Documentation
-- Update contract address information in the designated channel for easier access (MDMnvest)
 
-### Feature
-- Address marketing and ElizaCloud roadmap questions raised by community (Thanos💨)
+- **Add price breakdown per model** in ElizaCloud dashboard for pricing transparency
+  - *Mentioned by: DorianD*
 
----
+- **Clarify functionality of "use a different key" feature** - document whether it supports BYOK (Bring Your Own Key)
+  - *Mentioned by: DorianD*
 
-*Note: This summary reflects discussions from the 💬-coders and 💬-discussion channels on February 19, 2026.*
+- **Provide clarity on Milady token validity** across BNB and Solana chains
+  - *Mentioned by: alex_wukar*
+
+### Communication
+
+- **Improve partner communications** to reduce unnecessary negative sentiment from influential groups
+  - *Identified in: 🥇-partners channel*
