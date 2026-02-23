@@ -1,92 +1,108 @@
-# elizaOS Discord - 2026-02-21
+# elizaOS Discord - 2026-02-22
 
 ## Overall Discussion Highlights
 
-### Project Vision & Positioning
+### ElizaOS Token Holder Benefits & Ecosystem Updates
 
-The community engaged in significant discussion about ElizaOS's mission and value proposition. **Odilitime** provided comprehensive clarification on the project's direction, emphasizing that ElizaOS aims to democratize AI agent capabilities for everyday users rather than focusing on short-term profits. The project powers many crypto agents with battle-tested open source code and has evolved from a Solana-only platform to a multi-chain infrastructure.
+A major announcement emerged regarding an upgrade for elizaOS token holders, shared by Odilitime across multiple channels with reference to a tweet from shawmakesmagic. This sparked community interest, with historical context provided that the token previously reached a market cap of almost 3B. Some confusion arose around whether the upgrade applied to $milady.ai or ElizaOS, which remained unresolved. The team confirmed they remain actively developing the project, addressing community concerns about activity levels.
 
-A major clarification addressed the migration from ai16z to elizaOS, which occurred at a 1:6 ratio (with 1:4 allocated for funding). Odilitime confirmed that ai16z is effectively deprecated, with liquidity now split across multiple chains under the elizaOS umbrella.
+### Database Refactoring & Migration Strategy (v2.0.0)
 
-### Technical Development & Architecture
+Significant technical work centered on PR #6521 involving database refactoring for elizaOS v2.0.0. Stan submitted a substantial PR removing approximately 2,600 lines of code, primarily eliminating auto-migration functionality from version 1.4.x to 1.6.x. The rationale: users are assumed to have moved beyond 1.4.x, with potential future implementation to throw errors directing users to migrate to 1.6.x before upgrading to v2.0.0. Odilitime is working on a parallel "great db refactor PR" and confirmed Row Level Security (RLS) maintenance in his refactor. The changes were deemed minimal and easy to rebase for integration.
 
-**King Nebuluz** shared progress on building unbreakable agents using Erlang (github.com/nebuluzno/scr), offering the code for potential ElizaOS integration. Odilitime reviewed the implementation positively, noting it surpassed previous Erlang projects examined by the team.
+### Plugin Development & NFT Capabilities
 
-**BinaryCookies** initiated important technical discussions about version stability and database configuration. The community confirmed that v2.0.0 branch is now the recommended version despite having less documentation, as it represents the project's future direction.
+Ogie announced the publication of the SolCex Exchange plugin for elizaOS (v2.0.0), available as @buzzbd/plugin-solcex-bd on npm. This autonomous business development agent targets cryptocurrency exchange listings, integrating 8 services, implementing a 100-point token scoring system, and aggregating data from 16 intelligence sources. Registry PR #263 was submitted, with ERC-8004 implementations referenced on Base (#17483) and Ethereum (#25045) networks.
 
-Database architecture was clarified: the plugin-sql supports both pglite and Neon Postgres, using environment variables to determine which database to use, though automatic data migration between them is not currently supported.
+Regarding NFT functionality, Odilitime acknowledged current limitations while confirming ongoing plugin-evm work that will unlock expanded NFT capabilities. Community interest in an Eliza NFT was noted, with suggestions for a potential "elizaOK" NFT implementation.
 
-### Future Development Directions
+### Performance Optimization Challenges
 
-**digitalalchemy** predicted an interesting evolution where clawd bot will prove trustless while Eliza becomes "Trusted Agentic Intelligence (TAI)" within months. The community discussed the challenges of building proactive viral agents while maintaining security through sandboxing.
+Odilitime reported regularly encountering 200k token limits due to numerous plugins, identifying bootstrap providers and evaluations as primary contributors. Active work is underway to address these baseline performance concerns and improve efficiency.
 
-### Spartan Wallet & DegenAI
+### Partnership & Collaboration Strategy
 
-The Spartan agentic wallet was explained as having trading capabilities, with DegenAI holders receiving access to the open-source trader—described as a combination of trading bot functionality with LLM intelligence. Odilitime shared personal conviction in the DegenAI project, noting he sold his entire elizaOS bags and bought back, but never sold his degen bags.
+The team is expanding partnerships with external artists who share similar values and goals, moving beyond internal labs talent. This collaborative approach was described as successful and "paying off," with the recovery of X (Twitter) accounts noted as beneficial for these efforts.
 
-### Market Commentary & Gaming Opportunities
+### Infrastructure & Wallet Integration
 
-**DorianD** drew parallels between current crypto market cycles and historical tech industry periods, comparing the mid-2020s crypto market to the 2014-2016 crypto period and the 2001-2003 tech downturn. DorianD also highlighted opportunities in censorship-resistant gaming.
+Questions arose about the relationship between Spartan infrastructure and Milady wallet. Odilitime clarified that while Milady wallet might use similar technology/plugins as Spartan, it's not directly related to their implementation. The milady.ai token was confirmed as not yet launched when a community member couldn't locate it in Phantom wallet.
 
-### Community Activity
+### HTTP Server Implementation
 
-**KingRon** announced completing their first agent build and inquired about deploying dApps to Solana seeker. **Bill Ding** clarified that a separate developer Discord exists for technical discussions, explaining the relatively low activity in the public coders channel.
+Discussion occurred about HTTP server implementation wrapping runtime in V2.0.0. While Odilitime hadn't added this functionality, Stan confirmed that Milady has this implementation with numerous examples available in the 2.0.0 version.
 
-### Technical Issues
+### Community Development Showcase
 
-**DorianD** reported an unusual bug where their openclaw agent unexpectedly started responding in Korean, indicating potential localization or configuration issues requiring investigation.
+DarmaStef demonstrated experience building various AI agents using ElizaOS, including Reservation Agent, Travel Agent, and Database analysis Agent for non-technical users, offering to collaborate on new projects. This showcased the platform's versatility for creating agents with diverse capabilities.
 
 ## Key Questions & Answers
 
-**Q: Which version of ElizaOS is most stable currently?**  
-A: v2.0.0 branch is recommended, though it has less documentation but represents the project's direction (answered by Odilitime)
+**Q: Where do we buy the milady.ai token, can't find it in phantom?**  
+A: The token hasn't launched yet (Odilitime will follow up for more information)
 
-**Q: How can I use both pglite and Neon cloud database together?**  
-A: plugin-sql supports both and uses the postgres credentials env var to decide which to use, but won't migrate data automatically (answered by Odilitime)
+**Q: Why was the auto migration from 1.4.x to 1.6.x removed in v2?**  
+A: The team assumes users are no longer on version 1.4.x, and they could potentially throw an error asking users to migrate to 1.6.x first before going to v2.0.0 (Stan ⚡)
 
-**Q: Why should I invest in elizaOS?**  
-A: If you want short-term money, probably shouldn't. If you want to support open source builders ensuring everyday people have same capabilities as big companies, this is the place. Code powers many crypto agents with battle-tested open source (answered by Odilitime)
+**Q: Did you add a small HTTP server that wraps runtime on V2.0.0?**  
+A: No, but Milady has it and there are examples in 2.0.0 (Odilitime)
 
-**Q: What is Spartan?**  
-A: Spartan is the agentic wallet with trading capabilities. DegenAI holders have access to the trader which is open source - a potluck of trading bot combined with LLM intelligence (answered by Odilitime)
+**Q: What was the top market cap of this?**  
+A: Almost 3B (DannyNOR NoFapArc)
 
-**Q: Is ai16z still tradeable or only eliza?**  
-A: ai16z is a dead coin for all intents and purposes. Migrated to elizaOS with 1:6 ratio, using 1:4 for funding and splitting liquidity across multiple chains (answered by Odilitime)
+**Q: Is this team still active?**  
+A: Yes sir (Odilitime)
 
-**Q: Do you expect DegenAI to do better than ElizaOS token?**  
-A: Hired into team degen and felt better to bet on myself/my team. Sold entire elizaOS bags and bought back, but never sold degen bags (answered by Odilitime)
+**Q: Is Spartan set up to route and execute Milady wallet orders?**  
+A: Might be using the same tech/plugins, so it's spartan tech but not really related to our dude (Odilitime)
 
-**Q: Can we deploy dApps to Solana seeker?**  
-A: Unanswered (asked by KingRon)
+**Q: Can price be discussed here?**  
+A: Discuss in the trading channel (MDMnvest)
+
+**Q: Can you create any AI agent with any capabilities via ElizaOS?**  
+A: Implied yes, as demonstrated by DarmaStef's various agent implementations
 
 ## Community Help & Collaboration
 
-**Odilitime helped BinaryCookies** with version selection guidance, recommending the v2.0.0 branch as the future direction despite less documentation, helping a new builder get started on the right path.
+**Database Refactoring Coordination**  
+Stan ⚡ assisted Odilitime with concerns about rebasing changes from PR #6521, confirming the changes are small and very easy to rebase, with the big deletion being migration-related code that's no longer needed. Stan also explained the migration strategy change and suggested potential error handling for direct 1.4.x to v2.0.0 upgrades.
 
-**Odilitime helped BinaryCookies** configure database options, explaining that plugin-sql supports both pglite and Neon Postgres via environment variables, though data won't auto-migrate between them.
+**Token Launch Clarification**  
+Odilitime helped DannyNOR NoFapArc who couldn't find the milady.ai token in Phantom wallet, clarifying that the token hasn't launched yet and offering to investigate further.
 
-**Odilitime helped PKScouser** understand the ElizaOS value proposition by providing comprehensive explanation of the project mission, Spartan wallet functionality, migration from ai16z, and positioning as open source infrastructure rather than a short-term investment vehicle.
+**Project Naming Convention**  
+Odilitime corrected jin on the proper capitalization, clarifying that "elizaOS" is correct rather than "ElizaOS."
 
-**Skinny advised PKScouser** against sourcing investment thesis from Discord, recommending building an agent to gain deeper insights into the platform's capabilities.
+**Infrastructure Relationship Clarification**  
+Odilitime helped Skinny understand the relationship between Spartan infrastructure and Milady wallet, explaining they may use the same tech/plugins but aren't directly related.
 
-**Odilitime reviewed King Nebuluz's** Erlang-based unbreakable agents code, providing positive feedback and noting it was better than previous Erlang projects examined.
+**Channel Navigation**  
+MDMnvest directed al.mark to the appropriate trading channel for price discussions.
 
-**Bill Ding helped NintyNine** understand the low channel activity by informing them that there's a separate dev Discord for technical discussions.
+**Personal Support**  
+Lexpo4777 offered prayers and support to 好人有好报 during a family health crisis.
+
+**Agent Development Showcase**  
+DarmaStef offered to help the community by demonstrating ElizaOS capabilities and offering collaboration on new AI agent projects.
 
 ## Action Items
 
 ### Technical
 
-- **Review and potentially integrate github.com/nebuluzno/scr unbreakable agents code into ElizaOS** - Mentioned by King Nebuluz
-- **Investigate openclaw agent unexpectedly writing in Korean** - Mentioned by DorianD
-- **Complete Polymarket agent development** - Mentioned by King Nebuluz
-- **Investigate dApp deployment capabilities to Solana seeker** - Mentioned by KingRon
-
-### Documentation
-
-- **Improve documentation for v2.0.0 branch as it becomes the recommended version** - Mentioned by Odilitime
+- **Rebase and deconflict PR #6521 with the db refactor PR** (Mentioned by: Odilitime)
+- **Consider implementing error handling to prevent direct migration from 1.4.x to v2.0.0, directing users to 1.6.x first** (Mentioned by: Stan ⚡)
+- **Improve bootstrap providers and evaluations to address 200k token limit issues caused by numerous plugins** (Mentioned by: Odilitime)
+- **Continue plugin-evm work to unlock more NFT functionality** (Mentioned by: Odilitime)
+- **Follow up on milady.ai token launch status and availability** (Mentioned by: Odilitime)
+- **Connect with builders working on Jeju/agent commerce for potential collaboration on SolCex plugin** (Mentioned by: Ogie)
+- **Investigate ticket opening assistance request** (Mentioned by: Matt - Timpi)
 
 ### Feature
 
-- **Develop clawd bot as trustless system while Eliza becomes Trusted Agentic Intelligence (TAI)** - Mentioned by digitalalchemy
-- **Explore censorship-resistant gaming opportunities** - Mentioned by DorianD
+- **Review and merge registry PR #263 for SolCex Exchange plugin** (Mentioned by: Ogie)
+- **Potential ElizaOK NFT implementation** (Mentioned by: Odilitime)
+
+### Documentation
+
+- **Clarify relationship between Spartan infrastructure and Milady wallet integration** (Mentioned by: Skinny)
+- **Verify and clarify which token receives the upgrade mentioned in shawmakesmagic tweet** (Mentioned by: g)
