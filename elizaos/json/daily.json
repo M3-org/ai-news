@@ -1,49 +1,56 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-02-22",
+  "title": "Daily Report - 2026-02-23",
   "categories": [
     {
-      "title": "elizaOS Development Updates and Milady NFT Integration - February 22, 2026",
+      "title": "Eliza Labs Restructuring and Revenue Focus",
       "content": [
         {
-          "text": "Milady announced an ERC-8004 NFT drop called AGENTS that will benefit elizaOS holders. The collection will be available through the Milady app and uses the ERC-8041 fixed agent collection standard. There will be 2138 NFTs on each chain including ETH, BSC, Base and Solana. While the mint is free, holders of OG Milady, Remilio collections, and elizaOS will receive upgraded mints across all chains. The team expressed excitement about collaborating with external artists who share similar values and goals, noting it as a blessing to have their X accounts restored.",
+          "text": "Eliza Labs announced a significant organizational restructuring on February 23, 2026, driven by financial constraints and the need to achieve revenue quickly. The team has been reduced to create a leaner operation where each person takes on more responsibility. Leadership acknowledged pushing off this decision as long as possible but cited bear market realities and the need to focus on immediate revenue generation. The company has received multiple acquisition offers but prefers to remain independent and reach profitability. The restructuring shifts Eliza Labs toward a venture model with small teams working on focused projects with fixed budgets, emphasizing validation and early termination of non-performing initiatives. Leadership expressed that the traditional daily standup model was not effective and plans to move toward highly motivated maintainers coordinating independently.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988",
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Several revenue-generating products are being launched or ramped up. Agent Arena Duel Betting in Hyperscape will launch with 2% fees plus 1% on winnings. An OTC Agent at tradingdesk.fun operates with 1% fees but is not expected to be profitable. Milady, a free and open-source project, is designed to drive users to Eliza Cloud as the main revenue driver. Babylon has launched to the first 1% of users and will scale to 100%, with plans for a crypto trading platform version charging 1% fees. Eliza App will offer the same backend as hosted Milady and can begin charging once onboarding is complete. The team is also supporting Amelia's subscription-focused project. All development efforts are now evaluated based on potential revenue generation.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Technical discussions in the core development channel focused on optimizing token usage and context management for agents. Developers discussed work on loading MCPs with METATOOL search actions and the possibility of moving this solution into the framework. One developer noted that recent messages and reflections were consuming too much data, though the metatool pattern could reduce tokens used for actions. The main challenge identified was providing agents with the right amount of context about various behaviors at varying levels of detail. There was consideration of applying the metatool pattern to providers, though concerns were raised about potential delays.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community members expressed confusion and concern about the token migration from ai16z to the new token. Multiple users reported missing the migration deadline and expressed frustration about the process, with some considering selling their holdings due to confusion about multiple projects with similar names and concerns about security when asked to provide wallet addresses. Users reported losing significant value during the migration process and expressed distrust about verification processes. Community helpers clarified that any direct messages or links to open tickets were scams and that the migration had started on November 6 after a snapshot. Several developers in the community offered their services for web development, AI agent creation, and image generation projects.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1475128200760787017_b4efcb84.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1475128200760787017_21b9ca48.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1475128200760787017_9fedb404.jpg"
-          ]
+            "https://pbs.twimg.com/media/HB0NTvkbgAAZXx3.jpg:large"
+          ],
+          "videos": []
         },
         {
-          "text": "Core developers worked on database improvements with a pull request for plugin-sql that aligns RLS isolation with v1 patterns. The changes replace application_name-based server context with parameterized set_config for SQL injection safety and rename withEntityContext to withIsolationContext. The update removes approximately 2600 lines related to auto migration from version 1.4.x to 1.6.x as it is no longer needed in v2. Developers discussed that users attempting to migrate directly from 1.4.x to v2.0.0 may need to migrate to 1.6.x first. Odilitime reported hitting 200k token limits regularly with numerous plugins and is working on improvements to bootstrap providers and evaluations.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "images": "https://cdn.elizaos.news/elizaos-media/6521_56ea1365.jpg"
-        },
-        {
-          "text": "A developer from SolCex Exchange published the elizaOS plugin buzzbd/plugin-solcex-bd version 2.0.0, which functions as an autonomous BD agent for crypto exchange listings. The plugin includes 8 services, 100-point token scoring, and 16 intelligence sources. The team is looking to connect with builders working on Jeju and agent commerce. Additionally, a community member noticed updates to the elizaOS.news RSS feed, with a reminder that the correct branding is elizaOS not ElizaOS.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/image_f5f2bae6.webp"
-        },
-        {
-          "text": "Community discussions revealed that elizaOS market cap is currently around 10 million, down from a peak of almost 3 billion. A developer offered services for building AI agents using elizaOS including reservation agents, travel agents, and database analysis agents for non-skilled users. There was confusion in the community about whether the Milady NFT benefits apply to the BSC Milady token or the milady.ai token, with clarification that it applies to elizaOS holders.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "posters": "https://cdn.elizaos.news/posters/1771808898268-bjvzd.png"
+          "text": "A developer expressed interest in contributing to new projects or collaborating on ideas, offering their experience from previous development work. Another community member inquired about image generation plugins, specifically asking about the year-old plugin-image-generation and whether better alternatives existed. A response suggested that plugin-bootstrap includes an image generation action.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
-    },
-    {
-      "title": "ElizaOS Development Activity - February 22, 2026",
-      "content": {
-        "text": "On February 22, 2026, development activity in the ElizaOS project centered on three new pull requests. The first pull request added a Base Network wallet safety guide with x402 diagnostic functionality. The second pull request involved dependency management, bumping the npm_and_yarn group across 3 directories with 4 updates. The third pull request focused on aligning RLS isolation with v1 patterns in the SQL plugin.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-02-22.json",
-        "posters": "https://cdn.elizaos.news/posters/1771808915430-2zbrg4.jpg"
-      },
-      "topic": "miscellaneous"
     }
   ],
-  "date": 1771718400
+  "date": 1771804800
 }
