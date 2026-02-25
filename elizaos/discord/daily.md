@@ -1,79 +1,69 @@
-# elizaOS Discord - 2026-02-23
+# elizaOS Discord - 2026-02-24
 
 ## Overall Discussion Highlights
 
-### Major Organizational Restructuring and Revenue Focus
+### Project Status and Community Concerns
 
-The most significant development was a major strategic pivot announced in the core-devs channel. Due to financial constraints, the organization is restructuring to focus on immediate revenue generation through a venture model with small, focused teams working on fixed budgets rather than traditional daily standups.
+The community expressed concerns about ELIZAOS token price performance and project viability. Amit gupta questioned whether the project had stalled due to stagnant price action and lack of buyer growth. **Odilitime** clarified that the project remains actively developed, attributing current price performance to broader bear market conditions affecting the entire crypto space. This reassurance was important for community morale, though concerns about price-to-activity disconnect persisted.
 
-**Revenue-Generating Projects Launching:**
+### Development Activity
 
-- **Agent Arena Duel Betting in Hyperscape** - Launching next week with 2% + 1% fee structure
-- **OTC Agent at tradingdesk.fun** - 1% fee model, maintained by 's'
-- **Milady** - Free/open source project designed to drive users to Eliza Cloud (primary revenue source)
-- **Babylon** - Crypto trading platform with 1% fees, ramping from 1% to 100% user rollout
-- **Eliza App** - Shares backend with hosted Milady, needs onboarding completion to begin charging
-- **Amelia's subscription-focused project**
+**ElizaBAO** announced a submission to the **PumpFun hackathon**, representing tangible development progress. When questioned about similarities to Babylon, ElizaBAO clarified that the project is distinct and separate.
 
-The company has received acquisition offers but leadership prefers achieving profitability first for better valuation. The strategy emphasizes shipping working products immediately, avoiding distractions, and making quick kill decisions for underperforming projects.
+### New Tools and Platforms
 
-### Technical Development Updates
+**Fido** introduced **fomolt**, an agentic trading platform specifically designed for testing with Eliza agents. The platform features:
+- **CLI tool** for instant token trading on Base blockchain
+- **USDC for gas** with paymaster support for simplified transactions
+- **API key authentication** instead of traditional seedphrase management
+- Focus on streamlining the agent development and testing workflow
 
-**Backend Architecture:** Shadow from Eliza Wakes Up is collaborating on backend work for both Eliza app and Milady, offering two agent options: "workflow" and "full sandbox" modes.
+Fido actively solicited community feedback to improve the platform's utility for agent developers.
 
-**Roadmap Priorities:** After Milady ships, focus shifts to Babylon/Hyperscape integration, followed by Jeju (a network for agents).
+### Administrative and Access Management
 
-### Technical Optimization Discussions
+**Odilitime** performed administrative work upgrading **shad0w's** Discord roles and permissions. The process encountered technical limitations when attempting to assign the "core dev" role and add labs access to specific rooms. After troubleshooting, shad0w was successfully granted access to the xfn room and the milady room (channel ID 1475913823243210784), though manual channel addition was initially required.
 
-In the core-devs channel, there was discussion around MCP loading and METATOOL search actions optimization. Odilitime identified that token usage issues primarily stem from recent messages and reflections collecting excessive data rather than from actions themselves. The metatool pattern was considered for providers, though concerns about implementation delays were raised.
+### Community Engagement
 
-### Community Support and Plugin Recommendations
-
-In the discussion channel, guidance was provided on image generation plugins for agents. The plugin-bootstrap package was recommended as it includes an image generation action, providing an alternative to the older plugin-image-generation package.
-
-### Migration and Security Concerns
-
-Community members expressed confusion about token migration processes, with concerns about scam risks. There were warnings about avoiding DM links and fake ticket systems used by scammers.
+The channels saw various service offerings including co-marketing proposals, NFT/design services, and fullstack development services. **The Void** hinted at upcoming developments with a cryptic message suggesting "Its gonna get spicy soon," though no technical details were provided.
 
 ## Key Questions & Answers
 
-**Q: Is plugin-image-generation okay to use, or are there better alternatives?**  
-A: plugin-bootstrap has an image generation action (answered by Odilitime)
+**Q: Will ELIZAOS not be able to recover its price? Has the project become dead?**  
+A: Project is not dead and remains actively developed; current price performance is attributed to broader bear market conditions (answered by Odilitime)
 
-**Q: Could the metatool pattern work with providers?**  
-A: Possible but the delay might not be worth it, may need to implement eventually (answered by Odilitime)
+**Q: Can you see the xfn & milday rooms?**  
+A: I can see xfn but not milady (answered by shad0w, leading to Odilitime resolving the access issue)
 
-### Unanswered Questions
+**Q: Is this project similar to Babylon?**  
+A: No, the project is distinct (answered by ElizaBAO)
 
-- What are the budgets per project?
-- Is v2.0.0 still important given it's not listed as a priority project?
-- Are you and Shadow taking over cloud or what exactly?
+**Q: How to fix the role assignment issue?**  
+A: Resolved by adjusting permissions and manually granting room access (answered by Odilitime)
 
 ## Community Help & Collaboration
 
-**Stan ⚡ assisting Odilitime** - Offered to share optimization work around MCP loading and METATOOL search actions, suggesting moving the solution into the framework. While Odilitime identified his specific issue was with messages/reflections rather than actions, the collaboration demonstrated willingness to share technical solutions.
+**Helper:** Odilitime  
+**Helpee:** shad0w  
+**Context:** Role upgrade and room access permissions not working properly during administrative setup  
+**Resolution:** Successfully granted access to xfn and milady rooms after troubleshooting permission limits and adjusting Discord server settings
 
-**Odilitime assisting BinaryCookies** - Provided plugin recommendation for image generation, directing them to plugin-bootstrap which includes an image generation action.
-
-**Omid Sa assisting de_cryptkeeper** - Clarified community member status and warned about scam prevention, specifically advising not to trust DM links or open ticket links.
+**Helper:** Odilitime  
+**Helpee:** Amit gupta  
+**Context:** Community member concerned about project viability and token price stagnation  
+**Resolution:** Clarified project remains active with ongoing development, provided context about bear market conditions affecting price
 
 ## Action Items
 
 ### Technical
-
-- **Launch Agent Arena Duel Betting in Hyperscape v1 with 2% + 1% fees next week** - Mentioned by s
-- **Ramp Babylon from 1% to 100% user rollout and build crypto trading platform version** - Mentioned by s
-- **Complete Eliza App onboarding flow and billing to start charging customers** - Mentioned by s
-- **Ship Milady to drive users to Eliza Cloud for revenue** - Mentioned by s
-- **Integrate Eliza app with Babylon and Hyperscape after Milady ships** - Mentioned by s
-- **Build Jeju network for agents** - Mentioned by s
-- **Complete backend work with Shadow for workflow and full sandbox agent options** - Mentioned by s
-- **Investigate plugin-bootstrap for image generation action implementation** - Mentioned by BinaryCookies
+- **PumpFun hackathon submission completed** - Mentioned by ElizaBAO
 
 ### Feature
-
-- **Consider moving MCP loading and METATOOL search solution into framework** - Mentioned by Stan ⚡
+- **Test fomolt agentic trading platform CLI with Eliza agents** for token trading on Base blockchain - Mentioned by fido
+- **Provide feedback on fomolt platform** to improve utility for agent developers - Mentioned by fido
+- **Joint co-marketing opportunity** with degen and trader community - Mentioned by am
 
 ---
 
-*Note: This summary reflects a pivotal moment in the organization's direction, with a clear shift from development-focused activities to revenue-generating product launches. The emphasis on immediate shipping, budget constraints, and profitability indicates a critical phase in the company's evolution.*
+*Note: Activity levels were relatively low on February 24, 2026, with limited technical discussions. The primary focus was on community reassurance, administrative tasks, and introduction of new development tools.*
