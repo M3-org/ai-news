@@ -1,69 +1,79 @@
-# elizaOS Discord - 2026-02-24
+# elizaOS Discord - 2026-02-25
 
 ## Overall Discussion Highlights
 
-### Project Status and Community Concerns
+### Framework Analysis & Competition
 
-The community expressed concerns about ELIZAOS token price performance and project viability. Amit gupta questioned whether the project had stalled due to stagnant price action and lack of buyer growth. **Odilitime** clarified that the project remains actively developed, attributing current price performance to broader bear market conditions affecting the entire crypto space. This reassurance was important for community morale, though concerns about price-to-activity disconnect persisted.
+The team analyzed Nous Research's newly released **Hermes Agent framework**, which appears to be primarily Python-based (75%) and combines "zoey and openclaw" components. The only feature of interest identified was **trajectory compression for fitting training data into token budgets**. Contrary to initial speculation, the framework was developed primarily by Teknium without contributions from Roperito's Life Engine.
 
-### Development Activity
+In the partners channel, discussions touched on other frameworks experiencing price increases, with Odilitime suggesting that long-term performance (one year) is a better indicator of value than short-term price movements.
 
-**ElizaBAO** announced a submission to the **PumpFun hackathon**, representing tangible development progress. When questioned about similarities to Babylon, ElizaBAO clarified that the project is distinct and separate.
+### Critical Version Control Issues
 
-### New Tools and Platforms
+A significant **version control problem** emerged in the main repository where the develop branch unexpectedly contained 2.0.0 code instead of 1.x code. After investigation, Odilitime determined the issue couldn't be traced through normal PR or commit history and was "unfixable" through conventional means. The solution was to create a **v2-develop branch** to preserve 1.x code for users still in transition.
 
-**Fido** introduced **fomolt**, an agentic trading platform specifically designed for testing with Eliza agents. The platform features:
-- **CLI tool** for instant token trading on Base blockchain
-- **USDC for gas** with paymaster support for simplified transactions
-- **API key authentication** instead of traditional seedphrase management
-- Focus on streamlining the agent development and testing workflow
+An additional complication arose from **GitHub-Linear bidirectional synchronization** creating a "mess" in issue tracking that required cleanup.
 
-Fido actively solicited community feedback to improve the platform's utility for agent developers.
+### AI/LLM Applications in Hardware
 
-### Administrative and Access Management
+A brief but interesting technical discussion explored the use of **LLMs for hardware development**. Odilitime shared practical experience using LLMs for FPGA development and noted their application in 3D printing workflows, responding to speculation about using AI for custom CPU design and hardware fabrication.
 
-**Odilitime** performed administrative work upgrading **shad0w's** Discord roles and permissions. The process encountered technical limitations when attempting to assign the "core dev" role and add labs access to specific rooms. After troubleshooting, shad0w was successfully granted access to the xfn room and the milady room (channel ID 1475913823243210784), though manual channel addition was initially required.
+### Community Access & Administrative
 
-### Community Engagement
-
-The channels saw various service offerings including co-marketing proposals, NFT/design services, and fullstack development services. **The Void** hinted at upcoming developments with a cryptic message suggesting "Its gonna get spicy soon," though no technical details were provided.
+Multiple users requested and received access to the "milady room" channel, with Odilitime handling these administrative requests. There were also inquiries about Babylon-related opportunities, with 100 spaces available for submission.
 
 ## Key Questions & Answers
 
-**Q: Will ELIZAOS not be able to recover its price? Has the project become dead?**  
-A: Project is not dead and remains actively developed; current price performance is attributed to broader bear market conditions (answered by Odilitime)
+**Q: Anyone know about zERC20.io?**  
+A: Identified as an old protocol (answered by Futilitarianism)
 
-**Q: Can you see the xfn & milday rooms?**  
-A: I can see xfn but not milady (answered by shad0w, leading to Odilitime resolving the access issue)
+**Q: Do you think people will use LLMs to fabricate custom hardware like CPUs?**  
+A: Odilitime confirmed using LLMs for FPGAs and seeing them used for 3D printers (answered by Odilitime)
 
-**Q: Is this project similar to Babylon?**  
-A: No, the project is distinct (answered by ElizaBAO)
+**Q: Was Linear synced with GitHub for issues?**  
+A: Yes, both sides were synced bidirectionally (answered by Stan ⚡)
 
-**Q: How to fix the role assignment issue?**  
-A: Resolved by adjusting permissions and manually granting room access (answered by Odilitime)
+**Q: Can I get access to milady room?**  
+A: Access granted (answered by Odilitime to multiple users)
+
+### Unanswered Questions
+
+- How much of Roperito's life engine is in the Hermes agent framework?
+- Was putting 2.0.0 code in develop intentional?
+- When will new AI news be released?
+- When is the Babylon release?
 
 ## Community Help & Collaboration
 
-**Helper:** Odilitime  
-**Helpee:** shad0w  
-**Context:** Role upgrade and room access permissions not working properly during administrative setup  
-**Resolution:** Successfully granted access to xfn and milady rooms after troubleshooting permission limits and adjusting Discord server settings
+**Access Management**
+- **Odilitime** provided milady room access to both **Bill Ding** and **ElizaBAO**, handling administrative requests efficiently
 
-**Helper:** Odilitime  
-**Helpee:** Amit gupta  
-**Context:** Community member concerned about project viability and token price stagnation  
-**Resolution:** Clarified project remains active with ongoing development, provided context about bear market conditions affecting price
+**Protocol Identification**
+- **Futilitarianism** helped **ElizaBAO** identify zERC20.io as an old protocol
+
+**GitHub/Linear Sync Clarification**
+- **Stan ⚡** assisted **Odilitime** by confirming the bidirectional sync status between GitHub issues and Linear, acknowledging the cleanup needed
+
+**Babylon Participation**
+- **ElizaBAO** directed **Borderless** to the appropriate channel where 100 spaces were available for Babylon-related submissions
 
 ## Action Items
 
 ### Technical
-- **PumpFun hackathon submission completed** - Mentioned by ElizaBAO
+
+- **Create v2-develop branch** for 1.x code to support users in transition | Mentioned by: Odilitime
+- **Clean up GitHub/Linear issues synchronization mess** caused by bidirectional sync | Mentioned by: Stan ⚡
+- **Investigate trajectory compression feature** from Hermes Agent framework | Mentioned by: Odilitime
+- **Add comment to GitHub issue** elizaOS/eliza/issues/6443 | Mentioned by: Odilitime
+
+### Documentation
+
+- **Provide information about new AI news release schedule** | Mentioned by: ElizaBAO
 
 ### Feature
-- **Test fomolt agentic trading platform CLI with Eliza agents** for token trading on Base blockchain - Mentioned by fido
-- **Provide feedback on fomolt platform** to improve utility for agent developers - Mentioned by fido
-- **Joint co-marketing opportunity** with degen and trader community - Mentioned by am
+
+- **Babylon release timing needs clarification** | Mentioned by: Biazs
 
 ---
 
-*Note: Activity levels were relatively low on February 24, 2026, with limited technical discussions. The primary focus was on community reassurance, administrative tasks, and introduction of new development tools.*
+**Note:** This summary reflects a relatively quiet day in the Discord channels with limited deep technical discussions. The most significant activities centered around version control issues and framework analysis, with administrative tasks and brief technical exchanges comprising the remainder of the day's activity.
