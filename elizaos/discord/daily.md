@@ -1,79 +1,95 @@
-# elizaOS Discord - 2026-02-25
+# elizaOS Discord - 2026-02-26
 
 ## Overall Discussion Highlights
 
-### Framework Analysis & Competition
+### Technical Issues & Support
 
-The team analyzed Nous Research's newly released **Hermes Agent framework**, which appears to be primarily Python-based (75%) and combines "zoey and openclaw" components. The only feature of interest identified was **trajectory compression for fitting training data into token budgets**. Contrary to initial speculation, the framework was developed primarily by Teknium without contributions from Roperito's Life Engine.
+**Twitter Integration Problems**
+In the 💬-coders channel, Jamie reported encountering issues with Twitter input functionality. The problem remains unresolved as Odilitime requested clarification on which version and product was being used before troubleshooting could proceed.
 
-In the partners channel, discussions touched on other frameworks experiencing price increases, with Odilitime suggesting that long-term performance (one year) is a better indicator of value than short-term price movements.
+**Agent Development for Beginners**
+A beginner-friendly discussion emerged in 💬-discussion where Jamie sought help building an agent. Omid Sa provided initial guidance, directing them to install ElizaOS, review documentation, and utilize the dedicated help channel for specific questions.
 
-### Critical Version Control Issues
+### Repository & Bot Management
 
-A significant **version control problem** emerged in the main repository where the develop branch unexpectedly contained 2.0.0 code instead of 1.x code. After investigation, Odilitime determined the issue couldn't be traced through normal PR or commit history and was "unfixable" through conventional means. The solution was to create a **v2-develop branch** to preserve 1.x code for users still in transition.
+**Code Bot Organizational Behavior**
+In the xfn-framework channel, Odilitime raised questions about code bot behavior when working with organizational repositories, specifically whether the bot follows organizational accounts when used. This technical question regarding bot configuration and repository management remains unanswered.
 
-An additional complication arose from **GitHub-Linear bidirectional synchronization** creating a "mess" in issue tracking that required cleanup.
+### AI & Token Discussion
 
-### AI/LLM Applications in Hardware
+**AI16z Token Analysis**
+A brief exchange in 💬-discussion featured digitalalchemy's "clawd bot" identifying ai16z as the most interesting token in the AI sector. However, Odilitime noted that the models being referenced are outdated, suggesting the analysis may not reflect current market conditions.
 
-A brief but interesting technical discussion explored the use of **LLMs for hardware development**. Odilitime shared practical experience using LLMs for FPGA development and noted their application in 3D printing workflows, responding to speculation about using AI for custom CPU design and hardware fabrication.
+### Legal & Compliance Concerns
 
-### Community Access & Administrative
+**Hyperscape Project Legal Risks**
+A significant discussion emerged regarding the Hyperscape project (RuneScape-related) and potential legal challenges from Jagex, the owner of RuneScape. Error P015-A expressed concerns about investing time in the project if Jagex might shut it down. Odilitime acknowledged that Jagex has not yet responded to the project and highlighted the complexity created by the open-source nature of the project, which will result in multiple copies existing. Boj/acc downplayed concerns, stating that nobody is attempting to take over RuneScape itself.
 
-Multiple users requested and received access to the "milady room" channel, with Odilitime handling these administrative requests. There were also inquiries about Babylon-related opportunities, with 100 spaces available for submission.
+### Community Engagement
+
+**Developer Services Offered**
+User elgamer posted their technical credentials offering development services, listing expertise in:
+- Smart contracts, DeFi, and NFTs
+- Tech stack: React, Next.js, Python, TypeScript, Solidity, Rust, and Web3.js
 
 ## Key Questions & Answers
 
-**Q: Anyone know about zERC20.io?**  
-A: Identified as an old protocol (answered by Futilitarianism)
+**Q: Can someone help me build an agent? I'm still new to this.**
+- **Asked by:** Jamie (💬-discussion)
+- **Answered by:** Omid Sa
+- **Answer:** Start by installing ElizaOS and reading documentation, then ask questions in the development help channel.
 
-**Q: Do you think people will use LLMs to fabricate custom hardware like CPUs?**  
-A: Odilitime confirmed using LLMs for FPGAs and seeing them used for 3D printers (answered by Odilitime)
-
-**Q: Was Linear synced with GitHub for issues?**  
-A: Yes, both sides were synced bidirectionally (answered by Stan ⚡)
-
-**Q: Can I get access to milady room?**  
-A: Access granted (answered by Odilitime to multiple users)
+**Q: Do you think Runescape would let Hyperscape happen? What are the rules on that?**
+- **Asked by:** Error P015-A (💬-discussion)
+- **Answered by:** Odilitime
+- **Answer:** Jagex hasn't said anything yet, but it's a problem because it's open source and there will be several copies.
 
 ### Unanswered Questions
 
-- How much of Roperito's life engine is in the Hermes agent framework?
-- Was putting 2.0.0 code in develop intentional?
-- When will new AI news be released?
-- When is the Babylon release?
+- **For what version of which product?** (Odilitime in 💬-coders, regarding Twitter input issue)
+- **Does the code bot follow your org if you use it?** (Odilitime in xfn-framework)
+- **When does Babylon launch, and milady.ai?** (g in 💬-discussion)
 
 ## Community Help & Collaboration
 
-**Access Management**
-- **Odilitime** provided milady room access to both **Bill Ding** and **ElizaBAO**, handling administrative requests efficiently
+**Omid Sa → Jamie**
+- **Context:** Jamie needed help building an agent as a beginner
+- **Resolution:** Directed to install ElizaOS, read documentation, and use the dedicated help channel for questions
+- **Channel:** 💬-discussion
 
-**Protocol Identification**
-- **Futilitarianism** helped **ElizaBAO** identify zERC20.io as an old protocol
+**Odilitime → Error P015-A**
+- **Context:** Concerns about Jagex potentially shutting down Hyperscape project
+- **Resolution:** Provided information that Jagex hasn't responded and explained open-source distribution challenges
+- **Channel:** 💬-discussion
 
-**GitHub/Linear Sync Clarification**
-- **Stan ⚡** assisted **Odilitime** by confirming the bidirectional sync status between GitHub issues and Linear, acknowledging the cleanup needed
-
-**Babylon Participation**
-- **ElizaBAO** directed **Borderless** to the appropriate channel where 100 spaces were available for Babylon-related submissions
+**Odilitime → Jamie**
+- **Context:** Twitter input issue troubleshooting
+- **Resolution:** Requested clarification on version and product details; issue not yet resolved
+- **Channel:** 💬-coders
 
 ## Action Items
 
 ### Technical
 
-- **Create v2-develop branch** for 1.x code to support users in transition | Mentioned by: Odilitime
-- **Clean up GitHub/Linear issues synchronization mess** caused by bidirectional sync | Mentioned by: Stan ⚡
-- **Investigate trajectory compression feature** from Hermes Agent framework | Mentioned by: Odilitime
-- **Add comment to GitHub issue** elizaOS/eliza/issues/6443 | Mentioned by: Odilitime
+- **Investigate and resolve Twitter input issue** once version and product details are provided
+  - **Mentioned by:** Jamie (💬-coders)
 
-### Documentation
+- **Investigate code bot behavior** regarding organizational repository following
+  - **Mentioned by:** Odilitime (xfn-framework)
 
-- **Provide information about new AI news release schedule** | Mentioned by: ElizaBAO
+- **Investigate Jagex's position** on Hyperscape project to assess legal risks
+  - **Mentioned by:** Error P015-A (💬-discussion)
 
 ### Feature
 
-- **Babylon release timing needs clarification** | Mentioned by: Biazs
+- **Build an agent** (beginner seeking collaboration and learning)
+  - **Mentioned by:** Jamie (💬-discussion)
 
 ---
 
-**Note:** This summary reflects a relatively quiet day in the Discord channels with limited deep technical discussions. The most significant activities centered around version control issues and framework analysis, with administrative tasks and brief technical exchanges comprising the remainder of the day's activity.
+**Summary Statistics:**
+- **Total Channels Analyzed:** 3
+- **Active Technical Discussions:** 5
+- **Help Interactions:** 3
+- **Unanswered Questions:** 3
+- **Total Action Items:** 4
