@@ -1,17 +1,17 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-02-26 to 2026-03-04",
-  "weekOf": "2026-02-26",
+  "title": "elizaOS Weekly Summary - 2026-02-27 to 2026-03-05",
+  "weekOf": "2026-02-27",
   "dateRange": {
-    "start": "2026-02-26",
-    "end": "2026-03-04"
+    "start": "2026-02-27",
+    "end": "2026-03-05"
   },
-  "generatedAt": 1772672854,
+  "generatedAt": 1772759479,
   "stats": {
-    "totalMessages": 351,
-    "totalUsers": 108,
-    "averageMessagesPerDay": 50,
+    "totalMessages": 341,
+    "totalUsers": 113,
+    "averageMessagesPerDay": 49,
     "activeDays": 7,
     "peakDay": {
       "date": "2026-03-02",
@@ -21,58 +21,26 @@
   "channelSummary": {
     "1300025221834739744": {
       "name": "💬-coders",
-      "totalMessages": 78,
+      "totalMessages": 83,
       "daysActive": 7
     },
     "1377726087789940836": {
       "name": "xfn-framework",
-      "totalMessages": 11,
-      "daysActive": 4
+      "totalMessages": 6,
+      "daysActive": 3
     },
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 247,
+      "totalMessages": 236,
       "daysActive": 7
     },
     "1301363808421543988": {
       "name": "🥇-partners",
-      "totalMessages": 15,
-      "daysActive": 1
+      "totalMessages": 16,
+      "daysActive": 2
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-02-26",
-      "date": 1772064000,
-      "stats": {
-        "totalMessages": 45,
-        "totalUsers": 17
-      },
-      "categories": [
-        {
-          "channelId": "1300025221834739744",
-          "channelName": "💬-coders",
-          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe chat segment shows minimal technical discussion. Jamie reported encountering an issue with Twitter input functionality but did not provide specific details about the error, implementation context, or what they had already tried. Odilitime responded seeking clarification about which version and product Jamie was referring to, indicating the need for more context to diagnose the problem. Futilitarianism provided a casual greeting but did not contribute to the technical discussion. No solutions were implemented or decisions made during this brief exchange, as the conversation appears to be in the initial problem-reporting phase without sufficient detail for troubleshooting.\n\n## 2. FAQ\n\nQ: For what version of which product? (asked by Odilitime) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: Odilitime | Helpee: Jamie | Context: Twitter input issue | Resolution: Requested clarification on version and product details; issue not yet resolved\n\n## 4. Action Items\n\nType: Technical | Description: Investigate and resolve Twitter input issue once version and product details are provided | Mentioned By: Jamie",
-          "messageCount": 3,
-          "userCount": 3
-        },
-        {
-          "channelId": "1377726087789940836",
-          "channelName": "xfn-framework",
-          "summary": "# Analysis of #xfn-framework Discord Chat\n\n## 1. Summary\n\nThis chat segment contains minimal technical discussion. The conversation consists of brief, fragmented exchanges that lack substantial technical content. Odilitime mentions a \"new fork\" and questions whether \"the code bot follow your org if you use it,\" suggesting a potential discussion about repository forking and bot behavior in organizational contexts. However, no concrete answers, solutions, or implementations are provided in this segment. The other messages are acknowledgments or brief statements without technical context. This appears to be either casual conversation or the beginning of a discussion that may have continued elsewhere or at a later time.\n\n## 2. FAQ\n\nQ: Does the code bot follow your org if you use it? (asked by Odilitime) A: Unanswered\n\n## 3. Help Interactions\n\nNone identified in this chat segment.\n\n## 4. Action Items\n\nType: Technical | Description: Investigate code bot behavior regarding organizational repository following | Mentioned By: Odilitime",
-          "messageCount": 5,
-          "userCount": 3
-        },
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion channel featured minimal technical content, primarily consisting of general community interactions and greetings. The most substantive technical exchange involved Jamie seeking help to build an agent while acknowledging being a beginner. Omid Sa provided guidance by directing Jamie to install ElizaOS and read documentation, then ask questions in a dedicated help channel.\n\nA brief discussion emerged about ai16z token, with digitalalchemy mentioning their \"clawd bot\" identifies ai16z as the most interesting token in the AI sector, though Odilitime noted models are outdated.\n\nThe most extended conversation centered on Hyperscape (apparently a RuneScape-related project) and potential legal concerns. Error P015-A raised questions about whether Jagex (RuneScape's owner) would allow Hyperscape to proceed, expressing concern about time investment if the company shuts it down. Odilitime acknowledged Jagex hasn't responded yet and noted the open-source nature creates challenges since multiple copies will exist. Boj/acc dismissed concerns, stating nobody is taking over RuneScape.\n\nOne user (elgamer) posted their technical credentials offering development services, listing expertise in smart contracts, DeFi, NFTs, and a tech stack including React, Next.js, Python, TypeScript, Solidity, Rust, and Web3.js.\n\nOverall, the channel showed limited technical problem-solving, with most messages being introductions, greetings, or off-topic commentary.\n\n## 2. FAQ\n\nQ: Can someone help me build an agent? I'm still new to this. (asked by Jamie) A: Start by installing ElizaOS and reading documentation, then ask questions in the development help channel. (answered by Omid Sa)\n\nQ: When does Babylon launch, and milady.ai? (asked by g) A: Unanswered\n\nQ: Do you think Runescape would let Hyperscape happen? What are the rules on that? (asked by Error P015-A) A: Jagex hasn't said anything yet, but it's a problem because it's open source and there will be several copies. (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Omid Sa | Helpee: Jamie | Context: Jamie needed help building an agent as a beginner | Resolution: Directed to install ElizaOS, read documentation, and use the dedicated help channel for questions\n\nHelper: Odilitime | Helpee: Error P015-A | Context: Concerns about Jagex potentially shutting down Hyperscape project | Resolution: Provided information that Jagex hasn't responded and explained open-source distribution challenges\n\n## 4. Action Items\n\nType: Feature | Description: Build an agent (beginner seeking collaboration and learning) | Mentioned By: Jamie\n\nType: Technical | Description: Investigate Jagex's position on Hyperscape project to assess legal risks | Mentioned By: Error P015-A",
-          "messageCount": 37,
-          "userCount": 15
-        }
-      ]
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-02-27",
@@ -248,6 +216,38 @@
           "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion centered primarily around token performance concerns and competitive positioning rather than technical development. Key topics included:\n\n**Token Performance & Market Sentiment**: Multiple participants expressed frustration with ai16z token performance. DorianD reported negative feedback from millionaires at a Chinese New Year party who mentioned losses of 99% on their investments. The community discussed competition from projects like Venice, Morpheus, and Gonka that have more structured tokenomics.\n\n**Ruby Token Discussion**: Significant speculation about $ruby token, which was up 65%. Diamondhandwhiteboy suggested something was \"cooking behind the scenes\" and asked if Ruby would be featured at Jeju. Odilitime clarified that Ruby is NOT a labs project, not an official token, and they have no plans to develop it, despite Shaw owning the Ruby IP. The community noted Ruby has a strong fan base and DegenAI whales are holding it.\n\n**Competitive Landscape**: DorianD highlighted Venice's success with \"a couple million dollars in inference spend\" and noted Venice was included as a default LLM API option during openclaw install. Discussion touched on the need for agents that scan GitHub and submit PRs to include API services in their menus.\n\n**ElizaOK Tokenomics**: Skinny praised ElizaOK's tokenomics where fees flow back to leading contributors, calling the leaderboard \"engaging.\"\n\n**OTC Trading**: Arkantos inquired about OTC/P2P possibilities to avoid slippage on large token purchases.\n\n**Project Recovery**: Community discussed whether the project can recover, with mentions that Babylon chain was promised \"a couple weeks from release\" since December. Mat suggested attaching value to the token could cause the project to \"skyrocket again.\"\n\n## 2. FAQ\n\nQ: What's the official CA of old ai16z? (asked by BloodOak Founder) A: Unanswered\n\nQ: Are there any OTC/P2P possibilities to avoid slippage on large token purchases? (asked by Arkantos) A: Alexei asked how much they wanted to buy but no complete answer provided (answered by Alexei)\n\nQ: Is something cooking with $ruby? (asked by Diamondhandwhiteboy) A: Ruby is not a labs project, not an official token, and we have no plans to develop it (answered by Odilitime)\n\nQ: Will Ruby be featured in Jeju? (asked by Diamondhandwhiteboy) A: Unanswered\n\nQ: Does Shaw owning Ruby IP make it technically a labs project? (asked by Diamondhandwhiteboy) A: That doesn't mean what you're implying. It's not a labs project, not an official token, we have no plans to develop it (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Odilitime | Helpee: Diamondhandwhiteboy | Context: Confusion about Ruby token's official status and relationship to labs | Resolution: Clarified that Ruby is not a labs project despite Shaw owning the IP, and there are no plans to develop it\n\nHelper: Odilitime | Helpee: General community | Context: Off-topic Ruby discussion in main channel | Resolution: Redirected Ruby discussion to appropriate channel\n\n## 4. Action Items\n\nType: Feature | Description: Attach some kind of value to the ai16z token to restore project momentum | Mentioned By: mat\n\nType: Technical | Description: Release Babylon chain (delayed since December promise of \"couple weeks\") | Mentioned By: Biazs\n\nType: Technical | Description: Develop agents that scan GitHub and submit PRs to include API services as default options | Mentioned By: DorianD",
           "messageCount": 71,
           "userCount": 15
+        }
+      ]
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-03-05",
+      "date": 1772668800,
+      "stats": {
+        "totalMessages": 35,
+        "totalUsers": 22
+      },
+      "categories": [
+        {
+          "channelId": "1301363808421543988",
+          "channelName": "🥇-partners",
+          "summary": "# Discord Channel Analysis: 🥇-partners\n\n## 1. Summary\n\nThe chat segment contains minimal activity with only a single message from Odilitime sharing a link to fixupx.com pointing to content from 11amdotclub. No technical discussions, decisions, or problem-solving occurred in this segment. There were no implementations, solutions, or substantive conversations to analyze. The channel appears to be for partner-related content sharing, but this particular segment lacks any meaningful technical discourse or collaborative interaction.\n\n## 2. FAQ\n\nNo meaningful questions or answers were present in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nNo action items were identified in this chat segment.",
+          "messageCount": 1,
+          "userCount": 1
+        },
+        {
+          "channelId": "1300025221834739744",
+          "channelName": "💬-coders",
+          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe channel had minimal technical discussion during this period. The most significant technical contribution was from **Stan ⚡**, who described working on an autoscaling infrastructure solution for Eliza agents. This system is designed as a universal deployment platform that automatically provisions agents with multi-channel support (WhatsApp, Telegram, SMS) and scales resources dynamically based on demand. The architecture aims to be agent-agnostic, providing a reusable foundation for any Eliza agent deployment rather than being tied to specific implementations.\n\n**wlt.vibe 🧩** submitted their first pull request to the elizaOS repository, specifically a documentation fix to the readme file. **Stan ⚡** acknowledged the PR and confirmed it would be reviewed.\n\nThe remaining messages were non-technical, including general greetings and two spam/scam messages from **Ken** and **REAL GUY** soliciting crypto partnerships and wallet purchases respectively.\n\n## 2. FAQ\n\nQ: How's today server going? (asked by $cott) A: Fine (answered by Stan ⚡)\n\nQ: What's cooking for the day, got new targets? (asked by $cott) A: Working on an autoscaling solution for agents on the cloud - a universal solution where any Eliza agent can spin up with full support for WhatsApp, Telegram, SMS, all clients out of the box with automatic scaling based on demand (answered by Stan ⚡)\n\n## 3. Help Interactions\n\nHelper: Stan ⚡ | Helpee: wlt.vibe 🧩 | Context: First PR submission to elizaOS repo for readme documentation fix | Resolution: Acknowledged PR and confirmed it will be reviewed\n\n## 4. Action Items\n\nType: Technical | Description: Build universal autoscaling solution for Eliza agents with multi-client support (WhatsApp, Telegram, SMS) and automatic demand-based scaling | Mentioned By: Stan ⚡\n\nType: Documentation | Description: Review and merge PR for readme fix submitted to elizaOS repository | Mentioned By: Stan ⚡",
+          "messageCount": 8,
+          "userCount": 5
+        },
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion centered around two main technical topics: AI town development and token migration issues.\n\n**AI Town Development**: StevanusDennis shared an AI town project called Aivilization. Odilitime mentioned that Cayden was working on \"elizatown,\" a similar concept. MDMnvest suggested creating a Babylon-themed town where users could explore to find alpha, indicating interest in expanding this concept within the ElizaOS ecosystem.\n\n**Token Migration Crisis**: A critical issue emerged regarding the ai16z to elizaOS token migration. supreme_joker requested help migrating tokens after the 90-day deadline, highlighting a significant problem for late participants. Odilitime acknowledged the complexity of the situation, noting that some users had already sold their ai16z tokens before learning about the migration. The team discussed creating a list to track affected users and determine eligibility based on token holdings at the time of the snapshot. Not Magicyte suggested that governance should be based on tokens physically held at the snapshot time to resolve the issue fairly.\n\n**Market Observation**: Alexei noted that elizaOS had exhibited stablecoin-like price behavior for the past 10 days, representing a pattern change in market dynamics.\n\nThe chat also included several social interactions, new member welcomes, and a scam link warning from Mylord.eth.\n\n## 2. FAQ\n\nQ: What happens to token holdings during migration? (asked by crypto kid) A: Unanswered directly, but later discussion addressed migration concerns\n\nQ: Is there a way to migrate ai16z tokens to elizaOS after the 90-day deadline? (asked by supreme_joker) A: Under discussion; Odilitime is creating a list to address late migrations (answered by Odilitime)\n\nQ: How should governance work for users who sold ai16z before migration? (asked by Odilitime) A: Should be governed by tokens physically held at time of snapshot (answered by Not Magicyte)\n\n## 3. Help Interactions\n\nHelper: Mylord.eth | Helpee: Community | Context: Scam link posted in chat | Resolution: Warning issued to alert members\n\nHelper: val | Will not DM1st | Helpee: crypto kid | Context: Question about token holdings | Resolution: Attempted to gather more information about the issue\n\nHelper: Odilitime | Helpee: supreme_joker and late migrators | Context: Token migration past 90-day deadline | Resolution: Committed to creating a list to track and potentially assist affected users\n\nHelper: Rodriguez YL. | Helpee: ashleytonerc | Context: New member welcome | Resolution: Welcomed new member to community\n\n## 4. Action Items\n\nType: Technical | Description: Create list of users affected by late ai16z to elizaOS token migration | Mentioned By: Odilitime\n\nType: Technical | Description: Determine eligibility criteria for late token migration based on snapshot holdings | Mentioned By: Not Magicyte\n\nType: Feature | Description: Develop Babylon-themed AI town where users can explore to find alpha | Mentioned By: MDMnvest\n\nType: Technical | Description: Continue development of elizatown project | Mentioned By: Odilitime",
+          "messageCount": 26,
+          "userCount": 18
         }
       ]
     }
