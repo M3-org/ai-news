@@ -970,11 +970,11 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           }
         };
 
+        // Save immediately so data survives Ctrl+C between channels.
+        // saveContentItems uses upsert, so re-runs won't duplicate.
+        await this.storage.saveContentItems([contentItem]);
         if (rawData.messages.length > 0) {
           items.push(contentItem);
-        } else {
-          // Store empty marker so we don't refetch this channel+date on subsequent runs
-          await this.storage.saveContentItems([contentItem]);
         }
 
         // Update channel registry with channel metadata and activity
