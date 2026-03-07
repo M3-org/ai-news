@@ -4,190 +4,131 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AI News Aggregator is a modular TypeScript system that collects, enriches, and analyzes AI-related content from multiple sources using a plugin architecture.
+AI News Aggregator is a modular TypeScript system that collects, enriches, and analyzes AI-related content from multiple sources using a plugin architecture. Each Discord server gets its own config file, SQLite database, and output directories.
 
 ## Common Commands
 
-### Main Application
 ```bash
-# Build and run production
-npm run build && npm start
-
-# Development mode
-npm run dev
-
-# Historical data collection
-npm run historical
-
-# Run with specific configuration
-npm start -- --source=discord-raw.json --output=./custom-output
-
-# Historical data for date range
-npm run historical -- --source=elizaos.json --after=2024-01-10 --before=2024-01-16
-
-# Channel discovery
-npm run discover-channels
-
-# Update configs from checklist
-npm run update-configs
-
-# User identity workflow (recommended order)
-npm run build-user-index                                # 1. Build global user index
-npm run fetch-avatars -- --update-index                 # 2. Generate avatar URLs and update index
-npm run enrich-nicknames -- --all --use-index          # 3. Enrich all JSONs from index (fast!)
-
-# Alternative: Enrich without building index first (slower, queries DB each time)
-npm run enrich-nicknames -- --date=2026-01-12           # Single date from DB
-npm run enrich-nicknames -- --from=2026-01-01 --to=2026-01-12  # Date range from DB
-npm run enrich-nicknames -- --all                       # All JSON files from DB
-npm run enrich-nicknames -- --all --dry-run            # Preview without writing
-
-# Build/rebuild user index
-npm run build-user-index                                # Generate data/discord/user-index.json
-npm run build-user-index -- --output=./custom.json     # Custom output path
-npm run build-user-index -- --dry-run                  # Preview without writing
-```
-
-### HTML Frontend (in html/ directory)
-```bash
-# Development server
-npm run dev
-
-# Build for production
+# Build (pre-existing type errors in DiscordRawDataSource.ts are expected)
 npm run build
 
-# Type checking
-npm run check
+# Run with default config (config/sources.json)
+npm start
 
-# Database operations
-npm run db:push
-```
-
-### AutoDoc (in autodoc/ directory)
-```bash
-# Generate documentation
-npm run autodoc
+# Run with specific server config
+npm start -- --source=elizaos.json
 
 # Development mode
-npm run autodoc:dev
+npm run dev
 
-# Formatting
-npm run lint && npm run format
+# Historical data for a date range
+npm run historical -- --source=elizaos.json --after=2024-01-10 --before=2024-01-16
+
+# Modes: --onlyFetch (skip AI), --onlyGenerate (process existing data)
+npm run historical -- --source=elizaos.json --onlyFetch
+
+# Channel management CLI
+npm run channels -- discover
+npm run channels -- analyze
+npm run channels -- propose
+npm run channels -- list [--tracked|--active|--muted]
+npm run channels -- stats
+
+# User management CLI
+npm run users -- index                          # Build user index from raw logs
+npm run users -- fetch-avatars --skip-existing  # Fetch avatars from Discord API
+npm run users -- download-avatars               # Download avatar images locally
+npm run users -- build-registry                 # Build discord_users table
+npm run users -- enrich --all                   # Enrich daily JSONs with nickname maps
+
+# Nickname enrichment (legacy script, file may not exist)
+npm run enrich-nicknames -- --all --use-index
+
+# Server onboarding wizard
+npm run setup
+
+# Media operations
+npm run download-media -- --date=2024-01-15
+npm run upload-cdn -- --dir ./media/ --remote elizaos-media/
 ```
+
+Both `channels` and `users` CLIs support `--source=<config>.json` to target a specific server.
 
 ## Architecture
 
 ### Plugin System
-The system uses five plugin types:
-- **Sources** (`src/plugins/sources/`) - Data collection (Discord, GitHub, APIs)
-- **AI Providers** (`src/plugins/ai/`) - OpenAI/OpenRouter integration
-- **Enrichers** (`src/plugins/enrichers/`) - Content enhancement (topics, images)
-- **Generators** (`src/plugins/generators/`) - Summary generation
-- **Storage** (`src/plugins/storage/`) - SQLite with encryption
 
-### Core Components
-- **ContentAggregator** (`src/aggregator/ContentAggregator.ts`) - Main orchestration engine
-- **HistoricalAggregator** (`src/aggregator/HistoricalAggregator.ts`) - Historical data processing
-- **Types** (`src/types.ts`) - Comprehensive type definitions including plugin interfaces
+Five plugin types in `src/plugins/`, dynamically loaded via `src/helpers/configHelper.ts`:
+
+| Type | Directory | Interface | Purpose |
+|------|-----------|-----------|---------|
+| Sources | `sources/` | `SourcePlugin` | Data collection (Discord, GitHub, APIs) |
+| AI | `ai/` | `AiProvider` | OpenAI/OpenRouter wrappers, injected into other plugins |
+| Enrichers | `enrichers/` | `EnricherPlugin` | Content enhancement (topics, images, memes) |
+| Generators | `generators/` | Generator | Summary generation (daily, Discord channel) |
+| Storage | `storage/` | `StoragePlugin` | SQLite persistence with optional encryption |
+
+### Core Flow
+
+1. `src/index.ts` — Main entry: loads config, initializes plugins, schedules fetch/generate cycles
+2. `ContentAggregator` — Orchestrates: source → enricher → storage → generator pipeline
+3. `HistoricalAggregator` — Same pipeline but for past dates/ranges
+4. All types defined in `src/types.ts`
+
+### Path Aliases (tsconfig)
+
+```
+@helpers/*  → src/helpers/*
+@types      → src/types
+@plugins/*  → src/plugins/*
+@aggregator/* → src/aggregator/*
+```
+
+Scripts use `ts-node -r tsconfig-paths/register --transpile-only` to resolve these.
 
 ### Configuration
-JSON configuration files in `config/` directory:
-- `sources.json` - Default configuration
-- `elizaos2.json` - Unified ElizaOS configuration (Discord + GitHub + Codex analytics)
-- `hyperfy-discord.json` - Specialized configuration for Hyperfy Discord
 
-Each config contains: `settings`, `sources`, `ai`, `enrichers`, `storage`, `generators` arrays.
+JSON config files in `config/` define the full pipeline per server:
+
+- `sources.json` — Default
+- `elizaos.json` — ElizaOS Discord + GitHub + Codex analytics (`DISCORD_TOKEN` / `DISCORD_GUILD_ID`)
+- `hyperfy-discord.json` — Hyperfy Discord (`HYPERFY_DISCORD_TOKEN` / `HYPERFY_DISCORD_GUILD_ID`)
+- `m3org.json` — M3 org (`DISCORD_TOKEN` / `M3ORG_DISCORD_GUILD_ID`)
+
+Each config contains: `settings`, `sources`, `ai`, `enrichers`, `storage`, `generators` arrays. Bot tokens and guild IDs are referenced as `process.env.*` strings in JSON and resolved at runtime.
+
+No hardcoded config lists — scripts scan all `config/*.json` files dynamically.
 
 ### Environment Variables
-Required in `.env`: `DISCORD_TOKEN`, `DISCORD_GUILD_ID`, `OPENAI_API_KEY`, `USE_OPENROUTER`, `CODEX_API_KEY`
 
-## Data Sources
-- Discord (raw messages, channels, announcements)
-- GitHub (stats, general data)
-- Crypto analytics (Codex, CoinGecko, Solana)
-- Generic REST APIs
+Required in `.env`: `DISCORD_TOKEN`, `DISCORD_GUILD_ID`, `OPENAI_API_KEY`, `USE_OPENROUTER`
 
-## Development Structure
-```
-src/
-├── aggregator/     # Core engines
-├── plugins/        # All plugin implementations
-├── helpers/        # Utilities (cache, config, date, file, prompt)
-└── types.ts        # Type definitions
-```
+Optional: `CODEX_API_KEY`, `HYPERFY_DISCORD_TOKEN`, `HYPERFY_DISCORD_GUILD_ID`, `M3ORG_DISCORD_GUILD_ID`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_CDN_URL`, `OPENAI_DIRECT_KEY` (for image gen when using OpenRouter)
 
-The system supports specialized modes: `--onlyFetch` (no AI processing), `--onlyGenerate` (process existing data), and configurable output directories.
+### GitHub Actions Workflows
 
-## Channel Management System
+- `elizaos.yml` / `hyperfy.yml` — Daily data collection and summary generation
+- `channel-update.yml` — Monthly channel analysis, creates draft PRs
+- `deploy-media-collection.yml` — Webhook-triggered media collection on VPS
+- `media-cdn.yml` — Daily CDN upload of media files
+- `jsdoc-automation.yml` — Documentation generation
 
-Unified TypeScript CLI (`scripts/channels.ts`) for Discord channel discovery and management:
+### Data Sources
 
-```bash
-# Discovery & Analysis
-npm run channels -- discover                # Fetch channels from Discord (or raw data if no token)
-npm run channels -- analyze                 # Run LLM analysis on channels needing it
-npm run channels -- analyze --all           # Re-analyze all channels
-npm run channels -- analyze --channel=ID    # Analyze single channel
-npm run channels -- propose                 # Generate PR markdown with config changes
+- Discord: `DiscordRawDataSource`, `DiscordChannelSource`, `DiscordAnnouncementSource`
+- GitHub: `GitHubStatsDataSource`, `GitHubDataSource`, `GitHubSummaryDataSource`
+- Crypto: `CodexAnalyticsSource`, `CoinGeckoAnalyticsSource`, `SolanaAnalyticsSource`
+- Generic: `ApiSource`
 
-# Query Commands
-npm run channels -- list [--tracked|--active|--muted|--quiet]
-npm run channels -- show <channelId>
-npm run channels -- stats
+### User Identity System
 
-# Management Commands
-npm run channels -- track <channelId>
-npm run channels -- untrack <channelId>
-npm run channels -- mute <channelId>
-npm run channels -- unmute <channelId>
+The `scripts/users.ts` CLI manages Discord user identity across servers:
+- Builds a `discord_users` table from raw Discord logs via `DiscordUserRegistry`
+- Tracks nickname history with temporal correctness (date ranges per nickname)
+- Enriches daily summary JSONs with `nicknameMap` for data visualization
+- Resolves nickname conflicts using role hierarchy and message count
+- Generates avatar URLs (default Discord avatars calculated from user ID)
 
-# Registry Commands
-npm run channels -- build-registry          # Backfill from discordRawData
-```
+### Storage Layer
 
-### Workflow
-```bash
-npm run channels -- discover   # Fetch channels
-npm run channels -- analyze    # Run LLM analysis (TRACK/MAYBE/SKIP)
-npm run channels -- propose    # Generate PR markdown
-```
-
-### Data Storage
-- **DiscordChannelRegistry** (`src/plugins/storage/DiscordChannelRegistry.ts`) - SQLite table for channel metadata
-- Tracks: name/topic/category changes, activity history, AI recommendations, muted state
-- GitHub Action runs monthly to analyze channels and create draft PRs
-
-## User Identity Systems
-
-### Nickname to Username Mapping
-Enriches Discord summary JSON files with nickname-to-username mappings for data visualization and analytics:
-- **Purpose**: Maps human-readable Discord nicknames (e.g., "Shaw", "jin") to Discord user IDs and usernames for programmatic analysis
-- **Data Source**: Can use either raw Discord logs from SQLite (slower) or global user index (faster, recommended)
-- **Temporal Correctness**: When using `--use-index`, maps the correct nickname for each specific date (e.g., "The Light" on 2025-12-15 vs "The Void" on 2026-01-11 for same user)
-- **Deterministic Matching**: Uses raw log user dictionaries for fast, reliable mapping without LLM overhead
-- **Conflict Resolution**: Handles duplicate nicknames using role hierarchy (God > Partner > Core Dev > Contributor > Verified) and message count
-- **Adversarial Protection**: Validates nicknames for common words, special characters, and potential injection patterns
-- **Output Format**: Adds top-level `nicknameMap` field to each JSON with structure: `{"nickname": {"id": "snowflake", "username": "user", "roles": [...]}}`
-- **Safety Documentation**: See `scripts/NICKNAME-MAPPING-SAFETY.md` for adversarial risks and safe usage patterns
-- **Validation Warnings**: Reports risky nicknames (short names, special chars, security risks) during enrichment
-
-### Global User Index
-Builds a comprehensive user index tracking Discord users, their nickname history, and activity patterns:
-- **Purpose**: Single source of truth for all Discord users with complete nickname change history across time
-- **Output**: `data/discord/user-index.json` containing all users keyed by Discord snowflake ID
-- **Nickname History**: Tracks when users changed nicknames with exact date ranges for each nickname period
-- **User Profile**: Each user includes username, current displayName, roles (union of all roles ever seen), first/last seen dates, total message count, and per-channel activity
-- **Nickname Index**: Reverse lookup from nickname to user IDs - identifies conflicts where multiple users share the same nickname
-- **Avatar URLs**: Populated with default Discord avatars calculated from user IDs (6 possible default avatars distributed evenly)
-- **Statistics**: Reports total users (2844+), unique nicknames (2917+), conflicting nicknames (35+), and users who changed nicknames (94+)
-- **Use Case**: Data visualization applications can use this as primary data source, querying by user ID for consistent identity across nickname changes
-
-### Avatar URL Generation
-Generates Discord avatar URLs for all users without requiring API calls:
-- **Default Avatars**: Calculates which default avatar each user has based on their Discord user ID using formula `(user_id >> 22) % 6`
-- **Output Files**:
-  - `data/discord/avatars.json` - Full data with user info and avatar URLs (601KB)
-  - `data/discord/avatars-urls.txt` - Plain text list of URLs, one per line (easy to copy)
-- **Distribution**: Discord's 6 default avatars are evenly distributed (~16-17% each)
-- **Update Index**: Use `--update-index` flag to populate `avatarUrl` field in user-index.json
-- **Custom Avatars**: For actual custom avatars, would need to fetch from Discord API with bot token to get avatar hashes
+`SQLiteStorage` handles content and summaries. `DiscordChannelRegistry` tracks channel metadata (name/topic changes, activity, AI recommendations, muted state). `DiscordUserRegistry` tracks user profiles and nickname history.

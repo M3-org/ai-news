@@ -23,7 +23,7 @@ import {
 } from "./helpers/configHelper";
 import { addOneDay, parseDate, formatDate, callbackDateRangeLogic } from "./helpers/dateHelper";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 /**
  * Type guard to check if a source supports media downloading
@@ -74,8 +74,10 @@ Options:
   --before=<YYYY-MM-DD> End date for a range.
   --after=<YYYY-MM-DD>  Start date for a range.
   --during=<YYYY-MM-DD> Alias for --date.
-  --onlyFetch           Only fetch data, do not generate summaries.
-  --onlyGenerate        Only generate summaries from existing data, do not fetch.
+  --only-fetch          Only fetch data, do not generate summaries.
+  --only-generate       Only generate summaries from existing data, do not fetch.
+  --onlyFetch           Legacy alias for --only-fetch.
+  --onlyGenerate        Legacy alias for --only-generate.
   --download-media      Download Discord media after data collection (default: false).
   --generate-manifest   Generate media manifest JSON for VPS downloads (default: false).
   --manifest-output=<path> Output path for manifest file (default: <output>/media-manifest.json).
@@ -90,13 +92,23 @@ Options:
         sourceFile = arg.split('=')[1];
       } else if (arg.startsWith('--date=')) {
         dateStr = arg.split('=')[1];
-      } else if (arg === '--onlyGenerate' || arg === '--onlyGenerate=true') {
+      } else if (
+        arg === '--onlyGenerate' ||
+        arg === '--onlyGenerate=true' ||
+        arg === '--only-generate' ||
+        arg === '--only-generate=true'
+      ) {
         onlyGenerate = true;
-      } else if (arg === '--onlyGenerate=false') {
+      } else if (arg === '--onlyGenerate=false' || arg === '--only-generate=false') {
         onlyGenerate = false;
-      } else if (arg === '--onlyFetch' || arg === '--onlyFetch=true') {
+      } else if (
+        arg === '--onlyFetch' ||
+        arg === '--onlyFetch=true' ||
+        arg === '--only-fetch' ||
+        arg === '--only-fetch=true'
+      ) {
         onlyFetch = true;
-      } else if (arg === '--onlyFetch=false') {
+      } else if (arg === '--onlyFetch=false' || arg === '--only-fetch=false') {
         onlyFetch = false;
       } else if (arg === '--download-media' || arg === '--download-media=true') {
         downloadMedia = true;
