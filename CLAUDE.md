@@ -33,6 +33,7 @@ npm run channels -- analyze
 npm run channels -- propose
 npm run channels -- list [--tracked|--active|--muted]
 npm run channels -- stats
+npm run channels -- reset-unavailable
 
 # User management CLI
 npm run users -- index                          # Build user index from raw logs
@@ -103,7 +104,7 @@ No hardcoded config lists — scripts scan all `config/*.json` files dynamically
 
 Required in `.env`: `DISCORD_TOKEN`, `DISCORD_GUILD_ID`, `OPENAI_API_KEY`, `USE_OPENROUTER`
 
-Optional: `CODEX_API_KEY`, `HYPERFY_DISCORD_TOKEN`, `HYPERFY_DISCORD_GUILD_ID`, `M3ORG_DISCORD_GUILD_ID`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_CDN_URL`, `OPENAI_DIRECT_KEY` (for image gen when using OpenRouter)
+Optional: `CODEX_API_KEY`, `HYPERFY_DISCORD_TOKEN`, `HYPERFY_DISCORD_GUILD_ID`, `M3ORG_DISCORD_GUILD_ID`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_CDN_URL`, `OPENAI_DIRECT_KEY` (for image gen when using OpenRouter), `CHANNEL_CONCURRENCY` (default: 2, concurrent channel fetches), `FORCE_OVERWRITE` (refetch existing data if `true`)
 
 ### GitHub Actions Workflows
 

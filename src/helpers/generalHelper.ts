@@ -81,9 +81,35 @@ export const isValidArray = (value: any): value is any[] => {
 };
 
 /**
+ * Classifies Discord API errors as permanent or transient.
+ * Inspired by discrawl's error handling — permanent errors (Missing Access,
+ * Unknown Channel) should not be retried, while transient errors (rate limits,
+ * server errors) should be retried with backoff.
+ */
+export function classifyDiscordError(error: unknown): { isPermanent: boolean; reason: string } {
+  const message = error instanceof Error ? error.message.toLowerCase() : String(error).toLowerCase();
+
+  if (message.includes('missing access') || message.includes('missing permissions')) {
+    return { isPermanent: true, reason: 'missing_access' };
+  }
+  if (message.includes('unknown channel')) {
+    return { isPermanent: true, reason: 'unknown_channel' };
+  }
+  return { isPermanent: false, reason: message.slice(0, 120) };
+}
+
+/**
+ * Returns true if the error is a permanent Discord API error that should not be retried.
+ */
+export function isPermanentDiscordError(error: unknown): boolean {
+  return classifyDiscordError(error).isPermanent;
+}
+
+/**
  * Creates a generic Retry Operation that resolves until it is succesful.
  * Useful for hitting an outside API with exponential backing off.
- * 
+ * Permanent Discord errors (Missing Access, Unknown Channel) are not retried.
+ *
  * @param operation - Function to call until succesful
  * @param retries - Number of times to retry Function call
  * @returns A promise that is the operation response sent in
@@ -94,6 +120,10 @@ export const retryOperation = async (operation: () => Promise<any>, retries = MA
         return await operation();
       } catch (error) {
         const err = error as Error;
+        // Don't retry permanent errors — saves API calls and time
+        if (isPermanentDiscordError(error)) {
+          throw error;
+        }
         // Check for rate limiting errors specifically
         if (err.message.includes('rate limit') || err.message.includes('429')) {
           logger.warning(`Rate limit hit, waiting longer before retry...`);
@@ -108,3 +138,28 @@ export const retryOperation = async (operation: () => Promise<any>, retries = MA
     }
     throw new Error('Operation failed after max retries');
   }
+
+/**
+ * Runs an async function over an array with bounded concurrency.
+ * Uses a worker-pool pattern with index-based work stealing.
+ */
+export async function mapConcurrent<T, R>(
+  items: T[],
+  concurrency: number,
+  fn: (item: T, index: number) => Promise<R>
+): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const i = nextIndex++;
+      results[i] = await fn(items[i], i);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+  );
+  return results;
+}

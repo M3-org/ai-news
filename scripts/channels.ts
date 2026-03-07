@@ -1192,6 +1192,23 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
 // Command: help
 // ============================================================================
 
+async function commandResetUnavailable(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  const unavailable = await registry.getUnavailableChannels();
+  if (unavailable.length === 0) {
+    console.log("No channels are marked as unavailable.");
+    return;
+  }
+
+  console.log(`\nUnavailable channels (${unavailable.length}):`);
+  for (const ch of unavailable) {
+    const since = new Date(ch.since * 1000).toISOString().split('T')[0];
+    console.log(`  ${ch.id} ${ch.name.padEnd(30)} ${ch.reason.padEnd(20)} since ${since}`);
+  }
+
+  const cleared = await registry.clearAllUnavailable();
+  console.log(`\nCleared unavailability status for ${cleared} channel(s).`);
+}
+
 function commandHelp(): void {
   console.log(`
 Discord Channel Management CLI
@@ -1214,6 +1231,7 @@ Management Commands:
 
 Registry Commands:
   build-registry [--dry-run]              Backfill discord_channels from discordRawData
+  reset-unavailable                       Clear unavailability status for all channels
 
 Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
@@ -1326,6 +1344,9 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         break;
       case "build-registry":
         await commandBuildRegistry(db, args);
+        break;
+      case "reset-unavailable":
+        await commandResetUnavailable(registry, args);
         break;
       case "help":
       default:

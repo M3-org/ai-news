@@ -557,6 +557,10 @@ Options:
   --dry-run                    Show what would run without executing
   --json                       Output machine-readable JSON
 
+Environment variables:
+  CHANNEL_CONCURRENCY=<N>      Concurrent channel fetches (default: 2)
+  FORCE_OVERWRITE=true         Refetch channels that already have data
+
 Examples:
   ai-news fetch --source=m3org.json --date=2026-03-06
   ai-news fetch --source=elizaos.json --after=2026-01-01 --before=2026-01-31
@@ -635,6 +639,7 @@ Management:
 
 Registry:
   build-registry [--dry-run]           Backfill discord_channels from raw data
+  reset-unavailable                    Clear unavailability status for all channels
 
 Options:
   --source=<config>.json               Target a specific server config

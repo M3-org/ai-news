@@ -469,6 +469,14 @@ export class SQLiteStorage implements StoragePlugin {
   }
 
   /**
+   * Deletes a cursor by its unique cursor id.
+   */
+  public async deleteCursor(cid: string): Promise<void> {
+    if (!this.db) throw new Error("Database not initialized.");
+    await this.db.run(`DELETE FROM cursor WHERE cid = ?`, [cid]);
+  }
+
+  /**
    * Returns the underlying database connection for direct access.
    * Used by registries (DiscordUserRegistry, DiscordChannelRegistry) that need
    * to manage their own tables within the same database.
