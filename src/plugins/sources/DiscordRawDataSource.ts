@@ -919,6 +919,14 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         const channel = await retryOperation(() => this.client.channels.fetch(channelId));
         if (!channel) {
           logger.warning(`Channel ${channelId} does not exist.`);
+          // Save empty marker so we don't retry this channel+date
+          await this.storage.saveContentItems([{
+            cid: `discord-raw-${channelId}-${date}`,
+            type: 'discordRawData',
+            source: `unknown`,
+            date: targetTimestamp,
+            metadata: { channelId, dateProcessed: date, empty: true, reason: 'channel_not_found' }
+          }]);
           return;
         }
 
@@ -940,7 +948,15 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           // Announcement channels work like text channels
           rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate, sharedUsers);
         } else {
-          logger.warning(`Channel ${channelId} is type ${channel.type} (not text/forum/announcement).`);
+          logger.warning(`Channel ${channelId} is type ${channel.type} (not text/forum/announcement). Saving empty marker.`);
+          // Save empty marker so unsupported channel types don't retry every run
+          await this.storage.saveContentItems([{
+            cid: `discord-raw-${channelId}-${date}`,
+            type: 'discordRawData',
+            source: `${channel.guild?.name || 'unknown'} - ${channel.id}`,
+            date: targetTimestamp,
+            metadata: { channelId, dateProcessed: date, empty: true, reason: `unsupported_type_${channel.type}` }
+          }]);
           return;
         }
 
