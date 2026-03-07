@@ -37,8 +37,9 @@ import {
   AIRecommendation,
   RecommendedChange
 } from "../src/plugins/storage/DiscordChannelRegistry";
+import { outputJson, spinner, stepProgress, resolveDbPathFromConfig } from "./cli";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 // ============================================================================
 // Configuration
@@ -76,6 +77,7 @@ interface CliArgs {
   all?: boolean;
   // Config filter
   source?: string;
+  json?: boolean;
 }
 
 interface DiscordRawData {
@@ -132,19 +134,20 @@ interface ChannelActivity {
 // CLI Parsing
 // ============================================================================
 
-function parseArgs(): CliArgs {
-  const command = process.argv[2] || "help";
+function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
+  const first = argv[0];
+  const command = !first || first === "--help" || first === "-h" ? "help" : first;
   const args: CliArgs = { command };
 
   // Check for channel ID as positional argument
-  let argStartIndex = 3;
-  if (command !== "help" && process.argv[3] && !process.argv[3].startsWith("--")) {
-    args.channelId = process.argv[3];
-    argStartIndex = 4;
+  let argStartIndex = 1;
+  if (command !== "help" && argv[1] && !argv[1].startsWith("--")) {
+    args.channelId = argv[1];
+    argStartIndex = 2;
   }
 
-  for (let i = argStartIndex; i < process.argv.length; i++) {
-    const arg = process.argv[i];
+  for (let i = argStartIndex; i < argv.length; i++) {
+    const arg = argv[i];
 
     if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--tracked") args.tracked = true;
@@ -157,6 +160,7 @@ function parseArgs(): CliArgs {
     else if (arg.startsWith("--guild=")) args.guildId = arg.split("=")[1];
     else if (arg.startsWith("--channel=")) args.channelId = arg.split("=")[1];
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
+    else if (arg === "--json") args.json = true;
   }
 
   return args;
@@ -254,6 +258,7 @@ function getGuildIds(configs: Map<string, LoadedConfig>): Set<string> {
 
 async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   console.log("\n Discord Channel Discovery\n");
+  const discoverSpinner = spinner("Discovering channels", process.argv.slice(2)).start();
 
   // Initialize registry
   const registry = new DiscordChannelRegistry(db);
@@ -262,6 +267,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   const configs = loadConfigs(args.source);
 
   if (args.testConfigs) {
+    discoverSpinner.stop();
     console.log("Running in test mode (no Discord API calls)\n");
     validateConfigs(configs);
     return;
@@ -283,6 +289,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
 
   // Fallback to building from raw data if no Discord token
   if (!botToken) {
+    discoverSpinner.stop();
     console.log("No Discord token available. Building registry from raw data...\n");
     await buildRegistryFromRawData(db, registry, true);
 
@@ -296,6 +303,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   }
 
   if (configs.size === 0) {
+    discoverSpinner.fail("No valid Discord configs found");
     console.error("No valid Discord configurations found");
     process.exit(1);
   }
@@ -319,6 +327,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
 
   console.log("Connecting to Discord...");
   await client.login(botToken);
+  discoverSpinner.text = "Connected to Discord";
   console.log(`Connected to Discord as ${client.user?.tag}\n`);
 
   // Discover channels from each guild
@@ -327,7 +336,10 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   const channelActivity = new Map<string, ChannelActivity>();
 
   console.log("Discovering channels...");
+  let guildIndex = 0;
   for (const guildId of guildIds) {
+    guildIndex += 1;
+    discoverSpinner.text = stepProgress(guildIndex, guildIds.size, `Scanning guild ${guildId}`);
     try {
       const guild = await client.guilds.fetch(guildId);
       const channels = await guild.channels.fetch();
@@ -490,6 +502,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- analyze --stale' to analyze channels with LLM");
   console.log("2. Run 'npm run channels -- propose' to generate config changes");
+  discoverSpinner.succeed("Channel discovery complete");
 }
 
 function validateConfigs(configs: Map<string, LoadedConfig>): void {
@@ -624,6 +637,7 @@ Guidelines:
 
 async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
   console.log("\n Channel Analysis\n");
+  const analyzeSpinner = spinner("Preparing channel analysis", process.argv.slice(2)).start();
 
   // Auto-populate registry if empty but raw data exists
   const stats = await registry.getStats();
@@ -642,6 +656,7 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   // Initialize OpenAI
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
+    analyzeSpinner.fail("OPENAI_API_KEY missing");
     console.error("OPENAI_API_KEY not set in environment");
     process.exit(1);
   }
@@ -680,7 +695,15 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   }
 
   if (channelsToAnalyze.length === 0) {
+    analyzeSpinner.stop();
     console.log("\nNo channels to analyze.\n");
+    return;
+  }
+
+  if (args.dryRun) {
+    analyzeSpinner.stop();
+    console.log(`\nDry run — would analyze ${channelsToAnalyze.length} channel(s).`);
+    console.log(`Estimated API calls: ${channelsToAnalyze.length}`);
     return;
   }
 
@@ -693,7 +716,9 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   let skip = 0;
   let errors = 0;
 
-  for (const channel of channelsToAnalyze) {
+  for (let i = 0; i < channelsToAnalyze.length; i++) {
+    const channel = channelsToAnalyze[i];
+    analyzeSpinner.text = stepProgress(i + 1, channelsToAnalyze.length, `Analyzing #${channel.name}`);
     process.stdout.write(`  Analyzing #${channel.name.padEnd(25)}...`);
 
     // Load messages for this channel
@@ -733,6 +758,7 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   console.log(`  Errors: ${errors}`);
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- propose' to generate config changes");
+  analyzeSpinner.succeed("Channel analysis complete");
 }
 
 // ============================================================================
@@ -831,24 +857,33 @@ async function commandList(registry: DiscordChannelRegistry, args: CliArgs): Pro
   let channels: DiscordChannel[];
 
   if (args.tracked) {
-    console.log("\n Tracked Channels\n");
+    if (!args.json) console.log("\n Tracked Channels\n");
     channels = await registry.getTrackedChannels();
   } else if (args.active) {
-    console.log("\n Active Channels (velocity >= 1.5)\n");
+    if (!args.json) console.log("\n Active Channels (velocity >= 1.5)\n");
     channels = await registry.getActiveChannels(1.5);
   } else if (args.muted) {
-    console.log("\n Muted Channels\n");
+    if (!args.json) console.log("\n Muted Channels\n");
     channels = (await registry.getAllChannels()).filter(c => c.isMuted);
   } else if (args.quiet) {
-    console.log("\n Quiet Channels (no activity in 90 days)\n");
+    if (!args.json) console.log("\n Quiet Channels (no activity in 90 days)\n");
     channels = await registry.getInactiveChannels(90);
   } else {
-    console.log("\n All Channels\n");
+    if (!args.json) console.log("\n All Channels\n");
     channels = await registry.getAllChannels();
   }
 
   if (channels.length === 0) {
+    if (args.json) {
+      outputJson({ ok: true, command: "channels.list", data: [] });
+      return;
+    }
     console.log("   No channels found.\n");
+    return;
+  }
+
+  if (args.json) {
+    outputJson({ ok: true, command: "channels.list", data: channels });
     return;
   }
 
@@ -960,10 +995,13 @@ async function commandShow(registry: DiscordChannelRegistry, channelId: string):
 // Command: stats
 // ============================================================================
 
-async function commandStats(registry: DiscordChannelRegistry): Promise<void> {
-  console.log("\n Channel Registry Statistics\n");
-
+async function commandStats(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
   const stats = await registry.getStats();
+  if (args.json) {
+    outputJson({ ok: true, command: "channels.stats", data: stats });
+    return;
+  }
+  console.log("\n Channel Registry Statistics\n");
 
   console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted`);
   console.log(`Guilds: ${stats.totalGuilds}`);
@@ -1179,6 +1217,7 @@ Registry Commands:
 
 Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
+  --json                                  Output machine-readable JSON for query commands
 
 Examples:
   npm run channels -- discover              # Discover channels (Discord API or raw data)
@@ -1209,27 +1248,19 @@ function sleep(ms: number): Promise<void> {
 // ============================================================================
 
 function resolveDbPath(source?: string): string {
-  if (source) {
-    const configPath = path.join(CONFIG_DIR, source);
-    if (fs.existsSync(configPath)) {
-      try {
-        const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
-        const storage = config.storage?.find((s: any) => s.params?.dbPath);
-        if (storage?.params?.dbPath) {
-          return path.resolve(process.cwd(), storage.params.dbPath);
-        }
-      } catch (e) {
-        // Fall through to default
-      }
-    }
-  }
-  return path.join(process.cwd(), "data", "elizaos.sqlite");
+  return resolveDbPathFromConfig(source) || path.join(process.cwd(), "data", "elizaos.sqlite");
 }
 
-async function main() {
-  const args = parseArgs();
+export async function runChannels(argv: string[] = process.argv.slice(2)) {
+  const args = parseArgs(argv);
+  if (args.command === "help" || !args.command) {
+    commandHelp();
+    return;
+  }
   const dbPath = resolveDbPath(args.source);
-  console.log(`Using database: ${path.relative(process.cwd(), dbPath)}`);
+  if (!args.json) {
+    console.log(`Using database: ${path.relative(process.cwd(), dbPath)}`);
+  }
   const db = await open({ filename: dbPath, driver: sqlite3.Database });
 
   // Initialize registry
@@ -1259,7 +1290,7 @@ async function main() {
         }
         break;
       case "stats":
-        await commandStats(registry);
+        await commandStats(registry, args);
         break;
       case "track":
         if (!args.channelId) {
@@ -1312,7 +1343,9 @@ process.on("SIGINT", () => {
   process.exit(0);
 });
 
-main().catch((err) => {
-  console.error("Error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  runChannels().catch((err) => {
+    console.error("Error:", err);
+    process.exit(1);
+  });
+}
