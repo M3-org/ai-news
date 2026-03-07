@@ -477,9 +477,26 @@ export async function runCli(argv: string[] = process.argv.slice(2)): Promise<vo
 
   program
     .name("ai-news")
-    .description("Unified CLI for ai-news operations")
+    .description("Unified CLI for ai-news data pipelines")
     .option("--json", "Output machine-readable JSON where supported")
     .option("-q, --quiet", "Reduce output and suppress progress indicators")
+    .addHelpText("after", `
+Pipeline:
+  run              Run the main daily pipeline (fetch + enrich + generate)
+  fetch            Fetch and generate summaries for historical dates
+  setup            Interactive server onboarding wizard
+
+Data Management:
+  channels         Discord channel discovery, analysis, and tracking
+  users            Discord user registry, avatars, and nickname enrichment
+  weekly           Generate weekly summaries from daily outputs
+
+Diagnostics:
+  status           Show pipeline health for all servers (or --source=<config>)
+  doctor           Run environment and dependency checks
+
+Run 'ai-news <command> --help' for detailed usage of each command.
+`)
     .showHelpAfterError();
 
   program
@@ -487,19 +504,27 @@ export async function runCli(argv: string[] = process.argv.slice(2)): Promise<vo
     .description("Run the main pipeline (src/index.ts)")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Run the main daily pipeline: fetch data from all configured sources,
+enrich content, store to SQLite, and generate summaries.
+
+Options:
+  --source=<config>.json    Config file to use (default: sources.json)
+  --only-fetch              Only fetch data, skip summary generation
+  --only-generate           Only generate summaries from existing data
+  --output=<path>           Output directory (default: ./)
+  --run-once                Run once and exit (instead of scheduling)
+  --json                    Output machine-readable JSON
+
+Examples:
+  ai-news run --source=elizaos.json
+  ai-news run --source=m3org.json --only-fetch
+  ai-news run --source=elizaos.json --only-generate --output=./output/elizaos
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
       if (args.includes("--help") || args.includes("-h")) {
-        console.log(`
-Usage: ai-news run [options]
-
-Runs the main pipeline from src/index.ts.
-Common options:
-  --source=<config>.json
-  --only-fetch / --onlyFetch
-  --only-generate / --onlyGenerate
-  --output=<path>
-`);
+        program.commands.find(c => c.name() === "run")?.outputHelp();
         return;
       }
       if (opts.quiet) process.env.AI_NEWS_QUIET = "1";
@@ -509,11 +534,42 @@ Common options:
 
   program
     .command("fetch [args...]")
-    .description("Run historical fetch/generate pipeline (src/historical.ts)")
+    .description("Fetch and generate summaries for historical dates (src/historical.ts)")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Fetch raw Discord/GitHub data and generate summaries for past dates.
+This is the main command for backfilling data and catching up.
+
+Options:
+  --source=<config>.json       Config file to use (default: sources.json)
+  --date=<YYYY-MM-DD>          Process a single date
+  --after=<YYYY-MM-DD>         Start date for a range
+  --before=<YYYY-MM-DD>        End date for a range
+  --during=<YYYY-MM-DD>        Alias for --date
+  --only-fetch                 Only fetch data, skip summary generation
+  --only-generate              Only generate summaries from existing data
+  --download-media             Download Discord media after collection
+  --generate-manifest          Generate media manifest JSON for VPS downloads
+  --manifest-output=<path>     Output path for manifest file
+  --media-manifest=<path>      Media manifest for CDN URL enrichment
+  --output=<path>              Output directory (default: ./)
+  --dry-run                    Show what would run without executing
+  --json                       Output machine-readable JSON
+
+Examples:
+  ai-news fetch --source=m3org.json --date=2026-03-06
+  ai-news fetch --source=elizaos.json --after=2026-01-01 --before=2026-01-31
+  ai-news fetch --source=m3org.json --date=2026-03-06 --only-fetch
+  ai-news fetch --source=elizaos.json --date=2026-03-06 --only-generate
+  ai-news fetch --source=elizaos.json --after=2026-03-01 --before=2026-03-07 --download-media
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
+      if (args.includes("--help") || args.includes("-h")) {
+        program.commands.find(c => c.name() === "fetch")?.outputHelp();
+        return;
+      }
       if (args.includes("--dry-run")) {
         console.log("Dry run — would execute historical pipeline with:");
         console.log(`  ts-node -r tsconfig-paths/register --transpile-only src/historical.ts ${args.join(" ")}`);
@@ -526,9 +582,29 @@ Common options:
 
   program
     .command("setup [args...]")
-    .description("Interactive setup wizard")
+    .description("Interactive server setup wizard")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Interactive menu-driven wizard for onboarding and managing Discord server
+data pipelines. Also supports non-interactive catch-up mode.
+
+Options:
+  --name=<slug>             Server slug (e.g. m3org)
+  --guild-id=<id>           Discord guild ID
+  --run                     Non-interactive catch-up mode (fetch to today)
+  --full                    Run all pending setup steps (with --run)
+  --dry-run                 Show what would run without executing
+  --install-alias           Install ai-news shell alias
+  --shell-rc=<path>         Shell rc file path for alias install
+
+Examples:
+  ai-news setup                                        # Interactive wizard
+  ai-news setup --name=m3org --guild-id=433492168825634816
+  ai-news setup --name=m3org --run --dry-run           # Preview catch-up
+  ai-news setup --name=m3org --run                     # Fetch to today
+  ai-news setup --name=m3org --run --full              # Full pipeline refresh
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
       if (opts.quiet) process.env.AI_NEWS_QUIET = "1";
@@ -537,9 +613,39 @@ Common options:
 
   program
     .command("channels [args...]")
-    .description("Channel management CLI")
+    .description("Discord channel management")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Discovery & Analysis:
+  discover [--source=<config>]         Fetch channels from Discord API (or raw data)
+  analyze [--all] [--channel=ID]       Run LLM analysis on channels
+  propose [--dry-run]                  Generate config diff and PR markdown
+
+Query:
+  list [--tracked|--active|--muted|--quiet]   List channels with filters
+  show <channelId>                            Show detailed channel info
+  stats                                       Show registry statistics
+
+Management:
+  track <channelId>                    Mark channel as tracked
+  untrack <channelId>                  Mark channel as not tracked
+  mute <channelId>                     Mute channel
+  unmute <channelId>                   Unmute channel
+
+Registry:
+  build-registry [--dry-run]           Backfill discord_channels from raw data
+
+Options:
+  --source=<config>.json               Target a specific server config
+  --json                               Output machine-readable JSON
+
+Examples:
+  ai-news channels discover --source=m3org.json
+  ai-news channels analyze --all --source=elizaos.json
+  ai-news channels list --tracked --source=m3org.json
+  ai-news channels propose --dry-run
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
       if (opts.quiet) process.env.AI_NEWS_QUIET = "1";
@@ -548,9 +654,32 @@ Common options:
 
   program
     .command("users [args...]")
-    .description("User registry CLI")
+    .description("Discord user registry management")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Commands:
+  index                Build user-index.json from raw Discord logs
+  fetch-avatars        Fetch avatar URLs from Discord API
+                       Options: --rate-limit=<ms> --skip-existing
+  download-avatars     Download avatar images locally
+                       Options: --rate-limit=<ms> --skip-existing
+  build-registry       Build discord_users table from raw data
+                       Options: --dry-run
+  status               Show registry/avatar cache statistics
+  enrich               Enrich daily JSONs with nickname maps
+                       Options: --date=YYYY-MM-DD --from/--to --all --dry-run
+
+Options:
+  --source=<config>.json    Target a specific server (default: all configs)
+  --json                    Output machine-readable JSON
+
+Examples:
+  ai-news users build-registry --source=m3org.json
+  ai-news users enrich --all --source=elizaos.json
+  ai-news users fetch-avatars --skip-existing --rate-limit=100
+  ai-news users status --source=m3org.json
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
       if (opts.quiet) process.env.AI_NEWS_QUIET = "1";
@@ -559,9 +688,31 @@ Common options:
 
   program
     .command("weekly [args...]")
-    .description("Weekly summary generator CLI")
+    .description("Generate weekly summary from daily outputs")
     .helpOption(false)
     .allowUnknownOption(true)
+    .addHelpText("after", `
+Commands:
+  generate             Combine daily outputs into weekly.json
+  list                 List available daily files
+
+Generate Options:
+  --source=<config>.json        Config file to use
+  --week-of=<YYYY-MM-DD>       Calendar week containing this date
+  --from=<YYYY-MM-DD>          Custom start date
+  --to=<YYYY-MM-DD>            Custom end date
+  --format=discord|elizaos     Include only one format
+  --ai                         Generate AI-curated newsroom-style version
+  -o <filename>                Custom output filename
+  --dry-run                    Preview without writing
+
+Examples:
+  ai-news weekly generate --source=elizaos.json
+  ai-news weekly generate --week-of=2026-01-15
+  ai-news weekly generate --from=2026-01-01 --to=2026-01-07
+  ai-news weekly generate --ai -o weekly-curated.json
+  ai-news weekly list --source=elizaos.json
+`)
     .action(async (args: string[] = []) => {
       const opts = program.opts<{ json?: boolean; quiet?: boolean }>();
       if (opts.quiet) process.env.AI_NEWS_QUIET = "1";
