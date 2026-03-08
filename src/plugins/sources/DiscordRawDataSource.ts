@@ -935,9 +935,31 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           await this.channelRegistry.clearUnavailable(channelId);
         }
 
-        let rawData: DiscordRawData;
+        // For text/announcement channels, skip if lastMessageId predates the target date.
+        // This avoids 3-4 API calls per channel per date for long-inactive channels.
+        // Forums are excluded — their lastMessageId doesn't reflect thread activity.
+        if (
+          (channel.type === ChannelType.GuildText || channel.type === ChannelType.GuildAnnouncement) &&
+          (channel as TextChannel).lastMessageId
+        ) {
+          const lastMsgDate = snowflakeToDate((channel as TextChannel).lastMessageId!);
+          const startOfDay = new Date(targetDate);
+          startOfDay.setUTCHours(0, 0, 0, 0);
+          if (lastMsgDate < startOfDay) {
+            logger.debug(`Skipping ${channel.name}: last message ${lastMsgDate.toISOString().split('T')[0]} predates ${date}`);
+            await this.storage.saveContentItems([{
+              cid: `discord-raw-${channel.id}-${date}`,
+              type: 'discordRawData',
+              source: `${channel.guild.name} - ${channel.name}`,
+              date: targetTimestamp,
+              metadata: { channelId: channel.id, guildId: channel.guild.id, guildName: channel.guild.name, channelName: channel.name, messageCount: 0, dateProcessed: date, empty: true }
+            }]);
+            return;
+          }
+        }
 
         // Handle different channel types
+        let rawData: DiscordRawData;
         if (channel.type === ChannelType.GuildText) {
           // Regular text channel
           rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate, sharedUsers);

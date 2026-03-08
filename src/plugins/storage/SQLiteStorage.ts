@@ -15,6 +15,14 @@ export class SQLiteStorage implements StoragePlugin {
   public name: string;
   private db: Database<sqlite3.Database, sqlite3.Statement> | null = null;
   private dbPath: string;
+  private writeLock: Promise<void> = Promise.resolve();
+
+  /** Serialize writes so concurrent callers don't interleave transactions. */
+  private withLock<T>(fn: () => Promise<T>): Promise<T> {
+    const result = this.writeLock.then(fn);
+    this.writeLock = result.then(() => {}, () => {});
+    return result;
+  }
 
   static constructorInterface = {
     parameters: [
@@ -43,6 +51,9 @@ export class SQLiteStorage implements StoragePlugin {
    */
   public async init(): Promise<void> {
     this.db = await open({ filename: this.dbPath, driver: sqlite3.Database });
+    // WAL mode: concurrent reads during writes; busy timeout: retry instead of failing on contention
+    await this.db.exec("PRAGMA journal_mode=WAL");
+    await this.db.exec("PRAGMA busy_timeout=5000");
 
     // Create the items table if it doesn't exist
     await this.db.exec(`
@@ -100,25 +111,30 @@ export class SQLiteStorage implements StoragePlugin {
    * @throws Error if database is not initialized
    */
   public async saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
-    const operation = "saveContentItems";
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }
+    return this.withLock(() => this._saveContentItems(items));
+  }
+
+  private async _saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
+    const operation = "saveContentItems";
+    const db = this.db!;
     logger.debug(`[SQLiteStorage:${operation}] Starting transaction for ${items.length} items.`);
 
-    const updateStmt = await this.db.prepare(
+    const updateStmt = await db.prepare(
       `
       UPDATE items
       SET type = ?, source = ?, title = ?, text = ?, link = ?, topics = ?, date = ?, metadata = ?
       WHERE cid = ?
       `
     );
-    const insertStmt = await this.db.prepare(
+    const insertStmt = await db.prepare(
       `INSERT INTO items (type, source, cid, title, text, link, topics, date, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
     );
 
     try {
-      await this.db.run("BEGIN TRANSACTION");
+      await db.run("BEGIN TRANSACTION");
       logger.debug(`[SQLiteStorage:${operation}] Transaction started.`);
 
       for (const item of items) {
@@ -149,7 +165,7 @@ export class SQLiteStorage implements StoragePlugin {
            continue;
         }
 
-        const existingRow = await this.db.get<{ id: number }>(
+        const existingRow = await db.get<{ id: number }>(
           `SELECT id FROM items WHERE cid = ?`,
           [item.cid]
         );
@@ -193,11 +209,11 @@ export class SQLiteStorage implements StoragePlugin {
         }
       }
 
-      await this.db.run("COMMIT");
+      await db.run("COMMIT");
       logger.debug(`[SQLiteStorage:${operation}] Transaction committed successfully for ${items.length} items.`);
     } catch (error) {
       logger.error(`[SQLiteStorage:${operation}] Transaction failed: ${error instanceof Error ? error.message : String(error)}. Rolling back.`);
-      await this.db.run("ROLLBACK");
+      await db.run("ROLLBACK");
       throw error;
     } finally {
       await updateStmt.finalize();
