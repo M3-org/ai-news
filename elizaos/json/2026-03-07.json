@@ -1,0 +1,34 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-03-07",
+  "categories": [
+    {
+      "title": "ElizaOS Community Concerns and Team Response",
+      "content": [
+        {
+          "text": "Community members expressed growing concerns about the ElizaOS token performance and project direction on March 7, 2026. Users noted the token reaching new all-time lows and questioned whether the team had lost interest in the token. Complaints included lack of marketing, inactive Discord, and delayed product shipping despite promises to ship by end of 2025. There was also confusion about which Milady token is legitimate, with multiple versions existing on different chains. Community member Odilitime, a Core Dev, responded to concerns stating the team is still building and working on airdrops for holders while trying to promote builders. He clarified that there is no legitimate Milady token yet and mentioned that Cloud platform is doing fine. The team acknowledged that market conditions are down and FUD is up, but emphasized they remain committed to the project. Work continues on the Spartan Degen AI agent.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/d0E6CPGac-sAAAAe/gif.png",
+            "https://pbs.twimg.com/media/HC1ppL7aEAAjqDk.jpg:large"
+          ],
+          "videos": [
+            "https://media.tenor.com/d0E6CPGac-sAAAPo/gif.mp4"
+          ]
+        },
+        {
+          "text": "In the coders channel, a user named wizardev reached out to another member named Ken expressing interest in their crypto experience and wanting to connect, noting that Ken's direct messages were closed.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1772841600
+}

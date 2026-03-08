@@ -1,92 +1,78 @@
-# elizaOS Discord - 2026-03-06
+# elizaOS Discord - 2026-03-07
 
 ## Overall Discussion Highlights
 
-### Plugin Development & Integration
+### Token Economics and Community Concerns
 
-**xproof Plugin for On-Chain Audit Trails**
-- jasonxkensei announced PR #266 introducing the xproof plugin to the plugin registry
-- The plugin (xproof.app) enables on-chain audit trails for ElizaOS agents
-- Features certification of agent decisions before execution with built-in compliance gating
-- PR has received CodeRabbit approval with no conflicts, awaiting maintainer review
+The primary focus of discussions centered on significant community anxiety regarding the ELIZAOS token's market performance. Multiple community members (gby, Rainman, g, elizasib) voiced frustration about the token reaching new all-time lows and questioned the team's commitment to the project. The sentiment reflected concerns about perceived lack of progress despite previous shipping timelines.
 
-### Infrastructure & Payment Systems
+Odilitime, representing the team, addressed these concerns by clarifying ongoing development efforts, including active work on airdrops for token holders and promotion of ecosystem builders. A key clarification was made distinguishing between "the team" and Shaw regarding token holdings and selling activity.
 
-**Agent-to-Vendor Credit Line Primitive**
-- N0vaMp4 presented an enforcement mechanism for managing credit lines between agents and vendors
-- System design includes agent operators posting bonds with vendors receiving atomic slashing rights for payment defaults
-- Currently in validation phase to determine if agents exhausting balances mid-task and leaving unpaid compute is a real problem for API/tool/service providers
-- Seeking community feedback on the necessity and implementation approach
+### Project Development Status
 
-### Token Migration & Governance
+**Milady Token Clarification:** Despite community speculation, Odilitime confirmed that no legitimate Milady token has been launched yet. Boj/acc made cryptic statements suggesting the official token will launch on AVAX chain rather than BSC or SOL.
 
-**ai16z Token Handling Clarification**
-- Odilitime addressed community concerns about token snapshot and migration
-- Confirmed that the team took a snapshot and holds all ai16z from the migration
-- Verification available on-chain for transparency
+**Infrastructure:** Cloud infrastructure was reported to be functioning well.
 
-### Community Activity
+**Spartan Degen AI:** Development continues on this component, with Odilitime confirming ongoing work in response to status inquiries.
 
-**Discord Engagement Levels**
-- Discussion about current activity levels in the Discord community
-- Biazs noted that activity is a fraction of what it was last year
-- Newer members like Matthib123 still perceive the community as active
-- Community remains engaged despite reduced volume compared to previous periods
+### Strategic Discussions
 
-### Security Awareness
+Thanos💨 raised questions about capital allocation strategy, specifically why the team doesn't implement buybacks during periods of price depression. This suggestion remained unanswered but represents a community desire for more active token economics management.
 
-- satsbased issued a warning about potential scam activity in the coders channel
-- Community members remain vigilant about security concerns
+### Community Engagement
+
+The discussion revealed tension between long-term holders seeking greater transparency and team members defending ongoing development efforts despite challenging market conditions. Concerns were raised about missed 2025 shipping deadlines (now in March), lack of marketing efforts, and reduced Discord activity.
+
+### Minimal Technical Activity
+
+The 💬-coders channel showed minimal activity, with only a brief outreach message from wizardev regarding cryptocurrency experience, indicating limited technical collaboration during this period.
 
 ## Key Questions & Answers
 
-**Q: Have you ever had an agent exhaust its balance mid-task and leave you with unpaid compute? How are you handling it today?**
-- Asked by: N0vaMp4
-- Status: Unanswered - seeking community feedback for validation phase
+**Q: Which Milady token is the legit one?**  
+**A:** There is no legit Milady token yet (answered by Odilitime)
 
-**Q: Is anyone still around in the Discord?**
-- Asked by: TYinTECH
-- Answered by: Biazs and Matthib123
-- Answer: Activity is a fraction of what it was last year, but the community is still active
+**Q: Why does it feel like the team has lost interest in the token?**  
+**A:** The team is still building, working on airdrops for holders and promoting builders; market is down and FUD is up (answered by Odilitime)
 
-**Q: [Concerns about token snapshot and ai16z handling]**
-- Asked by: gby
-- Answered by: Odilitime
-- Answer: Snapshot was taken and all ai16z from migration is held by the team and verifiable on-chain
+**Q: What about Spartan Degen AI?**  
+**A:** Still working on him (answered by Odilitime)
+
+### Unanswered Questions
+
+- Is the team interested in OTC investment? (asked by KOL Nicky)
+- Why doesn't the team do buybacks when prices are depressed? (asked by Thanos💨)
+- Why does Shaw hold 2.6%? (asked by g)
 
 ## Community Help & Collaboration
 
-**Community Onboarding Support**
-- Helper: Biazs
-- Helpee: TYinTECH
-- Context: New member asking if Discord is still active
-- Resolution: Confirmed community is still active though less than previous year
+**Milady Token Confusion**  
+Helper: Odilitime | Helpee: g  
+Odilitime clarified confusion about the legitimate Milady token, confirming that no legitimate version exists yet despite community speculation.
 
-**Token Migration Transparency**
-- Helper: Odilitime
-- Helpee: gby
-- Context: Concerns about token snapshot and ai16z handling
-- Resolution: Clarified snapshot was taken and all ai16z from migration is held and verifiable on-chain
+**Team Commitment Concerns**  
+Helper: Odilitime | Helpee: Community  
+Addressed widespread concerns about team selling and commitment by clarifying the distinction between team actions and Shaw's individual holdings, and confirmed ongoing building efforts.
 
-**Business Networking**
-- based.bid reached out to Ken for potential collaboration discussions via DM
+**Project Status Update**  
+Helper: Odilitime | Helpee: Quaser M  
+Provided status confirmation on Spartan Degen AI development in response to community inquiry.
 
 ## Action Items
 
 ### Technical
+- **Complete airdrops for token holders** - Mentioned by Odilitime
+- **Continue development on Spartan Degen AI** - Mentioned by Odilitime
+- **Implement buyback program during price depression** - Mentioned by Thanos💨
 
-- **Review and merge PR #266 for xproof plugin** - Adding on-chain audit trails for ElizaOS agents
-  - Mentioned by: jasonxkensei
-  - Status: CodeRabbit approved, awaiting maintainer review
+### Documentation
+- **Clarify official Milady token status and launch plans** - Mentioned by g
+- **Provide transparency on Shaw's token holdings and role** - Mentioned by g
 
 ### Feature
+- No specific feature requests were documented beyond the buyback program suggestion
 
-- **Validate need for agent-to-vendor credit line enforcement primitive** - System with bond posting and atomic slashing for payment defaults
-  - Mentioned by: N0vaMp4
-  - Status: In validation phase, seeking community feedback
+---
 
-### Community Feedback Needed
-
-- **Agent payment default scenarios** - Community input requested on whether agents exhausting balances mid-task is a real problem for API/tool/service providers
-  - Mentioned by: N0vaMp4
-  - Purpose: Validate the need for credit line enforcement mechanism
+*Note: This summary reflects a period of community concern and limited technical activity, with most discussion focused on token economics, transparency, and project timeline concerns rather than technical development or implementation details.*
