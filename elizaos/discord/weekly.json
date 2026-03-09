@@ -1,17 +1,17 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-03-01 to 2026-03-07",
-  "weekOf": "2026-03-01",
+  "title": "elizaOS Weekly Summary - 2026-03-02 to 2026-03-08",
+  "weekOf": "2026-03-02",
   "dateRange": {
-    "start": "2026-03-01",
-    "end": "2026-03-07"
+    "start": "2026-03-02",
+    "end": "2026-03-08"
   },
-  "generatedAt": 1772931990,
+  "generatedAt": 1773094681,
   "stats": {
-    "totalMessages": 300,
-    "totalUsers": 121,
-    "averageMessagesPerDay": 43,
+    "totalMessages": 306,
+    "totalUsers": 127,
+    "averageMessagesPerDay": 44,
     "activeDays": 7,
     "peakDay": {
       "date": "2026-03-02",
@@ -19,6 +19,11 @@
     }
   },
   "channelSummary": {
+    "1301363808421543988": {
+      "name": "🥇-partners",
+      "totalMessages": 16,
+      "daysActive": 2
+    },
     "1300025221834739744": {
       "name": "💬-coders",
       "totalMessages": 52,
@@ -26,13 +31,8 @@
     },
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 228,
+      "totalMessages": 234,
       "daysActive": 7
-    },
-    "1301363808421543988": {
-      "name": "🥇-partners",
-      "totalMessages": 16,
-      "daysActive": 2
     },
     "1377726087789940836": {
       "name": "xfn-framework",
@@ -41,31 +41,6 @@
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-03-01",
-      "date": 1772323200,
-      "stats": {
-        "totalMessages": 23,
-        "totalUsers": 11
-      },
-      "categories": [
-        {
-          "channelId": "1300025221834739744",
-          "channelName": "💬-coders",
-          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment contains a single introductory message from a user presenting their professional background and collaboration interests. No technical discussions, problem-solving, or implementation details occurred during this segment.\n\nThe user aicodeflow introduced themselves as someone who builds production-grade AI systems across multiple industries including healthcare, finance, and e-commerce. Their stated focus areas include fraud detection and workflow automation, with emphasis on reliability aspects such as handling messy data, edge cases, latency management, and long-term system maintenance. They expressed interest in collaborating on real products with actual users and invited others to connect regarding meaningful projects or AI architecture discussions.\n\nNo technical questions were asked, no solutions were provided, and no concrete implementations were discussed in this brief segment.\n\n## 2. FAQ\n\nNo questions were asked or answered in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nNo action items were identified in this chat segment.",
-          "messageCount": 1,
-          "userCount": 1
-        },
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe chat segment shows minimal technical discussion, primarily consisting of token migration inquiries and scam warnings. The most significant technical mention was ElizaBAO discussing work on an ElizaOS v2.0 integration with Milady that includes a Polymarket plugin. \n\nA user (havingautism) inquired about converting ai16z tokens to elizaos tokens, but was informed by Arceon that token migration is no longer available. The conversation revealed ongoing issues with scam bots targeting new users who post their first messages in the channel.\n\nElizaBAO mentioned developing a custom version of ElizaOS (v2.0) with Polymarket plugin integration for the Milady project, though no technical implementation details were provided. The discussion was largely non-technical, with most exchanges involving scam warnings and bot mentions. MochinoLabs expressed interest in working with the project but encountered scammers attempting to impersonate support.\n\nThe channel moderators acknowledged the persistent problem with bots targeting newcomers, stating they are doing their best to manage the issue. No concrete technical solutions, code implementations, or architectural decisions were discussed during this segment.\n\n## 2. FAQ\n\nQ: How can I convert my ai16z tokens to elizaos now? (asked by havingautism) A: You're not able to migrate your tokens anymore (answered by Arceon)\n\nQ: How can I get started working with the project? (asked by MochinoLabs) A: Unanswered (legitimate response not provided due to scammer interference)\n\n## 3. Help Interactions\n\nHelper: Arceon | Helpee: havingautism | Context: User asking about token migration from ai16z to elizaos | Resolution: Informed that token migration is no longer available and warned about scam bots targeting new users\n\n## 4. Action Items\n\nType: Feature | Description: ElizaOS v2.0 with Polymarket plugin integration for Milady project | Mentioned By: ElizaBAO\n\nType: Technical | Description: Address persistent scam bot problem targeting new users in the channel | Mentioned By: Arceon",
-          "messageCount": 22,
-          "userCount": 10
-        }
-      ]
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-03-02",
@@ -241,6 +216,31 @@
           "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion centered primarily on community concerns about the ELIZAOS token's declining price and perceived lack of progress. Multiple community members (gby, Rainman, g, elizasib) expressed frustration about the token reaching new all-time lows, questioning team commitment, and noting the absence of product launches despite previous shipping timelines.\n\nKey technical/project points emerged from Odilitime's responses: The team clarified there is currently no legitimate Milady token launched yet, despite speculation. Cloud infrastructure is reportedly functioning well. The team is actively working on airdrops for token holders and promoting builders within the ecosystem. Odilitime emphasized the distinction between \"the team\" and Shaw, addressing concerns about team selling.\n\nCommunity member g raised specific concerns about missed 2025 shipping deadlines (now in March), lack of marketing, inactive Discord, and confusion about which Milady token is legitimate. Thanos💨 questioned why the team doesn't implement buybacks during price depression as a capital allocation strategy.\n\nBoj/acc made cryptic statements suggesting the official token will launch on AVAX chain, not BSC or SOL. Quaser M asked about Spartan Degen AI status, with Odilitime confirming ongoing work. The discussion revealed community tension between long-term holders seeking transparency and team members defending ongoing development efforts despite market conditions.\n\n## 2. FAQ\n\nQ: Is the team interested in OTC investment? (asked by KOL Nicky) A: Unanswered\n\nQ: Why does it feel like the team has lost interest in the token? (asked by gby) A: The team is still building, working on airdrops for holders and promoting builders; market is down and FUD is up (answered by Odilitime)\n\nQ: Which Milady token is the legit one? (asked by g) A: There is no legit Milady token yet (answered by Odilitime)\n\nQ: Why doesn't the team do buybacks when prices are depressed? (asked by Thanos💨) A: Unanswered\n\nQ: What about Spartan Degen AI? (asked by Quaser M) A: Still working on him (answered by Odilitime)\n\nQ: Why does Shaw hold 2.6%? (asked by g) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: Odilitime | Helpee: g | Context: Confusion about legitimate Milady token | Resolution: Clarified that no legitimate Milady token exists yet\n\nHelper: Odilitime | Helpee: Community | Context: Concerns about team selling and commitment | Resolution: Clarified distinction between team and Shaw, confirmed team is still building\n\nHelper: Odilitime | Helpee: Quaser M | Context: Status inquiry about Spartan Degen AI | Resolution: Confirmed ongoing development work\n\n## 4. Action Items\n\nType: Technical | Description: Complete airdrops for token holders | Mentioned By: Odilitime\n\nType: Technical | Description: Continue development on Spartan Degen AI | Mentioned By: Odilitime\n\nType: Feature | Description: Implement buyback program during price depression | Mentioned By: Thanos💨\n\nType: Documentation | Description: Clarify official Milady token status and launch plans | Mentioned By: g\n\nType: Documentation | Description: Provide transparency on Shaw's token holdings and role | Mentioned By: g",
           "messageCount": 36,
           "userCount": 15
+        }
+      ]
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-03-08",
+      "date": 1772928000,
+      "stats": {
+        "totalMessages": 29,
+        "totalUsers": 17
+      },
+      "categories": [
+        {
+          "channelId": "1300025221834739744",
+          "channelName": "💬-coders",
+          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment contains a single introductory message from a developer named Challenger presenting their technical capabilities and service offerings. No actual technical discussions, problem-solving, or collaborative coding activities occurred during this segment.\n\nThe message is a self-promotional introduction outlining expertise across AI/ML and full-stack development domains. Key technical areas mentioned include: LLM integration with RAG pipelines using hybrid search, AI workflow automation integrating with platforms like Slack and Notion, AI content detection using stylometry and fine-tuned transformers, image AI using CLIP and YOLOv8 models, multi-agent systems with planning and reflection loops, and various bot development.\n\nFull-stack capabilities listed span web development (React, Next.js, Node.js, Laravel, Django), mobile development (Flutter, React Native, Swift), database management (relational and NoSQL), backend architecture (microservices, API design), and cloud/DevOps (AWS, Azure, Docker, Kubernetes).\n\nNo technical questions were asked, no problems were solved, no code was shared, and no collaborative discussions took place. This represents a networking/introduction post rather than substantive technical discourse.\n\n## 2. FAQ\n\nNo meaningful technical questions or answers were exchanged in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nNo action items were identified in this chat segment.",
+          "messageCount": 1,
+          "userCount": 1
+        },
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "# Discord Chat Analysis for 💬-discussion\n\n## 1. Summary\n\nThe discussion channel showed minimal technical content during this period. The primary technical contribution came from LillAnders, who introduced ZARQ, a crypto risk intelligence infrastructure for AI agents, and announced the publication of an ElizaOS plugin that provides pre-trade risk scoring for 205 tokens.\n\nThe conversation was dominated by community concerns about project direction and team composition. Thanos💨 raised questions about project delivery capabilities, noting that team members appeared to be distancing themselves from Eliza based on Twitter bio changes. Odilitime responded by acknowledging the situation and committing to continued development, specifically mentioning work on a \"milady project.\"\n\nRegarding blockchain infrastructure, Odilitime confirmed that Solana and BSC (Binance Smart Chain) are the two active chains currently being utilized by the project. This clarification came in response to questions about the project's multi-chain strategy.\n\nOther discussions included casual greetings, a job-seeking developer (AurelRheno), and a proposal from Ken about launching a new meme coin with available budget. The overall technical depth was limited, with most exchanges being brief status updates or community sentiment discussions rather than substantive technical problem-solving.\n\n## 2. FAQ\n\nQ: How are you going to deliver on what you have decided to work on if people are leaving? (asked by Thanos💨) A: Acknowledged the concern and stated they will continue building and hope to regain trust (answered by Odilitime)\n\nQ: Which chain are we regaining trust on today? (asked by Boj/acc) A: Solana and BSC are the two active chains (answered by Odilitime)\n\nQ: Is there anyone who is looking for a developer? (asked by AurelRheno) A: Unanswered\n\n## 3. Help Interactions\n\nNo significant help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nType: Feature | Description: ElizaOS plugin published for pre-trade risk scoring covering 205 tokens via ZARQ infrastructure | Mentioned By: LillAnders\n\nType: Technical | Description: Continue work on milady project | Mentioned By: Odilitime\n\nType: Technical | Description: Maintain active development on Solana and BSC chains | Mentioned By: Odilitime",
+          "messageCount": 28,
+          "userCount": 16
         }
       ]
     }
