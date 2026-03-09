@@ -314,6 +314,10 @@ export class DiscordChannelRegistry {
     const newColumns = [
       { name: 'aiRecommendation', type: 'TEXT' },
       { name: 'aiReason', type: 'TEXT' },
+      // Unavailability tracking — channels marked unavailable are skipped during fetch
+      // to avoid wasting API calls on permanent errors (Missing Access, Unknown Channel)
+      { name: 'unavailableReason', type: 'TEXT' },
+      { name: 'unavailableSince', type: 'INTEGER' },
     ];
 
     for (const col of newColumns) {
@@ -797,6 +801,81 @@ export class DiscordChannelRegistry {
       "UPDATE discord_channels SET notes = ?, updatedAt = ? WHERE id = ?",
       [notes, Math.floor(Date.now() / 1000), channelId]
     );
+  }
+
+  // ============================================================================
+  // Unavailability Tracking
+  // ============================================================================
+
+  /**
+   * Ensure a channel row exists with minimal data (INSERT OR IGNORE).
+   * Needed for channels that have never been successfully fetched from the API.
+   */
+  async ensureChannelExists(channelId: string, guildId: string): Promise<void> {
+    const now = Math.floor(Date.now() / 1000);
+    await this.db.run(
+      `INSERT OR IGNORE INTO discord_channels (
+        id, guildId, guildName, name, type, createdAt, firstSeen, lastSeen,
+        nameChanges, topicChanges, categoryChanges, activityHistory,
+        createdAt_registry, updatedAt
+      ) VALUES (?, ?, '', ?, 0, 0, ?, ?, '[]', '[]', '[]', '[]', ?, ?)`,
+      [channelId, guildId, channelId, now, now, now, now]
+    );
+  }
+
+  /**
+   * Mark a channel as unavailable (e.g. Missing Access, Unknown Channel).
+   * Unavailable channels are skipped during fetch to avoid wasted API calls.
+   */
+  async markUnavailable(channelId: string, reason: string): Promise<void> {
+    const now = Math.floor(Date.now() / 1000);
+    await this.db.run(
+      `UPDATE discord_channels SET unavailableReason = ?, unavailableSince = ?, updatedAt = ? WHERE id = ?`,
+      [reason, now, now, channelId]
+    );
+  }
+
+  /**
+   * Clear unavailability status for a channel.
+   */
+  async clearUnavailable(channelId: string): Promise<void> {
+    await this.db.run(
+      `UPDATE discord_channels SET unavailableReason = NULL, unavailableSince = NULL, updatedAt = ? WHERE id = ?`,
+      [Math.floor(Date.now() / 1000), channelId]
+    );
+  }
+
+  /**
+   * Check if a channel is marked as unavailable.
+   */
+  async isUnavailable(channelId: string): Promise<boolean> {
+    const row = await this.db.get<{ unavailableReason: string | null }>(
+      `SELECT unavailableReason FROM discord_channels WHERE id = ?`,
+      channelId
+    );
+    return row?.unavailableReason != null;
+  }
+
+  /**
+   * Get all channels marked as unavailable.
+   */
+  async getUnavailableChannels(): Promise<Array<{ id: string; name: string; reason: string; since: number }>> {
+    const rows = await this.db.all<Array<{ id: string; name: string; unavailableReason: string; unavailableSince: number }>>(
+      `SELECT id, name, unavailableReason, unavailableSince FROM discord_channels WHERE unavailableReason IS NOT NULL ORDER BY unavailableSince DESC`
+    );
+    return rows.map(r => ({ id: r.id, name: r.name, reason: r.unavailableReason, since: r.unavailableSince }));
+  }
+
+  /**
+   * Clear unavailability status for all channels.
+   * Returns count of channels cleared.
+   */
+  async clearAllUnavailable(): Promise<number> {
+    const result = await this.db.run(
+      `UPDATE discord_channels SET unavailableReason = NULL, unavailableSince = NULL, updatedAt = ? WHERE unavailableReason IS NOT NULL`,
+      [Math.floor(Date.now() / 1000)]
+    );
+    return result.changes || 0;
   }
 
   /**

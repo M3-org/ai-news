@@ -149,7 +149,14 @@ npm run historical -- --source=elizaos.json --output=./output
 npm run historical -- --source=hyperfy-discord.json --after=2024-01-10 --before=2024-01-16 --output=./output/hyperfy
 npm run historical -- --source=discord-raw.json --after=2024-01-15 --output=./output/discord
 npm run historical -- --source=discord-raw.json --before=2024-01-10 --output=./output/discord
+
+# Environment variables for fetch tuning
+CHANNEL_CONCURRENCY=3 npm run historical -- --source=elizaos.json --date=2024-01-15  # parallel channel fetches (default: 2)
+FORCE_OVERWRITE=true npm run historical -- --source=elizaos.json --date=2024-01-15   # refetch existing data
 ```
+
+Channels marked as unavailable (Missing Access, Unknown Channel) are automatically skipped on subsequent runs.
+Use `npm run channels -- reset-unavailable` to clear these flags and retry.
 
 ## Channel Management
 
@@ -170,6 +177,7 @@ npm run channels -- list [--tracked|--active|--muted]
 npm run channels -- show <channelId>
 npm run channels -- stats
 npm run channels -- track|untrack|mute|unmute <channelId>
+npm run channels -- reset-unavailable  # Clear unavailability flags
 
 # With media download
 npm run historical -- --source=elizaos.json --download-media --date=2024-01-15

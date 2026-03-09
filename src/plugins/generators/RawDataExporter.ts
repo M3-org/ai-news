@@ -173,10 +173,10 @@ export class RawDataExporter {
    */
   private sanitizeName(name: string): string {
     if (!name) return 'unknown';
-    // Replace spaces/tabs with underscore, remove invalid chars, collapse multiple underscores
+    // Replace spaces/tabs with underscore, remove only filesystem-unsafe chars, collapse multiple underscores
     return name
       .replace(/\s+/g, '_')
-      .replace(/[^a-zA-Z0-9_\-]/g, '') // Allow underscore and hyphen
+      .replace(/[<>:"/\\|?*\x00-\x1f]/g, '') // Only strip filesystem-unsafe chars (preserve emojis)
       .replace(/__+/g, '_')
       .toLowerCase(); // Convert to lowercase for consistency
   }

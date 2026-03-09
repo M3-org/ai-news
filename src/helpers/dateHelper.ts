@@ -43,6 +43,12 @@ export const addOneDay = (dateObj: Date): Date => {
     return next;
 };
 
+export const subtractOneDay = (dateObj: Date): Date => {
+    const next = new Date(dateObj);
+    next.setDate(next.getDate() - 1);
+    return next;
+};
+
 /**
  * Executes a callback function for each date in a specified range.
  * 
@@ -63,31 +69,33 @@ export const addOneDay = (dateObj: Date): Date => {
  */
 export const callbackDateRangeLogic = async (filter: DateConfig, callback: Function) => {
     if (filter.after && filter.before) {
-      let current = parseDate(filter.after);
-      const end = parseDate(filter.before);
-      while (current <= end) {
+      // Iterate newest-first so most recent data is fetched first
+      let current = parseDate(filter.before);
+      const start = parseDate(filter.after);
+      while (current >= start) {
         const dayStr = formatDate(current);
         await callback(dayStr);
-        current = addOneDay(current);
+        current = subtractOneDay(current);
       }
     } else if (filter.filterType === 'during' && filter.date) {
       await callback(filter.date);
     } else if (filter.filterType === 'before' && filter.date) {
+      // Iterate newest-first
+      let current = parseDate(filter.date);
       const earliest = new Date(2025, 0, 1);
-      let current = earliest;
-      const end = parseDate(filter.date);
-      while (current <= end) {
+      while (current >= earliest) {
         const dayStr = formatDate(current);
         await callback(dayStr);
-        current = addOneDay(current);
+        current = subtractOneDay(current);
       }
     } else if (filter.filterType === 'after' && filter.date) {
-      let current = parseDate(filter.date);
-      const today = new Date();
-      while (current <= today) {
+      // Iterate newest-first
+      let current = new Date();
+      const start = parseDate(filter.date);
+      while (current >= start) {
         const dayStr = formatDate(current);
         await callback(dayStr);
-        current = addOneDay(current);
+        current = subtractOneDay(current);
       }
     }
   }

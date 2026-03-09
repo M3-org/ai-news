@@ -7,15 +7,17 @@ import { Client, TextChannel, Message, GuildMember, User, MessageType, MessageRe
 import { ContentSource } from './ContentSource';
 import { ContentItem, DiscordRawData, DiscordRawDataSourceConfig, TimeBlock, DiscordAttachment, DiscordEmbed, DiscordSticker, MediaDownloadConfig } from '../../types';
 import { logger, createProgressBar } from '../../helpers/cliHelper';
-import { delay, retryOperation } from '../../helpers/generalHelper';
+import { delay, retryOperation, classifyDiscordError, mapConcurrent } from '../../helpers/generalHelper';
 import { isMediaFile } from '../../helpers/fileHelper';
 import { processDiscordAttachment, processDiscordEmbed, processDiscordSticker } from '../../helpers/mediaHelper';
 import { StoragePlugin } from '../storage/StoragePlugin';
 import { DiscordChannelRegistry } from '../storage/DiscordChannelRegistry';
+import { DiscordUserRegistry } from '../storage/DiscordUserRegistry';
 
 const API_RATE_LIMIT_DELAY = 50; // Reduced to 50ms between API calls
 const PARALLEL_USER_FETCHES = 10; // Number of user fetches to run in parallel
 const DISCORD_EPOCH = 1420070400000; // Discord epoch start timestamp
+const CHANNEL_CONCURRENCY = Math.max(1, parseInt(process.env.CHANNEL_CONCURRENCY || '2', 10));
 
 /**
  * Converts a Date object to a Discord snowflake ID.
@@ -69,6 +71,8 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   private storage: StoragePlugin;
   /** Channel registry for tracking channel metadata and activity */
   private channelRegistry: DiscordChannelRegistry | null = null;
+  /** User registry for tracking user profiles and nickname history */
+  private userRegistry: DiscordUserRegistry | null = null;
   /** Media download configuration */
   public mediaDownload?: MediaDownloadConfig;
 
@@ -186,7 +190,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           try {
             const guild = this.client.guilds.cache.get(this.guildId);
             if (guild) {
-              member = await guild.members.fetch({ user, force: true, cache: true }).catch(() => null);
+              member = await guild.members.fetch({ user, cache: true }).catch(() => null);
               
               if (member) {
                 members.set(id, member);
@@ -287,10 +291,10 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
    * @param targetDate - Target date to fetch messages for
    * @returns Promise with aggregated raw data from all threads
    */
-  private async fetchForumMessages(channel: ForumChannel, targetDate: Date): Promise<DiscordRawData> {
+  private async fetchForumMessages(channel: ForumChannel, targetDate: Date, sharedUsers?: Map<string, DiscordRawData['users'][string]>): Promise<DiscordRawData> {
     logger.channel(`Processing forum: ${channel.name} (${channel.id}) for date ${targetDate.toISOString().split('T')[0]}`);
 
-    const users = new Map<string, DiscordRawData['users'][string]>();
+    const users = sharedUsers || new Map<string, DiscordRawData['users'][string]>();
     let allMessages: DiscordRawData['messages'] = [];
     const threadNames: string[] = [];
 
@@ -316,8 +320,17 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
       logger.info(`Found ${allThreads.size} threads in forum ${channel.name}`);
 
       let threadIndex = 0;
+      let snowflakeSkippedThreads = 0;
       for (const [threadId, thread] of allThreads) {
         threadIndex++;
+
+        // Skip threads created after the target date (snowflake date check, no API call)
+        const threadCreatedAt = snowflakeToDate(threadId);
+        if (threadCreatedAt > endOfDay) {
+          snowflakeSkippedThreads++;
+          continue;
+        }
+
         logger.progress(`Fetching ${channel.name}: Thread ${threadIndex}/${allThreads.size} - ${thread.name}`);
 
         try {
@@ -341,6 +354,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
       }
 
       logger.clearLine();
+      if (snowflakeSkippedThreads > 0) {
+        logger.debug(`Skipped ${snowflakeSkippedThreads} threads created after ${targetDate.toISOString().split('T')[0]}`);
+      }
       logger.info(`Finished ${channel.name}. Collected ${allMessages.length} messages from ${threadNames.length} threads.`);
 
     } catch (error) {
@@ -463,9 +479,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     return messages;
   }
 
-  private async fetchChannelMessages(channel: TextChannel, targetDate: Date): Promise<DiscordRawData> {
+  private async fetchChannelMessages(channel: TextChannel, targetDate: Date, sharedUsers?: Map<string, DiscordRawData['users'][string]>): Promise<DiscordRawData> {
     logger.channel(`Processing channel: ${channel.name} (${channel.id}) for date ${targetDate.toISOString().split('T')[0]}`);
-    const users = new Map<string, DiscordRawData['users'][string]>();
+    const users = sharedUsers || new Map<string, DiscordRawData['users'][string]>();
     let messages: DiscordRawData['messages'] = [];
     const collectedMessageIds = new Set<string>(); // To avoid duplicates
 
@@ -483,10 +499,19 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     let totalScanned = 0;
     let batchCount = 0;
 
+    // Crash recovery: check for a backfill cursor from a previous interrupted run
+    const cursorKey = `backfill:${channel.id}:${targetDate.toISOString().split('T')[0]}`;
+    const resumeFromId = await this.storage.getCursor(cursorKey);
+    if (resumeFromId) {
+      logger.info(`Resuming ${channel.name} from cursor ${resumeFromId}`);
+    }
+
     try {
         // --- Phase 1: Fetch messages around the start of the day ---
-        logger.progress(`Fetching ${channel.name}: Phase 1 - Finding start point around ${targetDate.toISOString().split('T')[0]}`);
-        let initialMessages = await retryOperation(() => channel.messages.fetch({ limit: 100, around: startSnowflake }));
+        // If resuming from a crash cursor, start from the cursor position instead
+        const phase1Snowflake = resumeFromId || startSnowflake;
+        logger.progress(`Fetching ${channel.name}: Phase 1 - Finding start point around ${targetDate.toISOString().split('T')[0]}${resumeFromId ? ' (resumed)' : ''}`);
+        let initialMessages = await retryOperation(() => channel.messages.fetch({ limit: 100, around: phase1Snowflake }));
         totalScanned += initialMessages.size;
         batchCount++;
 
@@ -501,6 +526,23 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         });
         logger.progress(`Fetching ${channel.name}: Phase 1 - Scanned ${totalScanned}, Found ${messagesInTargetDateRange.length} initial`);
         await delay(API_RATE_LIMIT_DELAY);
+
+        // Short-circuit: if Phase 1 found 0 in-range messages but returned messages
+        // that span across the target date, the channel is definitively empty for this date
+        if (messagesInTargetDateRange.length === 0 && initialMessages.size > 0) {
+            const timestamps = initialMessages.map((m: Message<true>) => m.createdTimestamp);
+            const hasBeforeTarget = timestamps.some((t: number) => t < startOfDay.getTime());
+            const hasAfterTarget = timestamps.some((t: number) => t > endOfDay.getTime());
+            if (hasBeforeTarget && hasAfterTarget) {
+                logger.debug(`No messages on ${targetDate.toISOString().slice(0, 10)} for ${channel.name} (confirmed by surrounding messages)`);
+                return {
+                    channel: { id: channel.id, name: channel.name, topic: channel.topic, category: channel.parent?.name || null },
+                    date: targetDate.toISOString(),
+                    users: {},
+                    messages: []
+                };
+            }
+        }
 
         // --- Phase 2: Fetch messages before the earliest found message ---
         let earliestMessageId = messagesInTargetDateRange.length > 0
@@ -539,6 +581,11 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             if (!earliestMessageId) hasMoreBefore = false; // Safety break
 
             logger.progress(`Fetching ${channel.name}: Phase 2 (Backwards) - Scanned ${totalScanned}, Added ${batchAddedCount}, Total ${collectedMessageIds.size}, Oldest: ${earliestMessageId ? snowflakeToDate(earliestMessageId).toISOString().split('T')[0] : 'N/A'} (Batch ${batchCount})`);
+
+            // Save crash recovery cursor so we can resume from here if interrupted
+            if (earliestMessageId) {
+              await this.storage.setCursor(cursorKey, earliestMessageId);
+            }
 
             // Stop if the oldest message is clearly before our target start date
             if (earliestMessageId && BigInt(earliestMessageId) < BigInt(startSnowflake)) {
@@ -625,6 +672,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             messages: []
         };
     }
+
+    // Clean up crash recovery cursor on successful completion
+    await this.storage.deleteCursor(cursorKey);
 
     // Clear progress line and log final result
     logger.clearLine();
@@ -782,13 +832,20 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
       logger.success('Successfully logged in to Discord');
     }
 
-    // Initialize channel registry if storage supports direct db access
-    if (!this.channelRegistry) {
+    // Initialize channel and user registries if storage supports direct db access
+    if (!this.channelRegistry || !this.userRegistry) {
       const db = this.storage.getDb();
       if (db) {
-        this.channelRegistry = new DiscordChannelRegistry(db);
-        await this.channelRegistry.initialize();
-        logger.debug('Initialized DiscordChannelRegistry');
+        if (!this.channelRegistry) {
+          this.channelRegistry = new DiscordChannelRegistry(db);
+          await this.channelRegistry.initialize();
+          logger.debug('Initialized DiscordChannelRegistry');
+        }
+        if (!this.userRegistry) {
+          this.userRegistry = new DiscordUserRegistry(db);
+          await this.userRegistry.initialize();
+          logger.debug('Initialized DiscordUserRegistry');
+        }
       }
     }
 
@@ -799,21 +856,52 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     const targetTimestamp = Math.floor(targetDate.getTime() / 1000); // Keep as seconds for ContentItem
 
     // Pre-check which channels already have data for this date
+    const forceOverwrite = process.env.FORCE_OVERWRITE === 'true';
     const channelsToFetch: string[] = [];
-    const skippedChannels: string[] = [];
+    const snowflakeSkipped: string[] = [];
+    const storageSkipped: string[] = [];
+    const unavailableSkipped: string[] = [];
+
+    // Compute end-of-day for snowflake creation-date check
+    const endOfTargetDate = new Date(targetDate);
+    endOfTargetDate.setUTCHours(23, 59, 59, 999);
 
     for (const channelId of this.channelIds) {
+      // Skip channels that didn't exist yet on the target date (pure math, no API call)
+      const channelCreatedAt = snowflakeToDate(channelId);
+      if (channelCreatedAt > endOfTargetDate) {
+        snowflakeSkipped.push(channelId);
+        continue;
+      }
+
+      // Skip channels marked as unavailable (Missing Access, Unknown Channel)
+      if (this.channelRegistry) {
+        const unavailable = await this.channelRegistry.isUnavailable(channelId);
+        if (unavailable) {
+          unavailableSkipped.push(channelId);
+          continue;
+        }
+      }
+
       const cid = `discord-raw-${channelId}-${date}`;
       const exists = await this.storage.getContentItem(cid);
-      if (exists) {
-        skippedChannels.push(channelId);
+      if (exists && !forceOverwrite) {
+        storageSkipped.push(channelId);
       } else {
         channelsToFetch.push(channelId);
       }
     }
 
-    if (skippedChannels.length > 0) {
-      logger.info(`Skipping ${skippedChannels.length} channels with existing data for ${date}`);
+    if (snowflakeSkipped.length > 0) {
+      logger.info(`Skipping ${snowflakeSkipped.length} channels not yet created on ${date}`);
+    }
+    if (unavailableSkipped.length > 0) {
+      logger.info(`Skipping ${unavailableSkipped.length} channels marked unavailable (use 'npm run channels -- reset-unavailable' to clear)`);
+    }
+    if (forceOverwrite) {
+      logger.info(`FORCE_OVERWRITE=true: refetching all ${channelsToFetch.length} channels for ${date}`);
+    } else if (storageSkipped.length > 0) {
+      logger.info(`Skipping ${storageSkipped.length} channels with existing data for ${date}`);
     }
 
     if (channelsToFetch.length === 0) {
@@ -821,57 +909,110 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
       return items;
     }
 
-    logger.info(`Processing ${channelsToFetch.length} channels for date: ${date}`);
+    logger.info(`Processing ${channelsToFetch.length} channels for date: ${date} (concurrency: ${CHANNEL_CONCURRENCY})`);
 
-    for (const [channelIndex, channelId] of channelsToFetch.entries()) {
+    // Shared user map across all channels for this date to avoid redundant API calls
+    const sharedUsers = new Map<string, DiscordRawData['users'][string]>();
+
+    await mapConcurrent(channelsToFetch, CHANNEL_CONCURRENCY, async (channelId, channelIndex) => {
       try {
         const channel = await retryOperation(() => this.client.channels.fetch(channelId));
         if (!channel) {
           logger.warning(`Channel ${channelId} does not exist.`);
-          continue;
+          // Save empty marker so we don't retry this channel+date
+          await this.storage.saveContentItems([{
+            cid: `discord-raw-${channelId}-${date}`,
+            type: 'discordRawData',
+            source: `unknown`,
+            date: targetTimestamp,
+            metadata: { channelId, dateProcessed: date, empty: true, reason: 'channel_not_found' }
+          }]);
+          return;
         }
 
-        let rawData: DiscordRawData;
+        // Successfully fetched — clear any previous unavailability
+        if (this.channelRegistry) {
+          await this.channelRegistry.clearUnavailable(channelId);
+        }
+
+        // For text/announcement channels, skip if lastMessageId predates the target date.
+        // This avoids 3-4 API calls per channel per date for long-inactive channels.
+        // Forums are excluded — their lastMessageId doesn't reflect thread activity.
+        if (
+          (channel.type === ChannelType.GuildText || channel.type === ChannelType.GuildAnnouncement) &&
+          (channel as TextChannel).lastMessageId
+        ) {
+          const lastMsgDate = snowflakeToDate((channel as TextChannel).lastMessageId!);
+          const startOfDay = new Date(targetDate);
+          startOfDay.setUTCHours(0, 0, 0, 0);
+          if (lastMsgDate < startOfDay) {
+            logger.debug(`Skipping ${channel.name}: last message ${lastMsgDate.toISOString().split('T')[0]} predates ${date}`);
+            await this.storage.saveContentItems([{
+              cid: `discord-raw-${channel.id}-${date}`,
+              type: 'discordRawData',
+              source: `${channel.guild.name} - ${channel.name}`,
+              date: targetTimestamp,
+              metadata: { channelId: channel.id, guildId: channel.guild.id, guildName: channel.guild.name, channelName: channel.name, messageCount: 0, dateProcessed: date, empty: true }
+            }]);
+            return;
+          }
+        }
 
         // Handle different channel types
+        let rawData: DiscordRawData;
         if (channel.type === ChannelType.GuildText) {
           // Regular text channel
-          rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate);
+          rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate, sharedUsers);
         } else if (channel.type === ChannelType.GuildForum) {
           // Forum channel - fetch from threads
-          rawData = await this.fetchForumMessages(channel as ForumChannel, targetDate);
+          rawData = await this.fetchForumMessages(channel as ForumChannel, targetDate, sharedUsers);
         } else if (channel.type === ChannelType.GuildAnnouncement) {
           // Announcement channels work like text channels
-          rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate);
+          rawData = await this.fetchChannelMessages(channel as TextChannel, targetDate, sharedUsers);
         } else {
-          logger.warning(`Channel ${channelId} is type ${channel.type} (not text/forum/announcement).`);
-          continue;
+          logger.warning(`Channel ${channelId} is type ${channel.type} (not text/forum/announcement). Saving empty marker.`);
+          // Save empty marker so unsupported channel types don't retry every run
+          await this.storage.saveContentItems([{
+            cid: `discord-raw-${channelId}-${date}`,
+            type: 'discordRawData',
+            source: `${channel.guild?.name || 'unknown'} - ${channel.id}`,
+            date: targetTimestamp,
+            metadata: { channelId, dateProcessed: date, empty: true, reason: `unsupported_type_${channel.type}` }
+          }]);
+          return;
         }
-        
+
         const guildName = channel.guild.name;
         const channelName = channel.name.replace(/[^a-zA-Z0-9-_]/g, '_').toLowerCase();
         const formattedDate = new Date().toISOString().replace(/[:.]/g, '-');
-        
+
+        const contentItem: ContentItem = {
+          cid: `discord-raw-${channel.id}-${date}`,
+          type: 'discordRawData',
+          source: `${guildName} - ${channel.name}`,
+          title: `Raw Discord Data: ${channel.name} (${date})`,
+          text: JSON.stringify(rawData),
+          link: `https://discord.com/channels/${channel.guild.id}/${channel.id}`,
+          date: targetTimestamp,
+          metadata: {
+            channelId: channel.id,
+            guildId: channel.guild.id,
+            guildName: guildName,
+            channelName: channel.name,
+            messageCount: rawData.messages.length,
+            userCount: Object.keys(rawData.users).length,
+            dateProcessed: date,
+            ...(rawData.messages.length > 0
+              ? { exportTimestamp: formattedDate }
+              : { empty: true })
+          }
+        };
+
+        // Save immediately so data survives Ctrl+C between channels.
+        // saveContentItems uses upsert, so re-runs won't duplicate.
+        await this.storage.saveContentItems([contentItem]);
         if (rawData.messages.length > 0) {
-          items.push({
-            cid: `discord-raw-${channel.id}-${date}`,
-            type: 'discordRawData',
-            source: `${guildName} - ${channel.name}`,
-            title: `Raw Discord Data: ${channel.name} (${date})`,
-            text: JSON.stringify(rawData),
-            link: `https://discord.com/channels/${channel.guild.id}/${channel.id}`,
-            date: targetTimestamp,
-            metadata: {
-              channelId: channel.id,
-              guildId: channel.guild.id,
-              guildName: guildName,
-              channelName: channel.name,
-              messageCount: rawData.messages.length,
-              userCount: Object.keys(rawData.users).length,
-              dateProcessed: date,
-              exportTimestamp: formattedDate
-            }
-          });
+          items.push(contentItem);
         }
 
         // Update channel registry with channel metadata and activity
@@ -909,11 +1050,44 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           }
         }
 
+        // Update user registry with user data from this channel
+        if (this.userRegistry && rawData.messages.length > 0) {
+          try {
+            // Count messages per user from raw data
+            const messageCounts = new Map<string, number>();
+            for (const msg of rawData.messages) {
+              messageCounts.set(msg.uid, (messageCounts.get(msg.uid) || 0) + 1);
+            }
+
+            // Upsert each user
+            for (const [userId, userData] of Object.entries(rawData.users)) {
+              await this.userRegistry.upsertUser({
+                id: userId,
+                username: userData.name,
+                displayName: userData.nickname || null,
+                roles: userData.roles || [],
+                observedAt: date,
+                messageCount: messageCounts.get(userId) || 0,
+              });
+            }
+          } catch (regError) {
+            logger.warning(`Failed to update user registry for ${channel.name}: ${regError}`);
+          }
+        }
+
         logger.success(`Processed ${rawData.messages.length} messages from ${channel.name}`);
       } catch (error) {
-        logger.error(`Error processing channel ${channelId}: ${error}`);
+        // Classify error and mark channel unavailable if permanent
+        const { isPermanent, reason } = classifyDiscordError(error);
+        if (isPermanent && this.channelRegistry) {
+          await this.channelRegistry.ensureChannelExists(channelId, this.guildId);
+          await this.channelRegistry.markUnavailable(channelId, reason);
+          logger.warning(`Channel ${channelId} marked unavailable: ${reason}`);
+        } else {
+          logger.error(`Error processing channel ${channelId}: ${error}`);
+        }
       }
-    }
+    });
 
     logger.success(`Finished processing all channels for date ${date}`);
     return items;

@@ -18,7 +18,7 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 (async () => {
   try {
@@ -39,14 +39,24 @@ dotenv.config();
       if (arg.startsWith('--source=')) {
         sourceFile = arg.split('=')[1];
       }
-      if (arg === '--onlyGenerate' || arg === '--onlyGenerate=true') {
+      if (
+        arg === '--onlyGenerate' ||
+        arg === '--onlyGenerate=true' ||
+        arg === '--only-generate' ||
+        arg === '--only-generate=true'
+      ) {
         onlyGenerate = true;
-      } else if (arg === '--onlyGenerate=false') {
+      } else if (arg === '--onlyGenerate=false' || arg === '--only-generate=false') {
         onlyGenerate = false;
       }
-      if (arg === '--onlyFetch' || arg === '--onlyFetch=true') {
+      if (
+        arg === '--onlyFetch' ||
+        arg === '--onlyFetch=true' ||
+        arg === '--only-fetch' ||
+        arg === '--only-fetch=true'
+      ) {
         onlyFetch = true;
-      } else if (arg === '--onlyFetch=false') {
+      } else if (arg === '--onlyFetch=false' || arg === '--only-fetch=false') {
         onlyFetch = false;
       }
       if (arg.startsWith('--output=') || arg.startsWith('-o=')) {

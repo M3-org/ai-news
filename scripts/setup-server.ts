@@ -11,12 +11,21 @@
  */
 
 import * as fs from "fs";
+import * as os from "os";
 import * as path from "path";
 import * as readline from "readline";
 import { spawn, spawnSync } from "child_process";
 import * as dotenv from "dotenv";
+import { Command } from "commander";
+import {
+  detectExistingState,
+  DiscoveredChannel,
+  getConfigChannelIds,
+  getDbDateRange,
+  getDiscoveredChannels,
+} from "./cli";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 const CONFIG_DIR = "./config";
 const ENV_FILE = ".env";
@@ -129,6 +138,25 @@ function findEnvTokenVars(): string[] {
   return tokens;
 }
 
+function getDefaultShellRcPath(): string {
+  const home = process.env.HOME || os.homedir();
+  const shell = process.env.SHELL || "";
+  if (shell.includes("zsh")) return path.join(home, ".zshrc");
+  if (shell.includes("bash")) return path.join(home, ".bashrc");
+  return path.join(home, ".profile");
+}
+
+function installAiNewsAlias(rcPath: string, repoPath: string): { installed: boolean; message: string } {
+  const existing = fs.existsSync(rcPath) ? fs.readFileSync(rcPath, "utf8") : "";
+  if (existing.includes("ai-news()") && existing.includes("npm run cli --")) {
+    return { installed: false, message: `Alias already present in ${rcPath}` };
+  }
+
+  const snippet = `\n# ai-news unified CLI\nai-news() { (cd "${repoPath}" && npm run cli -- "$@"); }\n`;
+  fs.appendFileSync(rcPath, snippet, "utf8");
+  return { installed: true, message: `Alias installed in ${rcPath}` };
+}
+
 // ============================================================================
 // Config template
 // ============================================================================
@@ -237,56 +265,12 @@ function runCommand(cmd: string, args: string[]): Promise<number> {
 // Channel helpers
 // ============================================================================
 
-interface DiscoveredChannel {
-  id: string;
-  name: string;
-  categoryName: string | null;
-  isMuted: boolean;
-}
-
-function getDiscoveredChannels(dbPath: string): DiscoveredChannel[] {
-  try {
-    const result = spawnSync(
-      "sqlite3",
-      [
-        dbPath,
-        "-json",
-        "SELECT id, name, categoryName, isMuted FROM discord_channels WHERE isMuted = 0 ORDER BY categoryName, position",
-      ],
-      { encoding: "utf8" }
-    );
-    if (result.status !== 0 || !result.stdout.trim()) return [];
-    return JSON.parse(result.stdout);
-  } catch {
-    return [];
-  }
-}
-
 function updateConfigChannelIds(configPath: string, channelIds: string[]): void {
   const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
   if (config.sources?.[0]?.params) {
     config.sources[0].params.channelIds = channelIds;
   }
   fs.writeFileSync(configPath, JSON.stringify(config, null, 2) + "\n");
-}
-
-function getDbDateRange(dbPath: string): { min: string; max: string } | null {
-  try {
-    const result = spawnSync(
-      "sqlite3",
-      [
-        dbPath,
-        "SELECT MIN(date), MAX(date) FROM items WHERE type='discordRawData'",
-      ],
-      { encoding: "utf8" }
-    );
-    if (result.status !== 0 || !result.stdout.trim()) return null;
-    const [min, max] = result.stdout.trim().split("|");
-    if (!min || !max) return null;
-    return { min: min.split("T")[0], max: max.split("T")[0] };
-  } catch {
-    return null;
-  }
 }
 
 function updateConfigMedia(configPath: string, enabled: boolean): void {
@@ -424,14 +408,6 @@ async function reviewChannels(
   return channels.filter((ch) => selected.has(ch.id)).map((ch) => ch.id);
 }
 
-function getConfigChannelIds(configPath: string): string[] {
-  try {
-    const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
-    return config.sources?.[0]?.params?.channelIds || [];
-  } catch {
-    return [];
-  }
-}
 
 async function selectChannels(
   rl: readline.Interface,
@@ -491,15 +467,46 @@ async function selectChannels(
 interface PresetArgs {
   name?: string;
   guildId?: string;
+  run?: boolean;
+  full?: boolean;
+  dryRun?: boolean;
+  installAlias?: boolean;
+  shellRc?: string;
 }
 
-function parsePresetArgs(): PresetArgs {
-  const result: PresetArgs = {};
-  for (const arg of process.argv.slice(2)) {
-    if (arg.startsWith("--name=")) result.name = arg.split("=")[1];
-    else if (arg.startsWith("--guild-id=")) result.guildId = arg.split("=")[1];
-  }
-  return result;
+function parsePresetArgs(argv: string[] = process.argv.slice(2)): PresetArgs {
+  const program = new Command();
+  program
+    .name("setup")
+    .description("Discord server setup wizard for ai-news")
+    .option("--name <slug>", "Server slug (e.g. m3org)")
+    .option("--guild-id <id>", "Discord guild ID")
+    .option("--run", "Non-interactive catch-up mode")
+    .option("--full", "Run all pending setup steps (with --run)")
+    .option("--dry-run", "Show what would run without mutating")
+    .option("--install-alias", "Install ai-news shell alias as part of setup")
+    .option("--shell-rc <path>", "Shell rc file path for alias install (default from $SHELL)")
+    .addHelpText(
+      "after",
+      `
+Examples:
+  npm run setup
+  npm run setup -- --name=m3org --guild-id=433492168825634816
+  npm run setup -- --name=m3org --run --dry-run
+  npm run setup -- --name=m3org --run --install-alias
+`
+    );
+  program.parse(argv, { from: "user" });
+  const opts = program.opts<{
+    name?: string;
+    guildId?: string;
+    run?: boolean;
+    full?: boolean;
+    dryRun?: boolean;
+    installAlias?: boolean;
+    shellRc?: string;
+  }>();
+  return opts;
 }
 
 // ============================================================================
@@ -995,7 +1002,8 @@ async function stepUserRegistry(
 
 async function stepSummary(
   rl: readline.Interface,
-  state: WizardState
+  state: WizardState,
+  preset?: PresetArgs
 ): Promise<void> {
   console.log("\n=== Setup Complete ===\n");
 
@@ -1035,17 +1043,176 @@ async function stepSummary(
   console.log(
     `  Download media:      npm run download-media -- --source=${state.name}.json`
   );
+  console.log(
+    `  Shell alias:         ai-news status --source=${state.name}.json`
+  );
   console.log("");
 
+  const shouldInstallAlias = preset?.installAlias || await askYesNo(
+    rl,
+    `Install ai-news alias in shell rc (${getDefaultShellRcPath()})?`,
+    true
+  );
+  if (shouldInstallAlias) {
+    const rcPath = preset?.shellRc || getDefaultShellRcPath();
+    const result = installAiNewsAlias(rcPath, process.cwd());
+    console.log(`  ${result.message}`);
+    console.log(`  Reload shell: source ${rcPath}`);
+    console.log("");
+  }
+
   state.steps["summary"] = "done";
+}
+
+// ============================================================================
+// State detection
+// ============================================================================
+
+function printDetectedState(state: WizardState): void {
+  console.log("Detected state:");
+  for (const step of STEPS) {
+    const status = state.steps[step.id];
+    const icon = status === "done" ? "[x]" : "[ ]";
+    let extra = "";
+    if (step.id === "fetch" && state.fetchedFrom) {
+      extra = ` (${state.fetchedFrom} to ${state.fetchedTo})`;
+    }
+    if (step.id === "select" && state.selectedChannels.length > 0) {
+      extra = ` (${state.selectedChannels.length} channels)`;
+    }
+    console.log(`  ${icon} ${step.label}${extra}`);
+  }
+  console.log("");
+}
+
+// ============================================================================
+// Non-interactive --run mode
+// ============================================================================
+
+async function runNonInteractive(
+  state: WizardState,
+  full: boolean,
+  dryRun = false,
+  installAlias = false,
+  shellRc?: string
+): Promise<void> {
+  if (!state.configPath || !fs.existsSync(state.configPath)) {
+    console.error(`Config not found: ${state.configPath}`);
+    console.error("Run interactive setup first: npm run setup -- --name=" + state.name);
+    process.exit(1);
+  }
+
+  detectExistingState(state);
+  printDetectedState(state);
+
+  const maybeInstallAlias = (): void => {
+    if (!installAlias) return;
+    const rcPath = shellRc || getDefaultShellRcPath();
+    if (dryRun) {
+      console.log(`\n[DRY RUN] Would install ai-news alias in ${rcPath}`);
+      return;
+    }
+    const result = installAiNewsAlias(rcPath, process.cwd());
+    console.log(`\n${result.message}`);
+    console.log(`Reload shell: source ${rcPath}`);
+  };
+
+  if (full) {
+    // Run all pending steps in order (no prompts)
+    const autoSteps: { id: string; run: () => Promise<number> }[] = [
+      {
+        id: "discover",
+        run: () => runCommand("npm", ["run", "channels", "--", "discover", `--source=${state.name}.json`]),
+      },
+      {
+        id: "analyze",
+        run: () => runCommand("npm", ["run", "channels", "--", "analyze", "--all", `--source=${state.name}.json`]),
+      },
+      {
+        id: "channel-registry",
+        run: () => runCommand("npm", ["run", "channels", "--", "build-registry", `--source=${state.name}.json`]),
+      },
+      {
+        id: "user-registry",
+        run: () => runCommand("npm", ["run", "users", "--", "build-registry", `--source=${state.name}.json`]),
+      },
+    ];
+
+    for (const step of autoSteps) {
+      if (state.steps[step.id] === "done") {
+        console.log(`  Skipping ${step.id} (already done)`);
+        continue;
+      }
+      if (dryRun) {
+        console.log(`  [DRY RUN] Would run ${step.id}`);
+        continue;
+      }
+      console.log(`\n  Running ${step.id}...`);
+      const code = await step.run();
+      if (code !== 0) {
+        console.error(`  Step ${step.id} failed (exit code ${code})`);
+      }
+    }
+  }
+
+  // Always: fetch from last data date to today
+  const dbPath = path.resolve(process.cwd(), `data/${state.name}.sqlite`);
+  const dateRange = getDbDateRange(dbPath);
+  const today = new Date().toISOString().split("T")[0];
+
+  let afterDate: string;
+  if (dateRange) {
+    // Start from the day before last date to ensure overlap
+    const d = new Date(dateRange.max);
+    d.setDate(d.getDate() - 1);
+    afterDate = d.toISOString().split("T")[0];
+    console.log(`\nCatching up: ${dateRange.max} to ${today}`);
+  } else {
+    // No data yet — fetch last 7 days
+    const d = new Date();
+    d.setDate(d.getDate() - 8);
+    afterDate = d.toISOString().split("T")[0];
+    console.log(`\nNo existing data. Fetching last 7 days.`);
+  }
+
+  if (afterDate >= today) {
+    console.log("Already up to date.");
+    maybeInstallAlias();
+    return;
+  }
+  if (dryRun) {
+    console.log("\nDry run: would execute historical fetch with:");
+    console.log(`  --source=${state.name}.json`);
+    console.log(`  --after=${afterDate}`);
+    console.log(`  --before=${today}`);
+    console.log(`  --output=./output/${state.name}`);
+    maybeInstallAlias();
+    return;
+  }
+
+  const code = await runCommand("npm", [
+    "run", "historical", "--",
+    `--source=${state.name}.json`,
+    `--after=${afterDate}`,
+    `--before=${today}`,
+    `--output=./output/${state.name}`,
+  ]);
+
+  if (code === 0) {
+    console.log("\nDone. Data is up to date.");
+    maybeInstallAlias();
+  } else {
+    console.error("\nFetch failed (exit code " + code + ")");
+    process.exit(1);
+  }
 }
 
 // ============================================================================
 // Main loop
 // ============================================================================
 
-async function main() {
-  const preset = parsePresetArgs();
+export async function runSetup(argv: string[] = process.argv.slice(2)) {
+  const preset = parsePresetArgs(argv);
   const rl = createRL();
 
   console.log("\n========================================");
@@ -1058,7 +1225,7 @@ async function main() {
     guildId: preset.guildId || "",
     tokenEnvVar: "",
     guildIdEnvVar: "",
-    configPath: "",
+    configPath: preset.name ? path.join(CONFIG_DIR, `${preset.name}.json`) : "",
     selectedChannels: [],
     mediaEnabled: false,
     steps: {},
@@ -1066,6 +1233,29 @@ async function main() {
 
   for (const step of STEPS) {
     state.steps[step.id] = "pending";
+  }
+
+  // Non-interactive mode
+  if (preset.run) {
+    if (!state.name) {
+      console.error("--run requires --name=<server-name>");
+      process.exit(1);
+    }
+    rl.close();
+    await runNonInteractive(
+      state,
+      !!preset.full,
+      !!preset.dryRun,
+      !!preset.installAlias,
+      preset.shellRc
+    );
+    return;
+  }
+
+  // Detect existing state for interactive mode
+  if (state.name && state.configPath && fs.existsSync(state.configPath)) {
+    detectExistingState(state);
+    printDetectedState(state);
   }
 
   const stepFns: Record<
@@ -1081,7 +1271,7 @@ async function main() {
     analyze: stepAnalyze,
     "channel-registry": stepChannelRegistry,
     "user-registry": stepUserRegistry,
-    summary: stepSummary,
+    summary: (r, s) => stepSummary(r, s, preset),
   };
 
   let currentStep = 0;
@@ -1094,7 +1284,7 @@ async function main() {
 
     if (chosen === -1) {
       // User pressed q — show summary and exit
-      await stepSummary(rl, state);
+      await stepSummary(rl, state, preset);
       break;
     }
 
@@ -1119,7 +1309,9 @@ async function main() {
   rl.close();
 }
 
-main().catch((err) => {
-  console.error("Error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  runSetup().catch((err) => {
+    console.error("Error:", err);
+    process.exit(1);
+  });
+}

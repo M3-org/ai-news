@@ -25,8 +25,9 @@ import * as https from "https";
 import * as http from "http";
 import * as dotenv from "dotenv";
 import { DiscordUserRegistry } from "../src/plugins/storage/DiscordUserRegistry";
+import { outputJson, spinner, resolveDbPathFromConfig } from "./cli";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 // ============================================================================
 // Types
@@ -74,18 +75,20 @@ interface CliArgs {
   dryRun?: boolean;
   updateIndex?: boolean;
   source?: string;
+  json?: boolean;
 }
 
 // ============================================================================
 // CLI Parsing
 // ============================================================================
 
-function parseArgs(): CliArgs {
-  const command = process.argv[2] || "help";
+function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
+  const first = argv[0];
+  const command = !first || first === "--help" || first === "-h" ? "help" : first;
   const args: CliArgs = { command };
 
-  for (let i = 3; i < process.argv.length; i++) {
-    const arg = process.argv[i];
+  for (let i = 1; i < argv.length; i++) {
+    const arg = argv[i];
 
     if (arg === "--all") args.all = true;
     else if (arg.startsWith("--date=")) args.date = arg.split("=")[1];
@@ -97,6 +100,7 @@ function parseArgs(): CliArgs {
     else if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--update-index") args.updateIndex = true;
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
+    else if (arg === "--json") args.json = true;
   }
 
   return args;
@@ -325,6 +329,7 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
 
 async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> {
   console.log("\n📊 Building Discord User Registry\n");
+  const buildSpinner = spinner("Building user registry", process.argv.slice(2)).start();
 
   if (args.dryRun) {
     console.log("(DRY RUN - no changes will be made)\n");
@@ -343,6 +348,7 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
   console.log(`   Found ${rawDataRows.length} entries\n`);
 
   if (rawDataRows.length === 0) {
+    buildSpinner.stop();
     console.log("⚠️  No discordRawData found. Nothing to process.");
     return;
   }
@@ -392,6 +398,7 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
       processed++;
 
       if (processed % 100 === 0) {
+        buildSpinner.text = `Processed ${processed}/${rawDataRows.length} entries`;
         console.log(`   Progress: ${processed}/${rawDataRows.length} (${Math.round(processed / rawDataRows.length * 100)}%)`);
       }
 
@@ -405,6 +412,19 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
   console.log(`   User observations: ${usersProcessed}`);
 
   if (args.dryRun) {
+    buildSpinner.stop();
+    if (args.json) {
+      outputJson({
+        ok: true,
+        command: "users.build-registry",
+        data: {
+          dryRun: true,
+          entriesProcessed: processed,
+          userObservations: usersProcessed,
+        },
+      });
+      return;
+    }
     console.log("\n✓ DRY RUN complete - no changes were made");
     return;
   }
@@ -454,6 +474,19 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
   }
 
   console.log("\n🎉 Done!\n");
+  buildSpinner.succeed("User registry build complete");
+  if (args.json) {
+    outputJson({
+      ok: true,
+      command: "users.build-registry",
+      data: {
+        dryRun: false,
+        entriesProcessed: processed,
+        userObservations: usersProcessed,
+        stats,
+      },
+    });
+  }
 }
 
 // ============================================================================
@@ -693,35 +726,31 @@ async function commandDownloadAvatars(db: Database, args: CliArgs): Promise<void
 // Command: status
 // ============================================================================
 
-async function commandStatus(db: Database): Promise<void> {
-  console.log("\n📊 User Cache Statistics\n");
-
+async function commandStatus(db: Database, args: CliArgs): Promise<void> {
   const stats = await db.get(`
     SELECT
       COUNT(*) as total_users,
-      SUM(CASE WHEN avatar_url IS NOT NULL THEN 1 ELSE 0 END) as with_avatars,
-      SUM(CASE WHEN is_default = 0 THEN 1 ELSE 0 END) as custom_avatars,
-      SUM(CASE WHEN is_default = 1 THEN 1 ELSE 0 END) as default_avatars,
-      SUM(CASE WHEN local_path IS NOT NULL THEN 1 ELSE 0 END) as downloaded,
-      SUM(CASE WHEN validated = 1 THEN 1 ELSE 0 END) as validated,
-      SUM(file_size) as total_size,
-      MIN(first_seen) as earliest_date,
-      MAX(last_seen) as latest_date
-    FROM avatar_cache
+      SUM(CASE WHEN avatarUrl IS NOT NULL THEN 1 ELSE 0 END) as with_avatars,
+      SUM(totalMessages) as total_messages,
+      MIN(firstSeen) as earliest_ts,
+      MAX(lastSeen) as latest_ts
+    FROM discord_users
   `);
+  if (args.json) {
+    outputJson({ ok: true, command: "users.status", data: stats });
+    return;
+  }
+  console.log("\n📊 User Cache Statistics\n");
 
   console.log(`Users: ${stats.total_users}`);
-  console.log(`\nAvatars:`);
-  console.log(`  With URLs: ${stats.with_avatars}`);
-  console.log(`  Custom: ${stats.custom_avatars}`);
-  console.log(`  Default: ${stats.default_avatars}`);
-  console.log(`\nDownloads:`);
-  console.log(`  Downloaded: ${stats.downloaded}`);
-  console.log(`  Validated: ${stats.validated}`);
-  if (stats.total_size) {
-    console.log(`  Total size: ${(stats.total_size / 1024 / 1024).toFixed(2)} MB`);
+  console.log(`Avatars with URL: ${stats.with_avatars}`);
+  console.log(`Total messages tracked: ${stats.total_messages || 0}`);
+  if (stats.earliest_ts && stats.latest_ts) {
+    const first = new Date(Number(stats.earliest_ts) * 1000).toISOString().split("T")[0];
+    const last = new Date(Number(stats.latest_ts) * 1000).toISOString().split("T")[0];
+    console.log(`Date Range: ${first} to ${last}`);
   }
-  console.log(`\nDate Range: ${stats.earliest_date} to ${stats.latest_date}\n`);
+  console.log("");
 }
 
 // ============================================================================
@@ -740,12 +769,14 @@ Commands:
                      Options: --rate-limit=<ms> --skip-existing
   build-registry     Build discord_users table from discordRawData
                      Options: --dry-run
+  status             Show registry/avatar cache statistics
   enrich             Enrich JSON files with nickname maps from discord_users
                      Options: --date=YYYY-MM-DD --from/--to --all --dry-run
 
 Options:
   --source=<config>.json  Target a specific config (e.g. --source=m3org.json)
                           Without --source, processes all configs in config/
+  --json                  Output machine-readable JSON summary where supported
 
 Examples:
   npm run users -- build-registry --source=m3org.json
@@ -781,32 +812,16 @@ function resolveDbPaths(source?: string): string[] {
 
   const paths: string[] = [];
   for (const configFile of configFiles) {
-    const configPath = path.join(CONFIG_DIR, configFile);
-    if (!fs.existsSync(configPath)) continue;
-    try {
-      const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
-      const storage = config.storage?.find((s: any) => s.params?.dbPath);
-      if (storage?.params?.dbPath) {
-        const dbPath = path.resolve(process.cwd(), storage.params.dbPath);
-        if (fs.existsSync(dbPath)) {
-          paths.push(dbPath);
-        }
-      }
-    } catch (e) {
-      // Skip invalid configs
+    const dbPath = resolveDbPathFromConfig(configFile);
+    if (dbPath && fs.existsSync(dbPath)) {
+      paths.push(dbPath);
     }
   }
   return paths;
 }
 
-async function main() {
-  const args = parseArgs();
-  const dbPaths = resolveDbPaths(args.source);
-
-  if (dbPaths.length === 0) {
-    console.error("No databases found. Use --source=<config>.json or add configs to config/.");
-    process.exit(1);
-  }
+export async function runUsers(argv: string[] = process.argv.slice(2)) {
+  const args = parseArgs(argv);
 
   // Help doesn't need a database
   if (args.command === "help" || !args.command) {
@@ -814,8 +829,17 @@ async function main() {
     return;
   }
 
+  const dbPaths = resolveDbPaths(args.source);
+
+  if (dbPaths.length === 0) {
+    console.error("No databases found. Use --source=<config>.json or add configs to config/.");
+    process.exit(1);
+  }
+
   for (const dbPath of dbPaths) {
-    console.log(`\nUsing database: ${path.relative(process.cwd(), dbPath)}`);
+    if (!args.json) {
+      console.log(`\nUsing database: ${path.relative(process.cwd(), dbPath)}`);
+    }
     const db = await open({ filename: dbPath, driver: sqlite3.Database });
 
     await initDatabase(db);
@@ -836,6 +860,9 @@ async function main() {
       case "download-avatars":
         await commandDownloadAvatars(db, args);
         break;
+      case "status":
+        await commandStatus(db, args);
+        break;
       default:
         commandHelp();
         break;
@@ -845,7 +872,9 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error("❌ Error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  runUsers().catch((err) => {
+    console.error("❌ Error:", err);
+    process.exit(1);
+  });
+}

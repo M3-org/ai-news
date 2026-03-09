@@ -19,6 +19,11 @@ on:
         type: boolean
         default: false
 
+# Prevent race conditions when deploying to gh-pages
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   sqlite-job:
     timeout-minutes: 90
@@ -284,4 +289,3 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: "Update Hyperfy data ${{ env.COMMIT_DATETIME }}"
-

@@ -15,6 +15,14 @@ export class SQLiteStorage implements StoragePlugin {
   public name: string;
   private db: Database<sqlite3.Database, sqlite3.Statement> | null = null;
   private dbPath: string;
+  private writeLock: Promise<void> = Promise.resolve();
+
+  /** Serialize writes so concurrent callers don't interleave transactions. */
+  private withLock<T>(fn: () => Promise<T>): Promise<T> {
+    const result = this.writeLock.then(fn);
+    this.writeLock = result.then(() => {}, () => {});
+    return result;
+  }
 
   static constructorInterface = {
     parameters: [
@@ -43,6 +51,9 @@ export class SQLiteStorage implements StoragePlugin {
    */
   public async init(): Promise<void> {
     this.db = await open({ filename: this.dbPath, driver: sqlite3.Database });
+    // WAL mode: concurrent reads during writes; busy timeout: retry instead of failing on contention
+    await this.db.exec("PRAGMA journal_mode=WAL");
+    await this.db.exec("PRAGMA busy_timeout=5000");
 
     // Create the items table if it doesn't exist
     await this.db.exec(`
@@ -100,21 +111,30 @@ export class SQLiteStorage implements StoragePlugin {
    * @throws Error if database is not initialized
    */
   public async saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
-    const operation = "saveContentItems";
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }
+    return this.withLock(() => this._saveContentItems(items));
+  }
+
+  private async _saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
+    const operation = "saveContentItems";
+    const db = this.db!;
     logger.debug(`[SQLiteStorage:${operation}] Starting transaction for ${items.length} items.`);
 
-    const updateStmt = await this.db.prepare(
-      `UPDATE items SET metadata = ? WHERE cid = ?`
+    const updateStmt = await db.prepare(
+      `
+      UPDATE items
+      SET type = ?, source = ?, title = ?, text = ?, link = ?, topics = ?, date = ?, metadata = ?
+      WHERE cid = ?
+      `
     );
-    const insertStmt = await this.db.prepare(
+    const insertStmt = await db.prepare(
       `INSERT INTO items (type, source, cid, title, text, link, topics, date, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
     );
 
     try {
-      await this.db.run("BEGIN TRANSACTION");
+      await db.run("BEGIN TRANSACTION");
       logger.debug(`[SQLiteStorage:${operation}] Transaction started.`);
 
       for (const item of items) {
@@ -145,7 +165,7 @@ export class SQLiteStorage implements StoragePlugin {
            continue;
         }
 
-        const existingRow = await this.db.get<{ id: number }>(
+        const existingRow = await db.get<{ id: number }>(
           `SELECT id FROM items WHERE cid = ?`,
           [item.cid]
         );
@@ -153,10 +173,17 @@ export class SQLiteStorage implements StoragePlugin {
         if (existingRow) {
            // Log BEFORE run
            logger.debug(`[SQLiteStorage:${operation}] Preparing to UPDATE item: ${itemLogInfo}`);
+           const metadataStr = item.metadata ? JSON.stringify(item.metadata) : null;
+           const topicStr = item.topics ? JSON.stringify(item.topics) : null;
            await updateStmt.run(
-                item.metadata ? JSON.stringify(item.metadata) : null,
-                // Potentially add item.topics update here if needed:
-                // item.topics ? JSON.stringify(item.topics) : null,
+                item.type,
+                item.source,
+                item.title,
+                item.text,
+                item.link,
+                topicStr,
+                item.date,
+                metadataStr,
                 item.cid
            );
            item.id = existingRow.id;
@@ -182,11 +209,11 @@ export class SQLiteStorage implements StoragePlugin {
         }
       }
 
-      await this.db.run("COMMIT");
+      await db.run("COMMIT");
       logger.debug(`[SQLiteStorage:${operation}] Transaction committed successfully for ${items.length} items.`);
     } catch (error) {
       logger.error(`[SQLiteStorage:${operation}] Transaction failed: ${error instanceof Error ? error.message : String(error)}. Rolling back.`);
-      await this.db.run("ROLLBACK");
+      await db.run("ROLLBACK");
       throw error;
     } finally {
       await updateStmt.finalize();
@@ -327,7 +354,7 @@ export class SQLiteStorage implements StoragePlugin {
   /**
    * Retrieves content items within a specific time range.
    * @param startEpoch - Start timestamp in epoch seconds
-   * @param endEpoch - End timestamp in epoch seconds
+   * @param endEpoch - End timestamp in epoch seconds (exclusive)
    * @param includeType - Optional type to include in results
    * @returns Promise<ContentItem[]> Array of content items within the time range
    * @throws Error if database is not initialized
@@ -349,18 +376,17 @@ export class SQLiteStorage implements StoragePlugin {
       throw new Error("startEpoch must be less than or equal to endEpoch.");
     }
 
-    // Note: Query uses date BETWEEN ? AND ?, which is inclusive.
-    // The adjustment `startEpoch - 1` and `endEpoch + 1` might be overly broad.
-    // Let's use the exact epoch range for clarity in logging and querying.
-    let query = `SELECT * FROM items WHERE date >= ? AND date <= ?`; // Use >= and <= for inclusive range
+    // Query uses [startEpoch, endEpoch) to avoid cross-day overlap.
+    let query = `SELECT * FROM items WHERE date >= ? AND date < ?`;
     const params: any[] = [startEpoch, endEpoch]; 
-    logger.debug(`[SQLiteStorage:${operation}] Initial query range: date >= ${startEpoch} AND date <= ${endEpoch}`);
+    logger.debug(`[SQLiteStorage:${operation}] Initial query range: date >= ${startEpoch} AND date < ${endEpoch}`);
 
     if (includeType) {
       query += ` AND type = ?`;    
       params.push(includeType);
       logger.debug(`[SQLiteStorage:${operation}] Adding filter: AND type = ${includeType}`);
     }
+    query += ` ORDER BY date ASC, cid ASC`;
 
     try {
       logger.debug(`[SQLiteStorage:${operation}] Executing query: ${query} with params: ${JSON.stringify(params)}`);
@@ -456,6 +482,14 @@ export class SQLiteStorage implements StoragePlugin {
       VALUES (?, ?)
       ON CONFLICT(cid) DO UPDATE SET message_id = excluded.message_id;
     `, [cid, messageId]);
+  }
+
+  /**
+   * Deletes a cursor by its unique cursor id.
+   */
+  public async deleteCursor(cid: string): Promise<void> {
+    if (!this.db) throw new Error("Database not initialized.");
+    await this.db.run(`DELETE FROM cursor WHERE cid = ?`, [cid]);
   }
 
   /**

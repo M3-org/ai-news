@@ -24,8 +24,9 @@ import OpenAI from "openai";
 import { parseDate, formatDate, addOneDay } from "../src/helpers/dateHelper";
 import { logger } from "../src/helpers/cliHelper";
 import { writeJsonFile } from "../src/helpers/fileHelper";
+import { outputJson } from "./cli";
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 // ============================================================================
 // Configuration
@@ -73,6 +74,7 @@ interface CliArgs {
   format?: "discord" | "elizaos" | "both";
   output?: string;
   ai?: boolean;
+  json?: boolean;
 }
 
 interface DailyDiscordSummary {
@@ -163,12 +165,13 @@ interface WeeklyElizaosSummary {
 // CLI Parsing
 // ============================================================================
 
-function parseArgs(): CliArgs {
-  const command = process.argv[2] || "help";
+function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
+  const first = argv[0];
+  const command = !first || first === "--help" || first === "-h" ? "help" : first;
   const args: CliArgs = { command, format: "both" };
 
-  for (let i = 3; i < process.argv.length; i++) {
-    const arg = process.argv[i];
+  for (let i = 1; i < argv.length; i++) {
+    const arg = argv[i];
 
     if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--ai") args.ai = true;
@@ -176,7 +179,7 @@ function parseArgs(): CliArgs {
     else if (arg.startsWith("--from=")) args.from = arg.split("=")[1];
     else if (arg.startsWith("--to=")) args.to = arg.split("=")[1];
     else if (arg === "-o" || arg === "--output") {
-      args.output = process.argv[++i];
+      args.output = argv[++i];
     } else if (arg.startsWith("--output=")) {
       args.output = arg.split("=")[1];
     } else if (arg.startsWith("-o=")) {
@@ -186,10 +189,19 @@ function parseArgs(): CliArgs {
       if (format === "discord" || format === "elizaos" || format === "both") {
         args.format = format;
       }
+    } else if (arg === "--json") {
+      args.json = true;
     }
   }
 
   return args;
+}
+
+function configureLoggerForMode(args: CliArgs): void {
+  if (!args.json && process.env.AI_NEWS_QUIET !== "1") return;
+  logger.info = () => {};
+  logger.success = () => {};
+  logger.warning = () => {};
 }
 
 // ============================================================================
@@ -521,11 +533,22 @@ async function commandGenerate(args: CliArgs): Promise<void> {
   if (args.dryRun) logger.info("Mode: DRY RUN");
 
   const outputFilename = args.output || "weekly.json";
+  const summary = {
+    startDate,
+    endDate,
+    format: args.format,
+    ai: !!args.ai,
+    dryRun: !!args.dryRun,
+    outputFilename,
+    discordDays: 0,
+    elizaosDays: 0,
+  };
 
   // Generate Discord weekly
   if (args.format !== "elizaos") {
     logger.info("--- Discord Summary ---");
     const discordDays = collectDailyFiles<DailyDiscordSummary>(DISCORD_JSON_DIR, startDate, endDate);
+    summary.discordDays = discordDays.length;
 
     if (discordDays.length > 0) {
       const weekly = buildDiscordWeekly(discordDays, startDate, endDate);
@@ -540,6 +563,7 @@ async function commandGenerate(args: CliArgs): Promise<void> {
   if (args.format !== "discord") {
     logger.info("--- ElizaOS Summary ---");
     const elizaosDays = collectDailyFiles<DailyElizaosSummary>(ELIZAOS_JSON_DIR, startDate, endDate);
+    summary.elizaosDays = elizaosDays.length;
 
     if (elizaosDays.length > 0) {
       let weekly: WeeklyElizaosSummary;
@@ -560,15 +584,20 @@ async function commandGenerate(args: CliArgs): Promise<void> {
   }
 
   logger.success("=== Done ===");
+  if (args.json) {
+    outputJson({ ok: true, command: "weekly.generate", data: summary });
+  }
 }
 
-async function commandList(): Promise<void> {
+async function commandList(args: CliArgs): Promise<void> {
   logger.info("=== Available Daily Files ===");
+  const payload: Record<string, { found: number; first?: string; last?: string }> = {};
 
   const listDir = (dir: string, label: string) => {
     logger.info(`${label}:`);
     if (!fs.existsSync(dir)) {
       logger.warning("  Directory not found");
+      payload[label] = { found: 0 };
       return;
     }
 
@@ -579,17 +608,22 @@ async function commandList(): Promise<void> {
 
     if (files.length === 0) {
       logger.warning("  No daily files found");
+      payload[label] = { found: 0 };
       return;
     }
 
     logger.info(`  Found ${files.length} files`);
     const first = files[0].replace(".json", "");
     const last = files[files.length - 1].replace(".json", "");
+    payload[label] = { found: files.length, first, last };
     logger.info(`  Range: ${first} to ${last}`);
   };
 
   listDir(DISCORD_JSON_DIR, "Discord summaries");
   listDir(ELIZAOS_JSON_DIR, "ElizaOS summaries");
+  if (args.json) {
+    outputJson({ ok: true, command: "weekly.list", data: payload });
+  }
 }
 
 function printHelp(): void {
@@ -612,6 +646,7 @@ Options for 'generate':
   -o, --output=<file>   Output filename (default: weekly.json)
   --ai                  Enable AI curation (newsroom-style editing)
   --dry-run             Preview without writing files
+  --json                Output machine-readable summary
 
 Examples:
   npm run weekly -- generate                              # Last 7 days from yesterday
@@ -640,15 +675,16 @@ AI Curation Mode (--ai):
 // Main
 // ============================================================================
 
-async function main(): Promise<void> {
-  const args = parseArgs();
+export async function runWeekly(argv: string[] = process.argv.slice(2)): Promise<void> {
+  const args = parseArgs(argv);
+  configureLoggerForMode(args);
 
   switch (args.command) {
     case "generate":
       await commandGenerate(args);
       break;
     case "list":
-      await commandList();
+      await commandList(args);
       break;
     case "help":
     default:
@@ -657,7 +693,9 @@ async function main(): Promise<void> {
   }
 }
 
-main().catch((err) => {
-  logger.error(`Error: ${err}`);
-  process.exit(1);
-});
+if (require.main === module) {
+  runWeekly().catch((err) => {
+    logger.error(`Error: ${err}`);
+    process.exit(1);
+  });
+}

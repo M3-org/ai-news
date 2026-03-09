@@ -67,6 +67,12 @@ export interface StoragePlugin {
   setCursor(cid: string, messageId: string): Promise<void>;
 
   /**
+   * Deletes a cursor by its unique cursor id.
+   * @param cid - Unique Cursor ID to delete.
+   */
+  deleteCursor(cid: string): Promise<void>;
+
+  /**
    * Returns the underlying database connection for direct access.
    * Used by registries (DiscordUserRegistry, DiscordChannelRegistry) that need
    * to manage their own tables within the same database.
