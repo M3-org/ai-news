@@ -261,8 +261,22 @@ jobs:
             --config "${CONFIG}.json" \
             $FORCE_FLAG
 
-      - name: Swap Discord URLs with CDN URLs
+      - name: Check manifest has media files
+        id: manifest_check
         if: hashFiles('media-upload/manifest.json') != ''
+        run: |
+          FILE_COUNT=$(jq '.files | length' ./media-upload/manifest.json 2>/dev/null || echo "0")
+
+          if [ "$FILE_COUNT" -gt 0 ]; then
+            echo "has_manifest_files=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Manifest has $FILE_COUNT media files"
+          else
+            echo "has_manifest_files=false" >> "$GITHUB_OUTPUT"
+            echo "ℹ️ Manifest has 0 media files; skipping URL swap"
+          fi
+
+      - name: Swap Discord URLs with CDN URLs
+        if: hashFiles('media-upload/manifest.json') != '' && steps.manifest_check.outputs.has_manifest_files == 'true'
         run: |
           SOURCE="${{ inputs.config_name || 'elizaos' }}"
           DATE="${{ steps.date.outputs.date }}"
@@ -415,7 +429,11 @@ jobs:
             echo "- Dated manifest: ${CDN_BASE}/${SOURCE}-media/manifests/${DATE}.json" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "✅ Memes, posters, and Discord media uploaded to CDN" >> $GITHUB_STEP_SUMMARY
-            echo "✅ All URLs swapped to CDN in JSON summary" >> $GITHUB_STEP_SUMMARY
+            if [ "${{ steps.manifest_check.outputs.has_manifest_files }}" = "true" ]; then
+              echo "✅ All URLs swapped to CDN in JSON summary" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "ℹ️ No Discord media for this date; URL swap step skipped" >> $GITHUB_STEP_SUMMARY
+            fi
           fi
 
       - name: Cleanup
