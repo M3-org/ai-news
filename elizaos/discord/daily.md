@@ -1,65 +1,110 @@
-# elizaOS Discord - 2026-03-08
+# elizaOS Discord - 2026-03-09
 
 ## Overall Discussion Highlights
 
-### Project Development & Team Status
+### B2B Commerce AI Agent Development
 
-The elizaOS community experienced discussions around project continuity and team composition. Concerns were raised about team members potentially distancing themselves from the Eliza project based on changes to their Twitter bios. In response, project leadership acknowledged the situation and reaffirmed commitment to continued development, specifically mentioning ongoing work on a "milady project."
+Jaime Vejar Aguirre presented a significant B2B commerce AI agent project for YOYO, a Latin American Super App. The technical architecture includes:
 
-### Blockchain Infrastructure
+- **LangGraph** for agent orchestration
+- **MCP (Model Context Protocol)** for integration
+- **Supabase with pgvector** for database operations
+- **Computer-use capabilities** inspired by OpenClaw to read business ERPs directly
+- **Multi-agent orchestration** for autonomous purchasing decisions
 
-The project confirmed its active blockchain strategy, with **Solana** and **BSC (Binance Smart Chain)** identified as the two primary chains currently in use. This clarification addressed community questions about the project's multi-chain approach.
+The system cross-references supplier and buyer data to enable SMBs to make autonomous purchasing decisions. Jaime is seeking a senior AI agent engineer for a 6-month remote contract with experience in LangGraph, MCP, and multi-agent orchestration.
 
-### New Features & Integrations
+### ElizaOS Technical Challenges
 
-**ZARQ Integration**: A significant technical announcement introduced ZARQ, a crypto risk intelligence infrastructure designed for AI agents. An ElizaOS plugin was published that provides pre-trade risk scoring capabilities covering 205 tokens, enhancing the platform's risk management capabilities for cryptocurrency trading.
+**Model Configuration and Voice Services:**
+- BinaryCookies reported issues with model configuration across different agents
+- Expressed concerns about ElevenLabs costs and requested a functional Google plugin for voice services as a more affordable alternative
 
-### Developer Networking
+**Timed Agent Interactions:**
+- Discussion focused on implementing scheduled agent-to-agent conversations in Discord
+- Community member 's' provided solutions pointing to autonomous TypeScript examples and the milady-ai repository with trigger systems
 
-The channels saw introductory posts from developers presenting their capabilities:
+### Project Communication and Community Concerns
 
-- **AI/ML expertise** including LLM integration with RAG pipelines, AI workflow automation, multi-agent systems, and image AI using CLIP and YOLOv8
-- **Full-stack development** spanning React, Next.js, Node.js, Laravel, Django, Flutter, React Native, and Swift
-- **Infrastructure skills** including microservices architecture, API design, and cloud/DevOps with AWS, Azure, Docker, and Kubernetes
+Paolin raised multiple concerns about project management and communication:
+- Delayed game/app launches
+- Unclear airdrop distribution plans for holders
+- Undefined use cases for Elizaos
+- Insufficient X (Twitter) presence allowing FUD to spread
+- Lack of effective marketing team
+- Missing information on new exchange listings
+- Unclear buyback plans
 
-A developer (AurelRheno) also posted seeking employment opportunities within the community.
+### Community Engagement
 
-### Community Proposals
+- Kyle Stoflet shared a panel discussion about AI agents featuring Shaw and Lucid
+- Multiple developers (Tuskal, 𝓒𝔂𝓻𝓮𝓷, MONO.DEV, NerdPanic) offered development services
+- NerdPanic specifically offered production deployment services for AI systems including monitoring, evals, retries, fallbacks, cost control, and logging across various cloud platforms
 
-A proposal emerged regarding launching a new meme coin project with available budget, though details and follow-up were limited.
+### Fair Launch Economics
+
+Discussion emerged about the sustainability of fair launch projects, with Odilitime noting that most fair launches likely fail because they don't retain large supply chunks to sustain operations.
 
 ## Key Questions & Answers
 
-**Q: How are you going to deliver on what you have decided to work on if people are leaving?**  
-*Asked by: Thanos💨*  
-**A:** Acknowledged the concern and stated they will continue building and hope to regain trust  
-*Answered by: Odilitime*
+**Q: How can I have Agents talk to each other in Discord on a timer, similar to TWITTER_POST_INTERVAL_MIN/MAX for X?**
+- **Asked by:** BinaryCookies
+- **Answered by:** s
+- **Answer:** Check the autonomous TypeScript examples at https://github.com/elizaOS/examples/tree/main/autonomous/typescript and the milady-ai repository (https://github.com/milady-ai/milady) which has trigger systems that can be set to run at intervals
 
-**Q: Which chain are we regaining trust on today?**  
-*Asked by: Boj/acc*  
-**A:** Solana and BSC are the two active chains  
-*Answered by: Odilitime*
-
-**Q: Is there anyone who is looking for a developer?**  
-*Asked by: AurelRheno*  
-**A:** No response recorded
+**Q: How do fair launch projects survive without large supply chunks?**
+- **Asked by:** based.bid
+- **Answered by:** Odilitime
+- **Answer:** Most fair launches likely die because they don't end up with large chunks of supply to sustain operations
 
 ## Community Help & Collaboration
 
-No significant peer-to-peer help interactions or collaborative problem-solving sessions were documented during this period. The discussions were primarily informational updates and status clarifications rather than technical troubleshooting or collaborative development work.
+**Agent Orchestration Support:**
+- **Helper:** 𝓒𝔂𝓻𝓮𝓷
+- **Helpee:** Jaime Vejar Aguirre
+- **Context:** Jaime seeking senior AI agent engineer for 6-month contract on B2B commerce AI agent project
+- **Resolution:** 𝓒𝔂𝓻𝓮𝓷 offered development services, Jaime agreed to contact
+
+**Discord Timer Implementation:**
+- **Helper:** s
+- **Helpee:** BinaryCookies
+- **Context:** Needed to implement timed agent-to-agent conversations in Discord similar to Twitter interval posting
+- **Resolution:** Provided two GitHub repositories with examples of autonomous agents and trigger systems that run at intervals
 
 ## Action Items
 
-### Feature
-- **ElizaOS plugin published for pre-trade risk scoring covering 205 tokens via ZARQ infrastructure** | *Mentioned by: LillAnders*
-
 ### Technical
-- **Continue work on milady project** | *Mentioned by: Odilitime*
-- **Maintain active development on Solana and BSC chains** | *Mentioned by: Odilitime*
+
+- **Hire senior AI agent engineer** experienced with LangGraph, MCP, and multi-agent orchestration for 6-month remote contract
+  - *Mentioned by:* Jaime Vejar Aguirre
+
+- **Fix model configuration issues** across different agents
+  - *Mentioned by:* BinaryCookies
+
+- **Develop AI-generated plugin** for Google voice integration
+  - *Mentioned by:* BinaryCookies
+
+### Feature
+
+- **Build AI agent** using LangGraph + MCP + Supabase (pgvector) for B2B commerce that reads ERPs and enables autonomous purchasing decisions
+  - *Mentioned by:* Jaime Vejar Aguirre
+
+- **Create a functional Google plugin** for voice services as an alternative to ElevenLabs
+  - *Mentioned by:* BinaryCookies
+
+- **Establish responsible and effective marketing team**
+  - *Mentioned by:* paolin
 
 ### Documentation
-- No documentation action items identified for this period
 
----
+- **Clarify and communicate airdrop distribution plans** for holders
+  - *Mentioned by:* paolin
 
-*Note: Activity levels were relatively low during this period, with limited technical discussions and collaborative interactions. The community appears to be in a transitional phase with focus on maintaining development momentum and addressing community concerns about project direction.*
+- **Define and document use cases** for Elizaos
+  - *Mentioned by:* paolin
+
+- **Provide updates on new exchange listings**
+  - *Mentioned by:* paolin
+
+- **Clarify team buyback plans**
+  - *Mentioned by:* paolin
