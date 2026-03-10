@@ -1,225 +1,196 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-03-02 to 2026-03-08",
+  "title": "Weekly Report - 2026-03-03 to 2026-03-09",
   "categories": [
     {
-      "title": "Weekly Discord Discussions",
+      "title": "ElizaOS Community Development and Support Discussion - March 3, 2026",
       "content": [
         {
-          "text": "Community members expressed concerns about ElizaOS token performance reaching new all-time lows and questioned project direction. Complaints included lack of marketing, inactive Discord, and delayed product shipping. Core Dev Odilitime responded that the team remains committed to building, working on airdrops for holders, and promoting builders. He acknowledged market conditions are down and FUD is up but emphasized continued work on the Spartan Degen AI agent and Cloud platform.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479693423169507500_37813acf.png",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1479954777172480144_1a81973e.jpg"
-          ],
-          "videos": [
-            "https://cdn.elizaos.news/elizaos-media/embed-video-1479693423169507500_98eb6295.mp4"
-          ],
-          "posters": ""
+          "text": "Community members in the coders channel discussed various technical topics including memory integration for Eliza agents. One user asked about wiring in memU or mem0 for memory functionality, sharing a GitHub repository for memU designed for 24/7 proactive agents. A scam warning was issued when a user posted a suspicious Discord invite link disguised as a complaint submission form. Community member satsbased announced an initiative to support builders creating projects on Eliza technology, offering to serve as an advisor and encouraging developers to make announcements in designated channels to receive community amplification from day one.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/af79b134-ac3f-4efb-9f95-5de0dc77a63d_98caba9a.jpg"
         },
         {
-          "text": "Odilitime addressed late token migration requests from users who missed the 90-day deadline for migrating from ai16z to elizaOS tokens. He indicated plans to compile a list of late migration requests, noting complications because some users had already sold their ai16z tokens. The team took a snapshot and holds all ai16z from the migration, with transactions visible on-chain. Odilitime confirmed Solana and BSC are the two active chains.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": ""
+          "text": "In the xfn-framework channel, core developer Odilitime discovered a reply action optimization and questioned whether it was still being used anywhere in the codebase.",
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "posters": "https://cdn.elizaos.news/posters/1772586237316-nrdle.jpg"
         },
         {
-          "text": "Community members discussed Ruby token activity, which saw a 65 percent price increase. Odilitime clarified that Ruby is not a Labs project and there are no official plans to develop it, despite Shaw owning the Ruby IP. There was also confusion about which Milady token is legitimate, with Odilitime confirming there is no legitimate Milady token yet, though he mentioned working on a Milady project.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1478839461478400274_e55f0b7a.jpg"
-          ],
-          "videos": [],
-          "posters": ""
-        },
-        {
-          "text": "Discussion emerged about ElizaOS competitive position in the decentralized AI space. Community members noted Venice was integrated as a default LLM API option during OpenClaw installation, suggesting strategic partnerships. Some members expressed mixed sentiment about the main token performance, noting competition from other AI projects like Venice, Morpheus, and Gonka that have attracted investor attention with different tokenomics models.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": ""
-        },
-        {
-          "text": "Venice VVV market performance was discussed, noting it took off with over 1 million users. The project implemented a strategic tokenomics model where 50 percent of supply was airdropped to Base and AI community addresses. Users who stake tokens receive free inference compute, with 30 percent of holders staking while 70 percent of network capacity remains available for commercial sales. The model uses a freemium approach where stakers get proportional access to compute resources.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1772500140890-4mgw3d.jpg"
-        },
-        {
-          "text": "Odilitime shared a full conversation interview with Shaw, Founder of elizaOS, covering key topics including why models decide agent usability, agent benchmarks shifting into games, how simulation data builds trading competence, tokens turning ideas into dev budgets fast, and why reinforcement learning made models improve rapidly. ElizaBAO shared a video snippet from Wise Ones Episode 6 featuring Shaw discussing the emotional challenge of watching 25 million dollars drop to 120K without selling.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988",
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478936487813714061_765056c7.jpg"
-          ],
-          "videos": [
-            "https://api.fxtwitter.com/2/go?url=https%3A%2F%2Fvideo.twimg.com%2Famplify_video%2F2029279909508730880%2Fvid%2Favc1%2F1920x1080%2F7pMiKoOHvUb0O75h.mp4%3Ftag%3D21",
-            "https://cdn.elizaos.news/elizaos-media/2029687668561318181_5fffae2f.mp4"
-          ],
-          "posters": ""
-        },
-        {
-          "text": "Community members discussed Aivilization, an open-world simulation game for digital lives featuring AI agents that can live, work, socialize, fight, and post their own thoughts publicly. The concept generated interest, with suggestions that it could capture a large audience. It was noted that Cayden was working on elizatown, a similar concept.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479106665495400448_79082de8.jpg"
-          ],
-          "videos": [
-            "https://cdn.elizaos.news/elizaos-media/2029097832259678510_890f7daf.mp4"
-          ],
-          "posters": ""
-        },
-        {
-          "text": "Jin released Cron Job, a weekly AI-produced open-source ecosystem news show covering ElizaOS updates from GitHub and Discord. The first episodes are available on YouTube and M3TV. The show is built with a system designed to work for any GitHub and Discord community, with plans to add a segment covering development updates.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1477833801605447823_17a5c9cf.jpg",
-            "https://m3org.com/tv/assets/cronjob/s1.jpg"
-          ],
-          "videos": [],
-          "posters": ""
+          "text": "The general discussion channel covered multiple topics including token legitimacy concerns and technical capabilities. Users discussed BSC Milady token bundling and Shaw's purchase of 2.5% of the SOL version. One user requested clarity from the team about which ElizaOS spinoff tokens are legitimate. On the technical side, a user asked about connecting to an OpenAI compatible API, with Odilitime confirming this has been possible from day one in ElizaOS. Multiple AI developers introduced themselves, highlighting skills in AI model integration, web and mobile app development, RAG frameworks, and experience with React, Next.js, Python, and Node.js. The community support initiative for Eliza builders was also announced in this channel.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478421850358026322_88c7a976.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1478421850358026322_328710e3.mp4"
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Developer Tools and Plugins",
+      "title": "ElizaOS Development Updates and Community Discussions - March 4, 2026",
       "content": [
         {
-          "text": "Developer Meme Broker released three new ElizaOS plugins. The plugin-heartbeat creates a scheduled recurring task system with quiet hours, error budgets, and dynamic task management. The plugin-mem0 integrates MEM0 for persistent long-term memory via API with auto-recall, auto-capture, and remember/recall/forget functions, working as a self-updating RAG system. The plugin-skill-loader converts OpenClaw SKILL.md files into live ElizaOS plugins with parser, converter, runtime loader, and standalone plugin generator capabilities.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/plugin-mem0_8a579d63.jpg",
-            "https://cdn.elizaos.news/elizaos-media/plugin-skill-loader_0b06d85b.jpg",
-            "https://cdn.elizaos.news/elizaos-media/plugin-heartbeat_6f40c7af.jpg"
-          ],
-          "videos": [],
-          "posters": ""
-        },
-        {
-          "text": "APEX Oracle released version 0.5.0 as a deep-market analytics layer for Solana trading agents. The system includes Organic Absorption Ratio to detect wash-trading versus external liquidity, Funding DNA Analysis to trace ancestor wallets and identify Sybil farms, and Jito/MEV Toxicity monitoring for slot density and sandwich attack risks. The team developed a TypeScript wrapper for ElizaOS integration via APEX_TOKEN_SCAN action.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1772500163495-bz9e1l.jpg"
-        },
-        {
-          "text": "Jason from xproof.app announced PR 266 in the plugin registry, which adds on-chain audit trails for ElizaOS agents to certify decisions before execution with built-in compliance gates. The PR was approved by CodeRabbit and ready for maintainer review.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479492012762730651_3ea648ac.jpg"
-          ],
-          "videos": [
-            "https://cdn.elizaos.news/elizaos-media/2029701999118196804_d539f034.mp4"
-          ],
-          "posters": ""
-        },
-        {
-          "text": "LillAnders introduced ZARQ, a crypto risk intelligence infrastructure for AI agents, and published an ElizaOS plugin providing pre-trade risk scoring for 205 tokens.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1773094670324-s8ygau.png"
-        },
-        {
-          "text": "N0vaMp4 introduced a concept for an enforcement primitive for agent-to-vendor credit lines, where agent operators post bonds and vendors get atomic slashing rights if agents default on payments. The developer sought validation on whether unpaid compute from agents exhausting balances mid-task is a real problem for API and service providers.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": ""
-        }
-      ],
-      "topic": "github_summary"
-    },
-    {
-      "title": "Documentation and Project Management",
-      "content": [
-        {
-          "text": "The ElizaOS team made significant progress on documentation and project management. Sayonara shared auto-generated documentation at elizaos-eliza.mintlify.app/introduction, describing it as an open-source framework for building multi-agent AI applications that are extensible, production-ready, and model-agnostic. Odilitime reported cleaning up pull requests, reducing them to one page and adding proper labels.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478829071948451950_9ad682ce.jpg"
-          ],
-          "videos": [],
-          "posters": ""
-        },
-        {
-          "text": "A contributor submitted their first pull request to the elizaOS repository, fixing documentation in the readme, which was positively received by the community.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1772759445516-3wjahd.png"
-        }
-      ],
-      "topic": "pull_request"
-    },
-    {
-      "title": "Community Support and Partnerships",
-      "content": [
-        {
-          "text": "Community member satsbased announced an initiative to support builders creating projects on Eliza technology, offering to serve as an advisor and encouraging developers to make announcements in designated channels to receive community amplification from day one.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/af79b134-ac3f-4efb-9f95-5de0dc77a63d_98caba9a.jpg"
-          ],
-          "videos": [],
-          "posters": ""
-        },
-        {
-          "text": "Nikita from Coin Post Media, a crypto media outlet with over 2 million followers across Telegram, YouTube, and X, reached out in the coders channel expressing interest in a potential collaboration with ElizaOS.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
+          "text": "Nikita from Coin Post Media, a crypto media outlet with over 2 million followers across Telegram, YouTube, and X, reached out in the coders channel expressing interest in a potential collaboration with ElizaOS. They were seeking the appropriate contact person for partnership discussions.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
           "posters": "https://cdn.elizaos.news/posters/1772672817804-ehbgg.jpg"
         },
         {
-          "text": "Stan shared progress on building a universal autoscaling solution for agents on the cloud that supports WhatsApp, Telegram, SMS, and all clients out of the box, with infrastructure that automatically scales agents based on demand.",
+          "text": "The ElizaOS team made significant progress on documentation and project management. Sayonara shared auto-generated documentation at elizaos-eliza.mintlify.app/introduction, describing it as an open-source framework for building multi-agent AI applications that are extensible, production-ready, and model-agnostic. Odilitime reported cleaning up pull requests, reducing them to one page and adding proper labels. The community responded positively to these organizational improvements.",
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478829071948451950_9ad682ce.jpg"
+        },
+        {
+          "text": "Community members discussed Ruby token activity, which saw a 65% price increase. Users speculated about potential developments involving Ruby, with some noting that DegenAI whales were holding Ruby tokens. However, Odilitime clarified that Ruby is not a Labs project and there are no official plans to develop it, despite Shaw owning the Ruby IP. The community expressed mixed sentiment about the main token's performance, with some members noting competition from other AI projects like Venice, Morpheus, and Gonka that have attracted investor attention with different tokenomics models.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1478839461478400274_e55f0b7a.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478901326091124818_0e51c9d2.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478796256959533149_f7e50bd3.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1478797550294274251_08c1d098.jpg"
+          ],
+          "videos": [
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1478901326091124818_a51fea26.mp4",
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1478796256959533149_f704e11e.mp4"
+          ]
+        },
+        {
+          "text": "Discussion emerged about ElizaOS's competitive position in the decentralized AI space. Community members noted that Venice was integrated as a default LLM API option during OpenClaw installation, suggesting strategic partnerships. Some members proposed that having agents automatically scan GitHub and submit PRs to include API services could be an interesting distribution channel. There was acknowledgment that the framework itself remains strong, with potential for inclusion in AI funds if it can differentiate from being perceived as just a pump token.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Updates - March 5, 2026",
+      "content": [
+        {
+          "text": "Odilitime shared a full conversation interview with Shaw, Founder of elizaOS, covering key topics including why models decide agent usability, agent benchmarks shifting into games, how simulation data builds trading competence, tokens turning ideas into dev budgets fast, and why reinforcement learning made models improve rapidly. The interview was well-received across multiple channels with positive reactions from the community.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1478936487813714061_765056c7.jpg",
+          "videos": "https://api.fxtwitter.com/2/go?url=https%3A%2F%2Fvideo.twimg.com%2Famplify_video%2F2029279909508730880%2Fvid%2Favc1%2F1920x1080%2F7pMiKoOHvUb0O75h.mp4%3Ftag%3D21"
+        },
+        {
+          "text": "Developer activity in the coders channel showed strong community engagement. A contributor submitted their first pull request to the elizaOS repository, fixing documentation in the readme, which was positively received. Stan shared progress on building a universal autoscaling solution for agents on the cloud that supports WhatsApp, Telegram, SMS, and all clients out of the box, with infrastructure that automatically scales agents based on demand.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1772759445516-3wjahd.png"
+        },
+        {
+          "text": "Community members discussed Aivilization, an open-world simulation game for digital lives featuring AI agents that can live, work, socialize, fight, and post their own thoughts publicly. The concept generated interest, with suggestions that it could capture a large audience. It was noted that Cayden was working on elizatown, a similar concept.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479106665495400448_79082de8.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/2029097832259678510_890f7daf.mp4"
+        },
+        {
+          "text": "Odilitime addressed late token migration requests from users who missed the 90-day deadline for migrating from ai16z to elizaOS tokens. He indicated plans to compile a list of late migration requests, noting complications because some users had already sold their ai16z tokens. Discussion ensued about how to handle these cases fairly, with suggestions that governance should be based on tokens physically held at the time of the snapshot.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        },
+        {
+          "text": "Odilitime shared content highlighting ElizaOS as a secure agent framework that has been battle-tested over 3 years and is suitable for financial applications. Additionally, an e/acc versus d/acc discussion was shared featuring notable figures in the crypto and AI space.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1478986916790669352_74475970.jpg"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Updates and Development Activity - March 6, 2026",
+      "content": [
+        {
+          "text": "In the coders channel, community members discussed potential scams and business opportunities. A user named satsbased warned about a scam, while based.bid responded to Ken about networking opportunities, offering to discuss potential collaboration via direct message based on their experience and network.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1772845312612-hrjb3.png"
+        },
+        {
+          "text": "The general discussion channel saw significant activity around ai16z token migration and community engagement. Odilitime clarified that the team took a snapshot and holds all ai16z from the migration, with transactions visible on-chain, responding to concerns from gby about dumping. ElizaBAO shared a video snippet from Wise Ones Episode 6 featuring shawmakesmagic discussing the emotional challenge of watching 25 million dollars drop to 120K without selling, knowing the community would interpret any sale as a negative signal. Community members noted that discord activity has decreased compared to last year, though new members like Matthib found it still quite active.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479325709141807144_cbfa15de.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/2029687668561318181_5fffae2f.mp4"
+        },
+        {
+          "text": "Several development initiatives were discussed. N0vaMp4 introduced a concept for an enforcement primitive for agent-to-vendor credit lines, where agent operators post bonds and vendors get atomic slashing rights if agents default on payments. The developer sought validation on whether unpaid compute from agents exhausting balances mid-task is a real problem for API and service providers. Jason from xproof.app announced PR 266 in the plugin registry, which adds on-chain audit trails for ElizaOS agents to certify decisions before execution with built-in compliance gates. The PR was approved by CodeRabbit and ready for maintainer review. Magicyte shared autonomous testing progress. New member Jayen introduced himself as a longtime Ethereum person interested in agents and automated trading.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479492012762730651_3ea648ac.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/2029701999118196804_d539f034.mp4"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Concerns and Team Response",
+      "content": [
+        {
+          "text": "Community members expressed growing concerns about the ElizaOS token performance and project direction on March 7, 2026. Users noted the token reaching new all-time lows and questioned whether the team had lost interest in the token. Complaints included lack of marketing, inactive Discord, and delayed product shipping despite promises to ship by end of 2025. There was also confusion about which Milady token is legitimate, with multiple versions existing on different chains. Community member Odilitime, a Core Dev, responded to concerns stating the team is still building and working on airdrops for holders while trying to promote builders. He clarified that there is no legitimate Milady token yet and mentioned that Cloud platform is doing fine. The team acknowledged that market conditions are down and FUD is up, but emphasized they remain committed to the project. Work continues on the Spartan Degen AI agent.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1479693423169507500_37813acf.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1479954777172480144_1a81973e.jpg"
+          ],
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1479693423169507500_98eb6295.mp4"
+        },
+        {
+          "text": "In the coders channel, a user named wizardev reached out to another member named Ken expressing interest in their crypto experience and wanting to connect, noting that Ken's direct messages were closed.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1772931978979-p1iuno.jpg"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Developer Introductions and Community Discussion",
+      "content": [
+        {
+          "text": "A developer named brightsyntax0821 introduced themselves in the coders channel, highlighting their expertise in AI and full-stack development. Their skills include LLM integration with RAG pipelines, workflow automation, AI content detection and moderation, image AI using CLIP and YOLOv8, multi-agent systems, and bot development. On the full-stack side, they work with React, Next.js, Node.js, Laravel, Django, Flutter, React Native, Swift, various databases, microservices architecture, and cloud platforms like AWS and Azure. They emphasized building clean, maintainable, and secure systems that scale under real-world conditions.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1772759445516-3wjahd.png"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1773094644304-cvzrtd.jpg"
+          ]
+        },
+        {
+          "text": "In the general discussion channel, community members engaged in various conversations. Odilitime mentioned working on a Milady project. A user named Thanos raised concerns about project progress, noting that people associated with Eliza appear to be leaving and removing it from their Twitter bios. Odilitime acknowledged the FUD but stated the team will continue building and hopes to regain trust. When asked about active chains, Odilitime confirmed Solana and BSC are the two active chains. LillAnders introduced ZARQ, a crypto risk intelligence infrastructure for AI agents, and published an ElizaOS plugin providing pre-trade risk scoring for 205 tokens. AurelRheno asked if anyone was looking for a developer.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1773094670324-s8ygau.png"
+          ]
         }
       ],
-      "topic": "contributors"
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion and Developer Activity - March 9, 2026",
+      "content": [
+        {
+          "text": "Community members expressed concerns about ElizaOS project communication and token performance. A user criticized the lack of clear communication regarding announcements, game launches, airdrops for holders, and token use cases. They noted the token has declined 10x even after migration and called for better marketing and more active discussion on social media platform X. The community also discussed fair launch projects and their longevity, with questions about how projects survive without large token supply allocations.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1773104495992-jl89na.jpg"
+        },
+        {
+          "text": "Multiple developers and technical professionals offered their services to the community. Jaime Vejar Aguirre, founder of YOYO, a B2B commerce Super App in Latin America, is seeking a senior AI agent engineer for a 6-month paid remote contract to build an AI agent using LangGraph, MCP, and Supabase with pgvector that reads business ERPs and helps SMBs make purchasing decisions. Other developers offered expertise in AI system production deployment, monitoring, evals, and scaling, as well as blockchain and AI integration services. Several community members expressed interest in development opportunities and collaboration.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1773104517952-dhh3ha.jpg"
+        },
+        {
+          "text": "A panel discussion featuring Kyle Stoflet, Shaw Walters, and Lucid about AI agents was shared, covering how autonomous AI agents are evolving, their use in daily life, and potential to reshape the internet. The discussion included topics on intelligent apps in social feeds and the Eliza framework. Community members engaged in lighthearted conversation about the panel participants.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1480664643033763931_08d0e69e.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/xiit6a5_1xs_5ea7c729.mp4"
+        },
+        {
+          "text": "In the coders channel, developers discussed technical implementation challenges with ElizaOS. A developer struggled with getting the right models to work in each agent and expressed desire for a functional Google plugin for voices instead of expensive ElevenLabs. Questions were raised about implementing timed agent conversations in Discord similar to Twitter post intervals. Shaw provided resources including examples from the ElizaOS GitHub repository and the milady-ai repository showing trigger systems that can run at intervals. A developer also inquired about experiences building adaptors for ElizaOS and distribution methods.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://cdn.elizaos.news/elizaos-media/milady_960a5352.jpg"
+        }
+      ],
+      "topic": "discordrawdata"
     }
   ],
-  "date": 1773094760
+  "date": 1773104531
 }
