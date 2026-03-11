@@ -51,6 +51,8 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let dateStr = today.toISOString().slice(0, 10);
     let onlyFetch = false;
     let onlyGenerate = false;
+    let skipExisting = false;
+    let force = false;
     let downloadMedia = false;
     let generateManifest = false;
     let manifestOutput: string | undefined;
@@ -59,6 +61,7 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let afterDate;
     let duringDate;
     let outputPath = './'; // Default output path
+    let overrideChannels: string[] = [];
 
     if (args.includes('--help') || args.includes('-h')) {
       logger.info(`
@@ -82,6 +85,7 @@ Options:
   --generate-manifest   Generate media manifest JSON for VPS downloads (default: false).
   --manifest-output=<path> Output path for manifest file (default: <output>/media-manifest.json).
   --media-manifest=<path> Path to media manifest for CDN URL enrichment in summaries.
+  --channels=<id1,id2>  Comma-separated channel IDs to override config (archive mode).
   --output=<path>       Output directory path (default: ./)
   -h, --help            Show this help message.
       `);
@@ -128,6 +132,12 @@ Options:
         duringDate = arg.split('=')[1];
       } else if (arg.startsWith('--output=') || arg.startsWith('-o=')) {
         outputPath = arg.split('=')[1];
+      } else if (arg.startsWith('--channels=')) {
+        overrideChannels = arg.split('=')[1].split(',').map(id => id.trim()).filter(Boolean);
+      } else if (arg === '--skip-existing' || arg === '--skip-existing=true') {
+        skipExisting = true;
+      } else if (arg === '-f' || arg === '--force') {
+        force = true;
       }
     });
 
@@ -181,6 +191,18 @@ Options:
     generatorConfigs = await loadProviders(generatorConfigs, aiConfigs);
     generatorConfigs = await loadStorage(generatorConfigs, storageConfigs);
     
+    /**
+     * Override channelIds for all Discord sources if --channels flag is provided (archive mode)
+     */
+    if (overrideChannels.length > 0) {
+      logger.info(`Archive mode: overriding channels to [${overrideChannels.join(', ')}]`);
+      sourceConfigs.forEach(config => {
+        if (config.instance && Array.isArray((config.instance as any).channelIds)) {
+          (config.instance as any).channelIds = overrideChannels;
+        }
+      });
+    }
+
     /**
      * Override media download settings if --download-media flag is provided
      */
@@ -379,7 +401,22 @@ Options:
       if (filter.filterType || (filter.after && filter.before)) {
         for (const generator of generatorConfigs) {
           await generator.instance.storage.init();
-          await callbackDateRangeLogic(filter, (dateStr:string) => generator.instance.generateAndStoreSummary(dateStr));
+          await callbackDateRangeLogic(filter, async (dateStr: string) => {
+            if (skipExisting && !force) {
+              const epochTs = new Date(dateStr).getTime() / 1000;
+              const summaryType = (generator.instance as any).summaryType;
+              if (summaryType) {
+                const existing = await (generator.instance.storage as any).getContentItemsBetweenEpoch(
+                  epochTs, epochTs + 86400, summaryType
+                );
+                if (existing && existing.length > 0) {
+                  logger.info(`Skipping ${dateStr} — summary already exists (use --force to regenerate)`);
+                  return;
+                }
+              }
+            }
+            await generator.instance.generateAndStoreSummary(dateStr);
+          });
         }
       } else {
         logger.info(`Creating summary for date ${dateStr}`);

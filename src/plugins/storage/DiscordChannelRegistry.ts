@@ -153,6 +153,10 @@ export interface DiscordChannel {
   // User Notes
   notes: string | null;
 
+  // Unavailability
+  unavailableReason?: string | null;
+  unavailableSince?: number | null;
+
   // Timestamps
   createdAt_registry: number;
   updatedAt: number;
@@ -228,6 +232,8 @@ interface DiscordChannelRow {
   aiRecommendation: string | null;
   aiReason: string | null;
   notes: string | null;
+  unavailableReason: string | null;
+  unavailableSince: number | null;
   createdAt_registry: number;
   updatedAt: number;
 }
@@ -997,6 +1003,8 @@ export class DiscordChannelRegistry {
       aiRecommendation: row.aiRecommendation as AIRecommendation | null,
       aiReason: row.aiReason,
       notes: row.notes,
+      unavailableReason: row.unavailableReason,
+      unavailableSince: row.unavailableSince,
       createdAt_registry: row.createdAt_registry,
       updatedAt: row.updatedAt
     };

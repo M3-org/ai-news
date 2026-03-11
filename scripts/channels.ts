@@ -78,6 +78,10 @@ interface CliArgs {
   // Config filter
   source?: string;
   json?: boolean;
+  // Date range (for archive)
+  after?: string;
+  before?: string;
+  force?: boolean;
 }
 
 interface DiscordRawData {
@@ -112,6 +116,7 @@ interface DiscordRawData {
     id: string;
     uid: string;
     content: string;
+    ts?: string;
     timestamp?: string;
   }>;
 }
@@ -161,6 +166,9 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg.startsWith("--channel=")) args.channelId = arg.split("=")[1];
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
     else if (arg === "--json") args.json = true;
+    else if (arg.startsWith("--after=")) args.after = arg.split("=")[1];
+    else if (arg.startsWith("--before=")) args.before = arg.split("=")[1];
+    else if (arg === "-f" || arg === "--force") args.force = true;
   }
 
   return args;
@@ -308,13 +316,12 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
     process.exit(1);
   }
 
-  // Load muted channels from existing registry
-  const existingChannels = await registry.getAllChannels();
-  const mutedChannels = new Set<string>(
-    existingChannels.filter(c => c.isMuted).map(c => c.id)
+  // Load previously unavailable channels from registry
+  const unavailableChannels = new Set<string>(
+    (await registry.getUnavailableChannels()).map(c => c.id)
   );
-  if (mutedChannels.size > 0) {
-    console.log(`Loaded ${mutedChannels.size} muted channels from registry\n`);
+  if (unavailableChannels.size > 0) {
+    console.log(`Loaded ${unavailableChannels.size} previously unavailable channels from registry\n`);
   }
 
   // Get tracked channels from config
@@ -383,7 +390,6 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
             createdAt: Math.floor(channel.createdTimestamp! / 1000),
             observedAt,
             isTracked: tracked.has(channelId),
-            isMuted: mutedChannels.has(channelId)
           });
         } catch (error: any) {
           if (args.debug) {
@@ -461,6 +467,11 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
             const observedAt = new Date().toISOString().split("T")[0];
             try {
               await registry.recordActivity(channelId, observedAt, messages.size);
+              // Clear unavailable status if it was previously set
+              if (unavailableChannels.has(channelId)) {
+                await registry.clearUnavailable(channelId);
+                unavailableChannels.delete(channelId);
+              }
             } catch (e) {
               // Channel might not exist in registry
             }
@@ -479,11 +490,11 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
           });
           errors++;
 
-          // Auto-mute inaccessible channels (but not tracked ones)
+          // Mark inaccessible channels as unavailable (but not tracked ones)
           const tracked = trackedChannels.get(guildId)?.has(channelId);
-          if (!mutedChannels.has(channelId) && !tracked) {
-            mutedChannels.add(channelId);
-            await registry.setMuted(channelId, true);
+          if (!tracked) {
+            await registry.markUnavailable(channelId, (error as any).message || "Bot lacks access");
+            unavailableChannels.add(channelId);
           }
         }
       }
@@ -498,7 +509,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   console.log("\n Channel discovery complete!");
   console.log(`\nRegistry now contains ${stats.totalChannels} channels`);
   console.log(`  Tracked: ${stats.trackedChannels}`);
-  console.log(`  Muted: ${stats.mutedChannels}`);
+  console.log(`  Unavailable: ${unavailableChannels.size}`);
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- analyze --stale' to analyze channels with LLM");
   console.log("2. Run 'npm run channels -- propose' to generate config changes");
@@ -556,9 +567,13 @@ function getActivityBadge(velocity: number, daysSinceActivity?: number): string 
 // Command: analyze
 // ============================================================================
 
-async function loadChannelMessages(db: Database, channelId: string, limit: number = 100): Promise<string[]> {
-  const rows = await db.all<Array<{ text: string }>>(
-    `SELECT text FROM items
+async function loadChannelMessages(
+  db: Database,
+  channelId: string,
+  limit: number = 100
+): Promise<{ messages: string[]; lastMsgDate: string | null }> {
+  const rows = await db.all<Array<{ text: string; date: number }>>(
+    `SELECT text, date FROM items
      WHERE type = 'discordRawData'
        AND json_extract(text, '$.channel.id') = ?
      ORDER BY date DESC
@@ -567,14 +582,21 @@ async function loadChannelMessages(db: Database, channelId: string, limit: numbe
   );
 
   const messages: string[] = [];
+  let lastMsgDate: string | null = null;
+
   for (const row of rows) {
     try {
       const data: DiscordRawData = JSON.parse(row.text);
       for (const msg of data.messages) {
+        const msgTs = msg.ts || msg.timestamp;
+        if (msgTs && (!lastMsgDate || msgTs > lastMsgDate)) {
+          lastMsgDate = msgTs.split("T")[0];
+        }
         if (!msg.content.trim()) continue;
         const user = data.users[msg.uid];
-        const username = user?.displayName || user?.nickname || user?.username || "Unknown";
-        messages.push(`[${username}]: ${msg.content.slice(0, 500)}`);
+        const username = (user as any)?.name || user?.nickname || msg.uid;
+        const botTag = (user as any)?.isBot ? " [BOT]" : "";
+        messages.push(`[${username}${botTag}]: ${msg.content.slice(0, 500)}`);
         if (messages.length >= limit) break;
       }
     } catch (e) {
@@ -583,7 +605,71 @@ async function loadChannelMessages(db: Database, channelId: string, limit: numbe
     if (messages.length >= limit) break;
   }
 
-  return messages;
+  return { messages, lastMsgDate };
+}
+
+function formatChannelProfile(channel: DiscordChannel, messages: string[], lastMsgDate: string | null): string {
+  const lastActivity = lastMsgDate || (channel.lastActivityAt
+    ? new Date(channel.lastActivityAt * 1000).toISOString().split("T")[0]
+    : "unknown");
+  const velocity = channel.currentVelocity > 0
+    ? `${channel.currentVelocity.toFixed(1)} msgs/day (all-time avg)`
+    : "inactive";
+  const msgBlock = messages.length > 0
+    ? messages.map(m => `  ${m}`).join("\n")
+    : "  (no messages in database)";
+  return [
+    `Activity: ${velocity} | ${channel.totalMessages} total msgs | Last active: ${lastActivity}`,
+    `Category: ${channel.categoryName || "none"}`,
+    `Recent messages:\n${msgBlock}`,
+  ].join("\n");
+}
+
+async function batchAnalyzeChannels(
+  openai: OpenAI,
+  model: string,
+  channels: DiscordChannel[]
+): Promise<Map<string, AIAnalysisResult>> {
+  const today = new Date().toISOString().split("T")[0];
+
+  const channelSections = channels.map(ch =>
+    `### #${ch.name} (ID: ${ch.id})\n${ch.notes || "(no profile)"}`
+  ).join("\n\n---\n\n");
+
+  const prompt = `All channels below had activity in the last 7 days. Classify each as TRACK or MAYBE only.
+
+${channelSections}
+
+---
+
+Rules:
+- TRACK: Multiple different users having back-and-forth conversation.
+- MAYBE: Single user posting, bot-only feed, or only link dumps with no replies.
+
+Respond ONLY with a JSON array using the exact IDs provided:
+[{"id":"<channel_id>","recommendation":"TRACK|MAYBE","reason":"10 words max"}, ...]`;
+
+  const completion = await (openai.chat.completions.create as any)({
+    model,
+    messages: [{ role: "user", content: prompt }],
+    temperature: 0,
+    max_tokens: 16384,
+    ...(process.env.USE_OPENROUTER === "true" ? { reasoning: { effort: "none" } } : {})
+  });
+
+  let content = completion.choices[0]?.message?.content ||
+                completion.choices[0]?.message?.reasoning || "";
+  content = content.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+
+  const jsonMatch = content.match(/\[[\s\S]*\]/);
+  if (!jsonMatch) throw new Error(`No JSON array in response: ${content.slice(0, 300)}`);
+
+  const results: Array<{ id: string; recommendation: AIRecommendation; reason: string }> = JSON.parse(jsonMatch[0]);
+  const map = new Map<string, AIAnalysisResult>();
+  for (const r of results) {
+    map.set(r.id, { recommendation: r.recommendation, reason: r.reason || "" });
+  }
+  return map;
 }
 
 async function analyzeChannelWithLLM(
@@ -592,31 +678,42 @@ async function analyzeChannelWithLLM(
   channel: DiscordChannel,
   messagesText: string
 ): Promise<AIAnalysisResult | null> {
-  const prompt = `Analyze these Discord messages from #${channel.name}.
+  const categoryInfo = channel.categoryName ? ` (category: ${channel.categoryName})` : "";
+  const velocityInfo = channel.currentVelocity > 0 ? `${channel.currentVelocity.toFixed(1)} msgs/day (all-time avg)` : "inactive";
+  const lastActivityInfo = channel.lastActivityAt
+    ? `Last message: ${new Date(channel.lastActivityAt * 1000).toISOString().split("T")[0]}`
+    : "Last message: unknown";
+  const today = new Date().toISOString().split("T")[0];
+  const prompt = `Today is ${today}. Analyze this Discord channel #${channel.name}${categoryInfo}.
+Activity: ${velocityInfo}, ${channel.totalMessages} total messages. ${lastActivityInfo}.
 
-Messages:
+Recent messages (users tagged [BOT] are bots/webhooks):
 ${messagesText}
 
-Respond ONLY with valid JSON:
+Respond ONLY with valid JSON, no thinking:
 {
   "recommendation": "TRACK|MAYBE|SKIP",
   "reason": "brief explanation (15 words max)"
 }
 
 Guidelines:
-- TRACK: Technical content, development discussion, code sharing, valuable for documentation
-- MAYBE: Mixed content, occasional useful info, could be filtered
-- SKIP: Bot spam, price talk, low signal, no documentation value`;
+- TRACK: Active channel with recent messages (within last few months) and substantive discussion — technical, creative, governance, problem-solving.
+- MAYBE: Mixed signal — some useful content but inconsistent activity, or last activity was months ago.
+- SKIP: One-way feeds (webhook dumps, commit logs, RSS), join/leave spam, pure price/trading talk, no real conversation, or dormant (last message over 1 month ago).`;
 
   try {
-    const completion = await openai.chat.completions.create({
+    const completion = await (openai.chat.completions.create as any)({
       model,
       messages: [{ role: "user", content: prompt }],
       temperature: 0,
-      max_tokens: 150
+      max_tokens: 4096,
+      ...(process.env.USE_OPENROUTER === "true" ? { reasoning: { effort: "none" } } : {})
     });
 
-    const content = completion.choices[0]?.message?.content || "";
+    let content = completion.choices[0]?.message?.content ||
+                  completion.choices[0]?.message?.reasoning || "";
+    // Strip <think> tags in case reasoning leaked through
+    content = content.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
 
     // Try to extract JSON from response
     const jsonMatch = content.match(/\{[\s\S]*\}/);
@@ -628,7 +725,7 @@ Guidelines:
       };
     }
 
-    throw new Error("No JSON found in response");
+    throw new Error(`No JSON found in response: ${content.slice(0, 300)}`);
   } catch (error: any) {
     console.error(`    LLM error for #${channel.name}: ${error.message}`);
     return null;
@@ -670,10 +767,13 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     } : undefined
   });
 
-  const model = process.env.USE_OPENROUTER === "true" ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+  const model = process.env.USE_OPENROUTER === "true" ? "qwen/qwen3.5-35b-a3b" : "gpt-4o-mini";
 
   // Determine which channels to analyze
   let channelsToAnalyze: DiscordChannel[];
+  let tracked = 0;
+  let maybe = 0;
+  let skip = 0;
 
   if (args.channelId) {
     // Single channel mode
@@ -685,9 +785,19 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     channelsToAnalyze = [channel];
     console.log(`Analyzing single channel: #${channel.name}`);
   } else if (args.all) {
-    // All non-muted channels with activity
-    channelsToAnalyze = (await registry.getAllChannels()).filter(c => !c.isMuted && c.currentVelocity > 0);
-    console.log(`Analyzing all ${channelsToAnalyze.length} active channels`);
+    const allChannels = await registry.getAllChannels();
+
+    // Unavailable channels (bot can't access) — stamp SKIP if not already analyzed
+    const unavailable = allChannels.filter(c => c.unavailableReason && !c.aiLastAnalyzed);
+    for (const ch of unavailable) {
+      await registry.updateAIAnalysis(ch.id, { recommendation: "SKIP", reason: "Channel inaccessible" });
+      skip++;
+    }
+    skip += allChannels.filter(c => c.unavailableReason && c.aiLastAnalyzed).length;
+
+    // channelsToAnalyze: non-unavailable, non-muted (muted = user choice, still might have data)
+    channelsToAnalyze = allChannels.filter(c => !c.unavailableReason && !c.isMuted);
+    console.log(`Analyzing ${channelsToAnalyze.length} accessible channels (${unavailable.length} unavailable pre-stamped SKIP)`);
   } else {
     // Default: channels needing analysis (never analyzed or >30 days old)
     channelsToAnalyze = await registry.getChannelsNeedingAnalysis(30);
@@ -703,62 +813,101 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   if (args.dryRun) {
     analyzeSpinner.stop();
     console.log(`\nDry run — would analyze ${channelsToAnalyze.length} channel(s).`);
-    console.log(`Estimated API calls: ${channelsToAnalyze.length}`);
+    const estimatedCalls = args.channelId ? channelsToAnalyze.length : 1;
+    console.log(`Estimated API calls: ${estimatedCalls} (${args.channelId ? "per-channel" : "batch"})`);
     return;
   }
 
   console.log("");
 
-  // Analyze each channel
-  let analyzed = 0;
-  let tracked = 0;
-  let maybe = 0;
-  let skip = 0;
-  let errors = 0;
+  // Build profiles for all channels (no per-channel LLM)
+  console.log("Building channel profiles...");
+  const RECENCY_DAYS = 7;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - RECENCY_DAYS);
+  const cutoffStr = cutoff.toISOString().split("T")[0];
+
+  const noMessages: DiscordChannel[] = [];
+  const stale: DiscordChannel[] = [];
+  const toClassify: DiscordChannel[] = [];
+  const profileRows: Array<{ channel: DiscordChannel; lastMsgDate: string | null }> = [];
 
   for (let i = 0; i < channelsToAnalyze.length; i++) {
     const channel = channelsToAnalyze[i];
-    analyzeSpinner.text = stepProgress(i + 1, channelsToAnalyze.length, `Analyzing #${channel.name}`);
-    process.stdout.write(`  Analyzing #${channel.name.padEnd(25)}...`);
-
-    // Load messages for this channel
-    const messages = await loadChannelMessages(db, channel.id, 50);
-
+    analyzeSpinner.text = stepProgress(i + 1, channelsToAnalyze.length, `Profiling #${channel.name}`);
+    const { messages, lastMsgDate } = await loadChannelMessages(db, channel.id, 10);
+    const profile = formatChannelProfile(channel, messages, lastMsgDate);
+    await registry.updateNotes(channel.id, profile);
+    channel.notes = profile;
+    profileRows.push({ channel, lastMsgDate });
     if (messages.length === 0) {
-      console.log(" no messages");
-      continue;
-    }
-
-    const messagesText = messages.join("\n");
-    const analysis = await analyzeChannelWithLLM(openai, model, channel, messagesText);
-
-    if (analysis) {
-      await registry.updateAIAnalysis(channel.id, analysis);
-      console.log(` ${analysis.recommendation}`);
-
-      if (analysis.recommendation === "TRACK") tracked++;
-      else if (analysis.recommendation === "MAYBE") maybe++;
-      else skip++;
-
-      analyzed++;
+      noMessages.push(channel);
+    } else if (!lastMsgDate || lastMsgDate < cutoffStr) {
+      stale.push(channel);
     } else {
-      console.log(" ERROR");
-      errors++;
+      toClassify.push(channel);
     }
-
-    // Rate limiting
-    await sleep(200);
   }
 
+  // Stats table
+  analyzeSpinner.stop();
+  console.log("\n| name | lastMsgDate | currentVelocity | totalMessages | aiRecommendation |");
+  console.log("|------|-------------|-----------------|---------------|-----------------|");
+  for (const { channel, lastMsgDate } of profileRows) {
+    const date = lastMsgDate ?? "—";
+    const vel = channel.currentVelocity > 0 ? `${channel.currentVelocity.toFixed(1)}/day` : "—";
+    const rec = channel.aiRecommendation ?? "—";
+    console.log(`| #${channel.name} | ${date} | ${vel} | ${channel.totalMessages} | ${rec} |`);
+  }
+  console.log("");
+
+  // Pre-classify channels with no messages as SKIP (no LLM needed)
+  for (const channel of noMessages) {
+    const analysis: AIAnalysisResult = { recommendation: "SKIP", reason: "No messages in database" };
+    await registry.updateAIAnalysis(channel.id, analysis);
+    skip++;
+  }
+
+  // Pre-classify stale channels as SKIP (no LLM needed)
+  for (const channel of stale) {
+    const analysis: AIAnalysisResult = { recommendation: "SKIP", reason: "No messages in last 7 days" };
+    await registry.updateAIAnalysis(channel.id, analysis);
+    skip++;
+  }
+
+  if (toClassify.length > 0) {
+    // Single batch LLM call for all channels with recent data
+    console.log(`Running batch analysis (1 LLM call for ${toClassify.length} channels)...`);
+    analyzeSpinner.text = "Running batch LLM analysis...";
+    analyzeSpinner.start();
+    const resultsMap = await batchAnalyzeChannels(openai, model, toClassify);
+
+    analyzeSpinner.stop();
+    console.log("\n| name | aiRecommendation | aiReason |");
+    console.log("|------|-----------------|---------|");
+    for (const channel of toClassify) {
+      const analysis = resultsMap.get(channel.id);
+      if (analysis) {
+        await registry.updateAIAnalysis(channel.id, analysis);
+        console.log(`| #${channel.name} | ${analysis.recommendation} | ${analysis.reason} |`);
+        if (analysis.recommendation === "TRACK") tracked++;
+        else if (analysis.recommendation === "MAYBE") maybe++;
+        else skip++;
+      } else {
+        console.log(`| #${channel.name} | — | (no result) |`);
+      }
+    }
+    console.log("");
+  }
+
+
   console.log(`\nAnalysis complete!`);
-  console.log(`  Analyzed: ${analyzed}`);
   console.log(`  TRACK: ${tracked}`);
   console.log(`  MAYBE: ${maybe}`);
   console.log(`  SKIP: ${skip}`);
-  console.log(`  Errors: ${errors}`);
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- propose' to generate config changes");
-  analyzeSpinner.succeed("Channel analysis complete");
+  console.log("Channel analysis complete");
 }
 
 // ============================================================================
@@ -1189,6 +1338,33 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
 }
 
 // ============================================================================
+// Command: fix-states (one-time migration)
+// ============================================================================
+
+async function commandFixStates(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  const allChannels = await registry.getAllChannels();
+  // Heuristic: isMuted=1 AND isTracked=0 = auto-muted by discover (not user-intentional)
+  const autoMuted = allChannels.filter(c => c.isMuted && !c.isTracked);
+
+  console.log(`Found ${autoMuted.length} auto-muted channels to migrate to unavailable state`);
+  if (args.dryRun) {
+    const preview = autoMuted.slice(0, 20);
+    for (const ch of preview) {
+      console.log(`  ${ch.id} #${ch.name}`);
+    }
+    if (autoMuted.length > 20) console.log(`  ... and ${autoMuted.length - 20} more`);
+    console.log("\n(dry run — no changes made)");
+    return;
+  }
+
+  for (const ch of autoMuted) {
+    await registry.markUnavailable(ch.id, ch.unavailableReason || "Channel inaccessible (migrated from muted)");
+    await registry.setMuted(ch.id, false);
+  }
+  console.log(`Migrated ${autoMuted.length} channels. isMuted is now reserved for user-driven mutes only.`);
+}
+
+// ============================================================================
 // Command: help
 // ============================================================================
 
@@ -1209,14 +1385,110 @@ async function commandResetUnavailable(registry: DiscordChannelRegistry, args: C
   console.log(`\nCleared unavailability status for ${cleared} channel(s).`);
 }
 
+// ============================================================================
+// Command: update (discover → analyze → propose pipeline)
+// ============================================================================
+
+async function commandUpdate(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.log("\n=== Step 1/3: Discover ===");
+  try {
+    await commandDiscover(db, args);
+  } catch (e) {
+    console.warn("Discover failed, continuing:", e);
+  }
+
+  console.log("\n=== Step 2/3: Analyze ===");
+  await commandAnalyze(db, registry, { ...args, all: true });
+
+  console.log("\n=== Step 3/3: Propose ===");
+  await commandProposeUpdate(db, registry, args);
+
+  console.log("\nDone. Review the proposal above and edit your config channelIds.");
+}
+
+// ============================================================================
+// Command: archive (generate summaries from existing DB data)
+// ============================================================================
+
+async function commandArchive(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (!args.after || !args.before) {
+    console.error("Error: --after and --before are required");
+    console.log("Usage: npm run channels -- archive --after=YYYY-MM-DD --before=YYYY-MM-DD [--source=...]");
+    return;
+  }
+
+  const afterTs = Math.floor(new Date(args.after).getTime() / 1000);
+  const beforeTs = Math.floor(new Date(args.before + "T23:59:59").getTime() / 1000);
+
+  // Per-date stats
+  const dateCounts = await db.all<Array<{ date: number; cnt: number }>>(
+    `SELECT date, COUNT(*) as cnt FROM items
+     WHERE type='discordRawData' AND date >= ? AND date <= ?
+     GROUP BY date ORDER BY date`,
+    afterTs, beforeTs
+  );
+
+  if (dateCounts.length === 0) {
+    console.log(`No raw data in DB for ${args.after} → ${args.before}.`);
+    console.log("Hint: channels must have been fetched during this period.");
+    return;
+  }
+
+  // Check already-summarized dates
+  const existingSummaries = await db.all<Array<{ date: number }>>(
+    `SELECT DISTINCT date FROM items WHERE type LIKE '%Summary%' AND date >= ? AND date <= ?`,
+    afterTs, beforeTs
+  );
+  const summarizedDates = new Set(existingSummaries.map(r => r.date));
+  const toGenerate = dateCounts.filter(r => args.force || !summarizedDates.has(r.date));
+
+  const firstDate = new Date(dateCounts[0].date * 1000).toISOString().split('T')[0];
+  const lastDate = new Date(dateCounts[dateCounts.length - 1].date * 1000).toISOString().split('T')[0];
+
+  console.log(`\nFound data in ${firstDate} → ${lastDate}:`);
+  console.log(`  Total dates with raw data:  ${dateCounts.length}`);
+  console.log(`  Already summarized:         ${summarizedDates.size}  (use -f to force regenerate)`);
+  console.log(`  ──────────────────────────────────`);
+  console.log(`  Dates to generate:          ${toGenerate.length}  (~${toGenerate.length} LLM calls)`);
+
+  const sourceFlag = args.source ? ` --source=${args.source}` : "";
+  const forceFlag = args.force ? " --force" : " --skip-existing";
+  const cmd = `npm run historical -- --after=${args.after} --before=${args.before} --onlyGenerate${forceFlag}${sourceFlag}`;
+  console.log(`\nWill run: ${cmd}`);
+
+  if (args.dryRun) {
+    console.log("(dry run — skipping execution)");
+    return;
+  }
+
+  const { spawn } = await import("child_process");
+  const spawnArgs = [
+    "-r", "tsconfig-paths/register", "--transpile-only", "src/historical.ts",
+    `--after=${args.after}`, `--before=${args.before}`, "--onlyGenerate",
+  ];
+  if (args.source) spawnArgs.push(`--source=${args.source}`);
+  if (!args.force) spawnArgs.push("--skip-existing");
+  else spawnArgs.push("--force");
+
+  const child = spawn("ts-node", spawnArgs, { stdio: "inherit", shell: true, cwd: process.cwd() });
+  await new Promise<void>((resolve, reject) => {
+    child.on("close", (code: number | null) =>
+      code === 0 || code === null ? resolve() : reject(new Error(`Exit code ${code}`))
+    );
+  });
+}
+
 function commandHelp(): void {
   console.log(`
 Discord Channel Management CLI
 
 Discovery & Analysis:
-  discover [--source=<config>.json]       Fetch channels from Discord (or raw data if no token)
-  analyze [--all] [--channel=ID]          Run LLM analysis on channels
-  propose [--dry-run]                     Generate config diff and PR markdown
+  update [--source=<config>.json] [--dry-run]                    Run discover → analyze → propose in one step
+  discover [--source=<config>.json]                              Fetch channels from Discord (or raw data if no token)
+  analyze [--all] [--channel=ID]                                 Run LLM analysis on channels
+  propose [--dry-run]                                            Generate config diff and PR markdown
+  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from existing DB data
+          [--source=<config>.json] [--dry-run] [-f/--force]
 
 Query Commands:
   list [--tracked|--active|--muted|--quiet]   List channels with optional filters
@@ -1232,13 +1504,16 @@ Management Commands:
 Registry Commands:
   build-registry [--dry-run]              Backfill discord_channels from discordRawData
   reset-unavailable                       Clear unavailability status for all channels
+  fix-states [--dry-run]                  Migrate auto-muted channels to unavailable state (one-time)
 
 Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
   --json                                  Output machine-readable JSON for query commands
 
 Examples:
-  npm run channels -- discover              # Discover channels (Discord API or raw data)
+  npm run channels -- update --source=m3org.json                    # Full discover→analyze→propose pipeline
+  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --dry-run  # Preview backfill
+  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json            # Backfill summaries
   npm run channels -- discover --source=m3org.json  # Discover for a specific config
   npm run channels -- analyze               # Analyze channels needing analysis
   npm run channels -- analyze --all         # Re-analyze all channels
@@ -1246,7 +1521,8 @@ Examples:
   npm run channels -- propose               # Generate PR body with config changes
   npm run channels -- list --tracked        # List tracked channels
 
-Workflow (automated via GitHub Action):
+Workflow (run individually or all at once with 'update'):
+  npm run channels -- update --source=m3org.json   # One-shot pipeline
   1. npm run channels -- discover            # Fetch channels
   2. npm run channels -- analyze             # Run LLM analysis
   3. npm run channels -- propose             # Generate PR body
@@ -1287,6 +1563,12 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
 
   try {
     switch (args.command) {
+      case "update":
+        await commandUpdate(db, registry, args);
+        break;
+      case "archive":
+        await commandArchive(db, registry, args);
+        break;
       case "discover":
         await commandDiscover(db, args);
         break;
@@ -1347,6 +1629,9 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         break;
       case "reset-unavailable":
         await commandResetUnavailable(registry, args);
+        break;
+      case "fix-states":
+        await commandFixStates(registry, args);
         break;
       case "help":
       default:
