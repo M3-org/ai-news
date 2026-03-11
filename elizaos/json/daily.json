@@ -1,32 +1,59 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-09",
-  "categories": {
-    "title": "ElizaOS Community Discussion and Developer Activity - March 9, 2026",
-    "content": [
-      {
-        "text": "Community members expressed concerns about ElizaOS project communication and token performance. A user criticized the lack of clear communication regarding announcements, game launches, airdrops for holders, and token use cases. They noted the token has declined 10x even after migration and called for better marketing and more active discussion on social media platform X. The community also discussed fair launch projects and their longevity, with questions about how projects survive without large token supply allocations.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1773104495992-jl89na.jpg"
-      },
-      {
-        "text": "Multiple developers and technical professionals offered their services to the community. Jaime Vejar Aguirre, founder of YOYO, a B2B commerce Super App in Latin America, is seeking a senior AI agent engineer for a 6-month paid remote contract to build an AI agent using LangGraph, MCP, and Supabase with pgvector that reads business ERPs and helps SMBs make purchasing decisions. Other developers offered expertise in AI system production deployment, monitoring, evals, and scaling, as well as blockchain and AI integration services. Several community members expressed interest in development opportunities and collaboration.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1773104517952-dhh3ha.jpg"
-      },
-      {
-        "text": "A panel discussion featuring Kyle Stoflet, Shaw Walters, and Lucid about AI agents was shared, covering how autonomous AI agents are evolving, their use in daily life, and potential to reshape the internet. The discussion included topics on intelligent apps in social feeds and the Eliza framework. Community members engaged in lighthearted conversation about the panel participants.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1480664643033763931_08d0e69e.jpg",
-        "videos": "https://cdn.elizaos.news/elizaos-media/xiit6a5_1xs_5ea7c729.mp4"
-      },
-      {
-        "text": "In the coders channel, developers discussed technical implementation challenges with ElizaOS. A developer struggled with getting the right models to work in each agent and expressed desire for a functional Google plugin for voices instead of expensive ElevenLabs. Questions were raised about implementing timed agent conversations in Discord similar to Twitter post intervals. Shaw provided resources including examples from the ElizaOS GitHub repository and the milady-ai repository showing trigger systems that can run at intervals. A developer also inquired about experiences building adaptors for ElizaOS and distribution methods.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": "https://cdn.elizaos.news/elizaos-media/milady_960a5352.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1773014400
+  "title": "Daily Report - 2026-03-10",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - March 10, 2026",
+      "content": [
+        {
+          "text": "Community members expressed significant concerns about project leadership, communication, and token performance. Users criticized the lack of clear updates, missed deadlines, and declining token value while other AI projects showed strong recovery. Key complaints included Shaw's controversial statement calling investors gamblers, unclear token utility, and promises about features like Babylon and Jeju that haven't materialized. The team acknowledged communication challenges and resource constraints. Odilitime stated they are aware of messaging issues and committed to improving investor relations and communication systems. He mentioned finishing the next version of elizaOS to unblock planned tasks including better social media posts. The team emphasized ongoing work on ElizaCloud as their flywheel strategy, with Milady pushing cloud adoption. However, community members noted the last Cloud update was in January, requesting more consistent updates on progress.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://elizaos.news/media/daily/2026-03-09/overall.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A new video briefing workflow was created for daily elizaOS news updates. The automated system generates video summaries for the elizaos.news platform, demonstrating progress in automated communication tools. The team participated in a Twitter Spaces event with BNB Chain discussing building AI agents on their platform.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1480803065773686835/test-card.mp4?ex=69b1a992&is=69b05812&hm=4d657eeb5d4d24e8bdae58cc4ac94f8065b509e109885e3cc0d30c39eda2b8c1&"
+          ]
+        },
+        {
+          "text": "Development work continued on Milady with pull requests submitted for APT repository distribution to enable easier installation on Debian and Ubuntu systems. Users discussed configuration issues with Neon database integration and system permissions in Milady.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/9202fbf571beb9c7d1f293e39c9338d6757ca23b54d148b3fdc7385b98c5f0f5/milady-ai/milady/issues/71"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A new Autonomous Economy Protocol plugin for Eliza was announced, enabling agents to earn money and build on-chain reputation. The AEP plugin provides five actions including agent registration, market browsing, deal proposals, reputation checking, and Season 1 airdrop status. The protocol operates on Base blockchain with AGT token rewards and a 50 million AGT pool for early adopters ending in May 2026. The plugin is available via npm as autonomous-economy-sdk.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Technical development progress included work on the v2.0.0 branch with serverless and cloud integration improvements. Odilitime worked on a new prompt batching subsystem that combines initialization queries, autonomous calls, and evaluator calls into one configurable scheduler optimized for different model types. Additional serverless concepts explored include lazy loading services and in-memory persistence to reduce rebuild requirements.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1377726087789940836"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1773100800
 }

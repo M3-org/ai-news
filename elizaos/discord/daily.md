@@ -1,110 +1,124 @@
-# elizaOS Discord - 2026-03-09
+# elizaOS Discord - 2026-03-10
 
 ## Overall Discussion Highlights
 
-### B2B Commerce AI Agent Development
+### Project Communication & Community Relations
 
-Jaime Vejar Aguirre presented a significant B2B commerce AI agent project for YOYO, a Latin American Super App. The technical architecture includes:
+The **💬-discussion** channel revealed significant tension around project communication and token performance. Community members expressed frustration about missed deadlines, unclear roadmaps, and the disconnect between market recovery and token performance. Odilitime acknowledged these communication failures and announced several initiatives to address them:
 
-- **LangGraph** for agent orchestration
-- **MCP (Model Context Protocol)** for integration
-- **Supabase with pgvector** for database operations
-- **Computer-use capabilities** inspired by OpenClaw to read business ERPs directly
-- **Multi-agent orchestration** for autonomous purchasing decisions
+- Built **elizaOS.news** with automated video briefing workflows for daily updates
+- Plans to strengthen investor relations communications
+- Commitment to restore the $elizaos holders system
 
-The system cross-references supplier and buyer data to enable SMBs to make autonomous purchasing decisions. Jaime is seeking a senior AI agent engineer for a 6-month remote contract with experience in LangGraph, MCP, and multi-agent orchestration.
+The team emphasized that long-term plans won't change based on price action, though implementation timelines for previously discussed airdrops and buybacks remain unclear.
 
-### ElizaOS Technical Challenges
+### Active Project Initiatives
 
-**Model Configuration and Voice Services:**
-- BinaryCookies reported issues with model configuration across different agents
-- Expressed concerns about ElevenLabs costs and requested a functional Google plugin for voice services as a more affordable alternative
+Three main projects were confirmed as actively progressing:
 
-**Timed Agent Interactions:**
-- Discussion focused on implementing scheduled agent-to-agent conversations in Discord
-- Community member 's' provided solutions pointing to autonomous TypeScript examples and the milady-ai repository with trigger systems
+- **Elizacloud**: Positioned as the project's flywheel, with Milady pushing cloud adoption
+- **Babylon**: Currently rolling out with players and agents actively testing
+- **Jeju**: Confirmed as an active project
 
-### Project Communication and Community Concerns
+### Token Migration Process
 
-Paolin raised multiple concerns about project management and communication:
-- Delayed game/app launches
-- Unclear airdrop distribution plans for holders
-- Undefined use cases for Elizaos
-- Insufficient X (Twitter) presence allowing FUD to spread
-- Lack of effective marketing team
-- Missing information on new exchange listings
-- Unclear buyback plans
+Discussion continued about allowing additional ai16z to elizaos token migrations. While the process isn't finalized, users need to DM their wallet address and proof of holding tokens during the September snapshot to participate.
 
-### Community Engagement
+### Framework Development (v2.0.0)
 
-- Kyle Stoflet shared a panel discussion about AI agents featuring Shaw and Lucid
-- Multiple developers (Tuskal, 𝓒𝔂𝓻𝓮𝓷, MONO.DEV, NerdPanic) offered development services
-- NerdPanic specifically offered production deployment services for AI systems including monitoring, evals, retries, fallbacks, cost control, and logging across various cloud platforms
+The **xfn-framework** channel focused on significant architectural improvements for the v2.0.0 branch:
 
-### Fair Launch Economics
+**Prompt Batching System**: After reviewing 50-60 plugins, Odilitime consolidated improvement ideas into a new subsystem called prompt batching. This combines three types of LLM queries (init LLM queries, autonomous LLM calls, and evaluator calls) into one configurable scheduler that can be optimized for either frontier or local models. The system builds on existing dynamicPromptExecution work, with core functionality already present in the 3.x version's autonomous system.
 
-Discussion emerged about the sustainability of fair launch projects, with Odilitime noting that most fair launches likely fail because they don't retain large supply chunks to sustain operations.
+**Serverless Architecture Concepts**: Development work revealed opportunities for:
+- Lazy loading services to defer initialization
+- Outsourcing service work to external systems
+- In-memory persistence to avoid rebuilding state
+
+Cursor (AI coding assistant) was providing serverless and cloud implementation suggestions, influenced by Shaw's configuration work through cursor rules or documentation.
+
+### Technical Development Updates
+
+**ElizaOS Progress**: Odilitime confirmed work on the next version of elizaOS, noting the develop branch is currently broken. Completing this version will unblock planned tasks including improved Twitter posts for $degenai and $elizaos tokens.
+
+**Milady Integration**: In **💬-coders**, BinaryCookies worked on integrating a Neon database with Milady, discovering the configuration location in the env section of the JSON file. They encountered unresolved issues with system permissions and capabilities.
+
+**Pull Request Activity**: Meme Broker submitted pull requests addressing GitHub issue #71 in the milady-ai/milady repository.
+
+### New Protocol Announcement
+
+TraderTomson announced the **Autonomous Economy Protocol (AEP)** in **💬-coders** - a comprehensive Eliza plugin for on-chain agent payments and reputation management:
+
+**Core Features**:
+- Operates on Base blockchain with AGT tokens as payment mechanism
+- Five TypeScript actions: REGISTER_AGENT, BROWSE_MARKET, PROPOSE_DEAL, CHECK_REPUTATION, GET_SEASON1_INFO
+- Permanent reputation system (0-10,000 score) stored on Basescan
+- 1% passive referral income in perpetuity
+- Credit access based on reputation without collateral requirements
+
+**Implementation**: Available via npm as `autonomous-economy-sdk` with integration code in `integrations/eliza-plugin/`
+
+**Season 1 Genesis Program**: 50 million AGT tokens allocated for early adopters through May 2026 with points-based claim system
 
 ## Key Questions & Answers
 
-**Q: How can I have Agents talk to each other in Discord on a timer, similar to TWITTER_POST_INTERVAL_MIN/MAX for X?**
-- **Asked by:** BinaryCookies
-- **Answered by:** s
-- **Answer:** Check the autonomous TypeScript examples at https://github.com/elizaOS/examples/tree/main/autonomous/typescript and the milady-ai repository (https://github.com/milady-ai/milady) which has trigger systems that can be set to run at intervals
+**Q: Can ai16z tokens still be converted to elizaos?** (antoszy)  
+A: Yes, team is allowing more migrations but process not finalized yet. Need to DM wallet address and proof of holding tokens during September snapshot. (Odilitime)
 
-**Q: How do fair launch projects survive without large supply chunks?**
-- **Asked by:** based.bid
-- **Answered by:** Odilitime
-- **Answer:** Most fair launches likely die because they don't end up with large chunks of supply to sustain operations
+**Q: How are you going to deliver on what you decided to work on if people are leaving?** (Kitten)  
+A: Team is still building. Elizacloud is the flywheel and Milady is pushing cloud adoption. (Odilitime)
+
+**Q: Are Babylon, Jeju, etc. active yet?** (paolin)  
+A: Yes, still rolling out Babylon with players and agents playing it now. (Odilitime)
+
+**Q: Where can I add my neon database to the milady?** (BinaryCookies)  
+A: It's located under the env in the json file (BinaryCookies)
+
+**Q: What is prompt batching?** (Stan ⚡)  
+A: A new subsystem that combines init LLM queries, autonomous LLM calls and evaluator calls into one configurable scheduler optimized for frontier or local models, building on dynamicPromptExecution (Odilitime)
+
+**Q: What is AEP?** (TraderTomson)  
+A: Autonomous Economy Protocol — a marketplace on Base where agents can earn AGT tokens, build reputation, find other agents, access credit, and earn referral income (TraderTomson)
+
+**Q: What actions does the Eliza plugin provide?** (TraderTomson)  
+A: Five actions: REGISTER_AGENT, BROWSE_MARKET, PROPOSE_DEAL, CHECK_REPUTATION, and GET_SEASON1_INFO (TraderTomson)
+
+**Q: How does the reputation system work?** (TraderTomson)  
+A: Permanent reputation score from 0-10,000 stored on Basescan (TraderTomson)
 
 ## Community Help & Collaboration
 
-**Agent Orchestration Support:**
-- **Helper:** 𝓒𝔂𝓻𝓮𝓷
-- **Helpee:** Jaime Vejar Aguirre
-- **Context:** Jaime seeking senior AI agent engineer for 6-month contract on B2B commerce AI agent project
-- **Resolution:** 𝓒𝔂𝓻𝓮𝓷 offered development services, Jaime agreed to contact
+**BinaryCookies** (self-help): Successfully discovered the location for Neon database configuration in Milady's env section of the JSON file after investigating the integration process.
 
-**Discord Timer Implementation:**
-- **Helper:** s
-- **Helpee:** BinaryCookies
-- **Context:** Needed to implement timed agent-to-agent conversations in Discord similar to Twitter interval posting
-- **Resolution:** Provided two GitHub repositories with examples of autonomous agents and trigger systems that run at intervals
+**Odilitime** helped **antoszy**: Provided guidance on the ai16z to elizaos token migration process, confirming migrations are still possible and outlining the required information (wallet address and September snapshot proof).
+
+**jin** helped the **Community**: Created video briefing workflow for daily updates at elizaos.news to address the need for regular project updates.
 
 ## Action Items
 
 ### Technical
 
-- **Hire senior AI agent engineer** experienced with LangGraph, MCP, and multi-agent orchestration for 6-month remote contract
-  - *Mentioned by:* Jaime Vejar Aguirre
-
-- **Fix model configuration issues** across different agents
-  - *Mentioned by:* BinaryCookies
-
-- **Develop AI-generated plugin** for Google voice integration
-  - *Mentioned by:* BinaryCookies
-
-### Feature
-
-- **Build AI agent** using LangGraph + MCP + Supabase (pgvector) for B2B commerce that reads ERPs and enables autonomous purchasing decisions
-  - *Mentioned by:* Jaime Vejar Aguirre
-
-- **Create a functional Google plugin** for voice services as an alternative to ElevenLabs
-  - *Mentioned by:* BinaryCookies
-
-- **Establish responsible and effective marketing team**
-  - *Mentioned by:* paolin
+- Complete next version of elizaOS to unblock develop branch and planned tasks (Odilitime)
+- Implement better Twitter posts for $degenai and $elizaos tokens (Odilitime)
+- Finalize ai16z to elizaos token migration process (Odilitime)
+- Restore $elizaos holders system functionality (Odilitime)
+- Resolve system permissions and capabilities configuration issue in Milady (BinaryCookies)
+- Review and merge pull requests for GitHub issue #71 in milady-ai/milady repository (Meme Broker)
+- Implement prompt batching subsystem combining init LLM queries, autonomous LLM calls and evaluator calls into configurable scheduler (Odilitime)
+- Complete database cleanup work discovered during feature development (Odilitime)
+- Implement lazy loading services for deferred initialization (Odilitime)
+- Implement in-memory persistence to avoid rebuilding state (Odilitime)
+- Evaluate outsourcing service work for serverless architecture (Odilitime)
+- Integrate lazy loading service into monorepo (Stan ⚡)
 
 ### Documentation
 
-- **Clarify and communicate airdrop distribution plans** for holders
-  - *Mentioned by:* paolin
+- Improve communication about Elizacloud progress and capabilities (otse finam)
+- Provide clear roadmap and regular updates (Biazs)
+- Strengthen investor relations communications (Odilitime)
+- Feature Eliza agents using AEP on the protocol leaderboard (TraderTomson)
 
-- **Define and document use cases** for Elizaos
-  - *Mentioned by:* paolin
+### Feature
 
-- **Provide updates on new exchange listings**
-  - *Mentioned by:* paolin
-
-- **Clarify team buyback plans**
-  - *Mentioned by:* paolin
+- Build automated tools for more consistent project updates (Odilitime)
+- Integrate AEP plugin into Eliza agents for on-chain payments and reputation (TraderTomson)
