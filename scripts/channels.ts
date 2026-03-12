@@ -772,7 +772,8 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     } : undefined
   });
 
-  const model = process.env.USE_OPENROUTER === "true" ? "qwen/qwen3.5-35b-a3b" : "gpt-4o-mini";
+  const model = process.env.CHANNEL_ANALYZE_MODEL ||
+    (process.env.USE_OPENROUTER === "true" ? "qwen/qwen3.5-35b-a3b" : "gpt-4o-mini");
 
   // Determine which channels to analyze
   let channelsToAnalyze: DiscordChannel[];
@@ -1702,6 +1703,7 @@ Registry Commands:
 Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
   --json                                  Output machine-readable JSON for query commands
+  Env: CHANNEL_ANALYZE_MODEL              Override the LLM model used by 'analyze'
 
 Deprecated (still work, use sync instead):
   update [--source=<config>.json]         Alias for 'sync'
