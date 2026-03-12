@@ -6,6 +6,8 @@
  * @module helpers
  */
 
+import { getActiveProgressDashboard, type DashboardLogLevel } from "./progressDashboard";
+
 /**
  * Console color codes for formatted logging output
  */
@@ -32,24 +34,65 @@ export const colors = {
 /**
  * Logger utility for consistent console output formatting
  */
+let inlineProgressActive = false;
+
+function clearInlineProgress(): void {
+  if (!inlineProgressActive) return;
+  process.stdout.write('\r\x1b[K');
+  inlineProgressActive = false;
+}
+
+function writeLogLine(
+  level: DashboardLogLevel,
+  message: string,
+  formatted: string,
+  stream: NodeJS.WriteStream = process.stdout
+): void {
+  const dashboard = getActiveProgressDashboard();
+  if (dashboard?.isInteractive()) {
+    dashboard.pushEvent(level, message);
+    return;
+  }
+
+  clearInlineProgress();
+  stream.write(`${formatted}\n`);
+}
+
 export const logger = {
-    info: (message: string) => console.log(`${colors.cyan}[INFO]${colors.reset} ${message}`),
-    success: (message: string) => console.log(`${colors.green}[SUCCESS]${colors.reset} ${message}`),
-    warning: (message: string) => console.log(`${colors.yellow}[WARNING]${colors.reset} ${message}`),
-    error: (message: string) => console.error(`${colors.red}[ERROR]${colors.reset} ${message}`),
+    info: (message: string) => writeLogLine('info', message, `${colors.cyan}[INFO]${colors.reset} ${message}`),
+    success: (message: string) => writeLogLine('success', message, `${colors.green}[SUCCESS]${colors.reset} ${message}`),
+    warning: (message: string) => writeLogLine('warning', message, `${colors.yellow}[WARNING]${colors.reset} ${message}`),
+    error: (message: string) => writeLogLine('error', message, `${colors.red}[ERROR]${colors.reset} ${message}`, process.stderr),
     debug: (message: string) => {
       // Only show debug messages if DEBUG environment variable is set
       if (process.env.DEBUG) {
-        console.log(`${colors.dim}[DEBUG]${colors.reset} ${message}`);
+        writeLogLine('debug', message, `${colors.dim}[DEBUG]${colors.reset} ${message}`);
       }
     },
-    channel: (message: string) => console.log(`${colors.magenta}[CHANNEL]${colors.reset} ${message}`),
+    channel: (message: string) => writeLogLine('channel', message, `${colors.magenta}[CHANNEL]${colors.reset} ${message}`),
     progress: (message: string) => {
-      // Clear the current line and write the progress message
+      const dashboard = getActiveProgressDashboard();
+      if (dashboard?.isInteractive()) {
+        dashboard.setTransientMessage(message);
+        return;
+      }
+
+      if (!process.stdout.isTTY || process.env.TERM === 'dumb') {
+        writeLogLine('info', message, `${colors.blue}[PROGRESS]${colors.reset} ${message}`);
+        return;
+      }
+
+      inlineProgressActive = true;
       process.stdout.write(`\r${colors.blue}[PROGRESS]${colors.reset} ${message}`);
     },
     clearLine: () => {
-      process.stdout.write('\r\x1b[K');
+      const dashboard = getActiveProgressDashboard();
+      if (dashboard?.isInteractive()) {
+        dashboard.clearTransientMessage();
+        return;
+      }
+
+      clearInlineProgress();
     }
 };
 
