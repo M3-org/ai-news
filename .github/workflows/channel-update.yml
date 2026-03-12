@@ -71,7 +71,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: weekly channel tracking update"
-          title: "Monthly Channel Tracking Update"
+          title: "Weekly Channel Tracking Update"
           body-path: tmp/proposal.md
           branch: channel-update-${{ github.run_number }}
           draft: true

@@ -1605,7 +1605,7 @@ async function commandArchive(db: Database, registry: DiscordChannelRegistry, ar
   }
 
   const afterTs = Math.floor(new Date(args.after).getTime() / 1000);
-  const beforeTs = Math.floor(new Date(args.before + "T23:59:59").getTime() / 1000);
+  const beforeTs = Math.floor(new Date(args.before + "T23:59:59Z").getTime() / 1000);
 
   // Per-date stats
   const dateCounts = await db.all<Array<{ date: number; cnt: number }>>(

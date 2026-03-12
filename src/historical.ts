@@ -426,12 +426,17 @@ Options:
               const epochTs = new Date(dateStr).getTime() / 1000;
               const summaryType = (generator.instance as any).summaryType;
               if (summaryType) {
-                const existing = await (generator.instance.storage as any).getContentItemsBetweenEpoch(
-                  epochTs, epochTs + 86400, summaryType
-                );
-                if (existing && existing.length > 0) {
-                  logger.info(`Skipping ${dateStr} — summary already exists (use --force to regenerate)`);
-                  return;
+                const storage = generator.instance.storage as any;
+                if (typeof storage.getContentItemsBetweenEpoch === "function") {
+                  const existing = await storage.getContentItemsBetweenEpoch(
+                    epochTs, epochTs + 86400, summaryType
+                  );
+                  if (existing && existing.length > 0) {
+                    logger.info(`Skipping ${dateStr} — summary already exists (use --force to regenerate)`);
+                    return;
+                  }
+                } else {
+                  logger.warning(`Storage for ${generator.instance.constructor.name} does not support skip-existing summary checks; generating ${dateStr}`);
                 }
               }
             }
