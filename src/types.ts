@@ -137,6 +137,7 @@ export interface ImageGenerationOptions {
  */
 export interface AiProvider {
   summarize(text: string): Promise<string>;
+  summarizeStructured<T = unknown>(prompt: string, schemaName: string, schema: Record<string, unknown>): Promise<T>;
   topics(text: string): Promise<string[]>;
   image(text: string, options?: ImageGenerationOptions): Promise<string[]>;
 }

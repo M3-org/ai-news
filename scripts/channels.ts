@@ -14,6 +14,7 @@
  *   npm run channels -- analyze [--all] [--channel=ID]
  *   npm run channels -- propose [--dry-run]
  *   npm run channels -- list [--tracked|--active|--muted|--quiet]
+ *   npm run channels -- list --interactive --source=m3org.json
  *   npm run channels -- show <channelId>
  *   npm run channels -- stats
  *   npm run channels -- track <channelId>
@@ -25,10 +26,11 @@
 
 import { open, Database } from "sqlite";
 import sqlite3 from "sqlite3";
-import { Client, GatewayIntentBits, ChannelType, TextChannel } from "discord.js";
+import { Client, GatewayIntentBits, ChannelType, TextChannel, ForumChannel } from "discord.js";
 import OpenAI from "openai";
 import * as fs from "fs";
 import * as path from "path";
+import * as readline from "readline";
 import * as dotenv from "dotenv";
 import {
   DiscordChannelRegistry,
@@ -84,15 +86,9 @@ interface CliArgs {
   output?: string;
   force?: boolean;
   apply?: boolean;
+  interactive?: boolean;
   // Sync options
   withFetch?: boolean;
-}
-
-interface DiscordRawData {
-  channel: { id: string; name: string; topic?: string; category?: string; guildId?: string; guildName?: string };
-  date: string;
-  users: Record<string, any>;
-  messages: Array<{ id: string; uid: string; content: string }>;
 }
 
 interface DiscordSourceConfig {
@@ -175,6 +171,7 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg.startsWith("--output=")) args.output = arg.split("=")[1];
     else if (arg === "-f" || arg === "--force") args.force = true;
     else if (arg === "--apply") args.apply = true;
+    else if (arg === "--interactive") args.interactive = true;
     else if (arg === "--with-fetch") args.withFetch = true;
   }
 
@@ -231,11 +228,7 @@ function getTrackedChannelIds(configs: Map<string, LoadedConfig>): Map<string, S
 
   for (const [, configData] of configs) {
     for (const source of configData.discordSources) {
-      let guildId = source.params?.guildId || "unknown";
-      if (guildId.startsWith("process.env.")) {
-        const envVar = guildId.replace("process.env.", "");
-        guildId = process.env[envVar] || envVar;
-      }
+      const guildId = resolveConfigEnvValue(source.params?.guildId) || "unknown";
       const channelIds = source.params?.channelIds || [];
 
       if (!trackedChannels.has(guildId)) {
@@ -251,13 +244,19 @@ function getTrackedChannelIds(configs: Map<string, LoadedConfig>): Map<string, S
   return trackedChannels;
 }
 
+function resolveConfigEnvValue(value?: string): string | undefined {
+  if (!value) return undefined;
+  if (!value.startsWith("process.env.")) return value;
+  const envVar = value.replace("process.env.", "");
+  return process.env[envVar] || envVar;
+}
+
 function getGuildIds(configs: Map<string, LoadedConfig>): Set<string> {
   const guildIds = new Set<string>();
 
   for (const [, configData] of configs) {
     for (const source of configData.discordSources) {
-      const guildIdVar = source.params?.guildId?.replace("process.env.", "");
-      const guildId = guildIdVar ? process.env[guildIdVar] : source.params?.guildId;
+      const guildId = resolveConfigEnvValue(source.params?.guildId);
       if (guildId) {
         guildIds.add(guildId);
       }
@@ -265,6 +264,67 @@ function getGuildIds(configs: Map<string, LoadedConfig>): Set<string> {
   }
 
   return guildIds;
+}
+
+function resolveDiscordBotToken(configs: Map<string, LoadedConfig>): {
+  token: string | null;
+  configName: string | null;
+  tokenVar: string | null;
+} {
+  for (const [configName, configData] of configs) {
+    for (const source of configData.discordSources) {
+      const tokenVar = source.params?.botToken?.replace("process.env.", "");
+      if (tokenVar && process.env[tokenVar]) {
+        return {
+          token: process.env[tokenVar]!,
+          configName,
+          tokenVar,
+        };
+      }
+    }
+  }
+
+  return { token: null, configName: null, tokenVar: null };
+}
+
+function filterChannelsByGuildIds(channels: DiscordChannel[], guildIds: Set<string>): DiscordChannel[] {
+  if (guildIds.size === 0) {
+    return channels;
+  }
+  return channels.filter(channel => guildIds.has(channel.guildId));
+}
+
+function isSupportedSyncChannel(channel: any): channel is TextChannel | ForumChannel {
+  return channel?.type === ChannelType.GuildText ||
+    channel?.type === ChannelType.GuildForum ||
+    channel?.type === ChannelType.GuildAnnouncement;
+}
+
+async function upsertRegistryChannelFromDiscord(
+  registry: DiscordChannelRegistry,
+  channel: TextChannel | ForumChannel,
+  observedAt: string,
+  isTracked: boolean
+): Promise<void> {
+  const textChannel = channel as TextChannel;
+  const forumChannel = channel as ForumChannel;
+
+  await registry.upsertChannel({
+    id: channel.id,
+    guildId: channel.type === ChannelType.GuildForum ? forumChannel.guild.id : textChannel.guild.id,
+    guildName: channel.type === ChannelType.GuildForum ? forumChannel.guild.name : textChannel.guild.name,
+    name: channel.type === ChannelType.GuildForum ? forumChannel.name : textChannel.name,
+    topic: channel.type === ChannelType.GuildForum ? forumChannel.topic : textChannel.topic,
+    categoryId: channel.type === ChannelType.GuildForum ? forumChannel.parentId : textChannel.parentId,
+    categoryName: channel.type === ChannelType.GuildForum ? forumChannel.parent?.name || null : textChannel.parent?.name || null,
+    type: channel.type,
+    position: channel.type === ChannelType.GuildForum ? forumChannel.position : textChannel.position,
+    nsfw: channel.type === ChannelType.GuildForum ? forumChannel.nsfw : textChannel.nsfw,
+    rateLimitPerUser: channel.type === ChannelType.GuildText ? textChannel.rateLimitPerUser : 0,
+    createdAt: Math.floor((channel.createdTimestamp || Date.now()) / 1000),
+    observedAt,
+    isTracked
+  });
 }
 
 // ============================================================================
@@ -289,17 +349,10 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   }
 
   // Find a valid Discord token
-  let botToken: string | null = null;
-  for (const [configName, configData] of configs) {
-    for (const source of configData.discordSources) {
-      const tokenVar = source.params?.botToken?.replace("process.env.", "");
-      if (tokenVar && process.env[tokenVar]) {
-        botToken = process.env[tokenVar]!;
-        console.log(`Using token from ${configName} (${tokenVar})`);
-        break;
-      }
-    }
-    if (botToken) break;
+  const tokenInfo = resolveDiscordBotToken(configs);
+  const botToken = tokenInfo.token;
+  if (botToken && tokenInfo.configName && tokenInfo.tokenVar) {
+    console.log(`Using token from ${tokenInfo.configName} (${tokenInfo.tokenVar})`);
   }
 
   // Fallback to building from raw data if no Discord token
@@ -348,6 +401,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   const guildIds = getGuildIds(configs);
   const allChannels = new Map<string, { guild: any; channels: Map<string, TextChannel> }>();
   const channelActivity = new Map<string, ChannelActivity>();
+  let revalidatedDuringDiscovery = 0;
 
   console.log("Discovering channels...");
   let guildIndex = 0;
@@ -382,22 +436,16 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
 
       for (const [channelId, channel] of textChannels) {
         try {
-          await registry.upsertChannel({
-            id: channelId,
-            guildId: guildId,
-            guildName: guild.name,
-            name: channel.name,
-            topic: channel.topic || null,
-            categoryId: channel.parentId || null,
-            categoryName: channel.parent?.name || null,
-            type: channel.type,
-            position: channel.position,
-            nsfw: channel.nsfw,
-            rateLimitPerUser: channel.rateLimitPerUser || 0,
-            createdAt: Math.floor(channel.createdTimestamp! / 1000),
+          await upsertRegistryChannelFromDiscord(
+            registry,
+            channel,
             observedAt,
-            isTracked: tracked.has(channelId),
-          });
+            tracked.has(channelId)
+          );
+          if (unavailableChannels.delete(channelId)) {
+            await registry.clearUnavailable(channelId);
+            revalidatedDuringDiscovery++;
+          }
         } catch (error: any) {
           if (args.debug) {
             console.error(`    Failed to upsert channel ${channelId}: ${error.message}`);
@@ -474,11 +522,6 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
             const observedAt = new Date().toISOString().split("T")[0];
             try {
               await registry.recordActivity(channelId, observedAt, messages.size);
-              // Clear unavailable status if it was previously set
-              if (unavailableChannels.has(channelId)) {
-                await registry.clearUnavailable(channelId);
-                unavailableChannels.delete(channelId);
-              }
             } catch (e) {
               // Channel might not exist in registry
             }
@@ -517,6 +560,9 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   console.log(`\nRegistry now contains ${stats.totalChannels} channels`);
   console.log(`  Tracked: ${stats.trackedChannels}`);
   console.log(`  Unavailable: ${unavailableChannels.size}`);
+  if (revalidatedDuringDiscovery > 0) {
+    console.log(`  Revalidated access: ${revalidatedDuringDiscovery}`);
+  }
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- analyze --stale' to analyze channels with LLM");
   console.log("2. Run 'npm run channels -- propose' to generate config changes");
@@ -1052,6 +1098,11 @@ async function commandProposeUpdate(db: Database, registry: DiscordChannelRegist
 // ============================================================================
 
 async function commandList(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (args.interactive) {
+    await commandInteractiveTrackSelection(registry, args);
+    return;
+  }
+
   let channels: DiscordChannel[];
 
   if (args.tracked) {
@@ -1070,6 +1121,8 @@ async function commandList(registry: DiscordChannelRegistry, args: CliArgs): Pro
     if (!args.json) console.log("\n All Channels\n");
     channels = await registry.getAllChannels();
   }
+
+  channels = sortChannelsForDisplay(channels);
 
   if (channels.length === 0) {
     if (args.json) {
@@ -1231,20 +1284,94 @@ async function commandStats(registry: DiscordChannelRegistry, args: CliArgs, db:
     HAVING msgs_90d > 0
     ORDER BY msgs_30d DESC`);
 
-  const pct = coverageRow ? Math.round(100 * coverageRow.days_with_msgs / coverageRow.total_records) : 0;
+  const unavailableCount = await db.get<{ count: number }>(
+    "SELECT COUNT(*) as count FROM discord_channels WHERE unavailableReason IS NOT NULL"
+  );
+  const unavailableByReason = await db.all<Array<{ reason: string; count: number }>>(
+    `SELECT unavailableReason as reason, COUNT(*) as count
+     FROM discord_channels
+     WHERE unavailableReason IS NOT NULL
+     GROUP BY unavailableReason
+     ORDER BY count DESC, reason ASC`
+  );
+  const accessibleNoRowsCount = await db.get<{ count: number }>(
+    `SELECT COUNT(*) as count
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND NOT EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )`
+  );
+  const accessibleNoRows = await db.all<Array<{ name: string; categoryName: string | null }>>(
+    `SELECT c.name, c.categoryName
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND NOT EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )
+     ORDER BY c.categoryName, c.name
+     LIMIT 10`
+  );
+  const staleCoverageCount = await db.get<{ count: number }>(
+    `SELECT COUNT(*) as count
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )
+       AND COALESCE((
+         SELECT MAX(i.date)
+         FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       ), 0) < ?`,
+    t90
+  );
+
+  const totalRecords = coverageRow?.total_records ?? 0;
+  const daysWithMessages = coverageRow?.days_with_msgs ?? 0;
+  const emptyRecords = coverageRow?.empty_records ?? 0;
+  const totalMessages = coverageRow?.total_msgs ?? 0;
+  const pct = totalRecords > 0 ? Math.round(100 * daysWithMessages / totalRecords) : 0;
+  const unavailable = unavailableCount?.count || 0;
 
   console.log("\n Channel Registry Statistics\n");
 
-  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted, ${stats.totalChannels - stats.trackedChannels - stats.mutedChannels} unavailable`);
+  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted, ${unavailable} unavailable`);
   console.log(`Coverage: ${coverageRow?.earliest ?? '?'} → ${coverageRow?.latest ?? '?'}`);
-  console.log(`Records:  ${coverageRow?.total_records.toLocaleString() ?? 0} total  |  ${coverageRow?.days_with_msgs.toLocaleString() ?? 0} with messages (${pct}%)  |  ${coverageRow?.empty_records.toLocaleString() ?? 0} empty`);
-  console.log(`Messages: ${(coverageRow?.total_msgs ?? 0).toLocaleString()} across all time`);
+  console.log(`Records:  ${totalRecords.toLocaleString()} total  |  ${daysWithMessages.toLocaleString()} with messages (${pct}%)  |  ${emptyRecords.toLocaleString()} empty`);
+  console.log(`Messages: ${totalMessages.toLocaleString()} across all time`);
+  console.log(`Gaps:     ${(accessibleNoRowsCount?.count ?? 0).toLocaleString()} accessible channels with no raw rows  |  ${(staleCoverageCount?.count ?? 0).toLocaleString()} with no coverage in last 90 days`);
 
   console.log(`\nActivity Distribution (7-day rolling velocity, accessible channels):`);
   console.log(`   Hot     (>50 msgs/day):  ${stats.hotChannels}`);
   console.log(`   Active  (7–50):          ${stats.activeChannels}`);
   console.log(`   Moderate(1.5–7):         ${stats.moderateChannels}`);
   console.log(`   Quiet   (<1.5):          ${stats.quietChannels}`);
+
+  if (unavailableByReason.length > 0) {
+    console.log(`\nUnavailable by reason:`);
+    for (const row of unavailableByReason) {
+      console.log(`   ${row.reason}: ${row.count}`);
+    }
+  }
+
+  if (accessibleNoRows.length > 0) {
+    console.log(`\nAccessible channels with no raw rows (${accessibleNoRowsCount?.count ?? 0} total):`);
+    for (const row of accessibleNoRows) {
+      const category = row.categoryName ? ` [${row.categoryName}]` : "";
+      console.log(`   #${row.name}${category}`);
+    }
+    if ((accessibleNoRowsCount?.count || 0) > accessibleNoRows.length) {
+      console.log(`   ... and ${(accessibleNoRowsCount?.count || 0) - accessibleNoRows.length} more`);
+    }
+  }
 
   if (recentActivity.length > 0) {
     console.log(`\nChannels with messages in last 90 days (${recentActivity.length} total):`);
@@ -1289,7 +1416,7 @@ async function commandMute(registry: DiscordChannelRegistry, channelId: string, 
   }
 
   await registry.setMuted(channelId, muted);
-  console.log(`\nChannel #${channel.name} is now ${muted ? "muted" : "unmuted"}\n`);
+  console.log(`\nChannel #${channel.name} is now ${muted ? "ignored in summaries" : "included in summaries"}\n`);
 }
 
 // ============================================================================
@@ -1479,15 +1606,15 @@ async function commandResetUnavailable(registry: DiscordChannelRegistry, args: C
 
 async function commandSync(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
   if (args.withFetch) {
-    console.log("\n=== Step 1/4: Mirror ===");
-    await commandMirror(db, registry, args);
-
-    console.log("\n=== Step 2/4: Discover ===");
+    console.log("\n=== Step 1/4: Discover ===");
     try {
       await commandDiscover(db, args);
     } catch (e) {
       console.warn("Discover failed, continuing:", e);
     }
+
+    console.log("\n=== Step 2/4: Mirror ===");
+    await commandMirror(db, registry, args);
 
     console.log("\n=== Step 3/4: Analyze ===");
     await commandAnalyze(db, registry, { ...args, all: true });
@@ -1534,12 +1661,71 @@ async function commandUpdate(db: Database, registry: DiscordChannelRegistry, arg
 // ============================================================================
 
 async function commandMirror(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
-  // Get all accessible channels from registry (excludes unavailable)
-  const allChannels = await registry.getAllChannels();
+  const configs = loadConfigs(args.source);
+  const guildIds = getGuildIds(configs);
+  const trackedChannels = getTrackedChannelIds(configs);
+  let allChannels = filterChannelsByGuildIds(await registry.getAllChannels(), guildIds);
+
+  if (allChannels.length === 0) {
+    console.log("No channels found in registry for this source. Run 'channels discover' first.");
+    return;
+  }
+
+  const unavailableBefore = allChannels.filter(c => c.unavailableReason);
+  let revalidated = 0;
+
+  if (unavailableBefore.length > 0) {
+    if (args.dryRun) {
+      console.log(`\nWould revalidate ${unavailableBefore.length} unavailable channels before mirroring.`);
+    } else {
+      const tokenInfo = resolveDiscordBotToken(configs);
+      if (!tokenInfo.token) {
+        console.log(`\nSkipping unavailable-channel revalidation for ${unavailableBefore.length} channels (no Discord token available).`);
+      } else {
+        console.log(`\nRevalidating ${unavailableBefore.length} unavailable channels before mirroring...`);
+        const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+        const observedAt = new Date().toISOString().split("T")[0];
+        try {
+          await client.login(tokenInfo.token);
+          for (const channel of unavailableBefore) {
+            try {
+              const fetched = await client.channels.fetch(channel.id);
+              if (!fetched || !isSupportedSyncChannel(fetched)) {
+                continue;
+              }
+
+              await upsertRegistryChannelFromDiscord(
+                registry,
+                fetched,
+                observedAt,
+                trackedChannels.get(channel.guildId)?.has(channel.id) || channel.isTracked
+              );
+              await registry.clearUnavailable(channel.id);
+              revalidated++;
+            } catch (error: any) {
+              if (args.debug) {
+                console.error(`  Revalidation failed for ${channel.id}: ${error.message}`);
+              }
+            }
+          }
+        } finally {
+          await client.destroy();
+        }
+
+        if (revalidated > 0) {
+          allChannels = filterChannelsByGuildIds(await registry.getAllChannels(), guildIds);
+          console.log(`Revalidated ${revalidated}/${unavailableBefore.length} previously unavailable channels.`);
+        } else {
+          console.log("No unavailable channels were revalidated.");
+        }
+      }
+    }
+  }
+
   const accessible = allChannels.filter(c => !c.unavailableReason);
 
   if (accessible.length === 0) {
-    console.log("No accessible channels in registry. Run 'channels discover' first.");
+    console.log("No accessible channels in registry after revalidation. Run 'channels discover' first or check bot permissions.");
     return;
   }
 
@@ -1552,7 +1738,7 @@ async function commandMirror(db: Database, registry: DiscordChannelRegistry, arg
 
   const channelIds = accessible.map(c => c.id).join(",");
 
-  console.log(`\nMirroring ${accessible.length} accessible channels (${allChannels.length - accessible.length} unavailable skipped)`);
+  console.log(`\nMirroring ${accessible.length} accessible channels (${allChannels.length - accessible.length} unavailable skipped${revalidated > 0 ? `, ${revalidated} revalidated` : ""})`);
   console.log(`Date range: ${after} → ${before}${!args.after ? " (auto-detected from channel creation dates)" : ""}`);
 
   // Show breakdown by category
@@ -1676,41 +1862,43 @@ Discord Channel Management CLI
 
 Pipeline Commands:
   sync [--source=<config>.json] [--dry-run] [--apply]            Run discover → analyze → propose in one step
-  sync --with-fetch [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]   Full pipeline: mirror → discover → analyze → propose
+  sync --with-fetch [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]   Full pipeline: discover → mirror → analyze → propose
        [--source=<config>.json] [--dry-run] [--apply]
 
 Discovery & Analysis:
   discover [--source=<config>.json]                              Fetch channels from Discord (or raw data if no token)
   analyze [--all] [--channel=ID]                                 Run LLM analysis on channels
   propose [--dry-run] [--apply]                                  Generate config diff and PR markdown; --apply writes changes to config
-  mirror  [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]             Fetch raw messages from ALL accessible channels → DB
+  mirror  [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]             Fetch raw messages from registry channels → DB
           [--source=<config>.json] [--dry-run]                  (date range auto-detected from channel creation dates)
-  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from existing DB data (uses channelIds from config)
+  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from historical DB activity for each day
           [--source=<config>.json] [--output=<path>] [--dry-run] [-f/--force]
 
 Query Commands:
   list [--tracked|--active|--muted|--quiet]   List channels with optional filters
+  list --interactive --source=<config>.json   Interactively track/untrack and ignore noisy channels
   show <channelId>                            Show detailed channel info
-  stats                                       Show channel registry statistics
+  stats                                       Show channel registry, access, and coverage statistics
 
 Management Commands:
   track <channelId>                       Mark channel as tracked
   untrack <channelId>                     Mark channel as not tracked
-  mute <channelId>                        Mute channel (hide from recommendations)
-  unmute <channelId>                      Unmute channel
+  mute <channelId>                        Ignore channel in summaries and recommendations
+  unmute <channelId>                      Include channel in summaries again
 
 Registry Commands:
   build-registry [--dry-run]              Backfill discord_channels from discordRawData
   reset-unavailable                       Clear unavailability status for all channels
   fix-states [--dry-run]                  Migrate auto-muted channels to unavailable state (one-time)
 
-Options:
+  Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
   --output=<path>                         Output directory for generated summary files
+  --interactive                           Launch terminal selector for track/untrack and ignore toggles
   --json                                  Output machine-readable JSON for query commands
   Env: CHANNEL_ANALYZE_MODEL              Override the LLM model used by 'analyze'
 
-Deprecated (still work, use sync instead):
+  Deprecated (still work, use sync instead):
   update [--source=<config>.json]         Alias for 'sync'
   refresh [--after/--before]             Alias for 'sync --with-fetch'
 
@@ -1725,6 +1913,7 @@ Examples:
   npm run channels -- analyze --channel=123 # Analyze a single channel
   npm run channels -- propose               # Generate PR body with config changes
   npm run channels -- list --tracked        # List tracked channels
+  npm run channels -- list --interactive --source=m3org.json   # Pick tracked channels and ignore noisy ones
 
 Workflow (run individually or all at once with 'sync'):
   npm run channels -- sync --source=m3org.json     # One-shot pipeline
@@ -1740,6 +1929,434 @@ Workflow (run individually or all at once with 'sync'):
 
 function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function compareNullableStrings(a?: string | null, b?: string | null): number {
+  if (!a && !b) return 0;
+  if (!a) return 1;
+  if (!b) return -1;
+  return a.localeCompare(b);
+}
+
+function sortChannelsForDisplay(channels: DiscordChannel[]): DiscordChannel[] {
+  const guildOrder = new Map<string, number>();
+  const categoryOrder = new Map<string, number>();
+
+  const byGuild = new Map<string, DiscordChannel[]>();
+  for (const channel of channels) {
+    const guildKey = `${channel.guildId}|${channel.guildName || ""}`;
+    if (!byGuild.has(guildKey)) {
+      byGuild.set(guildKey, []);
+    }
+    byGuild.get(guildKey)!.push(channel);
+  }
+
+  const guildKeys = Array.from(byGuild.keys()).sort((a, b) => {
+    const aName = a.split("|")[1] || "";
+    const bName = b.split("|")[1] || "";
+    return aName.localeCompare(bName);
+  });
+
+  guildKeys.forEach((guildKey, guildIndex) => {
+    guildOrder.set(guildKey, guildIndex);
+    const categoryMinPos = new Map<string, number>();
+    for (const channel of byGuild.get(guildKey) || []) {
+      const categoryKey = `${guildKey}|${channel.categoryId || "uncategorized"}|${channel.categoryName || ""}`;
+      const current = categoryMinPos.get(categoryKey);
+      const pos = channel.position ?? Number.MAX_SAFE_INTEGER;
+      if (current === undefined || pos < current) {
+        categoryMinPos.set(categoryKey, pos);
+      }
+    }
+
+    Array.from(categoryMinPos.entries())
+      .sort((a, b) => {
+        if (a[1] !== b[1]) return a[1] - b[1];
+        return a[0].localeCompare(b[0]);
+      })
+      .forEach(([categoryKey], categoryIndex) => {
+        categoryOrder.set(categoryKey, categoryIndex);
+      });
+  });
+
+  return [...channels].sort((a, b) => {
+    const aGuildKey = `${a.guildId}|${a.guildName || ""}`;
+    const bGuildKey = `${b.guildId}|${b.guildName || ""}`;
+    const aCategoryKey = `${aGuildKey}|${a.categoryId || "uncategorized"}|${a.categoryName || ""}`;
+    const bCategoryKey = `${bGuildKey}|${b.categoryId || "uncategorized"}|${b.categoryName || ""}`;
+
+    const guildCmp = (guildOrder.get(aGuildKey) ?? 0) - (guildOrder.get(bGuildKey) ?? 0);
+    if (guildCmp !== 0) return guildCmp;
+
+    const categoryCmp = (categoryOrder.get(aCategoryKey) ?? 0) - (categoryOrder.get(bCategoryKey) ?? 0);
+    if (categoryCmp !== 0) return categoryCmp;
+
+    const positionCmp = (a.position ?? Number.MAX_SAFE_INTEGER) - (b.position ?? Number.MAX_SAFE_INTEGER);
+    if (positionCmp !== 0) return positionCmp;
+
+    return compareNullableStrings(a.name, b.name);
+  });
+}
+
+function ensureConfigBackup(configPath: string): void {
+  if (!fs.existsSync(BACKUP_DIR)) {
+    fs.mkdirSync(BACKUP_DIR, { recursive: true });
+  }
+  const ts = new Date().toISOString().replace(/[:.]/g, "-");
+  const backupPath = path.join(BACKUP_DIR, `${path.basename(configPath, ".json")}.${ts}.json`);
+  fs.copyFileSync(configPath, backupPath);
+}
+
+async function promptLine(prompt: string): Promise<string> {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  try {
+    return await new Promise<string>(resolve => rl.question(prompt, resolve));
+  } finally {
+    rl.close();
+  }
+}
+
+async function applyTrackedSelectionToConfigs(
+  configs: Map<string, LoadedConfig>,
+  orderedTrackedIds: string[],
+  registryChannels: DiscordChannel[]
+): Promise<{ updatedConfigs: string[]; totalTracked: number }> {
+  const channelById = new Map(registryChannels.map(channel => [channel.id, channel]));
+  const updatedConfigs: string[] = [];
+
+  for (const [, configData] of configs) {
+    let modified = false;
+
+    for (const source of configData.discordSources) {
+      const resolvedGuildId = resolveConfigEnvValue(source.params?.guildId);
+      const nextIds = orderedTrackedIds.filter(channelId => {
+        const channel = channelById.get(channelId);
+        return channel && (!resolvedGuildId || channel.guildId === resolvedGuildId);
+      });
+
+      const prevIds = source.params?.channelIds || [];
+      if (JSON.stringify(prevIds) !== JSON.stringify(nextIds)) {
+        source.params.channelIds = nextIds;
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      ensureConfigBackup(configData.path);
+      fs.writeFileSync(configData.path, JSON.stringify(configData.config, null, 2) + "\n");
+      updatedConfigs.push(path.basename(configData.path));
+    }
+  }
+
+  return { updatedConfigs, totalTracked: orderedTrackedIds.length };
+}
+
+async function commandInteractiveTrackSelection(
+  registry: DiscordChannelRegistry,
+  args: CliArgs
+): Promise<void> {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    console.error("\nInteractive mode requires a TTY.\n");
+    return;
+  }
+
+  if (!args.source) {
+    console.error("\nInteractive mode requires --source=<config>.json so edits apply to one config.\n");
+    return;
+  }
+
+  const configs = loadConfigs(args.source);
+  if (configs.size !== 1) {
+    console.error(`\nExpected exactly one config for --source=${args.source}, found ${configs.size}.\n`);
+    return;
+  }
+
+  const guildIds = getGuildIds(configs);
+  const allChannels = sortChannelsForDisplay(
+    (await registry.getAllChannels()).filter(channel => guildIds.size === 0 || guildIds.has(channel.guildId))
+  );
+
+  if (allChannels.length === 0) {
+    console.log("\nNo channels found in the registry for this source. Run 'channels discover' first.\n");
+    return;
+  }
+
+  const trackedByGuild = getTrackedChannelIds(configs);
+  const selected = new Set(
+    allChannels
+      .filter(channel => trackedByGuild.get(channel.guildId)?.has(channel.id))
+      .map(channel => channel.id)
+  );
+  const original = new Set(selected);
+  const ignored = new Set(allChannels.filter(channel => channel.isMuted).map(channel => channel.id));
+  const originalIgnored = new Set(ignored);
+  let filter = "";
+  let cursor = 0;
+  let message = "Use hotkeys below to edit channel state.";
+  let pendingQuitConfirmation = false;
+
+  const hasUnsavedChanges = () =>
+    allChannels.some(channel =>
+      original.has(channel.id) !== selected.has(channel.id) ||
+      originalIgnored.has(channel.id) !== ignored.has(channel.id)
+    );
+
+  const getVisible = () => allChannels.filter(channel => {
+    if (!filter) return true;
+    const haystack = [
+      channel.name,
+      channel.categoryName || "",
+      channel.guildName || "",
+      channel.topic || "",
+    ].join(" ").toLowerCase();
+    return haystack.includes(filter.toLowerCase());
+  });
+
+  const render = () => {
+    const visible = getVisible();
+    const rows = Math.max(8, (process.stdout.rows || 24) - 8);
+    if (cursor >= visible.length) cursor = Math.max(0, visible.length - 1);
+    const start = Math.max(0, Math.min(cursor - Math.floor(rows / 2), Math.max(0, visible.length - rows)));
+    const page = visible.slice(start, start + rows);
+    const unsaved = hasUnsavedChanges();
+
+    console.clear();
+    console.log(`Channel Selector: ${args.source}`);
+    console.log(`Tracked: ${selected.size}/${allChannels.length} | Ignored: ${ignored.size} | Matching: ${visible.length} | Filter: ${filter || "(none)"} | ${unsaved ? "UNSAVED CHANGES" : "saved"}`);
+    console.log("Hotkeys: ↑/↓ move  SPACE track  M ignore  / filter  C clear  S save  Q quit");
+    console.log("Legend:  [x]=tracked  [i]=ignored  [!]=no access");
+    console.log(message);
+    console.log("");
+
+    if (visible.length === 0) {
+      console.log("No channels match the current filter.");
+      return;
+    }
+
+    let lastGuild = "";
+    let lastCategory = "";
+    page.forEach((channel, index) => {
+      const absoluteIndex = start + index;
+      const guildName = channel.guildName || "Unknown Guild";
+      const categoryName = channel.categoryName || "No Category";
+      if (guildName !== lastGuild) {
+        console.log(`${guildName}`);
+        lastGuild = guildName;
+        lastCategory = "";
+      }
+      if (categoryName !== lastCategory) {
+        console.log(`  [${categoryName}]`);
+        lastCategory = categoryName;
+      }
+
+      const pointer = absoluteIndex === cursor ? ">" : " ";
+      const tracked = selected.has(channel.id) ? "x" : " ";
+      const ignoredMarker = ignored.has(channel.id) ? "i" : " ";
+      const unavailable = channel.unavailableReason ? "!" : " ";
+      const velocity = `${channel.currentVelocity.toFixed(1)}`.padStart(5);
+      console.log(` ${pointer} [${tracked}][${ignoredMarker}][${unavailable}] #${channel.name.padEnd(28)} ${velocity} msg/day  ${channel.id}`);
+    });
+  };
+
+  await new Promise<void>((resolve) => {
+    readline.emitKeypressEvents(process.stdin);
+    process.stdin.resume();
+    if (process.stdin.isTTY) {
+      process.stdin.setRawMode(true);
+    }
+
+    const cleanup = () => {
+      process.stdin.off("keypress", onKeypress);
+      if (process.stdin.isTTY) {
+        process.stdin.setRawMode(false);
+      }
+      process.stdin.pause();
+      console.clear();
+      resolve();
+    };
+
+    const save = async () => {
+      const orderedTrackedIds = allChannels.filter(channel => selected.has(channel.id)).map(channel => channel.id);
+      const changedTrackIds = allChannels
+        .filter(channel => original.has(channel.id) !== selected.has(channel.id))
+        .map(channel => channel.id);
+      const changedIgnoredIds = allChannels
+        .filter(channel => originalIgnored.has(channel.id) !== ignored.has(channel.id))
+        .map(channel => channel.id);
+
+      if (changedTrackIds.length === 0 && changedIgnoredIds.length === 0) {
+        message = "No changes to save.";
+        pendingQuitConfirmation = false;
+        render();
+        cleanup();
+        return;
+      }
+
+      let updatedConfigs: string[] = [];
+      let totalTracked = selected.size;
+      if (changedTrackIds.length > 0) {
+        const configUpdate = await applyTrackedSelectionToConfigs(configs, orderedTrackedIds, allChannels);
+        updatedConfigs = configUpdate.updatedConfigs;
+        totalTracked = configUpdate.totalTracked;
+      }
+
+      for (const channel of allChannels) {
+        const shouldTrack = selected.has(channel.id);
+        if (channel.isTracked !== shouldTrack) {
+          await registry.setTracked(channel.id, shouldTrack);
+          channel.isTracked = shouldTrack;
+        }
+        const shouldIgnore = ignored.has(channel.id);
+        if (channel.isMuted !== shouldIgnore) {
+          await registry.setMuted(channel.id, shouldIgnore);
+          channel.isMuted = shouldIgnore;
+        }
+      }
+
+      const parts: string[] = [];
+      if (updatedConfigs.length > 0) {
+        parts.push(`tracked ${totalTracked} channels in ${updatedConfigs.join(", ")}`);
+      }
+      if (changedIgnoredIds.length > 0) {
+        parts.push(`updated ignore state for ${changedIgnoredIds.length} channel(s)`);
+      }
+      message = parts.length > 0 ? `Saved: ${parts.join("; ")}.` : "Saved registry changes.";
+      pendingQuitConfirmation = false;
+      render();
+      cleanup();
+    };
+
+    const onKeypress = async (_str: string, key: readline.Key) => {
+      const visible = getVisible();
+
+      if (key.ctrl && key.name === "c") {
+        if (hasUnsavedChanges() && !pendingQuitConfirmation) {
+          pendingQuitConfirmation = true;
+          message = "Unsaved changes. Press q again to quit without saving, or press s to save.";
+          render();
+        } else {
+          message = "Cancelled.";
+          render();
+          cleanup();
+        }
+        return;
+      }
+
+      if (key.name === "up" || key.name === "k") {
+        pendingQuitConfirmation = false;
+        cursor = Math.max(0, cursor - 1);
+        render();
+        return;
+      }
+
+      if (key.name === "down" || key.name === "j") {
+        pendingQuitConfirmation = false;
+        cursor = Math.min(Math.max(0, visible.length - 1), cursor + 1);
+        render();
+        return;
+      }
+
+      if (key.name === "space") {
+        const channel = visible[cursor];
+        if (channel) {
+          if (selected.has(channel.id)) selected.delete(channel.id);
+          else selected.add(channel.id);
+          pendingQuitConfirmation = false;
+          message = `${selected.has(channel.id) ? "Tracking" : "Untracking"} #${channel.name}`;
+        }
+        render();
+        return;
+      }
+
+      if (key.name === "m") {
+        const channel = visible[cursor];
+        if (channel) {
+          if (ignored.has(channel.id)) ignored.delete(channel.id);
+          else ignored.add(channel.id);
+          pendingQuitConfirmation = false;
+          message = `${ignored.has(channel.id) ? "Ignoring" : "Including"} #${channel.name} in summaries`;
+        }
+        render();
+        return;
+      }
+
+      if (key.name === "c") {
+        filter = "";
+        cursor = 0;
+        pendingQuitConfirmation = false;
+        message = "Filter cleared.";
+        render();
+        return;
+      }
+
+      if (key.name === "q" || key.name === "escape") {
+        if (hasUnsavedChanges() && !pendingQuitConfirmation) {
+          pendingQuitConfirmation = true;
+          message = "Unsaved changes. Press q again to quit without saving, or press s to save.";
+          render();
+        } else {
+          message = hasUnsavedChanges() ? "Cancelled without saving." : "Cancelled.";
+          render();
+          cleanup();
+        }
+        return;
+      }
+
+      if (key.name === "s" || key.name === "return") {
+        pendingQuitConfirmation = false;
+        process.stdin.off("keypress", onKeypress);
+        if (process.stdin.isTTY) {
+          process.stdin.setRawMode(false);
+        }
+        process.stdin.pause();
+        try {
+          await save();
+        } catch (error: any) {
+          message = `Save failed: ${error.message}`;
+          readline.emitKeypressEvents(process.stdin);
+          process.stdin.resume();
+          if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+          }
+          process.stdin.on("keypress", onKeypress);
+          render();
+        }
+        return;
+      }
+
+      if (_str === "/") {
+        process.stdin.off("keypress", onKeypress);
+        if (process.stdin.isTTY) {
+          process.stdin.setRawMode(false);
+        }
+        try {
+          filter = (await promptLine("Filter channels by name/category/guild: ")).trim();
+          cursor = 0;
+          pendingQuitConfirmation = false;
+          message = filter ? `Filter applied: ${filter}` : "Filter cleared.";
+        } finally {
+          readline.emitKeypressEvents(process.stdin);
+          process.stdin.resume();
+          if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+          }
+          process.stdin.on("keypress", onKeypress);
+          render();
+        }
+      }
+    };
+
+    process.stdin.on("keypress", onKeypress);
+    render();
+  });
+
+  const changed = allChannels.filter(channel =>
+    original.has(channel.id) !== channel.isTracked ||
+    originalIgnored.has(channel.id) !== channel.isMuted
+  );
+  if (changed.length > 0) {
+    console.log(`Saved ${changed.length} channel state changes.\n`);
+  }
 }
 
 // ============================================================================

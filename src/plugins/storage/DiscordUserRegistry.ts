@@ -395,6 +395,34 @@ export class DiscordUserRegistry {
     );
   }
 
+  /**
+   * Update current API-derived profile data without clobbering manual fields.
+   */
+  async updateProfile(params: {
+    userId: string;
+    avatarUrl?: string | null;
+    metadata: Record<string, any>;
+  }): Promise<void> {
+    const existing = await this.getUserById(params.userId);
+    if (!existing) return;
+
+    const now = Math.floor(Date.now() / 1000);
+    const mergedMetadata = {
+      ...(existing.metadata || {}),
+      ...params.metadata,
+    };
+
+    await this.db.run(
+      "UPDATE discord_users SET avatarUrl = ?, metadata = ?, updatedAt = ? WHERE id = ?",
+      [
+        params.avatarUrl ?? existing.avatarUrl ?? null,
+        JSON.stringify(mergedMetadata),
+        now,
+        params.userId,
+      ]
+    );
+  }
+
   // ============================================================================
   // Private Helpers
   // ============================================================================
