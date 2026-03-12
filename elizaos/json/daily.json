@@ -1,37 +1,52 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-10",
-  "categories": {
-    "title": "ElizaOS Community Discussion - March 10, 2026",
-    "content": [
-      {
-        "text": "Community members expressed significant concerns about project leadership, communication, and token performance. Users criticized the lack of clear updates, missed deadlines, and declining token value while other AI projects showed strong recovery. Key complaints included Shaw's controversial statement calling investors gamblers, unclear token utility, and promises about features like Babylon and Jeju that haven't materialized. The team acknowledged communication challenges and resource constraints. Odilitime stated they are aware of messaging issues and committed to improving investor relations and communication systems. He mentioned finishing the next version of elizaOS to unblock planned tasks including better social media posts. The team emphasized ongoing work on ElizaCloud as their flywheel strategy, with Milady pushing cloud adoption. However, community members noted the last Cloud update was in January, requesting more consistent updates on progress.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1480803154642735179_c2c7b41c.png"
-      },
-      {
-        "text": "A new video briefing workflow was created for daily elizaOS news updates. The automated system generates video summaries for the elizaos.news platform, demonstrating progress in automated communication tools. The team participated in a Twitter Spaces event with BNB Chain discussing building AI agents on their platform.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "videos": "https://cdn.elizaos.news/elizaos-media/test-card_fd76315b.mp4",
-        "posters": "https://cdn.elizaos.news/posters/1773190989301-i6tbgl.jpg"
-      },
-      {
-        "text": "Development work continued on Milady with pull requests submitted for APT repository distribution to enable easier installation on Debian and Ubuntu systems. Users discussed configuration issues with Neon database integration and system permissions in Milady.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": "https://cdn.elizaos.news/elizaos-media/71_91d6e298.jpg"
-      },
-      {
-        "text": "A new Autonomous Economy Protocol plugin for Eliza was announced, enabling agents to earn money and build on-chain reputation. The AEP plugin provides five actions including agent registration, market browsing, deal proposals, reputation checking, and Season 1 airdrop status. The protocol operates on Base blockchain with AGT token rewards and a 50 million AGT pool for early adopters ending in May 2026. The plugin is available via npm as autonomous-economy-sdk.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1773191007467-v0v5a.jpg"
-      },
-      {
-        "text": "Technical development progress included work on the v2.0.0 branch with serverless and cloud integration improvements. Odilitime worked on a new prompt batching subsystem that combines initialization queries, autonomous calls, and evaluator calls into one configurable scheduler optimized for different model types. Additional serverless concepts explored include lazy loading services and in-memory persistence to reduce rebuild requirements.",
-        "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-        "posters": "https://cdn.elizaos.news/posters/1773191031520-7ro769.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1773100800
+  "title": "Daily Report - 2026-03-11",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - March 11, 2026",
+      "content": [
+        {
+          "text": "Community members expressed concerns about the ELIZAOS token performance, noting it reached a new all-time low despite being in a bear market. Users discussed that the token has dropped significantly, with some attributing the decline to the X account suspension and perceived lack of team focus on token value. There were mentions of constant selling pressure and speculation about team members selling. However, some members remained optimistic about upcoming releases like Eliza 2.0.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Development updates were shared by team members. Shaw announced that Babylon has launched to the first 50,000 users and is opening up further. Eliza 2.0.0 alpha has been published with ongoing work. The Eliza app is also in progress. Jin shared experiments on video briefings with a prototype video created by their team artist, planning to implement daily, weekly, and monthly updates with temporal analysis to extract patterns and narratives from community discussions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HDIg6X6XIAAW20F.jpg:large"
+          ],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1481106919497142302/2026-03-11_03-58-59.mp4?ex=69b2c48f&is=69b1730f&hm=ba4bcf713cf49fba77b8cba7edc98b181ac482a0054dacc1b9142c3d924a191c&"
+          ]
+        },
+        {
+          "text": "Odilitime created a new tool that can analyze git branches and tell the story of branch development. The tool was demonstrated with elizaOS versions 0.x, 1.x and 2.x. Jin and Odilitime discussed strategies for content delivery, including adding variety to avoid monotonic patterns and incorporating interviews with builders and projects to mix up the format.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/608d2cd04c024c06e489835e23bc74e38b3c31e85448c5b9cc4f634a8207261d/elizaOS/prr/pull/5",
+            "https://babylon.market/assets/images/og-image.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, developers discussed wallet infrastructure and security for AI agents. Krutovoy asked about safeguards against prompt injections and wallet drains. Odilitime shared his approach with Spartan, keeping LLMs away from any addresses or keys as a security measure. Multiple developers introduced their expertise in AI, machine learning, full-stack development, and bot creation.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1773187200
 }

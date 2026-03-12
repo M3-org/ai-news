@@ -1,124 +1,112 @@
-# elizaOS Discord - 2026-03-10
+# elizaOS Discord - 2026-03-11
 
 ## Overall Discussion Highlights
 
-### Project Communication & Community Relations
+### Product Launches & Development Progress
 
-The **💬-discussion** channel revealed significant tension around project communication and token performance. Community members expressed frustration about missed deadlines, unclear roadmaps, and the disconnect between market recovery and token performance. Odilitime acknowledged these communication failures and announced several initiatives to address them:
+**Babylon Market Launch**: The Babylon platform successfully launched to its first 50,000 users and is now opening up to a wider audience. The platform includes an elizaos.news ticker available at https://play.babylon.market/ticker.
 
-- Built **elizaOS.news** with automated video briefing workflows for daily updates
-- Plans to strengthen investor relations communications
-- Commitment to restore the $elizaos holders system
+**Eliza 2.0.0 Alpha Release**: The development team published the Eliza 2.0.0 alpha version, marking a significant milestone in the framework's evolution. Active development continues with multiple work-in-progress items nearing completion.
 
-The team emphasized that long-term plans won't change based on price action, though implementation timelines for previously discussed airdrops and buybacks remain unclear.
+**Eliza App Development**: The Eliza application is currently in active development with several features approaching completion.
 
-### Active Project Initiatives
+### Content & Communication Strategy
 
-Three main projects were confirmed as actively progressing:
+**Video Briefing System**: Jin is developing a comprehensive video briefing system to condense Discord and Telegram discussions into digestible formats. The system features:
+- Modular architecture allowing MP4 generation of any segment
+- Daily objective updates with plans for weekly and monthly briefings
+- Temporal analysis capabilities to extract patterns and narratives from discussions
+- Future integration with Grok for X (Twitter) news related to the ecosystem
+- Planned interviews with builders and projects to add variety and depth
 
-- **Elizacloud**: Positioned as the project's flywheel, with Milady pushing cloud adoption
-- **Babylon**: Currently rolling out with players and agents actively testing
-- **Jeju**: Confirmed as an active project
+The system aims to address concerns about monotonic daily updates by incorporating randomness, variety, and highlights rather than maintaining a fixed cadence.
 
-### Token Migration Process
+### Developer Tools & Infrastructure
 
-Discussion continued about allowing additional ai16z to elizaos token migrations. While the process isn't finalized, users need to DM their wallet address and proof of holding tokens during the September snapshot to participate.
+**Git Branch Analysis Tool**: Odilitime created and demonstrated a tool that analyzes git branches to generate comprehensive branch stories. The tool was showcased using elizaOS 0.x, 1.x, and 2.x branches as examples. The implementation is available at https://github.com/elizaOS/prr/pull/5.
 
-### Framework Development (v2.0.0)
+**Cloud Architecture for Embeddings**: Discussion around implementing a REST endpoint in the cloud for handling embeddings processing, representing a microservices approach where embedding operations are decoupled from the main application. The proposed architecture would handle both computation and storage aspects of the embeddings workflow through HTTP requests.
 
-The **xfn-framework** channel focused on significant architectural improvements for the v2.0.0 branch:
+### Security & Best Practices
 
-**Prompt Batching System**: After reviewing 50-60 plugins, Odilitime consolidated improvement ideas into a new subsystem called prompt batching. This combines three types of LLM queries (init LLM queries, autonomous LLM calls, and evaluator calls) into one configurable scheduler that can be optimized for either frontier or local models. The system builds on existing dynamicPromptExecution work, with core functionality already present in the 3.x version's autonomous system.
+**Wallet Security Architecture**: Important discussion on protecting AI agents with wallet capabilities from prompt injection attacks and potential drains. Odilitime shared their security-by-isolation approach using Spartan infrastructure, which keeps LLMs completely separated from wallet addresses and private keys—a fundamental security principle preventing AI models from having direct access to sensitive cryptographic materials.
 
-**Serverless Architecture Concepts**: Development work revealed opportunities for:
-- Lazy loading services to defer initialization
-- Outsourcing service work to external systems
-- In-memory persistence to avoid rebuilding state
+**Discord Security Warning**: A scammer attempted to phish users by claiming Discord requires wallet linking. Odilitime issued a clear warning that Discord does not require wallet linking and users should be vigilant against such attempts.
 
-Cursor (AI coding assistant) was providing serverless and cloud implementation suggestions, influenced by Shaw's configuration work through cursor rules or documentation.
+### Community Concerns & Responses
 
-### Technical Development Updates
+Community members expressed concerns about:
+- Token price decline reaching new all-time lows
+- Development pace and team communication
+- Selling pressure on the token
+- Questions about whether developers had left the project
 
-**ElizaOS Progress**: Odilitime confirmed work on the next version of elizaOS, noting the develop branch is currently broken. Completing this version will unblock planned tasks including improved Twitter posts for $degenai and $elizaos tokens.
-
-**Milady Integration**: In **💬-coders**, BinaryCookies worked on integrating a Neon database with Milady, discovering the configuration location in the env section of the JSON file. They encountered unresolved issues with system permissions and capabilities.
-
-**Pull Request Activity**: Meme Broker submitted pull requests addressing GitHub issue #71 in the milady-ai/milady repository.
-
-### New Protocol Announcement
-
-TraderTomson announced the **Autonomous Economy Protocol (AEP)** in **💬-coders** - a comprehensive Eliza plugin for on-chain agent payments and reputation management:
-
-**Core Features**:
-- Operates on Base blockchain with AGT tokens as payment mechanism
-- Five TypeScript actions: REGISTER_AGENT, BROWSE_MARKET, PROPOSE_DEAL, CHECK_REPUTATION, GET_SEASON1_INFO
-- Permanent reputation system (0-10,000 score) stored on Basescan
-- 1% passive referral income in perpetuity
-- Credit access based on reputation without collateral requirements
-
-**Implementation**: Available via npm as `autonomous-economy-sdk` with integration code in `integrations/eliza-plugin/`
-
-**Season 1 Genesis Program**: 50 million AGT tokens allocated for early adopters through May 2026 with points-based claim system
+The team responded by:
+- Confirming active development on multiple products including the 2.0 release
+- Clarifying the open-source model with a core team plus community contributors
+- Providing concrete updates on Babylon launch and Eliza 2.0.0 alpha publication
+- Demonstrating ongoing work through multiple WIP items
 
 ## Key Questions & Answers
 
-**Q: Can ai16z tokens still be converted to elizaos?** (antoszy)  
-A: Yes, team is allowing more migrations but process not finalized yet. Need to DM wallet address and proof of holding tokens during September snapshot. (Odilitime)
+**Q: What's the output look like for the git branch tool?**  
+A: Link to PR example at https://github.com/elizaOS/prr/pull/5 *(answered by Odilitime)*
 
-**Q: How are you going to deliver on what you decided to work on if people are leaving?** (Kitten)  
-A: Team is still building. Elizacloud is the flywheel and Milady is pushing cloud adoption. (Odilitime)
+**Q: Is the team communicating and shipping product?**  
+A: Eliza 2.0.0 alpha published, Babylon launched to first 50k users opening up, eliza app in progress *(answered by s)*
 
-**Q: Are Babylon, Jeju, etc. active yet?** (paolin)  
-A: Yes, still rolling out Babylon with players and agents playing it now. (Odilitime)
+**Q: Did all the developers leave?**  
+A: No, it's open source with core team plus community devs helping ship features *(answered by satsbased)*
 
-**Q: Where can I add my neon database to the milady?** (BinaryCookies)  
-A: It's located under the env in the json file (BinaryCookies)
+**Q: When was Babylon supposed to be out?**  
+A: It launched to first 50k users and is opening up *(answered by s)*
 
-**Q: What is prompt batching?** (Stan ⚡)  
-A: A new subsystem that combines init LLM queries, autonomous LLM calls and evaluator calls into one configurable scheduler optimized for frontier or local models, building on dynamicPromptExecution (Odilitime)
+**Q: Does this community require me to link my wallet?**  
+A: No, that was a scammer *(answered by Odilitime)*
 
-**Q: What is AEP?** (TraderTomson)  
-A: Autonomous Economy Protocol — a marketplace on Base where agents can earn AGT tokens, build reputation, find other agents, access credit, and earn referral income (TraderTomson)
-
-**Q: What actions does the Eliza plugin provide?** (TraderTomson)  
-A: Five actions: REGISTER_AGENT, BROWSE_MARKET, PROPOSE_DEAL, CHECK_REPUTATION, and GET_SEASON1_INFO (TraderTomson)
-
-**Q: How does the reputation system work?** (TraderTomson)  
-A: Permanent reputation score from 0-10,000 stored on Basescan (TraderTomson)
+**Q: What wallet infrastructure and safeguards are you using for agent launches to avoid prompt injections and drains?**  
+A: Keep LLMs completely separated from any addresses or keys, using Spartan infrastructure *(answered by Odilitime)*
 
 ## Community Help & Collaboration
 
-**BinaryCookies** (self-help): Successfully discovered the location for Neon database configuration in Milady's env section of the JSON file after investigating the integration process.
+**Security Alert Response**  
+Helper: Odilitime | Helpee: niceday9018  
+Context: User asked about wallet linking requirement after being contacted by a scammer  
+Resolution: Confirmed Discord does not require wallet linking and warned the community about the scam attempt
 
-**Odilitime** helped **antoszy**: Provided guidance on the ai16z to elizaos token migration process, confirming migrations are still possible and outlining the required information (wallet address and September snapshot proof).
+**Project Status Clarification**  
+Helper: satsbased | Helpee: Rainman  
+Context: Questions about team status and whether developers had departed  
+Resolution: Explained the open source model with core team plus community contributors actively working
 
-**jin** helped the **Community**: Created video briefing workflow for daily updates at elizaos.news to address the need for regular project updates.
+**Product Launch Updates**  
+Helper: s | Helpee: g, Rainman  
+Context: Concerns about product shipping timelines and Babylon launch status  
+Resolution: Confirmed Babylon launched to 50k users, 2.0.0 alpha published, and multiple WIP items progressing
+
+**Content Strategy Feedback**  
+Helper: Odilitime | Helpee: jin  
+Context: Feedback on video briefing cadence becoming monotonic  
+Resolution: Suggested adding randomness/variety and highlights instead of fixed daily cadence
+
+**Wallet Security Architecture**  
+Helper: Odilitime | Helpee: krutovoy  
+Context: Seeking wallet security architecture for AI agents to prevent prompt injection attacks  
+Resolution: Shared approach of isolating LLMs from addresses and keys using Spartan infrastructure
 
 ## Action Items
 
 ### Technical
 
-- Complete next version of elizaOS to unblock develop branch and planned tasks (Odilitime)
-- Implement better Twitter posts for $degenai and $elizaos tokens (Odilitime)
-- Finalize ai16z to elizaos token migration process (Odilitime)
-- Restore $elizaos holders system functionality (Odilitime)
-- Resolve system permissions and capabilities configuration issue in Milady (BinaryCookies)
-- Review and merge pull requests for GitHub issue #71 in milady-ai/milady repository (Meme Broker)
-- Implement prompt batching subsystem combining init LLM queries, autonomous LLM calls and evaluator calls into configurable scheduler (Odilitime)
-- Complete database cleanup work discovered during feature development (Odilitime)
-- Implement lazy loading services for deferred initialization (Odilitime)
-- Implement in-memory persistence to avoid rebuilding state (Odilitime)
-- Evaluate outsourcing service work for serverless architecture (Odilitime)
-- Integrate lazy loading service into monorepo (Stan ⚡)
-
-### Documentation
-
-- Improve communication about Elizacloud progress and capabilities (otse finam)
-- Provide clear roadmap and regular updates (Biazs)
-- Strengthen investor relations communications (Odilitime)
-- Feature Eliza agents using AEP on the protocol leaderboard (TraderTomson)
+- Complete Eliza 2.0.0 alpha development *(mentioned by s)*
+- Complete Eliza app development currently in progress *(mentioned by s)*
+- Implement REST endpoint on cloud for handling embeddings processing and database persistence *(mentioned by Odilitime)*
 
 ### Feature
 
-- Build automated tools for more consistent project updates (Odilitime)
-- Integrate AEP plugin into Eliza agents for on-chain payments and reputation (TraderTomson)
+- Fix video briefings for daily/weekly updates in specified channel, then expand to Telegram *(mentioned by jin)*
+- Implement modular video recording/MP4 generation system for any segment *(mentioned by jin)*
+- Add interviews with builders/projects to video briefings for variety *(mentioned by jin)*
+- Integrate Grok for latest X news related to ecosystem interests *(mentioned by jin)*
+- Add elizaos.news ticker from Babylon (https://play.babylon.market/ticker) *(mentioned by Odilitime)*
+- Implement temporal analysis for weekly/monthly briefings to extract patterns and narratives *(mentioned by jin)*
