@@ -81,6 +81,7 @@ interface CliArgs {
   // Date range (for archive)
   after?: string;
   before?: string;
+  output?: string;
   force?: boolean;
   apply?: boolean;
   // Sync options
@@ -171,6 +172,7 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg === "--json") args.json = true;
     else if (arg.startsWith("--after=")) args.after = arg.split("=")[1];
     else if (arg.startsWith("--before=")) args.before = arg.split("=")[1];
+    else if (arg.startsWith("--output=")) args.output = arg.split("=")[1];
     else if (arg === "-f" || arg === "--force") args.force = true;
     else if (arg === "--apply") args.apply = true;
     else if (arg === "--with-fetch") args.withFetch = true;
@@ -1601,7 +1603,7 @@ async function commandMirror(db: Database, registry: DiscordChannelRegistry, arg
 async function commandArchive(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
   if (!args.after || !args.before) {
     console.error("Error: --after and --before are required");
-    console.log("Usage: npm run channels -- archive --after=YYYY-MM-DD --before=YYYY-MM-DD [--source=...]");
+    console.log("Usage: npm run channels -- archive --after=YYYY-MM-DD --before=YYYY-MM-DD [--source=...] [--output=...]");
     return;
   }
 
@@ -1640,8 +1642,9 @@ async function commandArchive(db: Database, registry: DiscordChannelRegistry, ar
   console.log(`  Dates to generate:          ${toGenerate.length}  (~${toGenerate.length} LLM calls)`);
 
   const sourceFlag = args.source ? ` --source=${args.source}` : "";
+  const outputFlag = args.output ? ` --output=${args.output}` : "";
   const forceFlag = args.force ? " --force" : " --skip-existing";
-  const cmd = `npm run historical -- --after=${args.after} --before=${args.before} --onlyGenerate${forceFlag}${sourceFlag}`;
+  const cmd = `npm run historical -- --after=${args.after} --before=${args.before} --onlyGenerate${forceFlag}${sourceFlag}${outputFlag}`;
   console.log(`\nWill run: ${cmd}`);
 
   if (args.dryRun) {
@@ -1655,6 +1658,7 @@ async function commandArchive(db: Database, registry: DiscordChannelRegistry, ar
     `--after=${args.after}`, `--before=${args.before}`, "--onlyGenerate",
   ];
   if (args.source) spawnArgs.push(`--source=${args.source}`);
+  if (args.output) spawnArgs.push(`--output=${args.output}`);
   if (!args.force) spawnArgs.push("--skip-existing");
   else spawnArgs.push("--force");
 
@@ -1682,7 +1686,7 @@ Discovery & Analysis:
   mirror  [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]             Fetch raw messages from ALL accessible channels → DB
           [--source=<config>.json] [--dry-run]                  (date range auto-detected from channel creation dates)
   archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from existing DB data (uses channelIds from config)
-          [--source=<config>.json] [--dry-run] [-f/--force]
+          [--source=<config>.json] [--output=<path>] [--dry-run] [-f/--force]
 
 Query Commands:
   list [--tracked|--active|--muted|--quiet]   List channels with optional filters
@@ -1702,6 +1706,7 @@ Registry Commands:
 
 Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
+  --output=<path>                         Output directory for generated summary files
   --json                                  Output machine-readable JSON for query commands
   Env: CHANNEL_ANALYZE_MODEL              Override the LLM model used by 'analyze'
 
@@ -1713,7 +1718,7 @@ Examples:
   npm run channels -- sync --source=m3org.json                    # Full discover→analyze→propose pipeline
   npm run channels -- sync --with-fetch --source=m3org.json       # Full pipeline including mirror
   npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --dry-run  # Preview backfill
-  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json            # Backfill summaries
+  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --output=./output/m3org  # Backfill summaries
   npm run channels -- discover --source=m3org.json  # Discover for a specific config
   npm run channels -- analyze               # Analyze channels needing analysis
   npm run channels -- analyze --all         # Re-analyze all channels
