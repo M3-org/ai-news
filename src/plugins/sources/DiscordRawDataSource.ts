@@ -75,6 +75,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   private userRegistry: DiscordUserRegistry | null = null;
   /** Media download configuration */
   public mediaDownload?: MediaDownloadConfig;
+  /** Cached login promise to avoid parallel logins */
+  private _loginPromise: Promise<string> | null = null;
+  /** Whether login() has been called at least once */
+  private _hasLoggedIn = false;
+  private _existingCidsCache: Map<string, Set<string>> | null = null; // date → Set<fullCid>
+  private _cachedUnavailableSet: Set<string> | null = null;
 
   static constructorInterface = {
     parameters: [
@@ -693,12 +699,80 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     };
   }
 
-  async fetchItems(): Promise<ContentItem[]> {
-    if (!this.client.isReady()) {
-      logger.info('Logging in to Discord...');
-      await this.client.login(this.botToken);
-      logger.success('Successfully logged in to Discord');
+  /**
+   * Establishes the Discord gateway connection, safe to call multiple times.
+   * On first call: logs in and caches the promise to prevent parallel logins.
+   * On subsequent calls when not ready: waits for Discord.js auto-reconnect.
+   */
+  async connect(): Promise<void> {
+    if (this.client.isReady()) return;
+
+    if (this._hasLoggedIn) {
+      // Client was previously connected — wait for Discord.js auto-reconnect
+      await new Promise<void>(resolve => this.client.once('ready', () => resolve()));
+      return;
     }
+
+    if (this._loginPromise) {
+      // Login already in progress — wait for it
+      await this._loginPromise;
+      return;
+    }
+
+    logger.info('Logging in to Discord...');
+    try {
+      this._loginPromise = this.client.login(this.botToken);
+      await this._loginPromise;
+      this._hasLoggedIn = true;
+      logger.success('Successfully logged in to Discord');
+    } finally {
+      this._loginPromise = null;
+    }
+  }
+
+  async preloadExistingRange(after: string, before: string): Promise<void> {
+    if (process.env.FORCE_OVERWRITE === 'true') return;
+
+    const db = this.storage.getDb();
+    if (!db) return;
+
+    if (!this.channelRegistry) {
+      this.channelRegistry = new DiscordChannelRegistry(db);
+      await this.channelRegistry.initialize();
+    }
+
+    const afterEpoch = Math.floor(new Date(after + 'T00:00:00Z').getTime() / 1000);
+    const beforeEpoch = Math.floor(new Date(before + 'T00:00:00Z').getTime() / 1000) + 86400;
+
+    const rows: Array<{ cid: string }> = await db.all(
+      `SELECT cid FROM items WHERE type = 'discordRawData' AND date >= ? AND date < ?`,
+      [afterEpoch, beforeEpoch]
+    );
+
+    const cidPattern = /^discord-raw-(\d+)-(\d{4}-\d{2}-\d{2})$/;
+    this._existingCidsCache = new Map();
+
+    for (const { cid } of rows) {
+      const m = cidPattern.exec(cid);
+      if (!m) continue;
+      const date = m[2];
+      let set = this._existingCidsCache.get(date);
+      if (!set) { set = new Set(); this._existingCidsCache.set(date, set); }
+      set.add(cid);
+    }
+
+    this._cachedUnavailableSet = this.channelRegistry
+      ? new Set((await this.channelRegistry.getUnavailableChannels()).map(c => c.id))
+      : new Set();
+
+    logger.info(
+      `Preloaded ${rows.length} existing CIDs across ${this._existingCidsCache.size} dates ` +
+      `(${this._cachedUnavailableSet.size} unavailable channels cached)`
+    );
+  }
+
+  async fetchItems(): Promise<ContentItem[]> {
+    await this.connect();
 
     const items: ContentItem[] = [];
     const cutoff = new Date();
@@ -826,11 +900,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   }
 
   async fetchHistorical(date: string): Promise<ContentItem[]> {
-    if (!this.client.isReady()) {
-      logger.info('Logging in to Discord...');
-      await this.client.login(this.botToken);
-      logger.success('Successfully logged in to Discord');
-    }
+    await this.connect();
 
     // Initialize channel and user registries if storage supports direct db access
     if (!this.channelRegistry || !this.userRegistry) {
@@ -866,6 +936,20 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     const endOfTargetDate = new Date(targetDate);
     endOfTargetDate.setUTCHours(23, 59, 59, 999);
 
+    // Load unavailable channels once (use cache if available, else 1 query per date)
+    const unavailableSet = this._cachedUnavailableSet ??
+      (this.channelRegistry
+        ? new Set((await this.channelRegistry.getUnavailableChannels()).map(c => c.id))
+        : new Set<string>());
+
+    // Bulk-check which CIDs already exist in storage (use cache if available, else 1 query per date)
+    const allCids = this.channelIds.map(id => `discord-raw-${id}-${date}`);
+    const existingCids = forceOverwrite
+      ? new Set<string>()
+      : (this._existingCidsCache !== null
+          ? (this._existingCidsCache.get(date) ?? new Set<string>())
+          : await this.storage.getExistingCids(allCids));
+
     for (const channelId of this.channelIds) {
       // Skip channels that didn't exist yet on the target date (pure math, no API call)
       const channelCreatedAt = snowflakeToDate(channelId);
@@ -874,18 +958,15 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         continue;
       }
 
-      // Skip channels marked as unavailable (Missing Access, Unknown Channel)
-      if (this.channelRegistry) {
-        const unavailable = await this.channelRegistry.isUnavailable(channelId);
-        if (unavailable) {
-          unavailableSkipped.push(channelId);
-          continue;
-        }
+      // Unavailable check (Set lookup, no DB)
+      if (unavailableSet.has(channelId)) {
+        unavailableSkipped.push(channelId);
+        continue;
       }
 
+      // Existence check (Set lookup, no DB)
       const cid = `discord-raw-${channelId}-${date}`;
-      const exists = await this.storage.getContentItem(cid);
-      if (exists && !forceOverwrite) {
+      if (existingCids.has(cid)) {
         storageSkipped.push(channelId);
       } else {
         channelsToFetch.push(channelId);
@@ -934,6 +1015,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         if (this.channelRegistry) {
           await this.channelRegistry.clearUnavailable(channelId);
         }
+        this._cachedUnavailableSet?.delete(channelId);
 
         // For text/announcement channels, skip if lastMessageId predates the target date.
         // This avoids 3-4 API calls per channel per date for long-inactive channels.

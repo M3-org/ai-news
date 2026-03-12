@@ -279,6 +279,26 @@ Options:
     }
       
     /**
+     * Pre-connect sources that support it (e.g. Discord) so they log in once
+     * rather than reconnecting on every date iteration in a range fetch.
+     */
+    for (const config of sourceConfigs) {
+      if (typeof (config.instance as any).connect === 'function') {
+        await (config.instance as any).connect();
+      }
+    }
+
+    // Preload existing CID map for range fetches — replaces per-date DB queries with O(1) lookups
+    if (!onlyGenerate && filter.after && filter.before) {
+      for (const config of sourceConfigs) {
+        if (typeof (config.instance as any).preloadExistingRange === 'function') {
+          logger.info(`Preloading existing data range for ${config.instance.name}...`);
+          await (config.instance as any).preloadExistingRange(filter.after, filter.before);
+        }
+      }
+    }
+
+    /**
      * Fetch historical data based on the date filter
      * If a date range is specified, fetch data for the entire range
      * Otherwise, fetch data for the specific date

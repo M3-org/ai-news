@@ -1,5 +1,6 @@
 import { OpenAIProvider } from "../ai/OpenAIProvider";
 import { SQLiteStorage } from "../storage/SQLiteStorage";
+import { DiscordChannelRegistry } from "../storage/DiscordChannelRegistry";
 import { ContentItem, SummaryItem, DiscordSummary, ActionItems, HelpInteractions, SummaryFaqs, DiscordRawData } from "../../types";
 import { writeFile } from "../../helpers/fileHelper";
 import { logger } from "../../helpers/cliHelper";
@@ -131,13 +132,58 @@ export class DiscordSummaryGenerator {
       // Group by channel and process each channel
       const channelItemsMap = this.groupByChannel(contentItems);
       const allChannelSummaries: DiscordSummary[] = [];
-      
-      logger.info(`Processing ${Object.keys(channelItemsMap).length} channels`);
+
+      // DB-driven channel filtering: check isMuted and aiRecommendation
+      let channelRegistry: DiscordChannelRegistry | null = null;
+      const db = this.storage.getDb();
+      if (db) {
+        channelRegistry = new DiscordChannelRegistry(db);
+      }
+
+      const channelSelection: {
+        included: { channelId: string; channelName: string; reason: string }[];
+        excluded: { channelId: string; channelName: string; reason: string }[];
+      } = { included: [], excluded: [] };
+
+      const channelsToProcess: { [channelId: string]: ContentItem[] } = {};
+
       for (const [channelId, items] of Object.entries(channelItemsMap)) {
+        const channelName = items[0]?.metadata?.channelName || 'Unknown';
+
+        if (channelRegistry) {
+          const channel = await channelRegistry.getChannelById(channelId);
+          if (channel) {
+            if (channel.isMuted) {
+              channelSelection.excluded.push({ channelId, channelName, reason: 'Muted' });
+              logger.info(`Skipping muted channel ${channelName} (${channelId})`);
+              continue;
+            }
+            if (channel.aiRecommendation === 'SKIP') {
+              channelSelection.excluded.push({
+                channelId,
+                channelName,
+                reason: channel.aiReason || 'AI recommended skip'
+              });
+              logger.info(`Skipping AI-SKIP channel ${channelName} (${channelId}): ${channel.aiReason || 'no reason'}`);
+              continue;
+            }
+          }
+        }
+
+        channelsToProcess[channelId] = items;
+        channelSelection.included.push({
+          channelId,
+          channelName,
+          reason: `Active channel: ${items.length} items`
+        });
+      }
+
+      logger.info(`Processing ${Object.keys(channelsToProcess).length} channels (${channelSelection.excluded.length} excluded)`);
+      for (const [channelId, items] of Object.entries(channelsToProcess)) {
         try {
           logger.info(`Processing channel ${channelId} with ${items.length} items`);
           const channelSummary = await this.processChannelData(items);
-          
+
           if (channelSummary) {
             // Add channel ID to the summary for linking with stats
             allChannelSummaries.push({
@@ -149,14 +195,15 @@ export class DiscordSummaryGenerator {
           logger.error(`Error processing channel ${channelId}: ${error instanceof Error ? error.message : String(error)}`);
         }
       }
-      
+
       // Generate combined summary file if we have channel summaries
       if (allChannelSummaries.length > 0) {
         await this.generateCombinedSummaryFiles(
-          allChannelSummaries, 
-          dateStr, 
+          allChannelSummaries,
+          dateStr,
           startTimeEpoch,
-          contentItems // Pass content items for statistics
+          contentItems,
+          channelSelection
         );
       }
       
@@ -281,7 +328,7 @@ export class DiscordSummaryGenerator {
       // Format messages into a transcript
       const transcript = messages.map(msg => {
         const user = users[msg.uid];
-        const username = user?.nickname || user?.name || msg.uid;
+        const username = user?.name || user?.nickname || msg.uid;
         const time = new Date(msg.ts).toLocaleTimeString('en-US', { 
           hour: '2-digit', 
           minute: '2-digit',
@@ -572,23 +619,44 @@ Return the analysis in the specified structured format with numbered sections (1
    * @private
    */
   private async generateCombinedSummaryFiles(
-    summaries: DiscordSummary[], 
+    summaries: DiscordSummary[],
     dateStr: string,
     timestamp: number,
-    contentItems: ContentItem[]
+    contentItems: ContentItem[],
+    channelSelection?: {
+      included: { channelId: string; channelName: string; reason: string }[];
+      excluded: { channelId: string; channelName: string; reason: string }[];
+    }
   ): Promise<void> {
     try {
       const serverName = summaries[0]?.guildName || "Discord Server";
       const fileTitle = `${serverName} Discord - ${dateStr}`;
-      
+
       // Calculate statistics
       const stats = this.calculateDiscordStats(contentItems);
-      
+
+      // Collect global users map from content items
+      const usersMap: Record<string, { name: string; nickname: string | null; isBot?: boolean }> = {};
+      for (const item of contentItems) {
+        if (item.type === 'discordRawData' && item.text) {
+          try {
+            const rawData: DiscordRawData = JSON.parse(item.text);
+            if (rawData.users) {
+              for (const [uid, user] of Object.entries(rawData.users)) {
+                if (!usersMap[uid]) {
+                  usersMap[uid] = { name: user.name, nickname: user.nickname, isBot: user.isBot };
+                }
+              }
+            }
+          } catch { /* skip parse errors */ }
+        }
+      }
+
       // Generate AI summary
       const markdownContent = await this.generateDailySummary(summaries, dateStr);
-      
+
       // Create enhanced JSON data
-      const jsonData = {
+      const jsonData: Record<string, any> = {
         server: serverName,
         title: fileTitle,
         date: timestamp,
@@ -602,11 +670,27 @@ Return the analysis in the specified structured format with numbered sections (1
             channelId: s.channelId || '',
             channelName: s.channelName || '',
             summary: s.summary || '',
+            faqs: s.faqs || [],
+            helpInteractions: s.helpInteractions || [],
+            actionItems: s.actionItems || [],
             messageCount: channelStats?.messageCount || 0,
             userCount: channelStats?.uniqueUsers.length || 0
           };
         })
       };
+
+      // Add meta section with channel selection and identity mode
+      if (channelSelection) {
+        jsonData.meta = {
+          channelSelection,
+          identityMode: 'username'
+        };
+      }
+
+      // Add users map for downstream nickname rendering
+      if (Object.keys(usersMap).length > 0) {
+        jsonData.users = usersMap;
+      }
       
       // Prepare final markdown with title
       const finalMarkdown = `# ${fileTitle}\n\n${markdownContent.replace(/^#\s+[^\n]*\n/, '')}`;

@@ -37,6 +37,11 @@ export interface StoragePlugin {
   getContentItem(cid: string): Promise<ContentItem | null>;
 
   /**
+   * Bulk-checks which CIDs exist in storage. Returns a Set of present CIDs.
+   */
+  getExistingCids(cids: string[]): Promise<Set<string>>;
+
+  /**
    * Saves or updates a summary item in the storage.
    * @param item - Summary item to save
    * @returns Promise<void>

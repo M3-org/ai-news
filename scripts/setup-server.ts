@@ -1038,7 +1038,7 @@ async function stepSummary(
     `  User registry:       npm run users -- build-registry`
   );
   console.log(
-    `  Enrich nicknames:    npm run enrich-nicknames -- --all --use-index`
+    `  Enrich nicknames:    npm run users -- enrich --all`
   );
   console.log(
     `  Download media:      npm run download-media -- --source=${state.name}.json`

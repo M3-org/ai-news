@@ -82,6 +82,9 @@ interface CliArgs {
   after?: string;
   before?: string;
   force?: boolean;
+  apply?: boolean;
+  // Sync options
+  withFetch?: boolean;
 }
 
 interface DiscordRawData {
@@ -169,6 +172,8 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg.startsWith("--after=")) args.after = arg.split("=")[1];
     else if (arg.startsWith("--before=")) args.before = arg.split("=")[1];
     else if (arg === "-f" || arg === "--force") args.force = true;
+    else if (arg === "--apply") args.apply = true;
+    else if (arg === "--with-fetch") args.withFetch = true;
   }
 
   return args;
@@ -996,6 +1001,47 @@ async function commandProposeUpdate(db: Database, registry: DiscordChannelRegist
   if (args.dryRun) {
     console.error(`\n[DRY RUN] Would create PR with ${toAdd.length} additions and ${toRemove.length} removals`);
   }
+
+  // --apply: write changes directly back to config file(s)
+  if (args.apply && !args.dryRun) {
+    const configs = loadConfigs(args.source);
+    let totalAdded = 0;
+    let totalRemoved = 0;
+
+    for (const [configName, configData] of configs) {
+      let modified = false;
+
+      for (const source of configData.discordSources) {
+        const channelIds: string[] = source.params?.channelIds || [];
+
+        for (const ch of toAdd) {
+          if (!channelIds.includes(ch.channelId)) {
+            channelIds.push(ch.channelId);
+            modified = true;
+            totalAdded++;
+          }
+        }
+
+        for (const ch of toRemove) {
+          const idx = channelIds.indexOf(ch.channelId);
+          if (idx !== -1) {
+            channelIds.splice(idx, 1);
+            modified = true;
+            totalRemoved++;
+          }
+        }
+
+        source.params.channelIds = channelIds;
+      }
+
+      if (modified) {
+        fs.writeFileSync(configData.path, JSON.stringify(configData.config, null, 2) + "\n");
+        console.error(`Applied to ${configName}: +${totalAdded} added, -${totalRemoved} removed`);
+      } else {
+        console.error(`No changes needed in ${configName}`);
+      }
+    }
+  }
 }
 
 // ============================================================================
@@ -1144,31 +1190,70 @@ async function commandShow(registry: DiscordChannelRegistry, channelId: string):
 // Command: stats
 // ============================================================================
 
-async function commandStats(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+async function commandStats(registry: DiscordChannelRegistry, args: CliArgs, db: Database): Promise<void> {
   const stats = await registry.getStats();
   if (args.json) {
     outputJson({ ok: true, command: "channels.stats", data: stats });
     return;
   }
+
+  // Fetch richer coverage stats directly from items table
+  const coverageRow = await db.get<{
+    total_records: number; days_with_msgs: number; empty_records: number;
+    total_msgs: number; earliest: string; latest: string;
+  }>(`
+    SELECT
+      COUNT(*)                                                                  AS total_records,
+      SUM(CASE WHEN CAST(json_extract(metadata,'$.messageCount') AS INTEGER) > 0 THEN 1 ELSE 0 END) AS days_with_msgs,
+      SUM(CASE WHEN json_extract(metadata,'$.empty') = 1 THEN 1 ELSE 0 END)   AS empty_records,
+      SUM(CAST(json_extract(metadata,'$.messageCount') AS INTEGER))            AS total_msgs,
+      date(MIN(date),'unixepoch')                                              AS earliest,
+      date(MAX(date),'unixepoch')                                              AS latest
+    FROM items WHERE type='discordRawData'`);
+
+  // Channels with real messages in last 30 / 90 days
+  const t30 = Math.floor(Date.now() / 1000) - 30 * 86400;
+  const t90 = Math.floor(Date.now() / 1000) - 90 * 86400;
+  const recentActivity = await db.all<Array<{ ch: string; name: string; msgs_30d: number; msgs_90d: number; last_msg: string }>>(`
+    SELECT
+      substr(i.cid, 13, length(i.cid) - 23)                                     AS ch,
+      c.name,
+      SUM(CASE WHEN i.date >= ${t30} THEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) ELSE 0 END) AS msgs_30d,
+      SUM(CASE WHEN i.date >= ${t90} THEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) ELSE 0 END) AS msgs_90d,
+      date(MAX(CASE WHEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) > 0 THEN i.date ELSE 0 END),'unixepoch') AS last_msg
+    FROM items i
+    JOIN discord_channels c ON c.id = substr(i.cid, 13, length(i.cid) - 23)
+    WHERE i.type='discordRawData' AND c.unavailableReason IS NULL
+    GROUP BY ch
+    HAVING msgs_90d > 0
+    ORDER BY msgs_30d DESC`);
+
+  const pct = coverageRow ? Math.round(100 * coverageRow.days_with_msgs / coverageRow.total_records) : 0;
+
   console.log("\n Channel Registry Statistics\n");
 
-  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted`);
-  console.log(`Guilds: ${stats.totalGuilds}`);
-  console.log(`Total messages: ${stats.totalMessages.toLocaleString()}`);
+  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted, ${stats.totalChannels - stats.trackedChannels - stats.mutedChannels} unavailable`);
+  console.log(`Coverage: ${coverageRow?.earliest ?? '?'} → ${coverageRow?.latest ?? '?'}`);
+  console.log(`Records:  ${coverageRow?.total_records.toLocaleString() ?? 0} total  |  ${coverageRow?.days_with_msgs.toLocaleString() ?? 0} with messages (${pct}%)  |  ${coverageRow?.empty_records.toLocaleString() ?? 0} empty`);
+  console.log(`Messages: ${(coverageRow?.total_msgs ?? 0).toLocaleString()} across all time`);
 
-  console.log(`\nActivity Distribution:`);
-  console.log(`   Hot (>50 msgs/day): ${stats.hotChannels}`);
-  console.log(`   Active (7-50): ${stats.activeChannels}`);
-  console.log(`   Moderate (1.5-7): ${stats.moderateChannels}`);
-  console.log(`   Quiet (<1.5): ${stats.quietChannels}`);
+  console.log(`\nActivity Distribution (7-day rolling velocity, accessible channels):`);
+  console.log(`   Hot     (>50 msgs/day):  ${stats.hotChannels}`);
+  console.log(`   Active  (7–50):          ${stats.activeChannels}`);
+  console.log(`   Moderate(1.5–7):         ${stats.moderateChannels}`);
+  console.log(`   Quiet   (<1.5):          ${stats.quietChannels}`);
 
-  console.log(`\nChanges Tracked:`);
-  console.log(`   Name changes: ${stats.channelsWithNameChanges} channels`);
-  console.log(`   Topic changes: ${stats.channelsWithTopicChanges} channels`);
-  console.log(`   Category changes: ${stats.channelsWithCategoryChanges} channels`);
-
-  if (stats.mostActiveChannel) {
-    console.log(`\nMost Active: #${stats.mostActiveChannel.name} (${stats.mostActiveChannel.velocity.toFixed(1)} msgs/day)`);
+  if (recentActivity.length > 0) {
+    console.log(`\nChannels with messages in last 90 days (${recentActivity.length} total):`);
+    const fmt = (n: number) => n.toString().padStart(6);
+    console.log(`   ${'Channel'.padEnd(28)} ${'30d'.padStart(6)} ${'90d'.padStart(6)}  Last message`);
+    console.log(`   ${'-'.repeat(28)} ${'-'.repeat(6)} ${'-'.repeat(6)}  ${'-'.repeat(12)}`);
+    for (const r of recentActivity.slice(0, 20)) {
+      console.log(`   #${r.name.padEnd(27)} ${fmt(r.msgs_30d)} ${fmt(r.msgs_90d)}  ${r.last_msg}`);
+    }
+    if (recentActivity.length > 20) console.log(`   ... and ${recentActivity.length - 20} more`);
+  } else {
+    console.log(`\nNo channels with messages in last 90 days.`);
   }
 
   console.log("");
@@ -1386,24 +1471,126 @@ async function commandResetUnavailable(registry: DiscordChannelRegistry, args: C
 }
 
 // ============================================================================
-// Command: update (discover → analyze → propose pipeline)
+// Command: sync (discover → analyze → propose pipeline, optionally with mirror)
 // ============================================================================
 
-async function commandUpdate(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
-  console.log("\n=== Step 1/3: Discover ===");
-  try {
-    await commandDiscover(db, args);
-  } catch (e) {
-    console.warn("Discover failed, continuing:", e);
+async function commandSync(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (args.withFetch) {
+    console.log("\n=== Step 1/4: Mirror ===");
+    await commandMirror(db, registry, args);
+
+    console.log("\n=== Step 2/4: Discover ===");
+    try {
+      await commandDiscover(db, args);
+    } catch (e) {
+      console.warn("Discover failed, continuing:", e);
+    }
+
+    console.log("\n=== Step 3/4: Analyze ===");
+    await commandAnalyze(db, registry, { ...args, all: true });
+
+    console.log("\n=== Step 4/4: Propose ===");
+    await commandProposeUpdate(db, registry, args);
+  } else {
+    console.log("\n=== Step 1/3: Discover ===");
+    try {
+      await commandDiscover(db, args);
+    } catch (e) {
+      console.warn("Discover failed, continuing:", e);
+    }
+
+    console.log("\n=== Step 2/3: Analyze ===");
+    await commandAnalyze(db, registry, { ...args, all: true });
+
+    console.log("\n=== Step 3/3: Propose ===");
+    await commandProposeUpdate(db, registry, args);
   }
 
-  console.log("\n=== Step 2/3: Analyze ===");
-  await commandAnalyze(db, registry, { ...args, all: true });
+  if (args.apply) {
+    console.log("\nDone. Config updated automatically (--apply).");
+  } else {
+    console.log("\nDone. Review the proposal above and edit your config channelIds.");
+    console.log("Tip: use --apply to write changes to config automatically.");
+  }
+}
 
-  console.log("\n=== Step 3/3: Propose ===");
-  await commandProposeUpdate(db, registry, args);
+/** @deprecated Use `channels sync --with-fetch` instead */
+async function commandRefresh(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.warn("⚠ 'channels refresh' is deprecated. Use 'channels sync --with-fetch' instead.");
+  await commandSync(db, registry, { ...args, withFetch: true });
+}
 
-  console.log("\nDone. Review the proposal above and edit your config channelIds.");
+/** @deprecated Use `channels sync` instead */
+async function commandUpdate(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.warn("⚠ 'channels update' is deprecated. Use 'channels sync' instead.");
+  await commandSync(db, registry, args);
+}
+
+// ============================================================================
+// Command: mirror (fetch raw messages from ALL accessible channels → DB)
+// ============================================================================
+
+async function commandMirror(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  // Get all accessible channels from registry (excludes unavailable)
+  const allChannels = await registry.getAllChannels();
+  const accessible = allChannels.filter(c => !c.unavailableReason);
+
+  if (accessible.length === 0) {
+    console.log("No accessible channels in registry. Run 'channels discover' first.");
+    return;
+  }
+
+  // Auto-detect date range from channel creation timestamps if not specified
+  const after = args.after ?? (() => {
+    const earliest = accessible.reduce((min, c) => c.createdAt > 0 && c.createdAt < min ? c.createdAt : min, Infinity);
+    return earliest === Infinity ? "2015-01-01" : new Date(earliest * 1000).toISOString().split("T")[0];
+  })();
+  const before = args.before ?? new Date().toISOString().split("T")[0];
+
+  const channelIds = accessible.map(c => c.id).join(",");
+
+  console.log(`\nMirroring ${accessible.length} accessible channels (${allChannels.length - accessible.length} unavailable skipped)`);
+  console.log(`Date range: ${after} → ${before}${!args.after ? " (auto-detected from channel creation dates)" : ""}`);
+
+  // Show breakdown by category
+  const byCategory = new Map<string, number>();
+  for (const ch of accessible) {
+    const cat = ch.categoryName || "Uncategorized";
+    byCategory.set(cat, (byCategory.get(cat) || 0) + 1);
+  }
+  for (const [cat, count] of [...byCategory.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8)) {
+    console.log(`  ${cat}: ${count} channels`);
+  }
+  if (byCategory.size > 8) console.log(`  ... and ${byCategory.size - 8} more categories`);
+
+  const sourceFlag = args.source ? ` --source=${args.source}` : "";
+  const cmd = `npm run historical -- --after=${after} --before=${before} --onlyFetch --channels=<${accessible.length} channel IDs>${sourceFlag}`;
+  console.log(`\nWill run: ${cmd}`);
+
+  if (args.dryRun) {
+    console.log("(dry run — skipping execution)");
+    return;
+  }
+
+  const { spawn } = await import("child_process");
+  const spawnArgs = [
+    "-r", "tsconfig-paths/register", "--transpile-only", "src/historical.ts",
+    `--after=${after}`, `--before=${before}`, "--onlyFetch",
+    `--channels=${channelIds}`,
+  ];
+  if (args.source) spawnArgs.push(`--source=${args.source}`);
+
+  console.log(`\nStarting fetch (this may take a while for large ranges)...`);
+  const child = spawn("ts-node", spawnArgs, { stdio: "inherit", shell: true, cwd: process.cwd() });
+  await new Promise<void>((resolve, reject) => {
+    child.on("close", (code: number | null) =>
+      code === 0 || code === null ? resolve() : reject(new Error(`Exit code ${code}`))
+    );
+  });
+
+  console.log("\nSyncing channel registry stats from fetched data...");
+  const { updated } = await registry.syncStats();
+  console.log(`Updated stats for ${updated} channels.`);
 }
 
 // ============================================================================
@@ -1482,12 +1669,18 @@ function commandHelp(): void {
   console.log(`
 Discord Channel Management CLI
 
+Pipeline Commands:
+  sync [--source=<config>.json] [--dry-run] [--apply]            Run discover → analyze → propose in one step
+  sync --with-fetch [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]   Full pipeline: mirror → discover → analyze → propose
+       [--source=<config>.json] [--dry-run] [--apply]
+
 Discovery & Analysis:
-  update [--source=<config>.json] [--dry-run]                    Run discover → analyze → propose in one step
   discover [--source=<config>.json]                              Fetch channels from Discord (or raw data if no token)
   analyze [--all] [--channel=ID]                                 Run LLM analysis on channels
-  propose [--dry-run]                                            Generate config diff and PR markdown
-  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from existing DB data
+  propose [--dry-run] [--apply]                                  Generate config diff and PR markdown; --apply writes changes to config
+  mirror  [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]             Fetch raw messages from ALL accessible channels → DB
+          [--source=<config>.json] [--dry-run]                  (date range auto-detected from channel creation dates)
+  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from existing DB data (uses channelIds from config)
           [--source=<config>.json] [--dry-run] [-f/--force]
 
 Query Commands:
@@ -1510,8 +1703,13 @@ Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
   --json                                  Output machine-readable JSON for query commands
 
+Deprecated (still work, use sync instead):
+  update [--source=<config>.json]         Alias for 'sync'
+  refresh [--after/--before]             Alias for 'sync --with-fetch'
+
 Examples:
-  npm run channels -- update --source=m3org.json                    # Full discover→analyze→propose pipeline
+  npm run channels -- sync --source=m3org.json                    # Full discover→analyze→propose pipeline
+  npm run channels -- sync --with-fetch --source=m3org.json       # Full pipeline including mirror
   npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --dry-run  # Preview backfill
   npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json            # Backfill summaries
   npm run channels -- discover --source=m3org.json  # Discover for a specific config
@@ -1521,8 +1719,8 @@ Examples:
   npm run channels -- propose               # Generate PR body with config changes
   npm run channels -- list --tracked        # List tracked channels
 
-Workflow (run individually or all at once with 'update'):
-  npm run channels -- update --source=m3org.json   # One-shot pipeline
+Workflow (run individually or all at once with 'sync'):
+  npm run channels -- sync --source=m3org.json     # One-shot pipeline
   1. npm run channels -- discover            # Fetch channels
   2. npm run channels -- analyze             # Run LLM analysis
   3. npm run channels -- propose             # Generate PR body
@@ -1563,9 +1761,24 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
 
   try {
     switch (args.command) {
+      case "sync":
+        await commandSync(db, registry, args);
+        break;
       case "update":
         await commandUpdate(db, registry, args);
         break;
+      case "refresh":
+        await commandRefresh(db, registry, args);
+        break;
+      case "mirror":
+        await commandMirror(db, registry, args);
+        break;
+      case "sync-stats": {
+        console.log("Rebuilding channel stats from items table...");
+        const { updated } = await registry.syncStats();
+        console.log(`Done — updated stats for ${updated} channels.`);
+        break;
+      }
       case "archive":
         await commandArchive(db, registry, args);
         break;
@@ -1590,7 +1803,7 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         }
         break;
       case "stats":
-        await commandStats(registry, args);
+        await commandStats(registry, args, db);
         break;
       case "track":
         if (!args.channelId) {
