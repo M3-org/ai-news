@@ -14,6 +14,7 @@
  *   npm run channels -- analyze [--all] [--channel=ID]
  *   npm run channels -- propose [--dry-run]
  *   npm run channels -- list [--tracked|--active|--muted|--quiet]
+ *   npm run channels -- list --interactive --source=m3org.json
  *   npm run channels -- show <channelId>
  *   npm run channels -- stats
  *   npm run channels -- track <channelId>
@@ -25,10 +26,11 @@
 
 import { open, Database } from "sqlite";
 import sqlite3 from "sqlite3";
-import { Client, GatewayIntentBits, ChannelType, TextChannel } from "discord.js";
+import { Client, GatewayIntentBits, ChannelType, TextChannel, ForumChannel } from "discord.js";
 import OpenAI from "openai";
 import * as fs from "fs";
 import * as path from "path";
+import * as readline from "readline";
 import * as dotenv from "dotenv";
 import {
   DiscordChannelRegistry,
@@ -78,13 +80,15 @@ interface CliArgs {
   // Config filter
   source?: string;
   json?: boolean;
-}
-
-interface DiscordRawData {
-  channel: { id: string; name: string; topic?: string; category?: string; guildId?: string; guildName?: string };
-  date: string;
-  users: Record<string, any>;
-  messages: Array<{ id: string; uid: string; content: string }>;
+  // Date range (for archive)
+  after?: string;
+  before?: string;
+  output?: string;
+  force?: boolean;
+  apply?: boolean;
+  interactive?: boolean;
+  // Sync options
+  withFetch?: boolean;
 }
 
 interface DiscordSourceConfig {
@@ -112,6 +116,7 @@ interface DiscordRawData {
     id: string;
     uid: string;
     content: string;
+    ts?: string;
     timestamp?: string;
   }>;
 }
@@ -161,6 +166,13 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg.startsWith("--channel=")) args.channelId = arg.split("=")[1];
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
     else if (arg === "--json") args.json = true;
+    else if (arg.startsWith("--after=")) args.after = arg.split("=")[1];
+    else if (arg.startsWith("--before=")) args.before = arg.split("=")[1];
+    else if (arg.startsWith("--output=")) args.output = arg.split("=")[1];
+    else if (arg === "-f" || arg === "--force") args.force = true;
+    else if (arg === "--apply") args.apply = true;
+    else if (arg === "--interactive") args.interactive = true;
+    else if (arg === "--with-fetch") args.withFetch = true;
   }
 
   return args;
@@ -216,11 +228,7 @@ function getTrackedChannelIds(configs: Map<string, LoadedConfig>): Map<string, S
 
   for (const [, configData] of configs) {
     for (const source of configData.discordSources) {
-      let guildId = source.params?.guildId || "unknown";
-      if (guildId.startsWith("process.env.")) {
-        const envVar = guildId.replace("process.env.", "");
-        guildId = process.env[envVar] || envVar;
-      }
+      const guildId = resolveConfigEnvValue(source.params?.guildId) || "unknown";
       const channelIds = source.params?.channelIds || [];
 
       if (!trackedChannels.has(guildId)) {
@@ -236,13 +244,19 @@ function getTrackedChannelIds(configs: Map<string, LoadedConfig>): Map<string, S
   return trackedChannels;
 }
 
+function resolveConfigEnvValue(value?: string): string | undefined {
+  if (!value) return undefined;
+  if (!value.startsWith("process.env.")) return value;
+  const envVar = value.replace("process.env.", "");
+  return process.env[envVar] || envVar;
+}
+
 function getGuildIds(configs: Map<string, LoadedConfig>): Set<string> {
   const guildIds = new Set<string>();
 
   for (const [, configData] of configs) {
     for (const source of configData.discordSources) {
-      const guildIdVar = source.params?.guildId?.replace("process.env.", "");
-      const guildId = guildIdVar ? process.env[guildIdVar] : source.params?.guildId;
+      const guildId = resolveConfigEnvValue(source.params?.guildId);
       if (guildId) {
         guildIds.add(guildId);
       }
@@ -250,6 +264,67 @@ function getGuildIds(configs: Map<string, LoadedConfig>): Set<string> {
   }
 
   return guildIds;
+}
+
+function resolveDiscordBotToken(configs: Map<string, LoadedConfig>): {
+  token: string | null;
+  configName: string | null;
+  tokenVar: string | null;
+} {
+  for (const [configName, configData] of configs) {
+    for (const source of configData.discordSources) {
+      const tokenVar = source.params?.botToken?.replace("process.env.", "");
+      if (tokenVar && process.env[tokenVar]) {
+        return {
+          token: process.env[tokenVar]!,
+          configName,
+          tokenVar,
+        };
+      }
+    }
+  }
+
+  return { token: null, configName: null, tokenVar: null };
+}
+
+function filterChannelsByGuildIds(channels: DiscordChannel[], guildIds: Set<string>): DiscordChannel[] {
+  if (guildIds.size === 0) {
+    return channels;
+  }
+  return channels.filter(channel => guildIds.has(channel.guildId));
+}
+
+function isSupportedSyncChannel(channel: any): channel is TextChannel | ForumChannel {
+  return channel?.type === ChannelType.GuildText ||
+    channel?.type === ChannelType.GuildForum ||
+    channel?.type === ChannelType.GuildAnnouncement;
+}
+
+async function upsertRegistryChannelFromDiscord(
+  registry: DiscordChannelRegistry,
+  channel: TextChannel | ForumChannel,
+  observedAt: string,
+  isTracked: boolean
+): Promise<void> {
+  const textChannel = channel as TextChannel;
+  const forumChannel = channel as ForumChannel;
+
+  await registry.upsertChannel({
+    id: channel.id,
+    guildId: channel.type === ChannelType.GuildForum ? forumChannel.guild.id : textChannel.guild.id,
+    guildName: channel.type === ChannelType.GuildForum ? forumChannel.guild.name : textChannel.guild.name,
+    name: channel.type === ChannelType.GuildForum ? forumChannel.name : textChannel.name,
+    topic: channel.type === ChannelType.GuildForum ? forumChannel.topic : textChannel.topic,
+    categoryId: channel.type === ChannelType.GuildForum ? forumChannel.parentId : textChannel.parentId,
+    categoryName: channel.type === ChannelType.GuildForum ? forumChannel.parent?.name || null : textChannel.parent?.name || null,
+    type: channel.type,
+    position: channel.type === ChannelType.GuildForum ? forumChannel.position : textChannel.position,
+    nsfw: channel.type === ChannelType.GuildForum ? forumChannel.nsfw : textChannel.nsfw,
+    rateLimitPerUser: channel.type === ChannelType.GuildText ? textChannel.rateLimitPerUser : 0,
+    createdAt: Math.floor((channel.createdTimestamp || Date.now()) / 1000),
+    observedAt,
+    isTracked
+  });
 }
 
 // ============================================================================
@@ -274,17 +349,10 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   }
 
   // Find a valid Discord token
-  let botToken: string | null = null;
-  for (const [configName, configData] of configs) {
-    for (const source of configData.discordSources) {
-      const tokenVar = source.params?.botToken?.replace("process.env.", "");
-      if (tokenVar && process.env[tokenVar]) {
-        botToken = process.env[tokenVar]!;
-        console.log(`Using token from ${configName} (${tokenVar})`);
-        break;
-      }
-    }
-    if (botToken) break;
+  const tokenInfo = resolveDiscordBotToken(configs);
+  const botToken = tokenInfo.token;
+  if (botToken && tokenInfo.configName && tokenInfo.tokenVar) {
+    console.log(`Using token from ${tokenInfo.configName} (${tokenInfo.tokenVar})`);
   }
 
   // Fallback to building from raw data if no Discord token
@@ -308,13 +376,12 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
     process.exit(1);
   }
 
-  // Load muted channels from existing registry
-  const existingChannels = await registry.getAllChannels();
-  const mutedChannels = new Set<string>(
-    existingChannels.filter(c => c.isMuted).map(c => c.id)
+  // Load previously unavailable channels from registry
+  const unavailableChannels = new Set<string>(
+    (await registry.getUnavailableChannels()).map(c => c.id)
   );
-  if (mutedChannels.size > 0) {
-    console.log(`Loaded ${mutedChannels.size} muted channels from registry\n`);
+  if (unavailableChannels.size > 0) {
+    console.log(`Loaded ${unavailableChannels.size} previously unavailable channels from registry\n`);
   }
 
   // Get tracked channels from config
@@ -334,6 +401,7 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   const guildIds = getGuildIds(configs);
   const allChannels = new Map<string, { guild: any; channels: Map<string, TextChannel> }>();
   const channelActivity = new Map<string, ChannelActivity>();
+  let revalidatedDuringDiscovery = 0;
 
   console.log("Discovering channels...");
   let guildIndex = 0;
@@ -368,23 +436,16 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
 
       for (const [channelId, channel] of textChannels) {
         try {
-          await registry.upsertChannel({
-            id: channelId,
-            guildId: guildId,
-            guildName: guild.name,
-            name: channel.name,
-            topic: channel.topic || null,
-            categoryId: channel.parentId || null,
-            categoryName: channel.parent?.name || null,
-            type: channel.type,
-            position: channel.position,
-            nsfw: channel.nsfw,
-            rateLimitPerUser: channel.rateLimitPerUser || 0,
-            createdAt: Math.floor(channel.createdTimestamp! / 1000),
+          await upsertRegistryChannelFromDiscord(
+            registry,
+            channel,
             observedAt,
-            isTracked: tracked.has(channelId),
-            isMuted: mutedChannels.has(channelId)
-          });
+            tracked.has(channelId)
+          );
+          if (unavailableChannels.delete(channelId)) {
+            await registry.clearUnavailable(channelId);
+            revalidatedDuringDiscovery++;
+          }
         } catch (error: any) {
           if (args.debug) {
             console.error(`    Failed to upsert channel ${channelId}: ${error.message}`);
@@ -479,11 +540,11 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
           });
           errors++;
 
-          // Auto-mute inaccessible channels (but not tracked ones)
+          // Mark inaccessible channels as unavailable (but not tracked ones)
           const tracked = trackedChannels.get(guildId)?.has(channelId);
-          if (!mutedChannels.has(channelId) && !tracked) {
-            mutedChannels.add(channelId);
-            await registry.setMuted(channelId, true);
+          if (!tracked) {
+            await registry.markUnavailable(channelId, (error as any).message || "Bot lacks access");
+            unavailableChannels.add(channelId);
           }
         }
       }
@@ -498,7 +559,10 @@ async function commandDiscover(db: Database, args: CliArgs): Promise<void> {
   console.log("\n Channel discovery complete!");
   console.log(`\nRegistry now contains ${stats.totalChannels} channels`);
   console.log(`  Tracked: ${stats.trackedChannels}`);
-  console.log(`  Muted: ${stats.mutedChannels}`);
+  console.log(`  Unavailable: ${unavailableChannels.size}`);
+  if (revalidatedDuringDiscovery > 0) {
+    console.log(`  Revalidated access: ${revalidatedDuringDiscovery}`);
+  }
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- analyze --stale' to analyze channels with LLM");
   console.log("2. Run 'npm run channels -- propose' to generate config changes");
@@ -556,9 +620,13 @@ function getActivityBadge(velocity: number, daysSinceActivity?: number): string 
 // Command: analyze
 // ============================================================================
 
-async function loadChannelMessages(db: Database, channelId: string, limit: number = 100): Promise<string[]> {
-  const rows = await db.all<Array<{ text: string }>>(
-    `SELECT text FROM items
+async function loadChannelMessages(
+  db: Database,
+  channelId: string,
+  limit: number = 100
+): Promise<{ messages: string[]; lastMsgDate: string | null }> {
+  const rows = await db.all<Array<{ text: string; date: number }>>(
+    `SELECT text, date FROM items
      WHERE type = 'discordRawData'
        AND json_extract(text, '$.channel.id') = ?
      ORDER BY date DESC
@@ -567,14 +635,21 @@ async function loadChannelMessages(db: Database, channelId: string, limit: numbe
   );
 
   const messages: string[] = [];
+  let lastMsgDate: string | null = null;
+
   for (const row of rows) {
     try {
       const data: DiscordRawData = JSON.parse(row.text);
       for (const msg of data.messages) {
+        const msgTs = msg.ts || msg.timestamp;
+        if (msgTs && (!lastMsgDate || msgTs > lastMsgDate)) {
+          lastMsgDate = msgTs.split("T")[0];
+        }
         if (!msg.content.trim()) continue;
         const user = data.users[msg.uid];
-        const username = user?.displayName || user?.nickname || user?.username || "Unknown";
-        messages.push(`[${username}]: ${msg.content.slice(0, 500)}`);
+        const username = (user as any)?.name || user?.nickname || msg.uid;
+        const botTag = (user as any)?.isBot ? " [BOT]" : "";
+        messages.push(`[${username}${botTag}]: ${msg.content.slice(0, 500)}`);
         if (messages.length >= limit) break;
       }
     } catch (e) {
@@ -583,7 +658,71 @@ async function loadChannelMessages(db: Database, channelId: string, limit: numbe
     if (messages.length >= limit) break;
   }
 
-  return messages;
+  return { messages, lastMsgDate };
+}
+
+function formatChannelProfile(channel: DiscordChannel, messages: string[], lastMsgDate: string | null): string {
+  const lastActivity = lastMsgDate || (channel.lastActivityAt
+    ? new Date(channel.lastActivityAt * 1000).toISOString().split("T")[0]
+    : "unknown");
+  const velocity = channel.currentVelocity > 0
+    ? `${channel.currentVelocity.toFixed(1)} msgs/day (all-time avg)`
+    : "inactive";
+  const msgBlock = messages.length > 0
+    ? messages.map(m => `  ${m}`).join("\n")
+    : "  (no messages in database)";
+  return [
+    `Activity: ${velocity} | ${channel.totalMessages} total msgs | Last active: ${lastActivity}`,
+    `Category: ${channel.categoryName || "none"}`,
+    `Recent messages:\n${msgBlock}`,
+  ].join("\n");
+}
+
+async function batchAnalyzeChannels(
+  openai: OpenAI,
+  model: string,
+  channels: DiscordChannel[]
+): Promise<Map<string, AIAnalysisResult>> {
+  const today = new Date().toISOString().split("T")[0];
+
+  const channelSections = channels.map(ch =>
+    `### #${ch.name} (ID: ${ch.id})\n${ch.notes || "(no profile)"}`
+  ).join("\n\n---\n\n");
+
+  const prompt = `All channels below had activity in the last 7 days. Classify each as TRACK or MAYBE only.
+
+${channelSections}
+
+---
+
+Rules:
+- TRACK: Multiple different users having back-and-forth conversation.
+- MAYBE: Single user posting, bot-only feed, or only link dumps with no replies.
+
+Respond ONLY with a JSON array using the exact IDs provided:
+[{"id":"<channel_id>","recommendation":"TRACK|MAYBE","reason":"10 words max"}, ...]`;
+
+  const completion = await (openai.chat.completions.create as any)({
+    model,
+    messages: [{ role: "user", content: prompt }],
+    temperature: 0,
+    max_tokens: 16384,
+    ...(process.env.USE_OPENROUTER === "true" ? { reasoning: { effort: "none" } } : {})
+  });
+
+  let content = completion.choices[0]?.message?.content ||
+                completion.choices[0]?.message?.reasoning || "";
+  content = content.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+
+  const jsonMatch = content.match(/\[[\s\S]*\]/);
+  if (!jsonMatch) throw new Error(`No JSON array in response: ${content.slice(0, 300)}`);
+
+  const results: Array<{ id: string; recommendation: AIRecommendation; reason: string }> = JSON.parse(jsonMatch[0]);
+  const map = new Map<string, AIAnalysisResult>();
+  for (const r of results) {
+    map.set(r.id, { recommendation: r.recommendation, reason: r.reason || "" });
+  }
+  return map;
 }
 
 async function analyzeChannelWithLLM(
@@ -592,31 +731,42 @@ async function analyzeChannelWithLLM(
   channel: DiscordChannel,
   messagesText: string
 ): Promise<AIAnalysisResult | null> {
-  const prompt = `Analyze these Discord messages from #${channel.name}.
+  const categoryInfo = channel.categoryName ? ` (category: ${channel.categoryName})` : "";
+  const velocityInfo = channel.currentVelocity > 0 ? `${channel.currentVelocity.toFixed(1)} msgs/day (all-time avg)` : "inactive";
+  const lastActivityInfo = channel.lastActivityAt
+    ? `Last message: ${new Date(channel.lastActivityAt * 1000).toISOString().split("T")[0]}`
+    : "Last message: unknown";
+  const today = new Date().toISOString().split("T")[0];
+  const prompt = `Today is ${today}. Analyze this Discord channel #${channel.name}${categoryInfo}.
+Activity: ${velocityInfo}, ${channel.totalMessages} total messages. ${lastActivityInfo}.
 
-Messages:
+Recent messages (users tagged [BOT] are bots/webhooks):
 ${messagesText}
 
-Respond ONLY with valid JSON:
+Respond ONLY with valid JSON, no thinking:
 {
   "recommendation": "TRACK|MAYBE|SKIP",
   "reason": "brief explanation (15 words max)"
 }
 
 Guidelines:
-- TRACK: Technical content, development discussion, code sharing, valuable for documentation
-- MAYBE: Mixed content, occasional useful info, could be filtered
-- SKIP: Bot spam, price talk, low signal, no documentation value`;
+- TRACK: Active channel with recent messages (within last few months) and substantive discussion — technical, creative, governance, problem-solving.
+- MAYBE: Mixed signal — some useful content but inconsistent activity, or last activity was months ago.
+- SKIP: One-way feeds (webhook dumps, commit logs, RSS), join/leave spam, pure price/trading talk, no real conversation, or dormant (last message over 1 month ago).`;
 
   try {
-    const completion = await openai.chat.completions.create({
+    const completion = await (openai.chat.completions.create as any)({
       model,
       messages: [{ role: "user", content: prompt }],
       temperature: 0,
-      max_tokens: 150
+      max_tokens: 4096,
+      ...(process.env.USE_OPENROUTER === "true" ? { reasoning: { effort: "none" } } : {})
     });
 
-    const content = completion.choices[0]?.message?.content || "";
+    let content = completion.choices[0]?.message?.content ||
+                  completion.choices[0]?.message?.reasoning || "";
+    // Strip <think> tags in case reasoning leaked through
+    content = content.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
 
     // Try to extract JSON from response
     const jsonMatch = content.match(/\{[\s\S]*\}/);
@@ -628,7 +778,7 @@ Guidelines:
       };
     }
 
-    throw new Error("No JSON found in response");
+    throw new Error(`No JSON found in response: ${content.slice(0, 300)}`);
   } catch (error: any) {
     console.error(`    LLM error for #${channel.name}: ${error.message}`);
     return null;
@@ -670,10 +820,14 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     } : undefined
   });
 
-  const model = process.env.USE_OPENROUTER === "true" ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+  const model = process.env.CHANNEL_ANALYZE_MODEL ||
+    (process.env.USE_OPENROUTER === "true" ? "qwen/qwen3.5-35b-a3b" : "gpt-4o-mini");
 
   // Determine which channels to analyze
   let channelsToAnalyze: DiscordChannel[];
+  let tracked = 0;
+  let maybe = 0;
+  let skip = 0;
 
   if (args.channelId) {
     // Single channel mode
@@ -685,9 +839,19 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     channelsToAnalyze = [channel];
     console.log(`Analyzing single channel: #${channel.name}`);
   } else if (args.all) {
-    // All non-muted channels with activity
-    channelsToAnalyze = (await registry.getAllChannels()).filter(c => !c.isMuted && c.currentVelocity > 0);
-    console.log(`Analyzing all ${channelsToAnalyze.length} active channels`);
+    const allChannels = await registry.getAllChannels();
+
+    // Unavailable channels (bot can't access) — stamp SKIP if not already analyzed
+    const unavailable = allChannels.filter(c => c.unavailableReason && !c.aiLastAnalyzed);
+    for (const ch of unavailable) {
+      await registry.updateAIAnalysis(ch.id, { recommendation: "SKIP", reason: "Channel inaccessible" });
+      skip++;
+    }
+    skip += allChannels.filter(c => c.unavailableReason && c.aiLastAnalyzed).length;
+
+    // channelsToAnalyze: non-unavailable, non-muted (muted = user choice, still might have data)
+    channelsToAnalyze = allChannels.filter(c => !c.unavailableReason && !c.isMuted);
+    console.log(`Analyzing ${channelsToAnalyze.length} accessible channels (${unavailable.length} unavailable pre-stamped SKIP)`);
   } else {
     // Default: channels needing analysis (never analyzed or >30 days old)
     channelsToAnalyze = await registry.getChannelsNeedingAnalysis(30);
@@ -703,62 +867,101 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
   if (args.dryRun) {
     analyzeSpinner.stop();
     console.log(`\nDry run — would analyze ${channelsToAnalyze.length} channel(s).`);
-    console.log(`Estimated API calls: ${channelsToAnalyze.length}`);
+    const estimatedCalls = args.channelId ? channelsToAnalyze.length : 1;
+    console.log(`Estimated API calls: ${estimatedCalls} (${args.channelId ? "per-channel" : "batch"})`);
     return;
   }
 
   console.log("");
 
-  // Analyze each channel
-  let analyzed = 0;
-  let tracked = 0;
-  let maybe = 0;
-  let skip = 0;
-  let errors = 0;
+  // Build profiles for all channels (no per-channel LLM)
+  console.log("Building channel profiles...");
+  const RECENCY_DAYS = 7;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - RECENCY_DAYS);
+  const cutoffStr = cutoff.toISOString().split("T")[0];
+
+  const noMessages: DiscordChannel[] = [];
+  const stale: DiscordChannel[] = [];
+  const toClassify: DiscordChannel[] = [];
+  const profileRows: Array<{ channel: DiscordChannel; lastMsgDate: string | null }> = [];
 
   for (let i = 0; i < channelsToAnalyze.length; i++) {
     const channel = channelsToAnalyze[i];
-    analyzeSpinner.text = stepProgress(i + 1, channelsToAnalyze.length, `Analyzing #${channel.name}`);
-    process.stdout.write(`  Analyzing #${channel.name.padEnd(25)}...`);
-
-    // Load messages for this channel
-    const messages = await loadChannelMessages(db, channel.id, 50);
-
+    analyzeSpinner.text = stepProgress(i + 1, channelsToAnalyze.length, `Profiling #${channel.name}`);
+    const { messages, lastMsgDate } = await loadChannelMessages(db, channel.id, 10);
+    const profile = formatChannelProfile(channel, messages, lastMsgDate);
+    await registry.updateNotes(channel.id, profile);
+    channel.notes = profile;
+    profileRows.push({ channel, lastMsgDate });
     if (messages.length === 0) {
-      console.log(" no messages");
-      continue;
-    }
-
-    const messagesText = messages.join("\n");
-    const analysis = await analyzeChannelWithLLM(openai, model, channel, messagesText);
-
-    if (analysis) {
-      await registry.updateAIAnalysis(channel.id, analysis);
-      console.log(` ${analysis.recommendation}`);
-
-      if (analysis.recommendation === "TRACK") tracked++;
-      else if (analysis.recommendation === "MAYBE") maybe++;
-      else skip++;
-
-      analyzed++;
+      noMessages.push(channel);
+    } else if (!lastMsgDate || lastMsgDate < cutoffStr) {
+      stale.push(channel);
     } else {
-      console.log(" ERROR");
-      errors++;
+      toClassify.push(channel);
     }
-
-    // Rate limiting
-    await sleep(200);
   }
 
+  // Stats table
+  analyzeSpinner.stop();
+  console.log("\n| name | lastMsgDate | currentVelocity | totalMessages | aiRecommendation |");
+  console.log("|------|-------------|-----------------|---------------|-----------------|");
+  for (const { channel, lastMsgDate } of profileRows) {
+    const date = lastMsgDate ?? "—";
+    const vel = channel.currentVelocity > 0 ? `${channel.currentVelocity.toFixed(1)}/day` : "—";
+    const rec = channel.aiRecommendation ?? "—";
+    console.log(`| #${channel.name} | ${date} | ${vel} | ${channel.totalMessages} | ${rec} |`);
+  }
+  console.log("");
+
+  // Pre-classify channels with no messages as SKIP (no LLM needed)
+  for (const channel of noMessages) {
+    const analysis: AIAnalysisResult = { recommendation: "SKIP", reason: "No messages in database" };
+    await registry.updateAIAnalysis(channel.id, analysis);
+    skip++;
+  }
+
+  // Pre-classify stale channels as SKIP (no LLM needed)
+  for (const channel of stale) {
+    const analysis: AIAnalysisResult = { recommendation: "SKIP", reason: "No messages in last 7 days" };
+    await registry.updateAIAnalysis(channel.id, analysis);
+    skip++;
+  }
+
+  if (toClassify.length > 0) {
+    // Single batch LLM call for all channels with recent data
+    console.log(`Running batch analysis (1 LLM call for ${toClassify.length} channels)...`);
+    analyzeSpinner.text = "Running batch LLM analysis...";
+    analyzeSpinner.start();
+    const resultsMap = await batchAnalyzeChannels(openai, model, toClassify);
+
+    analyzeSpinner.stop();
+    console.log("\n| name | aiRecommendation | aiReason |");
+    console.log("|------|-----------------|---------|");
+    for (const channel of toClassify) {
+      const analysis = resultsMap.get(channel.id);
+      if (analysis) {
+        await registry.updateAIAnalysis(channel.id, analysis);
+        console.log(`| #${channel.name} | ${analysis.recommendation} | ${analysis.reason} |`);
+        if (analysis.recommendation === "TRACK") tracked++;
+        else if (analysis.recommendation === "MAYBE") maybe++;
+        else skip++;
+      } else {
+        console.log(`| #${channel.name} | — | (no result) |`);
+      }
+    }
+    console.log("");
+  }
+
+
   console.log(`\nAnalysis complete!`);
-  console.log(`  Analyzed: ${analyzed}`);
   console.log(`  TRACK: ${tracked}`);
   console.log(`  MAYBE: ${maybe}`);
   console.log(`  SKIP: ${skip}`);
-  console.log(`  Errors: ${errors}`);
   console.log("\nNext steps:");
   console.log("1. Run 'npm run channels -- propose' to generate config changes");
-  analyzeSpinner.succeed("Channel analysis complete");
+  console.log("Channel analysis complete");
 }
 
 // ============================================================================
@@ -847,6 +1050,47 @@ async function commandProposeUpdate(db: Database, registry: DiscordChannelRegist
   if (args.dryRun) {
     console.error(`\n[DRY RUN] Would create PR with ${toAdd.length} additions and ${toRemove.length} removals`);
   }
+
+  // --apply: write changes directly back to config file(s)
+  if (args.apply && !args.dryRun) {
+    const configs = loadConfigs(args.source);
+    let totalAdded = 0;
+    let totalRemoved = 0;
+
+    for (const [configName, configData] of configs) {
+      let modified = false;
+
+      for (const source of configData.discordSources) {
+        const channelIds: string[] = source.params?.channelIds || [];
+
+        for (const ch of toAdd) {
+          if (!channelIds.includes(ch.channelId)) {
+            channelIds.push(ch.channelId);
+            modified = true;
+            totalAdded++;
+          }
+        }
+
+        for (const ch of toRemove) {
+          const idx = channelIds.indexOf(ch.channelId);
+          if (idx !== -1) {
+            channelIds.splice(idx, 1);
+            modified = true;
+            totalRemoved++;
+          }
+        }
+
+        source.params.channelIds = channelIds;
+      }
+
+      if (modified) {
+        fs.writeFileSync(configData.path, JSON.stringify(configData.config, null, 2) + "\n");
+        console.error(`Applied to ${configName}: +${totalAdded} added, -${totalRemoved} removed`);
+      } else {
+        console.error(`No changes needed in ${configName}`);
+      }
+    }
+  }
 }
 
 // ============================================================================
@@ -854,6 +1098,11 @@ async function commandProposeUpdate(db: Database, registry: DiscordChannelRegist
 // ============================================================================
 
 async function commandList(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (args.interactive) {
+    await commandInteractiveTrackSelection(registry, args);
+    return;
+  }
+
   let channels: DiscordChannel[];
 
   if (args.tracked) {
@@ -872,6 +1121,8 @@ async function commandList(registry: DiscordChannelRegistry, args: CliArgs): Pro
     if (!args.json) console.log("\n All Channels\n");
     channels = await registry.getAllChannels();
   }
+
+  channels = sortChannelsForDisplay(channels);
 
   if (channels.length === 0) {
     if (args.json) {
@@ -995,31 +1246,144 @@ async function commandShow(registry: DiscordChannelRegistry, channelId: string):
 // Command: stats
 // ============================================================================
 
-async function commandStats(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+async function commandStats(registry: DiscordChannelRegistry, args: CliArgs, db: Database): Promise<void> {
   const stats = await registry.getStats();
   if (args.json) {
     outputJson({ ok: true, command: "channels.stats", data: stats });
     return;
   }
+
+  // Fetch richer coverage stats directly from items table
+  const coverageRow = await db.get<{
+    total_records: number; days_with_msgs: number; empty_records: number;
+    total_msgs: number; earliest: string; latest: string;
+  }>(`
+    SELECT
+      COUNT(*)                                                                  AS total_records,
+      SUM(CASE WHEN CAST(json_extract(metadata,'$.messageCount') AS INTEGER) > 0 THEN 1 ELSE 0 END) AS days_with_msgs,
+      SUM(CASE WHEN json_extract(metadata,'$.empty') = 1 THEN 1 ELSE 0 END)   AS empty_records,
+      SUM(CAST(json_extract(metadata,'$.messageCount') AS INTEGER))            AS total_msgs,
+      date(MIN(date),'unixepoch')                                              AS earliest,
+      date(MAX(date),'unixepoch')                                              AS latest
+    FROM items WHERE type='discordRawData'`);
+
+  // Channels with real messages in last 30 / 90 days
+  const t30 = Math.floor(Date.now() / 1000) - 30 * 86400;
+  const t90 = Math.floor(Date.now() / 1000) - 90 * 86400;
+  const recentActivity = await db.all<Array<{ ch: string; name: string; msgs_30d: number; msgs_90d: number; last_msg: string }>>(`
+    SELECT
+      substr(i.cid, 13, length(i.cid) - 23)                                     AS ch,
+      c.name,
+      SUM(CASE WHEN i.date >= ${t30} THEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) ELSE 0 END) AS msgs_30d,
+      SUM(CASE WHEN i.date >= ${t90} THEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) ELSE 0 END) AS msgs_90d,
+      date(MAX(CASE WHEN CAST(json_extract(i.metadata,'$.messageCount') AS INTEGER) > 0 THEN i.date ELSE 0 END),'unixepoch') AS last_msg
+    FROM items i
+    JOIN discord_channels c ON c.id = substr(i.cid, 13, length(i.cid) - 23)
+    WHERE i.type='discordRawData' AND c.unavailableReason IS NULL
+    GROUP BY ch
+    HAVING msgs_90d > 0
+    ORDER BY msgs_30d DESC`);
+
+  const unavailableCount = await db.get<{ count: number }>(
+    "SELECT COUNT(*) as count FROM discord_channels WHERE unavailableReason IS NOT NULL"
+  );
+  const unavailableByReason = await db.all<Array<{ reason: string; count: number }>>(
+    `SELECT unavailableReason as reason, COUNT(*) as count
+     FROM discord_channels
+     WHERE unavailableReason IS NOT NULL
+     GROUP BY unavailableReason
+     ORDER BY count DESC, reason ASC`
+  );
+  const accessibleNoRowsCount = await db.get<{ count: number }>(
+    `SELECT COUNT(*) as count
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND NOT EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )`
+  );
+  const accessibleNoRows = await db.all<Array<{ name: string; categoryName: string | null }>>(
+    `SELECT c.name, c.categoryName
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND NOT EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )
+     ORDER BY c.categoryName, c.name
+     LIMIT 10`
+  );
+  const staleCoverageCount = await db.get<{ count: number }>(
+    `SELECT COUNT(*) as count
+     FROM discord_channels c
+     WHERE c.unavailableReason IS NULL
+       AND EXISTS (
+         SELECT 1 FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       )
+       AND COALESCE((
+         SELECT MAX(i.date)
+         FROM items i
+         WHERE i.type = 'discordRawData'
+           AND substr(i.cid, 13, length(i.cid) - 23) = c.id
+       ), 0) < ?`,
+    t90
+  );
+
+  const totalRecords = coverageRow?.total_records ?? 0;
+  const daysWithMessages = coverageRow?.days_with_msgs ?? 0;
+  const emptyRecords = coverageRow?.empty_records ?? 0;
+  const totalMessages = coverageRow?.total_msgs ?? 0;
+  const pct = totalRecords > 0 ? Math.round(100 * daysWithMessages / totalRecords) : 0;
+  const unavailable = unavailableCount?.count || 0;
+
   console.log("\n Channel Registry Statistics\n");
 
-  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted`);
-  console.log(`Guilds: ${stats.totalGuilds}`);
-  console.log(`Total messages: ${stats.totalMessages.toLocaleString()}`);
+  console.log(`Channels: ${stats.totalChannels} total, ${stats.trackedChannels} tracked, ${stats.mutedChannels} muted, ${unavailable} unavailable`);
+  console.log(`Coverage: ${coverageRow?.earliest ?? '?'} → ${coverageRow?.latest ?? '?'}`);
+  console.log(`Records:  ${totalRecords.toLocaleString()} total  |  ${daysWithMessages.toLocaleString()} with messages (${pct}%)  |  ${emptyRecords.toLocaleString()} empty`);
+  console.log(`Messages: ${totalMessages.toLocaleString()} across all time`);
+  console.log(`Gaps:     ${(accessibleNoRowsCount?.count ?? 0).toLocaleString()} accessible channels with no raw rows  |  ${(staleCoverageCount?.count ?? 0).toLocaleString()} with no coverage in last 90 days`);
 
-  console.log(`\nActivity Distribution:`);
-  console.log(`   Hot (>50 msgs/day): ${stats.hotChannels}`);
-  console.log(`   Active (7-50): ${stats.activeChannels}`);
-  console.log(`   Moderate (1.5-7): ${stats.moderateChannels}`);
-  console.log(`   Quiet (<1.5): ${stats.quietChannels}`);
+  console.log(`\nActivity Distribution (7-day rolling velocity, accessible channels):`);
+  console.log(`   Hot     (>50 msgs/day):  ${stats.hotChannels}`);
+  console.log(`   Active  (7–50):          ${stats.activeChannels}`);
+  console.log(`   Moderate(1.5–7):         ${stats.moderateChannels}`);
+  console.log(`   Quiet   (<1.5):          ${stats.quietChannels}`);
 
-  console.log(`\nChanges Tracked:`);
-  console.log(`   Name changes: ${stats.channelsWithNameChanges} channels`);
-  console.log(`   Topic changes: ${stats.channelsWithTopicChanges} channels`);
-  console.log(`   Category changes: ${stats.channelsWithCategoryChanges} channels`);
+  if (unavailableByReason.length > 0) {
+    console.log(`\nUnavailable by reason:`);
+    for (const row of unavailableByReason) {
+      console.log(`   ${row.reason}: ${row.count}`);
+    }
+  }
 
-  if (stats.mostActiveChannel) {
-    console.log(`\nMost Active: #${stats.mostActiveChannel.name} (${stats.mostActiveChannel.velocity.toFixed(1)} msgs/day)`);
+  if (accessibleNoRows.length > 0) {
+    console.log(`\nAccessible channels with no raw rows (${accessibleNoRowsCount?.count ?? 0} total):`);
+    for (const row of accessibleNoRows) {
+      const category = row.categoryName ? ` [${row.categoryName}]` : "";
+      console.log(`   #${row.name}${category}`);
+    }
+    if ((accessibleNoRowsCount?.count || 0) > accessibleNoRows.length) {
+      console.log(`   ... and ${(accessibleNoRowsCount?.count || 0) - accessibleNoRows.length} more`);
+    }
+  }
+
+  if (recentActivity.length > 0) {
+    console.log(`\nChannels with messages in last 90 days (${recentActivity.length} total):`);
+    const fmt = (n: number) => n.toString().padStart(6);
+    console.log(`   ${'Channel'.padEnd(28)} ${'30d'.padStart(6)} ${'90d'.padStart(6)}  Last message`);
+    console.log(`   ${'-'.repeat(28)} ${'-'.repeat(6)} ${'-'.repeat(6)}  ${'-'.repeat(12)}`);
+    for (const r of recentActivity.slice(0, 20)) {
+      console.log(`   #${r.name.padEnd(27)} ${fmt(r.msgs_30d)} ${fmt(r.msgs_90d)}  ${r.last_msg}`);
+    }
+    if (recentActivity.length > 20) console.log(`   ... and ${recentActivity.length - 20} more`);
+  } else {
+    console.log(`\nNo channels with messages in last 90 days.`);
   }
 
   console.log("");
@@ -1052,7 +1416,7 @@ async function commandMute(registry: DiscordChannelRegistry, channelId: string, 
   }
 
   await registry.setMuted(channelId, muted);
-  console.log(`\nChannel #${channel.name} is now ${muted ? "muted" : "unmuted"}\n`);
+  console.log(`\nChannel #${channel.name} is now ${muted ? "ignored in summaries" : "included in summaries"}\n`);
 }
 
 // ============================================================================
@@ -1189,6 +1553,33 @@ async function commandBuildRegistry(db: Database, args: CliArgs): Promise<void> 
 }
 
 // ============================================================================
+// Command: fix-states (one-time migration)
+// ============================================================================
+
+async function commandFixStates(registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  const allChannels = await registry.getAllChannels();
+  // Heuristic: isMuted=1 AND isTracked=0 = auto-muted by discover (not user-intentional)
+  const autoMuted = allChannels.filter(c => c.isMuted && !c.isTracked);
+
+  console.log(`Found ${autoMuted.length} auto-muted channels to migrate to unavailable state`);
+  if (args.dryRun) {
+    const preview = autoMuted.slice(0, 20);
+    for (const ch of preview) {
+      console.log(`  ${ch.id} #${ch.name}`);
+    }
+    if (autoMuted.length > 20) console.log(`  ... and ${autoMuted.length - 20} more`);
+    console.log("\n(dry run — no changes made)");
+    return;
+  }
+
+  for (const ch of autoMuted) {
+    await registry.markUnavailable(ch.id, ch.unavailableReason || "Channel inaccessible (migrated from muted)");
+    await registry.setMuted(ch.id, false);
+  }
+  console.log(`Migrated ${autoMuted.length} channels. isMuted is now reserved for user-driven mutes only.`);
+}
+
+// ============================================================================
 // Command: help
 // ============================================================================
 
@@ -1209,44 +1600,323 @@ async function commandResetUnavailable(registry: DiscordChannelRegistry, args: C
   console.log(`\nCleared unavailability status for ${cleared} channel(s).`);
 }
 
+// ============================================================================
+// Command: sync (discover → analyze → propose pipeline, optionally with mirror)
+// ============================================================================
+
+async function commandSync(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (args.withFetch) {
+    console.log("\n=== Step 1/4: Discover ===");
+    try {
+      await commandDiscover(db, args);
+    } catch (e) {
+      console.warn("Discover failed, continuing:", e);
+    }
+
+    console.log("\n=== Step 2/4: Mirror ===");
+    await commandMirror(db, registry, args);
+
+    console.log("\n=== Step 3/4: Analyze ===");
+    await commandAnalyze(db, registry, { ...args, all: true });
+
+    console.log("\n=== Step 4/4: Propose ===");
+    await commandProposeUpdate(db, registry, args);
+  } else {
+    console.log("\n=== Step 1/3: Discover ===");
+    try {
+      await commandDiscover(db, args);
+    } catch (e) {
+      console.warn("Discover failed, continuing:", e);
+    }
+
+    console.log("\n=== Step 2/3: Analyze ===");
+    await commandAnalyze(db, registry, { ...args, all: true });
+
+    console.log("\n=== Step 3/3: Propose ===");
+    await commandProposeUpdate(db, registry, args);
+  }
+
+  if (args.apply) {
+    console.log("\nDone. Config updated automatically (--apply).");
+  } else {
+    console.log("\nDone. Review the proposal above and edit your config channelIds.");
+    console.log("Tip: use --apply to write changes to config automatically.");
+  }
+}
+
+/** @deprecated Use `channels sync --with-fetch` instead */
+async function commandRefresh(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.warn("⚠ 'channels refresh' is deprecated. Use 'channels sync --with-fetch' instead.");
+  await commandSync(db, registry, { ...args, withFetch: true });
+}
+
+/** @deprecated Use `channels sync` instead */
+async function commandUpdate(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.warn("⚠ 'channels update' is deprecated. Use 'channels sync' instead.");
+  await commandSync(db, registry, args);
+}
+
+// ============================================================================
+// Command: mirror (fetch raw messages from ALL accessible channels → DB)
+// ============================================================================
+
+async function commandMirror(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  const configs = loadConfigs(args.source);
+  const guildIds = getGuildIds(configs);
+  const trackedChannels = getTrackedChannelIds(configs);
+  let allChannels = filterChannelsByGuildIds(await registry.getAllChannels(), guildIds);
+
+  if (allChannels.length === 0) {
+    console.log("No channels found in registry for this source. Run 'channels discover' first.");
+    return;
+  }
+
+  const unavailableBefore = allChannels.filter(c => c.unavailableReason);
+  let revalidated = 0;
+
+  if (unavailableBefore.length > 0) {
+    if (args.dryRun) {
+      console.log(`\nWould revalidate ${unavailableBefore.length} unavailable channels before mirroring.`);
+    } else {
+      const tokenInfo = resolveDiscordBotToken(configs);
+      if (!tokenInfo.token) {
+        console.log(`\nSkipping unavailable-channel revalidation for ${unavailableBefore.length} channels (no Discord token available).`);
+      } else {
+        console.log(`\nRevalidating ${unavailableBefore.length} unavailable channels before mirroring...`);
+        const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+        const observedAt = new Date().toISOString().split("T")[0];
+        try {
+          await client.login(tokenInfo.token);
+          for (const channel of unavailableBefore) {
+            try {
+              const fetched = await client.channels.fetch(channel.id);
+              if (!fetched || !isSupportedSyncChannel(fetched)) {
+                continue;
+              }
+
+              await upsertRegistryChannelFromDiscord(
+                registry,
+                fetched,
+                observedAt,
+                trackedChannels.get(channel.guildId)?.has(channel.id) || channel.isTracked
+              );
+              await registry.clearUnavailable(channel.id);
+              revalidated++;
+            } catch (error: any) {
+              if (args.debug) {
+                console.error(`  Revalidation failed for ${channel.id}: ${error.message}`);
+              }
+            }
+          }
+        } finally {
+          await client.destroy();
+        }
+
+        if (revalidated > 0) {
+          allChannels = filterChannelsByGuildIds(await registry.getAllChannels(), guildIds);
+          console.log(`Revalidated ${revalidated}/${unavailableBefore.length} previously unavailable channels.`);
+        } else {
+          console.log("No unavailable channels were revalidated.");
+        }
+      }
+    }
+  }
+
+  const accessible = allChannels.filter(c => !c.unavailableReason);
+
+  if (accessible.length === 0) {
+    console.log("No accessible channels in registry after revalidation. Run 'channels discover' first or check bot permissions.");
+    return;
+  }
+
+  // Auto-detect date range from channel creation timestamps if not specified
+  const after = args.after ?? (() => {
+    const earliest = accessible.reduce((min, c) => c.createdAt > 0 && c.createdAt < min ? c.createdAt : min, Infinity);
+    return earliest === Infinity ? "2015-01-01" : new Date(earliest * 1000).toISOString().split("T")[0];
+  })();
+  const before = args.before ?? new Date().toISOString().split("T")[0];
+
+  const channelIds = accessible.map(c => c.id).join(",");
+
+  console.log(`\nMirroring ${accessible.length} accessible channels (${allChannels.length - accessible.length} unavailable skipped${revalidated > 0 ? `, ${revalidated} revalidated` : ""})`);
+  console.log(`Date range: ${after} → ${before}${!args.after ? " (auto-detected from channel creation dates)" : ""}`);
+
+  // Show breakdown by category
+  const byCategory = new Map<string, number>();
+  for (const ch of accessible) {
+    const cat = ch.categoryName || "Uncategorized";
+    byCategory.set(cat, (byCategory.get(cat) || 0) + 1);
+  }
+  for (const [cat, count] of [...byCategory.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8)) {
+    console.log(`  ${cat}: ${count} channels`);
+  }
+  if (byCategory.size > 8) console.log(`  ... and ${byCategory.size - 8} more categories`);
+
+  const sourceFlag = args.source ? ` --source=${args.source}` : "";
+  const cmd = `npm run historical -- --after=${after} --before=${before} --onlyFetch --channels=<${accessible.length} channel IDs>${sourceFlag}`;
+  console.log(`\nWill run: ${cmd}`);
+
+  if (args.dryRun) {
+    console.log("(dry run — skipping execution)");
+    return;
+  }
+
+  const { spawn } = await import("child_process");
+  const spawnArgs = [
+    "-r", "tsconfig-paths/register", "--transpile-only", "src/historical.ts",
+    `--after=${after}`, `--before=${before}`, "--onlyFetch",
+    `--channels=${channelIds}`,
+  ];
+  if (args.source) spawnArgs.push(`--source=${args.source}`);
+
+  console.log(`\nStarting fetch (this may take a while for large ranges)...`);
+  const child = spawn("ts-node", spawnArgs, { stdio: "inherit", shell: true, cwd: process.cwd() });
+  await new Promise<void>((resolve, reject) => {
+    child.on("close", (code: number | null) =>
+      code === 0 || code === null ? resolve() : reject(new Error(`Exit code ${code}`))
+    );
+  });
+
+  console.log("\nSyncing channel registry stats from fetched data...");
+  const { updated } = await registry.syncStats();
+  console.log(`Updated stats for ${updated} channels.`);
+}
+
+// ============================================================================
+// Command: archive (generate summaries from existing DB data)
+// ============================================================================
+
+async function commandArchive(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  if (!args.after || !args.before) {
+    console.error("Error: --after and --before are required");
+    console.log("Usage: npm run channels -- archive --after=YYYY-MM-DD --before=YYYY-MM-DD [--source=...] [--output=...]");
+    return;
+  }
+
+  const afterTs = Math.floor(new Date(args.after).getTime() / 1000);
+  const beforeTs = Math.floor(new Date(args.before + "T23:59:59Z").getTime() / 1000);
+
+  // Per-date stats
+  const dateCounts = await db.all<Array<{ date: number; cnt: number }>>(
+    `SELECT date, COUNT(*) as cnt FROM items
+     WHERE type='discordRawData' AND date >= ? AND date <= ?
+     GROUP BY date ORDER BY date`,
+    afterTs, beforeTs
+  );
+
+  if (dateCounts.length === 0) {
+    console.log(`No raw data in DB for ${args.after} → ${args.before}.`);
+    console.log("Hint: channels must have been fetched during this period.");
+    return;
+  }
+
+  // Check already-summarized dates
+  const existingSummaries = await db.all<Array<{ date: number }>>(
+    `SELECT DISTINCT date FROM items WHERE type LIKE '%Summary%' AND date >= ? AND date <= ?`,
+    afterTs, beforeTs
+  );
+  const summarizedDates = new Set(existingSummaries.map(r => r.date));
+  const toGenerate = dateCounts.filter(r => args.force || !summarizedDates.has(r.date));
+
+  const firstDate = new Date(dateCounts[0].date * 1000).toISOString().split('T')[0];
+  const lastDate = new Date(dateCounts[dateCounts.length - 1].date * 1000).toISOString().split('T')[0];
+
+  console.log(`\nFound data in ${firstDate} → ${lastDate}:`);
+  console.log(`  Total dates with raw data:  ${dateCounts.length}`);
+  console.log(`  Already summarized:         ${summarizedDates.size}  (use -f to force regenerate)`);
+  console.log(`  ──────────────────────────────────`);
+  console.log(`  Dates to generate:          ${toGenerate.length}  (~${toGenerate.length} LLM calls)`);
+
+  const sourceFlag = args.source ? ` --source=${args.source}` : "";
+  const outputFlag = args.output ? ` --output=${args.output}` : "";
+  const forceFlag = args.force ? " --force" : " --skip-existing";
+  const cmd = `npm run historical -- --after=${args.after} --before=${args.before} --onlyGenerate${forceFlag}${sourceFlag}${outputFlag}`;
+  console.log(`\nWill run: ${cmd}`);
+
+  if (args.dryRun) {
+    console.log("(dry run — skipping execution)");
+    return;
+  }
+
+  const { spawn } = await import("child_process");
+  const spawnArgs = [
+    "-r", "tsconfig-paths/register", "--transpile-only", "src/historical.ts",
+    `--after=${args.after}`, `--before=${args.before}`, "--onlyGenerate",
+  ];
+  if (args.source) spawnArgs.push(`--source=${args.source}`);
+  if (args.output) spawnArgs.push(`--output=${args.output}`);
+  if (!args.force) spawnArgs.push("--skip-existing");
+  else spawnArgs.push("--force");
+
+  const child = spawn("ts-node", spawnArgs, { stdio: "inherit", shell: true, cwd: process.cwd() });
+  await new Promise<void>((resolve, reject) => {
+    child.on("close", (code: number | null) =>
+      code === 0 || code === null ? resolve() : reject(new Error(`Exit code ${code}`))
+    );
+  });
+}
+
 function commandHelp(): void {
   console.log(`
 Discord Channel Management CLI
 
+Pipeline Commands:
+  sync [--source=<config>.json] [--dry-run] [--apply]            Run discover → analyze → propose in one step
+  sync --with-fetch [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]   Full pipeline: discover → mirror → analyze → propose
+       [--source=<config>.json] [--dry-run] [--apply]
+
 Discovery & Analysis:
-  discover [--source=<config>.json]       Fetch channels from Discord (or raw data if no token)
-  analyze [--all] [--channel=ID]          Run LLM analysis on channels
-  propose [--dry-run]                     Generate config diff and PR markdown
+  discover [--source=<config>.json]                              Fetch channels from Discord (or raw data if no token)
+  analyze [--all] [--channel=ID]                                 Run LLM analysis on channels
+  propose [--dry-run] [--apply]                                  Generate config diff and PR markdown; --apply writes changes to config
+  mirror  [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]             Fetch raw messages from registry channels → DB
+          [--source=<config>.json] [--dry-run]                  (date range auto-detected from channel creation dates)
+  archive --after=YYYY-MM-DD --before=YYYY-MM-DD                Generate summaries from historical DB activity for each day
+          [--source=<config>.json] [--output=<path>] [--dry-run] [-f/--force]
 
 Query Commands:
   list [--tracked|--active|--muted|--quiet]   List channels with optional filters
+  list --interactive --source=<config>.json   Interactively track/untrack and ignore noisy channels
   show <channelId>                            Show detailed channel info
-  stats                                       Show channel registry statistics
+  stats                                       Show channel registry, access, and coverage statistics
 
 Management Commands:
   track <channelId>                       Mark channel as tracked
   untrack <channelId>                     Mark channel as not tracked
-  mute <channelId>                        Mute channel (hide from recommendations)
-  unmute <channelId>                      Unmute channel
+  mute <channelId>                        Ignore channel in summaries and recommendations
+  unmute <channelId>                      Include channel in summaries again
 
 Registry Commands:
   build-registry [--dry-run]              Backfill discord_channels from discordRawData
   reset-unavailable                       Clear unavailability status for all channels
+  fix-states [--dry-run]                  Migrate auto-muted channels to unavailable state (one-time)
 
-Options:
+  Options:
   --source=<config>.json                  Filter to a single config file (e.g. --source=m3org.json)
+  --output=<path>                         Output directory for generated summary files
+  --interactive                           Launch terminal selector for track/untrack and ignore toggles
   --json                                  Output machine-readable JSON for query commands
+  Env: CHANNEL_ANALYZE_MODEL              Override the LLM model used by 'analyze'
+
+  Deprecated (still work, use sync instead):
+  update [--source=<config>.json]         Alias for 'sync'
+  refresh [--after/--before]             Alias for 'sync --with-fetch'
 
 Examples:
-  npm run channels -- discover              # Discover channels (Discord API or raw data)
+  npm run channels -- sync --source=m3org.json                    # Full discover→analyze→propose pipeline
+  npm run channels -- sync --with-fetch --source=m3org.json       # Full pipeline including mirror
+  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --dry-run  # Preview backfill
+  npm run channels -- archive --after=2025-10-01 --before=2025-12-01 --source=m3org.json --output=./output/m3org  # Backfill summaries
   npm run channels -- discover --source=m3org.json  # Discover for a specific config
   npm run channels -- analyze               # Analyze channels needing analysis
   npm run channels -- analyze --all         # Re-analyze all channels
   npm run channels -- analyze --channel=123 # Analyze a single channel
   npm run channels -- propose               # Generate PR body with config changes
   npm run channels -- list --tracked        # List tracked channels
+  npm run channels -- list --interactive --source=m3org.json   # Pick tracked channels and ignore noisy ones
 
-Workflow (automated via GitHub Action):
+Workflow (run individually or all at once with 'sync'):
+  npm run channels -- sync --source=m3org.json     # One-shot pipeline
   1. npm run channels -- discover            # Fetch channels
   2. npm run channels -- analyze             # Run LLM analysis
   3. npm run channels -- propose             # Generate PR body
@@ -1259,6 +1929,434 @@ Workflow (automated via GitHub Action):
 
 function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function compareNullableStrings(a?: string | null, b?: string | null): number {
+  if (!a && !b) return 0;
+  if (!a) return 1;
+  if (!b) return -1;
+  return a.localeCompare(b);
+}
+
+function sortChannelsForDisplay(channels: DiscordChannel[]): DiscordChannel[] {
+  const guildOrder = new Map<string, number>();
+  const categoryOrder = new Map<string, number>();
+
+  const byGuild = new Map<string, DiscordChannel[]>();
+  for (const channel of channels) {
+    const guildKey = `${channel.guildId}|${channel.guildName || ""}`;
+    if (!byGuild.has(guildKey)) {
+      byGuild.set(guildKey, []);
+    }
+    byGuild.get(guildKey)!.push(channel);
+  }
+
+  const guildKeys = Array.from(byGuild.keys()).sort((a, b) => {
+    const aName = a.split("|")[1] || "";
+    const bName = b.split("|")[1] || "";
+    return aName.localeCompare(bName);
+  });
+
+  guildKeys.forEach((guildKey, guildIndex) => {
+    guildOrder.set(guildKey, guildIndex);
+    const categoryMinPos = new Map<string, number>();
+    for (const channel of byGuild.get(guildKey) || []) {
+      const categoryKey = `${guildKey}|${channel.categoryId || "uncategorized"}|${channel.categoryName || ""}`;
+      const current = categoryMinPos.get(categoryKey);
+      const pos = channel.position ?? Number.MAX_SAFE_INTEGER;
+      if (current === undefined || pos < current) {
+        categoryMinPos.set(categoryKey, pos);
+      }
+    }
+
+    Array.from(categoryMinPos.entries())
+      .sort((a, b) => {
+        if (a[1] !== b[1]) return a[1] - b[1];
+        return a[0].localeCompare(b[0]);
+      })
+      .forEach(([categoryKey], categoryIndex) => {
+        categoryOrder.set(categoryKey, categoryIndex);
+      });
+  });
+
+  return [...channels].sort((a, b) => {
+    const aGuildKey = `${a.guildId}|${a.guildName || ""}`;
+    const bGuildKey = `${b.guildId}|${b.guildName || ""}`;
+    const aCategoryKey = `${aGuildKey}|${a.categoryId || "uncategorized"}|${a.categoryName || ""}`;
+    const bCategoryKey = `${bGuildKey}|${b.categoryId || "uncategorized"}|${b.categoryName || ""}`;
+
+    const guildCmp = (guildOrder.get(aGuildKey) ?? 0) - (guildOrder.get(bGuildKey) ?? 0);
+    if (guildCmp !== 0) return guildCmp;
+
+    const categoryCmp = (categoryOrder.get(aCategoryKey) ?? 0) - (categoryOrder.get(bCategoryKey) ?? 0);
+    if (categoryCmp !== 0) return categoryCmp;
+
+    const positionCmp = (a.position ?? Number.MAX_SAFE_INTEGER) - (b.position ?? Number.MAX_SAFE_INTEGER);
+    if (positionCmp !== 0) return positionCmp;
+
+    return compareNullableStrings(a.name, b.name);
+  });
+}
+
+function ensureConfigBackup(configPath: string): void {
+  if (!fs.existsSync(BACKUP_DIR)) {
+    fs.mkdirSync(BACKUP_DIR, { recursive: true });
+  }
+  const ts = new Date().toISOString().replace(/[:.]/g, "-");
+  const backupPath = path.join(BACKUP_DIR, `${path.basename(configPath, ".json")}.${ts}.json`);
+  fs.copyFileSync(configPath, backupPath);
+}
+
+async function promptLine(prompt: string): Promise<string> {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  try {
+    return await new Promise<string>(resolve => rl.question(prompt, resolve));
+  } finally {
+    rl.close();
+  }
+}
+
+async function applyTrackedSelectionToConfigs(
+  configs: Map<string, LoadedConfig>,
+  orderedTrackedIds: string[],
+  registryChannels: DiscordChannel[]
+): Promise<{ updatedConfigs: string[]; totalTracked: number }> {
+  const channelById = new Map(registryChannels.map(channel => [channel.id, channel]));
+  const updatedConfigs: string[] = [];
+
+  for (const [, configData] of configs) {
+    let modified = false;
+
+    for (const source of configData.discordSources) {
+      const resolvedGuildId = resolveConfigEnvValue(source.params?.guildId);
+      const nextIds = orderedTrackedIds.filter(channelId => {
+        const channel = channelById.get(channelId);
+        return channel && (!resolvedGuildId || channel.guildId === resolvedGuildId);
+      });
+
+      const prevIds = source.params?.channelIds || [];
+      if (JSON.stringify(prevIds) !== JSON.stringify(nextIds)) {
+        source.params.channelIds = nextIds;
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      ensureConfigBackup(configData.path);
+      fs.writeFileSync(configData.path, JSON.stringify(configData.config, null, 2) + "\n");
+      updatedConfigs.push(path.basename(configData.path));
+    }
+  }
+
+  return { updatedConfigs, totalTracked: orderedTrackedIds.length };
+}
+
+async function commandInteractiveTrackSelection(
+  registry: DiscordChannelRegistry,
+  args: CliArgs
+): Promise<void> {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    console.error("\nInteractive mode requires a TTY.\n");
+    return;
+  }
+
+  if (!args.source) {
+    console.error("\nInteractive mode requires --source=<config>.json so edits apply to one config.\n");
+    return;
+  }
+
+  const configs = loadConfigs(args.source);
+  if (configs.size !== 1) {
+    console.error(`\nExpected exactly one config for --source=${args.source}, found ${configs.size}.\n`);
+    return;
+  }
+
+  const guildIds = getGuildIds(configs);
+  const allChannels = sortChannelsForDisplay(
+    (await registry.getAllChannels()).filter(channel => guildIds.size === 0 || guildIds.has(channel.guildId))
+  );
+
+  if (allChannels.length === 0) {
+    console.log("\nNo channels found in the registry for this source. Run 'channels discover' first.\n");
+    return;
+  }
+
+  const trackedByGuild = getTrackedChannelIds(configs);
+  const selected = new Set(
+    allChannels
+      .filter(channel => trackedByGuild.get(channel.guildId)?.has(channel.id))
+      .map(channel => channel.id)
+  );
+  const original = new Set(selected);
+  const ignored = new Set(allChannels.filter(channel => channel.isMuted).map(channel => channel.id));
+  const originalIgnored = new Set(ignored);
+  let filter = "";
+  let cursor = 0;
+  let message = "Use hotkeys below to edit channel state.";
+  let pendingQuitConfirmation = false;
+
+  const hasUnsavedChanges = () =>
+    allChannels.some(channel =>
+      original.has(channel.id) !== selected.has(channel.id) ||
+      originalIgnored.has(channel.id) !== ignored.has(channel.id)
+    );
+
+  const getVisible = () => allChannels.filter(channel => {
+    if (!filter) return true;
+    const haystack = [
+      channel.name,
+      channel.categoryName || "",
+      channel.guildName || "",
+      channel.topic || "",
+    ].join(" ").toLowerCase();
+    return haystack.includes(filter.toLowerCase());
+  });
+
+  const render = () => {
+    const visible = getVisible();
+    const rows = Math.max(8, (process.stdout.rows || 24) - 8);
+    if (cursor >= visible.length) cursor = Math.max(0, visible.length - 1);
+    const start = Math.max(0, Math.min(cursor - Math.floor(rows / 2), Math.max(0, visible.length - rows)));
+    const page = visible.slice(start, start + rows);
+    const unsaved = hasUnsavedChanges();
+
+    console.clear();
+    console.log(`Channel Selector: ${args.source}`);
+    console.log(`Tracked: ${selected.size}/${allChannels.length} | Ignored: ${ignored.size} | Matching: ${visible.length} | Filter: ${filter || "(none)"} | ${unsaved ? "UNSAVED CHANGES" : "saved"}`);
+    console.log("Hotkeys: ↑/↓ move  SPACE track  M ignore  / filter  C clear  S save  Q quit");
+    console.log("Legend:  [x]=tracked  [i]=ignored  [!]=no access");
+    console.log(message);
+    console.log("");
+
+    if (visible.length === 0) {
+      console.log("No channels match the current filter.");
+      return;
+    }
+
+    let lastGuild = "";
+    let lastCategory = "";
+    page.forEach((channel, index) => {
+      const absoluteIndex = start + index;
+      const guildName = channel.guildName || "Unknown Guild";
+      const categoryName = channel.categoryName || "No Category";
+      if (guildName !== lastGuild) {
+        console.log(`${guildName}`);
+        lastGuild = guildName;
+        lastCategory = "";
+      }
+      if (categoryName !== lastCategory) {
+        console.log(`  [${categoryName}]`);
+        lastCategory = categoryName;
+      }
+
+      const pointer = absoluteIndex === cursor ? ">" : " ";
+      const tracked = selected.has(channel.id) ? "x" : " ";
+      const ignoredMarker = ignored.has(channel.id) ? "i" : " ";
+      const unavailable = channel.unavailableReason ? "!" : " ";
+      const velocity = `${channel.currentVelocity.toFixed(1)}`.padStart(5);
+      console.log(` ${pointer} [${tracked}][${ignoredMarker}][${unavailable}] #${channel.name.padEnd(28)} ${velocity} msg/day  ${channel.id}`);
+    });
+  };
+
+  await new Promise<void>((resolve) => {
+    readline.emitKeypressEvents(process.stdin);
+    process.stdin.resume();
+    if (process.stdin.isTTY) {
+      process.stdin.setRawMode(true);
+    }
+
+    const cleanup = () => {
+      process.stdin.off("keypress", onKeypress);
+      if (process.stdin.isTTY) {
+        process.stdin.setRawMode(false);
+      }
+      process.stdin.pause();
+      console.clear();
+      resolve();
+    };
+
+    const save = async () => {
+      const orderedTrackedIds = allChannels.filter(channel => selected.has(channel.id)).map(channel => channel.id);
+      const changedTrackIds = allChannels
+        .filter(channel => original.has(channel.id) !== selected.has(channel.id))
+        .map(channel => channel.id);
+      const changedIgnoredIds = allChannels
+        .filter(channel => originalIgnored.has(channel.id) !== ignored.has(channel.id))
+        .map(channel => channel.id);
+
+      if (changedTrackIds.length === 0 && changedIgnoredIds.length === 0) {
+        message = "No changes to save.";
+        pendingQuitConfirmation = false;
+        render();
+        cleanup();
+        return;
+      }
+
+      let updatedConfigs: string[] = [];
+      let totalTracked = selected.size;
+      if (changedTrackIds.length > 0) {
+        const configUpdate = await applyTrackedSelectionToConfigs(configs, orderedTrackedIds, allChannels);
+        updatedConfigs = configUpdate.updatedConfigs;
+        totalTracked = configUpdate.totalTracked;
+      }
+
+      for (const channel of allChannels) {
+        const shouldTrack = selected.has(channel.id);
+        if (channel.isTracked !== shouldTrack) {
+          await registry.setTracked(channel.id, shouldTrack);
+          channel.isTracked = shouldTrack;
+        }
+        const shouldIgnore = ignored.has(channel.id);
+        if (channel.isMuted !== shouldIgnore) {
+          await registry.setMuted(channel.id, shouldIgnore);
+          channel.isMuted = shouldIgnore;
+        }
+      }
+
+      const parts: string[] = [];
+      if (updatedConfigs.length > 0) {
+        parts.push(`tracked ${totalTracked} channels in ${updatedConfigs.join(", ")}`);
+      }
+      if (changedIgnoredIds.length > 0) {
+        parts.push(`updated ignore state for ${changedIgnoredIds.length} channel(s)`);
+      }
+      message = parts.length > 0 ? `Saved: ${parts.join("; ")}.` : "Saved registry changes.";
+      pendingQuitConfirmation = false;
+      render();
+      cleanup();
+    };
+
+    const onKeypress = async (_str: string, key: readline.Key) => {
+      const visible = getVisible();
+
+      if (key.ctrl && key.name === "c") {
+        if (hasUnsavedChanges() && !pendingQuitConfirmation) {
+          pendingQuitConfirmation = true;
+          message = "Unsaved changes. Press q again to quit without saving, or press s to save.";
+          render();
+        } else {
+          message = "Cancelled.";
+          render();
+          cleanup();
+        }
+        return;
+      }
+
+      if (key.name === "up" || key.name === "k") {
+        pendingQuitConfirmation = false;
+        cursor = Math.max(0, cursor - 1);
+        render();
+        return;
+      }
+
+      if (key.name === "down" || key.name === "j") {
+        pendingQuitConfirmation = false;
+        cursor = Math.min(Math.max(0, visible.length - 1), cursor + 1);
+        render();
+        return;
+      }
+
+      if (key.name === "space") {
+        const channel = visible[cursor];
+        if (channel) {
+          if (selected.has(channel.id)) selected.delete(channel.id);
+          else selected.add(channel.id);
+          pendingQuitConfirmation = false;
+          message = `${selected.has(channel.id) ? "Tracking" : "Untracking"} #${channel.name}`;
+        }
+        render();
+        return;
+      }
+
+      if (key.name === "m") {
+        const channel = visible[cursor];
+        if (channel) {
+          if (ignored.has(channel.id)) ignored.delete(channel.id);
+          else ignored.add(channel.id);
+          pendingQuitConfirmation = false;
+          message = `${ignored.has(channel.id) ? "Ignoring" : "Including"} #${channel.name} in summaries`;
+        }
+        render();
+        return;
+      }
+
+      if (key.name === "c") {
+        filter = "";
+        cursor = 0;
+        pendingQuitConfirmation = false;
+        message = "Filter cleared.";
+        render();
+        return;
+      }
+
+      if (key.name === "q" || key.name === "escape") {
+        if (hasUnsavedChanges() && !pendingQuitConfirmation) {
+          pendingQuitConfirmation = true;
+          message = "Unsaved changes. Press q again to quit without saving, or press s to save.";
+          render();
+        } else {
+          message = hasUnsavedChanges() ? "Cancelled without saving." : "Cancelled.";
+          render();
+          cleanup();
+        }
+        return;
+      }
+
+      if (key.name === "s" || key.name === "return") {
+        pendingQuitConfirmation = false;
+        process.stdin.off("keypress", onKeypress);
+        if (process.stdin.isTTY) {
+          process.stdin.setRawMode(false);
+        }
+        process.stdin.pause();
+        try {
+          await save();
+        } catch (error: any) {
+          message = `Save failed: ${error.message}`;
+          readline.emitKeypressEvents(process.stdin);
+          process.stdin.resume();
+          if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+          }
+          process.stdin.on("keypress", onKeypress);
+          render();
+        }
+        return;
+      }
+
+      if (_str === "/") {
+        process.stdin.off("keypress", onKeypress);
+        if (process.stdin.isTTY) {
+          process.stdin.setRawMode(false);
+        }
+        try {
+          filter = (await promptLine("Filter channels by name/category/guild: ")).trim();
+          cursor = 0;
+          pendingQuitConfirmation = false;
+          message = filter ? `Filter applied: ${filter}` : "Filter cleared.";
+        } finally {
+          readline.emitKeypressEvents(process.stdin);
+          process.stdin.resume();
+          if (process.stdin.isTTY) {
+            process.stdin.setRawMode(true);
+          }
+          process.stdin.on("keypress", onKeypress);
+          render();
+        }
+      }
+    };
+
+    process.stdin.on("keypress", onKeypress);
+    render();
+  });
+
+  const changed = allChannels.filter(channel =>
+    original.has(channel.id) !== channel.isTracked ||
+    originalIgnored.has(channel.id) !== channel.isMuted
+  );
+  if (changed.length > 0) {
+    console.log(`Saved ${changed.length} channel state changes.\n`);
+  }
 }
 
 // ============================================================================
@@ -1287,6 +2385,27 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
 
   try {
     switch (args.command) {
+      case "sync":
+        await commandSync(db, registry, args);
+        break;
+      case "update":
+        await commandUpdate(db, registry, args);
+        break;
+      case "refresh":
+        await commandRefresh(db, registry, args);
+        break;
+      case "mirror":
+        await commandMirror(db, registry, args);
+        break;
+      case "sync-stats": {
+        console.log("Rebuilding channel stats from items table...");
+        const { updated } = await registry.syncStats();
+        console.log(`Done — updated stats for ${updated} channels.`);
+        break;
+      }
+      case "archive":
+        await commandArchive(db, registry, args);
+        break;
       case "discover":
         await commandDiscover(db, args);
         break;
@@ -1308,7 +2427,7 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         }
         break;
       case "stats":
-        await commandStats(registry, args);
+        await commandStats(registry, args, db);
         break;
       case "track":
         if (!args.channelId) {
@@ -1347,6 +2466,9 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         break;
       case "reset-unavailable":
         await commandResetUnavailable(registry, args);
+        break;
+      case "fix-states":
+        await commandFixStates(registry, args);
         break;
       case "help":
       default:

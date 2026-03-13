@@ -150,8 +150,12 @@ npm run historical -- --source=hyperfy-discord.json --after=2024-01-10 --before=
 npm run historical -- --source=discord-raw.json --after=2024-01-15 --output=./output/discord
 npm run historical -- --source=discord-raw.json --before=2024-01-10 --output=./output/discord
 
-# Environment variables for fetch tuning
-CHANNEL_CONCURRENCY=3 npm run historical -- --source=elizaos.json --date=2024-01-15  # parallel channel fetches (default: 2)
+# Mode flags
+npm run historical -- --source=elizaos.json --onlyFetch     # skip AI generation (fetch raw data only)
+npm run historical -- --source=elizaos.json --onlyGenerate  # skip fetching (process existing DB data)
+
+# Environment variables
+CHANNEL_CONCURRENCY=4 npm run historical -- --source=elizaos.json --date=2024-01-15  # parallel channel fetches (default: 2)
 FORCE_OVERWRITE=true npm run historical -- --source=elizaos.json --date=2024-01-15   # refetch existing data
 ```
 
@@ -163,33 +167,90 @@ Use `npm run channels -- reset-unavailable` to clear these flags and retry.
 Unified CLI for Discord channel discovery, tracking, and configuration:
 
 ```bash
-# Discover channels (Discord API, or falls back to raw data if no token)
-npm run channels -- discover
+# Pipeline commands
+npm run channels -- sync [--source=m3org.json]                        # discover → analyze → propose
+npm run channels -- sync --with-fetch [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]  # mirror → discover → analyze → propose
+npm run channels -- mirror [--after=YYYY-MM-DD] [--before=YYYY-MM-DD]  # fetch raw data only (auto-detects date range)
+npm run channels -- archive --after=... --before=... [--source=...]   # generate summaries from existing DB data
 
-# Analyze channels with LLM (TRACK/MAYBE/SKIP recommendations)
-npm run channels -- analyze
+# Individual steps
+npm run channels -- discover   # fetch channels from Discord API (or raw data if no token)
+npm run channels -- analyze    # run LLM analysis (TRACK/MAYBE/SKIP recommendations)
+npm run channels -- propose    # generate PR markdown with config changes
 
-# Generate PR markdown with config changes
-npm run channels -- propose
-
-# Query and manage channels
+# Query
 npm run channels -- list [--tracked|--active|--muted]
 npm run channels -- show <channelId>
 npm run channels -- stats
-npm run channels -- track|untrack|mute|unmute <channelId>
-npm run channels -- reset-unavailable  # Clear unavailability flags
 
-# With media download
-npm run historical -- --source=elizaos.json --download-media --date=2024-01-15
+# Management
+npm run channels -- track|untrack|mute|unmute <channelId>
+npm run channels -- reset-unavailable  # clear unavailability flags
 ```
 
 ## Media Download
+
+Discord media files (images, videos, attachments) can be downloaded locally or to a VPS.
 
 ```bash
 npm run download-media                                    # Today's media
 npm run download-media -- --date=2024-01-15             # Specific date
 npm run download-media -- --start=2024-01-10 --end=2024-01-15  # Date range
 ```
+
+### Generate Manifest Locally
+
+No API calls — reads directly from existing database:
+
+```bash
+# Single date
+npm run generate-manifest -- --db data/elizaos.sqlite --date 2024-12-14 --source elizaos
+
+# Date range (for backfill)
+npm run generate-manifest -- --db data/elizaos.sqlite --start 2024-12-01 --end 2024-12-14 --source elizaos
+
+# Custom output path
+npm run generate-manifest -- --db data/elizaos.sqlite --date 2024-12-14 --source elizaos --manifest-output ./my-manifest.json
+
+# View manifest stats
+cat ./output/elizaos/media-manifest.json | jq '.stats'
+```
+
+Each manifest entry includes: `url`, `filename`, `user_id`, `guild_id`, `channel_id`, `message_id`, `message_content`, `reactions`, `media_type`, `content_type`, `width`, `height`, `size`, `proxy_url`
+
+### VPS Setup
+
+```bash
+# Clone and setup
+git clone https://github.com/M3-org/ai-news.git ~/ai-news-media
+python3 ~/ai-news-media/scripts/media-sync.py setup
+
+# Download media (from gh-pages manifests)
+python3 ~/ai-news-media/scripts/media-sync.py sync --dry-run  # Preview
+python3 ~/ai-news-media/scripts/media-sync.py sync            # Download
+python3 ~/ai-news-media/scripts/media-sync.py sync --min-free 1000  # Stop if <1GB free
+
+# Check status
+python3 ~/ai-news-media/scripts/media-sync.py status
+```
+
+The `setup` command installs a systemd timer that runs daily at 01:30 UTC.
+
+### Download with Fresh URLs
+
+Discord CDN URLs expire after ~24 hours:
+
+```bash
+export DISCORD_TOKEN  # Bot token required
+
+python3 scripts/media-sync.py refresh manifest.json --user USER_ID -o ./user_media
+python3 scripts/media-sync.py refresh manifest.json --user USER_ID --type attachment
+python3 scripts/media-sync.py refresh manifest.json --user USER_ID --dry-run
+```
+
+After GitHub Actions runs, manifests are at:
+- `https://raw.githubusercontent.com/M3-org/ai-news/gh-pages/elizaos/media-manifest.json`
+- `https://raw.githubusercontent.com/M3-org/ai-news/gh-pages/hyperfy/media-manifest.json`
 
 ## CDN Upload
 
@@ -216,15 +277,40 @@ npm run upload-cdn -- --dir ./media/ --remote elizaos-media/ --dry-run
 
 **Automated:** The `media-cdn-upload.yml` workflow runs daily at 7:30 AM UTC to upload media and create CDN-enriched JSON files.
 
-### Workflow
+## Users CLI
+
+Manage Discord user identities across servers:
 
 ```bash
-npm run channels -- discover   # Fetch channels
-npm run channels -- analyze    # Run LLM analysis
-npm run channels -- propose    # Generate PR markdown
+npm run users -- build-registry [--source=elizaos.json]  # build discord_users table from raw logs
+npm run users -- index                                     # build user-index.json
+npm run users -- fetch-avatars [--skip-existing]          # fetch avatar URLs from Discord API
+npm run users -- download-avatars                         # download avatar images locally
+npm run users -- enrich [--all | --date=YYYY-MM-DD]       # enrich daily JSONs with nickname maps
+npm run users -- status                                    # registry statistics
 ```
 
-**GitHub Actions**: Monthly workflow analyzes channels and creates draft PRs with recommendations.
+Both `channels` and `users` CLIs support `--source=<config>.json` to target a specific server.
+
+## Weekly CLI
+
+Generate weekly summary reports:
+
+```bash
+npm run weekly -- generate                        # last 7 days
+npm run weekly -- generate --week-of=2025-01-15  # specific calendar week
+npm run weekly -- generate --ai                   # AI-curated edition
+npm run weekly -- list                            # list available daily files
+```
+
+## Server Setup
+
+```bash
+npm run setup    # interactive onboarding wizard for new Discord servers
+npm run migrate  # apply DB schema migrations to all configured databases
+```
+
+**GitHub Actions**: Monthly workflow analyzes channels and creates draft PRs with recommendations (`npm run channels -- sync`).
 
 ## Server Deployment
 
@@ -273,95 +359,6 @@ npm run webhook
 - No GitHub file size limits for media downloads
 - GitHub Actions provides scheduling and monitoring
 - Simple HTTP-based integration
-
-## Media Download
-
-Discord media files (images, videos, attachments) can be downloaded to a VPS using a manifest-based approach.
-
-### How It Works
-
-1. **GitHub Actions** generates a `media-manifest.json` with URLs during daily runs
-2. **Manifest** is deployed to gh-pages branch
-3. **VPS script** fetches manifest and downloads files
-
-### Generate Manifest Locally
-
-No API calls - reads directly from existing database:
-
-```bash
-# Single date
-npm run generate-manifest -- --db data/elizaos.sqlite --date 2024-12-14 --source elizaos
-
-# Date range (for backfill)
-npm run generate-manifest -- --db data/elizaos.sqlite --start 2024-12-01 --end 2024-12-14 --source elizaos
-
-# Custom output path
-npm run generate-manifest -- --db data/elizaos.sqlite --date 2024-12-14 --source elizaos --manifest-output ./my-manifest.json
-
-# View manifest contents
-cat ./output/elizaos/media-manifest.json | jq '.stats'
-```
-
-### Manifest Contents
-
-Each manifest entry includes full Discord metadata for querying:
-
-```bash
-# Filter by user
-cat manifest.json | jq '.files[] | select(.user_id == "123456789")'
-
-# Only direct attachments (no embeds)
-cat manifest.json | jq '.files[] | select(.media_type == "attachment")'
-
-# Files with reactions
-cat manifest.json | jq '.files[] | select(.reactions != null)'
-
-# Count per user
-cat manifest.json | jq '[.files[].user_id] | group_by(.) | map({user: .[0], count: length}) | sort_by(-.count)'
-```
-
-Fields: `url`, `filename`, `user_id`, `guild_id`, `channel_id`, `message_id`, `message_content`, `reactions`, `media_type`, `content_type`, `width`, `height`, `size`, `proxy_url`
-
-### VPS Setup
-
-```bash
-# Clone and setup
-git clone https://github.com/M3-org/ai-news.git ~/ai-news-media
-python3 ~/ai-news-media/scripts/media-sync.py setup
-
-# Download media (from gh-pages manifests)
-python3 ~/ai-news-media/scripts/media-sync.py sync --dry-run  # Preview
-python3 ~/ai-news-media/scripts/media-sync.py sync            # Download
-python3 ~/ai-news-media/scripts/media-sync.py sync --min-free 1000  # Stop if <1GB free
-
-# Check status (disk usage and media sizes)
-python3 ~/ai-news-media/scripts/media-sync.py status
-```
-
-The `setup` command installs a systemd timer that runs daily at 01:30 UTC.
-
-### Download with Fresh URLs
-
-Discord CDN URLs expire after ~24 hours. Use `refresh` to fetch fresh URLs and download:
-
-```bash
-export DISCORD_TOKEN  # Bot token required
-
-# Download all files for a specific user
-python3 scripts/media-sync.py refresh manifest.json --user USER_ID -o ./user_media
-
-# Only attachments (no embeds/thumbnails)
-python3 scripts/media-sync.py refresh manifest.json --user USER_ID --type attachment
-
-# Preview without downloading
-python3 scripts/media-sync.py refresh manifest.json --user USER_ID --dry-run
-```
-
-### Manifest Location
-
-After GitHub Actions runs, manifests are available at:
-- `https://raw.githubusercontent.com/M3-org/ai-news/gh-pages/elizaos/media-manifest.json`
-- `https://raw.githubusercontent.com/M3-org/ai-news/gh-pages/hyperfy/media-manifest.json`
 
 ## Project Structure
 

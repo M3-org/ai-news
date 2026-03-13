@@ -11,6 +11,7 @@ import { MediaDownloader, generateManifestToFile } from "./download-media";
 import { MediaDownloadCapable } from "./plugins/sources/DiscordRawDataSource";
 import { SummaryEnricher } from "./plugins/enrichers/SummaryEnricher";
 import { logger } from "./helpers/cliHelper";
+import { ProgressDashboard, setActiveProgressDashboard } from "./helpers/progressDashboard";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
@@ -21,7 +22,7 @@ import {
   loadStorage,
   validateConfiguration
 } from "./helpers/configHelper";
-import { addOneDay, parseDate, formatDate, callbackDateRangeLogic } from "./helpers/dateHelper";
+import { callbackDateRangeLogic, collectDateRange } from "./helpers/dateHelper";
 
 dotenv.config({ quiet: true });
 
@@ -30,6 +31,88 @@ dotenv.config({ quiet: true });
  */
 function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable & { name: string } {
   return source && typeof source.hasMediaDownloadEnabled === 'function';
+}
+
+function formatDuration(ms: number): string {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  if (hours > 0) {
+    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function describeMode(onlyFetch: boolean, onlyGenerate: boolean): string {
+  if (onlyGenerate) return "generate-only";
+  if (onlyFetch) return "fetch-only";
+  return "fetch+generate";
+}
+
+function describeDateScope(fetchDates: string[]): string {
+  if (fetchDates.length === 0) return "none";
+  if (fetchDates.length === 1) return fetchDates[0];
+  return `${fetchDates[fetchDates.length - 1]} -> ${fetchDates[0]}`;
+}
+
+function buildFetchHeaderLines(options: {
+  sourceFile: string;
+  mode: string;
+  fetchDates: string[];
+  outputPath: string;
+  currentSource?: string;
+  currentDate?: string;
+  overrideCount: number;
+}): string[] {
+  const lines = [
+    `Config: ${options.sourceFile} | Mode: ${options.mode} | Dates: ${describeDateScope(options.fetchDates)}`,
+    `Output: ${options.outputPath} | Channel override: ${options.overrideCount > 0 ? `${options.overrideCount} channel(s)` : 'none'}`,
+  ];
+
+  if (options.currentSource || options.currentDate) {
+    lines.push(`Current: ${options.currentSource || '-'} @ ${options.currentDate || '-'}`);
+  }
+
+  return lines;
+}
+
+function buildFetchSummary(options: {
+  sourceFile: string;
+  fetchDates: string[];
+  totalJobs: number;
+  completedJobs: number;
+  startedAt: number;
+  stats: Record<string, string>;
+}): string[] {
+  const summary = [
+    "Historical fetch summary",
+    `  config: ${options.sourceFile}`,
+    `  dates: ${describeDateScope(options.fetchDates)}`,
+    `  source-date jobs: ${options.completedJobs}/${options.totalJobs}`,
+    `  elapsed: ${formatDuration(Date.now() - options.startedAt)}`,
+  ];
+
+  const statLabels: Array<[string, string]> = [
+    ["queued", "queued channels"],
+    ["active", "active channels"],
+    ["done", "completed channels"],
+    ["failed", "failed channels"],
+    ["skip_existing", "skipped existing"],
+    ["skip_unavailable", "skipped unavailable"],
+    ["skip_future", "skipped future"],
+    ["items", "stored items"],
+  ];
+
+  for (const [key, label] of statLabels) {
+    if (options.stats[key] !== undefined) {
+      summary.push(`  ${label}: ${options.stats[key]}`);
+    }
+  }
+
+  return summary;
 }
 
 (async () => {
@@ -51,6 +134,8 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let dateStr = today.toISOString().slice(0, 10);
     let onlyFetch = false;
     let onlyGenerate = false;
+    let skipExisting = false;
+    let force = false;
     let downloadMedia = false;
     let generateManifest = false;
     let manifestOutput: string | undefined;
@@ -59,6 +144,7 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let afterDate;
     let duringDate;
     let outputPath = './'; // Default output path
+    let overrideChannels: string[] = [];
 
     if (args.includes('--help') || args.includes('-h')) {
       logger.info(`
@@ -82,6 +168,7 @@ Options:
   --generate-manifest   Generate media manifest JSON for VPS downloads (default: false).
   --manifest-output=<path> Output path for manifest file (default: <output>/media-manifest.json).
   --media-manifest=<path> Path to media manifest for CDN URL enrichment in summaries.
+  --channels=<id1,id2>  Comma-separated channel IDs to override config (archive mode).
   --output=<path>       Output directory path (default: ./)
   -h, --help            Show this help message.
       `);
@@ -128,6 +215,12 @@ Options:
         duringDate = arg.split('=')[1];
       } else if (arg.startsWith('--output=') || arg.startsWith('-o=')) {
         outputPath = arg.split('=')[1];
+      } else if (arg.startsWith('--channels=')) {
+        overrideChannels = arg.split('=')[1].split(',').map(id => id.trim()).filter(Boolean);
+      } else if (arg === '--skip-existing' || arg === '--skip-existing=true') {
+        skipExisting = true;
+      } else if (arg === '-f' || arg === '--force') {
+        force = true;
       }
     });
 
@@ -182,12 +275,24 @@ Options:
     generatorConfigs = await loadStorage(generatorConfigs, storageConfigs);
     
     /**
+     * Override channelIds for all Discord sources if --channels flag is provided (archive mode)
+     */
+    if (overrideChannels.length > 0) {
+      logger.info(`Archive mode: overriding channels to [${overrideChannels.join(', ')}]`);
+      sourceConfigs.forEach(config => {
+        if (config.instance && Array.isArray((config.instance as any).channelIds)) {
+          (config.instance as any).channelIds = overrideChannels;
+        }
+      });
+    }
+
+    /**
      * Override media download settings if --download-media flag is provided
      */
     if (downloadMedia) {
       sourceConfigs.forEach(config => {
         if (config.instance && config.instance.mediaDownload !== undefined) {
-          console.log(`[INFO] Enabling media download for source: ${config.instance.name} (overriding config)`);
+          logger.info(`Enabling media download for source: ${config.instance.name} (overriding config)`);
           config.instance.mediaDownload.enabled = true;
         }
       });
@@ -257,21 +362,113 @@ Options:
     }
       
     /**
+     * Pre-connect sources that support it (e.g. Discord) so they log in once
+     * rather than reconnecting on every date iteration in a range fetch.
+     */
+    for (const config of sourceConfigs) {
+      if (typeof (config.instance as any).connect === 'function') {
+        await (config.instance as any).connect();
+      }
+    }
+
+    // Preload existing CID map for range fetches — replaces per-date DB queries with O(1) lookups
+    if (!onlyGenerate && filter.after && filter.before) {
+      for (const config of sourceConfigs) {
+        if (typeof (config.instance as any).preloadExistingRange === 'function') {
+          logger.info(`Preloading existing data range for ${config.instance.name}...`);
+          await (config.instance as any).preloadExistingRange(filter.after, filter.before);
+        }
+      }
+    }
+
+    /**
      * Fetch historical data based on the date filter
      * If a date range is specified, fetch data for the entire range
      * Otherwise, fetch data for the specific date
      */
     if (!onlyGenerate) {
-      if (filter.filterType || (filter.after && filter.before)) {
+      const fetchDates = filter.filterType || (filter.after && filter.before)
+        ? await collectDateRange(filter)
+        : [dateStr];
+      const totalFetchJobs = sourceConfigs.length * fetchDates.length;
+      const fetchStartedAt = Date.now();
+      let completedFetchJobs = 0;
+      const fetchDashboard = new ProgressDashboard({
+        title: "Historical Fetch Dashboard",
+      });
+
+      setActiveProgressDashboard(fetchDashboard);
+      fetchDashboard.setHeaderLines(buildFetchHeaderLines({
+        sourceFile,
+        mode: describeMode(onlyFetch, onlyGenerate),
+        fetchDates,
+        outputPath,
+        overrideCount: overrideChannels.length,
+      }));
+      fetchDashboard.setOverall({
+        label: "source-date jobs",
+        current: 0,
+        total: totalFetchJobs,
+        detail: totalFetchJobs > 0 ? "waiting to start" : "no fetch jobs",
+      });
+      fetchDashboard.setStats({
+        sources: sourceConfigs.length,
+        dates: fetchDates.length,
+        queued: 0,
+        active: 0,
+        done: 0,
+        failed: 0,
+        skip_existing: 0,
+        skip_unavailable: 0,
+        skip_future: 0,
+        items: 0,
+      });
+
+      try {
         for (const config of sourceConfigs) {
-          await aggregator.fetchAndStoreRange(config.instance.name, filter);
+          for (const fetchDate of fetchDates) {
+            fetchDashboard.clearTasks();
+            fetchDashboard.setHeaderLines(buildFetchHeaderLines({
+              sourceFile,
+              mode: describeMode(onlyFetch, onlyGenerate),
+              fetchDates,
+              outputPath,
+              currentSource: config.instance.name,
+              currentDate: fetchDate,
+              overrideCount: overrideChannels.length,
+            }));
+            fetchDashboard.setOverall({
+              label: "source-date jobs",
+              current: completedFetchJobs,
+              total: totalFetchJobs,
+              detail: `${config.instance.name} @ ${fetchDate}`,
+            });
+
+            await aggregator.fetchAndStore(config.instance.name, fetchDate);
+            completedFetchJobs += 1;
+
+            fetchDashboard.setOverall({
+              label: "source-date jobs",
+              current: completedFetchJobs,
+              total: totalFetchJobs,
+              detail: completedFetchJobs < totalFetchJobs
+                ? `${config.instance.name} @ ${fetchDate}`
+                : "fetch stage complete",
+            });
+          }
         }
-      } else {
-        for (const config of sourceConfigs) {
-          await aggregator.fetchAndStore(config.instance.name, dateStr);
-        }
+        logger.info("Content aggregator is finished fetching historical.");
+      } finally {
+        setActiveProgressDashboard(null);
+        fetchDashboard.finish(buildFetchSummary({
+          sourceFile,
+          fetchDates,
+          totalJobs: totalFetchJobs,
+          completedJobs: completedFetchJobs,
+          startedAt: fetchStartedAt,
+          stats: fetchDashboard.getStatsSnapshot(),
+        }));
       }
-      logger.info("Content aggregator is finished fetching historical.");
     }
     
     /**
@@ -379,7 +576,27 @@ Options:
       if (filter.filterType || (filter.after && filter.before)) {
         for (const generator of generatorConfigs) {
           await generator.instance.storage.init();
-          await callbackDateRangeLogic(filter, (dateStr:string) => generator.instance.generateAndStoreSummary(dateStr));
+          await callbackDateRangeLogic(filter, async (dateStr: string) => {
+            if (skipExisting && !force) {
+              const epochTs = new Date(dateStr).getTime() / 1000;
+              const summaryType = (generator.instance as any).summaryType;
+              if (summaryType) {
+                const storage = generator.instance.storage as any;
+                if (typeof storage.getContentItemsBetweenEpoch === "function") {
+                  const existing = await storage.getContentItemsBetweenEpoch(
+                    epochTs, epochTs + 86400, summaryType
+                  );
+                  if (existing && existing.length > 0) {
+                    logger.info(`Skipping ${dateStr} — summary already exists (use --force to regenerate)`);
+                    return;
+                  }
+                } else {
+                  logger.warning(`Storage for ${generator.instance.constructor.name} does not support skip-existing summary checks; generating ${dateStr}`);
+                }
+              }
+            }
+            await generator.instance.generateAndStoreSummary(dateStr);
+          });
         }
       } else {
         logger.info(`Creating summary for date ${dateStr}`);
@@ -428,7 +645,7 @@ Options:
     });
     process.exit(0);
   } catch (error) {
-    console.error("Error initializing the content aggregator:", error);
+    logger.error(`Error initializing the content aggregator: ${error instanceof Error ? error.message : String(error)}`);
     process.exit(1);
   }
 })();

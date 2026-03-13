@@ -153,6 +153,10 @@ export interface DiscordChannel {
   // User Notes
   notes: string | null;
 
+  // Unavailability
+  unavailableReason?: string | null;
+  unavailableSince?: number | null;
+
   // Timestamps
   createdAt_registry: number;
   updatedAt: number;
@@ -228,6 +232,8 @@ interface DiscordChannelRow {
   aiRecommendation: string | null;
   aiReason: string | null;
   notes: string | null;
+  unavailableReason: string | null;
+  unavailableSince: number | null;
   createdAt_registry: number;
   updatedAt: number;
 }
@@ -586,7 +592,7 @@ export class DiscordChannelRegistry {
       `UPDATE discord_channels
        SET activityHistory = ?,
            currentVelocity = ?,
-           lastActivityAt = ?,
+           lastActivityAt = MAX(COALESCE(lastActivityAt, 0), ?),
            totalMessages = totalMessages + ?,
            updatedAt = ?
        WHERE id = ?`,
@@ -997,8 +1003,79 @@ export class DiscordChannelRegistry {
       aiRecommendation: row.aiRecommendation as AIRecommendation | null,
       aiReason: row.aiReason,
       notes: row.notes,
+      unavailableReason: row.unavailableReason,
+      unavailableSince: row.unavailableSince,
       createdAt_registry: row.createdAt_registry,
       updatedAt: row.updatedAt
     };
+  }
+
+  /**
+   * Rebuild activity stats (lastActivityAt, totalMessages, currentVelocity, activityHistory)
+   * from the items table. Safe to run anytime — does not touch Discord API or raw data.
+   *
+   * Uses metadata.messageCount stored on each discordRawData item, so it's fast even for
+   * large DBs (only needs the metadata column, not the full text payload).
+   */
+  async syncStats(): Promise<{ updated: number }> {
+    // Phase 1: all-time totals and latest fetch date per channel
+    const allStats = await this.db.all<Array<{ ch: string; lastDate: number; total: number }>>(
+      `SELECT
+         substr(cid, 13, length(cid) - 23)                      AS ch,
+         MAX(date)                                               AS lastDate,
+         SUM(CAST(json_extract(metadata, '$.messageCount') AS INTEGER)) AS total
+       FROM items
+       WHERE type = 'discordRawData'
+       GROUP BY substr(cid, 13, length(cid) - 23)`
+    );
+
+    // Phase 2: per-day message counts for last 90 days (for activityHistory + velocity)
+    const cutoff = Math.floor(Date.now() / 1000) - 90 * 86400;
+    const recentRows = await this.db.all<Array<{ ch: string; day: string; cnt: number }>>(
+      `SELECT
+         substr(cid, 13, length(cid) - 23)                       AS ch,
+         substr(cid, length(cid) - 9)                            AS day,
+         CAST(json_extract(metadata, '$.messageCount') AS INTEGER) AS cnt
+       FROM items
+       WHERE type = 'discordRawData' AND date >= ?
+       ORDER BY ch, date DESC`,
+      [cutoff]
+    );
+
+    // Group recent rows by channel
+    const recentByChannel = new Map<string, Array<{ date: string; messageCount: number; velocity: number }>>();
+    for (const row of recentRows) {
+      if (!recentByChannel.has(row.ch)) recentByChannel.set(row.ch, []);
+      recentByChannel.get(row.ch)!.push({ date: row.day, messageCount: row.cnt, velocity: 0 });
+    }
+
+    const now = Math.floor(Date.now() / 1000);
+    let updated = 0;
+
+    for (const stat of allStats) {
+      const history = recentByChannel.get(stat.ch) ?? [];
+
+      // Compute per-entry window velocities
+      for (let i = 0; i < history.length; i++) {
+        const window = history.slice(i, Math.min(i + 7, history.length));
+        history[i].velocity = window.reduce((s, e) => s + e.messageCount, 0) / window.length;
+      }
+
+      const velocity = history.slice(0, 7).reduce((s, e) => s + e.messageCount, 0) / Math.max(history.slice(0, 7).length, 1);
+
+      await this.db.run(
+        `UPDATE discord_channels
+         SET lastActivityAt = ?,
+             totalMessages  = ?,
+             currentVelocity = ?,
+             activityHistory = ?,
+             updatedAt = ?
+         WHERE id = ?`,
+        [stat.lastDate, stat.total, velocity, JSON.stringify(history), now, stat.ch]
+      );
+      updated++;
+    }
+
+    return { updated };
   }
 }

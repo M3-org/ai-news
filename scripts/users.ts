@@ -3,14 +3,14 @@
  *
  * Consolidates all Discord user operations with discord_users table:
  * - index: Build user index from raw logs
- * - fetch-avatars: Fetch avatar URLs from Discord API
+ * - sync-profiles/fetch-avatars: Fetch current Discord profile data
  * - download-avatars: Download avatar images to local storage
  * - build-registry: Build discord_users table from discordRawData
  * - enrich: Enrich daily JSONs with nickname maps from discord_users
  *
  * Usage:
  *   npm run users -- index
- *   npm run users -- fetch-avatars --skip-existing
+ *   npm run users -- sync-profiles --skip-existing
  *   npm run users -- download-avatars --skip-existing
  *   npm run users -- build-registry
  *   npm run users -- enrich --all
@@ -76,6 +76,7 @@ interface CliArgs {
   updateIndex?: boolean;
   source?: string;
   json?: boolean;
+  force?: boolean;
 }
 
 // ============================================================================
@@ -101,6 +102,7 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg === "--update-index") args.updateIndex = true;
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
     else if (arg === "--json") args.json = true;
+    else if (arg === "--force" || arg === "-f") args.force = true;
   }
 
   return args;
@@ -232,8 +234,46 @@ async function commandIndex(db: Database): Promise<void> {
 // Command: fetch-avatars
 // ============================================================================
 
-async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
-  console.log("\n🖼️  Fetching Discord Avatar URLs\n");
+const PROFILE_FRESHNESS_SECONDS = 7 * 24 * 60 * 60;
+
+function isProfileFresh(metadata: any): boolean {
+  const fetchedAt = metadata?.profileFetchedAt;
+  if (typeof fetchedAt !== "number") return false;
+  return fetchedAt >= Math.floor(Date.now() / 1000) - PROFILE_FRESHNESS_SECONDS;
+}
+
+function buildDiscordProfileMetadata(discordUser: any): Record<string, any> {
+  const metadata: Record<string, any> = {
+    profileFetchedAt: Math.floor(Date.now() / 1000),
+    globalName: discordUser.globalName ?? null,
+    discriminator: discordUser.discriminator ?? null,
+    isBot: Boolean(discordUser.bot),
+    isSystem: Boolean(discordUser.system),
+    avatarHash: discordUser.avatar ?? null,
+    bannerHash: discordUser.banner ?? null,
+    accentColor: discordUser.accentColor ?? null,
+    flags: discordUser.flags?.bitfield?.toString?.() ?? null,
+    publicFlags: discordUser.flags?.bitfield?.toString?.() ?? null,
+    avatarDecorationData: discordUser.avatarDecorationData ?? null,
+  };
+
+  const bannerUrl = typeof discordUser.bannerURL === "function"
+    ? discordUser.bannerURL({ size: 512, extension: "png" })
+    : null;
+  if (bannerUrl) metadata.bannerUrl = bannerUrl;
+
+  if ("collectibles" in discordUser && discordUser.collectibles != null) {
+    metadata.collectibles = discordUser.collectibles;
+  }
+  if ("primaryGuild" in discordUser && discordUser.primaryGuild != null) {
+    metadata.primaryGuild = discordUser.primaryGuild;
+  }
+
+  return metadata;
+}
+
+async function commandSyncProfiles(db: Database, args: CliArgs): Promise<void> {
+  console.log("\n👤 Syncing Discord User Profiles\n");
 
   const token = process.env.DISCORD_TOKEN;
   if (!token) {
@@ -246,20 +286,23 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
   await registry.initialize();
 
   // Get users from discord_users table
-  const users = await db.all<Array<{ id: string; username: string; displayName: string; avatarUrl: string | null }>>(
-    `SELECT id, username, displayName, avatarUrl FROM discord_users`
+  const users = await db.all<Array<{ id: string; username: string; displayName: string; avatarUrl: string | null; metadata: string | null }>>(
+    `SELECT id, username, displayName, avatarUrl, metadata FROM discord_users`
   );
   console.log(`📖 Found ${users.length} users\n`);
 
   // Filter users if --skip-existing flag is set
   let usersToFetch = users;
-  if (args.skipExisting) {
-    usersToFetch = users.filter(u => !u.avatarUrl);
-    console.log(`⏭️  Skipping ${users.length - usersToFetch.length} users with existing avatars\n`);
+  if (args.skipExisting && !args.force) {
+    usersToFetch = users.filter(u => {
+      const metadata = u.metadata ? JSON.parse(u.metadata) : null;
+      return !isProfileFresh(metadata);
+    });
+    console.log(`⏭️  Skipping ${users.length - usersToFetch.length} users with fresh profiles\n`);
   }
 
   if (usersToFetch.length === 0) {
-    console.log("✅ All users already have avatars!");
+    console.log("✅ All users already have fresh profiles!");
     return;
   }
 
@@ -268,11 +311,11 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
   console.log("🤖 Connected to Discord!\n");
 
   const rateLimit = args.rateLimit || 100;
-  console.log(`🎨 Fetching avatar URLs (${rateLimit}ms rate limit)...`);
+  console.log(`🎨 Fetching current profile data (${rateLimit}ms rate limit)...`);
   console.log(`⏳ Estimated time: ~${Math.round(usersToFetch.length * rateLimit / 1000 / 60)} minutes\n`);
 
-  let customCount = 0;
-  let defaultCount = 0;
+  let avatarCount = 0;
+  let metadataCount = 0;
   let errorCount = 0;
 
   for (let i = 0; i < usersToFetch.length; i++) {
@@ -283,17 +326,18 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
     }
 
     try {
-      const discordUser = await client.users.fetch(user.id);
+      const discordUser = await client.users.fetch(user.id, { force: true });
       const avatarUrl = discordUser.avatarURL({ size: 256, extension: 'png' }) || discordUser.defaultAvatarURL;
-      const isDefault = !discordUser.avatar;
+      const metadata = buildDiscordProfileMetadata(discordUser);
 
-      // Update discord_users table with avatarUrl
-      await db.run(
-        `UPDATE discord_users SET avatarUrl = ?, updatedAt = ? WHERE id = ?`,
-        [avatarUrl, Math.floor(Date.now() / 1000), user.id]
-      );
+      await registry.updateProfile({
+        userId: user.id,
+        avatarUrl,
+        metadata,
+      });
 
-      isDefault ? defaultCount++ : customCount++;
+      if (avatarUrl) avatarCount++;
+      metadataCount++;
       await new Promise(resolve => setTimeout(resolve, rateLimit));
     } catch (error: any) {
       errorCount++;
@@ -302,11 +346,14 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
       const index = Number((userIdBigInt >> 22n) % 6n);
       const defaultUrl = `https://cdn.discordapp.com/embed/avatars/${index}.png`;
 
-      // Store default avatar
-      await db.run(
-        `UPDATE discord_users SET avatarUrl = ?, updatedAt = ? WHERE id = ?`,
-        [defaultUrl, Math.floor(Date.now() / 1000), user.id]
-      );
+      await registry.updateProfile({
+        userId: user.id,
+        avatarUrl: defaultUrl,
+        metadata: {
+          profileFetchedAt: Math.floor(Date.now() / 1000),
+          fetchError: error.message,
+        }
+      });
 
       if (error.code !== 10013) {
         console.warn(`   ⚠️  Failed to fetch user ${user.id}: ${error.message}`);
@@ -317,9 +364,9 @@ async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
 
   await client.destroy();
 
-  console.log(`\n✅ Fetched ${usersToFetch.length} avatar URLs:`);
-  console.log(`   - ${customCount} custom avatars`);
-  console.log(`   - ${defaultCount} default avatars`);
+  console.log(`\n✅ Synced ${usersToFetch.length} user profiles:`);
+  console.log(`   - ${avatarCount} avatar URLs updated`);
+  console.log(`   - ${metadataCount} metadata records updated`);
   if (errorCount > 0) console.log(`   - ${errorCount} errors`);
 }
 
@@ -731,6 +778,11 @@ async function commandStatus(db: Database, args: CliArgs): Promise<void> {
     SELECT
       COUNT(*) as total_users,
       SUM(CASE WHEN avatarUrl IS NOT NULL THEN 1 ELSE 0 END) as with_avatars,
+      SUM(CASE WHEN metadata IS NOT NULL AND metadata <> '' THEN 1 ELSE 0 END) as with_metadata,
+      SUM(CASE
+        WHEN CAST(json_extract(metadata, '$.profileFetchedAt') AS INTEGER) >= strftime('%s','now') - ${PROFILE_FRESHNESS_SECONDS}
+        THEN 1 ELSE 0
+      END) as fresh_profiles,
       SUM(totalMessages) as total_messages,
       MIN(firstSeen) as earliest_ts,
       MAX(lastSeen) as latest_ts
@@ -744,6 +796,8 @@ async function commandStatus(db: Database, args: CliArgs): Promise<void> {
 
   console.log(`Users: ${stats.total_users}`);
   console.log(`Avatars with URL: ${stats.with_avatars}`);
+  console.log(`Users with profile metadata: ${stats.with_metadata || 0}`);
+  console.log(`Fresh profiles (<7d): ${stats.fresh_profiles || 0}`);
   console.log(`Total messages tracked: ${stats.total_messages || 0}`);
   if (stats.earliest_ts && stats.latest_ts) {
     const first = new Date(Number(stats.earliest_ts) * 1000).toISOString().split("T")[0];
@@ -763,13 +817,14 @@ function commandHelp(): void {
 
 Commands:
   index              Build user-index.json from raw Discord logs
-  fetch-avatars      Fetch avatar URLs from Discord API → discord_users table
-                     Options: --rate-limit=<ms> --skip-existing
+  sync-profiles      Fetch current Discord profile data → discord_users table
+                     Options: --rate-limit=<ms> --skip-existing --force
+  fetch-avatars      Alias for sync-profiles
   download-avatars   Download avatar images to data/discord/avatars/
                      Options: --rate-limit=<ms> --skip-existing
   build-registry     Build discord_users table from discordRawData
                      Options: --dry-run
-  status             Show registry/avatar cache statistics
+  status             Show registry/profile cache statistics
   enrich             Enrich JSON files with nickname maps from discord_users
                      Options: --date=YYYY-MM-DD --from/--to --all --dry-run
 
@@ -781,7 +836,8 @@ Options:
 Examples:
   npm run users -- build-registry --source=m3org.json
   npm run users -- index --source=elizaos.json
-  npm run users -- fetch-avatars --rate-limit=100 --skip-existing
+  npm run users -- sync-profiles --rate-limit=100 --skip-existing
+  npm run users -- fetch-avatars --rate-limit=100 --force
   npm run users -- download-avatars --rate-limit=2000 --skip-existing
   npm run users -- build-registry
   npm run users -- build-registry --dry-run
@@ -793,7 +849,9 @@ Examples:
 Note:
   - User data is stored in discord_users table (see DiscordUserRegistry)
   - Avatar URLs are stored in discord_users.avatarUrl field
+  - Current Discord profile fields are cached in discord_users.metadata
   - build-registry populates discord_users from discordRawData items
+  - sync-profiles enriches discord_users from the live Discord API
   - enrich adds nicknameMap to daily JSON files using discord_users data
   - download-avatars saves images locally (2000ms rate limit recommended)
   `);
@@ -848,8 +906,9 @@ export async function runUsers(argv: string[] = process.argv.slice(2)) {
       case "index":
         await commandIndex(db);
         break;
+      case "sync-profiles":
       case "fetch-avatars":
-        await commandFetchAvatars(db, args);
+        await commandSyncProfiles(db, args);
         break;
       case "build-registry":
         await commandBuildRegistry(db, args);

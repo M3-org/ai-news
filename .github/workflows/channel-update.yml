@@ -1,8 +1,8 @@
-name: Monthly Channel Update
+name: Weekly Channel Update
 
 on:
   schedule:
-    - cron: '0 12 1 * *'  # 1st of each month at noon UTC
+    - cron: '0 12 * * 1'  # Every Monday at noon UTC
   workflow_dispatch:       # Allow manual trigger
 
 jobs:
@@ -70,8 +70,8 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: monthly channel tracking update"
-          title: "Monthly Channel Tracking Update"
+          commit-message: "chore: weekly channel tracking update"
+          title: "Weekly Channel Tracking Update"
           body-path: tmp/proposal.md
           branch: channel-update-${{ github.run_number }}
           draft: true

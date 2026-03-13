@@ -57,6 +57,11 @@ export type ServerStatus = {
   dataRange: { from: string | null; to: string | null; days: number };
   staleDays: number | null;
   users: number;
+  media: {
+    attachments: number;
+    attachmentsWithSize: number;
+    knownBytes: number;
+  };
   files: { raw: number; summaries: number };
 };
 
@@ -135,6 +140,16 @@ function queryInt(dbPath: string, query: string): number {
     return parseInt(out.stdout.trim(), 10) || 0;
   } catch {
     return 0;
+  }
+}
+
+function queryPipeRow(dbPath: string, query: string): string[] {
+  try {
+    const out = spawnSync("sqlite3", [dbPath, query], { encoding: "utf8" });
+    if (out.status !== 0) return [];
+    return out.stdout.trim().split("|");
+  } catch {
+    return [];
   }
 }
 
@@ -284,6 +299,23 @@ function buildServerStatus(configFile: string): ServerStatus {
   const tracked = dbExists ? queryInt(dbPath, "SELECT COUNT(*) FROM discord_channels WHERE isTracked = 1") : 0;
   const muted = dbExists ? queryInt(dbPath, "SELECT COUNT(*) FROM discord_channels WHERE isMuted = 1") : 0;
   const users = dbExists ? queryInt(dbPath, "SELECT COUNT(*) FROM discord_users") : 0;
+  const mediaRow = dbExists ? queryPipeRow(
+    dbPath,
+    `WITH attachment_rows AS (
+       SELECT json_extract(att.value,'$.size') AS size
+       FROM items i,
+            json_each(json_extract(i.text,'$.messages')) AS msg,
+            json_each(COALESCE(json_extract(msg.value,'$.attachments'),'[]')) AS att
+       WHERE i.type='discordRawData'
+     )
+     SELECT COUNT(*),
+            SUM(CASE WHEN size IS NOT NULL THEN 1 ELSE 0 END),
+            COALESCE(SUM(size),0)
+     FROM attachment_rows`
+  ) : [];
+  const attachments = parseInt(mediaRow[0] || "0", 10) || 0;
+  const attachmentsWithSize = parseInt(mediaRow[1] || "0", 10) || 0;
+  const knownBytes = parseInt(mediaRow[2] || "0", 10) || 0;
 
   const range = dbExists ? getDbDateRange(dbPath) : null;
   const from = range?.min || null;
@@ -305,6 +337,7 @@ function buildServerStatus(configFile: string): ServerStatus {
     dataRange: { from, to, days: totalDays },
     staleDays: to ? staleDays(to) : null,
     users,
+    media: { attachments, attachmentsWithSize, knownBytes },
     files: { raw: rawCount, summaries: summaryCount },
   };
 }
@@ -342,12 +375,13 @@ export function runStatusCommand(source?: string, asJson = false): JsonEnvelope<
     console.log(`  Data range: ${s.dataRange.from || "n/a"} to ${s.dataRange.to || "n/a"} (${s.dataRange.days} days)`);
     console.log(`  Stale:      ${s.staleDays ?? "n/a"} day(s)`);
     console.log(`  Users:      ${s.users}`);
+    console.log(`  Media:      ${s.media.attachments} attachments, ${(s.media.knownBytes / 1024 / 1024 / 1024).toFixed(2)} GB known size`);
     console.log(`  Raw output: ${s.files.raw} files`);
     console.log(`  Summaries:  ${s.files.summaries} files\n`);
   } else {
     console.log("\nServer status\n");
     for (const s of statuses) {
-      console.log(`  ${s.name.padEnd(18)} tracked=${String(s.channels.tracked).padStart(4)} users=${String(s.users).padStart(4)} stale=${String(s.staleDays ?? "n/a").padStart(4)}`);
+      console.log(`  ${s.name.padEnd(18)} tracked=${String(s.channels.tracked).padStart(4)} users=${String(s.users).padStart(4)} media=${String(s.media.attachments).padStart(6)} stale=${String(s.staleDays ?? "n/a").padStart(4)}`);
     }
     console.log("");
   }
