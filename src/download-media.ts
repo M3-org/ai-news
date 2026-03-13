@@ -17,12 +17,15 @@ import { writeJsonFile, generateUrlHash, detectActualFileType, getFileTypeDirAsy
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
+import http from "http";
 import https from "https";
 // Constants for network operations
 const DOWNLOAD_TIMEOUT_MS = 30000; // 30 seconds
 const MAX_RETRY_ATTEMPTS = 3;
 const RETRY_DELAY_BASE_MS = 1000; // Base delay for exponential backoff
 const DEFAULT_RATE_LIMIT_MS = 500; // Increased default rate limit between downloads (was 100ms)
+const DOWNLOAD_CHUNK_SIZE = 250;
+const MAX_REDIRECTS = 5;
 const USER_AGENT = process.env.DISCORD_USER_AGENT || 'DiscordBot (media-downloader, 1.0)'; // Configurable via env var
 
 
@@ -71,6 +74,14 @@ interface DailyMediaMetadata {
   totalSize: number;
 }
 
+interface MediaDownloadRunLog {
+  startedAt: string;
+  finishedAt: string;
+  outputDir: string;
+  stats: DownloadStats;
+  analytics?: MediaAnalytics;
+}
+
 class MediaDownloader {
   private storage: SQLiteStorage;
   private baseDir: string;
@@ -79,6 +90,8 @@ class MediaDownloader {
   private dailyReferences: MediaReference[] = [];
   private config: MediaDownloadConfig;
   private rateLimiter: DiscordRateLimiter;
+  private startedAt: string;
+  private closed = false;
   private analytics: MediaAnalytics = {
     totalFilesByType: {},
     averageFileSizeByType: {},
@@ -95,6 +108,7 @@ class MediaDownloader {
     this.storage = new SQLiteStorage({ name: 'media-downloader', dbPath });
     this.baseDir = baseDir;
     this.rateLimiter = new DiscordRateLimiter();
+    this.startedAt = new Date().toISOString();
     this.config = {
       enabled: true,
       maxFileSize: 52428800, // 50MB default
@@ -119,6 +133,7 @@ class MediaDownloader {
     await this.storage.init();
     await this.loadMediaIndex();
     await this.ensureDirectoryStructure();
+    await this.saveRunLog(false);
     logger.info('Media downloader initialized');
   }
 
@@ -182,6 +197,33 @@ class MediaDownloader {
     
     // Clear daily references for next batch
     this.dailyReferences = [];
+  }
+
+  /**
+   * Save a durable per-run log, including all recorded failures.
+   */
+  private async saveRunLog(final: boolean = false): Promise<void> {
+    const finishedAt = new Date().toISOString();
+    const safeTimestamp = finishedAt.replace(/[:.]/g, '-');
+    const runLog: MediaDownloadRunLog = {
+      startedAt: this.startedAt,
+      finishedAt,
+      outputDir: this.baseDir,
+      stats: {
+        ...this.stats,
+        errors: [...this.stats.errors],
+      },
+      analytics: Object.keys(this.analytics.totalFilesByType).length > 0 ? this.analytics : undefined,
+    };
+
+    const latestPath = path.join(this.baseDir, 'run-latest.json');
+    const runPath = path.join(this.baseDir, `run-${safeTimestamp}.json`);
+
+    fs.writeFileSync(latestPath, JSON.stringify(runLog, null, 2));
+    if (final) {
+      fs.writeFileSync(runPath, JSON.stringify(runLog, null, 2));
+      logger.info(`Saved run log to ${path.relative(process.cwd(), runPath)}`);
+    }
   }
 
   /**
@@ -759,7 +801,12 @@ class MediaDownloader {
   /**
    * Single attempt to download a media file
    */
-  private async downloadMediaAttempt(mediaItem: MediaDownloadItem, attempt: number, maxRetries: number = MAX_RETRY_ATTEMPTS): Promise<boolean> {
+  private async downloadMediaAttempt(
+    mediaItem: MediaDownloadItem,
+    attempt: number,
+    maxRetries: number = MAX_RETRY_ATTEMPTS,
+    redirectCount: number = 0
+  ): Promise<boolean> {
     const attachment = mediaItem.originalData as DiscordAttachment;
 
     // Normalize URL to strip expiring params for consistent hashing
@@ -844,22 +891,64 @@ class MediaDownloader {
           'Accept': '*/*'
         }
       };
-      
-      const request = https.get(mediaItem.url, options, (response) => {
+
+      let requestUrl: URL;
+      try {
+        requestUrl = new URL(mediaItem.url);
+      } catch (err) {
+        clearTimeout(timeout);
+        const errorMsg = `Invalid URL for ${mediaItem.filename}: ${mediaItem.url}`;
+        this.stats.failed++;
+        this.stats.errors.push(errorMsg);
+        logger.error(errorMsg);
+        file.close();
+        try { fs.unlinkSync(filePath); } catch (e) {}
+        resolve(false);
+        return;
+      }
+
+      const client = requestUrl.protocol === 'http:' ? http : https;
+      const request = client.get(requestUrl, options, (response) => {
         if (hasTimedOut) return;
         
         // Handle redirects
-        if (response.statusCode === 301 || response.statusCode === 302) {
+        if ([301, 302, 303, 307, 308].includes(response.statusCode || 0)) {
           clearTimeout(timeout);
+          response.resume();
           file.close();
           try { fs.unlinkSync(filePath); } catch (e) {}
-          
-          const redirectUrl = response.headers.location;
-          if (redirectUrl) {
+
+          if (redirectCount >= MAX_REDIRECTS) {
+            const errorMsg = `Too many redirects for ${mediaItem.url}`;
+            this.stats.failed++;
+            this.stats.errors.push(errorMsg);
+            logger.error(errorMsg);
+            resolve(false);
+            return;
+          }
+
+          const location = response.headers.location;
+          if (!location) {
+            const errorMsg = `Redirect without location for ${mediaItem.url}`;
+            this.stats.failed++;
+            this.stats.errors.push(errorMsg);
+            logger.error(errorMsg);
+            resolve(false);
+            return;
+          }
+
+          try {
+            const redirectUrl = new URL(location, requestUrl).toString();
             logger.debug(`Following redirect for ${mediaItem.filename}`);
-            // Create new media item with redirect URL
             const redirectMediaItem = { ...mediaItem, url: redirectUrl };
-            this.downloadMediaAttempt(redirectMediaItem, attempt).then(resolve);
+            this.downloadMediaAttempt(redirectMediaItem, attempt, maxRetries, redirectCount + 1).then(resolve);
+            return;
+          } catch (err) {
+            const errorMsg = `Invalid redirect URL for ${mediaItem.url}: ${location}`;
+            this.stats.failed++;
+            this.stats.errors.push(errorMsg);
+            logger.error(errorMsg);
+            resolve(false);
             return;
           }
         }
@@ -1017,22 +1106,6 @@ class MediaDownloader {
     this.stats.total = allMediaItems.length;
     logger.info(`Found ${allMediaItems.length} media items to download`);
 
-    // Pre-refresh Discord URLs (they expire after ~24hrs)
-    const discordItems = allMediaItems.filter(item => isDiscordUrl(item.url));
-    if (discordItems.length > 0 && process.env.DISCORD_TOKEN) {
-      logger.info(`\n🔄 Pre-refreshing ${discordItems.length} Discord URLs...`);
-      await this.refreshManifestUrls(discordItems);
-
-      // Apply refreshed URLs to items
-      for (const item of allMediaItems) {
-        const freshUrl = this.urlRefreshCache.get(item.url);
-        if (freshUrl) {
-          item.url = freshUrl;
-        }
-      }
-      logger.info(`✅ Refreshed ${this.urlRefreshCache.size} URLs\n`);
-    }
-
     // Download media with improved rate limiting and concurrency
     await this.downloadMediaConcurrently(allMediaItems);
     
@@ -1053,29 +1126,50 @@ class MediaDownloader {
   private async downloadMediaConcurrently(allMediaItems: MediaDownloadItem[]): Promise<void> {
     let processed = 0;
     const progressInterval = Math.max(1, Math.floor(allMediaItems.length / 20)); // Show progress every 5%
+    const totalChunks = Math.max(1, Math.ceil(allMediaItems.length / DOWNLOAD_CHUNK_SIZE));
 
-    // Create download promises using rate limiter
-    const downloadPromises = allMediaItems.map((mediaItem) => {
-      return this.rateLimiter.enqueue(async () => {
-        try {
-          await this.downloadMedia(mediaItem);
-          processed++;
+    for (let i = 0; i < allMediaItems.length; i += DOWNLOAD_CHUNK_SIZE) {
+      const chunk = allMediaItems.slice(i, i + DOWNLOAD_CHUNK_SIZE);
+      const chunkNumber = Math.floor(i / DOWNLOAD_CHUNK_SIZE) + 1;
 
-          // Show progress periodically
-          if (processed % progressInterval === 0 || processed === allMediaItems.length) {
-            const percentage = Math.round((processed / allMediaItems.length) * 100);
-            logger.info(`Progress: ${processed}/${allMediaItems.length} (${percentage}%)`);
+      if (process.env.DISCORD_TOKEN) {
+        const discordItems = chunk.filter(item => isDiscordUrl(item.url));
+        if (discordItems.length > 0) {
+          logger.info(`\n🔄 Refreshing Discord URLs for chunk ${chunkNumber}/${totalChunks} (${discordItems.length} URLs)...`);
+          await this.refreshManifestUrls(discordItems);
+
+          for (const item of chunk) {
+            const freshUrl = this.urlRefreshCache.get(item.url);
+            if (freshUrl) {
+              item.url = freshUrl;
+            }
           }
-        } catch (error) {
-          logger.debug(`Failed to download ${mediaItem.url}: ${error}`);
-          this.stats.failed++;
-          this.stats.errors.push(`${mediaItem.url}: ${error}`);
         }
-      });
-    });
+      }
 
-    // Wait for all downloads to complete
-    await Promise.all(downloadPromises);
+      logger.info(`Downloading chunk ${chunkNumber}/${totalChunks} (${chunk.length} items)...`);
+
+      const downloadPromises = chunk.map((mediaItem) => {
+        return this.rateLimiter.enqueue(async () => {
+          try {
+            await this.downloadMedia(mediaItem);
+            processed++;
+
+            if (processed % progressInterval === 0 || processed === allMediaItems.length) {
+              const percentage = Math.round((processed / allMediaItems.length) * 100);
+              logger.info(`Progress: ${processed}/${allMediaItems.length} (${percentage}%)`);
+            }
+          } catch (error) {
+            logger.debug(`Failed to download ${mediaItem.url}: ${error}`);
+            this.stats.failed++;
+            this.stats.errors.push(`${mediaItem.url}: ${error}`);
+          }
+        });
+      });
+
+      await Promise.all(downloadPromises);
+      await this.saveRunLog(false);
+    }
   }
 
   /**
@@ -1299,6 +1393,9 @@ class MediaDownloader {
   }
 
   async close(): Promise<void> {
+    if (this.closed) return;
+    this.closed = true;
+    await this.saveRunLog(true);
     await this.saveMediaIndex();
     await this.storage.close();
   }
@@ -1480,6 +1577,21 @@ File Naming:
   try {
     const downloader = new MediaDownloader(dbPath, outputDir, { enabled: true, organizeBy });
     await downloader.init();
+
+    let shuttingDown = false;
+    const handleSignal = async (signal: NodeJS.Signals) => {
+      if (shuttingDown) return;
+      shuttingDown = true;
+      logger.warning(`Received ${signal}, flushing media download state before exit...`);
+      try {
+        await downloader.close();
+      } finally {
+        process.exit(130);
+      }
+    };
+
+    process.once('SIGINT', () => { void handleSignal('SIGINT'); });
+    process.once('SIGTERM', () => { void handleSignal('SIGTERM'); });
 
     // Manifest generation mode
     if (generateManifest) {
