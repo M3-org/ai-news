@@ -1,0 +1,25 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-03-13",
+  "date": 1773360000,
+  "stats": {
+    "totalMessages": 48,
+    "totalUsers": 11
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "# Discord Chat Analysis - 💬-discussion\n\n## 1. Summary\n\nThis chat segment contains minimal technical discussion. The primary substantive exchange involved a migration question regarding AI16Z to elizaOS tokens. User \"abz\" inquired about migrating their AI16Z tokens to elizaOS after missing the migration window. User \"sb\" confirmed that the migration period has closed and warned about potential scams when \"abz\" asked if migration was still possible. \n\nThere was a brief off-topic mention about Solana that was redirected by Odilitime to another channel. Biazs made comments about numbers and rankings that lacked sufficient context to determine the technical subject matter. The conversation was largely fragmented with social interactions and link sharing rather than focused technical problem-solving.\n\nNo concrete technical solutions, implementations, or development decisions were discussed in this segment.\n\n## 2. FAQ\n\nQ: I have not migrated my AI16Z to elizaOS. Please help my migration. (asked by abz) A: Migration is closed (answered by sb)\n\nQ: Is it impossible for now? (asked by abz) A: Warned about scams, implying no legitimate migration path exists (answered by sb)\n\n## 3. Help Interactions\n\nHelper: sb | Helpee: abz | Context: User missed AI16Z to elizaOS token migration deadline | Resolution: Informed that migration window is closed and warned about potential scams\n\n## 4. Action Items\n\nNone identified.",
+      "messageCount": 12,
+      "userCount": 6
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "Cron triggers agent wake-up",
+      "messageCount": 36,
+      "userCount": 6
+    }
+  ]
+}
