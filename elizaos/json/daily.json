@@ -1,46 +1,33 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-14",
-  "categories": {
-    "title": "ElizaOS Community Updates: OpenClaw Adoption, New Plugins, and Development Tools",
-    "content": [
-      {
-        "text": "OpenClaw is experiencing significant adoption in China, with Apple Mac Mini units selling out across the country. The trend, dubbed 'raising a lobster' in reference to OpenClaw's mascot, has led to hardware shortages as users purchase dedicated computers to run the AI tool. Industry experts note that OpenClaw's design works best on dedicated hardware. Hong Kong-listed companies MiniMax and Zhipu AI saw share surges after launching OpenClaw tools. Community members discussed the significance of this adoption, noting that when users buy new hardware specifically to run an AI tool, it demonstrates genuine product-market fit beyond typical AI hype cycles.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/image_910c6059.png",
-          "https://cdn.elizaos.news/elizaos-media/content_1abc91af.png"
-        ]
-      },
-      {
-        "text": "A developer named ElizaBAO announced work on Milady Prediction, a prediction market integration built with multiple resources including dflow with Kalshi, Jupiter with Polymarket, predictdotfun, and limitless. The project aims to combine prediction markets with AI agents, which community members noted is underrated compared to entertainment and social agents. The discussion highlighted that agents aggregating real-world data from platforms like Kalshi and Polymarket and executing on-chain based on probabilities represent actual utility. Questions were raised about prediction accuracy thresholds for the Milady project.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1773537346027-nv72kp.png"
-      },
-      {
-        "text": "Community members discussed the ai16z to elizaOS migration, which occurred at a 1 to 6 ratio. Questions were raised about what percentage of ai16z coins successfully migrated and what would happen to elizaOS coins belonging to holders who did not complete the migration. Odilitime clarified that Milady tokens serve as meme currency, with trading fees supporting development.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1773537366089-2o74s.jpg"
-      },
-      {
-        "text": "A developer from Poland introduced x402Guard, a non-custodial security proxy for AI agents operating in DeFi. The project addresses the security concern that elizaOS agents have wallet access and can execute transactions without enforcement layers. x402Guard sits between the agent and the blockchain, enforcing spend limits, contract whitelists, and session keys using EIP-7702. The solution is non-custodial and currently supports Base and Solana. Written in Rust, it is planned for release as an open-source elizaOS plugin within a few weeks.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
-      },
-      {
-        "text": "A new elizaOS plugin was released that enables agents to create memes using Memelord.com. The plugin was demonstrated with an example from Memelordicus. The GitHub repository is available at NewSoulOnTheBlock/plugin-memelord.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/plugin-memelord_daa3e43b.jpg",
-          "https://cdn.elizaos.news/elizaos-media/embed-image-1482404498558157045_2b177a7f.jpg"
-        ]
-      },
-      {
-        "text": "Community discussion touched on the future of software development with AI coding agents. Odilitime emphasized that while software is becoming commoditized, the ability to polish a product before others use it remains valuable, and doing so as a team is 10 times faster than working solo. A developer announced implementing skill.md files for agent discovery at lightningprox.com and solanaprox.com, and launched Workflows-as-a-Service on AIProx, which allows chaining agents into scheduled pipelines with pay-per-execution and full receipts.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": "https://benedict.dev/closing-the-software-loop/opengraph-image?8ab9719f4c9adab1"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1773446400
+  "title": "Daily Report - 2026-03-15",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussions - March 15, 2026",
+      "content": [
+        {
+          "text": "Community members engaged in casual conversation in the discussion channel. Topics included questions about milady tokens, humorous exchanges about Inhumane Resources accepting corporate bribes, and a discussion about unbanning user 33coded. Odilitime asked who else needed to be unbanned and later confirmed the unban. Members also discussed market conditions, with one user noting that BTC was up while ElizaOS was down, questioning whether market conditions were still being blamed. Another user asked if Eliza could be used to develop Solana dApps.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/289glLCgxIQAAAAe/dumping-trash-daniel-labelle.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/289glLCgxIQAAAPo/dumping-trash-daniel-labelle.mp4"
+          ]
+        },
+        {
+          "text": "In the coders channel, agenticcaesar and Odilitime discussed the shift from code-focused to polish-focused development for autonomous agents. The conversation emphasized that the main challenge is no longer whether AI can write code, but whether users will trust it to run their business. Key adoption barriers identified include UI trust signals, error handling, context persistence, and bilingual polish. The discussion highlighted that winning agents will be those humans feel safe turning on and walking away from. A detailed technical discussion followed about x402Guard, an infrastructure layer for DeFi agents that handles transaction security. The system evaluates transactions per-step rather than full chain, with layered limits including permanent guardrail rules per agent, temporary session keys, and specific daily caps and contract whitelists. For example, a treasury agent could be set with a 500 dollar daily limit and allowed contracts list, physically preventing it from exceeding those parameters.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1773532800
 }
