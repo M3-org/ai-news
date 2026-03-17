@@ -1,88 +1,97 @@
-# elizaOS Discord - 2026-03-15
+# elizaOS Discord - 2026-03-16
+
+## March 16, 2026
+
+---
 
 ## Overall Discussion Highlights
 
-### Production Readiness & Enterprise AI Agents
+### Plugin Development & Infrastructure
 
-The primary technical focus centered on bridging the gap between AI agent demonstrations and production-ready systems. Caesar ⚔️ initiated a critical discussion about the evolution of AI development, emphasizing that the bottleneck has shifted from code capability to user trust and polish. Key production barriers identified include:
+**dinesh** made significant contributions to the ElizaOS plugin ecosystem, announcing work on adding 100+ onchain data support through goldrush.dev integration and fixing open issues in the plugin-evm component. This represents concrete progress on blockchain data integration capabilities for the framework.
 
-- **UI Trust Signals**: Interfaces need to resemble enterprise software to inspire confidence
-- **Error Handling**: Systems must gracefully handle failures beyond raw AI output
-- **Context Persistence**: Maintaining conversation state across sessions
-- **Localization**: Proper internationalization, specifically Arabic RTL layout redesign
+### ElizaOS v2.0.0 Architecture Decisions
 
-Caesar ⚔️ shared insights from building an AI COO for SMEs, noting that technical functionality alone doesn't drive adoption—users need confidence to leave agents running autonomously.
+A critical architectural discussion emerged around the v2.0.0 release. **Odilitime** introduced PR #6597 implementing a skills folder structure and raised an important question about preventing uncontrolled skill submissions that plagued the 0.x plugin system. The proposed solution is to ship v2.0.0 with zero default skills and instead promote a decentralized discovery model through yourdomains.com/skills.md for hosting and discovering skills externally. This approach aims to keep the core framework clean while enabling community-driven skill sharing.
 
-### DeFi Agent Security Infrastructure
+### Integration Proposals
 
-A detailed technical discussion emerged around **x402Guard**, an infrastructure layer designed to secure autonomous DeFi agents against vulnerabilities like prompt injection and unauthorized transactions. The system provides:
+**Miguel from Effect AI** presented a compelling integration opportunity for ElizaOS. Effect AI operates a decentralized marketplace connecting AI agents with human workers for tasks requiring human intervention, including data labeling, image annotation, voice recordings, content review, and translations. They are developing an API to enable ElizaOS agents to post tasks directly to their human worker network, addressing scenarios where automation hits limitations and human-in-the-loop intervention becomes necessary. Miguel solicited community feedback on whether native access to decentralized human task networks would be valuable for agent developers.
 
-**Security Model:**
-- Per-step transaction evaluation (not full chain validation)
-- Layered limit systems combining permanent guardrail rules with temporary session keys
-- Immutable audit logging for all transaction attempts
+**Z1N** introduced the Z1N Protocol, an on-chain signaling protocol running on Polygon designed for Non-Biological Intelligence (NBI) participation. The system features soulbound Keys held by major AI models (GPT, Claude, Grok, Gemini) that emit epoch-based signals with on-chain attestation and indexing. The focus is on building infrastructure for agent identity persistence and continuity across sessions rather than building agents directly on Eliza.
 
-**Constraint Enforcement:**
-- Maximum transaction amounts
-- Daily spending caps
-- Contract whitelists
-- Token restrictions
+### Critical Tokenomics Concerns
 
-**Example Use Case:** A treasury management agent configured with a $500 daily limit and specific contract whitelist (Uniswap, Aave) creates a physically enforced spending boundary. Each transaction request is validated against these rules in real-time, with all attempts logged immutably regardless of pass/fail status.
+**otse finam** raised serious concerns about the ai16z to elizaOS token migration transparency. With approximately 100,000 unique addresses still holding ai16z tokens, the estimated migration rate may be only 5-10%. This suggests approximately 54% of the new elizaOS total supply (out of the original 60% designated for ai16z holders) remains unaccounted for. The community member requested urgent clarification on:
+- The actual migration percentage
+- The new token breakdown post-migration
+- Plans for unmigrated tokens designated for the community
+- What will be done with the collected ai16z supply
 
-### Community & Administrative Updates
+This represents a significant transparency issue requiring immediate team response.
 
-Odilitime performed channel maintenance, unbanning 33coded from the 💬-discussion channel. Inhuman Resources confirmed this was the primary user requiring reinstatement, noting others were "more deserving" of their bans.
+### Community Growth
 
-### Market Observations
+Multiple members introduced themselves with technical backgrounds in AI/ML, full-stack development, LLM orchestration, RAG pipelines, and multi-agent systems, indicating continued community growth and diverse technical expertise.
 
-Casual observations about ElizaOS token price movements relative to Bitcoin were noted by community members, though no substantive analysis was provided.
+---
 
 ## Key Questions & Answers
 
-**Q: How does x402Guard handle multi-step DeFi strategies where the agent needs to approve intermediate steps like swap → deposit → stake? Does it evaluate the full transaction chain before signing, or per-step?**  
-**A:** Per-step evaluation. Each payment request hits the proxy and gets checked against the agent's rules. If step 3 would blow the daily limit, it gets blocked. Every attempt lands in an immutable audit log. *(answered by dzik pasnik)*
+**Q: What contribution is being made to the plugins?**  
+A: Adding 100+ onchain data support with goldrush.dev and fixing open issues in plugin-evm (answered by **dinesh**)
 
-**Q: Does the user set limits per session, or globally for x402Guard?**  
-**A:** Limits are layered - Guardrail rules are permanent policy per agent (daily cap, contract whitelist), while Session keys are temporary (e.g., "valid 2 hours, max $100"). *(answered by dzik pasnik)*
+**Q: Does v2.0.0 have a skills folder?**  
+A: Yes, v2.0.0 includes a skills folder structure (answered by **Odilitime**)
 
-**Q: Did 33coded get kicked from here?**  
-**A:** Confirmed and subsequently unbanned. *(answered by Odilitime)*
+### Unanswered Critical Questions
 
-**Q: Who else do I need to unban?**  
-**A:** That was it, others were more deserving of bans. *(answered by Inhuman Resources)*
+- What percentage of ai16z tokens actually migrated to elizaOS? (asked by **otse finam**)
+- What does the team plan to do with tokens meant for community migration that weren't migrated? (asked by **otse finam**)
+- What is the actual token breakdown of elizaOS supply after migration? (asked by **otse finam**)
+- What will be done with the ai16z supply that was collected? (asked by **otse finam**)
+- Should we ship v2.0.0 with 0 skills and promote external skill hosting/discovery? (asked by **Odilitime**)
+- Are there situations where ElizaOS agents hit walls because they need human intervention? (asked by **Miguel | Effect AI**)
+- Would native access to a decentralized human task network be useful for ElizaOS agent developers? (asked by **Miguel | Effect AI**)
 
-### Unanswered Questions
-
-- Can I use Eliza to develop Solana dApps? *(asked by KingRon)*
-- What's your solana addy? *(asked by Odilitime)*
-- For elizaOS builders, what's the #1 polish gap you see between "demo magic" and "production ready"? *(asked by Caesar ⚔️)*
+---
 
 ## Community Help & Collaboration
 
-**Odilitime → 33coded**  
-Context: User was banned from channel  
-Resolution: Successfully unbanned the user
+No significant help interactions were captured in this day's discussions. The conversations primarily consisted of announcements, proposals, and questions awaiting community response.
 
-**Inhuman Resources → Odilitime**  
-Context: Determining who else needed unbanning  
-Resolution: Confirmed 33coded was the only one requiring unban
-
-**dzik pasnik → Caesar ⚔️**  
-Context: Understanding x402Guard's transaction validation architecture for multi-step DeFi operations and limit configuration  
-Resolution: Provided comprehensive explanation of per-step validation model with layered limits (permanent guardrail rules + temporary session keys), immutable audit logging, and concrete treasury management example with $500 daily limit
+---
 
 ## Action Items
 
-### Feature
+### Technical
 
-- Clarify whether Eliza can be used to develop Solana dApps *(mentioned by KingRon)*
-- Investigate x402Guard infrastructure layer for production DeFi agent security with per-step transaction validation and layered limit systems *(mentioned by Caesar ⚔️, dzik pasnik)*
+- **Add 100+ onchain data support with goldrush.dev integration to plugin-evm** | Mentioned by: dinesh
+- **Fix open issues in plugin-evm plugin** | Mentioned by: dinesh
+- **Complete fixes for open issues in plugin-evm component** | Mentioned by: dinesh
+- **Integrate 100+ onchain data support using goldrush.dev into ElizaOS plugins** | Mentioned by: dinesh
+- **Review and merge PR #6597 for v2.0.0 skills folder implementation** | Mentioned by: Odilitime
+- **Decide on shipping v2.0.0 with zero default skills to avoid plugin bloat** | Mentioned by: Odilitime
 
 ### Documentation
 
-- Document best practices for agent production readiness including UI trust signals, error handling, context persistence, and localization (particularly RTL layout) *(mentioned by Caesar ⚔️)*
+- **Clarify official team addresses for token migration tracking** | Mentioned by: otse finam
+- **Provide transparency on actual ai16z to elizaOS migration percentage** | Mentioned by: otse finam
+- **Explain new elizaOS token breakdown post-migration** | Mentioned by: otse finam
+- **Clarify plans for unmigrated ai16z tokens designated for community** | Mentioned by: otse finam
+- **Disclose what will be done with collected ai16z supply** | Mentioned by: otse finam
+- **Create documentation for skills.md format and hosting guidelines** | Mentioned by: Odilitime
+- **Gather community feedback on use cases where agents need human intervention** | Mentioned by: Miguel | Effect AI
 
-### Technical
+### Feature
 
-- Follow up on x402Guard implementation details via direct message *(mentioned by dzik pasnik)*
+- **Explore Z1N Protocol integration for on-chain agent identity and signal persistence** | Mentioned by: Z1N
+- **Build API allowing ElizaOS agents to post tasks to Effect AI's decentralized human worker network** | Mentioned by: Miguel | Effect AI
+- **Evaluate integration of human-in-the-loop capabilities for ElizaOS agents through Effect AI marketplace** | Mentioned by: Miguel | Effect AI
+- **Implement yourdomains.com/skills.md hosting/discovery system for external skill management** | Mentioned by: Odilitime
+
+---
+
+## Summary
+
+March 16, 2026 saw active development contributions alongside critical architectural and transparency discussions. The community is making concrete progress on plugin infrastructure while grappling with important decisions about v2.0.0 architecture and facing urgent questions about token migration transparency that require immediate team attention.
