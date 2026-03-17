@@ -1,50 +1,34 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-03-16",
-  "categories": [
-    {
-      "title": "ElizaOS Community Updates - March 16, 2026",
-      "content": [
-        {
-          "text": "Community members are actively contributing to ElizaOS plugins and infrastructure. Dinesh announced adding 100+ onchain data support with goldrush.dev and fixing open issues in plugin-evm. Multiple developers introduced themselves offering AI and full-stack development services, including expertise in LLM orchestration, RAG pipelines, multi-agent systems, and workflow automation. The community includes specialists in various areas from mobile development to multimodal AI systems.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HDXx-S1W4AA9V2e.jpg:large"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Effect AI team is exploring integration opportunities with ElizaOS. They operate a decentralized marketplace where human workers complete tasks like data labeling, image annotation, voice recordings, and content review, getting paid on-chain. They are building an API that would allow ElizaOS agents to post tasks directly to their human worker network, aiming to fill the gap where AI agents need human-in-the-loop capabilities for tasks requiring human judgment.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Significant concerns were raised about the token migration process. A community member noted that close to 100 thousand unique addresses still hold ai16z tokens, suggesting only 5-10% of tokens may have migrated. They requested clarity on the percentage of migrated tokens and what the team plans to do with the unmigrated supply, noting that approximately 54% of the new elizaOS total supply may be unaccounted for from the original 60% designated for ai16z holders.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Odilitime announced a runtime refactor pull request for version 2.0.0, which includes a skills folder. The team is addressing the challenge of managing community-contributed skills, similar to the 0.x plugin problem. The proposed solution is to ship with zero default skills and promote hosting and discovery through individual domains hosting skills.md files. The team is seeking community feedback on this approach.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/b4619753299495860031b14342fe3ee3e9d8ed047494f22df09ea51cfb1cd5e5/elizaOS/eliza/pull/6597"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Updates - March 16, 2026",
+    "content": [
+      {
+        "text": "Community members are actively contributing to ElizaOS plugins and infrastructure. Dinesh announced adding 100+ onchain data support with goldrush.dev and fixing open issues in plugin-evm. Multiple developers introduced themselves offering AI and full-stack development services, including expertise in LLM orchestration, RAG pipelines, multi-agent systems, and workflow automation. The community includes specialists in various areas from mobile development to multimodal AI systems.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1482926039419064495_b2fdebc5.jpg"
+      },
+      {
+        "text": "Effect AI team is exploring integration opportunities with ElizaOS. They operate a decentralized marketplace where human workers complete tasks like data labeling, image annotation, voice recordings, and content review, getting paid on-chain. They are building an API that would allow ElizaOS agents to post tasks directly to their human worker network, aiming to fill the gap where AI agents need human-in-the-loop capabilities for tasks requiring human judgment.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "posters": "https://cdn.elizaos.news/posters/1773709604027-n7es9g.jpg"
+      },
+      {
+        "text": "Significant concerns were raised about the token migration process. A community member noted that close to 100 thousand unique addresses still hold ai16z tokens, suggesting only 5-10% of tokens may have migrated. They requested clarity on the percentage of migrated tokens and what the team plans to do with the unmigrated supply, noting that approximately 54% of the new elizaOS total supply may be unaccounted for from the original 60% designated for ai16z holders.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1773709654721-r40xsh.png"
+      },
+      {
+        "text": "Odilitime announced a runtime refactor pull request for version 2.0.0, which includes a skills folder. The team is addressing the challenge of managing community-contributed skills, similar to the 0.x plugin problem. The proposed solution is to ship with zero default skills and promote hosting and discovery through individual domains hosting skills.md files. The team is seeking community feedback on this approach.",
+        "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+        "images": "https://cdn.elizaos.news/elizaos-media/6597_9c6bfc20.jpg"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1773619200
 }
