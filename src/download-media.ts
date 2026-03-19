@@ -902,10 +902,18 @@ class MediaDownloader {
           file.close();
           try { fs.unlinkSync(filePath); } catch (e) {}
           
-          const redirectUrl = response.headers.location;
-          if (redirectUrl) {
+          const rawLocation = response.headers.location;
+          if (rawLocation) {
+            // Resolve relative redirect URLs against the original request URL
+            let redirectUrl: string;
+            try {
+              redirectUrl = new URL(rawLocation, mediaItem.url).href;
+            } catch {
+              logger.debug(`Unresolvable redirect location for ${mediaItem.url}: ${rawLocation}`);
+              resolve(false);
+              return;
+            }
             logger.debug(`Following redirect for ${mediaItem.filename}`);
-            // Create new media item with redirect URL
             const redirectMediaItem = { ...mediaItem, url: redirectUrl };
             this.downloadMediaAttempt(redirectMediaItem, attempt).then(resolve);
             return;
