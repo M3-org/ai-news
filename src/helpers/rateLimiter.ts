@@ -4,13 +4,14 @@
  * @module helpers/rateLimiter
  */
 
+import fs from "fs";
 import { logger } from "./cliHelper";
 import { delay } from "./generalHelper";
 
 // Discord rate limit constants
 const DISCORD_GLOBAL_RATE_LIMIT = 50;  // requests per second
 const DISCORD_RATE_LIMIT_WINDOW = 1000; // 1 second window
-const MAX_CONCURRENT_DOWNLOADS = 5;
+const MAX_CONCURRENT_DOWNLOADS = 1; // Serial downloads to avoid Cloudflare IP-level burst detection
 
 /**
  * Discord-compliant rate limiter that respects API headers and implements proper backoff
@@ -21,6 +22,15 @@ export class DiscordRateLimiter {
   private bucketLimits: Map<string, { resetAt: number; remaining: number; limit: number }> = new Map();
   private processing = false;
   private activeRequests = 0;
+  private pausedUntil = 0;
+
+  pause(ms: number) {
+    this.pausedUntil = Math.max(this.pausedUntil, Date.now() + ms);
+  }
+
+  getRemainingPause(): number {
+    return Math.max(0, this.pausedUntil - Date.now());
+  }
 
   /**
    * Add a request to the rate-limited queue
@@ -52,6 +62,14 @@ export class DiscordRateLimiter {
     while (this.requestQueue.length > 0 && this.activeRequests < MAX_CONCURRENT_DOWNLOADS) {
       const now = Date.now();
 
+      // Check pause and bucket exhaustion before dispatching
+      const waitMs = Math.max(this.getRemainingPause(), this.shouldDelay());
+      if (waitMs > 0) {
+        logger.debug(`Rate limiter paused for ${Math.round(waitMs / 1000)}s`);
+        await delay(waitMs);
+        continue;
+      }
+
       // Check global rate limit
       if (now < this.globalRateLimit.resetAt && this.globalRateLimit.remaining <= 0) {
         const waitTime = this.globalRateLimit.resetAt - now;
@@ -82,8 +100,8 @@ export class DiscordRateLimiter {
         }
       });
 
-      // Small delay between requests to prevent overwhelming
-      await delay(50);
+      // 1–2s jitter between requests to avoid predictable cadence Cloudflare can pattern-match
+      await delay(1000 + Math.random() * 1000);
     }
 
     this.processing = false;
@@ -118,6 +136,27 @@ export class DiscordRateLimiter {
         logger.debug(`Bucket ${bucket} rate limit hit, reset in ${resetAfter}ms`);
       }
     }
+  }
+
+  /**
+   * Persist current pause state to a file so restarts can honour an active rate limit window
+   */
+  savePauseState(filePath: string) {
+    if (this.getRemainingPause() > 0) {
+      fs.writeFileSync(filePath, JSON.stringify({ pausedUntil: this.pausedUntil }));
+    } else {
+      try { fs.unlinkSync(filePath); } catch {}
+    }
+  }
+
+  /**
+   * Restore pause state from file written by a previous run
+   */
+  loadPauseState(filePath: string) {
+    try {
+      const { pausedUntil } = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      if (pausedUntil > Date.now()) this.pausedUntil = pausedUntil;
+    } catch {}
   }
 
   /**

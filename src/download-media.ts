@@ -10,9 +10,8 @@
 import { SQLiteStorage } from "./plugins/storage/SQLiteStorage";
 import { ContentItem, DiscordRawData, DiscordAttachment, DiscordEmbed, DiscordSticker, MediaDownloadConfig, MediaDownloadItem, MediaAnalytics, DownloadStats, MediaManifestEntry, MediaManifest } from "./types";
 import { logger } from "./helpers/cliHelper";
-import { delay } from "./helpers/generalHelper";
+import { delay, mapConcurrent } from "./helpers/generalHelper";
 import { normalizeDiscordUrl, isSpoiler, isAnimated, getStickerExtension, getValidatedExtension, CONTENT_TYPE_TO_EXT, VALID_URL_EXTENSIONS } from "./helpers/mediaHelper";
-import { DiscordRateLimiter } from "./helpers/rateLimiter";
 import { writeJsonFile, generateUrlHash, detectActualFileType, getFileTypeDirAsync } from "./helpers/fileHelper";
 import dotenv from "dotenv";
 import fs from "fs";
@@ -23,6 +22,9 @@ const DOWNLOAD_TIMEOUT_MS = 30000; // 30 seconds
 const MAX_RETRY_ATTEMPTS = 3;
 const RETRY_DELAY_BASE_MS = 1000; // Base delay for exponential backoff
 const DEFAULT_RATE_LIMIT_MS = 500; // Increased default rate limit between downloads (was 100ms)
+const DOWNLOAD_CHUNK_SIZE = 250;
+const DOWNLOAD_CONCURRENCY = parseInt(process.env.DOWNLOAD_CONCURRENCY || '20', 10);
+const MAX_REDIRECTS = 5;
 const USER_AGENT = process.env.DISCORD_USER_AGENT || 'DiscordBot (media-downloader, 1.0)'; // Configurable via env var
 
 
@@ -71,6 +73,14 @@ interface DailyMediaMetadata {
   totalSize: number;
 }
 
+interface MediaDownloadRunLog {
+  startedAt: string;
+  finishedAt: string;
+  outputDir: string;
+  stats: DownloadStats;
+  analytics?: MediaAnalytics;
+}
+
 class MediaDownloader {
   private storage: SQLiteStorage;
   private baseDir: string;
@@ -78,7 +88,8 @@ class MediaDownloader {
   private mediaIndex: Map<string, MediaIndexEntry> = new Map();
   private dailyReferences: MediaReference[] = [];
   private config: MediaDownloadConfig;
-  private rateLimiter: DiscordRateLimiter;
+  private startedAt: string;
+  private closed = false;
   private analytics: MediaAnalytics = {
     totalFilesByType: {},
     averageFileSizeByType: {},
@@ -94,7 +105,7 @@ class MediaDownloader {
   constructor(dbPath: string, baseDir: string = './media', config?: MediaDownloadConfig) {
     this.storage = new SQLiteStorage({ name: 'media-downloader', dbPath });
     this.baseDir = baseDir;
-    this.rateLimiter = new DiscordRateLimiter();
+    this.startedAt = new Date().toISOString();
     this.config = {
       enabled: true,
       maxFileSize: 52428800, // 50MB default
@@ -119,6 +130,7 @@ class MediaDownloader {
     await this.storage.init();
     await this.loadMediaIndex();
     await this.ensureDirectoryStructure();
+    await this.saveRunLog(false);
     logger.info('Media downloader initialized');
   }
 
@@ -182,6 +194,33 @@ class MediaDownloader {
     
     // Clear daily references for next batch
     this.dailyReferences = [];
+  }
+
+  /**
+   * Save a durable per-run log, including all recorded failures.
+   */
+  private async saveRunLog(final: boolean = false): Promise<void> {
+    const finishedAt = new Date().toISOString();
+    const safeTimestamp = finishedAt.replace(/[:.]/g, '-');
+    const runLog: MediaDownloadRunLog = {
+      startedAt: this.startedAt,
+      finishedAt,
+      outputDir: this.baseDir,
+      stats: {
+        ...this.stats,
+        errors: [...this.stats.errors],
+      },
+      analytics: Object.keys(this.analytics.totalFilesByType).length > 0 ? this.analytics : undefined,
+    };
+
+    const latestPath = path.join(this.baseDir, 'run-latest.json');
+    const runPath = path.join(this.baseDir, `run-${safeTimestamp}.json`);
+
+    fs.writeFileSync(latestPath, JSON.stringify(runLog, null, 2));
+    if (final) {
+      fs.writeFileSync(runPath, JSON.stringify(runLog, null, 2));
+      logger.info(`Saved run log to ${path.relative(process.cwd(), runPath)}`);
+    }
   }
 
   /**
@@ -375,19 +414,26 @@ class MediaDownloader {
 
       logger.info(`  Refreshing batch ${batchNum}/${totalBatches} (${batch.length} URLs)...`);
 
-      try {
-        const refreshedUrls = await this.bulkRefreshUrls(token, batch);
-
-        // Map old URLs to new URLs
-        for (const refreshedUrl of refreshedUrls) {
-          if (refreshedUrl.original && refreshedUrl.refreshed) {
-            this.urlRefreshCache.set(refreshedUrl.original, refreshedUrl.refreshed);
-            refreshed++;
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const refreshedUrls = await this.bulkRefreshUrls(token, batch);
+          for (const refreshedUrl of refreshedUrls) {
+            if (refreshedUrl.original && refreshedUrl.refreshed) {
+              this.urlRefreshCache.set(refreshedUrl.original, refreshedUrl.refreshed);
+              refreshed++;
+            }
           }
+          break; // success
+        } catch (error: any) {
+          if (error.retryAfterMs && attempt < 3) {
+            logger.warning(`URL refresh rate limited — waiting ${Math.ceil(error.retryAfterMs / 1000)}s (attempt ${attempt}/3)`);
+            await delay(error.retryAfterMs + 500);
+            continue;
+          }
+          logger.warning(`Batch ${batchNum} failed: ${error}`);
+          failed += batch.length;
+          break;
         }
-      } catch (error) {
-        logger.warning(`Batch ${batchNum} failed: ${error}`);
-        failed += batch.length;
       }
 
       // Small delay between batches to be nice to the API
@@ -432,8 +478,9 @@ class MediaDownloader {
               reject(new Error('Invalid JSON response'));
             }
           } else if (res.statusCode === 429) {
-            const retryAfter = parseFloat(res.headers['retry-after'] as string || '5');
-            reject(new Error(`Rate limited, retry after ${retryAfter}s`));
+            const retryAfterMs = parseFloat(res.headers['retry-after'] as string || '5') * 1000;
+            const isGlobal = res.headers['x-ratelimit-global'] === 'true';
+            reject(Object.assign(new Error('rate-limited'), { retryAfterMs, isGlobal }));
           } else {
             reject(new Error(`HTTP ${res.statusCode}: ${data.substring(0, 200)}`));
           }
@@ -738,21 +785,22 @@ class MediaDownloader {
    */
   private async downloadMedia(mediaItem: MediaDownloadItem): Promise<boolean> {
     const maxRetries = this.config.retryAttempts || MAX_RETRY_ATTEMPTS;
-    
+
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       const success = await this.downloadMediaAttempt(mediaItem, attempt, maxRetries);
       if (success) {
         return true;
       }
-      
+
       // If not the last attempt, wait before retrying with exponential backoff
       if (attempt < maxRetries) {
-        const retryDelay = RETRY_DELAY_BASE_MS * Math.pow(2, attempt - 1);
+        const baseDelay = RETRY_DELAY_BASE_MS * Math.pow(2, attempt - 1);
+        const retryDelay = baseDelay;
         logger.debug(`Retrying download for ${mediaItem.filename} in ${retryDelay}ms (attempt ${attempt + 1}/${maxRetries})`);
         await delay(retryDelay);
       }
     }
-    
+
     return false; // All attempts failed
   }
 
@@ -825,7 +873,7 @@ class MediaDownloader {
       return true;
     }
 
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       let hasTimedOut = false;
       const file = fs.createWriteStream(filePath);
       
@@ -864,26 +912,16 @@ class MediaDownloader {
           }
         }
 
-        // Update rate limiter with response headers
-        this.rateLimiter.updateRateLimits(response.headers, response.headers['x-ratelimit-bucket'] as string);
-        
         if (response.statusCode !== 200) {
           clearTimeout(timeout);
-          
-          // Handle Discord rate limiting (HTTP 429)
+
+          // Handle CDN rate limiting (HTTP 429) — resolve false so retry loop handles backoff
           if (response.statusCode === 429) {
-            const retryAfter = parseFloat(response.headers['retry-after'] as string) || 1;
-            const waitTime = retryAfter * 1000;
-            const isGlobal = response.headers['x-ratelimit-global'] === 'true';
-            const scope = response.headers['x-ratelimit-scope'] as string;
-            
-            logger.warning(`Rate limited${isGlobal ? ' (global)' : ''} by Discord API. Scope: ${scope || 'unknown'}. Waiting ${Math.round(waitTime)}ms before retry`);
-            
+            const retryAfter = parseFloat(response.headers['retry-after'] as string) || 5;
+            logger.warning(`CDN 429 for ${mediaItem.url} — backing off ${retryAfter}s`);
             file.close();
             try { fs.unlinkSync(filePath); } catch (e) {} // Clean up partial file
-            
-            // The rate limiter will handle the delay, so we just return false to trigger retry
-            resolve(false);
+            resolve(false); // let retry loop handle with exponential backoff
             return;
           }
           
@@ -898,9 +936,6 @@ class MediaDownloader {
           resolve(false);
           return;
         }
-
-        // Update rate limiter with successful response headers
-        this.rateLimiter.updateRateLimits(response.headers, response.headers['x-ratelimit-bucket'] as string);
 
         response.pipe(file);
         
@@ -938,7 +973,10 @@ class MediaDownloader {
         const errorMsg = `Download error for ${mediaItem.url}: ${err.message} (attempt ${attempt})`;
         
         // Handle common network errors that warrant retry
-        const retryableErrors = ['ECONNRESET', 'ENOTFOUND', 'ECONNREFUSED', 'ETIMEDOUT'];
+        // ENOTFOUND on non-Discord hosts (dead external domains) should not be retried
+        const isEnotfoundOnDeadHost = err.message.includes('ENOTFOUND') && !isDiscordUrl(mediaItem.url);
+        const retryableErrors = ['ECONNRESET', 'ECONNREFUSED', 'ETIMEDOUT'];
+        if (!isEnotfoundOnDeadHost) retryableErrors.push('ENOTFOUND');
         const isRetryable = retryableErrors.some(code => err.message.includes(code));
         
         if (attempt === maxRetries || !isRetryable) {
@@ -1001,7 +1039,7 @@ class MediaDownloader {
     const endEpoch = Math.floor(endDate.getTime() / 1000);
     
     logger.info(`Fetching Discord data from ${startDate.toISOString().split('T')[0]} to ${endDate.toISOString().split('T')[0]}`);
-    
+
     // Get all Discord raw data items in date range
     const items = await this.storage.getContentItemsBetweenEpoch(startEpoch, endEpoch, 'discordRawData');
     
@@ -1053,15 +1091,33 @@ class MediaDownloader {
   private async downloadMediaConcurrently(allMediaItems: MediaDownloadItem[]): Promise<void> {
     let processed = 0;
     const progressInterval = Math.max(1, Math.floor(allMediaItems.length / 20)); // Show progress every 5%
+    const totalChunks = Math.max(1, Math.ceil(allMediaItems.length / DOWNLOAD_CHUNK_SIZE));
 
-    // Create download promises using rate limiter
-    const downloadPromises = allMediaItems.map((mediaItem) => {
-      return this.rateLimiter.enqueue(async () => {
+    for (let i = 0; i < allMediaItems.length; i += DOWNLOAD_CHUNK_SIZE) {
+      const chunk = allMediaItems.slice(i, i + DOWNLOAD_CHUNK_SIZE);
+      const chunkNumber = Math.floor(i / DOWNLOAD_CHUNK_SIZE) + 1;
+
+      if (process.env.DISCORD_TOKEN) {
+        const discordItems = chunk.filter(item => isDiscordUrl(item.url));
+        if (discordItems.length > 0) {
+          logger.info(`\n🔄 Refreshing Discord URLs for chunk ${chunkNumber}/${totalChunks} (${discordItems.length} URLs)...`);
+          await this.refreshManifestUrls(discordItems);
+
+          for (const item of chunk) {
+            const freshUrl = this.urlRefreshCache.get(item.url);
+            if (freshUrl) {
+              item.url = freshUrl;
+            }
+          }
+        }
+      }
+
+      logger.info(`Downloading chunk ${chunkNumber}/${totalChunks} (${chunk.length} items)...`);
+
+      await mapConcurrent(chunk, DOWNLOAD_CONCURRENCY, async (mediaItem) => {
         try {
           await this.downloadMedia(mediaItem);
           processed++;
-
-          // Show progress periodically
           if (processed % progressInterval === 0 || processed === allMediaItems.length) {
             const percentage = Math.round((processed / allMediaItems.length) * 100);
             logger.info(`Progress: ${processed}/${allMediaItems.length} (${percentage}%)`);
@@ -1072,10 +1128,9 @@ class MediaDownloader {
           this.stats.errors.push(`${mediaItem.url}: ${error}`);
         }
       });
-    });
 
-    // Wait for all downloads to complete
-    await Promise.all(downloadPromises);
+      await this.saveRunLog(false);
+    }
   }
 
   /**
@@ -1300,6 +1355,7 @@ class MediaDownloader {
 
   async close(): Promise<void> {
     await this.saveMediaIndex();
+    await this.saveRunLog(true);
     await this.storage.close();
   }
 }
