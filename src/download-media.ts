@@ -16,6 +16,7 @@ import { writeJsonFile, generateUrlHash, detectActualFileType, getFileTypeDirAsy
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
+import http from "http";
 import https from "https";
 // Constants for network operations
 const DOWNLOAD_TIMEOUT_MS = 30000; // 30 seconds
