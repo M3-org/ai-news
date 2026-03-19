@@ -893,7 +893,8 @@ class MediaDownloader {
         }
       };
       
-      const request = https.get(mediaItem.url, options, (response) => {
+      const httpModule = mediaItem.url.startsWith('http://') ? http : https;
+      const request = httpModule.get(mediaItem.url, options, (response) => {
         if (hasTimedOut) return;
         
         // Handle redirects
