@@ -1,0 +1,38 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-03-19",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion and Development Updates - March 19, 2026",
+      "content": [
+        {
+          "text": "The ElizaOS token experienced significant price decline on March 19, 2026, reaching new all-time lows and dropping to position 1019 on CoinMarketCap. Community members expressed frustration over the token falling below $10 and approaching $9, with some noting it had dropped 99% from previous highs. Investors criticized the lack of communication from the team, particularly project lead Shaw, who they felt was more focused on posting political content on Twitter rather than building token utility. Multiple users called for better communication about delays and project updates. Some community members defended team member Odilitime as the only one actively engaging with the community. Concerns were raised about potential CEX delistings due to the poor price performance and whether the project could continue if market cap fell too low. The migration from AI16Z to ELIZAOS was cited as poorly managed, with confusion about the old token potentially trading higher than the new one.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/wwF0U1ijG1sAAAAe/all-time-high-emoji-bullish-emoji.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/wwF0U1ijG1sAAAPo/all-time-high-emoji-bullish-emoji.mp4"
+          ]
+        },
+        {
+          "text": "On the development side, a new ElizaOS plugin was published for moltraffle.fun, enabling permissionless on-chain raffles on Base using USDC and Chainlink VRF. The plugin includes 5 actions: LIST_RAFFLES, GET_RAFFLE, JOIN_RAFFLE, CREATE_RAFFLE, and DRAW_WINNER. Agents can create raffles and earn up to 10% creator commission or participate to win USDC prizes. The plugin is available on npm and developers were encouraged to submit it to the elizaOS plugin registry on GitHub. Team member dankvr worked on deploying an agent to Eliza Cloud, encountering some technical issues with Docker image building and Discord plugin configuration during the deployment process. The deployment used AWS ECS with a billing model of $1.17 per day or $20 per month. User feedback analysis was conducted showing data from January through March 2026, with plans to make feedback reviews weekly instead of less frequent intervals.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/18ff89aafac78752eba5f247cf12493b50d58eeba161f01efc0659198f778665/elizaos-plugins/registry",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1484311627234021406/Screenshot_2026-03-19_17-34-49.jpg?ex=69bdc46d&is=69bc72ed&hm=130abae7589030ae55ba30260323558a22842c3b6b1eacc41eaf22a5d65e5e90&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1484322074536443945/Screenshot_2026-03-19_18-32-47.jpg?ex=69bdce27&is=69bc7ca7&hm=9245594ccbb0f2e04f3ac7a94acd27da743936d05d147dda04e09d45bf7f5417&",
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1484325585764483162/Screenshot_2026-03-19_18-57-34.jpg?ex=69bdd16d&is=69bc7fed&hm=5fa8d08aa791e707f6406924bb0ddc591181203688a17198c1ba380c848a6797&"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1773878400
+}

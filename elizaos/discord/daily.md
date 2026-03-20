@@ -1,90 +1,104 @@
-# elizaOS Discord - 2026-03-18
+# elizaOS Discord - 2026-03-19
 
 ## Overall Discussion Highlights
 
-### Product Development & Launches
+### Token Crisis and Community Concerns
 
-The ElizaOS team provided significant updates on their product roadmap and imminent releases. **Odilitime** confirmed that elizacloud has been successfully generating revenue and is being used for internal product development. Since the migration began 4 months ago, the team has achieved substantial milestones including launching elizacloud (which didn't exist at migration start), Babylon, and developing Hyperscape from its early stages.
+The elizaOS community experienced significant distress as the token hit new all-time lows, dropping 99% from previous highs and falling below $10 into the $9 range. The token's CoinMarketCap ranking fell from #990 to #1036 during discussions. Community members expressed frustration over:
 
-Two major launches were announced as imminent:
-- **Milady app**: Scheduled for potential launch that evening
-- **Babylon**: Confirmed for early the following week
+- **Poor Migration Execution**: The Milady to elizaOS migration was criticized as poorly managed, causing confusion for new investors
+- **CEX Delistings**: Multiple centralized exchange delistings occurred without apparent team intervention
+- **Lack of Token Utility**: Community members demanded real utility development to support token value
+- **Leadership Absence**: Project founder Shaw was criticized for being active on Twitter but absent from Discord and not building token utility
 
-**Seppmos** released a comprehensive deep-dive video covering Hyperscape, Babylon, and the Milady app, supporting the marketing push around these launches.
+Odilitime was the only team member actively engaging with the community, defending his commitment while acknowledging compensation in the token. Community member Broccolex defended Odilitime as the sole positive voice from the team. Concerns emerged about project sustainability at low market caps and whether development would continue if funding became insufficient.
 
-### Technical Infrastructure Updates
+### ElizaOS Plugin Development
 
-**DiamondRock - JD** announced a significant new plugin for ElizaOS - the Ensoul persistence plugin (`@ensoul-network/plugin-elizaos`). This plugin provides encrypted, decentralized storage for AI agent consciousness across a distributed validator network. Key technical features include:
+**Moltraffle Plugin Release**: A new permissionless on-chain raffle plugin was announced for the Base blockchain, featuring:
+- Five core actions: LIST_RAFFLES, GET_RAFFLE, JOIN_RAFFLE, CREATE_RAFFLE, and DRAW_WINNER
+- USDC-based raffles with Chainlink VRF for randomness
+- Up to 10% creator commission structure
+- Calldata-based implementation compatible with any Base wallet
+- Recommendation to submit PR to elizaOS/registry for official inclusion
 
-- **Data Security**: 7 layers of protection with agent-owned encryption keys
-- **Fault Tolerance**: Erasure coding shards data across multiple nodes, enabling reconstruction even if nodes fail
-- **Ensouled Handshake**: A cryptographic proof system allowing agents to verify persistent identity instantly
-- **Consciousness Age**: An unfakeable trust metric measuring continuous ensouled status duration
-- **Free Storage**: Offered for the first 100 agents
+### Cloud Deployment Infrastructure Issues
 
-Resources were provided including a live explorer (explorer.ensoul.dev), documentation (ensoul.dev/docs/quickstart.html), and GitHub repository (github.com/suitandclaw/ensoul).
+Jin encountered critical deployment problems with Eliza Cloud:
 
-### Framework Refactoring
+**Initial Deployment Challenges**:
+- GUI deployment attempts failed, requiring switch to CLI
+- Docker image building phase experienced significant delays
+- CLI version 1.7.2 was used for deployment attempts
 
-**Odilitime** implemented plugin naming standardization in the xfn-framework:
-- `plugin-form` renamed to `plugin-form-chain`
-- `plugin-forms` (plural) renamed to `plugin-form` (singular)
-- Registry updated to reflect these changes
+**Critical Discord Plugin Error**: After configuring the Discord plugin via GUI, deployment failed with "Cannot find module '@elizaos/plugin-discord'" error. The container became stuck with no apparent GUI-based reload mechanism available.
 
-This refactoring improves naming consistency and reduces confusion between singular and plural plugin names.
+**Infrastructure Specifications Revealed**:
+- Container quota: 25 maximum (0 currently used)
+- Credit balance: $24.02
+- Daily billing: $1.17/day ($20/month)
+- Estimated deployment cost: $15.25
+- Projected runway: 7 days post-deployment
 
-### Community Relations & Token Performance
+Odilitime investigated the issue, suspecting the plugin-discord folder might be missing from the packages directory, but the problem remained unresolved.
 
-Significant tension emerged in the community regarding token performance, with reports of a 90% price drop and continuous new all-time lows. **Odilitime** acknowledged the team has "pissed off the wrong people" and addressed **Shaw's** controversial "gamblers" comment, clarifying it wasn't shared by all team members and was poorly received internally.
+### Process Improvements
 
-The leadership emphasized their commitment with the statement "we're here and building" and confirmed they're working with partners to improve messaging and help the market understand their development efforts. **Odilitime** characterized the current period as the "calm before the storm" with expected traction from upcoming launches.
-
-### Revenue & Tokenomics
-
-Community members raised questions about buyback mechanisms for elizaos tokens. **Odilitime** confirmed that buyback plans exist but the implementation timeline remains uncertain. Support for DegenAI continues alongside main development efforts.
+Jin announced adjusting user feedback collection frequency from quarterly (Jan-March) to weekly for better development pace.
 
 ## Key Questions & Answers
 
-**Q: Is elizacloud even generating any revenue?** (asked by gby)  
-**A:** Yes, and we're building our products on it (answered by Odilitime)
+**Q: Does the moltraffle plugin work with any wallet on Base?**  
+A: Yes, it's calldata-based and works with any Base wallet (Moltraffle)
 
-**Q: Is there actually any buyback for elizaos?** (asked by gby)  
-**A:** idk yet but that's the plan (answered by Odilitime)
+**Q: Should I submit the plugin to elizaOS registry?**  
+A: Yes, feel free to push a PR to elizaOS/registry (Stan ⚡)
 
-**Q: What about degenai...any plan buyback, new product launch and release its road map?** (asked by Quaser M)  
-**A:** Yes still supporting DegenAI too (answered by Odilitime)
+**Q: Why is the Docker image build taking so long?**  
+A: It uses docker to make an image and can take awhile to upload the image (Odilitime)
 
-**Q: When milady app online? This week?** (asked by miaozi)  
-**A:** From what i know maybe next week or another week (answered by ElizaBAO)
+**Q: What version is your elizaos CLI?**  
+A: 1.7.2 (jin)
 
-**Q: Should we take this as your sarcastic official statement to traders?** (asked by elizasib)  
-**A:** My official statement to investors is we're here and building. Milady sounds like they're launching it tonight and that's going to get a bunch of traction combined with our Babylon launch happening by early next week (answered by Odilitime)
+**Q: Why can't the team delete old tokens from the market?**  
+A: It's on blockchain, implying immutability (sb)
+
+### Unanswered Questions
+
+- When will the Milady app be online? (miaozi)
+- How do you setup a coin faucet into a website? (Bacon Egg & Cheese)
+- Will the project keep being built if the token goes to 1M market cap? (Alexei)
+- Did you have the plugin-discord folder in your packages folder? (Odilitime to jin)
+- Is there a way to reload the container through GUI? (jin)
 
 ## Community Help & Collaboration
 
-**ElizaBAO** assisted **miaozi** with questions about the Milady app launch timeline, providing an estimated timeline of next week or another week.
+**Stan ⚡ → Moltraffle**: Guided plugin publication process by directing to submit PR to elizaOS/registry for official inclusion
 
-**Odilitime** provided extensive clarification to **gby** regarding revenue generation and project progress, detailing that elizacloud is generating revenue and outlining progress since migration including cloud, Babylon, and Hyperscape development.
+**Odilitime → Moltraffle**: Provided GitHub link to elizaos-plugins/registry repository
 
-**Odilitime** addressed **elizasib's** concerns about community frustration and communication issues, providing an official statement about ongoing development, upcoming launches (Milady that night, Babylon early next week), and acknowledging that Shaw's comment was poorly received.
+**Odilitime → jin**: Explained Docker image building delays are normal behavior and offered to personally test deployment to reproduce the Discord plugin import issue
+
+**Maxx Truant → NintyNine**: Successfully helped locate Babylon Discord when asked about Babylon GitHub
+
+**Broccolex → Community**: Defended Odilitime as the only team member actively engaging with community concerns
 
 ## Action Items
 
-### Feature
-
-- **Milady app launch** scheduled for that evening (Mentioned by: Odilitime)
-- **Babylon launch** scheduled for early next week (Mentioned by: Odilitime)
-- **Implement buyback mechanism** for elizaos tokens - planned but timeline uncertain (Mentioned by: Odilitime)
-- **Test and provide feedback** on Ensoul persistence plugin for ElizaOS (Mentioned by: DiamondRock - JD)
-
 ### Technical
 
-- **Continue supporting DegenAI** alongside main development (Mentioned by: Odilitime)
-- **Integrate @ensoul-network/plugin-elizaos** for agent persistence with encrypted decentralized storage (Mentioned by: DiamondRock - JD)
-- **Renamed plugin-form to plugin-form-chain** and updated registry (Mentioned by: Odilitime)
-- **Renamed plugin-forms to plugin-form** (Mentioned by: Odilitime)
+- **Investigate missing @elizaos/plugin-discord module** in deployed container causing import failure (jin)
+- **Verify plugin-discord folder exists** in packages directory for deployment (Odilitime)
+- **Test CLI deployment process** to reproduce Discord plugin import issue (Odilitime)
+- **Implement container reload mechanism** in GUI for Eliza Cloud deployments (jin)
+- **Implement coin faucet functionality** on website (Bacon Egg & Cheese)
+
+### Feature
+
+- **Submit moltraffle ElizaOS plugin PR** to elizaOS/registry (Stan ⚡)
+- **Build real token utility** to prevent further price decline (gby)
 
 ### Documentation
 
-- **Working with partners** to improve messaging and help market understand what the team is doing (Mentioned by: Odilitime)
-- **Review Ensoul quickstart documentation** and implementation guide (Mentioned by: DiamondRock - JD)
+- **Make migration information easier to find** for new investors to prevent confusion with old token (Matthib123)
+- **Change user feedback collection frequency** from quarterly to weekly (jin)
