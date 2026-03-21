@@ -1,58 +1,39 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-03-20",
-  "categories": [
-    {
-      "title": "ElizaOS Community Discussion - March 20, 2026",
-      "content": [
-        {
-          "text": "Community members expressed frustration about Eliza token performance, noting it has become the worst performing token among major AI agent projects, performing lower than Griffain and Zerebro. Critics pointed to lack of marketing, unclear token utility, and perceived arrogance from leadership when addressing investor concerns. Some members felt the team prioritizes social media presence over communication with token holders.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Babylon game launched as a new market simulation where players can command AI agents to conduct research, share information, and make trades and predictions. The launch includes an airdrop for the community and will help drive ElizaCloud buybacks of the token. Shaw shared details about the game mechanics on Twitter.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HD4UNC7boAEGSUC.jpg:large"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Milady app development continues with progress tracked on GitHub. The team has releases available for testing but nothing polished enough for a marketing push yet. When asked about timeline, Odilitime stated it will be ready when it is ready, with no specific date provided. Hyperscape is not expected to launch next week.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/7c9792a0a97927216541110b43d214d33f935ca15fa45b256df4fd087454fef6/milady-ai/milady"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Technical discussions included issues with disk image uploads not appearing on the server side, GPG key and SHA256 sum problems in the Milady repository, and questions about building trading agents. The system uses ElizaOS 1.x CLI plus ElizaCloud infrastructure.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A developer offered collaboration opportunities, describing themselves as a full stack web3 and AI builder with experience in DeFi, NFT contracts, wallet-ready dapps, and AI integration across EVM, Sui, and Solana. Skills include Rust, Solidity, Python, React, Next.js, and modern AI stacks.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Discussion - March 20, 2026",
+    "content": [
+      {
+        "text": "Community members expressed frustration about Eliza token performance, noting it has become the worst performing token among major AI agent projects, performing lower than Griffain and Zerebro. Critics pointed to lack of marketing, unclear token utility, and perceived arrogance from leadership when addressing investor concerns. Some members felt the team prioritizes social media presence over communication with token holders.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774054945526-61fc0r.jpg"
+      },
+      {
+        "text": "Babylon game launched as a new market simulation where players can command AI agents to conduct research, share information, and make trades and predictions. The launch includes an airdrop for the community and will help drive ElizaCloud buybacks of the token. Shaw shared details about the game mechanics on Twitter.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1484652053933330495_eded9d60.jpg"
+      },
+      {
+        "text": "Milady app development continues with progress tracked on GitHub. The team has releases available for testing but nothing polished enough for a marketing push yet. When asked about timeline, Odilitime stated it will be ready when it is ready, with no specific date provided. Hyperscape is not expected to launch next week.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/milady_bf5a0f99.jpg"
+      },
+      {
+        "text": "Technical discussions included issues with disk image uploads not appearing on the server side, GPG key and SHA256 sum problems in the Milady repository, and questions about building trading agents. The system uses ElizaOS 1.x CLI plus ElizaCloud infrastructure.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "posters": "https://cdn.elizaos.news/posters/1774054966143-ohhffk.png"
+      },
+      {
+        "text": "A developer offered collaboration opportunities, describing themselves as a full stack web3 and AI builder with experience in DeFi, NFT contracts, wallet-ready dapps, and AI integration across EVM, Sui, and Solana. Skills include Rust, Solidity, Python, React, Next.js, and modern AI stacks.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774054984996-z1pn4.jpg"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1773964800
 }
