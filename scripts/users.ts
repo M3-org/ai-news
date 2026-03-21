@@ -25,7 +25,8 @@ import * as https from "https";
 import * as http from "http";
 import * as dotenv from "dotenv";
 import { DiscordUserRegistry } from "../src/plugins/storage/DiscordUserRegistry";
-import { outputJson, spinner, resolveDbPathFromConfig } from "./cli";
+import OpenAI from "openai";
+import { outputJson, spinner, resolveDbPathFromConfig, resolveConfigPath } from "./cli";
 
 dotenv.config({ quiet: true });
 
@@ -64,6 +65,7 @@ interface UserProfile {
 }
 
 interface CliArgs {
+  force?: boolean;
   command: string;
   all?: boolean;
   date?: string;
@@ -76,6 +78,7 @@ interface CliArgs {
   updateIndex?: boolean;
   source?: string;
   json?: boolean;
+  minMentions?: number;
 }
 
 // ============================================================================
@@ -97,10 +100,12 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg === "--use-index") args.useIndex = true;
     else if (arg.startsWith("--rate-limit=")) args.rateLimit = parseInt(arg.split("=")[1]);
     else if (arg === "--skip-existing") args.skipExisting = true;
+    else if (arg === "--force") args.force = true;
     else if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--update-index") args.updateIndex = true;
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
     else if (arg === "--json") args.json = true;
+    else if (arg.startsWith("--min-mentions=")) args.minMentions = parseInt(arg.split("=")[1]);
   }
 
   return args;
@@ -754,6 +759,322 @@ async function commandStatus(db: Database, args: CliArgs): Promise<void> {
 }
 
 // ============================================================================
+// Command: generate-profiles
+// ============================================================================
+
+interface UserActivity {
+  userId: string | null;
+  helpGiven: Array<{ context: string; resolution: string; date: string }>;
+  helpReceived: Array<{ context: string; date: string }>;
+  questionsAsked: Array<{ question: string; date: string }>;
+  questionsAnswered: Array<{ question: string; date: string }>;
+  actionItems: Array<{ type: string; description: string; date: string }>;
+  activeDates: Set<string>;
+}
+
+function createEmptyActivity(): UserActivity {
+  return {
+    userId: null,
+    helpGiven: [],
+    helpReceived: [],
+    questionsAsked: [],
+    questionsAnswered: [],
+    actionItems: [],
+    activeDates: new Set(),
+  };
+}
+
+async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<void> {
+  console.log("\nGenerating User Profiles\n");
+
+  const configPath = resolveConfigPath(args.source);
+  const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
+
+  const serverName: string =
+    config.generators?.find((g: any) => g.params?.summaryType)?.params?.summaryType || "Discord Server";
+
+  const rawOutputPath: string | undefined =
+    config.generators?.find((g: any) => g.type === "DiscordSummaryGenerator" && g.params?.outputPath)?.params?.outputPath
+    ?? config.generators?.find((g: any) => g.params?.outputPath)?.params?.outputPath;
+  if (!rawOutputPath) {
+    console.error("No generator outputPath found in config.");
+    process.exit(1);
+  }
+
+  const outputBase = path.resolve(process.cwd(), rawOutputPath);
+  const jsonDir = path.join(outputBase, "json");
+  const usersDir = path.join(outputBase, "users");
+
+  if (!fs.existsSync(jsonDir)) {
+    console.error(`JSON directory not found: ${jsonDir}`);
+    console.error("Run historical generation first.");
+    process.exit(1);
+  }
+
+  fs.mkdirSync(usersDir, { recursive: true });
+
+  const minMentions = args.minMentions ?? 3;
+  const files = fs
+    .readdirSync(jsonDir)
+    .filter((f) => f.match(/^\d{4}-\d{2}-\d{2}\.json$/))
+    .sort();
+
+  console.log(`Scanning ${files.length} daily JSON files...\n`);
+
+  const userActivity: Record<string, UserActivity> = {};
+
+  for (const file of files) {
+    let data: any;
+    try {
+      data = JSON.parse(fs.readFileSync(path.join(jsonDir, file), "utf-8"));
+    } catch {
+      continue;
+    }
+    const dateStr = file.replace(".json", "");
+    const nicknameMap: Record<string, any> = data.nicknameMap || {};
+
+    for (const [displayName, entry] of Object.entries(nicknameMap)) {
+      if (!userActivity[displayName]) userActivity[displayName] = createEmptyActivity();
+      userActivity[displayName].activeDates.add(dateStr);
+      if (!userActivity[displayName].userId && (entry as any).id) {
+        userActivity[displayName].userId = (entry as any).id;
+      }
+    }
+
+    for (const category of data.categories || []) {
+      for (const faq of category.faqs || []) {
+        if (faq.askedBy && faq.askedBy !== "Unknown") {
+          if (!userActivity[faq.askedBy]) userActivity[faq.askedBy] = createEmptyActivity();
+          userActivity[faq.askedBy].questionsAsked.push({ question: faq.question, date: dateStr });
+        }
+        if (faq.answeredBy && faq.answeredBy !== "Unknown" && faq.answeredBy !== "Unanswered") {
+          if (!userActivity[faq.answeredBy]) userActivity[faq.answeredBy] = createEmptyActivity();
+          userActivity[faq.answeredBy].questionsAnswered.push({ question: faq.question, date: dateStr });
+        }
+      }
+      for (const help of category.helpInteractions || []) {
+        if (help.helper) {
+          if (!userActivity[help.helper]) userActivity[help.helper] = createEmptyActivity();
+          userActivity[help.helper].helpGiven.push({ context: help.context, resolution: help.resolution, date: dateStr });
+        }
+        if (help.helpee) {
+          if (!userActivity[help.helpee]) userActivity[help.helpee] = createEmptyActivity();
+          userActivity[help.helpee].helpReceived.push({ context: help.context, date: dateStr });
+        }
+      }
+      for (const item of category.actionItems || []) {
+        const names: string[] = (item.mentionedBy || "").split(/,\s*|\s+and\s+/);
+        for (const rawName of names) {
+          const n = rawName.trim();
+          if (!n) continue;
+          if (!userActivity[n]) userActivity[n] = createEmptyActivity();
+          userActivity[n].actionItems.push({ type: item.type, description: item.description, date: dateStr });
+        }
+      }
+    }
+  }
+
+  const activeUsers = Object.entries(userActivity)
+    .map(([displayName, activity]) => {
+      const totalMentions =
+        activity.helpGiven.length +
+        activity.helpReceived.length +
+        activity.questionsAsked.length +
+        activity.questionsAnswered.length +
+        activity.actionItems.length;
+      return { displayName, activity, totalMentions };
+    })
+    .filter((u) => u.totalMentions >= minMentions)
+    .sort((a, b) => b.totalMentions - a.totalMentions);
+
+  console.log(
+    `${Object.keys(userActivity).length} unique names found, ${activeUsers.length} meet minimum threshold (${minMentions} mentions)\n`
+  );
+
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    console.error("OPENAI_API_KEY not set");
+    process.exit(1);
+  }
+  const useOpenRouter = process.env.USE_OPENROUTER === "true";
+  const openai = new OpenAI({
+    apiKey,
+    ...(useOpenRouter ? { baseURL: "https://openrouter.ai/api/v1" } : {}),
+  });
+  const model = useOpenRouter ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+
+  const registry = new DiscordUserRegistry(db);
+  let generated = 0;
+  let skipped = 0;
+
+  for (let i = 0; i < activeUsers.length; i++) {
+    const { displayName, activity, totalMentions } = activeUsers[i];
+    process.stdout.write(`[${i + 1}/${activeUsers.length}] ${displayName} (${totalMentions} mentions)... `);
+
+    let registryUser = null;
+    if (activity.userId) registryUser = await registry.getUserById(activity.userId);
+    if (!registryUser) registryUser = await registry.getUserByNickname(displayName);
+    if (!registryUser) registryUser = await registry.getUserByUsername(displayName);
+
+    if (!registryUser) {
+      console.log("not in registry, skipped");
+      skipped++;
+      continue;
+    }
+
+    const profileFile = path.join(usersDir, `${displayName.replace(/[/\\?%*:|"<>]/g, "_")}.md`);
+    const existingFile = fs.existsSync(profileFile) ? fs.readFileSync(profileFile, "utf-8") : null;
+
+    if (args.skipExisting && existingFile) {
+      console.log("already has profile, skipped");
+      skipped++;
+      continue;
+    }
+
+    const firstSeenDate = new Date(registryUser.firstSeen * 1000).toISOString().split("T")[0];
+    const lastSeenDate = new Date(registryUser.lastSeen * 1000).toISOString().split("T")[0];
+    const technicalCount = activity.actionItems.filter((a) => a.type === "Technical").length;
+    const featureCount = activity.actionItems.filter((a) => a.type === "Feature").length;
+    const docCount = activity.actionItems.filter((a) => a.type === "Documentation").length;
+
+    const sortedActiveDates = [...activity.activeDates].sort();
+    const dateRange = sortedActiveDates.length
+      ? `${sortedActiveDates[0]}/${sortedActiveDates[sortedActiveDates.length - 1]}`
+      : "unknown";
+    const dateSpanMonths = sortedActiveDates.length >= 2 ? (() => {
+      const start = new Date(sortedActiveDates[0]);
+      const end = new Date(sortedActiveDates[sortedActiveDates.length - 1]);
+      return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+    })() : 0;
+
+    const activityBlock = `Activity across ${activity.activeDates.size} days of logs (${dateRange}):
+- Helped others: ${activity.helpGiven.length} times
+- Received help: ${activity.helpReceived.length} times
+- Questions asked: ${activity.questionsAsked.length}
+- Questions answered: ${activity.questionsAnswered.length}
+- Mentioned in action items: ${activity.actionItems.length} (${technicalCount} Technical, ${featureCount} Feature, ${docCount} Documentation)`;
+
+    const samplesBlock = [
+      activity.helpGiven.length ? `Sample help given:\n${activity.helpGiven.slice(-10).map((h) => `- Context: ${h.context} | Resolution: ${h.resolution}`).join("\n")}` : "",
+      activity.actionItems.length ? `Sample action items:\n${activity.actionItems.slice(-15).map((a) => `- [${a.type}] ${a.description}`).join("\n")}` : "",
+      activity.questionsAnswered.length ? `Sample questions answered:\n${activity.questionsAnswered.slice(-8).map((q) => `- ${q.question}`).join("\n")}` : "",
+      activity.questionsAsked.length ? `Sample questions asked:\n${activity.questionsAsked.slice(-8).map((q) => `- ${q.question}`).join("\n")}` : "",
+    ].filter(Boolean).join("\n\n");
+
+    const registryBlock = `Registry data:
+- Discord username: ${registryUser.username}
+- Roles: ${registryUser.roles.join(", ") || "none"}
+- Active: ${firstSeenDate} to ${lastSeenDate}
+- Total messages: ${registryUser.totalMessages.toLocaleString()}`;
+
+    let prompt: string;
+
+    if (existingFile && !args.force) {
+      // Extract existing prose (everything after the frontmatter)
+      const existingProse = existingFile.replace(/^---[\s\S]*?---\n*/, "").trim();
+      const existingFrontmatterMatch = existingFile.match(/^---\n([\s\S]*?)\n---/);
+      const existingGeneratedAt = existingFrontmatterMatch?.[1].match(/generatedAt:\s*"?([^"\n]+)"?/)?.[1] || "unknown";
+
+      prompt = `You are updating a community profile for "${displayName}" in the ${serverName} Discord server.
+
+Existing profile (generated ${existingGeneratedAt}):
+${existingProse}
+
+${registryBlock}
+
+Updated ${activityBlock}
+
+${samplesBlock}
+
+Update the profile based on all available data. Correct anything outdated, extend with new patterns, and note any meaningful shifts in focus or role over time${dateSpanMonths >= 3 ? " — especially if activity evolved across different periods" : ""}. Return the complete updated profile.
+
+Write 2-3 paragraphs. Be specific and grounded in the data. Do not speculate beyond what the evidence shows.
+Plain text only, no markdown, no emojis.`;
+    } else {
+      const temporalInstruction = dateSpanMonths >= 3
+        ? "\n5. If their focus or activity shifted meaningfully over time, note how."
+        : "";
+
+      prompt = `You are writing a community profile for "${displayName}" in the ${serverName} Discord server.
+
+${registryBlock}
+
+${activityBlock}
+
+${samplesBlock}
+
+Write a 2-3 paragraph profile covering:
+1. Who this person is and their role in the community
+2. Their domains of expertise and what they work on
+3. Their collaboration style — do they teach, build, organize, or ask?
+4. Any recurring goals, challenges, or themes visible in the data${temporalInstruction}
+
+Be specific and grounded in the data. Do not speculate beyond what the evidence shows.
+Plain text only, no markdown, no emojis.`;
+    }
+
+    try {
+      const completion = await openai.chat.completions.create({
+        model,
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.3,
+        max_tokens: 600,
+      });
+      const profileText = completion.choices[0].message.content?.trim() || "";
+
+      // Write markdown file: YAML frontmatter + prose
+      const frontmatter = [
+        "---",
+        `userId: "${registryUser.id}"`,
+        `username: "${registryUser.username}"`,
+        `displayName: "${displayName}"`,
+        `roles: [${registryUser.roles.map((r) => `"${r}"`).join(", ")}]`,
+        `activityTier: "${activity.activeDates.size >= 30 ? "core" : activity.activeDates.size >= 5 ? "regular" : "casual"}"`,
+        `generatedAt: "${new Date().toISOString().split("T")[0]}"`,
+        `dateRange: "${dateRange}"`,
+        `helpGiven: ${activity.helpGiven.length}`,
+        `helpReceived: ${activity.helpReceived.length}`,
+        `questionsAsked: ${activity.questionsAsked.length}`,
+        `questionsAnswered: ${activity.questionsAnswered.length}`,
+        `actionItems: {Technical: ${technicalCount}, Feature: ${featureCount}, Documentation: ${docCount}}`,
+        `activeDays: ${activity.activeDates.size}`,
+        `totalMessages: ${registryUser.totalMessages}`,
+        "---",
+      ].join("\n");
+
+      fs.writeFileSync(profileFile, `${frontmatter}\n\n${profileText}\n`);
+
+      // DB notes = latest prose for nicknameMap injection
+      await registry.updateNotes(registryUser.id, profileText);
+
+      const existingMeta: Record<string, any> = registryUser.metadata || {};
+      await registry.updateMetadata(registryUser.id, {
+        ...existingMeta,
+        profile: {
+          generatedAt: new Date().toISOString().split("T")[0],
+          dateRange,
+          helpGiven: activity.helpGiven.length,
+          helpReceived: activity.helpReceived.length,
+          questionsAsked: activity.questionsAsked.length,
+          questionsAnswered: activity.questionsAnswered.length,
+          actionItems: { Technical: technicalCount, Feature: featureCount, Documentation: docCount },
+          activeDays: activity.activeDates.size,
+        },
+      });
+
+      const mode = existingFile && !args.force ? "updated" : "generated";
+      console.log(`${mode} (${profileText.length} chars) → ${path.basename(profileFile)}`);
+      generated++;
+    } catch (err) {
+      console.log(`error: ${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
+  console.log(`\nDone. Generated: ${generated}, Skipped: ${skipped}\n`);
+  console.log(`Profiles written to: ${usersDir}\n`);
+}
+
+// ============================================================================
 // Command: help
 // ============================================================================
 
@@ -772,6 +1093,8 @@ Commands:
   status             Show registry/avatar cache statistics
   enrich             Enrich JSON files with nickname maps from discord_users
                      Options: --date=YYYY-MM-DD --from/--to --all --dry-run
+  generate-profiles  Generate AI profiles for active users from summary JSONs
+                     Options: --min-mentions=<n> (default: 3) --skip-existing --force
 
 Options:
   --source=<config>.json  Target a specific config (e.g. --source=m3org.json)
@@ -789,6 +1112,9 @@ Examples:
   npm run users -- enrich --from=2025-01-01 --to=2025-01-15
   npm run users -- enrich --all
   npm run users -- enrich --all --dry-run
+  npm run users -- generate-profiles --source=m3org.json
+  npm run users -- generate-profiles --source=m3org.json --min-mentions=5 --skip-existing
+  npm run users -- generate-profiles --source=m3org.json --force
 
 Note:
   - User data is stored in discord_users table (see DiscordUserRegistry)
@@ -796,6 +1122,12 @@ Note:
   - build-registry populates discord_users from discordRawData items
   - enrich adds nicknameMap to daily JSON files using discord_users data
   - download-avatars saves images locally (2000ms rate limit recommended)
+  - generate-profiles reads all summary JSONs and writes AI-generated profiles
+    to output/<server>/summaries/users/<displayName>.md (YAML frontmatter + prose)
+    and discord_users.notes (latest prose for nicknameMap injection)
+  - Re-running generate-profiles does delta updates (patch existing profile with new data)
+  - Use --skip-existing to skip users who already have a profile file
+  - Use --force to fully regenerate profiles instead of delta-patching
   `);
 }
 
@@ -862,6 +1194,9 @@ export async function runUsers(argv: string[] = process.argv.slice(2)) {
         break;
       case "status":
         await commandStatus(db, args);
+        break;
+      case "generate-profiles":
+        await commandGenerateProfiles(db, args);
         break;
       default:
         commandHelp();

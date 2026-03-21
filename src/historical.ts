@@ -11,6 +11,8 @@ import { MediaDownloader, generateManifestToFile } from "./download-media";
 import { MediaDownloadCapable } from "./plugins/sources/DiscordRawDataSource";
 import { SummaryEnricher } from "./plugins/enrichers/SummaryEnricher";
 import { logger } from "./helpers/cliHelper";
+import { open } from "sqlite";
+import sqlite3 from "sqlite3";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
@@ -411,6 +413,100 @@ Options:
           );
         } else {
           await summaryEnricher.enrichSummary(dateStr, jsonSubpath);
+        }
+      }
+      /**
+       * Auto-enrich output JSONs with nicknameMap after generation.
+       * Builds map only from users active on that specific date by reading
+       * raw items from the DB, keeping the map small and relevant.
+       */
+      const dbPathRaw = configJSON.storage?.find((s: any) => s?.params?.dbPath)?.params?.dbPath;
+      if (dbPathRaw && generatorConfigs.length > 0) {
+        const resolvedDbPath = path.resolve(process.cwd(), dbPathRaw);
+        if (fs.existsSync(resolvedDbPath)) {
+          const db = await open({ filename: resolvedDbPath, driver: sqlite3.Database });
+
+          const enrichJsonWithNicknameMap = async (d: string) => {
+            // Fetch only items for this date using the CID date suffix pattern
+            const rows = await db.all<{ text: string }[]>(
+              "SELECT text FROM items WHERE cid LIKE ?", `%-${d}`
+            );
+
+            // Collect active user IDs and base info from raw items
+            const activeUsers: Record<string, { username: string; roles: string[] }> = {};
+            for (const row of rows) {
+              try {
+                const data = JSON.parse(row.text);
+                if (!data.users || typeof data.users !== 'object') continue;
+                for (const [userId, user] of Object.entries(data.users as any)) {
+                  if ((user as any).isBot) continue;
+                  activeUsers[userId] = {
+                    username: (user as any).name,
+                    roles: (user as any).roles || [],
+                  };
+                }
+              } catch {}
+            }
+
+            if (Object.keys(activeUsers).length === 0) return;
+
+            // Enrich with avatar URL and globalName from discord_users registry if available
+            const ids = Object.keys(activeUsers);
+            const placeholders = ids.map(() => '?').join(',');
+            const registryRows = await db.all<{ id: string; avatarUrl: string | null; metadata: string | null; totalMessages: number; notes: string | null }[]>(
+              `SELECT id, avatarUrl, metadata, totalMessages, notes FROM discord_users WHERE id IN (${placeholders})`,
+              ...ids
+            ).catch(() => []);
+            const registryById: Record<string, { avatarUrl: string | null; globalName: string | null; totalMessages: number; notes: string | null }> = {};
+            for (const r of registryRows) {
+              let globalName: string | null = null;
+              try { globalName = r.metadata ? JSON.parse(r.metadata).globalName ?? null : null; } catch {}
+              registryById[r.id] = { avatarUrl: r.avatarUrl ?? null, globalName, totalMessages: r.totalMessages ?? 0, notes: r.notes ?? null };
+            }
+
+            // Build final nicknameMap keyed by display name, scoped to active users
+            const nicknameMap: Record<string, { id: string; username: string; roles: string[]; avatarUrl?: string; totalMessages?: number; profile?: string }> = {};
+            for (const row of rows) {
+              try {
+                const data = JSON.parse(row.text);
+                if (!data.users || typeof data.users !== 'object') continue;
+                for (const [userId, user] of Object.entries(data.users as any)) {
+                  if ((user as any).isBot) continue;
+                  const reg = registryById[userId];
+                  const displayName: string = (user as any).nickname || reg?.globalName || (user as any).name;
+                  const entry: { id: string; username: string; roles: string[]; avatarUrl?: string; totalMessages?: number; profile?: string } = {
+                    id: userId,
+                    username: (user as any).name,
+                    roles: (user as any).roles || [],
+                  };
+                  if (reg?.avatarUrl) entry.avatarUrl = reg.avatarUrl;
+                  if (reg?.totalMessages) entry.totalMessages = reg.totalMessages;
+                  if (reg?.notes) entry.profile = reg.notes;
+                  nicknameMap[displayName] = entry;
+                }
+              } catch {}
+            }
+
+            if (Object.keys(nicknameMap).length === 0) return;
+
+            for (const genConfig of generatorConfigs) {
+              const genOutputPath = genConfig.instance.outputPath || outputPath;
+              const jsonFilePath = path.join(genOutputPath, 'json', `${d}.json`);
+              if (!fs.existsSync(jsonFilePath)) continue;
+              const data = JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));
+              data.nicknameMap = nicknameMap;
+              fs.writeFileSync(jsonFilePath, JSON.stringify(data, null, 2), 'utf-8');
+              logger.info(`Enriched ${jsonFilePath} with ${Object.keys(nicknameMap).length} active user mappings`);
+            }
+          };
+
+          if (filter.filterType || (filter.after && filter.before)) {
+            await callbackDateRangeLogic(filter, enrichJsonWithNicknameMap);
+          } else {
+            await enrichJsonWithNicknameMap(dateStr);
+          }
+
+          await db.close();
         }
       }
     }

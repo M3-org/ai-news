@@ -635,6 +635,145 @@ Guidelines:
   }
 }
 
+async function summarizeChannelWithLLM(
+  openai: OpenAI,
+  model: string,
+  channel: DiscordChannel,
+  messagesText: string
+): Promise<{ summary: string; mannerisms: string } | null> {
+  const activityLevel = channel.currentVelocity > 50 ? "very active" :
+    channel.currentVelocity > 7 ? "active" :
+    channel.currentVelocity > 1.5 ? "moderate" : "low activity";
+
+  const prompt = `You are analyzing a Discord channel to generate context for AI agents.
+
+Channel metadata:
+- Name: #${channel.name}
+- Topic: ${channel.topic || "(none)"}
+- Category: ${channel.category || "(none)"}
+- Activity: ${activityLevel} (~${channel.currentVelocity.toFixed(1)} msgs/day)
+- Total messages collected: ${channel.messageCount || "unknown"}
+
+Recent message samples:
+${messagesText}
+
+Respond ONLY with valid JSON:
+{
+  "summary": "2-4 sentence description: what this channel is about, who uses it, what topics are discussed",
+  "mannerisms": "2-3 sentence style guide: communication tone, formality level, vocabulary patterns, any cultural/linguistic quirks (e.g. technical jargon, non-English, memes, etc.)"
+}`;
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model,
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0,
+      max_tokens: 400,
+      response_format: { type: "json_object" }
+    });
+
+    const content = completion.choices[0]?.message?.content || "";
+    const parsed = JSON.parse(content);
+
+    if (!parsed.summary || !parsed.mannerisms) {
+      throw new Error("Missing required fields in response");
+    }
+
+    return { summary: parsed.summary, mannerisms: parsed.mannerisms };
+  } catch (error: any) {
+    console.error(`    LLM error for #${channel.name}: ${error.message}`);
+    return null;
+  }
+}
+
+async function commandSummarize(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
+  console.log("\n Channel Summarization\n");
+  const summarizeSpinner = spinner("Preparing channel summarization", process.argv.slice(2)).start();
+
+  // Initialize OpenAI
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    summarizeSpinner.fail("OPENAI_API_KEY missing");
+    console.error("OPENAI_API_KEY not set in environment");
+    process.exit(1);
+  }
+
+  const openai = new OpenAI({
+    apiKey,
+    baseURL: process.env.USE_OPENROUTER === "true" ? "https://openrouter.ai/api/v1" : undefined,
+    defaultHeaders: process.env.USE_OPENROUTER === "true" ? {
+      "HTTP-Referer": process.env.SITE_URL || "",
+      "X-Title": process.env.SITE_NAME || ""
+    } : undefined
+  });
+
+  const model = process.env.USE_OPENROUTER === "true" ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+
+  // Determine which channels to summarize
+  let channelsToSummarize: DiscordChannel[];
+
+  if (args.channelId) {
+    const channel = await registry.getChannelById(args.channelId);
+    if (!channel) {
+      console.error(`Channel ${args.channelId} not found in registry`);
+      process.exit(1);
+    }
+    channelsToSummarize = [channel];
+    console.log(`Summarizing single channel: #${channel.name}`);
+  } else if (args.all) {
+    channelsToSummarize = (await registry.getAllChannels()).filter(c => !c.isMuted && c.currentVelocity > 0);
+    console.log(`Summarizing all ${channelsToSummarize.length} active channels`);
+  } else {
+    // Default: channels where aiSummary is null, non-muted, with activity
+    const allChannels = await registry.getAllChannels();
+    channelsToSummarize = allChannels.filter(c => !c.isMuted && c.currentVelocity > 0 && !c.aiSummary);
+    console.log(`Summarizing ${channelsToSummarize.length} unsummarized channels`);
+  }
+
+  if (channelsToSummarize.length === 0) {
+    summarizeSpinner.stop();
+    console.log("\nNo channels to summarize.\n");
+    return;
+  }
+
+  console.log("");
+
+  let summarized = 0;
+  let errors = 0;
+
+  for (let i = 0; i < channelsToSummarize.length; i++) {
+    const channel = channelsToSummarize[i];
+    summarizeSpinner.text = stepProgress(i + 1, channelsToSummarize.length, `Summarizing #${channel.name}`);
+    process.stdout.write(`  Summarizing #${channel.name.padEnd(25)}...`);
+
+    const messages = await loadChannelMessages(db, channel.id, 100);
+
+    if (messages.length === 0) {
+      console.log(" no messages");
+      continue;
+    }
+
+    const messagesText = messages.join("\n");
+    const result = await summarizeChannelWithLLM(openai, model, channel, messagesText);
+
+    if (result) {
+      await registry.updateAISummary(channel.id, result.summary, result.mannerisms);
+      console.log(" ✓");
+      summarized++;
+    } else {
+      console.log(" ERROR");
+      errors++;
+    }
+
+    await sleep(200);
+  }
+
+  console.log(`\nSummarization complete!`);
+  console.log(`  Summarized: ${summarized}`);
+  console.log(`  Errors: ${errors}`);
+  summarizeSpinner.succeed("Channel summarization complete");
+}
+
 async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, args: CliArgs): Promise<void> {
   console.log("\n Channel Analysis\n");
   const analyzeSpinner = spinner("Preparing channel analysis", process.argv.slice(2)).start();
@@ -1216,6 +1355,7 @@ Discord Channel Management CLI
 Discovery & Analysis:
   discover [--source=<config>.json]       Fetch channels from Discord (or raw data if no token)
   analyze [--all] [--channel=ID]          Run LLM analysis on channels
+  summarize [--all] [--channel=ID]        Generate AI summaries and mannerism guides
   propose [--dry-run]                     Generate config diff and PR markdown
 
 Query Commands:
@@ -1243,6 +1383,8 @@ Examples:
   npm run channels -- analyze               # Analyze channels needing analysis
   npm run channels -- analyze --all         # Re-analyze all channels
   npm run channels -- analyze --channel=123 # Analyze a single channel
+  npm run channels -- summarize             # Summarize unsummarized channels
+  npm run channels -- summarize --all       # Re-summarize all active channels
   npm run channels -- propose               # Generate PR body with config changes
   npm run channels -- list --tracked        # List tracked channels
 
@@ -1292,6 +1434,9 @@ export async function runChannels(argv: string[] = process.argv.slice(2)) {
         break;
       case "analyze":
         await commandAnalyze(db, registry, args);
+        break;
+      case "summarize":
+        await commandSummarize(db, registry, args);
         break;
       case "propose":
         await commandProposeUpdate(db, registry, args);

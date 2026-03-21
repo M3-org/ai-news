@@ -360,8 +360,8 @@ Return the analysis in the specified structured format with numbered sections (1
    * @private
    */
   private parseStructuredText(text: string, channelName: string, guildName: string): DiscordSummary {
-    // Split into sections using numbered headings
-    const sections = text.split(/\n(?:\d+\.\s*)/);
+    // Prepend \n so the first "1. " header is also consumed by the split pattern
+    const sections = ('\n' + text).split(/\n\d+\.\s*/);
     
     // Extract content from each section
     const summary = sections.length > 1 ? this.extractSection(sections[1], 'Summary') : text;
@@ -602,6 +602,9 @@ Return the analysis in the specified structured format with numbered sections (1
             channelId: s.channelId || '',
             channelName: s.channelName || '',
             summary: s.summary || '',
+            faqs: s.faqs || [],
+            helpInteractions: s.helpInteractions || [],
+            actionItems: s.actionItems || [],
             messageCount: channelStats?.messageCount || 0,
             userCount: channelStats?.uniqueUsers.length || 0
           };
@@ -653,19 +656,35 @@ Return the analysis in the specified structured format with numbered sections (1
         .join('\n\n---\n');
       
       // Create prompt without triple backticks to avoid artifacts
-      const prompt = `Create a comprehensive daily markdown summary of Discord discussions from ${dateStr}. 
+      const prompt = `Create a comprehensive daily markdown summary of Discord discussions from ${dateStr}.
 Here are the channel summaries:
 
 ${promptContext}
 
-Please structure the final output clearly, covering these points across all channels:
-1. **Overall Discussion Highlights:** Key topics, technical decisions, and announcements. Group by theme rather than by channel.
-2. **Key Questions & Answers:** List significant questions that received answers.
-3. **Community Help & Collaboration:** Showcase important instances of users helping each other.
-4. **Action Items:** Consolidate all action items, grouped by type (Technical, Documentation, Feature). Ensure attribution (mentioned by) is included.
+Use plain text only — no emojis anywhere, including headings.
 
-Use markdown formatting effectively (headings, lists, bold text). Start your response directly with the markdown content, not with explanations or preamble.
-Please note that the final output should be in a single, coherent document without any markdown code block formatting.`;
+Structure your output with exactly these top-level sections in this order:
+
+## Summary
+Group themes across all channels as sub-headers using plain noun phrases only (### ThemeName). No emojis, no decorative dashes or punctuation in sub-headers.
+
+## FAQ
+Format each item as:
+**Q: <question>**
+A: <answer>
+
+## Help Interactions
+Consolidate help interactions across channels. For each interaction list the helper, helpee, and resolution.
+
+## Action Items
+Group under exactly these sub-sections (omit any that are empty):
+### Technical
+### Features
+### Documentation
+
+Include attribution (mentioned by) for each action item.
+
+Start your response directly with ## Summary. No preamble, no explanations, no markdown code block markers.`;
       
       logger.info(`Sending daily summary prompt to AI provider`);
       const result = await this.provider.summarize(prompt);
@@ -675,7 +694,6 @@ Please note that the final output should be in a single, coherent document witho
       return result
         .trim()
         .replace(/```markdown\n?|```\n?/g, '') // Remove markdown code block markers
-        .replace(/^#+ .*\n{1,2}/m, '') // Remove any top-level heading line
     } catch (error) {
       logger.error(`Error generating daily summary: ${error instanceof Error ? error.message : String(error)}`);
       return `# Error Generating Summary\n\nUnable to generate summary: ${error instanceof Error ? error.message : String(error)}`;
