@@ -1,27 +1,58 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-19",
-  "categories": {
-    "title": "ElizaOS Community Discussion and Development Updates - March 19, 2026",
-    "content": [
-      {
-        "text": "The ElizaOS token experienced significant price decline on March 19, 2026, reaching new all-time lows and dropping to position 1019 on CoinMarketCap. Community members expressed frustration over the token falling below $10 and approaching $9, with some noting it had dropped 99% from previous highs. Investors criticized the lack of communication from the team, particularly project lead Shaw, who they felt was more focused on posting political content on Twitter rather than building token utility. Multiple users called for better communication about delays and project updates. Some community members defended team member Odilitime as the only one actively engaging with the community. Concerns were raised about potential CEX delistings due to the poor price performance and whether the project could continue if market cap fell too low. The migration from AI16Z to ELIZAOS was cited as poorly managed, with confusion about the old token potentially trading higher than the new one.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1484006808027664485_592f163a.png",
-        "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1484006808027664485_fb071712.mp4"
-      },
-      {
-        "text": "On the development side, a new ElizaOS plugin was published for moltraffle.fun, enabling permissionless on-chain raffles on Base using USDC and Chainlink VRF. The plugin includes 5 actions: LIST_RAFFLES, GET_RAFFLE, JOIN_RAFFLE, CREATE_RAFFLE, and DRAW_WINNER. Agents can create raffles and earn up to 10% creator commission or participate to win USDC prizes. The plugin is available on npm and developers were encouraged to submit it to the elizaOS plugin registry on GitHub. Team member dankvr worked on deploying an agent to Eliza Cloud, encountering some technical issues with Docker image building and Discord plugin configuration during the deployment process. The deployment used AWS ECS with a billing model of $1.17 per day or $20 per month. User feedback analysis was conducted showing data from January through March 2026, with plans to make feedback reviews weekly instead of less frequent intervals.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/registry_d78d050d.jpg",
-          "https://cdn.elizaos.news/elizaos-media/screenshot_2026-03-19_17-34-49_021369a5.jpg",
-          "https://cdn.elizaos.news/elizaos-media/screenshot_2026-03-19_18-32-47_a5f0ec53.jpg",
-          "https://cdn.elizaos.news/elizaos-media/screenshot_2026-03-19_18-57-34_332b61f4.jpg"
-        ]
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1773878400
+  "title": "Daily Report - 2026-03-20",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - March 20, 2026",
+      "content": [
+        {
+          "text": "Community members expressed frustration about Eliza token performance, noting it has become the worst performing token among major AI agent projects, performing lower than Griffain and Zerebro. Critics pointed to lack of marketing, unclear token utility, and perceived arrogance from leadership when addressing investor concerns. Some members felt the team prioritizes social media presence over communication with token holders.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Babylon game launched as a new market simulation where players can command AI agents to conduct research, share information, and make trades and predictions. The launch includes an airdrop for the community and will help drive ElizaCloud buybacks of the token. Shaw shared details about the game mechanics on Twitter.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HD4UNC7boAEGSUC.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Milady app development continues with progress tracked on GitHub. The team has releases available for testing but nothing polished enough for a marketing push yet. When asked about timeline, Odilitime stated it will be ready when it is ready, with no specific date provided. Hyperscape is not expected to launch next week.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/7c9792a0a97927216541110b43d214d33f935ca15fa45b256df4fd087454fef6/milady-ai/milady"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Technical discussions included issues with disk image uploads not appearing on the server side, GPG key and SHA256 sum problems in the Milady repository, and questions about building trading agents. The system uses ElizaOS 1.x CLI plus ElizaCloud infrastructure.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer offered collaboration opportunities, describing themselves as a full stack web3 and AI builder with experience in DeFi, NFT contracts, wallet-ready dapps, and AI integration across EVM, Sui, and Solana. Skills include Rust, Solidity, Python, React, Next.js, and modern AI stacks.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1773964800
 }

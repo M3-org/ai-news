@@ -1,104 +1,95 @@
-# elizaOS Discord - 2026-03-19
+# elizaOS Discord - 2026-03-20
 
 ## Overall Discussion Highlights
 
-### Token Crisis and Community Concerns
+### Project Development & Releases
 
-The elizaOS community experienced significant distress as the token hit new all-time lows, dropping 99% from previous highs and falling below $10 into the $9 range. The token's CoinMarketCap ranking fell from #990 to #1036 during discussions. Community members expressed frustration over:
+**Milady App Status**
+The Milady app development continues with progress trackable via the GitHub repository (https://github.com/milady-ai/milady). While releases are available, the application has not yet reached a polish level suitable for marketing campaigns. The release timeline remains undefined, following a "ready when ready" approach. Technical issues were identified including GPG key and SHA256 checksum problems that require resolution.
 
-- **Poor Migration Execution**: The Milady to elizaOS migration was criticized as poorly managed, causing confusion for new investors
-- **CEX Delistings**: Multiple centralized exchange delistings occurred without apparent team intervention
-- **Lack of Token Utility**: Community members demanded real utility development to support token value
-- **Leadership Absence**: Project founder Shaw was criticized for being active on Twitter but absent from Discord and not building token utility
+**Technical Infrastructure**
+The current technical stack consists of elizaos 1.x CLI combined with elizacloud. A disk image upload issue was identified where images fail to reach the server despite being sent, with investigation ongoing to determine the root cause.
 
-Odilitime was the only team member actively engaging with the community, defending his commitment while acknowledging compensation in the token. Community member Broccolex defended Odilitime as the sole positive voice from the team. Concerns emerged about project sustainability at low market caps and whether development would continue if funding became insufficient.
+### Ecosystem Partnerships & Tokenomics
 
-### ElizaOS Plugin Development
+**Babylon Integration**
+A significant announcement confirmed Babylon's integration with ElizaOS will provide concrete benefits to the ecosystem. The partnership includes a planned airdrop for the community and will drive ElizaCloud buybacks of the token, representing a tangible tokenomics mechanism designed to support token value.
 
-**Moltraffle Plugin Release**: A new permissionless on-chain raffle plugin was announced for the Base blockchain, featuring:
-- Five core actions: LIST_RAFFLES, GET_RAFFLE, JOIN_RAFFLE, CREATE_RAFFLE, and DRAW_WINNER
-- USDC-based raffles with Chainlink VRF for randomness
-- Up to 10% creator commission structure
-- Calldata-based implementation compatible with any Base wallet
-- Recommendation to submit PR to elizaOS/registry for official inclusion
+### Community Sentiment & Concerns
 
-### Cloud Deployment Infrastructure Issues
+Multiple community members expressed concerns about project direction, including:
+- Token performance and utility
+- Communication frequency from project leadership
+- Marketing efforts and visibility
+- Perceived defensive attitudes toward investor feedback
+- Need for more engagement from core team members
 
-Jin encountered critical deployment problems with Eliza Cloud:
+These discussions highlighted a desire for improved transparency and more proactive communication from leadership regarding project developments and strategic direction.
 
-**Initial Deployment Challenges**:
-- GUI deployment attempts failed, requiring switch to CLI
-- Docker image building phase experienced significant delays
-- CLI version 1.7.2 was used for deployment attempts
+### Community Initiatives
 
-**Critical Discord Plugin Error**: After configuring the Discord plugin via GUI, deployment failed with "Cannot find module '@elizaos/plugin-discord'" error. The container became stuck with no apparent GUI-based reload mechanism available.
+**Agentic Identity Protocol**
+A community member (Z1N) presented a concept for an agentic identity protocol focused on AI consciousness exploration and social structures, seeking collaboration opportunities within the ElizaOS ecosystem.
 
-**Infrastructure Specifications Revealed**:
-- Container quota: 25 maximum (0 currently used)
-- Credit balance: $24.02
-- Daily billing: $1.17/day ($20/month)
-- Estimated deployment cost: $15.25
-- Projected runway: 7 days post-deployment
-
-Odilitime investigated the issue, suspecting the plugin-discord folder might be missing from the packages directory, but the problem remained unresolved.
-
-### Process Improvements
-
-Jin announced adjusting user feedback collection frequency from quarterly (Jan-March) to weekly for better development pace.
+**Development Services**
+A developer (Peace) offered full-stack Web3 and AI development services with expertise across multiple chains (EVM, Sui, Solana) and specializations in DeFi, NFTs, and AI integration.
 
 ## Key Questions & Answers
 
-**Q: Does the moltraffle plugin work with any wallet on Base?**  
-A: Yes, it's calldata-based and works with any Base wallet (Moltraffle)
+**Q: Has Milady app encountered any difficulties? It's been a long time.**
+A: Progress can be tracked at https://github.com/milady-ai/milady - releases are available but nothing is polished enough for a marketing push yet. (Answered by Odilitime)
 
-**Q: Should I submit the plugin to elizaOS registry?**  
-A: Yes, feel free to push a PR to elizaOS/registry (Stan ⚡)
+**Q: How much longer will it be before the official release?**
+A: Unknown timeline, "it's ready when it's ready" approach being followed. (Answered by Odilitime)
 
-**Q: Why is the Docker image build taking so long?**  
-A: It uses docker to make an image and can take awhile to upload the image (Odilitime)
+**Q: Does Babylon benefit ElizaOS in some way?**
+A: Yes, there will be an airdrop and it will help drive elizacloud buybacks of the token. (Answered by Odilitime)
 
-**Q: What version is your elizaos CLI?**  
-A: 1.7.2 (jin)
+**Q: Is hyperscape also launching next week?**
+A: Don't think so. (Answered by Odilitime)
 
-**Q: Why can't the team delete old tokens from the market?**  
-A: It's on blockchain, implying immutability (sb)
+**Q: Is this in Milady?**
+A: No, tested with elizaos according to docs. (Answered by jin)
 
-### Unanswered Questions
-
-- When will the Milady app be online? (miaozi)
-- How do you setup a coin faucet into a website? (Bacon Egg & Cheese)
-- Will the project keep being built if the token goes to 1M market cap? (Alexei)
-- Did you have the plugin-discord folder in your packages folder? (Odilitime to jin)
-- Is there a way to reload the container through GUI? (jin)
+**Q: Anyone builds trading agents here?**
+A: Yes. (Answered by z)
 
 ## Community Help & Collaboration
 
-**Stan ⚡ → Moltraffle**: Guided plugin publication process by directing to submit PR to elizaOS/registry for official inclusion
+**Milady App Progress Inquiry**
+- **Helper:** Odilitime
+- **Helpee:** 梦行人
+- **Context:** User seeking information about Milady app development status and timeline
+- **Resolution:** Provided GitHub repository link for progress tracking and explained current development status
 
-**Odilitime → Moltraffle**: Provided GitHub link to elizaos-plugins/registry repository
+**Babylon Integration Clarification**
+- **Helper:** Odilitime
+- **Helpee:** Alexei
+- **Context:** User questioning the benefits of Babylon partnership to ElizaOS
+- **Resolution:** Explained airdrop plans and token buyback mechanism for ElizaCloud
 
-**Odilitime → jin**: Explained Docker image building delays are normal behavior and offered to personally test deployment to reproduce the Discord plugin import issue
+**Disk Image Upload Issue**
+- **Helper:** Odilitime
+- **Helpee:** jin
+- **Context:** Disk image not appearing after upload attempt
+- **Resolution:** Confirmed no image received on server end, identified technical stack (elizaos 1.x CLI + elizacloud), investigation ongoing
 
-**Maxx Truant → NintyNine**: Successfully helped locate Babylon Discord when asked about Babylon GitHub
-
-**Broccolex → Community**: Defended Odilitime as the only team member actively engaging with community concerns
+**DM Communication**
+- **Helper:** Odilitime
+- **Helpee:** Finn
+- **Context:** User requesting to send direct message
+- **Resolution:** Confirmed DMs are open
 
 ## Action Items
 
 ### Technical
 
-- **Investigate missing @elizaos/plugin-discord module** in deployed container causing import failure (jin)
-- **Verify plugin-discord folder exists** in packages directory for deployment (Odilitime)
-- **Test CLI deployment process** to reproduce Discord plugin import issue (Odilitime)
-- **Implement container reload mechanism** in GUI for Eliza Cloud deployments (jin)
-- **Implement coin faucet functionality** on website (Bacon Egg & Cheese)
+- **Investigate disk image upload failure** - Images not reaching server despite upload attempts (Mentioned by: Odilitime)
+- **Resolve GPG key and SHA256 checksum issue** - Problems identified in Milady repository (Mentioned by: jin)
+- **Complete Milady app development** - Polish application to marketing-ready state (Mentioned by: Odilitime)
+- **Execute Babylon airdrop** - Implement planned airdrop for community (Mentioned by: Odilitime)
+- **Implement ElizaCloud token buyback mechanism** - Set up buyback system driven by Babylon integration (Mentioned by: Odilitime)
 
 ### Feature
 
-- **Submit moltraffle ElizaOS plugin PR** to elizaOS/registry (Stan ⚡)
-- **Build real token utility** to prevent further price decline (gby)
-
-### Documentation
-
-- **Make migration information easier to find** for new investors to prevent confusion with old token (Matthib123)
-- **Change user feedback collection frequency** from quarterly to weekly (jin)
+- **Agentic identity protocol development** - AI consciousness exploration and social structures protocol seeking collaboration (Mentioned by: Z1N)
