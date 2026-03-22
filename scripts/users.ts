@@ -762,6 +762,27 @@ async function commandStatus(db: Database, args: CliArgs): Promise<void> {
 // Command: generate-profiles
 // ============================================================================
 
+/**
+ * Sample items distributed across the full date range rather than only the
+ * most recent. Splits sorted items into three equal buckets (early/mid/recent)
+ * and takes ceil(n/3) evenly from each, so the profile reflects the full arc.
+ */
+function sampleAcrossRange<T extends { date: string }>(items: T[], n: number): T[] {
+  if (items.length <= n) return items;
+  const sorted = [...items].sort((a, b) => a.date.localeCompare(b.date));
+  const bucketSize = Math.ceil(sorted.length / 3);
+  const take = Math.ceil(n / 3);
+  const early  = sorted.slice(0, bucketSize);
+  const mid    = sorted.slice(bucketSize, bucketSize * 2);
+  const recent = sorted.slice(bucketSize * 2);
+  const pickEvenly = (bucket: T[], count: number): T[] => {
+    if (bucket.length <= count) return bucket;
+    const step = bucket.length / count;
+    return Array.from({ length: count }, (_, i) => bucket[Math.floor(i * step)]);
+  };
+  return [...pickEvenly(early, take), ...pickEvenly(mid, take), ...pickEvenly(recent, take)];
+}
+
 interface UserActivity {
   userId: string | null;
   helpGiven: Array<{ context: string; resolution: string; date: string }>;
@@ -947,6 +968,21 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
       return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
     })() : 0;
 
+    const activityTier = activity.activeDates.size >= 30 ? "core"
+      : activity.activeDates.size >= 5 ? "regular" : "casual";
+
+    const SAMPLES = activityTier === "core"
+      ? { help: 20, actions: 25, questions: 15 }
+      : activityTier === "regular"
+      ? { help: 12, actions: 15, questions: 10 }
+      : { help: 6, actions: 8, questions: 5 };
+
+    const helpGivenSamples     = sampleAcrossRange(activity.helpGiven,         SAMPLES.help);
+    const helpReceivedSamples  = sampleAcrossRange(activity.helpReceived,       SAMPLES.help);
+    const actionItemSamples    = sampleAcrossRange(activity.actionItems,        SAMPLES.actions);
+    const questAnsweredSamples = sampleAcrossRange(activity.questionsAnswered,  SAMPLES.questions);
+    const questAskedSamples    = sampleAcrossRange(activity.questionsAsked,     SAMPLES.questions);
+
     const activityBlock = `Activity across ${activity.activeDates.size} days of logs (${dateRange}):
 - Helped others: ${activity.helpGiven.length} times
 - Received help: ${activity.helpReceived.length} times
@@ -955,10 +991,26 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
 - Mentioned in action items: ${activity.actionItems.length} (${technicalCount} Technical, ${featureCount} Feature, ${docCount} Documentation)`;
 
     const samplesBlock = [
-      activity.helpGiven.length ? `Sample help given:\n${activity.helpGiven.slice(-10).map((h) => `- Context: ${h.context} | Resolution: ${h.resolution}`).join("\n")}` : "",
-      activity.actionItems.length ? `Sample action items:\n${activity.actionItems.slice(-15).map((a) => `- [${a.type}] ${a.description}`).join("\n")}` : "",
-      activity.questionsAnswered.length ? `Sample questions answered:\n${activity.questionsAnswered.slice(-8).map((q) => `- ${q.question}`).join("\n")}` : "",
-      activity.questionsAsked.length ? `Sample questions asked:\n${activity.questionsAsked.slice(-8).map((q) => `- ${q.question}`).join("\n")}` : "",
+      helpGivenSamples.length
+        ? `Help given (${helpGivenSamples.length} samples across full date range):\n`
+          + helpGivenSamples.map((h) => `- [${h.date}] Context: ${h.context} | Resolution: ${h.resolution}`).join("\n")
+        : "",
+      helpReceivedSamples.length
+        ? `Help received — use for Problems & Challenges section (${helpReceivedSamples.length} samples):\n`
+          + helpReceivedSamples.map((h) => `- [${h.date}] ${h.context}`).join("\n")
+        : "",
+      actionItemSamples.length
+        ? `Action items (${actionItemSamples.length} samples):\n`
+          + actionItemSamples.map((a) => `- [${a.date}] [${a.type}] ${a.description}`).join("\n")
+        : "",
+      questAnsweredSamples.length
+        ? `Questions answered (${questAnsweredSamples.length} samples):\n`
+          + questAnsweredSamples.map((q) => `- [${q.date}] ${q.question}`).join("\n")
+        : "",
+      questAskedSamples.length
+        ? `Questions asked verbatim — use as direct quotes for Characteristic Questions section (${questAskedSamples.length} samples):\n`
+          + questAskedSamples.map((q) => `- [${q.date}] "${q.question}"`).join("\n")
+        : "",
     ].filter(Boolean).join("\n\n");
 
     const registryBlock = `Registry data:
@@ -967,35 +1019,46 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
 - Active: ${firstSeenDate} to ${lastSeenDate}
 - Total messages: ${registryUser.totalMessages.toLocaleString()}`;
 
+    const temporalArcSection = dateSpanMonths >= 3
+      ? `\n## Temporal Arc\nDescribe how this person's focus or role evolved across the date range. Use the dated evidence above to organize observations into chronological buckets (early / mid / recent). Only include this section if there is meaningful evidence of change.`
+      : "";
+
     let prompt: string;
 
     if (existingFile && !args.force) {
-      // Extract existing prose (everything after the frontmatter)
       const existingProse = existingFile.replace(/^---[\s\S]*?---\n*/, "").trim();
       const existingFrontmatterMatch = existingFile.match(/^---\n([\s\S]*?)\n---/);
       const existingGeneratedAt = existingFrontmatterMatch?.[1].match(/generatedAt:\s*"?([^"\n]+)"?/)?.[1] || "unknown";
 
-      prompt = `You are updating a community profile for "${displayName}" in the ${serverName} Discord server.
+      prompt = `You are updating a structured community profile for "${displayName}" in the ${serverName} Discord server.
 
-Existing profile (generated ${existingGeneratedAt}):
+The existing profile was generated on ${existingGeneratedAt}. New activity data is provided below. Update each section using the new evidence, then output the complete updated profile.
+
+Rules:
+1. Preserve the exact ## section headings and their order. Do not add or remove sections (except Temporal Arc — add it if missing and dateSpanMonths >= 3, update it if present).
+2. For each section: add new claims supported by new evidence; correct or remove claims contradicted by newer data; note any meaningful shifts in focus or role.
+3. In "Characteristic Questions & Quotes": replace less representative quotes with better ones from new samples if available. Keep 4-6 total.
+4. Write in objective journalist style — grounded in evidence, no speculation, no flattery.
+
+EXISTING PROFILE:
 ${existingProse}
 
+REGISTRY DATA (current):
 ${registryBlock}
 
-Updated ${activityBlock}
+UPDATED ACTIVITY TOTALS:
+${activityBlock}
 
+NEW EVIDENCE (sampled across full date range, with dates):
 ${samplesBlock}
 
-Update the profile based on all available data. Correct anything outdated, extend with new patterns, and note any meaningful shifts in focus or role over time${dateSpanMonths >= 3 ? " — especially if activity evolved across different periods" : ""}. Return the complete updated profile.
+After all sections, output a ## Skills section: a JSON array of 5-15 specific skill tags derived from the evidence. Use concrete terms not generic ones. Format exactly as: ["tag1", "tag2", ...]
 
-Write 2-3 paragraphs. Be specific and grounded in the data. Do not speculate beyond what the evidence shows.
-Plain text only, no markdown, no emojis.`;
+Output the complete updated profile starting from ## Bio. Do not output YAML frontmatter, code fences, or any preamble.`;
     } else {
-      const temporalInstruction = dateSpanMonths >= 3
-        ? "\n5. If their focus or activity shifted meaningfully over time, note how."
-        : "";
+      prompt = `You are writing a structured community profile for "${displayName}" in the ${serverName} Discord server.
 
-      prompt = `You are writing a community profile for "${displayName}" in the ${serverName} Discord server.
+Write in the style of an objective journalist: grounded in the evidence provided, no speculation, no flattery. Attribute claims to specific evidence from the samples below.
 
 ${registryBlock}
 
@@ -1003,14 +1066,40 @@ ${activityBlock}
 
 ${samplesBlock}
 
-Write a 2-3 paragraph profile covering:
-1. Who this person is and their role in the community
-2. Their domains of expertise and what they work on
-3. Their collaboration style — do they teach, build, organize, or ask?
-4. Any recurring goals, challenges, or themes visible in the data${temporalInstruction}
+Output exactly the following sections in this order. Use the exact ## headings shown.
 
-Be specific and grounded in the data. Do not speculate beyond what the evidence shows.
-Plain text only, no markdown, no emojis.`;
+## Bio
+4-6 factual bullet points covering: who they are, how long they have been active (${firstSeenDate} to ${lastSeenDate}), their primary roles in the community, total message volume (${registryUser.totalMessages.toLocaleString()} messages), and their overall contribution posture (helper, builder, questioner, organizer, etc.).
+
+## Domains & Skills
+Bullet list of specific technical and domain expertise derivable from the questions they answered and the help they gave. Name concrete technologies, frameworks, and concepts — not generic categories.
+
+## Communication Style
+2-3 sentences describing observable patterns: vocabulary register, question-asking style, answer structure, technical depth. Include 2-4 adjectives that describe their voice.
+
+## Characteristic Questions & Quotes
+4-6 direct quotes from the "Questions asked verbatim" samples above. Format each as:
+- "[exact question text]" (YYYY-MM)
+Choose quotes that best capture their intellectual interests and voice. Prefer questions showing specificity or a recurring domain.
+
+## Problems & Challenges
+Objective bullet list of recurring problems or friction points visible in the help received and questions asked samples. Synthesize the pattern — do not restate questions verbatim.
+
+## Goals & Projects
+Derive from action item samples. Organize as:
+- Technical: [items]
+- Feature: [items]
+- Documentation: [items]
+Omit sub-sections with zero items.
+
+## Help Patterns
+**Gives:** 1-2 sentences on what this person reliably helps others with (from help given samples).
+**Receives:** 1-2 sentences on what this person seeks help for (from help received samples).
+${temporalArcSection}
+## Skills
+A JSON array of 5-15 specific skill tags derived from the questions they answered and help they gave. Use concrete terms (e.g. "WebXR", "Blender", "Solidity", "avatar-pipelines") not generic ones ("programming", "technology"). Format exactly as: ["tag1", "tag2", ...]
+
+Output only section content starting from ## Bio. Do not output YAML, code fences, or any preamble.`;
     }
 
     try {
@@ -1018,7 +1107,6 @@ Plain text only, no markdown, no emojis.`;
         model,
         messages: [{ role: "user", content: prompt }],
         temperature: 0.3,
-        max_tokens: 600,
       });
       const profileText = completion.choices[0].message.content?.trim() || "";
 
@@ -1029,7 +1117,7 @@ Plain text only, no markdown, no emojis.`;
         `username: "${registryUser.username}"`,
         `displayName: "${displayName}"`,
         `roles: [${registryUser.roles.map((r) => `"${r}"`).join(", ")}]`,
-        `activityTier: "${activity.activeDates.size >= 30 ? "core" : activity.activeDates.size >= 5 ? "regular" : "casual"}"`,
+        `activityTier: "${activityTier}"`,
         `generatedAt: "${new Date().toISOString().split("T")[0]}"`,
         `dateRange: "${dateRange}"`,
         `helpGiven: ${activity.helpGiven.length}`,
