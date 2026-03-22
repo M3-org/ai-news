@@ -1,95 +1,79 @@
-# elizaOS Discord - 2026-03-20
+# elizaOS Discord - 2026-03-21
 
-## Overall Discussion Highlights
+## Summary
 
-### Project Development & Releases
+### Project Communication and Management
 
-**Milady App Status**
-The Milady app development continues with progress trackable via the GitHub repository (https://github.com/milady-ai/milady). While releases are available, the application has not yet reached a polish level suitable for marketing campaigns. The release timeline remains undefined, following a "ready when ready" approach. Technical issues were identified including GPG key and SHA256 checksum problems that require resolution.
+The AI16Z/Eliza project faced significant community criticism regarding communication practices and project management. Team member Odilitime defended the communication strategy, noting that weekly video updates (cronjob) and daily updates are posted in a dedicated channel. However, community members expressed frustration that these updates do not address their primary concerns. The team acknowledged internal organization with developers focused on development, staff managing partners, Shaw handling Twitter, and others managing accounting and taxes. Odilitime handles community engagement during downtime due to marketing and branding background.
 
-**Technical Infrastructure**
-The current technical stack consists of elizaos 1.x CLI combined with elizacloud. A disk image upload issue was identified where images fail to reach the server despite being sent, with investigation ongoing to determine the root cause.
+### Token Economics and Performance
 
-### Ecosystem Partnerships & Tokenomics
+Community frustration centered on token performance and perceived mismanagement. The Babylon launch occurred but did not positively impact price. Token migration completed with 1 billion tokens minted post-migration, with community members criticizing the 40% community token allocation as a cash grab. The token initially traded upward for 3 consecutive months, which the team considered pivotal for the memecoin-as-investment narrative. However, the Trump token launch caused market-wide selloff that impacted AI16Z. The team acknowledged that token recovery is lagging behind broader market recovery, stating "something isn't right" though the cause remains unknown. Community members identified CEX listings and perpetual futures as needed for price recovery.
 
-**Babylon Integration**
-A significant announcement confirmed Babylon's integration with ElizaOS will provide concrete benefits to the ecosystem. The partnership includes a planned airdrop for the community and will drive ElizaCloud buybacks of the token, representing a tangible tokenomics mechanism designed to support token value.
+### Token Utility and Product Development
 
-### Community Sentiment & Concerns
+A major point of contention was the lack of implemented token utility despite ongoing development. Community members repeatedly asked for use cases and reasons to buy the token, with no concrete answers provided. The team was compared unfavorably to Virtuals protocol regarding token utility implementation. Despite development activity, no token utility has been tied to products being built, leading to community frustration about broken promises.
 
-Multiple community members expressed concerns about project direction, including:
-- Token performance and utility
-- Communication frequency from project leadership
-- Marketing efforts and visibility
-- Perceived defensive attitudes toward investor feedback
-- Need for more engagement from core team members
+### Eliza Ecosystem Architecture
 
-These discussions highlighted a desire for improved transparency and more proactive communication from leadership regarding project developments and strategic direction.
+Technical clarification was provided regarding the Eliza ecosystem structure. ElizaOS functions as an operating system for agents, serving as the foundational layer. Milady is built on top of elizaos rather than being a replacement or competitor, leveraging elizaos as its underlying infrastructure. OpenClaw agents can exist within the milady framework, indicating these technologies are complementary rather than competing. This clarification resolved fundamental misunderstandings about the ecosystem hierarchy.
 
-### Community Initiatives
+### Team Accountability and Community Relations
 
-**Agentic Identity Protocol**
-A community member (Z1N) presented a concept for an agentic identity protocol focused on AI consciousness exploration and social structures, seeking collaboration opportunities within the ElizaOS ecosystem.
+The team acknowledged mistakes with Odilitime stating they "fucked up plenty" but maintained they have not abandoned the project. Some community critics were suspected to be "paid shills" attempting to tank the project. Community members expressed concerns about broken promises and poor communication beyond just price performance. Team members positioned themselves as having "most information about the landscape" for decision-making. ValleyBeyond shared personal experience losing money on GalaGames to emphasize personal responsibility and the principle of only investing what one can afford to lose.
 
-**Development Services**
-A developer (Peace) offered full-stack Web3 and AI development services with expertise across multiple chains (EVM, Sui, Solana) and specializations in DeFi, NFTs, and AI integration.
+## FAQ
 
-## Key Questions & Answers
+**Q: By when will team mint remaining tokens and finish selling? Will project shut down after team sells all tokens?**
+A: Unanswered
 
-**Q: Has Milady app encountered any difficulties? It's been a long time.**
-A: Progress can be tracked at https://github.com/milady-ai/milady - releases are available but nothing is polished enough for a marketing push yet. (Answered by Odilitime)
+**Q: Why isn't the token recovering at the same rate as the market?**
+A: Something isn't right, cause unknown (answered by Odilitime)
 
-**Q: How much longer will it be before the official release?**
-A: Unknown timeline, "it's ready when it's ready" approach being followed. (Answered by Odilitime)
+**Q: Why is this chat full of posts saying the team is NOT communicating?**
+A: Team puts out weekly videos (cronjob) and daily updates in dedicated channel, but updates may not be what people are interested in (answered by Odilitime)
 
-**Q: Does Babylon benefit ElizaOS in some way?**
-A: Yes, there will be an airdrop and it will help drive elizacloud buybacks of the token. (Answered by Odilitime)
+**Q: Is there someone who coordinates information in the team or does everyone do it their own way?**
+A: Devs are developing, staff dealing with partners, Shaw on Twitter, others on accounting/taxes. Odilitime handles community in downtime due to marketing/branding background (answered by Odilitime)
 
-**Q: Is hyperscape also launching next week?**
-A: Don't think so. (Answered by Odilitime)
+**Q: What is one use case of this token?**
+A: Unanswered
 
-**Q: Is this in Milady?**
-A: No, tested with elizaos according to docs. (Answered by jin)
+**Q: Why should anyone buy this token?**
+A: Unanswered
 
-**Q: Anyone builds trading agents here?**
-A: Yes. (Answered by z)
+**Q: How stable is milaidy? Will it replace elizaos?**
+A: Milady is built on elizaos and won't replace it. ElizaOS is an operating system for agents that isn't getting replaced by anything (answered by sb)
 
-## Community Help & Collaboration
+**Q: Is milady the competitor for openclaw?**
+A: No, it's not a competitor. OpenClaw agents can exist in milady (answered by sb)
 
-**Milady App Progress Inquiry**
-- **Helper:** Odilitime
-- **Helpee:** 梦行人
-- **Context:** User seeking information about Milady app development status and timeline
-- **Resolution:** Provided GitHub repository link for progress tracking and explained current development status
+## Help Interactions
 
-**Babylon Integration Clarification**
-- **Helper:** Odilitime
-- **Helpee:** Alexei
-- **Context:** User questioning the benefits of Babylon partnership to ElizaOS
-- **Resolution:** Explained airdrop plans and token buyback mechanism for ElizaCloud
+Odilitime helped Rainman understand team communication practices by pointing to weekly cronjob videos and daily updates channel, explaining that updates may not match community interests.
 
-**Disk Image Upload Issue**
-- **Helper:** Odilitime
-- **Helpee:** jin
-- **Context:** Disk image not appearing after upload attempt
-- **Resolution:** Confirmed no image received on server end, identified technical stack (elizaos 1.x CLI + elizacloud), investigation ongoing
+ValleyBeyond helped gby and averma who were frustrated about losses and team accountability by sharing personal experience losing money on GalaGames and emphasizing personal responsibility and the principle of only investing what one can afford to lose.
 
-**DM Communication**
-- **Helper:** Odilitime
-- **Helpee:** Finn
-- **Context:** User requesting to send direct message
-- **Resolution:** Confirmed DMs are open
+Rainman helped the community address ongoing complaints about lack of communication by suggesting replying with link to UPDATES channel whenever someone accuses team of not communicating.
+
+sb helped HatcherLabs resolve confusion about whether milady would replace elizaos by clarifying that milady is built on elizaos, which serves as the foundational operating system for agents.
+
+sb helped HatcherLabs understand the relationship between milady and openclaw by explaining that openclaw agents can exist within milady, showing they are complementary technologies.
 
 ## Action Items
 
 ### Technical
 
-- **Investigate disk image upload failure** - Images not reaching server despite upload attempts (Mentioned by: Odilitime)
-- **Resolve GPG key and SHA256 checksum issue** - Problems identified in Milady repository (Mentioned by: jin)
-- **Complete Milady app development** - Polish application to marketing-ready state (Mentioned by: Odilitime)
-- **Execute Babylon airdrop** - Implement planned airdrop for community (Mentioned by: Odilitime)
-- **Implement ElizaCloud token buyback mechanism** - Set up buyback system driven by Babylon integration (Mentioned by: Odilitime)
+Address token recovery rate lagging behind market (mentioned by Odilitime)
 
-### Feature
+### Features
 
-- **Agentic identity protocol development** - AI consciousness exploration and social structures protocol seeking collaboration (Mentioned by: Z1N)
+Implement actual token utility tied to products being built (mentioned by gby)
+
+Secure good CEX listings and perpetual futures trading to improve price recovery (mentioned by ValleyBeyond)
+
+### Documentation
+
+Better communicate existing update channels (cronjob videos, daily updates) to address perception of poor communication (mentioned by Rainman)
+
+Study and understand the Eliza ecosystem architecture and component relationships (mentioned by HatcherLabs)
