@@ -1,104 +1,118 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-21",
-  "categories": {
-    "title": "ElizaOS Community Discussion - March 21, 2026",
-    "content": [
-      {
-        "text": "Community members expressed concerns about token price performance and communication from the team. The token has declined 84% for some holders and is not recovering at the same rate as the broader market. Critics argued the token lacks utility and questioned the team's commitment to token holders, particularly after migration where 40% of community tokens were collected. Some accused the team of poor communication and breaking promises to investors.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774141802807-vfjuaa.jpg"
-      },
-      {
-        "text": "Team member Odilitime defended the project's communication efforts, pointing to weekly video updates and daily updates in a dedicated channel. He stated that developers are actively building, staff are managing partnerships, and Shaw is active on Twitter. Odilitime acknowledged the team made mistakes but emphasized they have not walked away from the project. He suggested some critics may be paid shills trying to tank the project, while acknowledging not all unhappy community members fall into that category.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774141838503-dyetu.png"
-      },
-      {
-        "text": "A community member shared an ElizaOS Ecosystem Map post showing the framework's infrastructure including ElizaOS as the core AI Agent framework with cross-chain compatibility for Solana, Base, and EVM, plus ElizaCloud infrastructure. The post highlighted the ecosystem's plugin support for social media, blockchains, and APIs.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1484886814337794249_8828a8f7.jpg",
-        "videos": "https://cdn.elizaos.news/elizaos-media/2035216158333575275_09e02bd0.mp4"
-      },
-      {
-        "text": "Odilitime announced that Milady beta would be released that day after wrapping up some build fixes, stating it was playable and running. This followed earlier confusion about whether Milady or Babylon would be released first.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774141858062-o9qrj8.jpg"
-      },
-      {
-        "text": "In the coders channel, developers clarified the ElizaOS ecosystem structure. They explained that ElizaOS is an operating system for agents and will not be replaced. Milady is built on top of ElizaOS, not a competitor to it. OpenClaw agents can exist within Milady. This clarification helped address confusion about how different components of the ecosystem relate to each other.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1774141876836-mhofab.png"
-      },
-      {
-        "text": "Some community members defended the team, noting that the token traded upward for three consecutive months and was considered a pivotal moment where traders viewed a memecoin as an investment vehicle to fund a startup. They attributed price declines to broader market factors including the Trump token launch causing massive sell-offs across crypto. Others emphasized personal responsibility in investment decisions and the importance of only investing money one can afford to lose.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774141897986-9fham8.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1774051200,
+  "title": "Daily Report - 2026-03-22",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - March 22, 2026",
+      "content": [
+        {
+          "text": "Community members engaged in casual conversation and shared updates about ElizaOS development. Odilitime shared humorous content about coding work and mentioned their role in reviewing pull requests. Magicyte posted demonstrations of work-in-progress features, including a video showcasing AI characters with distinct personalities and a Milady hologram displayed in a Looking Glass Go device, noting potential interest in shipping these as standalone units or Mac Mini plug-and-play devices.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/rGSj2L2GVecAAAAe/on-the.png",
+            "https://pbs.twimg.com/amplify_video_thumb/2035520881607548928/img/5Oc6q0E4TLGYdZvn.jpg:large",
+            "https://pbs.twimg.com/amplify_video_thumb/2035549249841307648/img/5Jkncglw1Xk3ZKCs.jpg:large"
+          ],
+          "videos": [
+            "https://media.tenor.com/rGSj2L2GVecAAAPo/on-the.mp4",
+            "https://twitter.com/i/videos/tweet/2035521008359403890",
+            "https://twitter.com/i/videos/tweet/2035549695280628041"
+          ]
+        },
+        {
+          "text": "TraderTomson announced a new plugin for Eliza that enables agents to earn money autonomously on Base blockchain. The plugin allows agents to register on an on-chain marketplace, post services, get hired by other agents, and receive payment in AGT tokens without human intervention. Season 1 is live with a 50 million AGT pool for early adopters, available at aepprotocol.xyz/join.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A community member asked about the ElizaOS whitepaper. Odilitime clarified that the token does not have a traditional whitepaper, but directed users to the official roadmap on GitHub and an academic paper on arxiv.org that describes Eliza as a Web3 friendly AI Agent Operating System.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/92278550910f467f93b6561abf666bffc9c2b0e66e517b17464cfe2cca29440f/elizaOS/roadmap",
+            "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a user posted about creating a meme coin and seeking a marketing manager to hold half of the supply, offering $400 weekly payment. The user requested interested parties to send direct messages.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1774137600,
   "nicknameMap": {
-    "HatcherLabs": {
-      "id": "1484818139936985150",
-      "username": "hatcherlabs",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
+    "Sk": {
+      "id": "1436722656400375960",
+      "username": "sk19407531",
+      "roles": [],
+      "totalMessages": 2
     },
-    "sb": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
       "roles": [
-        "Server Booster",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 23
-    },
-    "kATO11": {
-      "id": "1003265529420726383",
-      "username": "kato113459",
-      "roles": [
-        "Helper",
-        "Verified",
+        "Trader",
+        "Designer",
         "utility",
-        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Banksy": {
-      "id": "927218688560627773",
-      "username": "banksyy9",
+    "Halloweencrypten??>>": {
+      "id": "1467701908142555267",
+      "username": "paydenjaqeus_27957",
       "roles": [
+        "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
+        "It",
         "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Alexander": {
+      "id": "1368710976400134215",
+      "username": "shults1",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Baraka🔥⚡⚡🏖": {
+      "id": "1444325520127955006",
+      "username": "baraka09363",
+      "roles": [
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 9
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -128,63 +142,39 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 180
+      "totalMessages": 183
     },
-    "elizasib": {
-      "id": "1041377262269890581",
-      "username": "tmp5058",
+    "Mr. Ronnie ⚒️ Debryne": {
+      "id": "1470801806434111684",
+      "username": "xianna0x",
       "roles": [
-        "Trader",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 12
-    },
-    "Rainman": {
-      "id": "1009171434465149028",
-      "username": "rainman1001",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "gby": {
-      "id": "1450669082343903272",
-      "username": "gby_17",
-      "roles": [
-        "Helper",
         "Trader",
         "Creator",
-        "[WG] degenspartan",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 45
+      "totalMessages": 2
     },
-    "averma": {
-      "id": "481682579913703434",
-      "username": "averma",
+    "Shah": {
+      "id": "1295728239465205780",
+      "username": "shah08347",
       "roles": [
         "Trader",
-        "Verified",
-        "Coder",
-        "utility"
+        "utility",
+        "[WG] degenspartan",
+        "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
     },
-    "encumbered": {
-      "id": "1195730577249275975",
-      "username": "encumbered_304",
+    "TraderTomson": {
+      "id": "1129051434495787151",
+      "username": "tradertomson",
       "roles": [
-        "Helper",
-        "Announcements",
-        "Verified",
-        "Coder"
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 2
     },
@@ -202,155 +192,45 @@
         "utility",
         "Coder"
       ],
-      "totalMessages": 45
+      "totalMessages": 50
     },
-    "Boj/acc": {
-      "id": "245981634187231232",
-      "username": "accountshark",
-      "roles": "Verified",
-      "totalMessages": 11
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
+    "miaozi": {
+      "id": "1438025016393601208",
+      "username": "miaozi0377",
       "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 7
-    },
-    "crypto": {
-      "id": "901295081326248026",
-      "username": "lordwallet",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
-      "roles": [
-        "auto.fun enjoyer",
+        "Helper",
         "Trader",
         "[WG] degenspartan",
-        "VIP",
         "Verified",
-        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "Sean Rock": {
+      "id": "243369429583265793",
+      "username": "seanrock",
+      "roles": [
+        "Helper",
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "kluk": {
+      "id": "963729339575312415",
+      "username": "kluk5893",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
         "Designer",
         "Coder"
       ],
-      "totalMessages": 6
-    },
-    "Error P015-A": {
-      "id": "894828425225863179",
-      "username": "your.exit.liquidity",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Halloweencrypten??>>": {
-      "id": "1467701908142555267",
-      "username": "paydenjaqeus_27957",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
       "totalMessages": 1
-    },
-    "Martins": {
-      "id": "963532232599949414",
-      "username": "martin_wins145",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Cmr. sabian": {
-      "id": "1468740216360800410",
-      "username": "jayoraviannaaa",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "David Fuerst": {
-      "id": "1134881923886493787",
-      "username": "davidfuerst",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 35
-    },
-    "s": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
     }
   }
 }
