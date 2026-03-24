@@ -1,0 +1,301 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-03-23",
+  "categories": [
+    {
+      "title": "Community Discussion and Milady App Development Status",
+      "content": [
+        {
+          "text": "On March 23, 2026, the Discord community engaged in general discussion with mixed sentiment about the project. One user expressed concern about the token price decline from $2.5 to $0.0009, calling it a dead project. Another community member responded defensively, noting the token had lost significant value from all-time highs. A Helper named Rainman encouraged the community to follow official team updates and avoid FUD, stating that 2026 will be the year of agentic AI and expressing optimism about ElizaOS team delivery. The BitMart listing team reached out seeking contact with the business manager or core team for listing cooperation. Multiple users repeatedly asked about the Milady app launch timeline. Odilitime, a core team member, responded that the app will launch when it's ready, explaining that the team worked all weekend on it and he personally jumped in to help, but could not provide a specific release date. One user proposed building a multi-agent autonomous trading system and sought an AI/ML technical partner, offering 10% of trading profits. Another user inquired about needing chatters to make the group active, to which Odilitime responded negatively.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1774224000,
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Github - Contributor",
+        "Helper",
+        "Migration Support",
+        "Associate",
+        "Labs",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 187
+    },
+    "miaozi": {
+      "id": "1438025016393601208",
+      "username": "miaozi0377",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "0xSapoor": {
+      "id": "990988617688162376",
+      "username": "oxsapoor",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Cmr. sabian": {
+      "id": "1468740216360800410",
+      "username": "jayoraviannaaa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Anna": {
+      "id": "1006008364720988191",
+      "username": "airanna21",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Swordman": {
+      "id": "866584550863798283",
+      "username": "swordsman816",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "梦行人": {
+      "id": "923616424742780999",
+      "username": "dhdhaa",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 12
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "auto.fun enjoyer",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "VIP",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 51
+    },
+    "naman": {
+      "id": "1345873609658466435",
+      "username": "naman0014300143",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Rainman": {
+      "id": "1009171434465149028",
+      "username": "rainman1001",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "Бизнес Гусь": {
+      "id": "700421999637561386",
+      "username": "staticrevengers",
+      "roles": [
+        "Creator",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 8
+    },
+    "JR.": {
+      "id": "1115773719021891719",
+      "username": "jr.2250",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Katie@Bitmart": {
+      "id": "1222448589821841466",
+      "username": "katie_bitmarthl",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "tina": {
+      "id": "1436138035984203816",
+      "username": "bettina04385_27038",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

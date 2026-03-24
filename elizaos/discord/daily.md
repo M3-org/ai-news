@@ -1,39 +1,43 @@
-# elizaOS Discord - 2026-03-22
+# elizaOS Discord - 2026-03-23
 
 ## Summary
 
-### Agent Monetization and Marketplace
+### Multi-Agent Trading System Development
 
-TraderTomson announced a plugin for Eliza that enables autonomous agent monetization on Base blockchain. The plugin allows agents to register on an on-chain marketplace, post services, get hired by other agents, and receive payment in AGT tokens without human intervention. Season 1 is live with a 50M AGT pool for early adopters.
+Naman is building a multi-agent autonomous trading system powered by a 200-500B parameter local LLM model for 24/7 cryptocurrency trading. The project seeks an AI/ML technical partner for model optimization, fine-tuning, and performance monitoring in exchange for 10% profit sharing.
 
-### Documentation and Resources
+### Milady App Development Status
 
-A discussion occurred regarding ElizaOS documentation when Shah inquired about the whitepaper. Odilitime clarified that the token doesn't have a traditional whitepaper. Instead, the project maintains a GitHub roadmap at https://github.com/elizaOS/roadmap and has published an academic paper on arXiv at https://arxiv.org/abs/2501.06781.
+The milady app remains in active development with the team working through the weekend. Odilitime directly participated in development efforts. No specific release date has been set, with the launch planned for when the application is ready. Multiple community members inquired about the release timeline.
 
-### General Channel Activity
+### Token Price Concerns and Community Guidance
 
-The discussion channel had minimal technical content during this period, consisting primarily of casual greetings and memes. The coders channel similarly had limited activity with only a greeting and an off-topic recruitment post for a marketing manager position. A brief question about the Milady app timeline received a vague response indicating it would be available on or about an unspecified date.
+Community members expressed concerns about significant token price decline from $2.5 to $0.0009. Rainman provided guidance recommending members follow official team updates and noted that 2026 is expected to be a significant year for agentic AI development. The community was advised to hold at current price levels.
+
+### Business Development Outreach
+
+BitMart's listing team reached out seeking business cooperation discussions with core team members. No technical implementation details or concrete decisions were documented regarding this potential partnership.
 
 ## FAQ
 
-**Q: Where can I get the ElizaOS white paper?**
-A: The token doesn't have a whitepaper. The project maintains a GitHub roadmap at https://github.com/elizaOS/roadmap and has published an academic paper at https://arxiv.org/abs/2501.06781
+**Q: When will the milady app be online?**
+A: The app will launch when it's ready. The team worked on it over the weekend with direct involvement from Odilitime, but no specific release date is available yet.
 
-**Q: When will the Milady app be online?**
-A: On or about an unspecified date
+**Q: Do you need chatters to make the group active?**
+A: Not really.
 
 ## Help Interactions
 
-Mr. Ronnie Debryne helped Shah who was looking for ElizaOS whitepaper documentation by directing them to the official documentation site.
+Helper: Rainman | Helpee: Community | Context: Community concerns about token price decline from $2.5 to $0.0009 and project viability | Resolution: Advised following official team updates, noted 2026 as the year of agentic AI, recommended holding at current prices.
 
-Odilitime helped Shah by providing accurate clarification that no traditional whitepaper exists and shared links to the GitHub roadmap and arXiv paper instead.
+Helper: Odilitime | Helpee: miaozi | Context: Questions about milady app release timeline | Resolution: Provided transparency that the team worked on it over the weekend with his direct involvement but no specific date is available.
 
 ## Action Items
 
+### Technical
+
+Multi-agent autonomous trading system with 200-500B parameter LLM seeking AI/ML partner for deployment optimization, fine-tuning, and performance monitoring (mentioned by naman)
+
 ### Features
 
-Plugin for Eliza enabling autonomous agent monetization on Base blockchain with on-chain marketplace, AGT token payments, and 50M AGT pool for Season 1 (mentioned by TraderTomson)
-
-### Documentation
-
-Clarify that ElizaOS token has no traditional whitepaper and direct users to GitHub roadmap and arXiv paper instead (mentioned by Odilitime)
+Complete and launch milady app currently in development with team working through weekend (mentioned by Odilitime)
