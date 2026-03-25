@@ -1,26 +1,52 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-23",
+  "title": "Daily Report - 2026-03-24",
   "categories": [
     {
-      "title": "Community Discussion and Milady App Development Status",
+      "title": "ElizaOS Community Updates - March 24, 2026",
       "content": [
         {
-          "text": "On March 23, 2026, the Discord community engaged in general discussion with mixed sentiment about the project. One user expressed concern about the token price decline from $2.5 to $0.0009, calling it a dead project. Another community member responded defensively, noting the token had lost significant value from all-time highs. A Helper named Rainman encouraged the community to follow official team updates and avoid FUD, stating that 2026 will be the year of agentic AI and expressing optimism about ElizaOS team delivery. The BitMart listing team reached out seeking contact with the business manager or core team for listing cooperation. Multiple users repeatedly asked about the Milady app launch timeline. Odilitime, a core team member, responded that the app will launch when it's ready, explaining that the team worked all weekend on it and he personally jumped in to help, but could not provide a specific release date. One user proposed building a multi-agent autonomous trading system and sought an AI/ML technical partner, offering 10% of trading profits. Another user inquired about needing chatters to make the group active, to which Odilitime responded negatively.",
+          "text": "Community member dEXploarer announced a contest offering $150 in prizes and $150 in Milady BSC tokens for the best MiladyAI short video submissions, with a minimum length of 10 seconds. The videos should preferably feature community characters and are intended for both community engagement and app promotion. ElizaBAO shared news about an upcoming AI Sprint hackathon in collaboration with BNBChain, Unibase AI, pieverse, dgrid ai, MYX Finance, and TagAIDAO. The global online hackathon runs from April 1-30, 2026, with a $50,000 prize pool open to developers and AI enthusiasts.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HEJyiVaboAAOWF_.jpg:large",
+            "https://pbs.twimg.com/media/HELKmDBb0AA61w6.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Denis from Nosana introduced himself as the ecosystem and community representative, announcing their partnership with ElizaOS for the Nosana Builders Challenge starting March 25. The team will host workshops on March 26 and April 2 to help participants maximize efficiency in building AI agents. Denis offered support for anyone needing help during the challenge. Some community members expressed concerns about Eliza token price performance, with observations about recurring patterns of drops followed by brief pumps and new all-time lows.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1774314501349-qpc3b.jpg"
-          ]
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a representative from a crypto media network with 2M+ audience across Telegram, YouTube, and X proposed a collaboration with Eliza OS. However, Odilitime clarified that the person who responded does not represent the project. Ivan Jeremic announced the development of a Pythia MCP server that enables AI agents to query live on-chain market indicators including EMA, RSI, VWAP, Bollinger Bands, and volatility without requiring API keys or off-chain data pipelines. The data comes from a Chainlink oracle on Polygon covering 13 tokens across 4 timeframes, with a free testnet available.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "DorianD shared a critical security alert about a supply chain attack in litellm version 1.82.8 on PyPI. The malicious package contains a .pth file that harvests SSH keys, cloud credentials, and secrets on every Python startup, and attempts lateral movement across Kubernetes clusters. Odilitime confirmed awareness of the security issue.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://futuresearch.ai/futuresearch-logo.webp"
+          ],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1774224000,
+  "date": 1774310400,
   "nicknameMap": {
     "Odilitime": {
       "id": "580487826420793364",
@@ -50,50 +76,93 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 187
+      "totalMessages": 191
     },
-    "miaozi": {
-      "id": "1438025016393601208",
-      "username": "miaozi0377",
+    "DorianD": {
+      "id": "918853893100806164",
+      "username": "doriand0963",
       "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "0xSapoor": {
-      "id": "990988617688162376",
-      "username": "oxsapoor",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Cmr. sabian": {
-      "id": "1468740216360800410",
-      "username": "jayoraviannaaa",
-      "roles": [
+        "Partner",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 5
     },
-    "Anna": {
-      "id": "1006008364720988191",
-      "username": "airanna21",
+    "Ivan Jeremic": {
+      "id": "1483419974319210568",
+      "username": "ivanjeremic.c3x_18863",
       "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "gelgit.eth": {
+      "id": "700227417859555368",
+      "username": "gtham4769",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Coin Post": {
+      "id": "982219364075970580",
+      "username": "coin_post",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "gby": {
+      "id": "1450669082343903272",
+      "username": "gby_17",
+      "roles": [
+        "Helper",
         "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 47
+    },
+    "Seed_bawa1": {
+      "id": "1412898012652638239",
+      "username": "seed_bawa1",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ericrivera": {
+      "id": "291346487315529729",
+      "username": "ericrivera9124",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
         "[WG] degenspartan",
         "It",
         "Verified",
@@ -105,14 +174,11 @@
       ],
       "totalMessages": 1
     },
-    "Swordman": {
-      "id": "866584550863798283",
-      "username": "swordsman816",
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
@@ -120,20 +186,58 @@
       ],
       "totalMessages": 1
     },
-    "梦行人": {
-      "id": "923616424742780999",
-      "username": "dhdhaa",
+    "Martin 奈特（破产版）": {
+      "id": "1216999763573211189",
+      "username": "martin_net6",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 13
+      "totalMessages": 2
+    },
+    "Denis": {
+      "id": "313989482221273088",
+      "username": "denis255",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Franklin": {
+      "id": "1145799584497533039",
+      "username": "acaradenft",
+      "roles": [
+        "Trader",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Ame": {
+      "id": "1484588964315660500",
+      "username": "ame05230523",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
     },
     "ElizaBAO": {
       "id": "555035784378318875",
@@ -148,155 +252,39 @@
         "Coder",
         "Github - Contributor"
       ],
-      "totalMessages": 12
+      "totalMessages": 13
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "auto.fun enjoyer",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "VIP",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 51
-    },
-    "naman": {
-      "id": "1345873609658466435",
-      "username": "naman0014300143",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Rainman": {
-      "id": "1009171434465149028",
-      "username": "rainman1001",
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
       "roles": [
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "Бизнес Гусь": {
-      "id": "700421999637561386",
-      "username": "staticrevengers",
-      "roles": [
-        "Creator",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Matthib123": {
-      "id": "252087926849142784",
-      "username": "matthib",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Fr",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 8
-    },
-    "JR.": {
-      "id": "1115773719021891719",
-      "username": "jr.2250",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
         "Verified",
         "Dev School Student",
         "Booster",
         "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Katie@Bitmart": {
-      "id": "1222448589821841466",
-      "username": "katie_bitmarthl",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "33coded": {
-      "id": "1422240545660600562",
-      "username": "33.coded",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "utility",
-        "Coder",
-        "eliza"
+        "Coder"
       ],
       "totalMessages": 2
     },
-    "tina": {
-      "id": "1436138035984203816",
-      "username": "bettina04385_27038",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
+    "Delta_Sniper": {
+      "id": "423540200849932289",
+      "username": "noderunner12",
+      "roles": [],
       "totalMessages": 1
     },
-    "Nulucre dba Legacy Chain": {
-      "id": "949063485873082388",
-      "username": "nulucredbalegacychain",
+    "dEXploarer": {
+      "id": "458148462639316993",
+      "username": "dexploarer",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
+        "elizaOS Tester",
+        "VIP",
+        "Contributor",
         "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
+        "Poker",
+        "Coder"
       ],
       "totalMessages": 1
     }

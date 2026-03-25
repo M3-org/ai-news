@@ -1,21 +1,31 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-03-23",
-  "date": 1774224000,
+  "title": "elizaOS Discord - 2026-03-24",
+  "date": 1774310400,
   "stats": {
-    "totalMessages": 25,
-    "totalUsers": 19
+    "totalMessages": 23,
+    "totalUsers": 17
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "# Discord Chat Analysis for 💬-discussion\n\n## 1. Summary\n\nThe chat segment shows minimal technical discussion, primarily consisting of general greetings and community concerns. The most significant technical mention came from naman, who is building a multi-agent autonomous trading system powered by a 200-500B parameter local LLM model for 24/7 crypto trading, seeking an AI/ML technical partner for model optimization, fine-tuning, and performance monitoring in exchange for 10% profit sharing.\n\nThe main community concern centered around the token's price decline from $2.5 to $0.0009. Rainman provided community guidance, recommending members follow official updates and noting that 2026 is expected to be significant for agentic AI development.\n\nMultiple users inquired about the \"milady app\" release timeline. Odilitime responded that the team worked on it over the weekend with his direct involvement, but no specific release date is available yet - it will launch \"when it's ready.\"\n\nBitMart's listing team reached out seeking business cooperation discussions with core team members. No technical implementation details or concrete decisions were documented in this chat segment beyond the ongoing development work on the milady app.\n\n## 2. FAQ\n\nQ: when milady app online (asked by miaozi) A: when it's ready (answered by Odilitime)\nQ: when milady app (asked by miaozi) A: I don't know - we tried all weekend, I even jumped in to try and help (answered by Odilitime)\nQ: Do you need chatters to make the group active? (asked by 0xSapoor) A: not really (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Rainman | Helpee: Community | Context: Community concerns about token price decline and project viability | Resolution: Advised following official team updates, noted 2026 as year of agentic AI, recommended holding at current prices\n\nHelper: Odilitime | Helpee: miaozi | Context: Questions about milady app release timeline | Resolution: Provided transparency that team worked on it over weekend but no specific date available\n\n## 4. Action Items\n\nType: Feature | Description: Complete and launch milady app - currently in development with team working through weekend | Mentioned By: Odilitime\nType: Technical | Description: Multi-agent autonomous trading system with 200-500B parameter LLM seeking AI/ML partner for deployment optimization, fine-tuning, and performance monitoring | Mentioned By: naman",
+      "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThis chat segment contains minimal technical discussion, primarily consisting of introductions and general community interaction. The most significant contribution came from Denis, who introduced himself as the ecosystem and community representative for Nosana. He announced a partnership between Nosana and ElizaOS for the Nosana Builders' Challenge launching the following day. Denis offered community support for participants who encounter issues and announced two workshops scheduled for March 26 and April 2 to help builders maximize efficiency in developing AI agents.\n\nThe chat also included market sentiment discussion from gby, who analyzed the Eliza token's price pattern, noting a recurring cycle of drops followed by 20-30% pumps before dumping to new all-time lows. Ame expressed pessimistic sentiment about the token's future performance.\n\nThe remainder of the chat consisted of greetings, social media link sharing, and a promotional offer from Issa_arts for meme creation and marketing services. No concrete technical implementations, code discussions, or problem-solving occurred during this segment.\n\n## 2. FAQ\n\nQ: Will milady join this? (asked by Martin 奈特（破产版）) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: Denis | Helpee: Community | Context: Offering support for Nosana Builders' Challenge participants | Resolution: Announced availability to help anyone who gets stuck, with workshops scheduled for March 26 and April 2\n\n## 4. Action Items\n\nType: Feature | Description: Nosana Builders' Challenge launching with ElizaOS partnership | Mentioned By: Denis\nType: Documentation | Description: Workshops on March 26 and April 2 for building AI agents efficiently | Mentioned By: Denis",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 25,
-      "userCount": 19
+      "messageCount": 17,
+      "userCount": 13
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe channel had minimal technical discussion during this period. The most significant technical contribution came from Ivan Jeremic, who announced the release of a Pythia MCP server - a tool enabling AI agents to query live on-chain market indicators directly from blockchain oracles. The implementation uses Chainlink oracles on Polygon to provide verifiable on-chain data for 13 tokens across 4 timeframes, including technical indicators like EMA, RSI, VWAP, Bollinger Bands, and volatility metrics. The key advantage is eliminating the need for API keys or off-chain data pipelines, making it useful for DeFi agent operations requiring market context.\n\nA security concern was raised by DorianD regarding a supply chain attack on litellm-pypi, which Odilitime acknowledged awareness of. This represents an important security consideration for the community.\n\nThe channel also saw a business development inquiry from Coin Post about collaboration opportunities, which gelgit.eth initially responded to before Odilitime clarified that gelgit.eth does not represent the project officially.\n\n## 2. FAQ\n\nQ: Who should I contact to discuss collaboration with Eliza OS? (asked by Coin Post) A: Odilitime clarified that gelgit.eth does not represent the project (answered by Odilitime)\n\nQ: How can AI agents query on-chain market indicators without API keys? (asked by Ivan Jeremic) A: Use the Pythia MCP server via pip install pythia-oracle-mcp, which queries Chainlink oracles on Polygon (answered by Ivan Jeremic)\n\n## 3. Help Interactions\n\nHelper: Ivan Jeremic | Helpee: Community | Context: Need for AI agents to access on-chain market data without API dependencies | Resolution: Released Pythia MCP server with free testnet and offered integration assistance\n\nHelper: DorianD | Helpee: Community | Context: Security awareness about supply chain vulnerabilities | Resolution: Shared information about litellm-pypi supply chain attack\n\n## 4. Action Items\n\nType: Technical | Description: Evaluate security implications of litellm-pypi supply chain attack for project dependencies | Mentioned By: DorianD\n\nType: Feature | Description: Pythia MCP server available for integration - provides on-chain market indicators via Chainlink oracles on Polygon | Mentioned By: Ivan Jeremic",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 6,
+      "userCount": 5
     }
   ],
   "nicknameMap": {
@@ -47,50 +57,93 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 187
+      "totalMessages": 191
     },
-    "miaozi": {
-      "id": "1438025016393601208",
-      "username": "miaozi0377",
+    "DorianD": {
+      "id": "918853893100806164",
+      "username": "doriand0963",
       "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "0xSapoor": {
-      "id": "990988617688162376",
-      "username": "oxsapoor",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Cmr. sabian": {
-      "id": "1468740216360800410",
-      "username": "jayoraviannaaa",
-      "roles": [
+        "Partner",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 5
     },
-    "Anna": {
-      "id": "1006008364720988191",
-      "username": "airanna21",
+    "Ivan Jeremic": {
+      "id": "1483419974319210568",
+      "username": "ivanjeremic.c3x_18863",
       "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "gelgit.eth": {
+      "id": "700227417859555368",
+      "username": "gtham4769",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Coin Post": {
+      "id": "982219364075970580",
+      "username": "coin_post",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "gby": {
+      "id": "1450669082343903272",
+      "username": "gby_17",
+      "roles": [
+        "Helper",
         "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 47
+    },
+    "Seed_bawa1": {
+      "id": "1412898012652638239",
+      "username": "seed_bawa1",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ericrivera": {
+      "id": "291346487315529729",
+      "username": "ericrivera9124",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
         "[WG] degenspartan",
         "It",
         "Verified",
@@ -102,14 +155,11 @@
       ],
       "totalMessages": 1
     },
-    "Swordman": {
-      "id": "866584550863798283",
-      "username": "swordsman816",
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
@@ -117,20 +167,58 @@
       ],
       "totalMessages": 1
     },
-    "梦行人": {
-      "id": "923616424742780999",
-      "username": "dhdhaa",
+    "Martin 奈特（破产版）": {
+      "id": "1216999763573211189",
+      "username": "martin_net6",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 13
+      "totalMessages": 2
+    },
+    "Denis": {
+      "id": "313989482221273088",
+      "username": "denis255",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Franklin": {
+      "id": "1145799584497533039",
+      "username": "acaradenft",
+      "roles": [
+        "Trader",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Ame": {
+      "id": "1484588964315660500",
+      "username": "ame05230523",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
     },
     "ElizaBAO": {
       "id": "555035784378318875",
@@ -145,155 +233,39 @@
         "Coder",
         "Github - Contributor"
       ],
-      "totalMessages": 12
+      "totalMessages": 13
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "auto.fun enjoyer",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "VIP",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 51
-    },
-    "naman": {
-      "id": "1345873609658466435",
-      "username": "naman0014300143",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Rainman": {
-      "id": "1009171434465149028",
-      "username": "rainman1001",
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
       "roles": [
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "Бизнес Гусь": {
-      "id": "700421999637561386",
-      "username": "staticrevengers",
-      "roles": [
-        "Creator",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Matthib123": {
-      "id": "252087926849142784",
-      "username": "matthib",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Fr",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 8
-    },
-    "JR.": {
-      "id": "1115773719021891719",
-      "username": "jr.2250",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
         "Verified",
         "Dev School Student",
         "Booster",
         "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Katie@Bitmart": {
-      "id": "1222448589821841466",
-      "username": "katie_bitmarthl",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "33coded": {
-      "id": "1422240545660600562",
-      "username": "33.coded",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "utility",
-        "Coder",
-        "eliza"
+        "Coder"
       ],
       "totalMessages": 2
     },
-    "tina": {
-      "id": "1436138035984203816",
-      "username": "bettina04385_27038",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
+    "Delta_Sniper": {
+      "id": "423540200849932289",
+      "username": "noderunner12",
+      "roles": [],
       "totalMessages": 1
     },
-    "Nulucre dba Legacy Chain": {
-      "id": "949063485873082388",
-      "username": "nulucredbalegacychain",
+    "dEXploarer": {
+      "id": "458148462639316993",
+      "username": "dexploarer",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
+        "elizaOS Tester",
+        "VIP",
+        "Contributor",
         "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
+        "Poker",
+        "Coder"
       ],
       "totalMessages": 1
     }

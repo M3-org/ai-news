@@ -1,43 +1,58 @@
-# elizaOS Discord - 2026-03-23
+# elizaOS Discord - 2026-03-24
 
 ## Summary
 
-### Multi-Agent Trading System Development
+### Partnership Announcements
 
-Naman is building a multi-agent autonomous trading system powered by a 200-500B parameter local LLM model for 24/7 cryptocurrency trading. The project seeks an AI/ML technical partner for model optimization, fine-tuning, and performance monitoring in exchange for 10% profit sharing.
+Denis, representing Nosana's ecosystem and community, announced a partnership between Nosana and ElizaOS for the Nosana Builders' Challenge launching on March 25. The initiative includes two workshops scheduled for March 26 and April 2 to help builders develop AI agents efficiently. Denis offered direct support for participants encountering issues during the challenge.
 
-### Milady App Development Status
+### On-Chain Data Infrastructure
 
-The milady app remains in active development with the team working through the weekend. Odilitime directly participated in development efforts. No specific release date has been set, with the launch planned for when the application is ready. Multiple community members inquired about the release timeline.
+Ivan Jeremic released the Pythia MCP server, a tool enabling AI agents to query live on-chain market indicators directly from blockchain oracles. The implementation uses Chainlink oracles on Polygon to provide verifiable on-chain data for 13 tokens across 4 timeframes. The system includes technical indicators like EMA, RSI, VWAP, Bollinger Bands, and volatility metrics. The key advantage is eliminating the need for API keys or off-chain data pipelines, making it useful for DeFi agent operations requiring market context.
 
-### Token Price Concerns and Community Guidance
+### Security Concerns
 
-Community members expressed concerns about significant token price decline from $2.5 to $0.0009. Rainman provided guidance recommending members follow official team updates and noted that 2026 is expected to be a significant year for agentic AI development. The community was advised to hold at current price levels.
+DorianD raised awareness about a supply chain attack on litellm-pypi, which Odilitime acknowledged. This represents an important security consideration for the community regarding dependency management.
 
-### Business Development Outreach
+### Market Sentiment
 
-BitMart's listing team reached out seeking business cooperation discussions with core team members. No technical implementation details or concrete decisions were documented regarding this potential partnership.
+Community members discussed the Eliza token's price performance. Gby analyzed a recurring pattern of drops followed by 20-30% pumps before dumping to new all-time lows. Ame expressed pessimistic sentiment about the token's future performance.
+
+### Business Development
+
+Coin Post inquired about collaboration opportunities with Eliza OS. Odilitime clarified that gelgit.eth does not officially represent the project after gelgit.eth initially responded to the inquiry.
 
 ## FAQ
 
-**Q: When will the milady app be online?**
-A: The app will launch when it's ready. The team worked on it over the weekend with direct involvement from Odilitime, but no specific release date is available yet.
+**Q: Will milady join this?**
+A: Unanswered
 
-**Q: Do you need chatters to make the group active?**
-A: Not really.
+**Q: Who should I contact to discuss collaboration with Eliza OS?**
+A: Odilitime clarified that gelgit.eth does not represent the project
+
+**Q: How can AI agents query on-chain market indicators without API keys?**
+A: Use the Pythia MCP server via pip install pythia-oracle-mcp, which queries Chainlink oracles on Polygon
 
 ## Help Interactions
 
-Helper: Rainman | Helpee: Community | Context: Community concerns about token price decline from $2.5 to $0.0009 and project viability | Resolution: Advised following official team updates, noted 2026 as the year of agentic AI, recommended holding at current prices.
+Denis offered support to the community for the Nosana Builders' Challenge, announcing availability to help anyone who gets stuck, with workshops scheduled for March 26 and April 2.
 
-Helper: Odilitime | Helpee: miaozi | Context: Questions about milady app release timeline | Resolution: Provided transparency that the team worked on it over the weekend with his direct involvement but no specific date is available.
+Ivan Jeremic provided the community with a solution for AI agents to access on-chain market data without API dependencies by releasing the Pythia MCP server with free testnet and offering integration assistance.
+
+DorianD alerted the community about security awareness regarding supply chain vulnerabilities by sharing information about the litellm-pypi supply chain attack.
 
 ## Action Items
 
 ### Technical
 
-Multi-agent autonomous trading system with 200-500B parameter LLM seeking AI/ML partner for deployment optimization, fine-tuning, and performance monitoring (mentioned by naman)
+Evaluate security implications of litellm-pypi supply chain attack for project dependencies (mentioned by DorianD)
 
 ### Features
 
-Complete and launch milady app currently in development with team working through weekend (mentioned by Odilitime)
+Nosana Builders' Challenge launching with ElizaOS partnership (mentioned by Denis)
+
+Pythia MCP server available for integration - provides on-chain market indicators via Chainlink oracles on Polygon (mentioned by Ivan Jeremic)
+
+### Documentation
+
+Workshops on March 26 and April 2 for building AI agents efficiently (mentioned by Denis)
