@@ -74,6 +74,7 @@ interface CliArgs {
   useIndex?: boolean;
   rateLimit?: number;
   skipExisting?: boolean;
+  model?: string;
   dryRun?: boolean;
   updateIndex?: boolean;
   source?: string;
@@ -106,6 +107,7 @@ function parseArgs(argv: string[] = process.argv.slice(2)): CliArgs {
     else if (arg.startsWith("--source=")) args.source = arg.split("=")[1];
     else if (arg === "--json") args.json = true;
     else if (arg.startsWith("--min-mentions=")) args.minMentions = parseInt(arg.split("=")[1]);
+    else if (arg.startsWith("--model=")) args.model = arg.split("=")[1];
   }
 
   return args;
@@ -785,11 +787,11 @@ function sampleAcrossRange<T extends { date: string }>(items: T[], n: number): T
 
 interface UserActivity {
   userId: string | null;
-  helpGiven: Array<{ context: string; resolution: string; date: string }>;
-  helpReceived: Array<{ context: string; date: string }>;
-  questionsAsked: Array<{ question: string; date: string }>;
-  questionsAnswered: Array<{ question: string; date: string }>;
-  actionItems: Array<{ type: string; description: string; date: string }>;
+  helpGiven:         Array<{ context: string; resolution: string; date: string; withUser?: string }>;
+  helpReceived:      Array<{ context: string; date: string; fromUser?: string }>;
+  questionsAsked:    Array<{ question: string; date: string; answeredBy?: string }>;
+  questionsAnswered: Array<{ question: string; date: string; askedBy?: string }>;
+  actionItems:       Array<{ type: string; description: string; date: string }>;
   activeDates: Set<string>;
 }
 
@@ -803,6 +805,66 @@ function createEmptyActivity(): UserActivity {
     actionItems: [],
     activeDates: new Set(),
   };
+}
+
+function topN(names: (string | undefined)[], n: number): string[] {
+  const counts = new Map<string, number>();
+  for (const name of names) {
+    if (name && name !== "Unknown" && name !== "Unanswered" && name !== "Deleted User" && name !== "Community") {
+      counts.set(name, (counts.get(name) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, n)
+    .map(([name]) => name);
+}
+
+async function sampleRawMessages(
+  db: Database,
+  userId: string,
+  sampleDates: string[],
+  maxMessages: number = 6
+): Promise<Array<{ content: string; date: string }>> {
+  if (!userId || sampleDates.length === 0) return [];
+
+  const placeholders = sampleDates.map(() => `cid LIKE ?`).join(" OR ");
+  const params = sampleDates.map(d => `%-${d}`);
+  const rows = await db.all<Array<{ text: string; cid: string }>>(
+    `SELECT text, cid FROM items WHERE type = 'discordRawData' AND (${placeholders})`,
+    params
+  );
+
+  const byDate = new Map<string, string[]>();
+  for (const row of rows) {
+    let data: any;
+    try { data = JSON.parse(row.text); } catch { continue; }
+    if (!data) continue;
+    const dateStr: string = (data.date || "").split("T")[0];
+    for (const msg of data.messages || []) {
+      if (msg.uid !== userId) continue;
+      const raw = (msg.content || "").trim();
+      // strip wrapping brackets Discord sometimes stores around message content
+      const content = raw.startsWith("[") && raw.endsWith("]") ? raw.slice(1, -1).trim() : raw;
+      if (
+        content.length < 80 ||
+        content.startsWith("http") ||
+        /^[\s\p{Emoji}\p{P}]+$/u.test(content)
+      ) continue;
+      if (!byDate.has(dateStr)) byDate.set(dateStr, []);
+      byDate.get(dateStr)!.push(content);
+    }
+  }
+
+  const results: Array<{ content: string; date: string }> = [];
+  for (const [date, messages] of [...byDate.entries()].sort()) {
+    // take up to 2 per date
+    for (const content of messages.slice(0, 2)) {
+      results.push({ content, date });
+      if (results.length >= maxMessages) return results;
+    }
+  }
+  return results;
 }
 
 async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<void> {
@@ -866,21 +928,38 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
       for (const faq of category.faqs || []) {
         if (faq.askedBy && faq.askedBy !== "Unknown") {
           if (!userActivity[faq.askedBy]) userActivity[faq.askedBy] = createEmptyActivity();
-          userActivity[faq.askedBy].questionsAsked.push({ question: faq.question, date: dateStr });
+          userActivity[faq.askedBy].questionsAsked.push({
+            question: faq.question,
+            date: dateStr,
+            answeredBy: faq.answeredBy && faq.answeredBy !== "Unanswered" ? faq.answeredBy : undefined,
+          });
         }
         if (faq.answeredBy && faq.answeredBy !== "Unknown" && faq.answeredBy !== "Unanswered") {
           if (!userActivity[faq.answeredBy]) userActivity[faq.answeredBy] = createEmptyActivity();
-          userActivity[faq.answeredBy].questionsAnswered.push({ question: faq.question, date: dateStr });
+          userActivity[faq.answeredBy].questionsAnswered.push({
+            question: faq.question,
+            date: dateStr,
+            askedBy: faq.askedBy && faq.askedBy !== "Unknown" ? faq.askedBy : undefined,
+          });
         }
       }
       for (const help of category.helpInteractions || []) {
         if (help.helper) {
           if (!userActivity[help.helper]) userActivity[help.helper] = createEmptyActivity();
-          userActivity[help.helper].helpGiven.push({ context: help.context, resolution: help.resolution, date: dateStr });
+          userActivity[help.helper].helpGiven.push({
+            context: help.context,
+            resolution: help.resolution,
+            date: dateStr,
+            withUser: help.helpee || undefined,
+          });
         }
         if (help.helpee) {
           if (!userActivity[help.helpee]) userActivity[help.helpee] = createEmptyActivity();
-          userActivity[help.helpee].helpReceived.push({ context: help.context, date: dateStr });
+          userActivity[help.helpee].helpReceived.push({
+            context: help.context,
+            date: dateStr,
+            fromUser: help.helper || undefined,
+          });
         }
       }
       for (const item of category.actionItems || []) {
@@ -922,7 +1001,7 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
     apiKey,
     ...(useOpenRouter ? { baseURL: "https://openrouter.ai/api/v1" } : {}),
   });
-  const model = useOpenRouter ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+  const model = args.model ?? "anthropic/claude-sonnet-4.6";
 
   const registry = new DiscordUserRegistry(db);
   let generated = 0;
@@ -977,6 +1056,26 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
       ? { help: 12, actions: 15, questions: 10 }
       : { help: 6, actions: 8, questions: 5 };
 
+    // Compute interaction stats from full (unsampled) arrays
+    const topHelpees = topN(activity.helpGiven.map(h => h.withUser), 5);
+    const topHelpers = topN(activity.helpReceived.map(h => h.fromUser), 5);
+    const uniqueCounterparties = new Set([
+      ...activity.helpGiven.map(h => h.withUser),
+      ...activity.helpReceived.map(h => h.fromUser),
+      ...activity.questionsAnswered.map(q => q.askedBy),
+    ].filter(Boolean)).size;
+
+    // Sample raw messages from SQLite spread across date range
+    const msgSampleDates: string[] = (() => {
+      if (sortedActiveDates.length === 0) return [];
+      const n = Math.min(9, sortedActiveDates.length);
+      const step = sortedActiveDates.length / n;
+      return Array.from({ length: n }, (_, i) => sortedActiveDates[Math.floor(i * step)]);
+    })();
+    const rawMessages = activity.userId
+      ? await sampleRawMessages(db, activity.userId, msgSampleDates)
+      : [];
+
     const helpGivenSamples     = sampleAcrossRange(activity.helpGiven,         SAMPLES.help);
     const helpReceivedSamples  = sampleAcrossRange(activity.helpReceived,       SAMPLES.help);
     const actionItemSamples    = sampleAcrossRange(activity.actionItems,        SAMPLES.actions);
@@ -1008,10 +1107,20 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
           + questAnsweredSamples.map((q) => `- [${q.date}] ${q.question}`).join("\n")
         : "",
       questAskedSamples.length
-        ? `Questions asked verbatim — use as direct quotes for Characteristic Questions section (${questAskedSamples.length} samples):\n`
-          + questAskedSamples.map((q) => `- [${q.date}] "${q.question}"`).join("\n")
+        ? `Questions asked verbatim — use as direct quotes in ## Quotes (${questAskedSamples.length} samples):\n`
+          + questAskedSamples.map((q) => `- (${q.date.slice(0, 7)}) "${q.question}"`).join("\n")
+        : "",
+      rawMessages.length
+        ? `Raw message samples (verbatim from chat logs — use some in ## Quotes alongside questions):\n`
+          + rawMessages.map((m) => `- (${m.date.slice(0, 7)}) "${m.content}"`).join("\n")
         : "",
     ].filter(Boolean).join("\n\n");
+
+    const interactionBlock = [
+      topHelpees.length ? `- Most frequently helps: ${topHelpees.join(", ")}` : "",
+      topHelpers.length ? `- Most frequently receives help from: ${topHelpers.join(", ")}` : "",
+      uniqueCounterparties > 0 ? `- Unique collaborators: ~${uniqueCounterparties} users` : "",
+    ].filter(Boolean).join("\n");
 
     const registryBlock = `Registry data:
 - Discord username: ${registryUser.username}
@@ -1019,87 +1128,96 @@ async function commandGenerateProfiles(db: Database, args: CliArgs): Promise<voi
 - Active: ${firstSeenDate} to ${lastSeenDate}
 - Total messages: ${registryUser.totalMessages.toLocaleString()}`;
 
-    const temporalArcSection = dateSpanMonths >= 3
-      ? `\n## Temporal Arc\nDescribe how this person's focus or role evolved across the date range. Use the dated evidence above to organize observations into chronological buckets (early / mid / recent). Only include this section if there is meaningful evidence of change.`
+    // Derive evidence bounds from actual extracted data (not nicknameMap presence),
+    // so Temporal Arc doesn't reference years for which we have no summaries yet.
+    const allSampleDates = [
+      ...helpGivenSamples.map(h => h.date),
+      ...helpReceivedSamples.map(h => h.date),
+      ...actionItemSamples.map(a => a.date),
+      ...questAnsweredSamples.map(q => q.date),
+      ...questAskedSamples.map(q => q.date),
+    ].filter(Boolean).sort();
+    const evidenceStart = allSampleDates[0]?.slice(0, 7) ?? sortedActiveDates[0]?.slice(0, 7) ?? "";
+    const evidenceEnd   = allSampleDates[allSampleDates.length - 1]?.slice(0, 7) ?? sortedActiveDates[sortedActiveDates.length - 1]?.slice(0, 7) ?? "";
+    const evidenceSpanMonths = (evidenceStart && evidenceEnd) ? (() => {
+      const s = new Date(evidenceStart + "-01");
+      const e = new Date(evidenceEnd + "-01");
+      return (e.getFullYear() - s.getFullYear()) * 12 + (e.getMonth() - s.getMonth());
+    })() : 0;
+    const temporalArcSection = evidenceSpanMonths >= 3
+      ? `\n## Temporal Arc\nDate-bucketed bullet list showing how this person's focus shifted over time. Use 2-4 bullets, each starting with a bold year range:\n- **YYYY–YYYY:** what they were focused on in this period\nOnly cover ${evidenceStart} to ${evidenceEnd} — the actual date range of the evidence samples above. Do not extrapolate beyond that range.`
       : "";
 
     let prompt: string;
+
+    // Compute help ratio strings for injection as hard facts
+    const helpRatio = activity.helpReceived.length > 0
+      ? ` (${(activity.helpGiven.length / activity.helpReceived.length).toFixed(1)}x more given than received)`
+      : "";
+
+    const sharedContext = `${registryBlock}
+
+INTERACTION DATA (computed from full history):
+${interactionBlock}
+
+${activityBlock}
+
+${samplesBlock}`;
+
+    const sectionSpec = `Output exactly the following sections in this order. Use the exact ## headings shown. Only include content that is directly grounded in the evidence above — do not infer, speculate, or fill gaps.
+
+## Summary
+2-3 bullet points, stats only. Cover: active date range, total messages, help given vs received${helpRatio}, questions asked vs answered. No narrative filler. Example format:
+- Active ${firstSeenDate} to ${lastSeenDate} · ${registryUser.totalMessages.toLocaleString()} messages across ${activity.activeDates.size} active days
+- Help given: ${activity.helpGiven.length} · Help received: ${activity.helpReceived.length}
+- Questions asked: ${activity.questionsAsked.length} · Answered: ${activity.questionsAnswered.length}
+Output these exact bullet points — do not rewrite them.
+
+## Focus Areas
+Read all the evidence samples above. Count how many times each distinct topic, technology, or domain appears across help given, questions answered, and action items. List the top 5-12 by frequency. Replace N with your actual count. Format exactly as:
+- Topic name (N mentions)
+Example: "- Blender (8 mentions)". N must be a real integer you counted, not a placeholder.
+
+## Help Interactions
+List the top people this person helps and receives help from, using the interaction data above. Format as:
+**Gives help to:** name1, name2, name3 (from "Most frequently helps")
+**Receives help from:** name1, name2 (from "Most frequently receives help from")
+Then 1 sentence describing the pattern of what they help with, grounded in the help given samples.
+
+## Quotes
+4-6 direct quotes. Prefer verbatim text from "Raw message samples" over extracted questions — raw messages show how they explain and think. Choose quotes that reveal domain knowledge or characteristic phrasing, not generic chat. Format each as a bullet with the date in parentheses:
+- "verbatim text here" (YYYY-MM)
+Do NOT add square brackets around the quoted text. Copy it exactly as given in the samples above.
+${temporalArcSection}
+Output only section content starting from ## Summary. Do not output YAML, code fences, or any preamble.`;
 
     if (existingFile && !args.force) {
       const existingProse = existingFile.replace(/^---[\s\S]*?---\n*/, "").trim();
       const existingFrontmatterMatch = existingFile.match(/^---\n([\s\S]*?)\n---/);
       const existingGeneratedAt = existingFrontmatterMatch?.[1].match(/generatedAt:\s*"?([^"\n]+)"?/)?.[1] || "unknown";
 
-      prompt = `You are updating a structured community profile for "${displayName}" in the ${serverName} Discord server.
+      prompt = `You are updating a community profile for "${displayName}" in the ${serverName} Discord server.
 
-The existing profile was generated on ${existingGeneratedAt}. New activity data is provided below. Update each section using the new evidence, then output the complete updated profile.
+The existing profile was generated on ${existingGeneratedAt}. New activity data is provided. Output the complete updated profile using the section spec below.
 
 Rules:
-1. Preserve the exact ## section headings and their order. Do not add or remove sections (except Temporal Arc — add it if missing and dateSpanMonths >= 3, update it if present).
-2. For each section: add new claims supported by new evidence; correct or remove claims contradicted by newer data; note any meaningful shifts in focus or role.
-3. In "Characteristic Questions & Quotes": replace less representative quotes with better ones from new samples if available. Keep 4-6 total.
-4. Write in objective journalist style — grounded in evidence, no speculation, no flattery.
+1. Use the exact ## headings and order from the section spec. If existing sections differ (old names like "Bio", "Help Patterns", etc.) output the new structure — do not preserve the old headings.
+2. Only include content grounded in evidence. Do not extrapolate.
+3. For ## Temporal Arc: only cover ${evidenceStart} to ${evidenceEnd}. Do not extend beyond dates in the evidence.
+4. For ## Quotes: prefer raw message text over extracted questions.
 
-EXISTING PROFILE:
+EXISTING PROFILE (for context — do not copy verbatim, use as prior knowledge):
 ${existingProse}
 
-REGISTRY DATA (current):
-${registryBlock}
+${sharedContext}
 
-UPDATED ACTIVITY TOTALS:
-${activityBlock}
-
-NEW EVIDENCE (sampled across full date range, with dates):
-${samplesBlock}
-
-After all sections, output a ## Skills section: a JSON array of 5-15 specific skill tags derived from the evidence. Use concrete terms not generic ones. Format exactly as: ["tag1", "tag2", ...]
-
-Output the complete updated profile starting from ## Bio. Do not output YAML frontmatter, code fences, or any preamble.`;
+${sectionSpec}`;
     } else {
-      prompt = `You are writing a structured community profile for "${displayName}" in the ${serverName} Discord server.
+      prompt = `You are writing a community profile for "${displayName}" in the ${serverName} Discord server.
 
-Write in the style of an objective journalist: grounded in the evidence provided, no speculation, no flattery. Attribute claims to specific evidence from the samples below.
+${sharedContext}
 
-${registryBlock}
-
-${activityBlock}
-
-${samplesBlock}
-
-Output exactly the following sections in this order. Use the exact ## headings shown.
-
-## Bio
-4-6 factual bullet points covering: who they are, how long they have been active (${firstSeenDate} to ${lastSeenDate}), their primary roles in the community, total message volume (${registryUser.totalMessages.toLocaleString()} messages), and their overall contribution posture (helper, builder, questioner, organizer, etc.).
-
-## Domains & Skills
-Bullet list of specific technical and domain expertise derivable from the questions they answered and the help they gave. Name concrete technologies, frameworks, and concepts — not generic categories.
-
-## Communication Style
-2-3 sentences describing observable patterns: vocabulary register, question-asking style, answer structure, technical depth. Include 2-4 adjectives that describe their voice.
-
-## Characteristic Questions & Quotes
-4-6 direct quotes from the "Questions asked verbatim" samples above. Format each as:
-- "[exact question text]" (YYYY-MM)
-Choose quotes that best capture their intellectual interests and voice. Prefer questions showing specificity or a recurring domain.
-
-## Problems & Challenges
-Objective bullet list of recurring problems or friction points visible in the help received and questions asked samples. Synthesize the pattern — do not restate questions verbatim.
-
-## Goals & Projects
-Derive from action item samples. Organize as:
-- Technical: [items]
-- Feature: [items]
-- Documentation: [items]
-Omit sub-sections with zero items.
-
-## Help Patterns
-**Gives:** 1-2 sentences on what this person reliably helps others with (from help given samples).
-**Receives:** 1-2 sentences on what this person seeks help for (from help received samples).
-${temporalArcSection}
-## Skills
-A JSON array of 5-15 specific skill tags derived from the questions they answered and help they gave. Use concrete terms (e.g. "WebXR", "Blender", "Solidity", "avatar-pipelines") not generic ones ("programming", "technology"). Format exactly as: ["tag1", "tag2", ...]
-
-Output only section content starting from ## Bio. Do not output YAML, code fences, or any preamble.`;
+${sectionSpec}`;
     }
 
     try {

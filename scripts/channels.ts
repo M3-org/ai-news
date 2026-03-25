@@ -707,7 +707,7 @@ async function commandSummarize(db: Database, registry: DiscordChannelRegistry, 
     } : undefined
   });
 
-  const model = process.env.USE_OPENROUTER === "true" ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+  const model = "openai/gpt-5.4-nano";
 
   // Determine which channels to summarize
   let channelsToSummarize: DiscordChannel[];
@@ -809,7 +809,7 @@ async function commandAnalyze(db: Database, registry: DiscordChannelRegistry, ar
     } : undefined
   });
 
-  const model = process.env.USE_OPENROUTER === "true" ? "openai/gpt-4o-mini" : "gpt-4o-mini";
+  const model = "openai/gpt-5.4-nano";
 
   // Determine which channels to analyze
   let channelsToAnalyze: DiscordChannel[];
