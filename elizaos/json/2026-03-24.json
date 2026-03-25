@@ -1,51 +1,35 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-03-24",
-  "categories": [
-    {
-      "title": "ElizaOS Community Updates - March 24, 2026",
-      "content": [
-        {
-          "text": "Community member dEXploarer announced a contest offering $150 in prizes and $150 in Milady BSC tokens for the best MiladyAI short video submissions, with a minimum length of 10 seconds. The videos should preferably feature community characters and are intended for both community engagement and app promotion. ElizaBAO shared news about an upcoming AI Sprint hackathon in collaboration with BNBChain, Unibase AI, pieverse, dgrid ai, MYX Finance, and TagAIDAO. The global online hackathon runs from April 1-30, 2026, with a $50,000 prize pool open to developers and AI enthusiasts.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HEJyiVaboAAOWF_.jpg:large",
-            "https://pbs.twimg.com/media/HELKmDBb0AA61w6.jpg:large"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Denis from Nosana introduced himself as the ecosystem and community representative, announcing their partnership with ElizaOS for the Nosana Builders Challenge starting March 25. The team will host workshops on March 26 and April 2 to help participants maximize efficiency in building AI agents. Denis offered support for anyone needing help during the challenge. Some community members expressed concerns about Eliza token price performance, with observations about recurring patterns of drops followed by brief pumps and new all-time lows.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, a representative from a crypto media network with 2M+ audience across Telegram, YouTube, and X proposed a collaboration with Eliza OS. However, Odilitime clarified that the person who responded does not represent the project. Ivan Jeremic announced the development of a Pythia MCP server that enables AI agents to query live on-chain market indicators including EMA, RSI, VWAP, Bollinger Bands, and volatility without requiring API keys or off-chain data pipelines. The data comes from a Chainlink oracle on Polygon covering 13 tokens across 4 timeframes, with a free testnet available.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "DorianD shared a critical security alert about a supply chain attack in litellm version 1.82.8 on PyPI. The malicious package contains a .pth file that harvests SSH keys, cloud credentials, and secrets on every Python startup, and attempts lateral movement across Kubernetes clusters. Odilitime confirmed awareness of the security issue.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://futuresearch.ai/futuresearch-logo.webp"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Updates - March 24, 2026",
+    "content": [
+      {
+        "text": "Community member dEXploarer announced a contest offering $150 in prizes and $150 in Milady BSC tokens for the best MiladyAI short video submissions, with a minimum length of 10 seconds. The videos should preferably feature community characters and are intended for both community engagement and app promotion. ElizaBAO shared news about an upcoming AI Sprint hackathon in collaboration with BNBChain, Unibase AI, pieverse, dgrid ai, MYX Finance, and TagAIDAO. The global online hackathon runs from April 1-30, 2026, with a $50,000 prize pool open to developers and AI enthusiasts.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": [
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1485877139592052757_8e0c8b92.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1485972838384013332_725346e0.jpg"
+        ]
+      },
+      {
+        "text": "Denis from Nosana introduced himself as the ecosystem and community representative, announcing their partnership with ElizaOS for the Nosana Builders Challenge starting March 25. The team will host workshops on March 26 and April 2 to help participants maximize efficiency in building AI agents. Denis offered support for anyone needing help during the challenge. Some community members expressed concerns about Eliza token price performance, with observations about recurring patterns of drops followed by brief pumps and new all-time lows.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774400918916-ai89rs.jpg"
+      },
+      {
+        "text": "In the coders channel, a representative from a crypto media network with 2M+ audience across Telegram, YouTube, and X proposed a collaboration with Eliza OS. However, Odilitime clarified that the person who responded does not represent the project. Ivan Jeremic announced the development of a Pythia MCP server that enables AI agents to query live on-chain market indicators including EMA, RSI, VWAP, Bollinger Bands, and volatility without requiring API keys or off-chain data pipelines. The data comes from a Chainlink oracle on Polygon covering 13 tokens across 4 timeframes, with a free testnet available.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "posters": "https://cdn.elizaos.news/posters/1774400938697-zuip1m.jpg"
+      },
+      {
+        "text": "DorianD shared a critical security alert about a supply chain attack in litellm version 1.82.8 on PyPI. The malicious package contains a .pth file that harvests SSH keys, cloud credentials, and secrets on every Python startup, and attempts lateral movement across Kubernetes clusters. Odilitime confirmed awareness of the security issue.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1486113855628378302_adf272e1.webp"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1774310400,
   "nicknameMap": {
     "Odilitime": {
@@ -270,7 +254,6 @@
     "Delta_Sniper": {
       "id": "423540200849932289",
       "username": "noderunner12",
-      "roles": [],
       "totalMessages": 1
     },
     "dEXploarer": {
