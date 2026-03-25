@@ -43,7 +43,7 @@
       "name": "summaryOpenAiProvider",
       "params": {
         "apiKey": "process.env.OPENAI_API_KEY",
-        "model": "anthropic/claude-sonnet-4.5",
+        "model": "anthropic/claude-sonnet-4.6",
         "temperature": 0,
         "useOpenRouter": true,
         "siteUrl": "process.env.SITE_URL",

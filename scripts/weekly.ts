@@ -50,7 +50,7 @@ function loadAIConfig(): { model: string; useOpenRouter: boolean } {
 
     if (summaryProvider?.params) {
       return {
-        model: summaryProvider.params.model || "openai/gpt-5.4-nano",
+        model: summaryProvider.params.model || "anthropic/claude-sonnet-4.6",
         useOpenRouter: summaryProvider.params.useOpenRouter || false,
       };
     }
@@ -58,7 +58,7 @@ function loadAIConfig(): { model: string; useOpenRouter: boolean } {
     logger.warning(`Could not load AI config from ${DEFAULT_CONFIG}, using defaults`);
   }
 
-  return { model: "openai/gpt-5.4-nano", useOpenRouter: false };
+  return { model: "anthropic/claude-sonnet-4.6", useOpenRouter: false };
 }
 
 // ============================================================================
