@@ -89,6 +89,9 @@ export class SQLiteStorage implements StoragePlugin {
         message_id TEXT NOT NULL
       );
     `);
+
+    await this.db.exec(`CREATE INDEX IF NOT EXISTS idx_items_cid ON items(cid)`);
+    await this.db.exec(`CREATE INDEX IF NOT EXISTS idx_items_type_date ON items(type, date)`);
   }
 
   /**
@@ -500,5 +503,21 @@ export class SQLiteStorage implements StoragePlugin {
    */
   public getDb(): Database<sqlite3.Database, sqlite3.Statement> | null {
     return this.db;
+  }
+
+  /**
+   * Checks which of the provided content IDs already exist in storage.
+   * @param cids - Array of content IDs to check
+   * @returns Promise<Set<string>> Set of existing content IDs
+   */
+  public async getExistingCids(cids: string[]): Promise<Set<string>> {
+    if (!this.db) throw new Error("Database not initialized. Call init() first.");
+    if (cids.length === 0) return new Set();
+    const placeholders = cids.map(() => '?').join(',');
+    const rows = await this.db.all<Array<{ cid: string }>>(
+      `SELECT cid FROM items WHERE cid IN (${placeholders})`,
+      cids
+    );
+    return new Set(rows.map(r => r.cid));
   }
 }

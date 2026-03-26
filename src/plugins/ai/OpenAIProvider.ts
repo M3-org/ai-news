@@ -363,4 +363,56 @@ export class OpenAIProvider implements AiProvider {
       return [];
     }
   }
+
+  public async summarizeStructured<T = unknown>(
+    prompt: string,
+    schemaName: string,
+    schema: Record<string, unknown>
+  ): Promise<T> {
+    try {
+      return await this.requestStructured<T>(prompt, schemaName, schema, false);
+    } catch (error) {
+      logger.warning(`Structured summary failed for schema ${schemaName}, retrying with strict JSON repair prompt`);
+      const repairPrompt = `${prompt}\n\nReturn only valid JSON matching the requested schema. Do not include markdown fences, commentary, or any extra text.`;
+      return await this.requestStructured<T>(repairPrompt, schemaName, schema, true);
+    }
+  }
+
+  private async requestStructured<T>(
+    prompt: string,
+    schemaName: string,
+    schema: Record<string, unknown>,
+    isRetry: boolean
+  ): Promise<T> {
+    logger.debug(`OpenAI structured API Call: model=${this.model}, schema=${schemaName}, retry=${isRetry}`);
+
+    const completion = await this.openai.chat.completions.create({
+      model: this.model,
+      messages: [{ role: "user", content: prompt }],
+      temperature: this.temperature,
+      response_format: {
+        type: "json_schema",
+        json_schema: {
+          name: schemaName,
+          strict: true,
+          schema,
+        },
+      } as any,
+    } as any);
+
+    if (!completion || !completion.choices || completion.choices.length === 0) {
+      throw new Error("No choices returned from OpenAI structured API");
+    }
+
+    const content = completion.choices[0]?.message?.content || "";
+    if (!content.trim()) {
+      throw new Error("Empty structured response from OpenAI API");
+    }
+
+    try {
+      return JSON.parse(content) as T;
+    } catch (error: any) {
+      throw new Error(`Invalid JSON in structured response: ${error.message}`);
+    }
+  }
 }

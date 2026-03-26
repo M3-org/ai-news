@@ -11,3 +11,4 @@ frontend/public/
 # Lock files - this project uses npm, not yarn
 yarn.lock
 tmp/
+/docs
