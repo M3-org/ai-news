@@ -1,5 +1,6 @@
 import { OpenAIProvider } from "../ai/OpenAIProvider";
 import { SQLiteStorage } from "../storage/SQLiteStorage";
+import { DiscordChannelRegistry } from "../storage/DiscordChannelRegistry";
 import { ContentItem, SummaryItem, DiscordSummary, ActionItems, HelpInteractions, SummaryFaqs, DiscordRawData } from "../../types";
 import { writeFile } from "../../helpers/fileHelper";
 import { logger } from "../../helpers/cliHelper";
@@ -18,6 +19,8 @@ export class DiscordSummaryGenerator {
   private summaryType: string;
   private source: string;
   private outputPath: string;
+  private static readonly MIN_CHANNEL_MESSAGES = 3;
+  private static readonly MIN_CHANNEL_HUMAN_USERS = 2;
 
 
   static constructorInterface = {
@@ -131,13 +134,97 @@ export class DiscordSummaryGenerator {
       // Group by channel and process each channel
       const channelItemsMap = this.groupByChannel(contentItems);
       const allChannelSummaries: DiscordSummary[] = [];
-      
-      logger.info(`Processing ${Object.keys(channelItemsMap).length} channels`);
+
+      // DB-driven channel filtering: check isMuted and aiRecommendation
+      let channelRegistry: DiscordChannelRegistry | null = null;
+      const db = this.storage.getDb();
+      if (db) {
+        channelRegistry = new DiscordChannelRegistry(db);
+      }
+
+      const channelSelection: {
+        included: { channelId: string; channelName: string; reason: string }[];
+        excluded: { channelId: string; channelName: string; reason: string }[];
+      } = { included: [], excluded: [] };
+
+      const channelsToProcess: { [channelId: string]: ContentItem[] } = {};
+
       for (const [channelId, items] of Object.entries(channelItemsMap)) {
+        const channelName = items[0]?.metadata?.channelName || 'Unknown';
+        const { messages, users } = this.combineRawData(items);
+        const uniqueHumanUsers = new Set(
+          messages
+            .filter(message => {
+              const user = users[message.uid];
+              return user && !user.isBot;
+            })
+            .map(message => message.uid)
+        ).size;
+
+        if (messages.length === 0) {
+          channelSelection.excluded.push({
+            channelId,
+            channelName,
+            reason: 'No messages that day'
+          });
+          logger.info(`Skipping channel ${channelName} (${channelId}): no messages that day`);
+          continue;
+        }
+
+        if (
+          messages.length < DiscordSummaryGenerator.MIN_CHANNEL_MESSAGES ||
+          uniqueHumanUsers < DiscordSummaryGenerator.MIN_CHANNEL_HUMAN_USERS
+        ) {
+          const reasonParts: string[] = [];
+          if (messages.length < DiscordSummaryGenerator.MIN_CHANNEL_MESSAGES) {
+            reasonParts.push(`${messages.length} message${messages.length === 1 ? '' : 's'}`);
+          }
+          if (uniqueHumanUsers < DiscordSummaryGenerator.MIN_CHANNEL_HUMAN_USERS) {
+            reasonParts.push(`${uniqueHumanUsers} human user${uniqueHumanUsers === 1 ? '' : 's'}`);
+          }
+          channelSelection.excluded.push({
+            channelId,
+            channelName,
+            reason: `Below threshold: ${reasonParts.join(', ')}`
+          });
+          logger.info(`Skipping low-signal channel ${channelName} (${channelId}): ${reasonParts.join(', ')}`);
+          continue;
+        }
+
+        if (channelRegistry) {
+          const channel = await channelRegistry.getChannelById(channelId);
+          if (channel) {
+            if (channel.isMuted) {
+              channelSelection.excluded.push({ channelId, channelName, reason: 'Muted' });
+              logger.info(`Skipping muted channel ${channelName} (${channelId})`);
+              continue;
+            }
+            if (channel.aiRecommendation === 'SKIP') {
+              channelSelection.excluded.push({
+                channelId,
+                channelName,
+                reason: channel.aiReason || 'AI recommended skip'
+              });
+              logger.info(`Skipping AI-SKIP channel ${channelName} (${channelId}): ${channel.aiReason || 'no reason'}`);
+              continue;
+            }
+          }
+        }
+
+        channelsToProcess[channelId] = items;
+        channelSelection.included.push({
+          channelId,
+          channelName,
+          reason: `Active channel: ${messages.length} messages, ${uniqueHumanUsers} human users`
+        });
+      }
+
+      logger.info(`Processing ${Object.keys(channelsToProcess).length} channels (${channelSelection.excluded.length} excluded)`);
+      for (const [channelId, items] of Object.entries(channelsToProcess)) {
         try {
           logger.info(`Processing channel ${channelId} with ${items.length} items`);
           const channelSummary = await this.processChannelData(items);
-          
+
           if (channelSummary) {
             // Add channel ID to the summary for linking with stats
             allChannelSummaries.push({

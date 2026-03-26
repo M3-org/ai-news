@@ -11,6 +11,7 @@ import { MediaDownloader, generateManifestToFile } from "./download-media";
 import { MediaDownloadCapable } from "./plugins/sources/DiscordRawDataSource";
 import { SummaryEnricher } from "./plugins/enrichers/SummaryEnricher";
 import { logger } from "./helpers/cliHelper";
+import { ProgressDashboard, setActiveProgressDashboard } from "./helpers/progressDashboard";
 import { open } from "sqlite";
 import sqlite3 from "sqlite3";
 import dotenv from "dotenv";
@@ -23,7 +24,7 @@ import {
   loadStorage,
   validateConfiguration
 } from "./helpers/configHelper";
-import { addOneDay, parseDate, formatDate, callbackDateRangeLogic } from "./helpers/dateHelper";
+import { addOneDay, parseDate, formatDate, callbackDateRangeLogic, collectDateRange } from "./helpers/dateHelper";
 
 dotenv.config({ quiet: true });
 
@@ -32,6 +33,88 @@ dotenv.config({ quiet: true });
  */
 function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable & { name: string } {
   return source && typeof source.hasMediaDownloadEnabled === 'function';
+}
+
+function formatDuration(ms: number): string {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  if (hours > 0) {
+    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function describeMode(onlyFetch: boolean, onlyGenerate: boolean): string {
+  if (onlyGenerate) return "generate-only";
+  if (onlyFetch) return "fetch-only";
+  return "fetch+generate";
+}
+
+function describeDateScope(fetchDates: string[]): string {
+  if (fetchDates.length === 0) return "none";
+  if (fetchDates.length === 1) return fetchDates[0];
+  return `${fetchDates[fetchDates.length - 1]} -> ${fetchDates[0]}`;
+}
+
+function buildFetchHeaderLines(options: {
+  sourceFile: string;
+  mode: string;
+  fetchDates: string[];
+  outputPath: string;
+  currentSource?: string;
+  currentDate?: string;
+  overrideCount: number;
+}): string[] {
+  const lines = [
+    `Config: ${options.sourceFile} | Mode: ${options.mode} | Dates: ${describeDateScope(options.fetchDates)}`,
+    `Output: ${options.outputPath} | Channel override: ${options.overrideCount > 0 ? `${options.overrideCount} channel(s)` : 'none'}`,
+  ];
+
+  if (options.currentSource || options.currentDate) {
+    lines.push(`Current: ${options.currentSource || '-'} @ ${options.currentDate || '-'}`);
+  }
+
+  return lines;
+}
+
+function buildFetchSummary(options: {
+  sourceFile: string;
+  fetchDates: string[];
+  totalJobs: number;
+  completedJobs: number;
+  startedAt: number;
+  stats: Record<string, string>;
+}): string[] {
+  const summary = [
+    "Historical fetch summary",
+    `  config: ${options.sourceFile}`,
+    `  dates: ${describeDateScope(options.fetchDates)}`,
+    `  source-date jobs: ${options.completedJobs}/${options.totalJobs}`,
+    `  elapsed: ${formatDuration(Date.now() - options.startedAt)}`,
+  ];
+
+  const statLabels: Array<[string, string]> = [
+    ["queued", "queued channels"],
+    ["active", "active channels"],
+    ["done", "completed channels"],
+    ["failed", "failed channels"],
+    ["skip_existing", "skipped existing"],
+    ["skip_unavailable", "skipped unavailable"],
+    ["skip_future", "skipped future"],
+    ["items", "stored items"],
+  ];
+
+  for (const [key, label] of statLabels) {
+    if (options.stats[key] !== undefined) {
+      summary.push(`  ${label}: ${options.stats[key]}`);
+    }
+  }
+
+  return summary;
 }
 
 (async () => {
@@ -53,6 +136,8 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let dateStr = today.toISOString().slice(0, 10);
     let onlyFetch = false;
     let onlyGenerate = false;
+    let skipExisting = false;
+    let force = false;
     let downloadMedia = false;
     let generateManifest = false;
     let manifestOutput: string | undefined;
@@ -61,6 +146,7 @@ function hasMediaDownloadCapability(source: any): source is MediaDownloadCapable
     let afterDate;
     let duringDate;
     let outputPath = './'; // Default output path
+    let overrideChannels: string[] = [];
 
     if (args.includes('--help') || args.includes('-h')) {
       logger.info(`
@@ -84,6 +170,9 @@ Options:
   --generate-manifest   Generate media manifest JSON for VPS downloads (default: false).
   --manifest-output=<path> Output path for manifest file (default: <output>/media-manifest.json).
   --media-manifest=<path> Path to media manifest for CDN URL enrichment in summaries.
+  --channels=<id1,id2>  Comma-separated channel IDs to override config (archive mode).
+  --skip-existing       Skip generation for dates that already have a summary.
+  -f, --force           Force regeneration even if summary exists (overrides --skip-existing).
   --output=<path>       Output directory path (default: ./)
   -h, --help            Show this help message.
       `);
@@ -130,6 +219,12 @@ Options:
         duringDate = arg.split('=')[1];
       } else if (arg.startsWith('--output=') || arg.startsWith('-o=')) {
         outputPath = arg.split('=')[1];
+      } else if (arg.startsWith('--channels=')) {
+        overrideChannels = arg.split('=')[1].split(',').map(id => id.trim()).filter(Boolean);
+      } else if (arg === '--skip-existing' || arg === '--skip-existing=true') {
+        skipExisting = true;
+      } else if (arg === '-f' || arg === '--force') {
+        force = true;
       }
     });
 
