@@ -1,185 +1,105 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-24",
-  "categories": {
-    "title": "ElizaOS Community Updates - March 24, 2026",
-    "content": [
-      {
-        "text": "Community member dEXploarer announced a contest offering $150 in prizes and $150 in Milady BSC tokens for the best MiladyAI short video submissions, with a minimum length of 10 seconds. The videos should preferably feature community characters and are intended for both community engagement and app promotion. ElizaBAO shared news about an upcoming AI Sprint hackathon in collaboration with BNBChain, Unibase AI, pieverse, dgrid ai, MYX Finance, and TagAIDAO. The global online hackathon runs from April 1-30, 2026, with a $50,000 prize pool open to developers and AI enthusiasts.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/embed-image-1485877139592052757_8e0c8b92.jpg",
-          "https://cdn.elizaos.news/elizaos-media/embed-image-1485972838384013332_725346e0.jpg"
-        ]
-      },
-      {
-        "text": "Denis from Nosana introduced himself as the ecosystem and community representative, announcing their partnership with ElizaOS for the Nosana Builders Challenge starting March 25. The team will host workshops on March 26 and April 2 to help participants maximize efficiency in building AI agents. Denis offered support for anyone needing help during the challenge. Some community members expressed concerns about Eliza token price performance, with observations about recurring patterns of drops followed by brief pumps and new all-time lows.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774400918916-ai89rs.jpg"
-      },
-      {
-        "text": "In the coders channel, a representative from a crypto media network with 2M+ audience across Telegram, YouTube, and X proposed a collaboration with Eliza OS. However, Odilitime clarified that the person who responded does not represent the project. Ivan Jeremic announced the development of a Pythia MCP server that enables AI agents to query live on-chain market indicators including EMA, RSI, VWAP, Bollinger Bands, and volatility without requiring API keys or off-chain data pipelines. The data comes from a Chainlink oracle on Polygon covering 13 tokens across 4 timeframes, with a free testnet available.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1774400938697-zuip1m.jpg"
-      },
-      {
-        "text": "DorianD shared a critical security alert about a supply chain attack in litellm version 1.82.8 on PyPI. The malicious package contains a .pth file that harvests SSH keys, cloud credentials, and secrets on every Python startup, and attempts lateral movement across Kubernetes clusters. Odilitime confirmed awareness of the security issue.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1486113855628378302_adf272e1.webp"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1774310400,
+  "title": "Daily Report - 2026-03-25",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion and AI Agent Development",
+      "content": [
+        {
+          "text": "In the general discussion channel, several new members introduced themselves and exchanged greetings. A brief conversation touched on the existence of a token for Eliza, with one user expressing surprise about it. A question was raised about the relationship between bas milady and sol milady.ai and whether the milady app supports both, with one user hoping it supports the SOL version and another hinting at bad news. A community member welcomed new users and encouraged them to build with ElizaOS.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer named Ape Ape expressed interest in building and exploring autonomous trading agents on ElizaOS and sought feedback from other builders. Community members encouraged them to share their setup and noted that a hackathon launching that day would be a good opportunity to test such agents. Another developer shared a project called The Undesirables, a collection of 4,444 NFTs on Ethereum where each NFT's visual traits deterministically map to a unique personality across 7 dimensions based on the Big Five personality model plus trading scores. Each NFT workspace ships with ElizaOS V1 spec compatibility including YAML frontmatter and character.json export. The project also features a 3-tier MemGPT-style memory system and a live market data pipeline that injects real-time data from CoinGecko, DeFiLlama, and DexScreener into agent sessions. The developer invited feedback from others building in the space. A separate message in the channel appeared to be a promotional investment solicitation unrelated to the technical discussion.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://the-undesirables.com/og-image.png"
+          ],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1486395520854261770/agent_promo_v2_enhanced.mp4?ex=69c55934&is=69c407b4&hm=b6f35eeba802a7c7da72117bbdec7baa76a9edc774fed178750f9f59c60d0f13&"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1774396800,
   "nicknameMap": {
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
+    "Guru": {
+      "id": "1452610445444907120",
+      "username": "luna234m",
       "roles": [
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Github - Contributor",
-        "Helper",
-        "Migration Support",
-        "Associate",
-        "Labs",
         "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 191
-    },
-    "DorianD": {
-      "id": "918853893100806164",
-      "username": "doriand0963",
-      "roles": [
-        "Partner",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "Ivan Jeremic": {
-      "id": "1483419974319210568",
-      "username": "ivanjeremic.c3x_18863",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "gelgit.eth": {
-      "id": "700227417859555368",
-      "username": "gtham4769",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "Coin Post": {
-      "id": "982219364075970580",
-      "username": "coin_post",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "gby": {
-      "id": "1450669082343903272",
-      "username": "gby_17",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 47
-    },
-    "Seed_bawa1": {
-      "id": "1412898012652638239",
-      "username": "seed_bawa1",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "ericrivera": {
-      "id": "291346487315529729",
-      "username": "ericrivera9124",
+    "sailorpepe.eth": {
+      "id": "920440808509931560",
+      "username": "thegreatluna8713",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "JR.": {
+      "id": "1115773719021891719",
+      "username": "jr.2250",
       "roles": [
         "Helper",
+        "a-hack",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
         "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
+    "SHELDONB1": {
+      "id": "1242856791189094492",
+      "username": "sheldonb1_40970",
       "roles": [
         "Verified",
-        "Designer",
-        "utility",
         "Coder",
+        "utility",
         "eliza"
-      ],
-      "totalMessages": 1
+      ]
     },
-    "Martin 奈特（破产版）": {
-      "id": "1216999763573211189",
-      "username": "martin_net6",
+    "gelgit.eth": {
+      "id": "700227417859555368",
+      "username": "gtham4769",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
+        "Coder",
         "Verified",
-        "Designer",
+        "Poker"
+      ],
+      "totalMessages": 2
+    },
+    "Ape Ape | KairoGuard 🐷 🟠": {
+      "id": "769162375328563261",
+      "username": "apeape.sui",
+      "roles": [
+        "Creator",
         "utility",
         "Coder",
         "eliza"
@@ -199,77 +119,182 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 3
     },
-    "Franklin": {
-      "id": "1145799584497533039",
-      "username": "acaradenft",
+    "Boj/acc": {
+      "id": "245981634187231232",
+      "username": "accountshark",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 12
+    },
+    "g": {
+      "id": "900467006002835469",
+      "username": "gmo6940",
       "roles": [
         "Trader",
+        "Verified"
+      ],
+      "totalMessages": 9
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
         "utility"
+      ],
+      "totalMessages": 25
+    },
+    "Martin 奈特（破产版）": {
+      "id": "1216999763573211189",
+      "username": "martin_net6",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "isabella d": {
+      "id": "798717256509947904",
+      "username": "isabellad4540",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     },
-    "Ame": {
-      "id": "1484588964315660500",
-      "username": "ame05230523",
+    "Marcelo Bernardes": {
+      "id": "725156749895532614",
+      "username": "marcelobernardes0327",
       "roles": [
         "Trader",
-        "Creator",
-        "Designer",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "iono": {
+      "id": "847591789795868733",
+      "username": "dutchiono",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 2
     },
-    "ElizaBAO": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
+    "神的祝福": {
+      "id": "1460247201732362240",
+      "username": "shendezhufu",
       "roles": [
-        "a-hack",
-        "Creator",
-        "Contributor",
         "Verified",
-        "Booster",
-        "Designer",
         "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 13
-    },
-    "taraWolf": {
-      "id": "1096416164751622165",
-      "username": "tarawolf",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Coder"
+        "utility",
+        "eliza"
       ],
       "totalMessages": 2
     },
-    "Delta_Sniper": {
-      "id": "423540200849932289",
-      "username": "noderunner12",
-      "totalMessages": 1
-    },
-    "dEXploarer": {
-      "id": "458148462639316993",
-      "username": "dexploarer",
+    "tina": {
+      "id": "1436138035984203816",
+      "username": "bettina04385_27038",
       "roles": [
         "Helper",
         "Trader",
-        "elizaOS Tester",
-        "VIP",
-        "Contributor",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
         "Verified",
-        "Poker",
-        "Coder"
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "The Crypto Millionaire": {
+      "id": "765038611426050059",
+      "username": "crypto_kingjay",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
+    },
+    "Mr.Grayson": {
+      "id": "962110826641256548",
+      "username": "greatness_136",
+      "roles": [
+        "Helper",
+        "Trader",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "JAMES": {
+      "id": "1474267656327528538",
+      "username": "jamesson101",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
     }
   }
 }
