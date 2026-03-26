@@ -300,7 +300,7 @@ export class SQLiteStorage implements StoragePlugin {
             item.date
           ]
         );
-        console.log(`Updated existing summary for ${item.type} on date ${dateStr}`);
+        logger.debug(`Updated existing summary for ${item.type} on date ${dateStr}`);
       } else {
         // Insert new summary
         await this.db.run(
@@ -316,11 +316,11 @@ export class SQLiteStorage implements StoragePlugin {
             item.date,
           ]
         );
-        console.log(`Saved new summary for ${item.type} on date ${dateStr}`);
+        logger.debug(`Saved new summary for ${item.type} on date ${dateStr}`);
       }
     } catch (error) {
       // Use epoch seconds * 1000 for correct Date object creation in error message
-      console.error(`Error saving summary for ${item.type} on date ${new Date(item.date * 1000).toISOString()}:`, error); 
+      logger.error(`Error saving summary for ${item.type} on date ${new Date(item.date * 1000).toISOString()}: ${error}`);
       throw error;
     }
   }
@@ -419,7 +419,9 @@ export class SQLiteStorage implements StoragePlugin {
    * Retrieves summary items within a specific time range.
    * @param startEpoch - Start timestamp in epoch seconds
    * @param endEpoch - End timestamp in epoch seconds
-   * @param excludeType - Optional type to exclude from results
+   * @param excludeType - Optional type to EXCLUDE from results (WHERE type != excludeType).
+   *   Note: DiscordSummaryGenerator passes its own summaryType here to check for
+   *   pre-existing summaries of OTHER types — opposite of includeType semantics.
    * @returns Promise<SummaryItem[]> Array of summary items within the time range
    * @throws Error if database is not initialized
    */
@@ -455,7 +457,7 @@ export class SQLiteStorage implements StoragePlugin {
         date: row.date,
       }));
     } catch (error) {
-      console.error("Error fetching summary between epochs:", error);
+      logger.error(`Error fetching summary between epochs: ${error}`);
       throw error;
     }
   }

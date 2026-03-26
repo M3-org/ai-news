@@ -165,10 +165,6 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     return dashboard?.isInteractive() ? dashboard : null;
   }
 
-  private getDashboard() {
-    return getActiveProgressDashboard();
-  }
-
   private formatTargetDay(targetDate: Date): string {
     return targetDate.toISOString().split('T')[0];
   }
@@ -1033,7 +1029,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     const snowflakeSkipped: string[] = [];
     const storageSkipped: string[] = [];
     const unavailableSkipped: string[] = [];
-    const dashboard = this.getDashboard();
+    const dashboard = getActiveProgressDashboard();
 
     // Compute end-of-day for snowflake creation-date check
     const endOfTargetDate = new Date(targetDate);

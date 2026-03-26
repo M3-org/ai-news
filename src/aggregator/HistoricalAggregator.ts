@@ -170,6 +170,11 @@ export class HistoricalAggregator {
    */
   public async fetchAndStoreRange(sourceName: string, filter: DateConfig) {
     try {
+      // Preload CID cache for the full range if the source supports it (e.g. DiscordRawDataSource)
+      const source = this.sources.find(s => s.name === sourceName);
+      if (source && typeof (source as any).preloadExistingRange === 'function' && filter.after && filter.before) {
+        await (source as any).preloadExistingRange(filter.after, filter.before);
+      }
       await callbackDateRangeLogic(filter, (dayStr:string) => this.fetchAndStore(sourceName, dayStr))
     } catch (error) {
       logger.error(`Error fetching/storing data from source ${sourceName}: ${error}`);

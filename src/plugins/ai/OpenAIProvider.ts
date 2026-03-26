@@ -372,6 +372,9 @@ export class OpenAIProvider implements AiProvider {
     try {
       return await this.requestStructured<T>(prompt, schemaName, schema, false);
     } catch (error) {
+      // Only retry on JSON parse failures — not network/auth/rate-limit errors
+      const msg = error instanceof Error ? error.message : String(error);
+      if (!msg.includes("Invalid JSON")) throw error;
       logger.warning(`Structured summary failed for schema ${schemaName}, retrying with strict JSON repair prompt`);
       const repairPrompt = `${prompt}\n\nReturn only valid JSON matching the requested schema. Do not include markdown fences, commentary, or any extra text.`;
       return await this.requestStructured<T>(repairPrompt, schemaName, schema, true);
