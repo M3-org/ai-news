@@ -99,3 +99,11 @@ export const callbackDateRangeLogic = async (filter: DateConfig, callback: Funct
       }
     }
   }
+
+export const collectDateRange = async (filter: DateConfig): Promise<string[]> => {
+  const dates: string[] = [];
+  await callbackDateRangeLogic(filter, async (dayStr: string) => {
+    dates.push(dayStr);
+  });
+  return dates;
+};

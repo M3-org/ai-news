@@ -236,8 +236,143 @@ async function commandIndex(db: Database): Promise<void> {
 }
 
 // ============================================================================
-// Command: fetch-avatars
+// Command: fetch-avatars / sync-profiles
 // ============================================================================
+
+const PROFILE_FRESHNESS_SECONDS = 7 * 24 * 60 * 60;
+
+function isProfileFresh(metadata: any): boolean {
+  const fetchedAt = metadata?.profileFetchedAt;
+  if (typeof fetchedAt !== "number") return false;
+  return fetchedAt >= Math.floor(Date.now() / 1000) - PROFILE_FRESHNESS_SECONDS;
+}
+
+function buildDiscordProfileMetadata(discordUser: any): Record<string, any> {
+  const metadata: Record<string, any> = {
+    profileFetchedAt: Math.floor(Date.now() / 1000),
+    globalName: discordUser.globalName ?? null,
+    discriminator: discordUser.discriminator ?? null,
+    isBot: Boolean(discordUser.bot),
+    isSystem: Boolean(discordUser.system),
+    avatarHash: discordUser.avatar ?? null,
+    bannerHash: discordUser.banner ?? null,
+    accentColor: discordUser.accentColor ?? null,
+    flags: discordUser.flags?.bitfield?.toString?.() ?? null,
+    publicFlags: discordUser.flags?.bitfield?.toString?.() ?? null,
+    avatarDecorationData: discordUser.avatarDecorationData ?? null,
+  };
+
+  const bannerUrl = typeof discordUser.bannerURL === "function"
+    ? discordUser.bannerURL({ size: 512, extension: "png" })
+    : null;
+  if (bannerUrl) metadata.bannerUrl = bannerUrl;
+
+  if ("collectibles" in discordUser && discordUser.collectibles != null) {
+    metadata.collectibles = discordUser.collectibles;
+  }
+  if ("primaryGuild" in discordUser && discordUser.primaryGuild != null) {
+    metadata.primaryGuild = discordUser.primaryGuild;
+  }
+
+  return metadata;
+}
+
+async function commandSyncProfiles(db: Database, args: CliArgs): Promise<void> {
+  console.log("\n👤 Syncing Discord User Profiles\n");
+
+  const token = process.env.DISCORD_TOKEN;
+  if (!token) {
+    console.error("❌ Error: DISCORD_TOKEN not found in .env");
+    process.exit(1);
+  }
+
+  // Initialize registry
+  const registry = new DiscordUserRegistry(db);
+  await registry.initialize();
+
+  // Get users from discord_users table
+  const users = await db.all<Array<{ id: string; username: string; displayName: string; avatarUrl: string | null; metadata: string | null }>>(
+    `SELECT id, username, displayName, avatarUrl, metadata FROM discord_users`
+  );
+  console.log(`📖 Found ${users.length} users\n`);
+
+  // Filter users if --skip-existing flag is set
+  let usersToFetch = users;
+  if (args.skipExisting && !args.force) {
+    usersToFetch = users.filter(u => {
+      const metadata = u.metadata ? JSON.parse(u.metadata) : null;
+      return !isProfileFresh(metadata);
+    });
+    console.log(`⏭️  Skipping ${users.length - usersToFetch.length} users with fresh profiles\n`);
+  }
+
+  if (usersToFetch.length === 0) {
+    console.log("✅ All users already have fresh profiles!");
+    return;
+  }
+
+  const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
+  await client.login(token);
+  console.log("🤖 Connected to Discord!\n");
+
+  const rateLimit = args.rateLimit || 100;
+  console.log(`🎨 Fetching current profile data (${rateLimit}ms rate limit)...`);
+  console.log(`⏳ Estimated time: ~${Math.round(usersToFetch.length * rateLimit / 1000 / 60)} minutes\n`);
+
+  let avatarCount = 0;
+  let metadataCount = 0;
+  let errorCount = 0;
+
+  for (let i = 0; i < usersToFetch.length; i++) {
+    const user = usersToFetch[i];
+
+    if (i > 0 && i % 50 === 0) {
+      console.log(`   Progress: ${i}/${usersToFetch.length} (${Math.round(i / usersToFetch.length * 100)}%)`);
+    }
+
+    try {
+      const discordUser = await client.users.fetch(user.id, { force: true });
+      const avatarUrl = discordUser.avatarURL({ size: 256, extension: 'png' }) || discordUser.defaultAvatarURL;
+      const profileMetadata = buildDiscordProfileMetadata(discordUser);
+
+      await db.run(
+        `UPDATE discord_users SET avatarUrl = ?, metadata = ?, updatedAt = ? WHERE id = ?`,
+        [avatarUrl, JSON.stringify(profileMetadata), Math.floor(Date.now() / 1000), user.id]
+      );
+
+      if (avatarUrl) avatarCount++;
+      metadataCount++;
+      await new Promise(resolve => setTimeout(resolve, rateLimit));
+    } catch (error: any) {
+      errorCount++;
+      // Calculate default avatar index based on user ID
+      const userIdBigInt = BigInt(user.id);
+      const index = Number((userIdBigInt >> 22n) % 6n);
+      const defaultUrl = `https://cdn.discordapp.com/embed/avatars/${index}.png`;
+
+      const errorMetadata = {
+        profileFetchedAt: Math.floor(Date.now() / 1000),
+        fetchError: error.message,
+      };
+      await db.run(
+        `UPDATE discord_users SET avatarUrl = ?, metadata = ?, updatedAt = ? WHERE id = ?`,
+        [defaultUrl, JSON.stringify(errorMetadata), Math.floor(Date.now() / 1000), user.id]
+      );
+
+      if (error.code !== 10013) {
+        console.warn(`   ⚠️  Failed to fetch user ${user.id}: ${error.message}`);
+      }
+      await new Promise(resolve => setTimeout(resolve, rateLimit));
+    }
+  }
+
+  await client.destroy();
+
+  console.log(`\n✅ Synced ${usersToFetch.length} user profiles:`);
+  console.log(`   - ${avatarCount} avatar URLs updated`);
+  console.log(`   - ${metadataCount} metadata records updated`);
+  if (errorCount > 0) console.log(`   - ${errorCount} errors`);
+}
 
 async function commandFetchAvatars(db: Database, args: CliArgs): Promise<void> {
   console.log("\n🖼️  Fetching Discord Avatar URLs\n");
@@ -1388,6 +1523,9 @@ export async function runUsers(argv: string[] = process.argv.slice(2)) {
         break;
       case "fetch-avatars":
         await commandFetchAvatars(db, args);
+        break;
+      case "sync-profiles":
+        await commandSyncProfiles(db, args);
         break;
       case "build-registry":
         await commandBuildRegistry(db, args);
