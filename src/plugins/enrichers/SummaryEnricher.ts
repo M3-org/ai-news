@@ -361,7 +361,8 @@ async function main() {
       const summary = JSON.parse(jsonContent);
 
       if (summary.categories) {
-        for (const category of summary.categories) {
+        const cats = Array.isArray(summary.categories) ? summary.categories : [summary.categories];
+        for (const category of cats) {
           if (category.content && Array.isArray(category.content)) {
             for (const item of category.content) {
               delete item.memes;
