@@ -77,6 +77,11 @@ export class SummaryEnricher {
       const jsonContent = fs.readFileSync(jsonPath, "utf-8");
       const summary: SummaryJson = JSON.parse(jsonContent);
 
+      // Normalize: some formats emit categories as a single object, others as an array
+      if (summary.categories && !Array.isArray(summary.categories)) {
+        (summary as any).categories = [summary.categories];
+      }
+
       if (!summary.categories || summary.categories.length === 0) {
         console.log(`SummaryEnricher: No categories in summary`);
         return;
