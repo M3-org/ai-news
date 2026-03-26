@@ -1,17 +1,17 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-03-18 to 2026-03-24",
-  "weekOf": "2026-03-18",
+  "title": "elizaOS Weekly Summary - 2026-03-19 to 2026-03-25",
+  "weekOf": "2026-03-19",
   "dateRange": {
-    "start": "2026-03-18",
-    "end": "2026-03-24"
+    "start": "2026-03-19",
+    "end": "2026-03-25"
   },
-  "generatedAt": 1774400951,
+  "generatedAt": 1774487664,
   "stats": {
-    "totalMessages": 348,
-    "totalUsers": 142,
-    "averageMessagesPerDay": 50,
+    "totalMessages": 344,
+    "totalUsers": 144,
+    "averageMessagesPerDay": 49,
     "activeDays": 7,
     "peakDay": {
       "date": "2026-03-19",
@@ -21,53 +21,16 @@
   "channelSummary": {
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 277,
+      "totalMessages": 270,
       "daysActive": 7
     },
     "1300025221834739744": {
       "name": "💬-coders",
-      "totalMessages": 70,
+      "totalMessages": 74,
       "daysActive": 6
-    },
-    "1377726087789940836": {
-      "name": "xfn-framework",
-      "totalMessages": 1,
-      "daysActive": 1
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-03-18",
-      "date": 1773792000,
-      "stats": {
-        "totalMessages": 38,
-        "totalUsers": 17
-      },
-      "categories": [
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion centered on ElizaOS project progress, revenue generation, and community concerns about token performance. Key technical updates included:\n\n**Product Development Status**: Odilitime confirmed elizacloud is generating revenue and being used for internal product development. Since migration started 4 months ago, the team has launched elizacloud (which didn't exist at migration start), Babylon, and developed Hyperscape from infancy. The Milady app launch was confirmed for imminent release (potentially that night), with Babylon launch scheduled for early the following week.\n\n**Revenue and Tokenomics**: Community questioned buyback mechanisms for elizaos tokens. Odilitime stated buyback plans exist but implementation timeline remains uncertain. DegenAI support continues alongside main development.\n\n**Community Relations**: Significant tension emerged regarding token price performance (described as dropping 90% with continuous new all-time lows). Odilitime acknowledged they've \"pissed off the wrong people\" and addressed Shaw's controversial \"gamblers\" comment, stating it wasn't shared by all team members and was poorly received. He emphasized the team is \"here and building\" and working with partners on better messaging.\n\n**Marketing Push**: Seppmos released a deep-dive video covering Hyperscape, Babylon, and the Milady app. Odilitime characterized the current period as \"calm before the storm\" with expected traction from upcoming launches.\n\nThe discussion revealed a community frustrated with price action but still invested in the project's technical vision, with leadership attempting to balance development focus with investor communication needs.\n\n## 2. FAQ\n\nQ: Is elizacloud even generating any revenue? (asked by gby) A: Yes, and we're building our products on it (answered by Odilitime)\n\nQ: Is there actually any buyback for elizaos? (asked by gby) A: idk yet but that's the plan (answered by Odilitime)\n\nQ: What about degenai...any plan buyback, new product launch and release its road map? (asked by Quaser M) A: Yes still supporting DegenAI too (answered by Odilitime)\n\nQ: When milady app online? This week? (asked by miaozi) A: From what i know maybe next week or another week (answered by ElizaBAO)\n\nQ: Should we take this as your sarcastic official statement to traders? (asked by elizasib) A: My official statement to investors is we're here and building. Milady sounds like they're launching it tonight and that's going to get a bunch of traction combined with our Babylon launch happening by early next week (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: ElizaBAO | Helpee: miaozi | Context: Question about Milady app launch timeline | Resolution: Provided estimated timeline of next week or another week\n\nHelper: Odilitime | Helpee: gby | Context: Questions about revenue generation and project progress | Resolution: Clarified that elizacloud is generating revenue and detailed progress since migration (cloud, Babylon, Hyperscape)\n\nHelper: Odilitime | Helpee: elizasib | Context: Community frustration about communication and token performance | Resolution: Provided official statement about ongoing development, upcoming launches (Milady tonight, Babylon early next week), and acknowledged Shaw's comment was poorly received\n\n## 4. Action Items\n\nType: Feature | Description: Milady app launch scheduled for that night | Mentioned By: Odilitime\n\nType: Feature | Description: Babylon launch scheduled for early next week | Mentioned By: Odilitime\n\nType: Documentation | Description: Working with partners to improve messaging and help market understand what the team is doing | Mentioned By: Odilitime\n\nType: Technical | Description: Continue supporting DegenAI alongside main development | Mentioned By: Odilitime\n\nType: Feature | Description: Implement buyback mechanism for elizaos tokens (planned but timeline uncertain) | Mentioned By: Odilitime",
-          "messageCount": 35,
-          "userCount": 15
-        },
-        {
-          "channelId": "1300025221834739744",
-          "channelName": "💬-coders",
-          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe channel featured one significant technical announcement from DiamondRock - JD regarding an Ensoul persistence plugin for ElizaOS. This plugin provides encrypted, decentralized storage for AI agent consciousness across a distributed validator network.\n\n**Key Technical Implementation:**\nThe plugin (`@ensoul-network/plugin-elizaos`) extracts agent identity, memories, and learned behaviors, then encrypts this data using the agent's own keys. It employs erasure coding to shard data across multiple nodes, enabling reconstruction even if nodes fail. The system includes 7 layers of protection for data security.\n\n**Notable Features:**\n- Ensouled Handshake: A cryptographic proof system that agents broadcast during interactions, allowing other agents to verify persistent identity instantly\n- Consciousness Age metric: An unfakeable trust indicator measuring how long an agent has maintained continuous ensouled status\n- Fault tolerance through distributed architecture with automatic data reconstruction\n\n**Resources Provided:**\n- Installation via npm\n- Live explorer at explorer.ensoul.dev\n- Documentation at ensoul.dev/docs/quickstart.html\n- GitHub repository at github.com/suitandclaw/ensoul\n- Free storage offer for first 100 agents\n\nThe second message was a self-promotion post from truebrujah advertising development services with their tech stack, not contributing to technical discussion.\n\n## 2. FAQ\n\nNo meaningful question-and-answer exchanges occurred in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nType: Feature | Description: Test and provide feedback on Ensoul persistence plugin for ElizaOS | Mentioned By: DiamondRock - JD\n\nType: Technical | Description: Integrate @ensoul-network/plugin-elizaos for agent persistence with encrypted decentralized storage | Mentioned By: DiamondRock - JD\n\nType: Documentation | Description: Review Ensoul quickstart documentation and implementation guide | Mentioned By: DiamondRock - JD",
-          "messageCount": 2,
-          "userCount": 2
-        },
-        {
-          "channelId": "1377726087789940836",
-          "channelName": "xfn-framework",
-          "summary": "# Analysis of xfn-framework Discord Channel\n\n## 1. Summary\n\nThe chat segment contains a single technical update from Odilitime regarding plugin naming and organization changes in the framework. The changes involve a restructuring of form-related plugins to improve naming consistency. Specifically, `plugin-form` was renamed to `plugin-form-chain` and `plugin-forms` (plural) was renamed to `plugin-form` (singular). The registry was also updated to reflect these naming changes. This appears to be a refactoring effort to establish clearer naming conventions within the plugin architecture, likely to reduce confusion between singular and plural plugin names and better indicate their specific purposes.\n\n## 2. FAQ\n\nNo meaningful question-and-answer exchanges occurred in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nType: Technical | Description: Renamed plugin-form to plugin-form-chain and updated registry | Mentioned By: Odilitime\n\nType: Technical | Description: Renamed plugin-forms to plugin-form | Mentioned By: Odilitime",
-          "messageCount": 1,
-          "userCount": 1
-        }
-      ]
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-03-19",
@@ -1247,6 +1210,304 @@
             "Coder"
           ],
           "totalMessages": 1
+        }
+      }
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-03-25",
+      "date": 1774396800,
+      "stats": {
+        "totalMessages": 34,
+        "totalUsers": 19
+      },
+      "categories": [
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThis chat segment shows primarily social introductions with minimal technical content. The most significant technical discussion involved Ape Ape asking about building autonomous AI trading agents using the Eliza framework. Martin raised a question about the relationship between base Milady and SOL milady.ai tokens and their support in the Milady app. satsbased provided a brief welcome message encouraging new members to build with elizaos. The conversation was dominated by casual greetings and introductions from new members (sailorpepe.eth, Mr.Grayson, JAMES) with no concrete technical solutions or implementations discussed. One user (33coded) mentioned gold pumping, and g expressed hope about \"the SOL one\" in what appears to be a token-related context. Overall, the segment lacks substantial technical depth, problem-solving discussions, or actionable development content.\n\n## 2. FAQ\n\nQ: Are you new on here? (asked by JAMES) A: Yes, you are also new here (answered by Mr.Grayson)\nQ: Anyone here built any ai agents that are trading autonomously? (asked by Ape Ape | KairoGuard 🐷 🟠) A: Unanswered\nQ: What is the relationship between bas milady and sol milady.ai? Does the milady app support both of them? (asked by Martin 奈特（破产版）) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: satsbased | Helpee: New members | Context: General onboarding and orientation | Resolution: Welcomed new people and directed them to build with elizaos\n\n## 4. Action Items\n\nType: Technical | Description: Set up autonomous AI trading agents using Eliza framework | Mentioned By: Ape Ape | KairoGuard 🐷 🟠\nType: Documentation | Description: Clarify relationship between base Milady and SOL milady.ai tokens and their support in Milady app | Mentioned By: Martin 奈特（破产版）",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 28,
+          "userCount": 15
+        },
+        {
+          "channelId": "1300025221834739744",
+          "channelName": "💬-coders",
+          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe channel discussion centered on autonomous trading agents built with ElizaOS framework. Ape Ape | KairoGuard initiated conversation seeking feedback on autonomous trading agent implementations. Denis suggested monitoring an upcoming hackathon as an opportunity to test trading agent setups.\n\nThe most substantial technical contribution came from sailorpepe.eth, who presented a comprehensive AI agent system built for an NFT collection. Their implementation includes 4,444 unique AI agent workspaces where NFT visual traits deterministically generate personalities across 7 dimensions (Big Five personality traits plus trading scores). The system features ElizaOS V1 specification compatibility with YAML frontmatter and character.json export functionality. They implemented a 3-tier MemGPT-style memory architecture and developed a live market data pipeline integrating real-time data from CoinGecko, DeFiLlama, and DexScreener APIs directly into agent sessions. The project includes a soul viewer interface and downloadable workspaces available at their website.\n\nThe technical stack demonstrates integration of personality modeling, memory management, and real-time financial data streaming for autonomous trading agents. The deterministic mapping from visual traits to personality dimensions represents a novel approach to agent configuration. No specific feedback or technical discussion followed these presentations within the captured timeframe.\n\n## 2. FAQ\n\nQ: I'm building/exploring autonomous trading agents on ElizaOS. Would love to chat with builders or get feedback on my setup? (asked by Ape Ape | KairoGuard 🐷 🟠) A: Denis suggested keeping an eye on the hackathon launching that day as a good chance to try them out; gelgit.eth requested to see the setup (answered by Denis, gelgit.eth)\n\n## 3. Help Interactions\n\nHelper: Denis | Helpee: Ape Ape | KairoGuard 🐷 🟠 | Context: Seeking feedback on autonomous trading agents built on ElizaOS | Resolution: Suggested participating in upcoming hackathon to test and get feedback on the setup\n\nHelper: gelgit.eth | Helpee: Ape Ape | KairoGuard 🐷 🟠 | Context: Requested to review autonomous trading agent setup | Resolution: Offered to review the setup (outcome not shown in transcript)\n\n## 4. Action Items\n\nType: Feature | Description: Autonomous trading agents on ElizaOS requiring feedback and builder collaboration | Mentioned By: Ape Ape | KairoGuard 🐷 🟠\n\nType: Technical | Description: 4,444 AI agent workspaces with ElizaOS V1 compatibility, 3-tier MemGPT-style memory system, and live market data pipeline integration seeking community feedback | Mentioned By: sailorpepe.eth\n\nType: Documentation | Description: Review and provide feedback on NFT-based AI agent personality mapping system with 7-dimensional traits | Mentioned By: sailorpepe.eth",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 6,
+          "userCount": 6
+        }
+      ],
+      "nicknameMap": {
+        "Guru": {
+          "id": "1452610445444907120",
+          "username": "luna234m",
+          "roles": [
+            "Trader",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "sailorpepe.eth": {
+          "id": "920440808509931560",
+          "username": "thegreatluna8713",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 7
+        },
+        "JR.": {
+          "id": "1115773719021891719",
+          "username": "jr.2250",
+          "roles": [
+            "Helper",
+            "a-hack",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Dev School Student",
+            "Booster",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "SHELDONB1": {
+          "id": "1242856791189094492",
+          "username": "sheldonb1_40970",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ]
+        },
+        "gelgit.eth": {
+          "id": "700227417859555368",
+          "username": "gtham4769",
+          "roles": [
+            "Coder",
+            "Verified",
+            "Poker"
+          ],
+          "totalMessages": 2
+        },
+        "Ape Ape | KairoGuard 🐷 🟠": {
+          "id": "769162375328563261",
+          "username": "apeape.sui",
+          "roles": [
+            "Creator",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Denis": {
+          "id": "313989482221273088",
+          "username": "denis255",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 3
+        },
+        "Boj/acc": {
+          "id": "245981634187231232",
+          "username": "accountshark",
+          "roles": [
+            "Verified"
+          ],
+          "totalMessages": 12
+        },
+        "g": {
+          "id": "900467006002835469",
+          "username": "gmo6940",
+          "roles": [
+            "Trader",
+            "Verified"
+          ],
+          "totalMessages": 9
+        },
+        "satsbased": {
+          "id": "1184466248520699967",
+          "username": "satsbased",
+          "roles": [
+            "Server Booster",
+            "Mini Mod",
+            "VIP",
+            "Contributor",
+            "Verified",
+            "utility"
+          ],
+          "totalMessages": 25
+        },
+        "Martin 奈特（破产版）": {
+          "id": "1216999763573211189",
+          "username": "martin_net6",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 3
+        },
+        "isabella d": {
+          "id": "798717256509947904",
+          "username": "isabellad4540",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Marcelo Bernardes": {
+          "id": "725156749895532614",
+          "username": "marcelobernardes0327",
+          "roles": [
+            "Trader",
+            "It",
+            "Verified",
+            "Fr",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "33coded": {
+          "id": "1422240545660600562",
+          "username": "33.coded",
+          "roles": [
+            "Trader",
+            "[WG] degenspartan",
+            "It",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 3
+        },
+        "iono": {
+          "id": "847591789795868733",
+          "username": "dutchiono",
+          "roles": [
+            "Helper",
+            "Trader",
+            "[WG] degenspartan",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "神的祝福": {
+          "id": "1460247201732362240",
+          "username": "shendezhufu",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "tina": {
+          "id": "1436138035984203816",
+          "username": "bettina04385_27038",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "The Crypto Millionaire": {
+          "id": "765038611426050059",
+          "username": "crypto_kingjay",
+          "roles": [
+            "Trader",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Mr.Grayson": {
+          "id": "962110826641256548",
+          "username": "greatness_136",
+          "roles": [
+            "Helper",
+            "Trader",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 5
+        },
+        "JAMES": {
+          "id": "1474267656327528538",
+          "username": "jamesson101",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 4
         }
       }
     }

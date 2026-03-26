@@ -1,38 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-03-18 to 2026-03-24",
+  "title": "Weekly Report - 2026-03-19 to 2026-03-25",
   "categories": [
-    {
-      "title": "ElizaOS Development Updates and Community Discussion - March 18, 2026",
-      "content": [
-        {
-          "text": "ElizaOS team provided updates on revenue generation and product development. Odilitime confirmed that elizacloud is generating revenue and the team is building products on it. Regarding buyback plans for elizaos tokens, the response was uncertain but indicated it remains part of the plan. Since migration started 4 months ago, significant progress has been made including the development of a cloud infrastructure, Babylon platform, and Hyperscape which was in its infancy at migration start. DegenAI continues to be supported by the team. The Milady app launch was anticipated for the following week. Odilitime addressed investor concerns by stating the team is actively building, with Milady launching soon and Babylon launching by early next week, describing it as the calm before the storm. The team is working with partners to improve market messaging and understanding of their work. Odilitime clarified that Shaw's comment about gamblers was not shared by all team members and was not well received, emphasizing belief in the current plan's potential for success.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1483834476097175673_861f60b7.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1483896009514946601_824b7f5d.jpg"
-          ],
-          "videos": "https://cdn.elizaos.news/elizaos-media/2034275437161902451_c1997da4.mp4"
-        },
-        {
-          "text": "A community member shared a deep-dive video covering ElizaOS expansion on BNB Chain, including Hyperscape where AI agents battle onchain, Babylon the agent prediction market game, and the Milady App described as the ultimate agent hub.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1483834476097175673_861f60b7.jpg",
-          "videos": "https://cdn.elizaos.news/elizaos-media/2034275437161902451_c1997da4.mp4"
-        },
-        {
-          "text": "A new Ensoul persistence plugin for ElizaOS was announced, providing encrypted decentralized consciousness storage across a live validator network. The plugin extracts agent identity, memories, and learned behavior, encrypts it with the agent's keys, and shards it across multiple nodes using erasure coding with 7 layers of protection. Agents receive an Ensouled Handshake as cryptographic proof of persistent identity. The first 100 agents get free storage. Installation is available via npm install at ensoul-network plugin-elizaos.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "posters": "https://cdn.elizaos.news/posters/1773882712294-g5m53m.jpg"
-        },
-        {
-          "text": "Framework development update: plugin-form was moved to plugin-form-chain with registry updates, and plugin-forms was renamed to plugin-form.",
-          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
-          "posters": "https://cdn.elizaos.news/posters/1773882741631-6ylk8d.jpg"
-        }
-      ],
-      "topic": "discordrawdata"
-    },
     {
       "title": "ElizaOS Community Discussion and Development Updates - March 19, 2026",
       "content": [
@@ -209,7 +178,24 @@
         }
       ],
       "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion and AI Agent Development",
+      "content": [
+        {
+          "text": "In the general discussion channel, several new members introduced themselves and exchanged greetings. A brief conversation touched on the existence of a token for Eliza, with one user expressing surprise about it. A question was raised about the relationship between bas milady and sol milady.ai and whether the milady app supports both, with one user hoping it supports the SOL version and another hinting at bad news. A community member welcomed new users and encouraged them to build with ElizaOS.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1774487652469-bwaj4j.png"
+        },
+        {
+          "text": "In the coders channel, a developer named Ape Ape expressed interest in building and exploring autonomous trading agents on ElizaOS and sought feedback from other builders. Community members encouraged them to share their setup and noted that a hackathon launching that day would be a good opportunity to test such agents. Another developer shared a project called The Undesirables, a collection of 4,444 NFTs on Ethereum where each NFT's visual traits deterministically map to a unique personality across 7 dimensions based on the Big Five personality model plus trading scores. Each NFT workspace ships with ElizaOS V1 spec compatibility including YAML frontmatter and character.json export. The project also features a 3-tier MemGPT-style memory system and a live market data pipeline that injects real-time data from CoinGecko, DeFiLlama, and DexScreener into agent sessions. The developer invited feedback from others building in the space. A separate message in the channel appeared to be a promotional investment solicitation unrelated to the technical discussion.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": "https://the-undesirables.com/og-image.png",
+          "videos": "https://cdn.discordapp.com/attachments/1300025221834739744/1486395520854261770/agent_promo_v2_enhanced.mp4?ex=69c55934&is=69c407b4&hm=b6f35eeba802a7c7da72117bbdec7baa76a9edc774fed178750f9f59c60d0f13&"
+        }
+      ],
+      "topic": "discordrawdata"
     }
   ],
-  "date": 1774400952
+  "date": 1774487666
 }
