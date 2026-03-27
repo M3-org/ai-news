@@ -1,61 +1,36 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-03-19 to 2026-03-25",
-  "weekOf": "2026-03-19",
+  "title": "elizaOS Weekly Summary - 2026-03-20 to 2026-03-26",
+  "weekOf": "2026-03-20",
   "dateRange": {
-    "start": "2026-03-19",
-    "end": "2026-03-25"
+    "start": "2026-03-20",
+    "end": "2026-03-26"
   },
-  "generatedAt": 1774505182,
+  "generatedAt": 1774655665,
   "stats": {
-    "totalMessages": 287,
-    "totalUsers": 108,
-    "averageMessagesPerDay": 57,
+    "totalMessages": 194,
+    "totalUsers": 95,
+    "averageMessagesPerDay": 39,
     "activeDays": 5,
     "peakDay": {
-      "date": "2026-03-19",
-      "messages": 116
+      "date": "2026-03-21",
+      "messages": 75
     }
   },
   "channelSummary": {
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 225,
+      "totalMessages": 169,
       "daysActive": 5
     },
     "1300025221834739744": {
       "name": "💬-coders",
-      "totalMessages": 62,
+      "totalMessages": 25,
       "daysActive": 4
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-03-19",
-      "date": 1773878400,
-      "stats": {
-        "totalMessages": 116,
-        "totalUsers": 30
-      },
-      "categories": [
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThis chat segment reveals a community in crisis, focused almost entirely on token price concerns rather than technical development. The primary discussion centered on elizaOS token performance, which has been hitting new all-time lows (ATLs) daily, dropping 99% from previous highs and falling below $10 and into the $9 range during the conversation.\n\nKey grievances included: the Milady to elizaOS migration being poorly executed, CEX delistings, lack of token utility development, and perceived abandonment by project founder Shaw. Community members criticized Shaw for being active on Twitter but absent from Discord and not building token utility. The token dropped from position #990 to #1036 on CoinMarketCap during the chat timeframe.\n\nOdilitime was the only team member actively engaging with the community, defending his commitment to the project while acknowledging he receives compensation in the token. He faced criticism about token management, CEX delistings, and migration issues, though community members like Broccolex defended him as the sole positive voice from the team.\n\nTechnical questions were minimal: Bacon Egg & Cheese asked about setting up a coin faucet on a website (unanswered), and NintyNine inquired about Babylon GitHub/Discord (successfully resolved by Maxx Truant). One user asked about deleting old tokens from the blockchain, receiving a brief explanation that it's not possible due to blockchain immutability.\n\nThe conversation revealed concerns about project sustainability at low market caps, whether the team would continue building, and confusion about who was still selling at such depressed prices. Some community members suggested the old AI16Z token might soon have higher value than elizaOS.\n\n## 2. FAQ\n\nQ: Is a well-managed token supposed to be hitting a new ATL every day? (asked by gby) A: Unanswered - Odilitime deflected by asking about gby's own token performance (answered by Odilitime)\n\nQ: If your team actually cared about the token, wouldn't you have prevented CEX delistings and built real utility during migration? (asked by gby) A: No direct answer provided (answered by Odilitime)\n\nQ: When will the Milady app be online? (asked by miaozi) A: Unanswered\n\nQ: How do you setup a coin faucet into a website? (asked by Bacon Egg & Cheese) A: Unanswered\n\nQ: Will the project keep being built if the token goes to 1M market cap and can no longer fund the project? (asked by Alexei) A: Unanswered\n\nQ: What is the Babylon GitHub? (asked by NintyNine) A: Directed to find Babylon Discord (answered by Maxx Truant)\n\nQ: Why can't the team delete old tokens from the market? (asked by Pear 🍐) A: It's on blockchain, implying immutability (answered by sb)\n\n## 3. Help Interactions\n\nHelper: Maxx Truant | Helpee: NintyNine | Context: Looking for Babylon GitHub or Discord | Resolution: Confirmed there is a Babylon Discord, NintyNine successfully found it\n\n## 4. Action Items\n\nType: Feature | Description: Build real token utility to prevent further price decline | Mentioned By: gby\n\nType: Documentation | Description: Make migration information easier to find for new investors to prevent confusion with old token | Mentioned By: Matthib123\n\nType: Technical | Description: Implement coin faucet functionality on website | Mentioned By: Bacon Egg & Cheese",
-          "messageCount": 73,
-          "userCount": 24
-        },
-        {
-          "channelId": "1300025221834739744",
-          "channelName": "💬-coders",
-          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\n**Moltraffle ElizaOS Plugin Release**: Moltraffle announced a new ElizaOS plugin for permissionless on-chain raffles on Base blockchain using USDC and Chainlink VRF. The plugin provides 5 actions: LIST_RAFFLES, GET_RAFFLE, JOIN_RAFFLE, CREATE_RAFFLE, and DRAW_WINNER. Agents can create raffles earning up to 10% creator commission or participate to win USDC prizes. The implementation is calldata-based and compatible with any Base wallet. Stan suggested submitting a PR to elizaOS/registry for inclusion.\n\n**ElizaOS Cloud Deployment Issues**: Jin encountered multiple issues deploying an agent to Eliza Cloud. Initial attempts through GUI failed, prompting a switch to CLI deployment. Using CLI version 1.7.2, the deployment process stalled during Docker image building phase, which eventually completed after significant wait time. The deployment then encountered a critical error with the Discord plugin failing to import: \"Cannot find module '@elizaos/plugin-discord'\". This occurred after attempting to configure the Discord plugin via GUI. The container became stuck with no apparent reload mechanism available through GUI, only CLI deployment commands. Odilitime investigated the issue, suspecting the plugin-discord folder might be missing from the packages directory. The problem remained unresolved by end of conversation.\n\n**Deployment Infrastructure Details**: The CLI deployment revealed infrastructure specifications: container quota of 25 max with 0 currently used, credit balance of $24.02, daily billing at $1.17/day ($20/month), estimated deployment cost of $15.25, and projected runway of 7 days post-deployment.\n\n**Community Feedback Process**: Jin mentioned adjusting user feedback collection frequency from quarterly (Jan-March) to weekly for better pace.\n\n## 2. FAQ\n\nQ: Does the moltraffle plugin work with any wallet on Base? (asked by Moltraffle) A: Yes, it's calldata-based and works with any Base wallet (answered by Moltraffle)\n\nQ: Should I submit the plugin to elizaOS registry? (asked by Moltraffle) A: Yes, feel free to push a PR to elizaOS/registry (answered by Stan ⚡)\n\nQ: Why is the Docker image build taking so long? (asked by jin) A: It uses docker to make an image and can take awhile to upload the image (answered by Odilitime)\n\nQ: What version is your elizaos CLI? (asked by Odilitime) A: 1.7.2 (answered by jin)\n\nQ: Did you have the plugin-discord folder in your packages folder? (asked by Odilitime) A: Unanswered\n\nQ: Is there a way to reload the container through GUI? (asked by jin) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: Stan ⚡ | Helpee: Moltraffle | Context: Publishing new ElizaOS plugin to registry | Resolution: Directed to submit PR to elizaOS/registry\n\nHelper: Odilitime | Helpee: Moltraffle | Context: Needed registry repository link | Resolution: Provided GitHub link to elizaos-plugins/registry\n\nHelper: Odilitime | Helpee: jin | Context: Docker image build stuck/taking long time | Resolution: Explained that image building and uploading takes time, which is normal behavior\n\nHelper: Odilitime | Helpee: jin | Context: Deployment issues with Discord plugin import failure | Resolution: Offered to test deployment personally and suggested checking if plugin-discord folder exists in packages directory (ongoing investigation)\n\n## 4. Action Items\n\nType: Feature | Description: Submit moltraffle ElizaOS plugin PR to elizaOS/registry | Mentioned By: Stan ⚡\n\nType: Technical | Description: Investigate missing @elizaos/plugin-discord module in deployed container causing import failure | Mentioned By: jin\n\nType: Technical | Description: Verify plugin-discord folder exists in packages directory for deployment | Mentioned By: Odilitime\n\nType: Technical | Description: Test CLI deployment process to reproduce Discord plugin import issue | Mentioned By: Odilitime\n\nType: Technical | Description: Implement container reload mechanism in GUI for Eliza Cloud deployments | Mentioned By: jin\n\nType: Documentation | Description: Change user feedback collection frequency from quarterly to weekly | Mentioned By: jin",
-          "messageCount": 43,
-          "userCount": 7
-        }
-      ]
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-03-20",
@@ -935,6 +910,279 @@
             "utility",
             "Coder",
             "eliza"
+          ],
+          "totalMessages": 1
+        }
+      }
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-03-24",
+      "date": 1774310400,
+      "stats": {
+        "totalMessages": 23,
+        "totalUsers": 17
+      },
+      "categories": [
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThis chat segment contains minimal technical discussion, primarily consisting of introductions and general community interaction. The most significant contribution came from Denis, who introduced himself as the ecosystem and community representative for Nosana. He announced a partnership between Nosana and ElizaOS for the Nosana Builders' Challenge launching the following day. Denis offered community support for participants who encounter issues and announced two workshops scheduled for March 26 and April 2 to help builders maximize efficiency in developing AI agents.\n\nThe chat also included market sentiment discussion from gby, who analyzed the Eliza token's price pattern, noting a recurring cycle of drops followed by 20-30% pumps before dumping to new all-time lows. Ame expressed pessimistic sentiment about the token's future performance.\n\nThe remainder of the chat consisted of greetings, social media link sharing, and a promotional offer from Issa_arts for meme creation and marketing services. No concrete technical implementations, code discussions, or problem-solving occurred during this segment.\n\n## 2. FAQ\n\nQ: Will milady join this? (asked by Martin 奈特（破产版）) A: Unanswered\n\n## 3. Help Interactions\n\nHelper: Denis | Helpee: Community | Context: Offering support for Nosana Builders' Challenge participants | Resolution: Announced availability to help anyone who gets stuck, with workshops scheduled for March 26 and April 2\n\n## 4. Action Items\n\nType: Feature | Description: Nosana Builders' Challenge launching with ElizaOS partnership | Mentioned By: Denis\nType: Documentation | Description: Workshops on March 26 and April 2 for building AI agents efficiently | Mentioned By: Denis",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 17,
+          "userCount": 13
+        },
+        {
+          "channelId": "1300025221834739744",
+          "channelName": "💬-coders",
+          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThe channel had minimal technical discussion during this period. The most significant technical contribution came from Ivan Jeremic, who announced the release of a Pythia MCP server - a tool enabling AI agents to query live on-chain market indicators directly from blockchain oracles. The implementation uses Chainlink oracles on Polygon to provide verifiable on-chain data for 13 tokens across 4 timeframes, including technical indicators like EMA, RSI, VWAP, Bollinger Bands, and volatility metrics. The key advantage is eliminating the need for API keys or off-chain data pipelines, making it useful for DeFi agent operations requiring market context.\n\nA security concern was raised by DorianD regarding a supply chain attack on litellm-pypi, which Odilitime acknowledged awareness of. This represents an important security consideration for the community.\n\nThe channel also saw a business development inquiry from Coin Post about collaboration opportunities, which gelgit.eth initially responded to before Odilitime clarified that gelgit.eth does not represent the project officially.\n\n## 2. FAQ\n\nQ: Who should I contact to discuss collaboration with Eliza OS? (asked by Coin Post) A: Odilitime clarified that gelgit.eth does not represent the project (answered by Odilitime)\n\nQ: How can AI agents query on-chain market indicators without API keys? (asked by Ivan Jeremic) A: Use the Pythia MCP server via pip install pythia-oracle-mcp, which queries Chainlink oracles on Polygon (answered by Ivan Jeremic)\n\n## 3. Help Interactions\n\nHelper: Ivan Jeremic | Helpee: Community | Context: Need for AI agents to access on-chain market data without API dependencies | Resolution: Released Pythia MCP server with free testnet and offered integration assistance\n\nHelper: DorianD | Helpee: Community | Context: Security awareness about supply chain vulnerabilities | Resolution: Shared information about litellm-pypi supply chain attack\n\n## 4. Action Items\n\nType: Technical | Description: Evaluate security implications of litellm-pypi supply chain attack for project dependencies | Mentioned By: DorianD\n\nType: Feature | Description: Pythia MCP server available for integration - provides on-chain market indicators via Chainlink oracles on Polygon | Mentioned By: Ivan Jeremic",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 6,
+          "userCount": 5
+        }
+      ],
+      "nicknameMap": {
+        "Odilitime": {
+          "id": "580487826420793364",
+          "username": "odilitime",
+          "roles": [
+            "platform - self assign",
+            "partner portal - self assign",
+            "Community Ops",
+            "Creator",
+            "Moderator",
+            "[WG] degenspartan",
+            "pmairca - self assign",
+            "Verified",
+            "Booster",
+            "Hoplite",
+            "Github - Contributor",
+            "Helper",
+            "Migration Support",
+            "Associate",
+            "Labs",
+            "Trader",
+            "Contributor",
+            "merch - self assign",
+            "events - self-assign",
+            "[WG] Elizacon - granted",
+            "Spartan Dev",
+            "Core Dev",
+            "Coder"
+          ],
+          "totalMessages": 191
+        },
+        "DorianD": {
+          "id": "918853893100806164",
+          "username": "doriand0963",
+          "roles": [
+            "Partner",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 5
+        },
+        "Ivan Jeremic": {
+          "id": "1483419974319210568",
+          "username": "ivanjeremic.c3x_18863",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "gelgit.eth": {
+          "id": "700227417859555368",
+          "username": "gtham4769",
+          "roles": [
+            "Verified",
+            "Poker"
+          ],
+          "totalMessages": 1
+        },
+        "Coin Post": {
+          "id": "982219364075970580",
+          "username": "coin_post",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "gby": {
+          "id": "1450669082343903272",
+          "username": "gby_17",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 47
+        },
+        "Seed_bawa1": {
+          "id": "1412898012652638239",
+          "username": "seed_bawa1",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "ericrivera": {
+          "id": "291346487315529729",
+          "username": "ericrivera9124",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Issa_arts": {
+          "id": "1217012270287028286",
+          "username": "issaarts",
+          "roles": [
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Martin 奈特（破产版）": {
+          "id": "1216999763573211189",
+          "username": "martin_net6",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Denis": {
+          "id": "313989482221273088",
+          "username": "denis255",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Franklin": {
+          "id": "1145799584497533039",
+          "username": "acaradenft",
+          "roles": [
+            "Trader",
+            "utility"
+          ],
+          "totalMessages": 1
+        },
+        "Ame": {
+          "id": "1484588964315660500",
+          "username": "ame05230523",
+          "roles": [
+            "Trader",
+            "Creator",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "ElizaBAO": {
+          "id": "555035784378318875",
+          "username": "baogerbao",
+          "roles": [
+            "a-hack",
+            "Creator",
+            "Contributor",
+            "Verified",
+            "Booster",
+            "Designer",
+            "Coder",
+            "Github - Contributor"
+          ],
+          "totalMessages": 13
+        },
+        "taraWolf": {
+          "id": "1096416164751622165",
+          "username": "tarawolf",
+          "roles": [
+            "Trader",
+            "Verified",
+            "Dev School Student",
+            "Booster",
+            "Designer",
+            "Coder"
+          ],
+          "totalMessages": 2
+        },
+        "Delta_Sniper": {
+          "id": "423540200849932289",
+          "username": "noderunner12",
+          "roles": [],
+          "totalMessages": 1
+        },
+        "dEXploarer": {
+          "id": "458148462639316993",
+          "username": "dexploarer",
+          "roles": [
+            "Helper",
+            "Trader",
+            "elizaOS Tester",
+            "VIP",
+            "Contributor",
+            "Verified",
+            "Poker",
+            "Coder"
           ],
           "totalMessages": 1
         }
