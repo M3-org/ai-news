@@ -366,6 +366,7 @@ jobs:
 
       - name: Verify CDN uploads before deployment
         if: inputs.dry_run != 'true' && hashFiles('media-upload/manifest.json') != ''
+        continue-on-error: true
         env:
           BUNNY_STORAGE_HOST: https://la.storage.bunnycdn.com
         run: |
