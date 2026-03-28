@@ -1041,6 +1041,11 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         ? new Set((await this.channelRegistry.getUnavailableChannels()).map(c => c.id))
         : new Set<string>());
 
+    // Preload CID cache for this date if not already done (avoids per-item DB lookups)
+    if (!forceOverwrite && this._existingCidsCache === null) {
+      await this.preloadExistingRange(date, date);
+    }
+
     // Bulk-check which CIDs already exist in storage (use cache if available, else 1 query per date)
     const allCids = this.channelIds.map(id => `discord-raw-${id}-${date}`);
     const existingCids = forceOverwrite
