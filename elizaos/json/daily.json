@@ -1,263 +1,55 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-03-27",
+  "title": "Daily Report - 2026-03-17",
   "categories": {
-    "title": "ElizaOS Community Discussion - March 27, 2026",
+    "title": "ElizaOS Community Discussion - March 17, 2026",
     "content": [
       {
-        "text": "A debate arose in the general discussion channel regarding the nature of Hyperscape and its relationship to ElizaOS. Some community members argued that Hyperscape is an Eliza Labs project and a core part of the ElizaOS 10-year flywheel meant to showcase real-world use cases. However, a moderator (Odilitime) and another member (satsbased) clarified that Hyperscape is not an official Eliza Labs project, but rather a project being incubated by Eliza, described as somewhere between a joint venture and a personal Shaw project. The disagreement became heated before moderators stepped in to clarify the distinction.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        "text": "Community member jin posted a weekly roundup trailer in the announcements channel, receiving positive feedback from the community. The video showcased recent developments and updates for the ElizaOS ecosystem.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "videos": "https://cdn.elizaos.news/elizaos-media/2026-03-15_trailer_2106a81a.mp4",
+        "posters": "https://cdn.elizaos.news/posters/1774665902555-jc67e8.jpg"
       },
       {
-        "text": "A developer (meowww404) reached out to Odilitime asking about the process for getting an ElizaOS plugin included in the main plugin repository. The developer is building a trading flow for agents and working on an ElizaOS plugin to allow agents to plug and play with their trading system. They also inquired about distribution support. Odilitime responded by asking for the registry pull request or plugin name to follow up.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        "text": "A developer named lekt9 introduced unbrowse, a browser for agents that operates at 100x speed by traversing APIs instead of DOM while passively indexing web APIs for other agents. Odilitime provided guidance on creating an ElizaOS plugin integration, directing them to the plugin registry documentation and suggesting they could use cursor to generate the plugin code.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/registry_4fd2a99c.jpg"
       },
       {
-        "text": "Odilitime shared a live Babylon Demo Day broadcast across both the general discussion and partners channels, announcing it was happening in real time. The demo day was streamed on X (formerly Twitter).",
-        "sources": [
-          "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "https://discord.com/channels/1253563208833433701/1301363808421543988"
+        "text": "Significant community concern emerged regarding the ELIZA token price performance. Multiple users expressed frustration that the token was declining while the broader AI crypto market was pumping. Community members criticized the lack of marketing and utility for the token. Some users specifically called out Shaw for promoting other coins instead of ElizaOS and questioned his commitment to the project.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774665922009-j01vjs.jpg"
+      },
+      {
+        "text": "Odilitime clarified the project strategy, explaining that Shaw promotes the Milady product which creates distribution for elizacloud, which generates revenue to power the ElizaOS flywheel. He emphasized this is all part of one integrated plan and mentioned they are hoping to launch the product by end of week or early next week. He acknowledged the token performance has not worked yet but believes it needs more time.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774665944819-ub3gl.jpg"
+      },
+      {
+        "text": "Community members shared important industry news including World adding an identity toolkit for AI bots on Coinbase's X402 protocol, a new SEC token taxonomy announcement classifying most crypto assets into 4 non-security categories, and a competition where agents can win 100,000 dollars in the next 5 days. Jin also shared an article about building Claude Code and how Anthropic uses skills.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": [
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1483501677859311829_66ea6228.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1483572486758207689_272dc28c.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1483579788869374204_978ca41f.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1483597945222725785_bb0393cf.jpg"
         ],
-        "images": "https://prod-fastly-us-east-1.video.pscp.tv/Transcoding/v1/live_thumbnail/us-east-1/eyJkIjowfQ/G2zYXB9cMbIQcTauC-faqwcxZ3rvqxJ4DdOR7VSQZCq6tPtoV3ut5D5N7zFO1BE2VJF5C9b4I7XMYVXZBM2l1Q/latest.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJBbGxvd2VkUHJvdG9jb2xzIjpbInRodW1iIl0sIkJyb2FkY2FzdElkIjoiMXZKcFByd2pneUxKRSIsIkdyYW50VHlwZSI6InJlYWQiLCJHcmFudGVkQXQiOjE3NzQ2MzE5MzcsIkdyYW50ZWRUbyI6InR3LTEiLCJTdHJlYW1OYW1lIjoiRzJ6WVhCOWNNYklRY1RhdUMtZmFxd2N4WjNydnF4SjREZE9SN1ZTUVpDcTZ0UHRvVjN1dDVENU43ekZPMUJFMlZKRjVDOWI0STdYTVlWWFpCTTJsMVEiLCJleHAiOjE3NzQ4MDQ3Mzd9.YdlQH2tL1hYcsGQKCibJS4031vCKe9P5h80dlUytlrE&service=proxsee&digest=SRhAOaMahVznMFvujng4LbZvbz42YSuko6-vtvSVG5I&ts=887315968"
+        "videos": [
+          "https://cdn.elizaos.news/elizaos-media/2034012103821205610_6b4a63c8.mp4",
+          "https://cdn.elizaos.news/elizaos-media/2034019621817536860_ef5eb456.mp4"
+        ]
       },
       {
-        "text": "In the coders channel, a developer named trace introduced themselves as an AI and Full Stack Engineer specializing in LLM orchestration, RAG systems, multi-step agent workflows, multimodal chat and voice workflows, backend APIs, and business process automation. They noted they are currently open to new opportunities and looking to connect with startups, product teams, and founders building AI systems.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        "text": "In the coders channel, a user reported technical issues with the Google form for role assignment, encountering an Invalid Dynamic Link error. A senior full-stack and AI developer posted their credentials offering development services, specializing in LLM integration, autonomous agents, workflow automation, and blockchain systems with expertise in React, Next.js, Node.js, Python, and various AI/ML frameworks.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "posters": "https://cdn.elizaos.news/posters/1774665963646-uklxnd.png"
+      },
+      {
+        "text": "In the xfn-framework development channel, community members discussed creating a directory or registry similar to Clawhub that could include skills and plugins. Stan agreed with this proposal for building a solid directory and registry system.",
+        "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836"
       }
     ],
     "topic": "discordrawdata"
   },
-  "date": 1774569600,
-  "nicknameMap": {
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Github - Contributor",
-        "Helper",
-        "Migration Support",
-        "Associate",
-        "Labs",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 211
-    },
-    "Sigmaletter": {
-      "id": "1407026913402421248",
-      "username": "sigmaletter_03222",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Cael | Adaptive-Liquidity Labs": {
-      "id": "589629301784051759",
-      "username": "bussynfrfr",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "trace": {
-      "id": "853841524764049429",
-      "username": "trace.g",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "James": {
-      "id": "1320432397933875302",
-      "username": "jamess63sf",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Gokn": {
-      "id": "1293117979818590219",
-      "username": "gokn0994",
-      "roles": [
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ape Ape | KairoGuard 🐷 🟠": {
-      "id": "769162375328563261",
-      "username": "apeape.sui",
-      "roles": [
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "gelgit.eth": {
-      "id": "700227417859555368",
-      "username": "gtham4769",
-      "roles": [
-        "Coder",
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 2
-    },
-    "ElizaBAO": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
-      "roles": [
-        "a-hack",
-        "Creator",
-        "Contributor",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 15
-    },
-    "33coded": {
-      "id": "1422240545660600562",
-      "username": "33.coded",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "auto.fun enjoyer",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "VIP",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 55
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "Server Booster",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 30
-    },
-    "sailorpepe.eth": {
-      "id": "920440808509931560",
-      "username": "thegreatluna8713",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "Marvis": {
-      "id": "412051095435608074",
-      "username": "marvis0428",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "meowww404": {
-      "id": "442976599139155978",
-      "username": "meowww404",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Buike.": {
-      "id": "1254761839213019230",
-      "username": "wisdomonchain",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Quaser M": {
-      "id": "1281266285505810453",
-      "username": "waiser0165",
-      "roles": [
-        "agent dev school - self assign",
-        "Verified",
-        "Dev School Student",
-        "Announcements",
-        "Coder"
-      ],
-      "totalMessages": 9
-    }
-  }
+  "date": 1773705600
 }
