@@ -1222,7 +1222,7 @@ class MediaDownloader {
       const uniqueName = this.generateUniqueFilename(mediaItem.filename, normalizedUrl, ext);
 
       // Determine file type
-      const fileTypeDir = await getFileTypeDirAsync(attachment.content_type || '', mediaItem.filename);
+      const fileTypeDir = await getFileTypeDirAsync(attachment.content_type || '', uniqueName);
       const type = fileTypeDir.replace(/s$/, '') as 'image' | 'video' | 'audio' | 'document'; // Remove trailing 's'
 
       // Detect spoiler and animated content
