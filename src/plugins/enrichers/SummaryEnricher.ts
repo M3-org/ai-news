@@ -139,7 +139,7 @@ export class SummaryEnricher {
             totalEnriched++;
           }
 
-          if (enriched.metadata?.images?.length) {
+          if (Array.isArray(enriched.metadata?.images) && enriched.metadata.images.length) {
             // Add new AI-generated images as posters (don't replace existing images)
             const newPosters = enriched.metadata.images.filter(
               (img: string) => !contentItem.images?.includes(img)
