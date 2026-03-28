@@ -1,44 +1,74 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-03-26",
-  "date": 1774483200,
+  "title": "elizaOS Discord - 2026-03-27",
+  "date": 1774569600,
   "stats": {
-    "totalMessages": 36,
-    "totalUsers": 16
+    "totalMessages": 31,
+    "totalUsers": 14
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion centered on ElizaOS ecosystem developments and clarifications about the project's scope. Key technical points included:\n\n**ElizaOS Framework and Business Model**: Odilitime clarified that ElizaOS is an open-source framework, while the business operates a SaaS platform (elizacloud) for easier framework deployment. The platform enables simplified rollout of AI agents.\n\n**Token Ecosystem**: Two official tokens exist - ElizaOS and DegenAI, both minted and supported by the labs. The AI16Z token (now Jeju) will power an upcoming blockchain when launched, distinguishing it from being just a memecoin.\n\n**DegenAI Development**: Active development continues with plans to make DegenAI the host. Infrastructure consolidation is underway - production and dev environments will collapse into staging to manage a single Spartan instance with all customer data. DegenAI will work on Babylon prediction market and autonomous trading features.\n\n**Ecosystem Projects**: Multiple projects are building on ElizaOS framework including Hyperscape (a game), Milady (competing with openclaw and pushing elizacloud platform), and Babylon (AI training grounds and games). The goal is for Milady to enable agents to play Hyperscape on elizacloud.\n\n**Migration Issue**: AI16Z token holders who missed the migration window have limited options - Odilitime is maintaining a waitlist but cannot guarantee resolution.\n\n**Business Development**: BitDelta exchange offered a free listing for AI16Z after internal due diligence, seeking to connect with marketing/growth leads for rollout planning.\n\n## 2. FAQ\n\nQ: What is the utility of ElizaOS coin? Or is it just a memecoin? (asked by cyborg) A: It's not just a memecoin, Jeju is supposed to use it to power its chain when we launch it (answered by Odilitime)\n\nQ: Any update about degenai? (asked by Quaser M) A: Still working on him. Want to make him the host here. Also going to collapse production and dev into staging, so there's just one Spartan to manage with all customer data (answered by Odilitime)\n\nQ: Does it also work on Babylon prediction market? (asked by Quaser M) A: Yes (answered by Odilitime)\n\nQ: Does it work on autonomous trading? (asked by Quaser M) A: Yes (answered by Odilitime)\n\nQ: What's the main use cases here? (asked by meowww404) A: It's opensource framework, our business is a saas platform enabling easier rollout of the framework. Building AI training grounds and games like Babylon (answered by Odilitime)\n\nQ: Any update for ai16z owners who missed the migration window? (asked by londo) A: Unfortunately not, you can dm me and I can put you on my waitlist but no promises (answered by Odilitime)\n\nQ: How many coins you have got guys, ElizaOS is the main one? (asked by cyborg) A: elizaOS and DegenAI are the only two tokens we minted and support as labs (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Odilitime | Helpee: cyborg | Context: User asked about ElizaOS utility and whether it's just a memecoin | Resolution: Explained that Jeju will power the upcoming chain, distinguishing it from pure memecoins\n\nHelper: Odilitime | Helpee: Quaser M | Context: User requested updates on DegenAI development and features | Resolution: Provided detailed update on hosting plans, infrastructure consolidation, and confirmed Babylon prediction market and autonomous trading functionality\n\nHelper: Odilitime | Helpee: meowww404 | Context: User about to install Eliza and asked about main use cases | Resolution: Explained the framework/SaaS business model, elizacloud platform, and ecosystem projects like Babylon, Milady, and Hyperscape\n\nHelper: Odilitime | Helpee: londo | Context: User missed AI16Z migration window and needed options | Resolution: Offered to add to waitlist but set realistic expectations with no guarantees\n\nHelper: Odilitime | Helpee: cyborg | Context: User asked about total number of coins in the ecosystem | Resolution: Clarified that only elizaOS and DegenAI are official tokens minted and supported by labs\n\n## 4. Action Items\n\nType: Technical | Description: Collapse production and dev environments into staging for single Spartan management with customer data | Mentioned By: Odilitime\n\nType: Technical | Description: Make DegenAI the host for the platform | Mentioned By: Odilitime\n\nType: Technical | Description: Enable Milady to make agents play Hyperscape on elizacloud | Mentioned By: Odilitime\n\nType: Feature | Description: Launch Jeju chain powered by AI16Z token | Mentioned By: Odilitime\n\nType: Documentation | Description: Connect with BitDelta marketing/growth lead for exchange listing rollout plan | Mentioned By: ruby_bitdeltalisting",
+      "summary": "# Discord Chat Analysis - 💬-discussion\n\n## 1. Summary\n\nThe chat segment contains minimal technical discussion, primarily consisting of community conversation about project relationships and a partnership inquiry. The most substantive technical interaction involves meowww404 discussing development of a trading flow plugin for ElizaOS agents. They are building a plugin to enable Eliza agents to integrate with their trading infrastructure and inquired about the process and timeline for inclusion in the main Eliza plugin repository, as well as distribution support options.\n\nThere was a debate between community members about the relationship between Hyperscape and Eliza Labs, with clarification from Odilitime that Hyperscape is Eliza-related but exists as either a joint venture or Shaw's independent project rather than being directly launched by Eliza Labs. The project is described as being incubated by Eliza rather than being an official Eliza Labs product.\n\nOdilitime shared that a demo day was happening and requested information about the registry PR or plugin name from meowww404 to assist with their plugin integration inquiry. The technical discussion was limited but focused on plugin development workflow and project governance structure.\n\n## 2. FAQ\n\nQ: Is there a team member I can discuss a potential partnership with? (asked by Buike.) A: Unanswered\n\nQ: Is it possible/how long will it take for our plugin to be included in the eliza main plugin repo? (asked by meowww404) A: Requested registry PR or plugin name for review (answered by Odilitime)\n\nQ: What is Hyperscape's relationship to Eliza? (asked by satsbased/33coded discussion) A: It's Eliza related but somewhere between a joint venture or Shaw's project, not launched by Eliza Labs (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Odilitime | Helpee: meowww404 | Context: Developer seeking guidance on getting trading flow plugin included in main ElizaOS plugin repository and distribution support | Resolution: Requested registry PR or plugin name to proceed with evaluation\n\nHelper: satsbased | Helpee: Community | Context: Clarifying Hyperscape project relationship to Eliza Labs | Resolution: Confirmed it's an incubated project, not launched by Eliza Labs\n\nHelper: Odilitime | Helpee: Community | Context: Resolving debate about Hyperscape's relationship to Eliza | Resolution: Clarified it's between a joint venture or Shaw's project\n\n## 4. Action Items\n\nType: Technical | Description: Review trading flow plugin registry PR for potential inclusion in main ElizaOS plugin repository | Mentioned By: meowww404\n\nType: Documentation | Description: Clarify plugin submission and distribution process for third-party developers | Mentioned By: meowww404\n\nType: Feature | Description: Trading flow plugin integration for Eliza agents to enable plug-and-play trading functionality | Mentioned By: meowww404",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 29,
-      "userCount": 12
+      "messageCount": 24,
+      "userCount": 10
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment contains primarily promotional and recruitment messages rather than technical discussions. HatcherLabs promoted their hosting platform hatcher.host, which offers ElizaOS and Milady hosting with free trials. The most substantial technical contribution came from jasonxkensei, who announced xProof.app - a plugin for ElizaOS that provides on-chain decision provenance. The plugin anchors agent decisions on MultiversX blockchain before execution, creating immutable timestamps for decision tracking and verification. The implementation is available via npm packages (@elizaos/plugin-xproof and @xproof/xproof), with a pull request submitted to the official ElizaOS plugin registry (PR #266). The plugin offers 10 free certificates without requiring a wallet, with full implementation examples available on GitHub.\n\nTrace posted about their availability for freelance work, highlighting expertise in LLM workflows, voice functionality, OCR, and backend architecture, emphasizing the importance of proper system integration over model selection. Cael from Adaptive-Liquidity Labs indicated they are recruiting developers. Deemac posted a suspicious request to purchase a wallet with transaction history. Odilitime made a brief mention of \"elizaOS\" without context.\n\nThe channel showed minimal collaborative problem-solving or technical discussion during this period, consisting mainly of announcements and self-promotion.\n\n## 2. FAQ\n\nQ: What hosting services does hatcher.host offer? (asked by HatcherLabs) A: Unanswered\n\nQ: How does xProof.app work with ElizaOS agents? (asked by jasonxkensei) A: It anchors every agent decision on MultiversX blockchain before execution, with timestamps written by the chain rather than the agent (answered by jasonxkensei)\n\nQ: How do I install the xProof plugin? (asked by jasonxkensei) A: Use npm install @elizaos/plugin-xproof and npm install @xproof/xproof (answered by jasonxkensei)\n\nQ: Does xProof require a wallet to use? (asked by jasonxkensei) A: No, it offers 10 free certificates without requiring a wallet (answered by jasonxkensei)\n\n## 3. Help Interactions\n\nNo significant help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nType: Technical | Description: Review and merge PR #266 for xProof plugin in ElizaOS plugin registry | Mentioned By: jasonxkensei\n\nType: Documentation | Description: Provide feedback on hatcher.host hosting platform after testing | Mentioned By: HatcherLabs\n\nType: Feature | Description: On-chain decision provenance plugin for ElizaOS agents using MultiversX blockchain | Mentioned By: jasonxkensei",
+      "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment shows minimal technical discussion. The channel activity primarily consists of brief coordination messages and self-introductions rather than substantive technical problem-solving.\n\nThe most notable content comes from user \"trace\" who provided a detailed introduction of their professional background as an AI and Full Stack Engineer. They outlined their technical focus areas including LLM orchestration, RAG (Retrieval-Augmented Generation) systems, multi-step agent workflows, AI copilots, multimodal chat/voice/OCR workflows, backend API development, and business process automation. Trace emphasized their approach of transforming repetitive and fragile processes into structured AI-powered systems, combining models with backend design, data pipelines, and product logic. They indicated they are currently seeking new opportunities with startups and product teams building AI systems.\n\nThe remaining messages were coordination-focused: Ape Ape and Gokn indicated they were sending direct messages to other users, James made a brief comment about Trump posting regarding crypto holders on X (Twitter), and Sigmaletter made a vague offer to show something they built without context.\n\nNo actual technical problems were discussed, debugged, or solved during this segment. No code was shared, no architectural decisions were made, and no implementation details were provided beyond trace's general capability overview.\n\n## 2. FAQ\n\nNo meaningful technical questions were asked or answered in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nType: Feature | Description: Potential collaboration opportunity with AI engineer experienced in LLM orchestration, RAG systems, and agent workflows | Mentioned By: trace",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 7,
-      "userCount": 6
+      "messageCount": 5,
+      "userCount": 5
     }
   ],
   "nicknameMap": {
-    "Deemac": {
-      "id": "1295889586211258445",
-      "username": "deemac9",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
       "roles": [
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Github - Contributor",
+        "Helper",
+        "Migration Support",
+        "Associate",
+        "Labs",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 211
+    },
+    "Sigmaletter": {
+      "id": "1407026913402421248",
+      "username": "sigmaletter_03222",
+      "roles": [
+        "Helper",
         "Trader",
         "[WG] degenspartan",
-        "Designer",
-        "Fr",
         "utility",
-        "Coder"
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     },
@@ -69,73 +99,80 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Github - Contributor",
-        "Helper",
-        "Migration Support",
-        "Associate",
-        "Labs",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 205
-    },
-    "jasonxkensei": {
-      "id": "902241892044001370",
-      "username": "jasonxkensei",
-      "roles": [
-        "Helper",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "HatcherLabs": {
-      "id": "1484818139936985150",
-      "username": "hatcherlabs",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "cyborg": {
-      "id": "832338755930030110",
-      "username": "cyborgxai",
+    "James": {
+      "id": "1320432397933875302",
+      "username": "jamess63sf",
       "roles": [
         "Trader",
         "Verified",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 2
+    },
+    "Gokn": {
+      "id": "1293117979818590219",
+      "username": "gokn0994",
+      "roles": [
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Ape Ape | KairoGuard 🐷 🟠": {
+      "id": "769162375328563261",
+      "username": "apeape.sui",
+      "roles": [
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "gelgit.eth": {
+      "id": "700227417859555368",
+      "username": "gtham4769",
+      "roles": [
+        "Coder",
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 2
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 15
+    },
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
     },
     "Inhuman Resources": {
       "id": "807727820355797062",
@@ -151,29 +188,37 @@
         "utility",
         "Coder"
       ],
-      "totalMessages": 53
+      "totalMessages": 55
     },
-    "londo": {
-      "id": "830910368918143020",
-      "username": "londo0838",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
       "roles": [
-        "Trader",
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
         "Verified",
-        "utility",
+        "utility"
+      ],
+      "totalMessages": 30
+    },
+    "sailorpepe.eth": {
+      "id": "920440808509931560",
+      "username": "thegreatluna8713",
+      "roles": [
+        "Verified",
         "Coder",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 7
     },
-    "love430": {
-      "id": "1308798869613580319",
-      "username": "joy035125",
+    "Marvis": {
+      "id": "412051095435608074",
+      "username": "marvis0428",
       "roles": [
         "Trader",
-        "Creator",
-        "It",
-        "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
@@ -189,7 +234,18 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 3
+    },
+    "Buike.": {
+      "id": "1254761839213019230",
+      "username": "wisdomonchain",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "Quaser M": {
       "id": "1281266285505810453",
@@ -201,66 +257,7 @@
         "Announcements",
         "Coder"
       ],
-      "totalMessages": 8
-    },
-    "Swordman": {
-      "id": "866584550863798283",
-      "username": "swordsman816",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "ruby_bitdeltalisting": {
-      "id": "1209015052363898920",
-      "username": "ruby_bitdeltalisting",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "jester": {
-      "id": "1134379989849096283",
-      "username": "jester_keri",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "contgibs": {
-      "id": "1451153765544628326",
-      "username": "contgibs",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 9
     }
   }
 }
