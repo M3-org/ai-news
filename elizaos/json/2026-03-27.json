@@ -6,13 +6,11 @@
     "content": [
       {
         "text": "A debate arose in the general discussion channel regarding the nature of Hyperscape and its relationship to ElizaOS. Some community members argued that Hyperscape is an Eliza Labs project and a core part of the ElizaOS 10-year flywheel meant to showcase real-world use cases. However, a moderator (Odilitime) and another member (satsbased) clarified that Hyperscape is not an official Eliza Labs project, but rather a project being incubated by Eliza, described as somewhere between a joint venture and a personal Shaw project. The disagreement became heated before moderators stepped in to clarify the distinction.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774660068159-z3k5v6.jpg"
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
       },
       {
         "text": "A developer (meowww404) reached out to Odilitime asking about the process for getting an ElizaOS plugin included in the main plugin repository. The developer is building a trading flow for agents and working on an ElizaOS plugin to allow agents to plug and play with their trading system. They also inquired about distribution support. Odilitime responded by asking for the registry pull request or plugin name to follow up.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1774660088253-az19g.jpg"
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
       },
       {
         "text": "Odilitime shared a live Babylon Demo Day broadcast across both the general discussion and partners channels, announcing it was happening in real time. The demo day was streamed on X (formerly Twitter).",
@@ -24,8 +22,7 @@
       },
       {
         "text": "In the coders channel, a developer named trace introduced themselves as an AI and Full Stack Engineer specializing in LLM orchestration, RAG systems, multi-step agent workflows, multimodal chat and voice workflows, backend APIs, and business process automation. They noted they are currently open to new opportunities and looking to connect with startups, product teams, and founders building AI systems.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1774660106728-2okg6l.png"
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
       }
     ],
     "topic": "discordrawdata"
