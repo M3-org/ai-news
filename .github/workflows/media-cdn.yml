@@ -319,8 +319,12 @@ jobs:
           # Regenerate weekly.json with CDN-enriched daily JSONs
           echo "Regenerating weekly summaries..."
 
+          # Compute the 7-day window ending at $DATE (what was extracted above)
+          WEEK_START=$(date -u -d "$DATE - 6 days" +%Y-%m-%d)
+          echo "Weekly range: $WEEK_START to $DATE"
+
           # Discord weekly (non-AI, raw combination)
-          npm run weekly -- generate --format=discord
+          npm run weekly -- generate --format=discord --from=$WEEK_START --to=$DATE
           echo "✅ Discord weekly regenerated"
 
           # ElizaOS weekly - AI curation on Sundays or when forced
@@ -328,10 +332,10 @@ jobs:
           FORCE_AI="${{ inputs.force_ai_weekly }}"
           if [ "$DATA_DAY_OF_WEEK" = "7" ] || [ "$FORCE_AI" = "true" ]; then
             echo "Generating AI-curated ElizaOS weekly (Sunday=$([[ $DATA_DAY_OF_WEEK = 7 ]] && echo 'yes' || echo 'no'), forced=$FORCE_AI)..."
-            npm run weekly -- generate --format=elizaos --ai
+            npm run weekly -- generate --format=elizaos --ai --from=$WEEK_START --to=$DATE
             echo "✅ ElizaOS AI weekly regenerated"
           else
-            npm run weekly -- generate --format=elizaos
+            npm run weekly -- generate --format=elizaos --from=$WEEK_START --to=$DATE
             echo "✅ ElizaOS weekly regenerated"
           fi
 
