@@ -7,12 +7,12 @@
     "start": "2026-03-21",
     "end": "2026-03-27"
   },
-  "generatedAt": 1774656396,
+  "generatedAt": 1774656500,
   "stats": {
-    "totalMessages": 75,
-    "totalUsers": 22,
-    "averageMessagesPerDay": 75,
-    "activeDays": 1,
+    "totalMessages": 98,
+    "totalUsers": 35,
+    "averageMessagesPerDay": 49,
+    "activeDays": 2,
     "peakDay": {
       "date": "2026-03-21",
       "messages": 75
@@ -21,13 +21,13 @@
   "channelSummary": {
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 66,
-      "daysActive": 1
+      "totalMessages": 86,
+      "daysActive": 2
     },
     "1300025221834739744": {
       "name": "💬-coders",
-      "totalMessages": 9,
-      "daysActive": 1
+      "totalMessages": 12,
+      "daysActive": 2
     }
   },
   "days": [
@@ -375,6 +375,217 @@
             "eliza"
           ],
           "totalMessages": 8
+        }
+      }
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-03-22",
+      "date": 1774137600,
+      "stats": {
+        "totalMessages": 23,
+        "totalUsers": 13
+      },
+      "categories": [
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "# Discord Channel Analysis: 💬-discussion\n\n## 1. Summary\n\nThe discussion channel had minimal technical content during this period. The most significant technical contribution came from TraderTomson, who announced a plugin for Eliza that enables autonomous agent monetization on Base blockchain. The plugin allows agents to register on an on-chain marketplace, post services, get hired by other agents, and receive payment in AGT tokens without human intervention. Season 1 is live with a 50M AGT pool for early adopters.\n\nA documentation-related discussion occurred when Shah inquired about the ElizaOS whitepaper. Mr. Ronnie ⚒️ Debryne initially directed them to official documentation, but Odilitime provided the definitive answer clarifying that the token doesn't have a traditional whitepaper. Instead, the project maintains a GitHub roadmap and has published an academic paper on arXiv (2501.06781).\n\nThe remaining conversation consisted of casual greetings, memes, and a brief question about the Milady app timeline which received a vague \"on or about\" response. No concrete technical problems were solved, no implementation details were discussed, and no architectural decisions were made during this chat segment.\n\n## 2. FAQ\n\nQ: when milady app online (asked by miaozi) A: On or about (answered by Inhuman Resources)\n\nQ: Where can I get the ElizaOS white paper plz ? (asked by Shah) A: The token doesn't have a whitepaper. We have https://github.com/elizaOS/roadmap and https://arxiv.org/abs/2501.06781 (answered by Odilitime)\n\n## 3. Help Interactions\n\nHelper: Mr. Ronnie ⚒️ Debryne | Helpee: Shah | Context: Looking for ElizaOS whitepaper documentation | Resolution: Directed to official documentation site\n\nHelper: Odilitime | Helpee: Shah | Context: Clarification on ElizaOS whitepaper availability | Resolution: Provided accurate information that no traditional whitepaper exists, shared GitHub roadmap and arXiv paper links instead\n\n## 4. Action Items\n\nType: Feature | Description: Plugin for Eliza enabling autonomous agent monetization on Base blockchain with on-chain marketplace, AGT token payments, and 50M AGT pool for Season 1 | Mentioned By: TraderTomson\n\nType: Documentation | Description: Clarify that ElizaOS token has no traditional whitepaper, direct users to GitHub roadmap and arXiv paper instead | Mentioned By: Odilitime",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 20,
+          "userCount": 11
+        },
+        {
+          "channelId": "1300025221834739744",
+          "channelName": "💬-coders",
+          "summary": "# Discord Channel Analysis: 💬-coders\n\n## 1. Summary\n\nThis chat segment contains minimal technical discussion. The channel activity consists of two messages: a greeting from DON DADA and a recruitment post from Sk seeking a marketing manager for a meme coin project with a $400 weekly compensation offer. There are no technical discussions, problem-solving activities, code implementations, or architectural decisions present in this segment. No programming languages, frameworks, tools, or development methodologies were discussed. The recruitment post is off-topic for a coders channel as it focuses on marketing rather than development work.\n\n## 2. FAQ\n\nNo meaningful technical questions or answers were present in this chat segment.\n\n## 3. Help Interactions\n\nNo help interactions occurred in this chat segment.\n\n## 4. Action Items\n\nNo action items were identified in this chat segment.",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 3,
+          "userCount": 2
+        }
+      ],
+      "nicknameMap": {
+        "Sk": {
+          "id": "1436722656400375960",
+          "username": "sk19407531",
+          "roles": [],
+          "totalMessages": 2
+        },
+        "DON DADA": {
+          "id": "1386045358768918679",
+          "username": "dondada0420",
+          "roles": [
+            "Trader",
+            "Designer",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Halloweencrypten??>>": {
+          "id": "1467701908142555267",
+          "username": "paydenjaqeus_27957",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Alexander": {
+          "id": "1368710976400134215",
+          "username": "shults1",
+          "roles": [
+            "Verified",
+            "Coder",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Baraka🔥⚡⚡🏖": {
+          "id": "1444325520127955006",
+          "username": "baraka09363",
+          "roles": [
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Odilitime": {
+          "id": "580487826420793364",
+          "username": "odilitime",
+          "roles": [
+            "platform - self assign",
+            "partner portal - self assign",
+            "Community Ops",
+            "Creator",
+            "Moderator",
+            "[WG] degenspartan",
+            "pmairca - self assign",
+            "Verified",
+            "Booster",
+            "Hoplite",
+            "Github - Contributor",
+            "Helper",
+            "Migration Support",
+            "Associate",
+            "Labs",
+            "Trader",
+            "Contributor",
+            "merch - self assign",
+            "events - self-assign",
+            "[WG] Elizacon - granted",
+            "Spartan Dev",
+            "Core Dev",
+            "Coder"
+          ],
+          "totalMessages": 183
+        },
+        "Mr. Ronnie ⚒️ Debryne": {
+          "id": "1470801806434111684",
+          "username": "xianna0x",
+          "roles": [
+            "Trader",
+            "Creator",
+            "Designer",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Shah": {
+          "id": "1295728239465205780",
+          "username": "shah08347",
+          "roles": [
+            "Trader",
+            "utility",
+            "[WG] degenspartan",
+            "eliza"
+          ],
+          "totalMessages": 3
+        },
+        "TraderTomson": {
+          "id": "1129051434495787151",
+          "username": "tradertomson",
+          "roles": [
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Inhuman Resources": {
+          "id": "807727820355797062",
+          "username": "magicyte",
+          "roles": [
+            "auto.fun enjoyer",
+            "Creator",
+            "[WG] degenspartan",
+            "Mini Mod",
+            "VIP",
+            "Verified",
+            "Designer",
+            "utility",
+            "Coder"
+          ],
+          "totalMessages": 50
+        },
+        "miaozi": {
+          "id": "1438025016393601208",
+          "username": "miaozi0377",
+          "roles": [
+            "Helper",
+            "Trader",
+            "[WG] degenspartan",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 5
+        },
+        "Sean Rock": {
+          "id": "243369429583265793",
+          "username": "seanrock",
+          "roles": [
+            "Helper",
+            "Trader",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "kluk": {
+          "id": "963729339575312415",
+          "username": "kluk5893",
+          "roles": [
+            "Trader",
+            "Creator",
+            "Verified",
+            "Designer",
+            "Coder"
+          ],
+          "totalMessages": 1
         }
       }
     }

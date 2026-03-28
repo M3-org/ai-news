@@ -3,37 +3,95 @@
   "title": "Weekly Report - 2026-03-21 to 2026-03-27",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - March 21, 2026",
+      "title": "Weekly Discord Discussions",
       "content": [
         {
-          "text": "Community members expressed concerns about token price performance and communication from the team. The token has declined 84% for some holders and is not recovering at the same rate as the broader market. Critics argued the token lacks utility and questioned the team's commitment to token holders, particularly after migration where 40% of community tokens were collected. Some accused the team of poor communication and breaking promises to investors.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          "text": "Community members expressed concerns about token price performance, citing an 84% decline for some holders and a failure to recover at the same rate as the broader market. Critics argued the token lacks utility and questioned the team's commitment to token holders, particularly after migration where 40% of community tokens were collected. Some accused the team of poor communication and breaking promises to investors. Others defended the team, noting the token traded upward for three consecutive months and attributed price declines to broader market factors including the Trump token launch causing massive sell-offs across crypto.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "memes": null,
+          "posters": null
         },
         {
           "text": "Team member Odilitime defended the project's communication efforts, pointing to weekly video updates and daily updates in a dedicated channel. He stated that developers are actively building, staff are managing partnerships, and Shaw is active on Twitter. Odilitime acknowledged the team made mistakes but emphasized they have not walked away from the project. He suggested some critics may be paid shills trying to tank the project, while acknowledging not all unhappy community members fall into that category.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "memes": null,
+          "posters": null
         },
         {
-          "text": "A community member shared an ElizaOS Ecosystem Map post showing the framework's infrastructure including ElizaOS as the core AI Agent framework with cross-chain compatibility for Solana, Base, and EVM, plus ElizaCloud infrastructure. The post highlighted the ecosystem's plugin support for social media, blockchains, and APIs.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1484886814337794249_8828a8f7.jpg",
-          "videos": "https://cdn.elizaos.news/elizaos-media/2035216158333575275_09e02bd0.mp4"
+          "text": "A community member shared an ElizaOS Ecosystem Map showing the framework's infrastructure including ElizaOS as the core AI Agent framework with cross-chain compatibility for Solana, Base, and EVM, plus ElizaCloud infrastructure. The post highlighted the ecosystem's plugin support for social media, blockchains, and APIs. Developers in the coders channel also clarified that ElizaOS is an operating system for agents and will not be replaced, that Milady is built on top of ElizaOS rather than competing with it, and that OpenClaw agents can exist within Milady.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1484886814337794249_8828a8f7.jpg"
+          ],
+          "videos": [
+            "https://cdn.elizaos.news/elizaos-media/2035216158333575275_09e02bd0.mp4"
+          ],
+          "memes": null,
+          "posters": null
         },
         {
-          "text": "Odilitime announced that Milady beta would be released that day after wrapping up some build fixes, stating it was playable and running. This followed earlier confusion about whether Milady or Babylon would be released first.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          "text": "Odilitime announced that Milady beta would be released on March 21 after wrapping up some build fixes, stating it was playable and running. This followed earlier confusion about whether Milady or Babylon would be released first.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "memes": null,
+          "posters": null
         },
         {
-          "text": "In the coders channel, developers clarified the ElizaOS ecosystem structure. They explained that ElizaOS is an operating system for agents and will not be replaced. Milady is built on top of ElizaOS, not a competitor to it. OpenClaw agents can exist within Milady. This clarification helped address confusion about how different components of the ecosystem relate to each other.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          "text": "Magicyte posted demonstrations of work-in-progress features, including a video showcasing AI characters with distinct personalities and a Milady hologram displayed in a Looking Glass Go device, noting potential interest in shipping these as standalone units or Mac Mini plug-and-play devices.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1485075201799618761_8a08f998.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1485082958917533758_94965865.jpg"
+          ],
+          "videos": [
+            "https://cdn.elizaos.news/elizaos-media/embed-video-1485075201799618761_2f509e87.mp4",
+            "https://cdn.elizaos.news/elizaos-media/2035521008359403890_eff5cd58.mp4"
+          ],
+          "memes": null,
+          "posters": null
         },
         {
-          "text": "Some community members defended the team, noting that the token traded upward for three consecutive months and was considered a pivotal moment where traders viewed a memecoin as an investment vehicle to fund a startup. They attributed price declines to broader market factors including the Trump token launch causing massive sell-offs across crypto. Others emphasized personal responsibility in investment decisions and the importance of only investing money one can afford to lose.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          "text": "TraderTomson announced a new plugin for Eliza that enables agents to earn money autonomously on Base blockchain. The plugin allows agents to register on an on-chain marketplace, post services, get hired by other agents, and receive payment in AGT tokens without human intervention. Season 1 is live with a 50 million AGT pool for early adopters, available at aepprotocol.xyz/join.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "memes": null,
+          "posters": "https://cdn.elizaos.news/posters/1774656477400-zw3z2b.png"
+        },
+        {
+          "text": "A community member asked about the ElizaOS whitepaper. Odilitime clarified that the token does not have a traditional whitepaper, but directed users to the official roadmap on GitHub and an academic paper on arxiv.org that describes Eliza as a Web3 friendly AI Agent Operating System.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/roadmap_35100733.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1485302928871915681_12d01bd5.png"
+          ],
+          "videos": [],
+          "memes": null,
+          "posters": null
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1774656397
+  "date": 1774656523
 }
