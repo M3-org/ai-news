@@ -10,6 +10,7 @@ import { logger, createProgressBar } from '../../helpers/cliHelper';
 import { delay, retryOperation, classifyDiscordError, mapConcurrent } from '../../helpers/generalHelper';
 import { isMediaFile } from '../../helpers/fileHelper';
 import { processDiscordAttachment, processDiscordEmbed, processDiscordSticker } from '../../helpers/mediaHelper';
+import { getActiveProgressDashboard } from '../../helpers/progressDashboard';
 import { StoragePlugin } from '../storage/StoragePlugin';
 import { DiscordChannelRegistry } from '../storage/DiscordChannelRegistry';
 import { DiscordUserRegistry } from '../storage/DiscordUserRegistry';
@@ -75,6 +76,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   private userRegistry: DiscordUserRegistry | null = null;
   /** Media download configuration */
   public mediaDownload?: MediaDownloadConfig;
+  /** Cached login promise to avoid parallel logins */
+  private _loginPromise: Promise<string> | null = null;
+  /** Whether login() has been called at least once */
+  private _hasLoggedIn = false;
+  private _existingCidsCache: Map<string, Set<string>> | null = null; // date → Set<fullCid>
+  private _cachedUnavailableSet: Set<string> | null = null;
 
   static constructorInterface = {
     parameters: [
@@ -151,6 +158,127 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
    */
   hasMediaDownloadEnabled(): boolean {
     return this.mediaDownload?.enabled === true;
+  }
+
+  private getInteractiveDashboard() {
+    const dashboard = getActiveProgressDashboard();
+    return dashboard?.isInteractive() ? dashboard : null;
+  }
+
+  private formatTargetDay(targetDate: Date): string {
+    return targetDate.toISOString().split('T')[0];
+  }
+
+  private startChannelTask(channelId: string, channelName: string, targetDate: Date, kind: 'channel' | 'forum'): void {
+    const dashboard = this.getInteractiveDashboard();
+    if (dashboard) {
+      dashboard.upsertTask(channelId, {
+        label: `${this.name}:${channelName}`,
+        status: kind,
+        detail: this.formatTargetDay(targetDate),
+      });
+      return;
+    }
+
+    logger.channel(`Processing ${kind}: ${channelName} (${channelId}) for date ${this.formatTargetDay(targetDate)}`);
+  }
+
+  private updateChannelTask(
+    channelId: string,
+    channelName: string,
+    status: string,
+    detail: string,
+    progress?: { current: number; total: number }
+  ): void {
+    const dashboard = this.getInteractiveDashboard();
+    if (dashboard) {
+      dashboard.upsertTask(channelId, {
+        label: `${this.name}:${channelName}`,
+        status,
+        detail,
+        current: progress?.current,
+        total: progress?.total,
+      });
+      return;
+    }
+
+    logger.progress(`Fetching ${channelName}: ${status} - ${detail}`);
+  }
+
+  private clearChannelTask(channelId: string): void {
+    this.getInteractiveDashboard()?.removeTask(channelId);
+  }
+
+  /**
+   * Establishes the Discord gateway connection, safe to call multiple times.
+   * On first call: logs in and caches the promise to prevent parallel logins.
+   * On subsequent calls when not ready: waits for Discord.js auto-reconnect.
+   */
+  async connect(): Promise<void> {
+    if (this.client.isReady()) return;
+
+    if (this._hasLoggedIn) {
+      // Client was previously connected — wait for Discord.js auto-reconnect
+      await new Promise<void>(resolve => this.client.once('ready', () => resolve()));
+      return;
+    }
+
+    if (this._loginPromise) {
+      // Login already in progress — wait for it
+      await this._loginPromise;
+      return;
+    }
+
+    logger.info('Logging in to Discord...');
+    try {
+      this._loginPromise = this.client.login(this.botToken);
+      await this._loginPromise;
+      this._hasLoggedIn = true;
+      logger.success('Successfully logged in to Discord');
+    } finally {
+      this._loginPromise = null;
+    }
+  }
+
+  async preloadExistingRange(after: string, before: string): Promise<void> {
+    if (process.env.FORCE_OVERWRITE === 'true') return;
+
+    const db = this.storage.getDb();
+    if (!db) return;
+
+    if (!this.channelRegistry) {
+      this.channelRegistry = new DiscordChannelRegistry(db);
+      await this.channelRegistry.initialize();
+    }
+
+    const afterEpoch = Math.floor(new Date(after + 'T00:00:00Z').getTime() / 1000);
+    const beforeEpoch = Math.floor(new Date(before + 'T00:00:00Z').getTime() / 1000) + 86400;
+
+    const rows: Array<{ cid: string }> = await db.all(
+      `SELECT cid FROM items WHERE type = 'discordRawData' AND date >= ? AND date < ?`,
+      [afterEpoch, beforeEpoch]
+    );
+
+    const cidPattern = /^discord-raw-(\d+)-(\d{4}-\d{2}-\d{2})$/;
+    this._existingCidsCache = new Map();
+
+    for (const { cid } of rows) {
+      const m = cidPattern.exec(cid);
+      if (!m) continue;
+      const date = m[2];
+      let set = this._existingCidsCache.get(date);
+      if (!set) { set = new Set(); this._existingCidsCache.set(date, set); }
+      set.add(cid);
+    }
+
+    this._cachedUnavailableSet = this.channelRegistry
+      ? new Set((await this.channelRegistry.getUnavailableChannels()).map(c => c.id))
+      : new Set();
+
+    logger.info(
+      `Preloaded ${rows.length} existing CIDs across ${this._existingCidsCache.size} dates ` +
+      `(${this._cachedUnavailableSet.size} unavailable channels cached)`
+    );
   }
 
   private async fetchUserData(member: GuildMember | null, user: User): Promise<DiscordRawData['users'][string]> {
@@ -292,7 +420,8 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
    * @returns Promise with aggregated raw data from all threads
    */
   private async fetchForumMessages(channel: ForumChannel, targetDate: Date, sharedUsers?: Map<string, DiscordRawData['users'][string]>): Promise<DiscordRawData> {
-    logger.channel(`Processing forum: ${channel.name} (${channel.id}) for date ${targetDate.toISOString().split('T')[0]}`);
+    const targetDay = this.formatTargetDay(targetDate);
+    this.startChannelTask(channel.id, channel.name, targetDate, 'forum');
 
     const users = sharedUsers || new Map<string, DiscordRawData['users'][string]>();
     let allMessages: DiscordRawData['messages'] = [];
@@ -305,17 +434,17 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
 
     try {
       // Fetch active threads
-      logger.progress(`Fetching ${channel.name}: Getting active threads...`);
+      this.updateChannelTask(channel.id, channel.name, 'discovering threads', `${targetDay} | active threads`);
       const activeThreads = await retryOperation(() => channel.threads.fetchActive());
 
       // Fetch archived threads (may contain messages from target date)
-      logger.progress(`Fetching ${channel.name}: Getting archived threads...`);
+      this.updateChannelTask(channel.id, channel.name, 'discovering threads', `${targetDay} | archived threads`);
       const archivedThreads = await retryOperation(() => channel.threads.fetchArchived({ limit: 100 }));
 
       // Combine all threads
       const allThreads = new Map<string, AnyThreadChannel>();
-      activeThreads.threads.forEach((thread, id) => allThreads.set(id, thread));
-      archivedThreads.threads.forEach((thread, id) => allThreads.set(id, thread));
+      activeThreads.threads.forEach((thread: AnyThreadChannel, id: string) => allThreads.set(id, thread));
+      archivedThreads.threads.forEach((thread: AnyThreadChannel, id: string) => allThreads.set(id, thread));
 
       logger.info(`Found ${allThreads.size} threads in forum ${channel.name}`);
 
@@ -331,7 +460,13 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
           continue;
         }
 
-        logger.progress(`Fetching ${channel.name}: Thread ${threadIndex}/${allThreads.size} - ${thread.name}`);
+        this.updateChannelTask(
+          channel.id,
+          channel.name,
+          'forum threads',
+          `${targetDay} | ${thread.name}`,
+          { current: threadIndex, total: allThreads.size }
+        );
 
         try {
           // Fetch messages from this thread for the target date
@@ -357,13 +492,16 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
       if (snowflakeSkippedThreads > 0) {
         logger.debug(`Skipped ${snowflakeSkippedThreads} threads created after ${targetDate.toISOString().split('T')[0]}`);
       }
+      this.updateChannelTask(channel.id, channel.name, 'complete', `${targetDay} | ${allMessages.length} messages from ${threadNames.length} threads`);
       logger.info(`Finished ${channel.name}. Collected ${allMessages.length} messages from ${threadNames.length} threads.`);
 
     } catch (error) {
       logger.clearLine();
       if (error instanceof Error && error.message.includes('Missing Access')) {
+        this.updateChannelTask(channel.id, channel.name, 'error', `${targetDay} | missing access`);
         logger.warning(`Missing permissions to access forum ${channel.name}`);
       } else {
+        this.updateChannelTask(channel.id, channel.name, 'error', `${targetDay} | ${error instanceof Error ? error.message : error}`);
         logger.error(`Error fetching forum ${channel.name}: ${error instanceof Error ? error.message : error}`);
       }
     }
@@ -480,7 +618,8 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   }
 
   private async fetchChannelMessages(channel: TextChannel, targetDate: Date, sharedUsers?: Map<string, DiscordRawData['users'][string]>): Promise<DiscordRawData> {
-    logger.channel(`Processing channel: ${channel.name} (${channel.id}) for date ${targetDate.toISOString().split('T')[0]}`);
+    const targetDay = this.formatTargetDay(targetDate);
+    this.startChannelTask(channel.id, channel.name, targetDate, 'channel');
     const users = sharedUsers || new Map<string, DiscordRawData['users'][string]>();
     let messages: DiscordRawData['messages'] = [];
     const collectedMessageIds = new Set<string>(); // To avoid duplicates
@@ -510,7 +649,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         // --- Phase 1: Fetch messages around the start of the day ---
         // If resuming from a crash cursor, start from the cursor position instead
         const phase1Snowflake = resumeFromId || startSnowflake;
-        logger.progress(`Fetching ${channel.name}: Phase 1 - Finding start point around ${targetDate.toISOString().split('T')[0]}${resumeFromId ? ' (resumed)' : ''}`);
+        this.updateChannelTask(
+          channel.id,
+          channel.name,
+          'phase 1',
+          `${targetDay} | finding start point${resumeFromId ? ' | resumed' : ''}`
+        );
         let initialMessages = await retryOperation(() => channel.messages.fetch({ limit: 100, around: phase1Snowflake }));
         totalScanned += initialMessages.size;
         batchCount++;
@@ -524,7 +668,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
                 }
             }
         });
-        logger.progress(`Fetching ${channel.name}: Phase 1 - Scanned ${totalScanned}, Found ${messagesInTargetDateRange.length} initial`);
+        this.updateChannelTask(
+          channel.id,
+          channel.name,
+          'phase 1',
+          `${targetDay} | scanned ${totalScanned} | found ${messagesInTargetDateRange.length}`
+        );
         await delay(API_RATE_LIMIT_DELAY);
 
         // Short-circuit: if Phase 1 found 0 in-range messages but returned messages
@@ -535,6 +684,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             const hasAfterTarget = timestamps.some((t: number) => t > endOfDay.getTime());
             if (hasBeforeTarget && hasAfterTarget) {
                 logger.debug(`No messages on ${targetDate.toISOString().slice(0, 10)} for ${channel.name} (confirmed by surrounding messages)`);
+                this.updateChannelTask(channel.id, channel.name, 'complete', `${targetDay} | empty day confirmed`);
                 return {
                     channel: { id: channel.id, name: channel.name, topic: channel.topic, category: channel.parent?.name || null },
                     date: targetDate.toISOString(),
@@ -550,7 +700,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             : initialMessages.size > 0 ? initialMessages.sort((a: Message<true>, b: Message<true>) => a.createdTimestamp - b.createdTimestamp).first()?.id : undefined;
 
         let hasMoreBefore = !!earliestMessageId;
-        logger.progress(`Fetching ${channel.name}: Phase 2 - Fetching backwards from ${earliestMessageId ? snowflakeToDate(earliestMessageId).toISOString() : 'start'}`);
+        this.updateChannelTask(
+          channel.id,
+          channel.name,
+          'phase 2 backward',
+          `${targetDay} | from ${earliestMessageId ? snowflakeToDate(earliestMessageId).toISOString() : 'start'}`
+        );
 
         while (hasMoreBefore) {
             const options: any = { limit: 100, before: earliestMessageId };
@@ -580,7 +735,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             earliestMessageId = fetchedMessages.sort((a: Message<true>, b: Message<true>) => a.createdTimestamp - b.createdTimestamp).first()?.id;
             if (!earliestMessageId) hasMoreBefore = false; // Safety break
 
-            logger.progress(`Fetching ${channel.name}: Phase 2 (Backwards) - Scanned ${totalScanned}, Added ${batchAddedCount}, Total ${collectedMessageIds.size}, Oldest: ${earliestMessageId ? snowflakeToDate(earliestMessageId).toISOString().split('T')[0] : 'N/A'} (Batch ${batchCount})`);
+            this.updateChannelTask(
+              channel.id,
+              channel.name,
+              'phase 2 backward',
+              `${targetDay} | scanned ${totalScanned} | added ${batchAddedCount} | total ${collectedMessageIds.size} | batch ${batchCount}`
+            );
 
             // Save crash recovery cursor so we can resume from here if interrupted
             if (earliestMessageId) {
@@ -602,7 +762,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             : initialMessages.size > 0 ? initialMessages.sort((a: Message<true>, b: Message<true>) => b.createdTimestamp - a.createdTimestamp).first()?.id : undefined;
 
         let hasMoreAfter = !!latestMessageId;
-        logger.progress(`Fetching ${channel.name}: Phase 3 - Fetching forwards from ${latestMessageId ? snowflakeToDate(latestMessageId).toISOString() : 'start'}`);
+        this.updateChannelTask(
+          channel.id,
+          channel.name,
+          'phase 3 forward',
+          `${targetDay} | from ${latestMessageId ? snowflakeToDate(latestMessageId).toISOString() : 'start'}`
+        );
 
         while (hasMoreAfter) {
             const options: any = { limit: 100, after: latestMessageId };
@@ -632,7 +797,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             latestMessageId = fetchedMessages.sort((a: Message<true>, b: Message<true>) => b.createdTimestamp - a.createdTimestamp).first()?.id;
              if (!latestMessageId) hasMoreAfter = false; // Safety break
 
-            logger.progress(`Fetching ${channel.name}: Phase 3 (Forwards) - Scanned ${totalScanned}, Added ${batchAddedCount}, Total ${collectedMessageIds.size}, Newest: ${latestMessageId ? snowflakeToDate(latestMessageId).toISOString().split('T')[0] : 'N/A'} (Batch ${batchCount})`);
+            this.updateChannelTask(
+              channel.id,
+              channel.name,
+              'phase 3 forward',
+              `${targetDay} | scanned ${totalScanned} | added ${batchAddedCount} | total ${collectedMessageIds.size} | batch ${batchCount}`
+            );
 
             // Stop if the newest message is clearly after our target end date
             if (latestMessageId && BigInt(latestMessageId) > BigInt(endSnowflake)) {
@@ -645,6 +815,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         // --- Phase 4: Process collected messages ---
         logger.clearLine();
         if (messagesInTargetDateRange.length > 0) {
+            this.updateChannelTask(channel.id, channel.name, 'phase 4 process', `${targetDay} | processing ${messagesInTargetDateRange.length} messages`);
             logger.info(`Processing ${messagesInTargetDateRange.length} messages collected for ${channel.name} on ${targetDate.toISOString().split('T')[0]}`);
             // Need to create a Collection to pass to processMessageBatch
             const messagesCollection = new Collection<string, Message<true>>();
@@ -652,16 +823,20 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
 
             messages = await this.processMessageBatch(messagesCollection, channel, users) as DiscordRawData['messages'];
         } else {
+            this.updateChannelTask(channel.id, channel.name, 'complete', `${targetDay} | no messages found`);
             logger.info(`No messages found for ${channel.name} on ${targetDate.toISOString().split('T')[0]}`);
         }
 
     } catch (error) {
         logger.clearLine();
         if (error instanceof Error && error.message.includes('Missing Access')) {
+            this.updateChannelTask(channel.id, channel.name, 'error', `${targetDay} | missing access`);
             logger.warning(`Missing permissions to access channel ${channel.name}`);
         } else if (error instanceof Error && error.message.includes('Unknown Message')) {
+            this.updateChannelTask(channel.id, channel.name, 'warning', `${targetDay} | unknown message around ${startSnowflake}`);
              logger.warning(`Could not find message around snowflake ${startSnowflake} for ${channel.name}. Channel might be empty or date too old.`);
         } else {
+            this.updateChannelTask(channel.id, channel.name, 'error', `${targetDay} | ${error instanceof Error ? error.message : error}`);
             logger.error(`Error fetching messages for ${channel.name}: ${error instanceof Error ? error.message : error}`);
         }
         // Return empty data structure on error to avoid breaking the main loop
@@ -678,6 +853,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
 
     // Clear progress line and log final result
     logger.clearLine();
+    this.updateChannelTask(channel.id, channel.name, 'complete', `${targetDay} | ${messages.length} messages | scanned ${totalScanned}`);
     logger.info(`Finished ${channel.name}. Collected ${messages.length} messages after scanning ${totalScanned} total messages.`);
 
     return {
@@ -694,11 +870,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   }
 
   async fetchItems(): Promise<ContentItem[]> {
-    if (!this.client.isReady()) {
-      logger.info('Logging in to Discord...');
-      await this.client.login(this.botToken);
-      logger.success('Successfully logged in to Discord');
-    }
+    await this.connect();
 
     const items: ContentItem[] = [];
     const cutoff = new Date();
@@ -826,11 +998,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
   }
 
   async fetchHistorical(date: string): Promise<ContentItem[]> {
-    if (!this.client.isReady()) {
-      logger.info('Logging in to Discord...');
-      await this.client.login(this.botToken);
-      logger.success('Successfully logged in to Discord');
-    }
+    await this.connect();
 
     // Initialize channel and user registries if storage supports direct db access
     if (!this.channelRegistry || !this.userRegistry) {
@@ -861,10 +1029,30 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     const snowflakeSkipped: string[] = [];
     const storageSkipped: string[] = [];
     const unavailableSkipped: string[] = [];
+    const dashboard = getActiveProgressDashboard();
 
     // Compute end-of-day for snowflake creation-date check
     const endOfTargetDate = new Date(targetDate);
     endOfTargetDate.setUTCHours(23, 59, 59, 999);
+
+    // Load unavailable channels once (use cache if available, else 1 query per date)
+    const unavailableSet = this._cachedUnavailableSet ??
+      (this.channelRegistry
+        ? new Set((await this.channelRegistry.getUnavailableChannels()).map(c => c.id))
+        : new Set<string>());
+
+    // Preload CID cache for this date if not already done (avoids per-item DB lookups)
+    if (!forceOverwrite && this._existingCidsCache === null) {
+      await this.preloadExistingRange(date, date);
+    }
+
+    // Bulk-check which CIDs already exist in storage (use cache if available, else 1 query per date)
+    const allCids = this.channelIds.map(id => `discord-raw-${id}-${date}`);
+    const existingCids = forceOverwrite
+      ? new Set<string>()
+      : (this._existingCidsCache !== null
+          ? (this._existingCidsCache.get(date) ?? new Set<string>())
+          : await this.storage.getExistingCids(allCids));
 
     for (const channelId of this.channelIds) {
       // Skip channels that didn't exist yet on the target date (pure math, no API call)
@@ -874,18 +1062,15 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         continue;
       }
 
-      // Skip channels marked as unavailable (Missing Access, Unknown Channel)
-      if (this.channelRegistry) {
-        const unavailable = await this.channelRegistry.isUnavailable(channelId);
-        if (unavailable) {
-          unavailableSkipped.push(channelId);
-          continue;
-        }
+      // Unavailable check (Set lookup, no DB)
+      if (unavailableSet.has(channelId)) {
+        unavailableSkipped.push(channelId);
+        continue;
       }
 
+      // Existence check (Set lookup, no DB)
       const cid = `discord-raw-${channelId}-${date}`;
-      const exists = await this.storage.getContentItem(cid);
-      if (exists && !forceOverwrite) {
+      if (existingCids.has(cid)) {
         storageSkipped.push(channelId);
       } else {
         channelsToFetch.push(channelId);
@@ -905,6 +1090,16 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
     }
 
     if (channelsToFetch.length === 0) {
+      const currentStats = dashboard?.getStatsSnapshot() ?? {};
+      const skipExistingBase = parseInt(currentStats.skip_existing || '0', 10) || 0;
+      const skipUnavailableBase = parseInt(currentStats.skip_unavailable || '0', 10) || 0;
+      const skipFutureBase = parseInt(currentStats.skip_future || '0', 10) || 0;
+      dashboard?.setStats({
+        active: 0,
+        skip_existing: skipExistingBase + storageSkipped.length,
+        skip_unavailable: skipUnavailableBase + unavailableSkipped.length,
+        skip_future: skipFutureBase + snowflakeSkipped.length,
+      });
       logger.info(`All ${this.channelIds.length} channels already have data for ${date}`);
       return items;
     }
@@ -913,9 +1108,43 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
 
     // Shared user map across all channels for this date to avoid redundant API calls
     const sharedUsers = new Map<string, DiscordRawData['users'][string]>();
+    const currentStats = dashboard?.getStatsSnapshot() ?? {};
+    const queuedBase = parseInt(currentStats.queued || '0', 10) || 0;
+    const doneBase = parseInt(currentStats.done || '0', 10) || 0;
+    const failedBase = parseInt(currentStats.failed || '0', 10) || 0;
+    const skipExistingBase = parseInt(currentStats.skip_existing || '0', 10) || 0;
+    const skipUnavailableBase = parseInt(currentStats.skip_unavailable || '0', 10) || 0;
+    const skipFutureBase = parseInt(currentStats.skip_future || '0', 10) || 0;
+    const itemsBase = parseInt(currentStats.items || '0', 10) || 0;
+
+    let activeCount = 0;
+    let completedCount = 0;
+    let failedCount = 0;
+    let storedItemCount = 0;
+
+    const updateDashboardStats = () => {
+      dashboard?.setStats({
+        queued: queuedBase + channelsToFetch.length,
+        active: activeCount,
+        done: doneBase + completedCount,
+        failed: failedBase + failedCount,
+        skip_existing: skipExistingBase + storageSkipped.length,
+        skip_unavailable: skipUnavailableBase + unavailableSkipped.length,
+        skip_future: skipFutureBase + snowflakeSkipped.length,
+        items: itemsBase + storedItemCount,
+      });
+    };
+
+    updateDashboardStats();
 
     await mapConcurrent(channelsToFetch, CHANNEL_CONCURRENCY, async (channelId, channelIndex) => {
+      let handledSuccessfully = false;
+      activeCount += 1;
+      updateDashboardStats();
+
       try {
+        const taskLabel = `${date} | resolving channel`;
+        this.updateChannelTask(channelId, channelId, 'resolve', taskLabel);
         const channel = await retryOperation(() => this.client.channels.fetch(channelId));
         if (!channel) {
           logger.warning(`Channel ${channelId} does not exist.`);
@@ -927,6 +1156,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             date: targetTimestamp,
             metadata: { channelId, dateProcessed: date, empty: true, reason: 'channel_not_found' }
           }]);
+          storedItemCount += 1;
+          handledSuccessfully = true;
+          updateDashboardStats();
           return;
         }
 
@@ -934,6 +1166,7 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         if (this.channelRegistry) {
           await this.channelRegistry.clearUnavailable(channelId);
         }
+        this._cachedUnavailableSet?.delete(channelId);
 
         // For text/announcement channels, skip if lastMessageId predates the target date.
         // This avoids 3-4 API calls per channel per date for long-inactive channels.
@@ -954,6 +1187,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
               date: targetTimestamp,
               metadata: { channelId: channel.id, guildId: channel.guild.id, guildName: channel.guild.name, channelName: channel.name, messageCount: 0, dateProcessed: date, empty: true }
             }]);
+            storedItemCount += 1;
+            handledSuccessfully = true;
+            updateDashboardStats();
             return;
           }
         }
@@ -979,6 +1215,9 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
             date: targetTimestamp,
             metadata: { channelId, dateProcessed: date, empty: true, reason: `unsupported_type_${channel.type}` }
           }]);
+          storedItemCount += 1;
+          handledSuccessfully = true;
+          updateDashboardStats();
           return;
         }
 
@@ -1011,9 +1250,12 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         // Save immediately so data survives Ctrl+C between channels.
         // saveContentItems uses upsert, so re-runs won't duplicate.
         await this.storage.saveContentItems([contentItem]);
+        storedItemCount += 1;
         if (rawData.messages.length > 0) {
           items.push(contentItem);
         }
+        handledSuccessfully = true;
+        updateDashboardStats();
 
         // Update channel registry with channel metadata and activity
         if (this.channelRegistry) {
@@ -1086,6 +1328,14 @@ export class DiscordRawDataSource implements ContentSource, MediaDownloadCapable
         } else {
           logger.error(`Error processing channel ${channelId}: ${error}`);
         }
+        failedCount += 1;
+      } finally {
+        if (handledSuccessfully) {
+          completedCount += 1;
+        }
+        activeCount = Math.max(0, activeCount - 1);
+        updateDashboardStats();
+        this.clearChannelTask(channelId);
       }
     });
 

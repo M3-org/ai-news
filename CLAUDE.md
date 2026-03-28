@@ -28,6 +28,8 @@ npm run historical -- --source=elizaos.json --after=2024-01-10 --before=2024-01-
 npm run historical -- --source=elizaos.json --onlyFetch
 
 # Channel management CLI
+npm run channels -- sync [--source=m3org.json]           # discover → analyze → propose
+npm run channels -- sync --with-fetch [--after/--before] # mirror → discover → analyze → propose
 npm run channels -- discover
 npm run channels -- analyze
 npm run channels -- propose
@@ -41,9 +43,6 @@ npm run users -- fetch-avatars --skip-existing  # Fetch avatars from Discord API
 npm run users -- download-avatars               # Download avatar images locally
 npm run users -- build-registry                 # Build discord_users table
 npm run users -- enrich --all                   # Enrich daily JSONs with nickname maps
-
-# Nickname enrichment (legacy script, file may not exist)
-npm run enrich-nicknames -- --all --use-index
 
 # Server onboarding wizard
 npm run setup

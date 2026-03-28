@@ -301,15 +301,21 @@ export class DiscordSummaryGenerator {
     
     logger.info(`Combined data for ${channelName}: ${messages.length} messages, ${Object.keys(users).length} users`);
     
-    // Get AI summary
-    const structuredText = await this.getAISummary(messages, users, channelName);
-    if (!structuredText) {
+    // Get structured AI summary
+    const structuredSummary = await this.getStructuredChannelSummary(messages, users, channelName);
+    if (!structuredSummary) {
       logger.warning(`Failed to get AI summary for channel ${channelName}`);
       return null;
     }
-    
-    // Parse the structured text into sections
-    return this.parseStructuredText(structuredText, channelName, guildName);
+
+    return {
+      channelName,
+      guildName,
+      summary: structuredSummary.summary,
+      faqs: structuredSummary.faqs || [],
+      helpInteractions: structuredSummary.helpInteractions || [],
+      actionItems: structuredSummary.actionItems || []
+    };
   }
 
   /**
@@ -351,40 +357,42 @@ export class DiscordSummaryGenerator {
     return { messages: uniqueMessages, users: allUsers };
   }
 
-  /**
-   * Get AI summary for channel messages.
-   * @param messages - Array of Discord messages
-   * @param users - Map of user IDs to user data
-   * @param channelName - Name of the channel
-   * @returns Promise<string | null> - AI-generated summary or null if generation fails
-   * @private
-   */
-  private async getAISummary(
-    messages: DiscordRawData['messages'], 
+  private async getStructuredChannelSummary(
+    messages: DiscordRawData['messages'],
     users: Record<string, DiscordRawData['users'][string]>,
     channelName: string
-  ): Promise<string | null> {
+  ): Promise<{
+    summary: string;
+    faqs?: SummaryFaqs[];
+    helpInteractions?: HelpInteractions[];
+    actionItems?: ActionItems[];
+  } | null> {
     try {
       // Format messages into a transcript
       const transcript = messages.map(msg => {
         const user = users[msg.uid];
-        const username = user?.nickname || user?.name || msg.uid;
-        const time = new Date(msg.ts).toLocaleTimeString('en-US', { 
-          hour: '2-digit', 
+        const username = user?.name || user?.nickname || msg.uid;
+        const time = new Date(msg.ts).toLocaleTimeString('en-US', {
+          hour: '2-digit',
           minute: '2-digit',
-          hour12: false 
+          hour12: false
         });
         return `[${time}] ${username}: ${msg.content}`;
       }).join('\n');
-      
+
       logger.info(`Creating structured AI prompt for channel ${channelName} with ${messages.length} messages`);
       const prompt = this.getChannelSummaryPrompt(transcript, channelName);
-      
+
       logger.info(`Calling AI provider for channel ${channelName} summary`);
-      const response = await this.provider.summarize(prompt);
+      const response = await this.provider.summarizeStructured<{
+        summary: string;
+        faqs?: SummaryFaqs[];
+        helpInteractions?: HelpInteractions[];
+        actionItems?: ActionItems[];
+      }>(prompt, 'discord_channel_summary', this.getChannelSummarySchema());
       logger.success(`Successfully received AI summary for channel ${channelName}`);
-      
-      return response;
+
+      return this.validateStructuredChannelSummary(response, channelName);
     } catch (error) {
       logger.error(`Error getting AI summary: ${error instanceof Error ? error.message : String(error)}`);
       return null;
@@ -400,7 +408,7 @@ export class DiscordSummaryGenerator {
    */
   private getChannelSummaryPrompt(transcript: string, channelName: string): string {
     return `Analyze this Discord chat segment for channel "${channelName}" and provide a succinct analysis:
-            
+
 1. Summary (max 500 words):
 - Focus ONLY on the most important technical discussions, decisions, and problem-solving
 - Highlight concrete solutions and implementations
@@ -438,138 +446,141 @@ ${transcript}
 Return the analysis in the specified structured format with numbered sections (1., 2., 3., 4.). Be specific about technical content and avoid duplicating information. Ensure each FAQ, Help Interaction, and Action Item is on its own line following the specified format exactly.`;
   }
 
-  /**
-   * Parse AI output into structured DiscordSummary object.
-   * @param text - AI-generated structured text
-   * @param channelName - Name of the channel
-   * @param guildName - Name of the guild/server
-   * @returns DiscordSummary object
-   * @private
-   */
-  private parseStructuredText(text: string, channelName: string, guildName: string): DiscordSummary {
-    // Prepend \n so the first "1. " header is also consumed by the split pattern
-    const sections = ('\n' + text).split(/\n\d+\.\s*/);
-    
-    // Extract content from each section
-    const summary = sections.length > 1 ? this.extractSection(sections[1], 'Summary') : text;
-    const faqs = sections.length > 2 ? this.parseFAQs(sections[2]) : [];
-    const helpInteractions = sections.length > 3 ? this.parseHelpInteractions(sections[3]) : [];
-    const actionItems = sections.length > 4 ? this.parseActionItems(sections[4]) : [];
-    
-    logger.info(`Parsed structured text for ${channelName}. Summary: ${summary.length} chars, FAQs: ${faqs.length}, Help interactions: ${helpInteractions.length}, Action items: ${actionItems.length}`);
-    
+  private getChannelSummarySchema(): Record<string, unknown> {
     return {
-      channelName,
-      guildName,
-      summary,
-      faqs,
-      helpInteractions,
-      actionItems
+      type: 'object',
+      additionalProperties: false,
+      required: ['summary'],
+      properties: {
+        summary: { type: 'string', minLength: 1 },
+        faqs: {
+          type: 'array',
+          items: {
+            type: 'object',
+            additionalProperties: false,
+            required: ['question', 'askedBy', 'answeredBy'],
+            properties: {
+              question: { type: 'string', minLength: 1 },
+              askedBy: { type: 'string', minLength: 1 },
+              answeredBy: { type: 'string', minLength: 1 }
+            }
+          }
+        },
+        helpInteractions: {
+          type: 'array',
+          items: {
+            type: 'object',
+            additionalProperties: false,
+            required: ['helper', 'helpee', 'context', 'resolution'],
+            properties: {
+              helper: { type: 'string', minLength: 1 },
+              helpee: { type: 'string', minLength: 1 },
+              context: { type: 'string', minLength: 1 },
+              resolution: { type: 'string', minLength: 1 }
+            }
+          }
+        },
+        actionItems: {
+          type: 'array',
+          items: {
+            type: 'object',
+            additionalProperties: false,
+            required: ['type', 'description', 'mentionedBy'],
+            properties: {
+              type: { type: 'string', enum: ['Technical', 'Documentation', 'Feature'] },
+              description: { type: 'string', minLength: 1 },
+              mentionedBy: { type: 'string', minLength: 1 }
+            }
+          }
+        }
+      }
     };
   }
 
-  /**
-   * Extract a section from text.
-   * @param text - Text to extract from
-   * @param sectionName - Name of the section to extract
-   * @returns Extracted section text
-   * @private
-   */
-  private extractSection(text: string | undefined, sectionName: string): string {
-    if (!text) return '';
-    return text.replace(new RegExp(`^\\s*${sectionName}:?\\s*\\n?`, 'i'), '').trim();
-  }
-
-  /**
-   * Parse FAQ section into structured objects.
-   * @param text - FAQ section text
-   * @returns Array of SummaryFaqs objects
-   * @private
-   */
-  private parseFAQs(text: string | undefined): SummaryFaqs[] {
-    if (!text) return [];
-    
-    const faqs: SummaryFaqs[] = [];
-    const lines = text.trim().split('\n');
-    
-    for (const line of lines) {
-      if (!line.trim().startsWith('Q:')) continue;
-      
-      const match = line.match(/^Q:\s*(.*?)\s*\(asked by\s*(.*?)\)\s*A:\s*(.*?)(?:\s*\(answered by\s*(.*?)\))?$/i);
-      
-      if (match) {
-        faqs.push({
-          question: match[1].trim(),
-          askedBy: match[2].trim() || 'Unknown',
-          answeredBy: match[4]?.trim() || (match[3].trim().toLowerCase() === 'unanswered' ? 'Unanswered' : 'Unknown')
-        });
-      }
+  private validateStructuredChannelSummary(
+    value: unknown,
+    channelName: string
+  ): {
+    summary: string;
+    faqs?: SummaryFaqs[];
+    helpInteractions?: HelpInteractions[];
+    actionItems?: ActionItems[];
+  } {
+    if (!value || typeof value !== 'object') {
+      throw new Error(`Structured summary for ${channelName} was not an object`);
     }
-    
-    return faqs;
-  }
 
-  /**
-   * Parse Help Interactions section into structured objects.
-   * @param text - Help Interactions section text
-   * @returns Array of HelpInteractions objects
-   * @private
-   */
-  private parseHelpInteractions(text: string | undefined): HelpInteractions[] {
-    if (!text) return [];
-    
-    const interactions: HelpInteractions[] = [];
-    const lines = text.trim().split('\n');
-    
-    for (const line of lines) {
-      if (!line.trim().toLowerCase().startsWith('helper:')) continue;
-      
-      const match = line.match(/Helper:\s*(.*?)\s*\|\s*Helpee:\s*(.*?)\s*\|\s*Context:\s*(.*?)\s*\|\s*Resolution:\s*(.*)/i);
-      
-      if (match) {
-        interactions.push({
-          helper: match[1].trim(),
-          helpee: match[2].trim(),
-          context: match[3].trim(),
-          resolution: match[4].trim()
-        });
-      }
+    const record = value as Record<string, unknown>;
+    if (typeof record.summary !== 'string' || !record.summary.trim()) {
+      throw new Error(`Structured summary for ${channelName} missing summary`);
     }
-    
-    return interactions;
-  }
 
-  /**
-   * Parse Action Items section into structured objects.
-   * @param text - Action Items section text
-   * @returns Array of ActionItems objects
-   * @private
-   */
-  private parseActionItems(text: string | undefined): ActionItems[] {
-    if (!text) return [];
-    
-    const items: ActionItems[] = [];
-    const lines = text.trim().split('\n');
-    
-    for (const line of lines) {
-      if (!line.trim().toLowerCase().startsWith('type:')) continue;
-      
-      const match = line.match(/Type:\s*(Technical|Documentation|Feature)\s*\|\s*Description:\s*(.*?)\s*\|\s*Mentioned By:\s*(.*)/i);
-      
-      if (match) {
-        const type = match[1].trim() as 'Technical' | 'Documentation' | 'Feature';
-        
-        if (['Technical', 'Documentation', 'Feature'].includes(type)) {
-          items.push({
-            type,
-            description: match[2].trim(),
-            mentionedBy: match[3].trim()
-          });
+    const result: {
+      summary: string;
+      faqs?: SummaryFaqs[];
+      helpInteractions?: HelpInteractions[];
+      actionItems?: ActionItems[];
+    } = { summary: record.summary.trim() };
+
+    if (record.faqs !== undefined) {
+      if (!Array.isArray(record.faqs)) throw new Error(`Structured summary for ${channelName} has invalid faqs`);
+      result.faqs = record.faqs.map((faq, index) => {
+        const item = faq as Record<string, unknown>;
+        if (typeof item.question !== 'string' || typeof item.askedBy !== 'string' || typeof item.answeredBy !== 'string') {
+          throw new Error(`Structured summary for ${channelName} has invalid faqs[${index}]`);
         }
-      }
+        return {
+          question: item.question.trim(),
+          askedBy: item.askedBy.trim(),
+          answeredBy: item.answeredBy.trim()
+        };
+      }).filter(item => item.question && item.askedBy && item.answeredBy);
+      if (result.faqs.length === 0) delete result.faqs;
     }
-    
-    return items;
+
+    if (record.helpInteractions !== undefined) {
+      if (!Array.isArray(record.helpInteractions)) throw new Error(`Structured summary for ${channelName} has invalid helpInteractions`);
+      result.helpInteractions = record.helpInteractions.map((interaction, index) => {
+        const item = interaction as Record<string, unknown>;
+        if (
+          typeof item.helper !== 'string' ||
+          typeof item.helpee !== 'string' ||
+          typeof item.context !== 'string' ||
+          typeof item.resolution !== 'string'
+        ) {
+          throw new Error(`Structured summary for ${channelName} has invalid helpInteractions[${index}]`);
+        }
+        return {
+          helper: item.helper.trim(),
+          helpee: item.helpee.trim(),
+          context: item.context.trim(),
+          resolution: item.resolution.trim()
+        };
+      }).filter(item => item.helper && item.helpee && item.context && item.resolution);
+      if (result.helpInteractions.length === 0) delete result.helpInteractions;
+    }
+
+    if (record.actionItems !== undefined) {
+      if (!Array.isArray(record.actionItems)) throw new Error(`Structured summary for ${channelName} has invalid actionItems`);
+      result.actionItems = record.actionItems.map((action, index) => {
+        const item = action as Record<string, unknown>;
+        if (
+          (item.type !== 'Technical' && item.type !== 'Documentation' && item.type !== 'Feature') ||
+          typeof item.description !== 'string' ||
+          typeof item.mentionedBy !== 'string'
+        ) {
+          throw new Error(`Structured summary for ${channelName} has invalid actionItems[${index}]`);
+        }
+        return {
+          type: item.type,
+          description: item.description.trim(),
+          mentionedBy: item.mentionedBy.trim()
+        } as ActionItems;
+      }).filter(item => item.description && item.mentionedBy);
+      if (result.actionItems.length === 0) delete result.actionItems;
+    }
+
+    return result;
   }
 
   /**

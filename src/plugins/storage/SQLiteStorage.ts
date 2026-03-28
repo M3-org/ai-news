@@ -89,6 +89,9 @@ export class SQLiteStorage implements StoragePlugin {
         message_id TEXT NOT NULL
       );
     `);
+
+    await this.db.exec(`CREATE INDEX IF NOT EXISTS idx_items_cid ON items(cid)`);
+    await this.db.exec(`CREATE INDEX IF NOT EXISTS idx_items_type_date ON items(type, date)`);
   }
 
   /**
@@ -297,7 +300,7 @@ export class SQLiteStorage implements StoragePlugin {
             item.date
           ]
         );
-        console.log(`Updated existing summary for ${item.type} on date ${dateStr}`);
+        logger.debug(`Updated existing summary for ${item.type} on date ${dateStr}`);
       } else {
         // Insert new summary
         await this.db.run(
@@ -313,11 +316,11 @@ export class SQLiteStorage implements StoragePlugin {
             item.date,
           ]
         );
-        console.log(`Saved new summary for ${item.type} on date ${dateStr}`);
+        logger.debug(`Saved new summary for ${item.type} on date ${dateStr}`);
       }
     } catch (error) {
       // Use epoch seconds * 1000 for correct Date object creation in error message
-      console.error(`Error saving summary for ${item.type} on date ${new Date(item.date * 1000).toISOString()}:`, error); 
+      logger.error(`Error saving summary for ${item.type} on date ${new Date(item.date * 1000).toISOString()}: ${error}`);
       throw error;
     }
   }
@@ -416,7 +419,9 @@ export class SQLiteStorage implements StoragePlugin {
    * Retrieves summary items within a specific time range.
    * @param startEpoch - Start timestamp in epoch seconds
    * @param endEpoch - End timestamp in epoch seconds
-   * @param excludeType - Optional type to exclude from results
+   * @param excludeType - Optional type to EXCLUDE from results (WHERE type != excludeType).
+   *   Note: DiscordSummaryGenerator passes its own summaryType here to check for
+   *   pre-existing summaries of OTHER types — opposite of includeType semantics.
    * @returns Promise<SummaryItem[]> Array of summary items within the time range
    * @throws Error if database is not initialized
    */
@@ -452,7 +457,7 @@ export class SQLiteStorage implements StoragePlugin {
         date: row.date,
       }));
     } catch (error) {
-      console.error("Error fetching summary between epochs:", error);
+      logger.error(`Error fetching summary between epochs: ${error}`);
       throw error;
     }
   }
@@ -500,5 +505,21 @@ export class SQLiteStorage implements StoragePlugin {
    */
   public getDb(): Database<sqlite3.Database, sqlite3.Statement> | null {
     return this.db;
+  }
+
+  /**
+   * Checks which of the provided content IDs already exist in storage.
+   * @param cids - Array of content IDs to check
+   * @returns Promise<Set<string>> Set of existing content IDs
+   */
+  public async getExistingCids(cids: string[]): Promise<Set<string>> {
+    if (!this.db) throw new Error("Database not initialized. Call init() first.");
+    if (cids.length === 0) return new Set();
+    const placeholders = cids.map(() => '?').join(',');
+    const rows = await this.db.all<Array<{ cid: string }>>(
+      `SELECT cid FROM items WHERE cid IN (${placeholders})`,
+      cids
+    );
+    return new Set(rows.map(r => r.cid));
   }
 }

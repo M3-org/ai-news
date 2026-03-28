@@ -79,4 +79,11 @@ export interface StoragePlugin {
    * @returns The database connection, or null if not initialized
    */
   getDb(): any;
+
+  /**
+   * Checks which of the provided content IDs already exist in storage.
+   * @param cids - Array of content IDs to check
+   * @returns Promise<Set<string>> Set of existing content IDs
+   */
+  getExistingCids(cids: string[]): Promise<Set<string>>;
 }
