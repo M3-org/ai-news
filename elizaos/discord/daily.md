@@ -1,54 +1,52 @@
-# elizaOS Discord - 2026-03-27
+# elizaOS Discord - 2026-03-28
 
 ## Summary
 
-### Plugin Development and Integration
+### Agent Integration and Automation Platforms
 
-The primary technical discussion centered on meowww404's development of a trading flow plugin for ElizaOS agents. The plugin is designed to enable Eliza agents to integrate with trading infrastructure in a plug-and-play manner. The developer inquired about the process and timeline for including their plugin in the main Eliza plugin repository and requested information about distribution support options. Odilitime responded by requesting the registry PR or plugin name to proceed with evaluation.
+TaskBounty announced comprehensive integration capabilities for Eliza agents, enabling autonomous operations with cryptocurrency payouts. The platform supports USDC, ETH, and SOL payments directly to agent wallets. Agents can browse tasks, submit work, and receive payments without human intervention through a REST API. The system includes an OpenAPI 3.1 specification available at task-bounty.com/api/v1/openapi.json for self-integration, with developer documentation at task-bounty.com/for-agents. Supported task categories include coding, research, lead generation, data scraping, writing, and analysis. A key feature is bidirectional task management where agents can both complete bounties and delegate sub-tasks to other specialized agents, creating an agent-to-agent economy.
 
-### Project Governance and Relationships
+### Referral and Incentive Programs
 
-A community discussion emerged regarding the relationship between Hyperscape and Eliza Labs. Odilitime clarified that Hyperscape is Eliza-related but exists as either a joint venture or Shaw's independent project rather than being directly launched by Eliza Labs. The project was described as being incubated by Eliza rather than being an official Eliza Labs product. This clarification resolved confusion among community members satsbased and 33coded about the project's organizational structure.
+TaskBounty introduced Bounty Scout, a referral system designed for agents. Under this program, agents earn $20 credits when referred clients post funded tasks, while referred users receive $60 signup credits. This creates an incentive structure for agents to expand the platform's user base.
 
-### Professional Introductions and Networking
+### Project Updates and Competition Status
 
-User trace provided a detailed introduction of their professional background as an AI and Full Stack Engineer. Their expertise includes LLM orchestration, RAG systems, multi-step agent workflows, AI copilots, multimodal chat/voice/OCR workflows, backend API development, and business process automation. They emphasized their approach of transforming repetitive processes into structured AI-powered systems and indicated they are seeking opportunities with startups and product teams building AI systems.
+RUBY was submitted to the Nosana hackathon. Hyperscape reached the top 4 finalists in an unspecified competition. These announcements indicate ongoing community participation in external events and competitions.
 
-### Partnership Inquiries
+### Migration and Technical Support
 
-Buike requested information about discussing a potential partnership with a team member, though this inquiry remained unanswered during the chat segment.
+A user sought assistance with migrating from AI16Z to ElizaOS, indicating ongoing platform transitions within the community. The specific technical details of the migration challenge were not elaborated in the discussion.
 
 ## FAQ
 
-**Q: Is there a team member I can discuss a potential partnership with?**
-A: Unanswered
+**Q: What payment methods does TaskBounty support for agent payouts?**
+A: TaskBounty supports USDC, ETH, and SOL cryptocurrency payments directly to agent wallets.
 
-**Q: Is it possible/how long will it take for our plugin to be included in the eliza main plugin repo?**
-A: Requested registry PR or plugin name for review (answered by Odilitime)
+**Q: Where can developers find the API specification for TaskBounty integration?**
+A: The OpenAPI 3.1 specification is available at task-bounty.com/api/v1/openapi.json, with comprehensive developer documentation at task-bounty.com/for-agents.
 
-**Q: What is Hyperscape's relationship to Eliza?**
-A: It's Eliza related but somewhere between a joint venture or Shaw's project, not launched by Eliza Labs (answered by Odilitime)
+**Q: What types of tasks can agents complete on TaskBounty?**
+A: Agents can complete tasks in coding, research, lead generation, data scraping, writing, and analysis categories.
+
+**Q: How does the Bounty Scout referral program work?**
+A: Agents earn $20 credits when referred clients post funded tasks, while referred users receive $60 signup credits.
+
+**Q: Can agents delegate tasks to other agents on TaskBounty?**
+A: Yes, agents can both complete bounties and delegate sub-tasks to other specialized agents, enabling an agent-to-agent economy.
 
 ## Help Interactions
 
-Odilitime assisted meowww404 with guidance on getting their trading flow plugin included in the main ElizaOS plugin repository and distribution support. The resolution involved requesting the registry PR or plugin name to proceed with evaluation.
-
-Satsbased helped the community by clarifying Hyperscape project relationship to Eliza Labs, confirming it's an incubated project rather than one launched by Eliza Labs.
-
-Odilitime resolved a community debate about Hyperscape's relationship to Eliza by clarifying it exists between a joint venture or Shaw's project.
+A user requested help with AI16Z to ElizaOS migration. No helper or resolution was documented in the provided channel summary.
 
 ## Action Items
 
 ### Technical
 
-Review trading flow plugin registry PR for potential inclusion in main ElizaOS plugin repository (mentioned by meowww404)
-
-### Features
-
-Trading flow plugin integration for Eliza agents to enable plug-and-play trading functionality (mentioned by meowww404)
-
-Potential collaboration opportunity with AI engineer experienced in LLM orchestration, RAG systems, and agent workflows (mentioned by trace)
+- Integrate Eliza agents with TaskBounty REST API for autonomous task completion and payment processing (mentioned by eliottre)
+- Implement agent-to-agent task delegation capabilities for specialized sub-task distribution (mentioned by eliottre)
 
 ### Documentation
 
-Clarify plugin submission and distribution process for third-party developers (mentioned by meowww404)
+- Review OpenAPI 3.1 specification at task-bounty.com/api/v1/openapi.json for integration requirements (mentioned by eliottre)
+- Consult developer documentation at task-bounty.com/for-agents for implementation guidance (mentioned by eliottre)
