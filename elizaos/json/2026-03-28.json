@@ -1,48 +1,32 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-03-28",
-  "categories": [
-    {
-      "title": "ElizaOS Community Discussion and Developer Updates",
-      "content": [
-        {
-          "text": "A user named Marvis asked for help regarding a missed migration from AI16Z to ElizaOS. Separately, community members discussed the Nosana Hackathon, with one user planning to submit a project called RUBY and another noting that Hyperscape reached the top 4 finalists. A general inquiry about upcoming Eliza updates was also raised.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "EliottRe announced that TaskBounty has shipped crypto payouts supporting USDC, ETH, and SOL, along with a full REST API. The platform allows Eliza agents to autonomously browse open tasks, submit work, and receive payment directly to their wallets without human involvement. Task categories include coding, research, lead generation, data scraping, writing, and analysis. Agents can also post tasks, enabling agent-to-agent delegation and an autonomous economy. A referral mechanic called Bounty Scout was also launched, allowing agents to earn a 20 dollar credit when referred users post funded tasks, while referred users receive a 60 dollar signup credit instead of the standard 50 dollars. Documentation and API specs are available at task-bounty.com.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A Twitter post was shared in the discussion channel referencing tokens including MILADY.AI, ELIZAOS, DEGENAI, and RUBY alongside broader crypto market tickers.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/2037907123972214784/pu/img/VC4JSFkgN6T-KsaE.jpg:large"
-          ],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, TheRedWizardDev shared information about Orbis, a tool that allows Eliza agents to self-subscribe to external APIs without requiring a browser or OAuth. The process involves three fetch calls: browse, register, and subscribe, resulting in a live API key. Orbis provides access to over 65 APIs covering text, data, encoding, finance, and validators, all with free tiers. An MCP server is also available for Claude-based agents. The agent discovery flow is accessible at orbisapi.com/api/agents/discovery.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Discussion and Developer Updates",
+    "content": [
+      {
+        "text": "A user named Marvis asked for help regarding a missed migration from AI16Z to ElizaOS. Separately, community members discussed the Nosana Hackathon, with one user planning to submit a project called RUBY and another noting that Hyperscape reached the top 4 finalists. A general inquiry about upcoming Eliza updates was also raised.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774747015843-tyqgwg.jpg"
+      },
+      {
+        "text": "EliottRe announced that TaskBounty has shipped crypto payouts supporting USDC, ETH, and SOL, along with a full REST API. The platform allows Eliza agents to autonomously browse open tasks, submit work, and receive payment directly to their wallets without human involvement. Task categories include coding, research, lead generation, data scraping, writing, and analysis. Agents can also post tasks, enabling agent-to-agent delegation and an autonomous economy. A referral mechanic called Bounty Scout was also launched, allowing agents to earn a 20 dollar credit when referred users post funded tasks, while referred users receive a 60 dollar signup credit instead of the standard 50 dollars. Documentation and API specs are available at task-bounty.com.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1774747034801-wljce8.png"
+      },
+      {
+        "text": "A Twitter post was shared in the discussion channel referencing tokens including MILADY.AI, ELIZAOS, DEGENAI, and RUBY alongside broader crypto market tickers.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1487465973949661317_de72572c.jpg"
+      },
+      {
+        "text": "In the coders channel, TheRedWizardDev shared information about Orbis, a tool that allows Eliza agents to self-subscribe to external APIs without requiring a browser or OAuth. The process involves three fetch calls: browse, register, and subscribe, resulting in a live API key. Orbis provides access to over 65 APIs covering text, data, encoding, finance, and validators, all with free tiers. An MCP server is also available for Claude-based agents. The agent discovery flow is accessible at orbisapi.com/api/agents/discovery.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "posters": "https://cdn.elizaos.news/posters/1774747055161-tvord.png"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1774656000,
   "nicknameMap": {
     "TheRedWizardDev": {
