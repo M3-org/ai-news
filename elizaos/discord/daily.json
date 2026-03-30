@@ -1,58 +1,95 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-03-28",
-  "date": 1774656000,
+  "title": "elizaOS Discord - 2026-03-29",
+  "date": 1774742400,
   "stats": {
-    "totalMessages": 18,
-    "totalUsers": 8
+    "totalMessages": 31,
+    "totalUsers": 14
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel featured limited technical content, primarily consisting of promotional announcements and brief status inquiries. The most significant technical contribution came from eliottre, who announced TaskBounty's new integration capabilities for Eliza agents. TaskBounty now supports autonomous agent operations with crypto payouts (USDC, ETH, SOL) and a REST API. The platform enables agents to browse tasks, submit work, and receive payments directly to wallets without human intervention. Key technical details include an OpenAPI 3.1 specification available at task-bounty.com/api/v1/openapi.json for self-integration, and comprehensive developer documentation at task-bounty.com/for-agents. The platform supports various task categories including coding, research, lead generation, data scraping, writing, and analysis. A notable feature is bidirectional task management - agents can both complete bounties and delegate sub-tasks to other specialized agents, enabling an agent-to-agent economy. TaskBounty also introduced Bounty Scout, a referral system where agents earn $20 credits when referred clients post funded tasks, while referred users receive $60 signup credits. Other discussions included a user seeking help with AI16Z to ElizaOS migration, a mention of RUBY submission to the Nosana hackathon, and hyperscape being in top 4 finalists for an unspecified competition. The channel showed minimal collaborative problem-solving or technical debugging during this segment.",
+      "summary": "The discussion centered on community organization and information accessibility for ElizaOS. The main concern raised was about channel fragmentation, specifically whether Milady should have a separate Discord channel or be integrated into the main Eliza Discord. satsbased argued that scattering the community across multiple channels creates confusion for investors who need centralized information to understand the ecosystem. The key point made was that most people don't know Milady was built on Eliza, which represents a communication gap. magicyte clarified that Shaw's cozy dev Discord is tailored for builders and thinkers, while the main Discord serves traders and investors. odilitime offered a potential solution by suggesting creating a bridged room next week. A significant community feedback came from cyborgxai, who suggested creating a centralized hub on the website to showcase all agents, apps, dApps, and community projects. This would help reduce confusion around SHAW and other projects that appear independent but are actually part of the ElizaOS ecosystem. sheldoncooperbbt inquired about building with ElizaOS and participating in the agent-challenge, specifically asking about endpoint provision and whether they need to pay for OpenRouter or OpenAI models. satsbased confirmed the framework is open source. trace.g introduced themselves as an AI + Full Stack Engineer with expertise in LLM systems, agents, and multimodal AI, seeking freelance and contract opportunities.",
       "faqs": [
         {
-          "question": "Can anyone help me i missed the migration from AI16Z to Elizaos",
-          "askedBy": "marvis0428",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Eliza soon updates?",
-          "askedBy": "mrkevin1074",
+          "question": "To participate in the agent-challenge I will be provided with the endpoint right? So I don't need to pay for openrouter or openai to use a model?",
+          "askedBy": "sheldoncooperbbt",
           "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "satsbased",
+          "helpee": "sheldoncooperbbt",
+          "context": "sheldoncooperbbt wanted to build with ElizaOS",
+          "resolution": "Confirmed that ElizaOS is open source and can be built upon"
+        },
+        {
+          "helper": "magicyte",
+          "helpee": "satsbased",
+          "context": "Discussion about community organization and information dissemination",
+          "resolution": "Agreed to help spread information about Milady being built on Eliza"
+        }
+      ],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Integrate TaskBounty REST API for autonomous agent task completion and crypto payments",
-          "mentionedBy": "eliottre"
-        },
-        {
           "type": "Technical",
-          "description": "Implement TaskBounty OpenAPI 3.1 spec for Eliza agent self-integration",
-          "mentionedBy": "eliottre"
-        },
-        {
-          "type": "Feature",
-          "description": "Enable agent-to-agent task delegation through TaskBounty platform",
-          "mentionedBy": "eliottre"
-        },
-        {
-          "type": "Feature",
-          "description": "Implement Bounty Scout referral system for agent-native referrals",
-          "mentionedBy": "eliottre"
+          "description": "Create a bridged room for Milady channel integration",
+          "mentionedBy": "odilitime"
         },
         {
           "type": "Documentation",
-          "description": "Provide migration guidance for AI16Z to ElizaOS transition",
-          "mentionedBy": "marvis0428"
+          "description": "Create centralized hub on website showcasing all agents, apps, dApps, and community projects to reduce ecosystem confusion",
+          "mentionedBy": "cyborgxai"
+        },
+        {
+          "type": "Documentation",
+          "description": "Clarify relationship between SHAW and ElizaOS ecosystem to prevent perception of independent project launches",
+          "mentionedBy": "cyborgxai"
+        },
+        {
+          "type": "Documentation",
+          "description": "Provide clear information about agent-challenge endpoints and model access requirements",
+          "mentionedBy": "sheldoncooperbbt"
         }
       ],
-      "messageCount": 17,
-      "userCount": 7
+      "messageCount": 25,
+      "userCount": 10
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The channel discussion primarily consisted of scam warnings and one significant technical announcement. Multiple users (baogerbao and satsbased) identified and warned about a scam message from pluginweb3. The main technical content came from theredwizarddev announcing Orbis, an API marketplace designed specifically for AI agents. Orbis implements HTTP 402 payment-required protocol integrated with their API gateway, enabling autonomous API consumption by Eliza agents. The system allows agents to make pay-per-call API requests, receive a 402 status code, automatically pay in USDC on the Base blockchain, and receive the API response without requiring subscriptions, API keys, or human intervention. Currently live endpoints include text analysis, QR code/encoding services, form submission, and fake data generation capabilities. The platform provides an agent discovery endpoint at orbisapi.com/api/agents/discovery that returns the full API catalog in an agent-parseable format. Theredwizarddev solicited feedback from developers building agents requiring autonomous external API access and offered to add endpoints based on community needs.",
+      "faqs": [],
+      "helpInteractions": [
+        {
+          "helper": "baogerbao",
+          "helpee": "pluginweb3",
+          "context": "Identifying potential scam message",
+          "resolution": "Confirmed as scam and warned it was not legitimate kenk id"
+        },
+        {
+          "helper": "satsbased",
+          "helpee": "Community",
+          "context": "Confirming scam warning",
+          "resolution": "Provided additional confirmation that the message was a scam"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Add additional API endpoints to Orbis based on agent developer needs",
+          "mentionedBy": "theredwizarddev"
+        },
+        {
+          "type": "Technical",
+          "description": "Gather feedback on Orbis API marketplace for autonomous agent API consumption",
+          "mentionedBy": "theredwizarddev"
+        }
+      ],
+      "messageCount": 5,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
@@ -66,45 +103,87 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "auto.fun enjoyer",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "VIP",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 56
-    },
-    "Rex": {
-      "id": "1068602629250367560",
-      "username": "_rexxtor_",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
       "totalMessages": 2
     },
-    "EliottRe": {
-      "id": "1487384454220484688",
-      "username": "eliottre",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
       "roles": [
-        "Helper",
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
         "Verified",
-        "utility",
+        "utility"
+      ],
+      "totalMessages": 40
+    },
+    "Kеnk 👑": {
+      "id": "838434542422589492",
+      "username": "solanaxa",
+      "roles": []
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
         "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 17
+    },
+    "Privacy Counsel": {
+      "id": "1173345460900089939",
+      "username": "pluginweb3",
+      "roles": [
+        "Trader",
+        "utility",
+        "[WG] degenspartan",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 1
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Labs"
+      ],
+      "totalMessages": 7
+    },
+    "ameliag": {
+      "id": "809468316527755275",
+      "username": "ameliaguert",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Coder",
+        "Booster",
+        "Designer",
+        "Poker",
+        "Labs"
+      ]
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -134,42 +213,121 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 213
+      "totalMessages": 214
     },
-    "mrkevin": {
-      "id": "715591021429391420",
-      "username": "mrkevin1074",
+    "trace": {
+      "id": "853841524764049429",
+      "username": "trace.g",
       "roles": [
+        "Helper",
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "33coded": {
-      "id": "1422240545660600562",
-      "username": "33.coded",
-      "roles": [
-        "Trader",
+        "Creator",
         "[WG] degenspartan",
-        "It",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 11
+      "totalMessages": 3
     },
-    "Marvis": {
-      "id": "412051095435608074",
-      "username": "marvis0428",
+    "Alex | Explorer": {
+      "id": "1323094779927461962",
+      "username": "alexonchaintech",
       "roles": [
         "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Tavix": {
+      "id": "1481782207600394316",
+      "username": "stackvector",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "xeno": {
+      "id": "1077669294919397387",
+      "username": "xeno_thales",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 3
+    },
+    "cyborg": {
+      "id": "832338755930030110",
+      "username": "cyborgxai",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Sheldon Cooper": {
+      "id": "1074000886344450110",
+      "username": "sheldoncooperbbt",
+      "roles": [
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 2
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "auto.fun enjoyer",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "VIP",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 61
+    },
+    "iono": {
+      "id": "847591789795868733",
+      "username": "dutchiono",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
     }
   }
 }

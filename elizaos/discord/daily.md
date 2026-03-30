@@ -1,52 +1,76 @@
-# elizaOS Discord - 2026-03-28
+# elizaOS Discord - 2026-03-29
 
 ## Summary
 
-### Agent Integration and Automation Platforms
+### Community Organization and Information Architecture
 
-TaskBounty announced comprehensive integration capabilities for Eliza agents, enabling autonomous operations with cryptocurrency payouts. The platform supports USDC, ETH, and SOL payments directly to agent wallets. Agents can browse tasks, submit work, and receive payments without human intervention through a REST API. The system includes an OpenAPI 3.1 specification available at task-bounty.com/api/v1/openapi.json for self-integration, with developer documentation at task-bounty.com/for-agents. Supported task categories include coding, research, lead generation, data scraping, writing, and analysis. A key feature is bidirectional task management where agents can both complete bounties and delegate sub-tasks to other specialized agents, creating an agent-to-agent economy.
+The ElizaOS community discussed challenges with channel fragmentation and information accessibility. A key concern was whether projects like Milady should have separate Discord channels or be integrated into the main Eliza Discord. The fragmentation creates confusion for investors who need centralized information to understand the ecosystem, with many people unaware that Milady was built on Eliza. The community identified a need for better communication about the relationship between various projects and the ElizaOS framework. A proposal emerged to create a centralized hub on the website showcasing all agents, apps, dApps, and community projects to reduce confusion around SHAW and other projects that appear independent but are part of the ElizaOS ecosystem.
 
-### Referral and Incentive Programs
+### Discord Channel Strategy and Bridging
 
-TaskBounty introduced Bounty Scout, a referral system designed for agents. Under this program, agents earn $20 credits when referred clients post funded tasks, while referred users receive $60 signup credits. This creates an incentive structure for agents to expand the platform's user base.
+Discussion revealed different purposes for various Discord channels within the ecosystem. Shaw's cozy dev Discord is tailored for builders and thinkers, while the main Discord serves traders and investors. To address fragmentation concerns, a potential solution was proposed to create a bridged room to connect different community spaces while maintaining their distinct purposes.
 
-### Project Updates and Competition Status
+### API Marketplace for AI Agents
 
-RUBY was submitted to the Nosana hackathon. Hyperscape reached the top 4 finalists in an unspecified competition. These announcements indicate ongoing community participation in external events and competitions.
+A new API marketplace called Orbis was announced, specifically designed for AI agents. The platform implements HTTP 402 payment-required protocol integrated with their API gateway, enabling autonomous API consumption by Eliza agents. The system allows agents to make pay-per-call API requests, automatically pay in USDC on the Base blockchain, and receive API responses without requiring subscriptions, API keys, or human intervention. Currently available endpoints include text analysis, QR code and encoding services, form submission, and fake data generation capabilities.
 
-### Migration and Technical Support
+### Developer Onboarding and Resources
 
-A user sought assistance with migrating from AI16Z to ElizaOS, indicating ongoing platform transitions within the community. The specific technical details of the migration challenge were not elaborated in the discussion.
+Questions arose about building with ElizaOS and participating in the agent-challenge, specifically regarding endpoint provision and whether developers need to pay for OpenRouter or OpenAI models. The framework was confirmed to be open source, providing accessibility for developers.
+
+### Security and Scam Prevention
+
+Multiple scam warnings were issued in the coders channel regarding fraudulent messages, demonstrating ongoing community vigilance against malicious actors.
 
 ## FAQ
 
-**Q: What payment methods does TaskBounty support for agent payouts?**
-A: TaskBounty supports USDC, ETH, and SOL cryptocurrency payments directly to agent wallets.
+**Q: Should Milady have a separate Discord channel or be integrated into the main Eliza Discord?**
+A: The discussion highlighted that fragmentation creates confusion for investors. Shaw's cozy dev Discord is tailored for builders and thinkers, while the main Discord serves traders and investors. A bridged room solution was proposed to connect different community spaces.
 
-**Q: Where can developers find the API specification for TaskBounty integration?**
-A: The OpenAPI 3.1 specification is available at task-bounty.com/api/v1/openapi.json, with comprehensive developer documentation at task-bounty.com/for-agents.
+**Q: How can the community better understand which projects are built on ElizaOS?**
+A: A centralized hub on the website was proposed to showcase all agents, apps, dApps, and community projects, helping reduce confusion around projects like SHAW that appear independent but are part of the ElizaOS ecosystem.
 
-**Q: What types of tasks can agents complete on TaskBounty?**
-A: Agents can complete tasks in coding, research, lead generation, data scraping, writing, and analysis categories.
+**Q: Do developers need to pay for OpenRouter or OpenAI models when building with ElizaOS?**
+A: The ElizaOS framework is open source, though specific details about model endpoint costs were not fully clarified in the discussion.
 
-**Q: How does the Bounty Scout referral program work?**
-A: Agents earn $20 credits when referred clients post funded tasks, while referred users receive $60 signup credits.
+**Q: How does Orbis enable autonomous API consumption for AI agents?**
+A: Orbis implements HTTP 402 payment-required protocol. Agents make pay-per-call API requests, receive a 402 status code, automatically pay in USDC on the Base blockchain, and receive the API response without requiring subscriptions, API keys, or human intervention.
 
-**Q: Can agents delegate tasks to other agents on TaskBounty?**
-A: Yes, agents can both complete bounties and delegate sub-tasks to other specialized agents, enabling an agent-to-agent economy.
+**Q: What endpoints are currently available on Orbis?**
+A: Currently live endpoints include text analysis, QR code and encoding services, form submission, and fake data generation capabilities. The platform offers an agent discovery endpoint at orbisapi.com/api/agents/discovery that returns the full API catalog.
 
 ## Help Interactions
 
-A user requested help with AI16Z to ElizaOS migration. No helper or resolution was documented in the provided channel summary.
+**Helper:** magicyte
+**Helpee:** satsbased
+**Resolution:** Clarified that Shaw's cozy dev Discord is tailored for builders and thinkers, while the main Discord serves traders and investors, explaining the purpose of different community spaces.
+
+**Helper:** odilitime
+**Helpee:** satsbased
+**Resolution:** Offered to create a bridged room next week to address concerns about community fragmentation.
+
+**Helper:** satsbased
+**Helpee:** sheldoncooperbbt
+**Resolution:** Confirmed that the ElizaOS framework is open source in response to questions about building with ElizaOS and participating in the agent-challenge.
+
+**Helper:** baogerbao and satsbased
+**Helpee:** Community
+**Resolution:** Identified and warned about scam messages from pluginweb3 in the coders channel.
 
 ## Action Items
 
 ### Technical
 
-- Integrate Eliza agents with TaskBounty REST API for autonomous task completion and payment processing (mentioned by eliottre)
-- Implement agent-to-agent task delegation capabilities for specialized sub-task distribution (mentioned by eliottre)
+- Create a bridged room to connect different Discord community spaces (mentioned by odilitime)
+- Implement agent discovery endpoint integration for Orbis API marketplace (mentioned by theredwizarddev)
+- Add new endpoints to Orbis based on community needs for autonomous external API access (mentioned by theredwizarddev)
+
+### Features
+
+- Develop a centralized hub on the website to showcase all agents, apps, dApps, and community projects (mentioned by cyborgxai)
+- Expand Orbis API marketplace endpoints beyond current offerings of text analysis, QR code services, form submission, and fake data generation (mentioned by theredwizarddev)
 
 ### Documentation
 
-- Review OpenAPI 3.1 specification at task-bounty.com/api/v1/openapi.json for integration requirements (mentioned by eliottre)
-- Consult developer documentation at task-bounty.com/for-agents for implementation guidance (mentioned by eliottre)
+- Improve communication about which projects are built on ElizaOS to reduce confusion (mentioned by satsbased)
+- Create clearer documentation about the relationship between SHAW and other projects within the ElizaOS ecosystem (mentioned by cyborgxai)
