@@ -7,39 +7,24 @@
       "content": [
         {
           "text": "In the general discussion channel, a user named melvin asked whether people would pay for a SaaS product using crypto, receiving a positive response from CesarMatiaSCL. Another user, Inhuman Resources, made a humorous remark offering free sass in the Discord server, accompanied by a sassy ballerina GIF. A returning community member expressed shock at the AI16z token price after a six-month absence. Separately, KingM3 attempted to get the attention of moderator shawmakesmagic regarding a project by someone they follow on X, repeatedly pinging for a response. There was also concern raised by joshisgood77 about the token potentially heading to zero and allegations of it being a scam, citing a drop from 2 billion to 6 million in value and a claimed 40 percent supply increase. Odilitime responded to clarify that the team had not abandoned the project and corrected the supply figure, stating the supply was increased 10 times, not 40 percent. Additionally, a user named trace posted a self-introduction offering AI and full-stack engineering services including LLM systems, RAG, agent workflows, and multimodal AI, and expressed openness to freelance or contract work.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://media.tenor.com/xXbrdOqOekAAAAAe/sassy-ballerina.png"
-          ],
-          "videos": [
-            "https://media.tenor.com/xXbrdOqOekAAAAPo/sassy-ballerina.mp4"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1488235324260876318_dad16c15.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1488235324260876318_e6bd3258.mp4"
         },
         {
           "text": "In the coders channel, scottnuttall_ greeted the community and asked how the day was going. A user named tRuE posted a detailed self-introduction highlighting their experience building AI and software solutions for industries such as insurance, healthcare, real estate, and hospitals. Their listed skills include AI frameworks like LangChain, CrewAI, AutoGen, and LangGraph, voice AI tools such as ElevenLabs and Vapi, full-stack technologies including React, Next.js, Python, FastAPI, and Docker, mobile development with React Native and Flutter, and machine learning deployment. HatcherLabs asked shawmakesmagic for permission to send a direct message. Jakespr1 posted a vague solicitation asking anyone interested in making quick money to message them directly.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1774919783297-p61kpk.jpg"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Development Update: Autonomous Agent Spend Governance and New Plugins",
-      "content": [
-        {
-          "text": "On March 30, 2026, the ElizaOS project saw significant activity centered around autonomous agent spend governance, development fixes, and new plugin additions. A critical security gap was identified in autonomous agent spend governance, sparking active discussion in both the elizaos/eliza and elizaos-plugins/registry repositories. Contributors majorelalexis-stack and hermesnousagent were key voices in this discussion, with majorelalexis-stack highlighting the security gap and suggesting integration with MAXIA's AIP Protocol or on-chain escrow logic, while hermesnousagent proposed a two-layered approach to payment authorization and outlined a three-object contract for payment authorization and receipt. A key open question remains whether the current x402 plugin surfaces events to the operator before a fetch executes, which is central to the Dreamline x402 Policy Facilitator proposal. On the development side, a new pull request was opened to fix CLI version rewriting in scaffolded projects, addressing a known issue in the elizaos/eliza repository. Additionally, a new plugin called @wzrd_sol/eliza-plugin was submitted to the elizaos-plugins/registry, designed to provide AI model velocity signals.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-03-30.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "On March 30, 2026, the ElizaOS project saw significant activity centered around autonomous agent spend governance, development fixes, and new plugin additions. A critical security gap was identified in autonomous agent spend governance, sparking active discussion in both the elizaos/eliza and elizaos-plugins/registry repositories. Contributors majorelalexis-stack and hermesnousagent were key voices in this discussion, with majorelalexis-stack highlighting the security gap and suggesting integration with MAXIA's AIP Protocol or on-chain escrow logic, while hermesnousagent proposed a two-layered approach to payment authorization and outlined a three-object contract for payment authorization and receipt. A key open question remains whether the current x402 plugin surfaces events to the operator before a fetch executes, which is central to the Dreamline x402 Policy Facilitator proposal. On the development side, a new pull request was opened to fix CLI version rewriting in scaffolded projects, addressing a known issue in the elizaos/eliza repository. Additionally, a new plugin called @wzrd_sol/eliza-plugin was submitted to the elizaos-plugins/registry, designed to provide AI model velocity signals.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-03-30.json"
+      },
       "topic": "miscellaneous"
     }
   ],
