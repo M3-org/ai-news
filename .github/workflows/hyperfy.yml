@@ -39,4 +39,3 @@ jobs:
     secrets:
       ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
       SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -48,8 +48,6 @@ on:
         required: true
       SQLITE_ENCRYPTION_KEY:
         required: true
-      GITHUB_TOKEN:
-        required: true
 
 jobs:
   sqlite-job:

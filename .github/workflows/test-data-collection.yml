@@ -19,7 +19,7 @@ jobs:
     secrets:
       ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
       SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
   test-hyperfy:
     uses: ./.github/workflows/data-collection.yml
@@ -33,4 +33,4 @@ jobs:
     secrets:
       ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
       SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
