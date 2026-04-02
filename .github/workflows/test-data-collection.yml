@@ -1,11 +1,9 @@
 name: Test Data Collection (Dry Run)
 
-# Trigger on PR or manually to validate the shared workflow
+# workflow_dispatch only — pull_request from forks doesn't get secrets.
+# Trigger manually on any branch (including PR branches) to validate.
+# Download artifacts after to inspect public/ directory layout.
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/data-collection.yml'
-      - '.github/workflows/test-data-collection.yml'
   workflow_dispatch:
 
 jobs:
