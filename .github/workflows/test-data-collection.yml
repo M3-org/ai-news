@@ -5,6 +5,20 @@ name: Test Data Collection (Dry Run)
 # Download artifacts after to inspect public/ directory layout.
 on:
   workflow_dispatch:
+    inputs:
+      after_date:
+        description: 'Start date (YYYY-MM-DD) — use a date with known data'
+        required: false
+        type: string
+      before_date:
+        description: 'End date (YYYY-MM-DD)'
+        required: false
+        type: string
+      force_overwrite:
+        description: 'Force overwrite existing data'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   test-elizaos:
@@ -15,6 +29,9 @@ jobs:
       historical_output: ./output
       include_discord_summaries: true
       commit_message_prefix: "[DRY RUN] ElizaOS"
+      after_date: ${{ inputs.after_date || '' }}
+      before_date: ${{ inputs.before_date || '' }}
+      force_overwrite: ${{ inputs.force_overwrite || false }}
       dry_run: true
     secrets:
       ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
@@ -29,6 +46,9 @@ jobs:
       historical_output: ./output/hyperfy
       include_discord_summaries: false
       commit_message_prefix: "[DRY RUN] Hyperfy"
+      after_date: ${{ inputs.after_date || '' }}
+      before_date: ${{ inputs.before_date || '' }}
+      force_overwrite: ${{ inputs.force_overwrite || false }}
       dry_run: true
     secrets:
       ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
