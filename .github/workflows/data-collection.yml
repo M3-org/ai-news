@@ -270,7 +270,7 @@ jobs:
 
             echo "Copying ${SOURCE_DISPLAY} summaries..."
             if [ -d "output/${SOURCE_DISPLAY}" ] && [ "$(ls -A output/${SOURCE_DISPLAY} 2>/dev/null)" ]; then
-              if cp -r "output/${SOURCE_DISPLAY}/" "./public/${SOURCE_DISPLAY}/"; then
+              if cp -r "output/${SOURCE_DISPLAY}/"* "./public/${SOURCE_DISPLAY}/"; then
                 echo "✅ Successfully copied ${SOURCE_DISPLAY} summary files"
               else
                 echo "❌ Error: Failed to copy ${SOURCE_DISPLAY} summary files"
@@ -294,7 +294,7 @@ jobs:
             # hyperfy layout: summaries subdirectory + media manifest
             echo "Copying summaries to ./public/${SOURCE_DISPLAY}/"
             if [ -d "output/${SOURCE_DISPLAY}/summaries" ] && [ "$(ls -A output/${SOURCE_DISPLAY}/summaries 2>/dev/null)" ]; then
-              if cp -r "output/${SOURCE_DISPLAY}/summaries/" "./public/${SOURCE_DISPLAY}/"; then
+              if cp -r "output/${SOURCE_DISPLAY}/summaries/"* "./public/${SOURCE_DISPLAY}/"; then
                 echo "✅ Successfully copied ${SOURCE_DISPLAY} summary files"
               else
                 echo "❌ Error: Failed to copy ${SOURCE_DISPLAY} summary files"
