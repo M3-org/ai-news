@@ -1,0 +1,38 @@
+name: Test Data Collection (Dry Run)
+
+# Trigger on PR or manually to validate the shared workflow
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/data-collection.yml'
+      - '.github/workflows/test-data-collection.yml'
+  workflow_dispatch:
+
+jobs:
+  test-elizaos:
+    uses: ./.github/workflows/data-collection.yml
+    with:
+      source_name: elizaos
+      source_display_name: elizaos
+      historical_output: ./output
+      include_discord_summaries: true
+      commit_message_prefix: "[DRY RUN] ElizaOS"
+      dry_run: true
+    secrets:
+      ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
+      SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test-hyperfy:
+    uses: ./.github/workflows/data-collection.yml
+    with:
+      source_name: hyperfy-discord
+      source_display_name: hyperfy
+      historical_output: ./output/hyperfy
+      include_discord_summaries: false
+      commit_message_prefix: "[DRY RUN] Hyperfy"
+      dry_run: true
+    secrets:
+      ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
+      SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -38,6 +38,11 @@ on:
         required: false
         type: boolean
         default: false
+      dry_run:
+        description: 'Skip deploy, upload ./public as artifact for inspection'
+        required: false
+        type: boolean
+        default: false
     secrets:
       ENV_SECRETS:
         required: true
@@ -338,7 +343,16 @@ jobs:
         id: commit_time
         run: echo "COMMIT_DATETIME=$(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_ENV
 
+      - name: Upload public directory (dry run)
+        if: ${{ inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-${{ inputs.source_display_name }}-dry-run
+          path: ./public
+          retention-days: 7
+
       - name: Deploy to gh-pages
+        if: ${{ !inputs.dry_run }}
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
