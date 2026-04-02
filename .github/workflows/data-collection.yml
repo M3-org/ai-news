@@ -1,0 +1,363 @@
+name: Data Collection (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      source_name:
+        description: 'Source name (config file stem and DB file stem, e.g. elizaos or hyperfy-discord)'
+        required: true
+        type: string
+      source_display_name:
+        description: 'Display name used for output/public directories (e.g. elizaos or hyperfy)'
+        required: true
+        type: string
+      historical_output:
+        description: 'Output directory passed to --output flag (e.g. ./output or ./output/hyperfy)'
+        required: true
+        type: string
+      include_discord_summaries:
+        description: 'Copy output/discord/summaries into public dir (elizaos=true, hyperfy=false)'
+        required: true
+        type: boolean
+      commit_message_prefix:
+        description: 'Prefix for the gh-pages deploy commit message'
+        required: true
+        type: string
+      after_date:
+        description: 'Start date (YYYY-MM-DD), empty string for none'
+        required: false
+        type: string
+        default: ''
+      before_date:
+        description: 'End date (YYYY-MM-DD), empty string for none'
+        required: false
+        type: string
+        default: ''
+      force_overwrite:
+        description: 'Force overwrite existing data'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Skip deploy, upload ./public as artifact for inspection'
+        required: false
+        type: boolean
+        default: false
+    secrets:
+      ENV_SECRETS:
+        required: true
+      SQLITE_ENCRYPTION_KEY:
+        required: true
+      GITHUB_TOKEN:
+        required: true
+
+jobs:
+  sqlite-job:
+    timeout-minutes: 90
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed for checkout and gh-pages push
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Fetch existing DB from gh-pages branch if it exists
+      - name: Check and fetch database
+        run: |
+          mkdir -p data
+          SOURCE_NAME="${{ inputs.source_name }}"
+          DB_ENC="data/${SOURCE_NAME}.sqlite.enc"
+
+          echo "Checking if gh-pages branch exists on remote..."
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            echo "✅ gh-pages branch exists, attempting to fetch database"
+
+            if git fetch origin gh-pages:gh-pages --depth=1; then
+              echo "✅ Successfully fetched gh-pages branch"
+
+              if git ls-tree -r --name-only gh-pages | grep -q "${DB_ENC}"; then
+                echo "📦 Found encrypted database, attempting to restore..."
+
+                if git show "gh-pages:${DB_ENC}" > "${DB_ENC}"; then
+                  if [ -f "${DB_ENC}" ] && [ -s "${DB_ENC}" ]; then
+                    echo "✅ Successfully restored encrypted database ($(wc -c < ${DB_ENC}) bytes)"
+                  else
+                    echo "❌ Error: Database file was not properly extracted"
+                    exit 1
+                  fi
+                else
+                  echo "❌ Error: Failed to extract database from gh-pages branch"
+                  exit 1
+                fi
+              else
+                echo "ℹ️  No existing database found in gh-pages branch - will start with empty database"
+              fi
+            else
+              echo "❌ Error: Failed to fetch gh-pages branch"
+              echo "This could indicate a network issue or repository access problem"
+              exit 1
+            fi
+          else
+            echo "ℹ️  gh-pages branch does not exist yet - will be created on first deployment"
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Process secrets securely
+        run: |
+          echo '${{ secrets.ENV_SECRETS }}' > env_secrets.json
+          chmod 600 env_secrets.json
+
+          # Mask values
+          jq -r 'to_entries[] | .value' env_secrets.json | while read -r value; do
+            if [ -n "$value" ]; then
+              echo "::add-mask::$value"
+            fi
+          done
+
+          # Set environment variables
+          jq -r 'to_entries[] | "\(.key)=\(.value)"' env_secrets.json > env_vars.txt
+          while IFS= read -r line; do
+            if [ -n "$line" ]; then
+              echo "$line" >> $GITHUB_ENV
+            fi
+          done < env_vars.txt
+
+          # Clean up
+          rm env_secrets.json env_vars.txt
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Decrypt database (if exists)
+        env:
+          SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
+        run: |
+          # Mask the encryption key to prevent accidental logging
+          echo "::add-mask::$SQLITE_ENCRYPTION_KEY"
+          SOURCE_NAME="${{ inputs.source_name }}"
+          DB_ENC="data/${SOURCE_NAME}.sqlite.enc"
+          DB_FILE="data/${SOURCE_NAME}.sqlite"
+
+          if [ -f "${DB_ENC}" ]; then
+            if [ -z "$SQLITE_ENCRYPTION_KEY" ]; then
+              echo "Error: SQLITE_ENCRYPTION_KEY secret is not set."
+              exit 1
+            fi
+            echo "Decrypting ${DB_ENC}..."
+            openssl enc -d -aes-256-cbc -pbkdf2 -in "${DB_ENC}" -out "${DB_FILE}" -k "$SQLITE_ENCRYPTION_KEY"
+            if [ $? -ne 0 ]; then
+              echo "Error: Decryption failed. Check the encryption key or file integrity."
+              rm -f "${DB_FILE}"
+              exit 1
+            fi
+            echo "Decryption successful."
+
+            # Check database integrity
+            echo "Checking database integrity..."
+            if command -v sqlite3 &> /dev/null; then
+              sqlite3 "${DB_FILE}" "PRAGMA integrity_check;"
+              if [ $? -ne 0 ]; then
+                echo "Error: Database integrity check failed! The decrypted file might be corrupted."
+                rm -f "${DB_FILE}"
+                exit 1
+              else
+                echo "Database integrity check passed."
+              fi
+            else
+              echo "Warning: sqlite3 command not found. Skipping integrity check."
+            fi
+            rm "${DB_ENC}"
+          else
+            echo "No encrypted database found to decrypt."
+          fi
+
+      - name: Get yesterday's date
+        id: date
+        run: echo "YESTERDAY=$(date -d "yesterday" +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Run historical generation
+        run: |
+          SOURCE_NAME="${{ inputs.source_name }}"
+          HISTORICAL_OUTPUT="${{ inputs.historical_output }}"
+          CMD="npm run historical -- --source=${SOURCE_NAME}.json --output=${HISTORICAL_OUTPUT}"
+
+          [ -n "${{ inputs.after_date }}" ] && CMD="$CMD --after=${{ inputs.after_date }}"
+          [ -n "${{ inputs.before_date }}" ] && CMD="$CMD --before=${{ inputs.before_date }}"
+          [ -z "${{ inputs.after_date }}" ] && [ -z "${{ inputs.before_date }}" ] && CMD="$CMD --date=${{ steps.date.outputs.YESTERDAY }}"
+
+          # Run historical generation (command not logged for security)
+          eval $CMD
+        env:
+          RUN_ONCE: true
+          NODE_ENV: production
+          FORCE_OVERWRITE: ${{ inputs.force_overwrite }}
+
+      - name: Generate media manifests
+        run: |
+          SOURCE_NAME="${{ inputs.source_name }}"
+          SOURCE_DISPLAY="${{ inputs.source_display_name }}"
+          YESTERDAY=${{ steps.date.outputs.YESTERDAY }}
+
+          echo "Generating daily media manifest for $YESTERDAY..."
+          npm run generate-manifest -- \
+            --db "data/${SOURCE_NAME}.sqlite" \
+            --date "$YESTERDAY" \
+            --source "$SOURCE_DISPLAY" \
+            --manifest-output "./output/${SOURCE_DISPLAY}/media-manifest.json"
+          echo "✅ Daily manifest generated"
+
+          echo "Generating full media manifest..."
+          npm run generate-manifest -- \
+            --db "data/${SOURCE_NAME}.sqlite" \
+            --all \
+            --source "$SOURCE_DISPLAY" \
+            --manifest-output "./output/${SOURCE_DISPLAY}/media-manifest-full.json"
+          echo "✅ Full manifest generated"
+
+      - name: Encrypt database
+        env:
+          SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
+        run: |
+          # Mask the encryption key to prevent accidental logging
+          echo "::add-mask::$SQLITE_ENCRYPTION_KEY"
+          SOURCE_NAME="${{ inputs.source_name }}"
+          DB_FILE="data/${SOURCE_NAME}.sqlite"
+
+          [ ! -f "$DB_FILE" ] && { echo "No $DB_FILE found to encrypt."; exit 0; }
+          [ -z "$SQLITE_ENCRYPTION_KEY" ] && { echo "Error: SQLITE_ENCRYPTION_KEY secret is not set."; exit 1; }
+
+          echo "Encrypting $DB_FILE..."
+          openssl enc -aes-256-cbc -salt -pbkdf2 -in "$DB_FILE" -out "${DB_FILE}.enc" -k "$SQLITE_ENCRYPTION_KEY" || {
+            echo "Error: Encryption failed."
+            exit 1
+          }
+
+          echo "Encryption successful."
+          rm "$DB_FILE"
+
+      - name: Prepare files for deployment
+        run: |
+          SOURCE_NAME="${{ inputs.source_name }}"
+          SOURCE_DISPLAY="${{ inputs.source_display_name }}"
+          YESTERDAY=${{ steps.date.outputs.YESTERDAY }}
+
+          mkdir -p ./public/data "./public/${SOURCE_DISPLAY}"
+          touch ./public/.nojekyll  # Prevents Jekyll processing and silences gh-pages action warning
+
+          # Copy encrypted database
+          if [ -f "data/${SOURCE_NAME}.sqlite.enc" ]; then
+            cp "data/${SOURCE_NAME}.sqlite.enc" "./public/data/"
+            echo "✅ Copied encrypted database"
+          else
+            echo "⚠️ No encrypted database found to copy"
+          fi
+
+          if [ "${{ inputs.include_discord_summaries }}" = "true" ]; then
+            # elizaos layout: discord summaries + full output directory
+            mkdir -p "./public/${SOURCE_DISPLAY}/discord"
+
+            echo "Copying Discord summaries..."
+            if [ -d "output/discord/summaries" ] && [ "$(ls -A output/discord/summaries 2>/dev/null)" ]; then
+              if cp -r output/discord/summaries/* "./public/${SOURCE_DISPLAY}/discord/"; then
+                echo "✅ Successfully copied Discord summary files"
+              else
+                echo "❌ Error: Failed to copy Discord summary files"
+                exit 1
+              fi
+            else
+              echo "ℹ️  No Discord summary files found to copy"
+            fi
+
+            echo "Copying ${SOURCE_DISPLAY} summaries..."
+            if [ -d "output/${SOURCE_DISPLAY}" ] && [ "$(ls -A output/${SOURCE_DISPLAY} 2>/dev/null)" ]; then
+              if cp -r "output/${SOURCE_DISPLAY}/"* "./public/${SOURCE_DISPLAY}/"; then
+                echo "✅ Successfully copied ${SOURCE_DISPLAY} summary files"
+              else
+                echo "❌ Error: Failed to copy ${SOURCE_DISPLAY} summary files"
+                exit 1
+              fi
+            else
+              echo "ℹ️  No ${SOURCE_DISPLAY} summary files found to copy"
+            fi
+
+            # Create daily files (generators write to json/ and md/ subdirectories)
+            [ -f "output/discord/summaries/json/${YESTERDAY}.json" ] && \
+              cp "output/discord/summaries/json/${YESTERDAY}.json" "./public/${SOURCE_DISPLAY}/discord/daily.json" && \
+              echo "✅ Copied Discord daily JSON" || echo "⚠️ Discord daily JSON not found: output/discord/summaries/json/${YESTERDAY}.json"
+            [ -f "output/discord/summaries/md/${YESTERDAY}.md" ] && \
+              cp "output/discord/summaries/md/${YESTERDAY}.md" "./public/${SOURCE_DISPLAY}/discord/daily.md" && \
+              echo "✅ Copied Discord daily MD" || echo "⚠️ Discord daily MD not found"
+            [ -f "output/${SOURCE_DISPLAY}/json/${YESTERDAY}.json" ] && \
+              cp "output/${SOURCE_DISPLAY}/json/${YESTERDAY}.json" "./public/${SOURCE_DISPLAY}/json/daily.json" && \
+              echo "✅ Copied ${SOURCE_DISPLAY} daily JSON" || echo "⚠️ ${SOURCE_DISPLAY} daily JSON not found"
+          else
+            # hyperfy layout: summaries subdirectory + media manifest
+            echo "Copying summaries to ./public/${SOURCE_DISPLAY}/"
+            if [ -d "output/${SOURCE_DISPLAY}/summaries" ] && [ "$(ls -A output/${SOURCE_DISPLAY}/summaries 2>/dev/null)" ]; then
+              if cp -r "output/${SOURCE_DISPLAY}/summaries/"* "./public/${SOURCE_DISPLAY}/"; then
+                echo "✅ Successfully copied ${SOURCE_DISPLAY} summary files"
+              else
+                echo "❌ Error: Failed to copy ${SOURCE_DISPLAY} summary files"
+                exit 1
+              fi
+            else
+              echo "ℹ️  No ${SOURCE_DISPLAY} summary files found to copy"
+            fi
+
+            # Copy media manifest
+            if [ -f "output/${SOURCE_DISPLAY}/media-manifest.json" ]; then
+              cp "output/${SOURCE_DISPLAY}/media-manifest.json" "./public/${SOURCE_DISPLAY}/"
+              echo "✅ Successfully copied media manifest"
+            else
+              echo "ℹ️  No media manifest found to copy"
+            fi
+
+            # Create daily.json
+            JSON_FILE="output/${SOURCE_DISPLAY}/summaries/json/${YESTERDAY}.json"
+            if [ -f "$JSON_FILE" ]; then
+              cp "$JSON_FILE" "./public/${SOURCE_DISPLAY}/daily.json"
+              echo "✅ Copied daily JSON"
+            else
+              echo "Warning: Yesterday's JSON summary ($JSON_FILE) not found. Cannot create daily.json."
+            fi
+
+            # Create daily.md
+            MD_FILE="output/${SOURCE_DISPLAY}/summaries/md/${YESTERDAY}.md"
+            if [ -f "$MD_FILE" ]; then
+              cp "$MD_FILE" "./public/${SOURCE_DISPLAY}/daily.md"
+              echo "✅ Copied daily MD"
+            else
+              echo "Warning: Yesterday's MD summary ($MD_FILE) not found. Cannot create daily.md."
+            fi
+          fi
+
+      - name: Validate JSON files
+        run: find "./public/${{ inputs.source_display_name }}" -name "*.json" -type f -exec jq empty {} \; || { echo "Invalid JSON detected"; exit 1; }
+
+      - name: Get current timestamp for commit message
+        id: commit_time
+        run: echo "COMMIT_DATETIME=$(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_ENV
+
+      - name: Upload public directory (dry run)
+        if: ${{ inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-${{ inputs.source_display_name }}-dry-run
+          path: ./public
+          retention-days: 7
+
+      - name: Deploy to gh-pages
+        if: ${{ !inputs.dry_run }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: "${{ inputs.commit_message_prefix }} ${{ env.COMMIT_DATETIME }}"
