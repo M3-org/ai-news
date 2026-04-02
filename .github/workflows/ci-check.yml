@@ -1,0 +1,57 @@
+name: CI Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Validate workflow YAML
+        run: |
+          pip install pyyaml
+          for f in .github/workflows/*.yml; do
+            echo "Validating $f..."
+            python3 -c "import yaml; yaml.safe_load(open('$f'))"
+          done
+          echo "All workflow files are valid YAML"
+
+      - name: Check for hardcoded secrets
+        run: |
+          echo "Scanning for potential hardcoded secrets..."
+          RESULTS=$(grep -rn 'password\|token\|key\|secret' .github/workflows/ --include='*.yml' \
+            | grep -v 'secrets\.' \
+            | grep -v '${{' \
+            | grep -v 'required:' \
+            | grep -v 'description:' \
+            | grep -v 'name:' \
+            | grep -v '#' || true)
+          if [ -n "$RESULTS" ]; then
+            echo "WARNING: Potential hardcoded secrets found:"
+            echo "$RESULTS"
+            exit 1
+          fi
+          echo "No hardcoded secrets found"
+
+      - name: Verify npm ci is used (not npm install)
+        run: |
+          RESULTS=$(grep -rn "npm install" .github/workflows/ --include='*.yml' | grep -v "npm ci" || true)
+          if [ -n "$RESULTS" ]; then
+            echo "WARNING: Found 'npm install' in workflows (should be 'npm ci'):"
+            echo "$RESULTS"
+            exit 1
+          fi
+          echo "All workflows use npm ci"

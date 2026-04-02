@@ -12,3 +12,6 @@ frontend/public/
 yarn.lock
 tmp/
 /docs
+
+.DS_Store
+**/.DS_Store
