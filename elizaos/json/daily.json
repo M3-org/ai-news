@@ -1,7 +1,6 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-04-02",
-  "categories": [],
   "date": 1775088000,
   "nicknameMap": {
     "Kevin": {
@@ -207,8 +206,7 @@
     },
     "anlozl": {
       "id": "1036664542396158085",
-      "username": "anlozl",
-      "roles": []
+      "username": "anlozl"
     },
     "DannyNOR NoFapArc": {
       "id": "339480662895755274",
@@ -330,9 +328,7 @@
     "yo": {
       "id": "275429951241453569",
       "username": "vbnoq332",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 2
     }
   }
