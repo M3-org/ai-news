@@ -125,7 +125,22 @@ export class DiscordSummaryGenerator {
       );
       
       if (contentItems.length === 0) {
-        logger.warning(`No Discord content found for ${dateStr}`);
+        logger.warning(`No Discord content found for ${dateStr}, writing placeholder summary`);
+        const serverName = "Discord Server";
+        const fileTitle = `${serverName} Discord - ${dateStr}`;
+
+        const jsonData = {
+          server: serverName,
+          title: fileTitle,
+          date: startTimeEpoch,
+          stats: { totalMessages: 0, totalUsers: 0 },
+          categories: []
+        };
+
+        const markdown = `# ${fileTitle}\n\nNo significant activity for this period.`;
+
+        await writeFile(this.outputPath, dateStr, JSON.stringify(jsonData, null, 2), 'json');
+        await writeFile(this.outputPath, dateStr, markdown, 'md');
         return;
       }
       
@@ -240,11 +255,30 @@ export class DiscordSummaryGenerator {
       // Generate combined summary file if we have channel summaries
       if (allChannelSummaries.length > 0) {
         await this.generateCombinedSummaryFiles(
-          allChannelSummaries, 
-          dateStr, 
+          allChannelSummaries,
+          dateStr,
           startTimeEpoch,
           contentItems // Pass content items for statistics
         );
+      } else {
+        // All channels below threshold — write placeholder so daily.json stays current
+        logger.info(`No channels met threshold for ${dateStr}, writing placeholder summary`);
+        const serverName = contentItems[0]?.metadata?.guildName || "Discord Server";
+        const fileTitle = `${serverName} Discord - ${dateStr}`;
+
+        const jsonData = {
+          server: serverName,
+          title: fileTitle,
+          date: startTimeEpoch,
+          stats: { totalMessages: 0, totalUsers: 0 },
+          categories: []
+        };
+
+        const markdown = `# ${fileTitle}\n\nNo significant activity for this period.`;
+
+        await writeFile(this.outputPath, dateStr, JSON.stringify(jsonData, null, 2), 'json');
+        await writeFile(this.outputPath, dateStr, markdown, 'md');
+        logger.success(`Wrote placeholder summary for ${dateStr}`);
       }
       
     } catch (error) {
