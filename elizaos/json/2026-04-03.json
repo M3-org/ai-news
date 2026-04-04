@@ -1,7 +1,6 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-04-03",
-  "categories": [],
   "date": 1775174400,
   "nicknameMap": {
     "Cjakofvk": {
@@ -229,8 +228,7 @@
     },
     "Ryo^_•": {
       "id": "1159162647095287848",
-      "username": "ryo_ro",
-      "roles": []
+      "username": "ryo_ro"
     },
     "Rainman": {
       "id": "1009171434465149028",
