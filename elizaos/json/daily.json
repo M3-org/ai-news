@@ -1,7 +1,6 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-04-06",
-  "categories": [],
   "date": 1775433600,
   "nicknameMap": {
     "Odilitime": {
@@ -106,8 +105,7 @@
     },
     "marianlopez": {
       "id": "1460179460312531073",
-      "username": "marianlopez34462",
-      "roles": []
+      "username": "marianlopez34462"
     },
     "Mr. Ronnie  Ďebryne 🛠️": {
       "id": "1481782207600394316",
@@ -201,9 +199,7 @@
     "Mixer008": {
       "id": "963724681603579905",
       "username": "mixer008",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 1
     },
     "Zaday": {
@@ -363,9 +359,7 @@
     "Boj/acc": {
       "id": "245981634187231232",
       "username": "accountshark",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 18
     }
   }
