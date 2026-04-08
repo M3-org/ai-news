@@ -1,0 +1,363 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-04-07",
+  "date": 1775520000,
+  "stats": {
+    "totalMessages": 49,
+    "totalUsers": 19
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion and is dominated by price speculation and sentiment about the ELISA token. The only technical content involves jgonly1_89829 reporting successful deployment of their first ElizaOS agent on Hatcher.host using a one-click deployment process with Groq integration. They noted the experience was smooth with a clean dashboard and live logs. dankvr mentioned working on ai-news data regeneration, planning to add fallback models and better monitoring of credit usage, and shared a new episode link. ipadkid.eth inquired about the status of Elizok and expressed interest in contributing, with odilitime responding that it's available on GitHub. The majority of the conversation consisted of price predictions, complaints about token performance (down 95%), comparisons to Ai16z token, and general negativity about market conditions. Multiple users were flagged as scammers by airanna21. The technical discussions were extremely limited compared to the speculative content.",
+      "faqs": [
+        {
+          "question": "Is anything going on with Elizok still? If so I'd love to contribute.",
+          "askedBy": "ipadkid.eth",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Anyone else tried Hatcher.host for deploying ElizaOS agents?",
+          "askedBy": "jgonly1_89829",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "ipadkid.eth",
+          "context": "ipadkid.eth wanted to know about Elizok status and how to contribute",
+          "resolution": "odilitime informed that Elizok is available on GitHub"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Regenerate approximately 1 week of data for ai-news",
+          "mentionedBy": "dankvr"
+        },
+        {
+          "type": "Technical",
+          "description": "Add fallback models for ai-news",
+          "mentionedBy": "dankvr"
+        },
+        {
+          "type": "Technical",
+          "description": "Implement better monitoring of credits usage for ai-news",
+          "mentionedBy": "dankvr"
+        }
+      ],
+      "messageCount": 47,
+      "userCount": 19
+    }
+  ],
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 265
+    },
+    "Dave": {
+      "id": "1423640796799828010",
+      "username": "dave_24736",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 46
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 83
+    },
+    "Liam": {
+      "id": "1490798188137943264",
+      "username": "liam871",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Ame": {
+      "id": "1484588964315660500",
+      "username": "ame05230523",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 27
+    },
+    "Rainman": {
+      "id": "1009171434465149028",
+      "username": "rainman1001",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "33codded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "NekiyK": {
+      "id": "1212798289666375764",
+      "username": "nekiyk",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 2
+    },
+    "iPad Kid": {
+      "id": "870018799187943476",
+      "username": "ipadkid.eth",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "joshisgood77": {
+      "id": "1486743497519399044",
+      "username": "joshisgood77",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 37
+    },
+    "JG": {
+      "id": "1403101222206050455",
+      "username": "jgonly1_89829",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "QUEEN": {
+      "id": "1006008364720988191",
+      "username": "airanna21",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "~>H4rdG4M3r*": {
+      "id": "961663287093764156",
+      "username": "h4rdg4m3r5270",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "GWEN": {
+      "id": "962110826641256548",
+      "username": "greatness_136",
+      "roles": [
+        "Helper",
+        "Trader",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "OJKB25CM": {
+      "id": "836853795438460938",
+      "username": "zgjiucai6429",
+      "roles": [
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Aaron": {
+      "id": "1477353828318843052",
+      "username": "danrex0",
+      "roles": []
+    },
+    "yojo": {
+      "id": "1334022668063739967",
+      "username": "jobcn",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 20
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 11
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "DorianD": {
+      "id": "918853893100806164",
+      "username": "doriand0963",
+      "roles": [
+        "Partner",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 34
+    },
+    "mao": {
+      "id": "756963441477943326",
+      "username": "lamaojames",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    }
+  }
+}
