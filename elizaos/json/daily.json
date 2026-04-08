@@ -7,39 +7,25 @@
       "content": [
         {
           "text": "Community members in the general discussion channel expressed significant pessimism about the ElizaOS token price performance on April 7, 2026. Several users noted the token had declined more than 95 percent from its highs, with some predicting further drops to price levels as low as 0.00023 and 0.0005. Comparisons were made to Ai16z, with users arguing ElizaOS would never replicate that token's performance given its 11 billion token supply. One user described the price action as a pattern of obvious pumping followed by slow dumping, suggesting manipulation and a trajectory toward new all-time lows. Other community members pushed back on the negativity, urging holders to either sell, hedge with derivatives, or hold if they believed in the project's fundamentals at its roughly 5.5 million USD market cap. Broader macroeconomic concerns were also raised, including geopolitical tensions and global market instability as contributing factors to the downturn. A new episode of the Cron Job series was shared by jin, who also mentioned plans to regenerate about one week of AI news data and add fallback models with better credit usage monitoring. A user named JG shared their experience deploying an ElizaOS agent on Hatcher.host, describing it as a smooth one-click process with Groq integration and live logs. Scammer warnings were also issued against at least two users in the channel.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://i.ytimg.com/vi/pwZp5qFanPw/maxresdefault.jpg"
-          ],
-          "videos": [
-            "https://www.youtube.com/embed/pwZp5qFanPw"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1491150601969598535_bc676078.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/pwzp5qfanpw_e7c1f9f1.mp4"
         },
         {
           "text": "In the coders channel, a user named Dave reported that their eliza-agent was unable to log in to X (formerly Twitter), receiving a page not found error after multiple retries even when using cookies. Odilitime responded by asking which version of ElizaOS and the plugin-twitter the user was running, indicating the issue may be version-specific and requiring further diagnosis.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1775611021914-e1f27.jpg"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Development Activity - April 7, 2026",
-      "content": [
-        {
-          "text": "On April 7, 2026, the ElizaOS project had no completed work merged across its repositories, but several new pull requests and issues were opened. In the elizaos-plugins/plugin-openrouter repository, a pull request was submitted to fix an issue where PGlite memory artifacts were blocking Windows Git checkouts. In the main elizaos/eliza repository, another pull request was opened to address a fix related to Toon action parameters. On the issue tracking side, two notable issues were raised in elizaos/eliza. The first reported that the MCP server named eliza received an A security grade on Loaditout, successfully passing all 7 evaluated criteria. The second proposed the implementation of delegation chains for autonomous agents, which would introduce scoped authority, spend limits, and cascade revocation to improve trust models within the system.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-07.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "On April 7, 2026, the ElizaOS project had no completed work merged across its repositories, but several new pull requests and issues were opened. In the elizaos-plugins/plugin-openrouter repository, a pull request was submitted to fix an issue where PGlite memory artifacts were blocking Windows Git checkouts. In the main elizaos/eliza repository, another pull request was opened to address a fix related to Toon action parameters. On the issue tracking side, two notable issues were raised in elizaos/eliza. The first reported that the MCP server named eliza received an A security grade on Loaditout, successfully passing all 7 evaluated criteria. The second proposed the implementation of delegation chains for autonomous agents, which would introduce scoped authority, spend limits, and cascade revocation to improve trust models within the system.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-07.json",
+        "posters": "https://cdn.elizaos.news/posters/1775611043842-fin2ue.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -280,8 +266,7 @@
     },
     "Aaron": {
       "id": "1477353828318843052",
-      "username": "danrex0",
-      "roles": []
+      "username": "danrex0"
     },
     "yojo": {
       "id": "1334022668063739967",
