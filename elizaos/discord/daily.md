@@ -1,47 +1,65 @@
-# elizaOS Discord - 2026-04-07
+# elizaOS Discord - 2026-04-08
 
 ## Summary
 
-### ElizaOS Agent Deployment
+### Eliza v3 Development Progress
 
-jgonly1_89829 successfully deployed their first ElizaOS agent on Hatcher.host using a one-click deployment process. The deployment integrated with Groq and featured a clean dashboard with live logs. The user reported a smooth experience overall.
+odilitime announced that Eliza v3 (version 2.x) is actively under development with new agents currently in testing phase. The v3 code is already available in the develop branch of the repository and has been integrated into milady. The team is preparing for an official release and announcement once testing is complete.
 
-### AI News Data Development
+### Project Status and Multichain Clarification
 
-dankvr is working on ai-news data regeneration with plans to implement fallback models and improved monitoring of credit usage. A new episode was shared with the community.
+Discussion clarified that ElizaOS operates as a multichain project, contrary to some perceptions about platform exclusivity. The elizabao_ai project remains in development under designated management, with plans to integrate with elizacloud and create agents for prediction markets.
 
-### Elizok Project Status
+### Community Engagement and Onboarding
 
-Discussion about the Elizok project status occurred, with ipadkid.eth expressing interest in contributing. The project is available on GitHub according to odilitime.
+A new developer introduced themselves to the community: 0xcrackedev, a fullstack developer with 5 years of experience working on AI products and open source contributions. Questions were raised about establishing a ticket system for Discord promotional discussions, though no such system currently exists.
 
-### Token Price Speculation
+### Agent Safety Concerns
 
-Extensive discussion dominated the channel regarding ELISA token price performance, with users noting a 95% decline in value. Multiple price predictions and comparisons to Ai16z token were made, along with general negative sentiment about market conditions.
-
-### Security Concerns
-
-Multiple users were flagged as scammers by airanna21 throughout the discussion period.
+Technical concerns were raised about preventing agents from performing unsafe operations, highlighting security considerations as the platform evolves. This question remained unresolved in the discussion.
 
 ## FAQ
 
-**Q: How do I deploy an ElizaOS agent on Hatcher.host?**
-A: Hatcher.host offers a one-click deployment process for ElizaOS agents. The platform provides a clean dashboard with live logs and supports integration with services like Groq.
+**Q: Is ElizaOS moving from Solana to ETH?**
+A: No, ElizaOS is multichain and not exclusive to any single blockchain platform.
 
-**Q: Where can I find the Elizok project?**
-A: Elizok is available on GitHub according to odilitime.
+**Q: What is the current status of the elizabao_ai project?**
+A: The project is still in development under management, with plans to integrate with elizacloud and create agents for prediction markets.
 
-**Q: What improvements are being made to ai-news data?**
-A: The ai-news data is being regenerated with plans to add fallback models and better monitoring of credit usage.
+**Q: Is there a ticket system for discussing Discord promotional pushes?**
+A: No, there is currently no ticket system in place for this purpose.
+
+**Q: Where can I find the Eliza v3 code?**
+A: The v3 code is available in the develop branch of the repository.
+
+**Q: What is the status of Eliza v3 release?**
+A: New v3 agents are currently in testing phase, with an official release and announcement planned after testing is complete.
 
 ## Help Interactions
 
+**Helper:** baogerbao
+**Helpee:** cryptovalutchik_
+**Issue:** Inquiry about elizabao_ai project functionality
+**Resolution:** Explained that the project is in development with plans for elizacloud integration and prediction market agents
+
+**Helper:** mdmnvest
+**Helpee:** hellspawnbarbarain
+**Issue:** Confusion about ElizaOS blockchain platform
+**Resolution:** Clarified that ElizaOS is multichain, not moving exclusively to ETH
+
 **Helper:** odilitime
-**Helpee:** ipadkid.eth
-**Resolution:** Informed that Elizok is available on GitHub for contribution.
+**Helpee:** amman488
+**Issue:** Question about ticket system for Discord promotional discussions
+**Resolution:** Confirmed that no ticket system currently exists
 
 ## Action Items
 
 ### Technical
 
-- Implement fallback models for ai-news data regeneration (mentioned by dankvr)
-- Add better monitoring of credit usage for ai-news (mentioned by dankvr)
+- Complete testing of new v3 agents before official release (mentioned by odilitime)
+- Address agent safety concerns regarding prevention of unsafe operations (raised by 4oko4ow)
+
+### Features
+
+- Integrate elizabao_ai with elizacloud (mentioned by baogerbao)
+- Create agents for prediction markets (mentioned by baogerbao)
