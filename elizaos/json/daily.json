@@ -1,47 +1,82 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-04-08",
+  "title": "Daily Report - 2026-04-09",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion and Development Updates",
+      "title": "ElizaOS Community Discussion and Project Updates",
       "content": [
         {
-          "text": "In the general discussion channel, community members expressed skepticism about crypto promises, with some noting that most announcements in the space fail to materialize. Trading sentiment was reported as very bad. A debate arose about ElizaOS being multichain rather than Solana-exclusive, with one user clarifying that ElizaOS supports multiple chains. The elizabao_ai project was described as still in development, managed by Pleasures, with plans to integrate with ElizaCloud and create agents for prediction markets. A user named Amman inquired about a ticket system for a Discord promotion discussion, but was told none exists. A fullstack developer named Yash introduced himself as an open source contributor with five years of experience building AI products, sharing his GitHub and X profiles. A project called Coopa was shared, described as an AI that mirrors user nature rather than corporate models, built on Arweave with a zero-trust approach.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1491488673588580548_85eddca7.jpg",
-            "https://cdn.elizaos.news/elizaos-media/115717039-v-4-s-400_8820ff67.jpg"
-          ]
-        },
-        {
-          "text": "In the coders channel, a developer asked how to prevent agents from performing unsafe actions, with Odilitime responding that having a good feeling for it is the current approach. Odilitime also revealed he is working on new v2.x agents, currently in the develop branch of the repository, undergoing testing before a release and announcement. The update is also integrated inside Milady. ElizaBAO asked if the work is open source and was confirmed it is available on the repo in the develop branch. A representative from BitMart reached out in the coders channel seeking to discuss listing cooperation with the core team. The same Coopa AI project was also shared in this channel.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1491488673588580548_85eddca7.jpg"
+          "text": "In the general discussion channel, community members expressed frustration about individuals who talk about plans but fail to follow through on them. Separately, there was growing interest and questions around the elizabao_ai project, with users asking what the project is and what they can currently do with it as a user. The elizabao project creator noted that many people are asking about it, suggesting rising hype. Community members also shared optimistic sentiments about breakthroughs happening and the potential of an eliza effect becoming real. One community member highlighted Hatcher.host as a major project currently in free beta, describing it as a platform where users can deploy Eliza agents without needing to write code, manage servers, or acquire hardware. It was described as a cloud computing alternative that allows users to manage and control their own agents, and was recommended as a way to learn how elizaOS functions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Project Summary - April 8, 2026",
-      "content": {
-        "text": "Development on April 8, 2026 centered on two main areas: cross-chain interoperability and architectural discussions around agent identity and trust. On the completed work front, a new plugin was initiated to enable cross-chain swaps across more than 10 blockchain networks, added via the MangoSwap ElizaOS plugin pull request in the registry. This represents a significant expansion of cross-chain functionality within the ElizaOS ecosystem. In parallel, active development continues on the plugin-anthropic side, with updates targeting Opus 4.x compatibility, including temperature settings, output caps, and updated naming conventions for ai-sdk v6. A key area requiring community attention is the ongoing debate around inter-agent coordination. Discussions are focused on solving the cold-start trust problem, which refers to how independent agents can establish verifiable trust with one another without prior interaction history. Proposed solutions involve the use of WTRMRK and on-chain credentials, as well as Base L2 append-only attestation sequences to build and verify agent behavioral history. Community input is being sought to finalize the implementation strategy for these mechanisms.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-08.json",
-        "posters": "https://cdn.elizaos.news/posters/1775696836215-y52z4m.jpg"
-      },
+      "title": "ElizaOS Project Summary - April 9, 2026",
+      "content": [
+        {
+          "text": "The ElizaOS project on April 9, 2026 focused on foundational framework improvements across the core repository and several plugins. A new agent workspace was introduced to streamline startup processes, and multi-language support for Python and Rust was added to the core framework. Core runtime-composition APIs were also refactored to support flexible character loading via file paths and configuration options. On the plugin side, critical compatibility issues for Opus 4.x were resolved in the Anthropic plugin by migrating to ai-sdk v6 parameter naming conventions, renaming maxTokens to maxOutputTokens, and stabilizing model performance with adjusted temperature settings. Work in progress includes group addressee routing and anti-loop prompt guidance for the core, an event payload compatibility fix for the Anthropic plugin, feature parity improvements for the Discord plugin covering typing indicators, reactions, streaming, and slash commands, and UI refinements for the Telegram plugin to narrow chat display names for improved visual layout.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-09.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1775606400,
+  "date": 1775692800,
   "nicknameMap": {
-    "NativeSatoshi  (✧ᴗ✧)": {
-      "id": "893149983556112454",
-      "username": "nativesatoshi",
+    "$cott": {
+      "id": "1443150982945968259",
+      "username": "scottnuttall_",
       "roles": [
-        "Verified",
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "Fr",
+        "utility",
         "Coder",
-        "utility"
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "JG": {
+      "id": "1403101222206050455",
+      "username": "jgonly1_89829",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
       ],
       "totalMessages": 2
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 103
     },
     "ElizaBAO": {
       "id": "555035784378318875",
@@ -56,7 +91,54 @@
         "Coder",
         "Github - Contributor"
       ],
-      "totalMessages": 52
+      "totalMessages": 53
+    },
+    "Pleasedistribute": {
+      "id": "843788672766967809",
+      "username": "yeetfees",
+      "roles": [
+        "Verified"
+      ]
+    },
+    "Crypto_Wolf": {
+      "id": "1407048633345511474",
+      "username": "cryptovalutchik_",
+      "roles": [
+        "Creator",
+        "It",
+        "Verified",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Nuclear Gandhi": {
+      "id": "894087577680879657",
+      "username": "nucleargandhicrypto",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Ame": {
+      "id": "1484588964315660500",
+      "username": "ame05230523",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 32
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -85,251 +167,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 272
-    },
-    "$cott": {
-      "id": "1443150982945968259",
-      "username": "scottnuttall_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Server Booster",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 101
-    },
-    "ChocoChow": {
-      "id": "808056956350627901",
-      "username": "4oko4ow",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Verified",
-        "Booster",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Katie@Bitmart": {
-      "id": "1222448589821841466",
-      "username": "katie_bitmarthl",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "ZENITHXXS.": {
-      "id": "1474337688273424395",
-      "username": "zenithxxs",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Dave": {
-      "id": "1423640796799828010",
-      "username": "dave_24736",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "0xCrackedDev": {
-      "id": "1255528519169999013",
-      "username": "0xcrackedev",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ame": {
-      "id": "1484588964315660500",
-      "username": "ame05230523",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 30
-    },
-    "Amman": {
-      "id": "583424055273848872",
-      "username": "amman488",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Pleasures": {
-      "id": "672858602620452894",
-      "username": "itsmepleasures",
-      "roles": [
-        "Helper",
-        "Verified",
-        "Coder",
-        "Core Dev",
-        "Poker"
-      ]
-    },
-    "Crypto_Wolf": {
-      "id": "1407048633345511474",
-      "username": "cryptovalutchik_",
-      "roles": [
-        "Creator",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Kevin": {
-      "id": "488766383836889111",
-      "username": "kevin111s",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": "Verified",
-      "totalMessages": 13
-    },
-    "Elliot": {
-      "id": "1488552309419020390",
-      "username": "elliot_982"
-    },
-    "mao": {
-      "id": "756963441477943326",
-      "username": "lamaojames",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
-      "roles": [
-        "auto.fun enjoyer",
-        "Trader",
-        "[WG] degenspartan",
-        "VIP",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
-      ],
-      "totalMessages": 7
-    },
-    "Pear 🍐": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "AnthonyWhyte": {
-      "id": "979606372633153536",
-      "username": "anthonywhite98134586992",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "DorianD": {
-      "id": "918853893100806164",
-      "username": "doriand0963",
-      "roles": [
-        "Partner",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 36
+      "totalMessages": 273
     }
   }
 }
