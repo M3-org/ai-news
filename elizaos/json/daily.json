@@ -1,151 +1,52 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-04-09",
+  "title": "Daily Report - 2026-04-10",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion and Project Updates",
+      "title": "ElizaOS Community Discussion and Developer Integration Questions",
       "content": [
         {
-          "text": "In the general discussion channel, community members expressed frustration about individuals who talk about plans but fail to follow through on them. Separately, there was growing interest and questions around the elizabao_ai project, with users asking what the project is and what they can currently do with it as a user. The elizabao project creator noted that many people are asking about it, suggesting rising hype. Community members also shared optimistic sentiments about breakthroughs happening and the potential of an eliza effect becoming real. One community member highlighted Hatcher.host as a major project currently in free beta, describing it as a platform where users can deploy Eliza agents without needing to write code, manage servers, or acquire hardware. It was described as a cloud computing alternative that allows users to manage and control their own agents, and was recommended as a way to learn how elizaOS functions.",
+          "text": "In the general discussion channel, community members raised questions about ElizaOS token utility and future plans. One user asked about holding ElizaOS for future airdrops, and a moderator confirmed that some airdrops are planned but no details have been released yet. Another user pressed for specifics on token utility, including buyback timing and Jeju gas fee release, but was told there are no plans beyond what has already been laid out. Some community members expressed frustration over the lack of concrete details, with one noting the vague nature of project updates. On a more positive note, a project called promdict.ai introduced itself as a prompt and predict platform described as a battleground for agents. A community member also shared an upcoming Hong Kong event featuring elizaok_bsc built on ElizaOS. Additionally, a user shared a post about digital ownership and the risks of relying on centralized platforms for storing personal data. One user reported difficulty verifying their wallet on Collab.land and sought help from associates.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HFjBy-FXsAA8Nhs.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the developer coders channel, a developer shared details about Orbis implementing the x402 usage-based billing scheme for AI agents natively on Base, enabling agents to authorize a maximum spend and only pay for actual usage across LLM and compute APIs. Separately, a developer integrating a custom dashboard with ElizaOS v2 asked for canonical documentation on the Socket.IO messaging protocol. After extensive debugging, they found that direct emits fail and the working pattern requires emitting a message event with a type field, where type 1 corresponds to ROOM_JOINING and type 2 to SEND_MESSAGE, with authentication requiring an entityId UUID in socket options. They sought official documentation on the complete message type enum, required payload fields, and how to programmatically create a DM channel without using the official UI. A core developer responded by pointing to the ElizaOS documentation site and noted they are currently deep in v3 development, suggesting the use of an AI coding assistant to explore the codebase.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1775783843939-xfpo7.png"
+          "images": [
+            "https://pbs.twimg.com/amplify_video_thumb/2042398399048400896/img/WXX3lQkJvkHqY3Yb.jpg:large"
+          ],
+          "videos": [
+            "https://twitter.com/i/videos/tweet/2042401551696773289"
           ]
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Project Summary - April 9, 2026",
+      "title": "Activity Summary for 2026-04-10",
       "content": [
         {
-          "text": "The ElizaOS project on April 9, 2026 focused on foundational framework improvements across the core repository and several plugins. A new agent workspace was introduced to streamline startup processes, and multi-language support for Python and Rust was added to the core framework. Core runtime-composition APIs were also refactored to support flexible character loading via file paths and configuration options. On the plugin side, critical compatibility issues for Opus 4.x were resolved in the Anthropic plugin by migrating to ai-sdk v6 parameter naming conventions, renaming maxTokens to maxOutputTokens, and stabilizing model performance with adjusted temperature settings. Work in progress includes group addressee routing and anti-loop prompt guidance for the core, an event payload compatibility fix for the Anthropic plugin, feature parity improvements for the Discord plugin covering typing indicators, reactions, streaming, and slash commands, and UI refinements for the Telegram plugin to narrow chat display names for improved visual layout.",
+          "text": "No activity was recorded for the date of 2026-04-10. There is no data or events to report for this period.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-09.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-10.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1775783866438-knj9a.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1775692800,
+  "date": 1775779200,
   "nicknameMap": {
-    "$cott": {
-      "id": "1443150982945968259",
-      "username": "scottnuttall_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "JG": {
-      "id": "1403101222206050455",
-      "username": "jgonly1_89829",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Server Booster",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 103
-    },
-    "ElizaBAO": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
-      "roles": [
-        "a-hack",
-        "Creator",
-        "Contributor",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 53
-    },
-    "Pleasedistribute": {
-      "id": "843788672766967809",
-      "username": "yeetfees",
-      "roles": [
-        "Verified"
-      ]
-    },
-    "Crypto_Wolf": {
-      "id": "1407048633345511474",
-      "username": "cryptovalutchik_",
-      "roles": [
-        "Creator",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Nuclear Gandhi": {
-      "id": "894087577680879657",
-      "username": "nucleargandhicrypto",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ame": {
-      "id": "1484588964315660500",
-      "username": "ame05230523",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 32
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -173,7 +74,278 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 273
+      "totalMessages": 276
+    },
+    "Dragon Warrior": {
+      "id": "1007688838182883440",
+      "username": "shah0406",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "TheRedWizardDev": {
+      "id": "1486451660023664741",
+      "username": "theredwizarddev",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "GWEN": {
+      "id": "962110826641256548",
+      "username": "greatness_136",
+      "roles": [
+        "Helper",
+        "Trader",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "IPPUA": {
+      "id": "459437023837814804",
+      "username": "ippua",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "sebasvenom": {
+      "id": "707975266999205900",
+      "username": "sebasvenom",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Liam": {
+      "id": "1490798188137943264",
+      "username": "liam871",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Diamondhandwhiteboy": {
+      "id": "1420689211094339614",
+      "username": "elizaos69",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "33codded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 14
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 68
+    },
+    "Huey79ng": {
+      "id": "947438002387447818",
+      "username": "huey79ng",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "wlllw": {
+      "id": "277437392976347137",
+      "username": "wlllw.",
+      "roles": [
+        "partner portal - self assign",
+        "Trader",
+        "workgroups - write perms",
+        "Verified",
+        "utility",
+        "Associate"
+      ]
+    },
+    "Srn Srnzzz | plebian": {
+      "id": "705063054722859110",
+      "username": "srnsrnzzz",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "nfts - self assign",
+        "NFT",
+        "Verified",
+        "Associate"
+      ]
+    },
+    "Error P015-A": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 3
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 54
+    },
+    "FeRhaT_@": {
+      "id": "928043254765723688",
+      "username": "ferhat8372",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "Bruno Natan": {
+      "id": "1490788681282355272",
+      "username": "brunonatan0397",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "joshisgood77": {
+      "id": "1486743497519399044",
+      "username": "joshisgood77",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 39
+    },
+    "promdict.ai": {
+      "id": "1021740071742885998",
+      "username": "promdict.ai",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 1
     }
   }
 }
