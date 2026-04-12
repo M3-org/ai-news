@@ -1,63 +1,55 @@
-# elizaOS Discord - 2026-04-10
+# elizaOS Discord - 2026-04-11
 
 ## Summary
 
-### ElizaOS v2 Socket.IO Integration
+### Project Communication and Market Perception
 
-Shah0406 worked through Socket.IO messaging protocol challenges for ElizaOS v2, discovering the correct pattern uses socket.emit with message types (type: 1 for ROOM_JOINING, type: 2 for SEND_MESSAGE) and requires entityId UUID for authentication. They are running a custom dashboard setup with ElizaOS v2 using @elizaos/plugin-openai, local Qwen3.5 via Nosana GPU on port 3001, and a dashboard on port 8080 with Socket.IO and HTTP polling fallback.
+The ElizaOS team faces significant challenges in communicating their vision to the market. Odilitime acknowledged that while the team continues working at the same pace as last year, they struggle to convey what they're building to investors. He expressed concern that the market doesn't understand or believe in their vision, which he attributes to the lack of buy pressure. Odilitime took responsibility for these communication failures and suggested the project might be a "failed experiment" if they cannot bridge this understanding gap. He clarified that the team never aimed to be a "low mcap gem" or "unknown token" but rather sought blue chip status.
 
-### Token Economics and Project Updates
+### Exchange Delisting
 
-Community members raised questions about ElizaOs token utility, airdrops, buybacks, and Jeju gas fee implementation. Odilitime confirmed some airdrops are planned but details are not yet available, with no additional plans beyond what was previously announced. Community expressed frustration about lack of clarity on buyback timing and gas fee implementation.
+Bitget exchange announced the delisting of the ELIZAOS/USDT trading pair on April 17, 2026, along with 6 other pairs. This announcement raised concerns in the community about the project's status. Odilitime clarified that the team never communicated with Bitget about the listing, indicating it was likely an unsolicited listing by the exchange.
 
-### Technical Support Issues
+### Social Media Activity
 
-Huey79ng encountered wallet verification problems with Collab.land and sought support. The issue remained unresolved in the discussion segment.
+Community members questioned why the ElizaOS X account had not posted since March, with some expressing bearish sentiment about the project's visibility and activity level.
 
-### Development Focus
+### Audit Logging Infrastructure
 
-The team is currently prioritizing ElizaOS v3 development, with Odilitime noting this as the current focus area when responding to v2 documentation requests.
+A new blockchain-based audit logging solution called AgentAudit was introduced for production ElizaOS deployments. The system provides immutable, tamper-proof logging of agent actions with EU AI Act compliance features. It is currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets, with a TypeScript SDK available and an ElizaOS plugin integration planned for release within the week.
 
 ## FAQ
 
-**Q: Are there any airdrops planned for ElizaOs token holders?**
-A: Odilitime confirmed that some airdrops are planned, but specific details are not yet available.
+**Q: Why hasn't the ElizaOS X account posted since March?**
+A: This was raised as a concern by community members but was not directly addressed in the discussions.
 
-**Q: What is the correct Socket.IO messaging pattern for ElizaOS v2?**
-A: Use socket.emit('message', {type: 1, payload: {...}}) for ROOM_JOINING and type: 2 for SEND_MESSAGE. Authentication requires {entityId: UUID} in socket options.
+**Q: Why is Bitget delisting the ELIZAOS/USDT trading pair?**
+A: Bitget announced the delisting for April 17, 2026. Odilitime clarified that the team never communicated with Bitget about the listing, suggesting it was an unsolicited listing by the exchange.
 
-**Q: Where can I find documentation for ElizaOS Socket.IO message types?**
-A: Odilitime suggested checking https://docs.elizaos.ai and using Cursor AI to query the codebase directly for complete message type enums and payload field specifications.
+**Q: Is the ElizaOS project still active?**
+A: Yes, according to Odilitime, the team continues working at the same pace as last year, though they acknowledge struggles with market communication.
 
-**Q: What are the plans for buybacks and Jeju gas fees?**
-A: Odilitime stated there are no plans beyond what was previously laid out, with no additional details on timing or implementation.
+**Q: What is AgentAudit?**
+A: AgentAudit is a blockchain-based audit logging solution for AI agents in production ElizaOS deployments. It provides immutable, tamper-proof logging with EU AI Act compliance, currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets.
+
+**Q: Where can I find the AgentAudit smart contract?**
+A: The contract is deployed at address 0x25ac2ab1369001F9C847e65f010B6e4f4340d78a on Arbitrum Sepolia and Mantle Sepolia testnets.
+
+**Q: When will the ElizaOS plugin for AgentAudit be available?**
+A: According to shieldai, the plugin integration is planned for release within the week.
 
 ## Help Interactions
 
-**Helper:** Odilitime
-**Helpee:** Shah0406
-**Issue:** Needed documentation for ElizaOS v2 Socket.IO message types, required vs optional payload fields, and programmatic DM channel creation
-**Resolution:** Directed to https://docs.elizaos.ai and suggested using Cursor AI to query the codebase directly, though noted team focus is currently on v3 development
-
 **Helper:** None
-**Helpee:** Huey79ng
-**Issue:** Wallet verification problems with Collab.land
-**Resolution:** Unresolved in the discussion segment
-
-**Helper:** Odilitime
-**Helpee:** Community members
-**Issue:** Questions about airdrops, buybacks, and Jeju gas fees
-**Resolution:** Confirmed some airdrops planned but no details available yet, no additional plans beyond previous announcements
+**Helpee:** 0xnemian
+**Resolution:** Unresolved. 0xnemian requested assistance with running a custom plugin but received no response during the timeframe covered.
 
 ## Action Items
 
 ### Technical
 
-- Complete Socket.IO message type enum documentation including all required and optional payload fields (mentioned by shah0406)
-- Document programmatic DM channel creation without official UI (mentioned by shah0406)
+- Release ElizaOS plugin integration for AgentAudit within the week (mentioned by shieldai)
 
 ### Documentation
 
-- Provide canonical documentation for ElizaOS v2 Socket.IO messaging protocol (mentioned by shah0406)
-- Clarify token utility, airdrop details, and buyback timeline (mentioned by community members)
-- Document Jeju gas fee implementation details (mentioned by community members)
+- Improve communication of project vision and goals to the market (mentioned by Odilitime)

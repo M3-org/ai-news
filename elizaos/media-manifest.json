@@ -1,87 +1,69 @@
 {
-  "date": "2026-04-10",
+  "date": "2026-04-11",
   "source": "elizaos",
-  "generated_at": "2026-04-11T01:11:44.630Z",
+  "generated_at": "2026-04-12T01:20:54.926Z",
   "base_path": "elizaos-media",
   "files": [
     {
-      "url": "https://pbs.twimg.com/media/HFjBy-FXsAA8Nhs.jpg:large",
-      "filename": "embed-image-1492155893414887574.jpg:large",
-      "unique_name": "embed-image-1492155893414887574_79080453.jpg",
-      "hash": "79080453",
+      "url": "https://pbs.twimg.com/media/HFnd4_MakAc-NXT.jpg:large",
+      "filename": "embed-image-1492467320600399904.jpg:large",
+      "unique_name": "embed-image-1492467320600399904_3f8e4d13.jpg",
+      "hash": "3f8e4d13",
       "type": "image",
       "media_type": "embed_image",
-      "message_id": "1492155893414887574",
+      "message_id": "1492467320600399904",
       "channel_id": "1253563209462448241",
       "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "893149983556112454",
-      "timestamp": "2026-04-10",
-      "message_content": "https://x.com/CoopaAI/status/2042595601154445317?s=20"
+      "user_id": "555035784378318875",
+      "timestamp": "2026-04-11",
+      "message_content": "https://x.com/baogerbao/status/2042907971630567796?s=20"
     },
     {
-      "url": "https://pbs.twimg.com/amplify_video_thumb/2042398399048400896/img/WXX3lQkJvkHqY3Yb.jpg:large",
-      "filename": "embed-thumbnail-1492003566963916922.jpg:large",
-      "unique_name": "embed-thumbnail-1492003566963916922_e9a1e022.jpg",
-      "hash": "e9a1e022",
-      "type": "image",
-      "media_type": "embed_thumbnail",
-      "message_id": "1492003566963916922",
-      "channel_id": "1300025221834739744",
-      "channel_name": "💬-coders",
-      "guild_id": "1253563208833433701",
-      "guild_name": "elizaOS",
-      "user_id": "1486451660023664741",
-      "timestamp": "2026-04-10",
-      "message_content": "https://x.com/OrbisAPI/status/2042401551696773289?s=20"
-    },
-    {
-      "url": "https://twitter.com/i/videos/tweet/2042401551696773289",
-      "filename": "embed-video-1492003566963916922.com/i/videos/tweet/2042401551696773289",
-      "unique_name": "2042401551696773289_a2a9abe0.mp4",
-      "hash": "a2a9abe0",
+      "url": "https://cdn.discordapp.com/attachments/1253563209462448241/1492567421154889858/lv_0_20251031205848.mp4?ex=69dbcd3b&is=69da7bbb&hm=4cfec138a11a2c73ebd03fa574d8c6c39f87a56eef4582c61cd78dcb450cbe61&",
+      "proxy_url": "https://media.discordapp.net/attachments/1253563209462448241/1492567421154889858/lv_0_20251031205848.mp4?ex=69dbcd3b&is=69da7bbb&hm=4cfec138a11a2c73ebd03fa574d8c6c39f87a56eef4582c61cd78dcb450cbe61&",
+      "filename": "lv_0_20251031205848.mp4",
+      "unique_name": "lv_0_20251031205848_c428a950.mp4",
+      "hash": "c428a950",
       "type": "video",
-      "media_type": "embed_video",
+      "media_type": "attachment",
+      "size": 2686743,
       "content_type": "video/mp4",
-      "message_id": "1492003566963916922",
-      "channel_id": "1300025221834739744",
-      "channel_name": "💬-coders",
+      "width": 480,
+      "height": 854,
+      "message_id": "1492567421687562400",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "1486451660023664741",
-      "timestamp": "2026-04-10",
-      "message_content": "https://x.com/OrbisAPI/status/2042401551696773289?s=20"
+      "user_id": "403574677164916746",
+      "timestamp": "2026-04-11",
+      "message_content": ""
     },
     {
-      "url": "https://elizalabs.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DGETTING%2BSTARTED%26title%3DOverview%26description%3DBuild%2Bautonomous%2BAI%2Bagents%2Bwith%2Bthe%2Bmost%2Bpopular%2Bagentic%2Bframework%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Felizalabs%252FbbIJsUzCDybj9a-t%252Flogo%252Flight.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DbbIJsUzCDybj9a-t%2526q%253D85%2526s%253Def25ef0a7ad0c2985928651085d3a8e2%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Felizalabs%252FbbIJsUzCDybj9a-t%252Flogo%252Fdark.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DbbIJsUzCDybj9a-t%2526q%253D85%2526s%253Dd696503a5eeb5ccddf46a3e2cdce0190%26primaryColor%3D%25230B35F1%26lightColor%3D%25230B35F1%26darkColor%3D%25230B35F1%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%2523090a10&w=1200&q=100",
-      "filename": "embed-thumbnail-1492200658806378526.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DbbIJsUzCDybj9a-t%2526q%253D85%2526s%253Dd696503a5eeb5ccddf46a3e2cdce0190%26primaryColor%3D%25230B35F1%26lightColor%3D%25230B35F1%26darkColor%3D%25230B35F1%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%2523090a10&w=1200&q=100",
-      "unique_name": "embed-thumbnail-1492200658806378526_983a7dfa.jpg",
-      "hash": "983a7dfa",
+      "url": "https://opengraph.githubassets.com/21a596ca9d4695d007c0e1ff0c505b57c05b72f91a08ef856af948ea1a2c0aa8/agentauditAI/AgentAudit",
+      "filename": "embed-thumbnail-1492607542684160060.com/21a596ca9d4695d007c0e1ff0c505b57c05b72f91a08ef856af948ea1a2c0aa8/agentauditAI/AgentAudit",
+      "unique_name": "agentaudit_3339010c.jpg",
+      "hash": "3339010c",
       "type": "image",
       "media_type": "embed_thumbnail",
-      "message_id": "1492200658806378526",
+      "message_id": "1492607542684160060",
       "channel_id": "1300025221834739744",
       "channel_name": "💬-coders",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "580487826420793364",
-      "timestamp": "2026-04-10",
-      "message_content": "https://docs.elizaos.ai might have that\nI'm so deep in v3 rn, just open cursor and ask it",
-      "reactions": [
-        {
-          "emoji": "🔥",
-          "count": 2
-        }
-      ]
+      "user_id": "1490046110717317122",
+      "timestamp": "2026-04-11",
+      "message_content": "Hey devs 👋\n\nBuilt something that might be useful if you're running ElizaOS agents in production — **AgentAudit**: immutable on-chain audit logs for AI agents, EU AI Act compliant.\n\nOne SDK call logs any agent action directly to the blockchain — tamper-proof, timestamped, permanently auditable:\n\n```ts\nawait audit.log({\n  action: 'TRANSFER_APPROVED',\n  metadata: JSON.stringify({ amount: '100 USDC', recipient: '0x...' }),\n});\n```\n\n✅ Live on Arbitrum Sepolia: `0x25ac2ab1369001F9C847e65f010B6e4f4340d78a`\n✅ Live on Mantle Sepolia: `0x25ac2ab1369001F9C847e65f010B6e4f4340d78a`\n✅ TypeScript SDK ready\n🔌 ElizaOS plugin — coming this week\n\nGitHub: https://github.com/agentauditAI/AgentAudit\n\nWould love feedback from anyone building autonomous agents that touch real transactions. Happy to collab on the ElizaOS plugin 🤝"
     }
   ],
   "stats": {
-    "total_files": 4,
+    "total_files": 3,
     "by_type": {
-      "image": 3,
+      "image": 2,
       "video": 1
     },
-    "total_size_bytes": 0
+    "total_size_bytes": 2686743
   }
 }

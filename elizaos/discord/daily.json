@@ -1,130 +1,145 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-10",
-  "date": 1775779200,
+  "title": "elizaOS Discord - 2026-04-11",
+  "date": 1775865600,
   "stats": {
-    "totalMessages": 26,
-    "totalUsers": 20
+    "totalMessages": 35,
+    "totalUsers": 15
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical discussion and primarily consists of community questions about tokenomics and project updates. The main substantive exchange involved questions about ElizaOs token utility, airdrops, buybacks, and Jeju gas fees. Odilitime, appearing to be a team member, responded that some airdrops are planned but details aren't available yet, and there are no plans beyond what was previously laid out. Community members expressed frustration about lack of clarity on buyback timing and Jeju gas fee implementation. One user (huey79ng) encountered technical issues with wallet verification on Collab.land and sought support. The rest of the chat consisted of promotional messages, social media links, general greetings, and community sentiment posts encouraging holders to trust the project and buy during price dips. No concrete technical implementations, code discussions, or problem-solving occurred during this segment.",
+      "summary": "The discussion centered on concerns about ElizaOS project status and a Bitget exchange delisting announcement. Community members questioned why the ElizaOS X account hadn't posted since March, with some expressing bearish sentiment. The main issue was Bitget's announcement to delist ELIZAOS/USDT trading pair on April 17, 2026, along with 6 other pairs. Odilitime clarified that the team never communicated with Bitget about the listing. He addressed misconceptions about the project being a \"low mcap gem\" or \"unknown token,\" stating they aimed for blue chip status. Odilitime acknowledged communication challenges, noting the team continues working as they did last year but struggles to convey their vision to the market. He expressed concern that investors don't understand or believe in what they're building, attributing lack of buy pressure to this disconnect. While taking responsibility for communication failures, he suggested the project might be a \"failed experiment\" if they can't bridge the understanding gap with the market.",
       "faqs": [
         {
-          "question": "Holding ElizaOs for future airdrops?",
-          "askedBy": "mattioboy",
+          "question": "Why hasn't elizaOS X posted anything since March?",
+          "askedBy": "valleybeyond7991",
           "answeredBy": "odilitime"
         },
         {
-          "question": "When will details about the token utility be released?",
-          "askedBy": "joshisgood77",
-          "answeredBy": "odilitime"
+          "question": "Why is Bitget delisting elizaos/usdt?",
+          "askedBy": "ellince8",
+          "answeredBy": "ferhat8372"
         },
         {
-          "question": "Buyback — no one knows when it'll happen, Jeju gas fee — no one knows when it'll come out. Is that it?",
-          "askedBy": "joshisgood77",
-          "answeredBy": "Unanswered"
+          "question": "Is there any delisting news on Bitget regarding $ELIZAOS?",
+          "askedBy": "tanvisinghwal",
+          "answeredBy": "valleybeyond7991"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "ferhat8372",
+          "helpee": "ellince8",
+          "context": "Bitget delisting announcement details",
+          "resolution": "Provided official delisting information: Bitget delisting 7 trading pairs including ELIZAOS/USDT on April 17, 2026, 10:00 AM UTC"
         },
         {
-          "question": "Do you know how I can get help from supports team for Collab.land wallet verification?",
-          "askedBy": "huey79ng",
+          "helper": "odilitime",
+          "helpee": "Community",
+          "context": "Clarifying relationship with Bitget exchange",
+          "resolution": "Confirmed the team never communicated with Bitget about the listing"
+        },
+        {
+          "helper": "ellince8",
+          "helpee": "tanvisinghwal",
+          "context": "Finding delisting information",
+          "resolution": "Advised to search \"bitget elizaos/usdt delisting\" for details"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Improve communication strategy to help market understand project vision and goals",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Feature",
+          "description": "Increase posting frequency on X/Twitter social media",
+          "mentionedBy": "vitovolica"
+        }
+      ],
+      "messageCount": 28,
+      "userCount": 11
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The channel had minimal technical activity. The main substantive contribution was from shieldai, who introduced AgentAudit, a blockchain-based audit logging solution for AI agents designed for production ElizaOS deployments. The system provides immutable, tamper-proof logging of agent actions with EU AI Act compliance. It's currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets at address 0x25ac2ab1369001F9C847e65f010B6e4f4340d78a. The TypeScript SDK is available, with a simple API that logs agent actions directly to the blockchain with metadata. An ElizaOS plugin integration is planned for release within the week. The implementation targets autonomous agents handling real transactions where auditability is critical. At the end of the segment, 0xnemian requested assistance with running a custom plugin but received no response during this timeframe. The rest of the chat consisted of brief exchanges about a scam message.",
+      "faqs": [
+        {
+          "question": "How do I run a custom plugin?",
+          "askedBy": "0xnemian",
           "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
       "actionItems": [
         {
-          "type": "Documentation",
-          "description": "Provide details on planned airdrops",
-          "mentionedBy": "mattioboy"
-        },
-        {
-          "type": "Documentation",
-          "description": "Release information about token utility details",
-          "mentionedBy": "joshisgood77"
-        },
-        {
-          "type": "Documentation",
-          "description": "Clarify buyback timeline",
-          "mentionedBy": "joshisgood77"
-        },
-        {
-          "type": "Documentation",
-          "description": "Provide update on Jeju gas fee implementation",
-          "mentionedBy": "joshisgood77"
+          "type": "Feature",
+          "description": "Complete and release ElizaOS plugin for AgentAudit integration",
+          "mentionedBy": "shieldai"
         },
         {
           "type": "Technical",
-          "description": "Resolve Collab.land wallet verification issues",
-          "mentionedBy": "huey79ng"
+          "description": "Assist with running custom plugin implementation",
+          "mentionedBy": "0xnemian"
         }
       ],
-      "messageCount": 22,
-      "userCount": 18
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "A Discord chat segment from the #💬-coders channel focused on ElizaOS v2 Socket.IO integration challenges. The main technical discussion centered on shah0406's detailed inquiry about the Socket.IO messaging protocol for ElizaOS v2. After extensive debugging, they discovered the correct messaging pattern: using socket.emit('message', {type: 1, payload: {...}}) for ROOM_JOINING and type: 2 for SEND_MESSAGE, rather than direct emits. Authentication requires {entityId: UUID} in socket options. Shah0406 is running a custom dashboard setup with ElizaOS v2 using @elizaos/plugin-openai, local Qwen3.5 via Nosana GPU on port 3001, and a dashboard on port 8080 with Socket.IO and HTTP polling fallback. They requested canonical documentation for the complete message type enum, required vs optional payload fields, and programmatic DM channel creation without the official UI. Odilitime suggested checking https://docs.elizaos.ai and using Cursor AI to query the codebase directly, noting they are currently focused on v3 development. Theredwizarddev shared an OrbisAPI Twitter link at the start of the conversation.",
-      "faqs": [
-        {
-          "question": "What is the canonical reference for ElizaOS v2 Socket.IO messaging protocol, including event names, payload schemas for type 1 (ROOM_JOINING) and type 2 (SEND_MESSAGE), and how to programmatically create a DM channel?",
-          "askedBy": "shah0406",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "What is the complete message type enum for ElizaOS v2 Socket.IO (1=ROOM_JOINING, 2=SEND_MESSAGE, others)?",
-          "askedBy": "shah0406",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "What are the required vs optional payload fields for each Socket.IO message type in ElizaOS v2?",
-          "askedBy": "shah0406",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "What is the correct way to discover/create a DM channel programmatically in ElizaOS v2 without using the official UI?",
-          "askedBy": "shah0406",
-          "answeredBy": "odilitime"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "shah0406",
-          "context": "Shah0406 needed documentation for ElizaOS v2 Socket.IO protocol including message types, payload schemas, and programmatic DM channel creation",
-          "resolution": "Directed to https://docs.elizaos.ai and suggested using Cursor AI to query the codebase directly for answers"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Documentation",
-          "description": "Document complete ElizaOS v2 Socket.IO message type enum (1=ROOM_JOINING, 2=SEND_MESSAGE, and others)",
-          "mentionedBy": "shah0406"
-        },
-        {
-          "type": "Documentation",
-          "description": "Document required vs optional payload fields for each Socket.IO message type in ElizaOS v2",
-          "mentionedBy": "shah0406"
-        },
-        {
-          "type": "Documentation",
-          "description": "Document programmatic DM channel creation/discovery in ElizaOS v2 without using official UI",
-          "mentionedBy": "shah0406"
-        },
-        {
-          "type": "Documentation",
-          "description": "Add Socket.IO authentication requirements ({entityId: UUID} in socket options) to official docs",
-          "mentionedBy": "shah0406"
-        }
-      ],
-      "messageCount": 4,
-      "userCount": 3
+      "messageCount": 7,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
+    "0xnemian": {
+      "id": "1413574645369802762",
+      "username": "0xnemian",
+      "roles": [
+        "Helper",
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ShieldAI": {
+      "id": "1490046110717317122",
+      "username": "shieldai",
+      "roles": [
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 105
+    },
+    "!                   yashpunmiya": {
+      "id": "927766612109565972",
+      "username": "sprite4210",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 3
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -152,59 +167,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 276
-    },
-    "Dragon Warrior": {
-      "id": "1007688838182883440",
-      "username": "shah0406",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "TheRedWizardDev": {
-      "id": "1486451660023664741",
-      "username": "theredwizarddev",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "GWEN": {
-      "id": "962110826641256548",
-      "username": "greatness_136",
-      "roles": [
-        "Helper",
-        "Trader",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "IPPUA": {
-      "id": "459437023837814804",
-      "username": "ippua",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 288
     },
     "chulylooly": {
       "id": "963012153026150501",
@@ -216,133 +179,104 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 11
     },
-    "sebasvenom": {
-      "id": "707975266999205900",
-      "username": "sebasvenom",
+    "FeRhaT_@": {
+      "id": "928043254765723688",
+      "username": "ferhat8372",
       "roles": [
-        "Helper",
         "Trader",
-        "[WG] degenspartan",
         "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 17
+    },
+    "VitoCorleone": {
+      "id": "500306963725287434",
+      "username": "vitovolica",
+      "roles": [
+        "Trader",
         "Designer",
         "utility",
-        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Liam": {
-      "id": "1490798188137943264",
-      "username": "liam871",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Diamondhandwhiteboy": {
-      "id": "1420689211094339614",
-      "username": "elizaos69",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "33codded": {
-      "id": "1422240545660600562",
-      "username": "33.coded",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 14
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 68
-    },
-    "Huey79ng": {
-      "id": "947438002387447818",
-      "username": "huey79ng",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Verified",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "wlllw": {
-      "id": "277437392976347137",
-      "username": "wlllw.",
-      "roles": [
-        "partner portal - self assign",
-        "Trader",
-        "workgroups - write perms",
-        "Verified",
-        "utility",
-        "Associate"
-      ]
-    },
-    "Srn Srnzzz | plebian": {
-      "id": "705063054722859110",
-      "username": "srnsrnzzz",
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
       "roles": [
         "platform - self assign",
-        "events - self-assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
         "nfts - self assign",
-        "NFT",
-        "Verified",
-        "Associate"
-      ]
-    },
-    "Error P015-A": {
-      "id": "894828425225863179",
-      "username": "your.exit.liquidity",
-      "roles": [
-        "a-hack",
-        "Trader",
+        "pmairca - self assign",
+        "King",
         "Verified",
         "Dev School Student",
         "Booster",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "NativeSatoshi  (✧ᴗ✧)": {
-      "id": "893149983556112454",
-      "username": "nativesatoshi",
-      "roles": [
-        "Verified",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
         "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 1
+    },
+    "Marvelous": {
+      "id": "1381343844414783569",
+      "username": "solanab_",
+      "roles": []
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
         "utility"
       ],
-      "totalMessages": 3
+      "totalMessages": 13
+    },
+    "El_Lince": {
+      "id": "441188120080416784",
+      "username": "ellince8",
+      "roles": [
+        "auto.fun enjoyer",
+        "Announcements",
+        "Trader",
+        "agent dev school - self assign",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Tanvi": {
+      "id": "847020685687914507",
+      "username": "tanvisinghwal",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
     },
     "ElizaBAO": {
       "id": "555035784378318875",
@@ -357,73 +291,34 @@
         "Coder",
         "Github - Contributor"
       ],
-      "totalMessages": 54
+      "totalMessages": 55
     },
-    "FeRhaT_@": {
-      "id": "928043254765723688",
-      "username": "ferhat8372",
+    "digitalalchemy": {
+      "id": "734636383548997693",
+      "username": "ultimatepokeflute",
       "roles": [
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 15
-    },
-    "Bruno Natan": {
-      "id": "1490788681282355272",
-      "username": "brunonatan0397",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
         "Verified",
         "Designer",
-        "Fr",
         "utility",
-        "Coder",
-        "eliza"
+        "Coder"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
     },
-    "joshisgood77": {
-      "id": "1486743497519399044",
-      "username": "joshisgood77",
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
       "roles": [
+        "auto.fun enjoyer",
         "Trader",
         "[WG] degenspartan",
-        "It",
+        "VIP",
         "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
+        "Booster",
+        "Designer",
+        "Coder"
       ],
-      "totalMessages": 39
-    },
-    "promdict.ai": {
-      "id": "1021740071742885998",
-      "username": "promdict.ai",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "MATTIOBOY 🇦🇺": {
-      "id": "647984767660457994",
-      "username": "mattioboy",
-      "roles": [
-        "NFT",
-        "Verified"
-      ],
-      "totalMessages": 1
+      "totalMessages": 8
     }
   }
 }
