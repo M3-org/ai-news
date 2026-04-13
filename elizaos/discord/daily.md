@@ -1,55 +1,76 @@
-# elizaOS Discord - 2026-04-11
+# elizaOS Discord - 2026-04-12
 
 ## Summary
 
-### Project Communication and Market Perception
+### Tokenomics and Communication Strategy
 
-The ElizaOS team faces significant challenges in communicating their vision to the market. Odilitime acknowledged that while the team continues working at the same pace as last year, they struggle to convey what they're building to investors. He expressed concern that the market doesn't understand or believe in their vision, which he attributes to the lack of buy pressure. Odilitime took responsibility for these communication failures and suggested the project might be a "failed experiment" if they cannot bridge this understanding gap. He clarified that the team never aimed to be a "low mcap gem" or "unknown token" but rather sought blue chip status.
+The ElizaOS project faced significant concerns about tokenomics clarity and communication effectiveness. chulylooly emphasized that vague tokenomics kill projects quickly and stressed the critical need for clear messaging that connects dots for investors. joshisgood77 questioned the connection between the product and token, which odilitime acknowledged exists but admitted people don't like how it's connected. odilitime took responsibility for communication failures and announced plans for a call with Shaw next week to restructure Discord and X account management. rainman1001 suggested allowing trusted community members to handle social media admin, citing success on another project.
 
-### Exchange Delisting
+### Exchange Listing and Trading Volume
 
-Bitget exchange announced the delisting of the ELIZAOS/USDT trading pair on April 17, 2026, along with 6 other pairs. This announcement raised concerns in the community about the project's status. Odilitime clarified that the team never communicated with Bitget about the listing, indicating it was likely an unsolicited listing by the exchange.
+A BitGet delisting situation emerged during discussions. ellince8 explained the delisting was due to low trading volume (10-50k per day) rather than scam concerns, noting that market makers need sufficient trading fees to maintain listings. The situation highlighted the importance of maintaining adequate trading activity for exchange relationships.
 
-### Social Media Activity
+### Local Model Implementation Challenges
 
-Community members questioned why the ElizaOS X account had not posted since March, with some expressing bearish sentiment about the project's visibility and activity level.
+0xnemian encountered persistent JSON parsing errors with Ollama text generation, showing repeated failures in XML parsing and missing required fields including thought and actions across multiple retry attempts. The error manifested as 'Invalid JSON response' with the system unable to extract structured data from LLM responses. odilitime provided recommendations for local model parameters, suggesting Gemma, gptoss, and Qwen as working alternatives, and mentioned ongoing development of improved technology for local model support.
 
-### Audit Logging Infrastructure
+### Quantum-Safe Authentication Integration
 
-A new blockchain-based audit logging solution called AgentAudit was introduced for production ElizaOS deployments. The system provides immutable, tamper-proof logging of agent actions with EU AI Act compliance features. It is currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets, with a TypeScript SDK available and an ElizaOS plugin integration planned for release within the week.
+huzaiii_founder presented and announced a quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768 (NIST FIPS 203). The production-ready PQC (Post-Quantum Cryptography) authentication layer for ElizaOS agents is available via the bridgebase-sdk, offering quantum-safe identity with minimal integration code. The solution is deployed and accessible via Railway with live demo and SDK available.
+
+### Project Merchandise and Branding
+
+The team discussed merchandise initiatives, with baogerbao creating elizaOK merch using elizacloud. This represented community-driven branding efforts for the project.
+
+### Migration Status
+
+odilitime confirmed that the migration period from ai16z to elizaos has ended, marking a significant transition milestone for the project.
 
 ## FAQ
 
-**Q: Why hasn't the ElizaOS X account posted since March?**
-A: This was raised as a concern by community members but was not directly addressed in the discussions.
+**Q: Why was ElizaOS delisted from BitGet?**
+A: The delisting was due to low trading volume (10-50k per day) rather than scam concerns. Market makers need sufficient trading fees to maintain listings, and the current volume was insufficient.
 
-**Q: Why is Bitget delisting the ELIZAOS/USDT trading pair?**
-A: Bitget announced the delisting for April 17, 2026. Odilitime clarified that the team never communicated with Bitget about the listing, suggesting it was an unsolicited listing by the exchange.
+**Q: What is the connection between the ElizaOS product and token?**
+A: According to odilitime, a connection exists but people don't like how it's currently structured. The team acknowledged this as a communication issue that needs addressing.
 
-**Q: Is the ElizaOS project still active?**
-A: Yes, according to Odilitime, the team continues working at the same pace as last year, though they acknowledge struggles with market communication.
+**Q: Which local models work well with ElizaOS?**
+A: odilitime recommended Gemma, gptoss, and Qwen as working alternatives for local model implementation.
 
-**Q: What is AgentAudit?**
-A: AgentAudit is a blockchain-based audit logging solution for AI agents in production ElizaOS deployments. It provides immutable, tamper-proof logging with EU AI Act compliance, currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets.
+**Q: Has the migration from ai16z to elizaos ended?**
+A: Yes, odilitime confirmed that the migration period has ended.
 
-**Q: Where can I find the AgentAudit smart contract?**
-A: The contract is deployed at address 0x25ac2ab1369001F9C847e65f010B6e4f4340d78a on Arbitrum Sepolia and Mantle Sepolia testnets.
-
-**Q: When will the ElizaOS plugin for AgentAudit be available?**
-A: According to shieldai, the plugin integration is planned for release within the week.
+**Q: What is the quantum-safe authentication solution for ElizaOS?**
+A: huzaiii_founder developed a PQC authentication layer using ML-KEM-768 (NIST FIPS 203) available via bridgebase-sdk, providing quantum-safe identity for AI agents on Solana with minimal integration code.
 
 ## Help Interactions
 
-**Helper:** None
+**Helper:** odilitime
 **Helpee:** 0xnemian
-**Resolution:** Unresolved. 0xnemian requested assistance with running a custom plugin but received no response during the timeframe covered.
+**Resolution:** Provided recommendations for local model parameters, suggesting Gemma, gptoss, and Qwen as working alternatives to address JSON parsing errors with Ollama. Also mentioned ongoing development of improved technology for local model support. Inquired about branch specifics for further investigation.
+
+**Helper:** ellince8
+**Helpee:** Community (regarding BitGet delisting)
+**Resolution:** Explained that the delisting was due to low trading volume (10-50k per day) rather than scam concerns, clarifying that market makers need sufficient trading fees to maintain listings.
+
+**Helper:** odilitime
+**Helpee:** Community (regarding communication issues)
+**Resolution:** Took responsibility for communication failures and announced plans for a call with Shaw next week to restructure Discord and X account management.
 
 ## Action Items
 
 ### Technical
 
-- Release ElizaOS plugin integration for AgentAudit within the week (mentioned by shieldai)
+- Develop improved technology for local model support to address JSON parsing and structured data extraction issues (mentioned by odilitime)
+- Investigate branch specifics related to Ollama text generation errors (mentioned by odilitime)
+- Integrate bridgebase-sdk for quantum-safe authentication in ElizaOS agents (mentioned by huzaiii_founder)
+
+### Features
+
+- Implement quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768 (mentioned by huzaiii_founder)
 
 ### Documentation
 
-- Improve communication of project vision and goals to the market (mentioned by Odilitime)
+- Clarify tokenomics messaging and create clear documentation connecting product to token value (mentioned by chulylooly)
+- Restructure Discord and X account management following call with Shaw (mentioned by odilitime)
+- Consider allowing trusted community members to handle social media admin responsibilities (mentioned by rainman1001)

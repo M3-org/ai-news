@@ -1,145 +1,140 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-11",
-  "date": 1775865600,
+  "title": "elizaOS Discord - 2026-04-12",
+  "date": 1775952000,
   "stats": {
-    "totalMessages": 35,
+    "totalMessages": 34,
     "totalUsers": 15
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on concerns about ElizaOS project status and a Bitget exchange delisting announcement. Community members questioned why the ElizaOS X account hadn't posted since March, with some expressing bearish sentiment. The main issue was Bitget's announcement to delist ELIZAOS/USDT trading pair on April 17, 2026, along with 6 other pairs. Odilitime clarified that the team never communicated with Bitget about the listing. He addressed misconceptions about the project being a \"low mcap gem\" or \"unknown token,\" stating they aimed for blue chip status. Odilitime acknowledged communication challenges, noting the team continues working as they did last year but struggles to convey their vision to the market. He expressed concern that investors don't understand or believe in what they're building, attributing lack of buy pressure to this disconnect. While taking responsibility for communication failures, he suggested the project might be a \"failed experiment\" if they can't bridge the understanding gap with the market.",
+      "summary": "The discussion centered on tokenomics clarity and communication issues affecting the ElizaOS project. joshisgood77 questioned the connection between the product and token, which odilitime acknowledged exists but admitted people don't like how it's connected. The conversation revealed a BitGet delisting situation, with ellince8 explaining it was due to low trading volume (10-50k per day) rather than scam concerns, as market makers need sufficient trading fees. odilitime took responsibility for communication failures and announced plans for a call with Shaw next week to restructure Discord and X account management. rainman1001 suggested allowing trusted community members to handle social media admin, citing success on another project. chulylooly emphasized the critical need for clear tokenomics messaging and connecting dots for investors, noting vague tokenomics kill projects quickly. The team discussed merchandise, with baogerbao creating elizaOK merch using elizacloud. huzaiii_founder presented a quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768 (NIST FIPS 203), with live demo and SDK available. The migration period from ai16z to elizaos was confirmed as ended by odilitime.",
       "faqs": [
         {
-          "question": "Why hasn't elizaOS X posted anything since March?",
-          "askedBy": "valleybeyond7991",
+          "question": "What you're building and the token aren't connected at all. Why would investors buy it?",
+          "askedBy": "joshisgood77",
           "answeredBy": "odilitime"
         },
         {
-          "question": "Why is Bitget delisting elizaos/usdt?",
-          "askedBy": "ellince8",
-          "answeredBy": "ferhat8372"
+          "question": "Why was there a delisting?",
+          "askedBy": "Implied",
+          "answeredBy": "ellince8"
         },
         {
-          "question": "Is there any delisting news on Bitget regarding $ELIZAOS?",
-          "askedBy": "tanvisinghwal",
-          "answeredBy": "valleybeyond7991"
+          "question": "Is there any elizaOS merchandise available?",
+          "askedBy": "mooncake1988",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Can I still migrate my ai16z to elizaos?",
+          "askedBy": "sheffu19",
+          "answeredBy": "odilitime"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "ferhat8372",
-          "helpee": "ellince8",
-          "context": "Bitget delisting announcement details",
-          "resolution": "Provided official delisting information: Bitget delisting 7 trading pairs including ELIZAOS/USDT on April 17, 2026, 10:00 AM UTC"
+          "helper": "ellince8",
+          "helpee": "Community",
+          "context": "Confusion about delisting reasons and FUD spreading",
+          "resolution": "Clarified that delisting was due to low trading volume (10-50k per day) and market maker economics, not scam concerns"
+        },
+        {
+          "helper": "rainman1001",
+          "helpee": "odilitime",
+          "context": "Need for better social media and community communication",
+          "resolution": "Suggested allowing trusted community member to take over SM admin role, citing successful implementation on another project"
         },
         {
           "helper": "odilitime",
-          "helpee": "Community",
-          "context": "Clarifying relationship with Bitget exchange",
-          "resolution": "Confirmed the team never communicated with Bitget about the listing"
+          "helpee": "mooncake1988",
+          "context": "Looking for elizaOS merchandise",
+          "resolution": "Informed that no official merch exists but Bao made elizaOK merch"
         },
         {
-          "helper": "ellince8",
-          "helpee": "tanvisinghwal",
-          "context": "Finding delisting information",
-          "resolution": "Advised to search \"bitget elizaos/usdt delisting\" for details"
+          "helper": "chulylooly",
+          "helpee": "Team",
+          "context": "Tokenomics clarity and investor communication issues",
+          "resolution": "Advised to simplify connection between product and token, clean up messaging, and show progress to investors"
         }
       ],
       "actionItems": [
         {
-          "type": "Documentation",
-          "description": "Improve communication strategy to help market understand project vision and goals",
+          "type": "Technical",
+          "description": "Restructure Discord and X account management with Shaw",
           "mentionedBy": "odilitime"
         },
         {
+          "type": "Documentation",
+          "description": "Clarify and simplify tokenomics connection between product and token",
+          "mentionedBy": "chulylooly"
+        },
+        {
           "type": "Feature",
-          "description": "Increase posting frequency on X/Twitter social media",
-          "mentionedBy": "vitovolica"
+          "description": "Implement quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768",
+          "mentionedBy": "huzaiii_founder"
+        },
+        {
+          "type": "Technical",
+          "description": "Improve social media admin structure by potentially allowing trusted community member to manage",
+          "mentionedBy": "rainman1001"
+        },
+        {
+          "type": "Documentation",
+          "description": "Improve communication and messaging to connect dots for investors",
+          "mentionedBy": "chulylooly"
         }
       ],
-      "messageCount": 28,
-      "userCount": 11
+      "messageCount": 26,
+      "userCount": 13
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "The channel had minimal technical activity. The main substantive contribution was from shieldai, who introduced AgentAudit, a blockchain-based audit logging solution for AI agents designed for production ElizaOS deployments. The system provides immutable, tamper-proof logging of agent actions with EU AI Act compliance. It's currently deployed on Arbitrum Sepolia and Mantle Sepolia testnets at address 0x25ac2ab1369001F9C847e65f010B6e4f4340d78a. The TypeScript SDK is available, with a simple API that logs agent actions directly to the blockchain with metadata. An ElizaOS plugin integration is planned for release within the week. The implementation targets autonomous agents handling real transactions where auditability is critical. At the end of the segment, 0xnemian requested assistance with running a custom plugin but received no response during this timeframe. The rest of the chat consisted of brief exchanges about a scam message.",
+      "summary": "The channel discussion focused on local model implementation challenges and quantum-safe authentication integration. 0xnemian encountered persistent JSON parsing errors with Ollama text generation, showing repeated failures in XML parsing and missing required fields (thought/actions) across multiple retry attempts. The error manifested as 'Invalid JSON response' with the system unable to extract structured data from LLM responses. odilitime provided recommendations for local model parameters, suggesting Gemma, gptoss, and Qwen as working alternatives, and mentioned ongoing development of improved technology for local model support. huzaiii_founder announced a production-ready PQC (Post-Quantum Cryptography) authentication layer for ElizaOS agents via the bridgebase-sdk, offering quantum-safe identity with minimal integration code. The solution is deployed and accessible via Railway. odilitime inquired about branch specifics, likely regarding the error issues reported.",
       "faqs": [
         {
-          "question": "How do I run a custom plugin?",
+          "question": "is there a minimum parameter recommended for local models?",
           "askedBy": "0xnemian",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Is this on the develop branch?",
+          "askedBy": "odilitime",
           "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "0xnemian",
+          "context": "0xnemian experiencing Invalid JSON response errors with Ollama text generation and XML parsing failures",
+          "resolution": "Recommended using Gemma, gptoss, or Qwen models as working alternatives and mentioned developing better tech for local models"
+        }
+      ],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Complete and release ElizaOS plugin for AgentAudit integration",
-          "mentionedBy": "shieldai"
+          "type": "Technical",
+          "description": "Investigate and fix Invalid JSON response error in generateOllamaText causing XML parsing failures and missing thought/actions fields",
+          "mentionedBy": "0xnemian"
         },
         {
           "type": "Technical",
-          "description": "Assist with running custom plugin implementation",
-          "mentionedBy": "0xnemian"
+          "description": "Develop improved technology to help with local model support",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Feature",
+          "description": "Integrate PQC authentication layer (bridgebase-sdk) for quantum-safe identity in ElizaOS agents",
+          "mentionedBy": "huzaiii_founder"
         }
       ],
-      "messageCount": 7,
-      "userCount": 4
+      "messageCount": 6,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "0xnemian": {
-      "id": "1413574645369802762",
-      "username": "0xnemian",
-      "roles": [
-        "Helper",
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ShieldAI": {
-      "id": "1490046110717317122",
-      "username": "shieldai",
-      "roles": [
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Server Booster",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 105
-    },
-    "!                   yashpunmiya": {
-      "id": "927766612109565972",
-      "username": "sprite4210",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 3
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -167,7 +162,60 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 288
+      "totalMessages": 298
+    },
+    "0xnemian": {
+      "id": "1413574645369802762",
+      "username": "0xnemian",
+      "roles": [
+        "Helper",
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Founder of BridgeBaseAI": {
+      "id": "920229076181082143",
+      "username": "huzaiii_founder",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "s": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "George": {
+      "id": "832580383639076867",
+      "username": "sheffu19",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "chulylooly": {
       "id": "963012153026150501",
@@ -179,29 +227,86 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 11
+      "totalMessages": 15
     },
-    "FeRhaT_@": {
-      "id": "928043254765723688",
-      "username": "ferhat8372",
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 60
+    },
+    "Mooncake": {
+      "id": "242666870438756352",
+      "username": "mooncake1988",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Rainman": {
+      "id": "1009171434465149028",
+      "username": "rainman1001",
       "roles": [
         "Trader",
         "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 17
+      "totalMessages": 16
     },
-    "VitoCorleone": {
-      "id": "500306963725287434",
-      "username": "vitovolica",
+    "Tanvi": {
+      "id": "847020685687914507",
+      "username": "tanvisinghwal",
       "roles": [
+        "Helper",
         "Trader",
+        "Verified",
         "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 6
+    },
+    "El_Lince": {
+      "id": "441188120080416784",
+      "username": "ellince8",
+      "roles": [
+        "auto.fun enjoyer",
+        "Announcements",
+        "Trader",
+        "agent dev school - self assign",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 3
+    },
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 4
     },
     "Dr. Neuro": {
       "id": "403574677164916746",
@@ -228,97 +333,35 @@
         "VIP",
         "Designer"
       ],
-      "totalMessages": 1
-    },
-    "Marvelous": {
-      "id": "1381343844414783569",
-      "username": "solanab_",
-      "roles": []
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 13
-    },
-    "El_Lince": {
-      "id": "441188120080416784",
-      "username": "ellince8",
-      "roles": [
-        "auto.fun enjoyer",
-        "Announcements",
-        "Trader",
-        "agent dev school - self assign",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder"
-      ],
       "totalMessages": 2
     },
-    "Tanvi": {
-      "id": "847020685687914507",
-      "username": "tanvisinghwal",
+    "33codded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
       "roles": [
-        "Helper",
         "Trader",
-        "Verified",
-        "Designer",
+        "[WG] degenspartan",
+        "It",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 15
     },
-    "ElizaBAO": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
+    "joshisgood77": {
+      "id": "1486743497519399044",
+      "username": "joshisgood77",
       "roles": [
-        "a-hack",
-        "Creator",
-        "Contributor",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 55
-    },
-    "digitalalchemy": {
-      "id": "734636383548997693",
-      "username": "ultimatepokeflute",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 3
-    },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
-      "roles": [
-        "auto.fun enjoyer",
         "Trader",
         "[WG] degenspartan",
-        "VIP",
+        "It",
         "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 40
     }
   }
 }
