@@ -7,21 +7,12 @@
       "content": [
         {
           "text": "In a significant announcement, Shaw (shawmakesmagic) revealed that Eliza Labs is shutting down due to deteriorating market conditions, a treasury trending toward zero, and an inability to reach revenue targets. Shaw stated that while all development and operations are ceasing, he intends to continue working on Eliza as an open source community project and offered to help displaced team members find new opportunities. Odilitime expressed disappointment but indicated willingness to contribute in a personal capacity to keep things going.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836"
         },
         {
           "text": "Community members raised concerns about the disconnect between what ElizaOS is building and its token value, questioning why investors would buy in without a clear connection. Odilitime acknowledged that the project had failed in its communications, noting plans to speak with Shaw about restructuring the Discord and social media presence. One community member suggested allowing a trusted community member to manage social media administration to improve regular team updates. Others emphasized that clearer tokenomics and stronger messaging are critical to project survival, with one member noting that vague tokenomics can quickly kill a project. The delisting of the token from Bitget CEX was also discussed, with members attributing it to low trading volume rather than a scam or rug pull, as market makers require sufficient trading activity to justify listings.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HFsgyPoWcAA_qyp.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1492823664645640296_49864ecf.jpg"
         },
         {
           "text": "On the technical side, a developer reported recurring errors with Ollama local model integration, receiving invalid JSON responses and XML parsing failures when running an agent named Shakespeare. Odilitime asked whether the issue was on the develop branch and recommended models such as Gemma, gptoss, and Qwen as working options for local deployments. Odilitime also mentioned ongoing work to improve support for local models. Separately, a community member inquired about ElizaOS merchandise, and Odilitime noted that while no official merch exists, Bao had created some elizaOK-branded merchandise built using elizacloud. A user also confirmed that the migration window from ai16z to elizaOS tokens has ended.",
@@ -29,8 +20,7 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744",
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
-          "images": [],
-          "videos": []
+          "posters": "https://cdn.elizaos.news/posters/1776043463161-657ays.jpg"
         }
       ],
       "topic": "discordrawdata"
@@ -40,27 +30,17 @@
       "content": [
         {
           "text": "On April 12, 2026, the ElizaOS project completed a major repository-wide cleanup, closing stale issues that were 8 or more months old, retiring V3 planning goals, and removing deprecated milestones across all repositories. The project also standardized its policy for third-party plugin development, directing contributors to independently host and publish their integrations under the elizaOS-plugins organization rather than submitting them to the core repository.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json",
+          "posters": "https://cdn.elizaos.news/posters/1776043484082-2tx3i.jpg"
         },
         {
           "text": "On the technical side, core framework improvements included integrating task-completion assessment into the reflection evaluator pipeline to improve runtime accuracy, and removing duplicate action result formatting from the RECENT_MESSAGES provider to reduce unnecessary token usage in LLM context management. A TypeScript build error (TS2769) in the Anthropic plugin was resolved to maintain compatibility with the latest core alpha updates, and the cryptography Python package was bumped to version 46.0.6 to address security requirements.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json"
         },
         {
           "text": "Two discussions require urgent community attention. The first concerns multi-agent coordination patterns, specifically around persistent peer relationships and on-chain credential verification. The second involves payment infrastructure design for AI agents, including identity verification and trust-based spend limits. Both topics are being tracked across the plugin-anthropic, plugin-discord, and registry repositories. Additionally, ongoing work is addressing custom plugin callback interference in the Discord plugin, focusing on separating provider state composition from action callback processing. A new registry entry for the hashlock plugin is also under review.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-12.json",
+          "posters": "https://cdn.elizaos.news/posters/1776043533281-m1jmnu.jpg"
         }
       ],
       "topic": "miscellaneous"
