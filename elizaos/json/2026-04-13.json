@@ -7,55 +7,35 @@
       "content": [
         {
           "text": "A community member introduced the CROO Network V1 Pioneers Program in the general discussion channel, targeting ElizaOS developers. The program offers an open call for devs to test a CLI-based SDK that auto-generates an ERC-4337 account abstraction wallet, allows agent registration, service listing, and enables automated on-chain payment settlement between agents. The initiative is positioned as a payment, reputation, and discovery layer that complements ElizaOS. The first 100 developers to participate can earn USDT rewards ranging from $10 base up to $50 for the best agent in a category. A community member asked for more information via a link.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776129761584-lkgpte.png"
         },
         {
           "text": "Metaplex announced the launch of Agent Tokens on Solana, featuring instant global trading, hundreds of integrated agents, and $50,000 in MPLX rewards as part of their Agentic Capital Markets initiative. This was shared in the general discussion channel and generated community interest around agent tokenization on Solana.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/2043721423634763776/img/FwU0lH4SrI0y9H7y.jpg:large"
-          ],
-          "videos": [
-            "https://twitter.com/i/videos/tweet/2043721478693384419"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1493282976971096245_0e317fbb.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/2043721478693384419_fcc18397.mp4"
         },
         {
           "text": "In the coders channel, a developer asked whether the OpenAI provider plugin can be configured to use the /v1/chat/completions endpoint instead of the newer responses API. The context was using the Nosana model for a bounty, which apparently does not support the newer endpoint. No resolution was provided in the captured messages.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1776129782814-px88id.png"
         },
         {
           "text": "In the partners channel, a security concern was raised when a community member flagged that a user named ben appeared to be sending airdrop or bulk SOL messages, questioning whether the account had been hacked. A moderator clarified that the account in question was not the correct ben, suggesting a potential impersonation or confusion between similarly named accounts.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+          "posters": "https://cdn.elizaos.news/posters/1776129806524-shzefs.png"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Daily Summary: April 13, 2026",
-      "content": [
-        {
-          "text": "Development on April 13, 2026 centered on strengthening core infrastructure and performing dependency maintenance across the eliza and elizaos.github.io repositories. A key completed item was the implementation of a new utils/batch-queue system designed to centralize concurrency, retry logic, and task storage. This system supports embedding drains, action-filter index builds, and knowledge embedding paths, representing a significant improvement to task management. On the maintenance side, comprehensive dependency updates were carried out, including cargo group updates across 21 directories covering packages such as bytes, quinn-proto, and rustls-webpki, as well as npm_and_yarn group updates across 11 directories including drizzle-orm in the agent package. Several pull requests are currently in progress, including the addition of MiniMax-AI/cli as a bundled skill, a bump to langchain-text-splitters from version 0.3.8 to 0.3.9, and uv group dependency updates across 2 directories with 20 updates. A pull request for minor-and-patch dependency updates to the elizaos.github.io repository is currently awaiting review.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-13.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development on April 13, 2026 centered on strengthening core infrastructure and performing dependency maintenance across the eliza and elizaos.github.io repositories. A key completed item was the implementation of a new utils/batch-queue system designed to centralize concurrency, retry logic, and task storage. This system supports embedding drains, action-filter index builds, and knowledge embedding paths, representing a significant improvement to task management. On the maintenance side, comprehensive dependency updates were carried out, including cargo group updates across 21 directories covering packages such as bytes, quinn-proto, and rustls-webpki, as well as npm_and_yarn group updates across 11 directories including drizzle-orm in the agent package. Several pull requests are currently in progress, including the addition of MiniMax-AI/cli as a bundled skill, a bump to langchain-text-splitters from version 0.3.8 to 0.3.9, and uv group dependency updates across 2 directories with 20 updates. A pull request for minor-and-patch dependency updates to the elizaos.github.io repository is currently awaiting review.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-13.json",
+        "posters": "https://cdn.elizaos.news/posters/1776129827349-wh509l.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
