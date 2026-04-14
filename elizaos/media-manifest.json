@@ -1,30 +1,64 @@
 {
-  "date": "2026-04-12",
+  "date": "2026-04-13",
   "source": "elizaos",
-  "generated_at": "2026-04-13T01:22:29.854Z",
+  "generated_at": "2026-04-14T01:21:15.900Z",
   "base_path": "elizaos-media",
   "files": [
     {
-      "url": "https://pbs.twimg.com/media/HFsgyPoWcAA_qyp.jpg:large",
-      "filename": "embed-image-1492823664645640296.jpg:large",
-      "unique_name": "embed-image-1492823664645640296_49864ecf.jpg",
-      "hash": "49864ecf",
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2043721423634763776/img/FwU0lH4SrI0y9H7y.jpg:large",
+      "filename": "embed-thumbnail-1493282976971096245.jpg:large",
+      "unique_name": "embed-thumbnail-1493282976971096245_0e317fbb.jpg",
+      "hash": "0e317fbb",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1493282976971096245",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "699751351403675668",
+      "timestamp": "2026-04-13",
+      "message_content": "agent tokenization on solana!\n\nhttps://x.com/metaplex/status/2043721478693384419?s=20"
+    },
+    {
+      "url": "https://twitter.com/i/videos/tweet/2043721478693384419",
+      "filename": "embed-video-1493282976971096245.com/i/videos/tweet/2043721478693384419",
+      "unique_name": "2043721478693384419_fcc18397.mp4",
+      "hash": "fcc18397",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1493282976971096245",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "699751351403675668",
+      "timestamp": "2026-04-13",
+      "message_content": "agent tokenization on solana!\n\nhttps://x.com/metaplex/status/2043721478693384419?s=20"
+    },
+    {
+      "url": "https://pbs.twimg.com/media/HFzJCElXYAAgVoH.jpg:large",
+      "filename": "embed-image-1493292497764487379.jpg:large",
+      "unique_name": "embed-image-1493292497764487379_68126edf.jpg",
+      "hash": "68126edf",
       "type": "image",
       "media_type": "embed_image",
-      "message_id": "1492823664645640296",
+      "message_id": "1493292497764487379",
       "channel_id": "1253563209462448241",
       "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
       "user_id": "893149983556112454",
-      "timestamp": "2026-04-12",
-      "message_content": "https://x.com/CoopaAI/status/2043263429750714630?s=20"
+      "timestamp": "2026-04-13",
+      "message_content": "https://x.com/CoopaAI/status/2043731626060857808?s=20"
     }
   ],
   "stats": {
-    "total_files": 1,
+    "total_files": 3,
     "by_type": {
-      "image": 1
+      "image": 2,
+      "video": 1
     },
     "total_size_bytes": 0
   }

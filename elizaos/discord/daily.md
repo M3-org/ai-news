@@ -1,76 +1,57 @@
-# elizaOS Discord - 2026-04-12
+# elizaOS Discord - 2026-04-13
 
 ## Summary
 
-### Tokenomics and Communication Strategy
+### CROO Network Infrastructure Launch
 
-The ElizaOS project faced significant concerns about tokenomics clarity and communication effectiveness. chulylooly emphasized that vague tokenomics kill projects quickly and stressed the critical need for clear messaging that connects dots for investors. joshisgood77 questioned the connection between the product and token, which odilitime acknowledged exists but admitted people don't like how it's connected. odilitime took responsibility for communication failures and announced plans for a call with Shaw next week to restructure Discord and X account management. rainman1001 suggested allowing trusted community members to handle social media admin, citing success on another project.
+CROO Network announced its V1 Pioneers Program, introducing a payment and marketplace infrastructure layer for ElizaOS agents. The technical implementation includes a CLI-based SDK that auto-generates ERC-4337 compliant Account Abstraction wallets, agent registration capabilities, service listing functionality, and automated on-chain payment settlement. This infrastructure addresses gaps in ElizaOS's native capabilities around payment processing, reputation systems, and agent discovery. The system is designed to complement ElizaOS v2's multi-chain wallet and event-driven architecture. The program offers USDT rewards with a $10 base payment plus up to $50 for category winners, targeting the first 100 developers who test the SDK.
 
-### Exchange Listing and Trading Volume
+### Agent Tokenization and Legacy Token Utility
 
-A BitGet delisting situation emerged during discussions. ellince8 explained the delisting was due to low trading volume (10-50k per day) rather than scam concerns, noting that market makers need sufficient trading fees to maintain listings. The situation highlighted the importance of maintaining adequate trading activity for exchange relationships.
+Discussion touched on agent tokenization on Solana using Metaplex, with questions raised about the utility of legacy tokens in the ecosystem. The conversation highlighted ongoing considerations about token economics and their role in the ElizaOS infrastructure.
 
-### Local Model Implementation Challenges
+### OpenAI Provider Configuration
 
-0xnemian encountered persistent JSON parsing errors with Ollama text generation, showing repeated failures in XML parsing and missing required fields including thought and actions across multiple retry attempts. The error manifested as 'Invalid JSON response' with the system unable to extract structured data from LLM responses. odilitime provided recommendations for local model parameters, suggesting Gemma, gptoss, and Qwen as working alternatives, and mentioned ongoing development of improved technology for local model support.
+A technical question emerged regarding the configuration of the OpenAI provider plugin to use the /v1/chat/completions endpoint instead of the responses API. This issue arose while working with the Nosana model for a bounty, as the newer endpoint appears to be unsupported in the current implementation.
 
-### Quantum-Safe Authentication Integration
+### Community Support Offers
 
-huzaiii_founder presented and announced a quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768 (NIST FIPS 203). The production-ready PQC (Post-Quantum Cryptography) authentication layer for ElizaOS agents is available via the bridgebase-sdk, offering quantum-safe identity with minimal integration code. The solution is deployed and accessible via Railway with live demo and SDK available.
-
-### Project Merchandise and Branding
-
-The team discussed merchandise initiatives, with baogerbao creating elizaOK merch using elizacloud. This represented community-driven branding efforts for the project.
-
-### Migration Status
-
-odilitime confirmed that the migration period from ai16z to elizaos has ended, marking a significant transition milestone for the project.
+Community members offered assistance with agent workflows and LLM infrastructure in production environments, indicating active support resources available within the community.
 
 ## FAQ
 
-**Q: Why was ElizaOS delisted from BitGet?**
-A: The delisting was due to low trading volume (10-50k per day) rather than scam concerns. Market makers need sufficient trading fees to maintain listings, and the current volume was insufficient.
+**Q: What is the CROO Network V1 Pioneers Program?**
+A: It is a payment and marketplace infrastructure layer for ElizaOS agents that includes a CLI-based SDK with ERC-4337 compliant Account Abstraction wallets, agent registration, service listing, and automated on-chain payment settlement. The program rewards the first 100 developers with USDT ($10 base plus up to $50 for category winners) for testing the SDK.
 
-**Q: What is the connection between the ElizaOS product and token?**
-A: According to odilitime, a connection exists but people don't like how it's currently structured. The team acknowledged this as a communication issue that needs addressing.
+**Q: How does CROO Network complement ElizaOS v2?**
+A: CROO Network is positioned as complementary to ElizaOS v2's multi-chain wallet and event-driven architecture, filling gaps in payment processing, reputation systems, and agent discovery that are not natively available in ElizaOS.
 
-**Q: Which local models work well with ElizaOS?**
-A: odilitime recommended Gemma, gptoss, and Qwen as working alternatives for local model implementation.
+**Q: Can the OpenAI provider plugin be configured to use the /v1/chat/completions endpoint?**
+A: This question was raised by 0xnemian while working with the Nosana model for a bounty, as the newer endpoint appears unsupported, but no answer was provided during this discussion period.
 
-**Q: Has the migration from ai16z to elizaos ended?**
-A: Yes, odilitime confirmed that the migration period has ended.
-
-**Q: What is the quantum-safe authentication solution for ElizaOS?**
-A: huzaiii_founder developed a PQC authentication layer using ML-KEM-768 (NIST FIPS 203) available via bridgebase-sdk, providing quantum-safe identity for AI agents on Solana with minimal integration code.
+**Q: How can agents be tokenized on Solana?**
+A: Agent tokenization on Solana can be done via Metaplex, though specific implementation details were not discussed in depth.
 
 ## Help Interactions
 
-**Helper:** odilitime
+**Helper:** Community (unanswered)
 **Helpee:** 0xnemian
-**Resolution:** Provided recommendations for local model parameters, suggesting Gemma, gptoss, and Qwen as working alternatives to address JSON parsing errors with Ollama. Also mentioned ongoing development of improved technology for local model support. Inquired about branch specifics for further investigation.
+**Issue:** Configuring the OpenAI provider plugin to use the /v1/chat/completions endpoint instead of the responses API while working with the Nosana model for a bounty
+**Resolution:** Unresolved - the question remained unanswered during this chat segment
 
-**Helper:** ellince8
-**Helpee:** Community (regarding BitGet delisting)
-**Resolution:** Explained that the delisting was due to low trading volume (10-50k per day) rather than scam concerns, clarifying that market makers need sufficient trading fees to maintain listings.
-
-**Helper:** odilitime
-**Helpee:** Community (regarding communication issues)
-**Resolution:** Took responsibility for communication failures and announced plans for a call with Shaw next week to restructure Discord and X account management.
+**Helper:** loko9567391
+**Helpee:** General community
+**Issue:** Offered assistance with agent workflows and LLM infrastructure in production environments
+**Resolution:** Open offer for support
 
 ## Action Items
 
 ### Technical
 
-- Develop improved technology for local model support to address JSON parsing and structured data extraction issues (mentioned by odilitime)
-- Investigate branch specifics related to Ollama text generation errors (mentioned by odilitime)
-- Integrate bridgebase-sdk for quantum-safe authentication in ElizaOS agents (mentioned by huzaiii_founder)
+- Investigate support for /v1/chat/completions endpoint in OpenAI provider plugin for Nosana model compatibility (mentioned by 0xnemian)
+- Test CROO Network V1 Pioneers Program SDK for the first 100 developer slots (mentioned by minorc)
 
 ### Features
 
-- Implement quantum-safe authentication gateway for AI agents on Solana using ML-KEM-768 (mentioned by huzaiii_founder)
-
-### Documentation
-
-- Clarify tokenomics messaging and create clear documentation connecting product to token value (mentioned by chulylooly)
-- Restructure Discord and X account management following call with Shaw (mentioned by odilitime)
-- Consider allowing trusted community members to handle social media admin responsibilities (mentioned by rainman1001)
+- Implement ERC-4337 compliant Account Abstraction wallet generation through CROO Network SDK (mentioned by minorc)
+- Enable agent registration and service listing capabilities via CROO Network infrastructure (mentioned by minorc)
