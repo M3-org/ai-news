@@ -1,65 +1,74 @@
 {
-  "date": "2026-04-13",
+  "date": "2026-04-14",
   "source": "elizaos",
-  "generated_at": "2026-04-14T01:21:15.900Z",
+  "generated_at": "2026-04-15T01:19:41.627Z",
   "base_path": "elizaos-media",
   "files": [
     {
-      "url": "https://pbs.twimg.com/amplify_video_thumb/2043721423634763776/img/FwU0lH4SrI0y9H7y.jpg:large",
-      "filename": "embed-thumbnail-1493282976971096245.jpg:large",
-      "unique_name": "embed-thumbnail-1493282976971096245_0e317fbb.jpg",
-      "hash": "0e317fbb",
+      "url": "https://cdn.discordapp.com/attachments/1253563209462448241/1493694190456930385/IMG_3675.png?ex=69dfe69e&is=69de951e&hm=7d74174ca55d7d248a6e7f752e50637e6e5c51975d692318c92acf9c41748b1b&",
+      "proxy_url": "https://media.discordapp.net/attachments/1253563209462448241/1493694190456930385/IMG_3675.png?ex=69dfe69e&is=69de951e&hm=7d74174ca55d7d248a6e7f752e50637e6e5c51975d692318c92acf9c41748b1b&",
+      "filename": "IMG_3675.png",
+      "unique_name": "img_3675_2fcb301c.jpg",
+      "hash": "2fcb301c",
       "type": "image",
-      "media_type": "embed_thumbnail",
-      "message_id": "1493282976971096245",
+      "media_type": "attachment",
+      "size": 182077,
+      "content_type": "image/jpeg",
+      "width": 1284,
+      "height": 448,
+      "message_id": "1493694191006650409",
       "channel_id": "1253563209462448241",
       "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "699751351403675668",
-      "timestamp": "2026-04-13",
-      "message_content": "agent tokenization on solana!\n\nhttps://x.com/metaplex/status/2043721478693384419?s=20"
+      "user_id": "580487826420793364",
+      "timestamp": "2026-04-14",
+      "message_content": "Surfacing this here",
+      "reactions": [
+        {
+          "emoji": "❤️",
+          "count": 1
+        }
+      ]
     },
     {
-      "url": "https://twitter.com/i/videos/tweet/2043721478693384419",
-      "filename": "embed-video-1493282976971096245.com/i/videos/tweet/2043721478693384419",
-      "unique_name": "2043721478693384419_fcc18397.mp4",
-      "hash": "fcc18397",
-      "type": "video",
-      "media_type": "embed_video",
-      "content_type": "video/mp4",
-      "message_id": "1493282976971096245",
-      "channel_id": "1253563209462448241",
-      "channel_name": "💬-discussion",
-      "guild_id": "1253563208833433701",
-      "guild_name": "elizaOS",
-      "user_id": "699751351403675668",
-      "timestamp": "2026-04-13",
-      "message_content": "agent tokenization on solana!\n\nhttps://x.com/metaplex/status/2043721478693384419?s=20"
-    },
-    {
-      "url": "https://pbs.twimg.com/media/HFzJCElXYAAgVoH.jpg:large",
-      "filename": "embed-image-1493292497764487379.jpg:large",
-      "unique_name": "embed-image-1493292497764487379_68126edf.jpg",
-      "hash": "68126edf",
+      "url": "https://pbs.twimg.com/media/HF2HYqCXkAAhY52.jpg:large",
+      "filename": "embed-image-1493509658629898372.jpg:large",
+      "unique_name": "embed-image-1493509658629898372_1b89ceb9.jpg",
+      "hash": "1b89ceb9",
       "type": "image",
       "media_type": "embed_image",
-      "message_id": "1493292497764487379",
+      "message_id": "1493509658629898372",
       "channel_id": "1253563209462448241",
       "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
       "user_id": "893149983556112454",
-      "timestamp": "2026-04-13",
-      "message_content": "https://x.com/CoopaAI/status/2043731626060857808?s=20"
+      "timestamp": "2026-04-14",
+      "message_content": "https://x.com/CoopaAI/status/2043939568123052254?s=20"
+    },
+    {
+      "url": "https://opengraph.githubassets.com/d9f6e6fa244662fec8863c2257a02585a8fd263c92210bda796dff1c579d9650/elizaos-plugins/plugin-anthropic/pull/17",
+      "filename": "embed-thumbnail-1493728807364853972.com/d9f6e6fa244662fec8863c2257a02585a8fd263c92210bda796dff1c579d9650/elizaos-plugins/plugin-anthropic/pull/17",
+      "unique_name": "17_f7c7468f.jpg",
+      "hash": "f7c7468f",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1493728807364853972",
+      "channel_id": "1377726087789940836",
+      "channel_name": "xfn-framework",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "177801706963337216",
+      "timestamp": "2026-04-14",
+      "message_content": "https://github.com/elizaos-plugins/plugin-anthropic/pull/17 <@580487826420793364> if you wanna take a look please, could need it for the next days, want to try GCP proxy 🙂"
     }
   ],
   "stats": {
     "total_files": 3,
     "by_type": {
-      "image": 2,
-      "video": 1
+      "image": 3
     },
-    "total_size_bytes": 0
+    "total_size_bytes": 182077
   }
 }

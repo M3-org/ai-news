@@ -1,57 +1,80 @@
-# elizaOS Discord - 2026-04-13
+# elizaOS Discord - 2026-04-14
 
 ## Summary
 
-### CROO Network Infrastructure Launch
+### Organizational Transition
 
-CROO Network announced its V1 Pioneers Program, introducing a payment and marketplace infrastructure layer for ElizaOS agents. The technical implementation includes a CLI-based SDK that auto-generates ERC-4337 compliant Account Abstraction wallets, agent registration capabilities, service listing functionality, and automated on-chain payment settlement. This infrastructure addresses gaps in ElizaOS's native capabilities around payment processing, reputation systems, and agent discovery. The system is designed to complement ElizaOS v2's multi-chain wallet and event-driven architecture. The program offers USDT rewards with a $10 base payment plus up to $50 for category winners, targeting the first 100 developers who test the SDK.
+Shaw announced the shutdown of Eliza Labs on April 12, 2026, citing market conditions, depleted treasury, and inability to reach revenue. However, odilitime clarified this represents a shift from paid development to community-driven open source work rather than a complete shutdown. The core framework development continues with Shaw and odilitime leading efforts. The transition separates development discussion (Cozy devs) from economic/community discussion (main Discord). Internal frustrations were revealed about previous team productivity issues and focus on UI over core agent functionality.
 
-### Agent Tokenization and Legacy Token Utility
+### Framework Development Progress
 
-Discussion touched on agent tokenization on Solana using Metaplex, with questions raised about the utility of legacy tokens in the ecosystem. The conversation highlighted ongoing considerations about token economics and their role in the ElizaOS infrastructure.
+ElizaOS v3 is nearing completion. The Spartan agent is being developed for marketing automation with local model support for cost reduction. Plans include agentic business demos and potential revival of agentic DAO stack given improved AI models. Odilitime mentioned repurposing Spartan technology built for previous projects.
 
-### OpenAI Provider Configuration
+### Plugin Development
 
-A technical question emerged regarding the configuration of the OpenAI provider plugin to use the /v1/chat/completions endpoint instead of the responses API. This issue arose while working with the Nosana model for a bounty, as the newer endpoint appears to be unsupported in the current implementation.
+A pull request for the elizaos-plugins/plugin-anthropic repository added two key features: a 'claude -p' command solution and missing reasoning type support. The PR introduced TEXT_REASONING_SMALL_MODEL_TYPE with fallback to the main model. Additional functionality including streaming support for the 'claude -p' command was prepared in a follow-up PR.
 
-### Community Support Offers
+### Payment Infrastructure
 
-Community members offered assistance with agent workflows and LLM infrastructure in production environments, indicating active support resources available within the community.
+Discussion focused on x402 agent payment infrastructure on Solana. huhuhu0621_67650 is building a trust scoring service for agent wallets and evaluating between USDC-SPL on Solana versus Base USDC for settlements. Stan0473 recommended supporting multiple chains to reduce friction.
+
+### Security Concerns
+
+Scammers were impersonating odilitime and sending fake airdrop messages to community members. The scam attempts were identified and required cleanup from the Discord server.
+
+### CI/CD Pipeline Issues
+
+The CI/CD pipeline encountered multiple build errors during package publishing: workspace dependency '@elizaos/core' not found error attributed to alpha path changes, and 'jsonrepair' resolution failure during browser build. Work was ongoing to fix package.json to resolve these issues.
 
 ## FAQ
 
-**Q: What is the CROO Network V1 Pioneers Program?**
-A: It is a payment and marketplace infrastructure layer for ElizaOS agents that includes a CLI-based SDK with ERC-4337 compliant Account Abstraction wallets, agent registration, service listing, and automated on-chain payment settlement. The program rewards the first 100 developers with USDT ($10 base plus up to $50 for category winners) for testing the SDK.
+**Q: Is Eliza Labs completely shutting down?**
+A: No, this represents a shift from paid development to community-driven open source work rather than a complete shutdown. Core framework development continues with Shaw and odilitime leading efforts.
 
-**Q: How does CROO Network complement ElizaOS v2?**
-A: CROO Network is positioned as complementary to ElizaOS v2's multi-chain wallet and event-driven architecture, filling gaps in payment processing, reputation systems, and agent discovery that are not natively available in ElizaOS.
+**Q: What is the status of ElizaOS v3?**
+A: ElizaOS v3 is nearing completion according to odilitime.
 
-**Q: Can the OpenAI provider plugin be configured to use the /v1/chat/completions endpoint?**
-A: This question was raised by 0xnemian while working with the Nosana model for a bounty, as the newer endpoint appears unsupported, but no answer was provided during this discussion period.
+**Q: What is the Spartan agent?**
+A: Spartan agent is being developed for marketing automation with local model support for cost reduction. The technology is being repurposed from previous projects.
 
-**Q: How can agents be tokenized on Solana?**
-A: Agent tokenization on Solana can be done via Metaplex, though specific implementation details were not discussed in depth.
+**Q: Which blockchain should be used for agent payment settlements?**
+A: Stan0473 recommended supporting multiple chains to reduce friction, though the discussion focused on USDC-SPL on Solana versus Base USDC.
+
+**Q: What new features were added to the Anthropic plugin?**
+A: The plugin received a 'claude -p' command solution, missing reasoning type support (TEXT_REASONING_SMALL_MODEL_TYPE), and streaming support for the 'claude -p' command.
+
+**Q: What caused the CI/CD pipeline failures?**
+A: Two main issues: workspace dependency '@elizaos/core' not found error due to alpha path changes, and 'jsonrepair' resolution failure during browser build.
 
 ## Help Interactions
 
-**Helper:** Community (unanswered)
-**Helpee:** 0xnemian
-**Issue:** Configuring the OpenAI provider plugin to use the /v1/chat/completions endpoint instead of the responses API while working with the Nosana model for a bounty
-**Resolution:** Unresolved - the question remained unanswered during this chat segment
+**Helper:** odilitime
+**Helpee:** semipai
+**Resolution:** odilitime identified a reported airdrop mention as a scam attempt and requested information about where the message appeared for removal.
 
-**Helper:** loko9567391
-**Helpee:** General community
-**Issue:** Offered assistance with agent workflows and LLM infrastructure in production environments
-**Resolution:** Open offer for support
+**Helper:** odilitime
+**Helpee:** stan0473
+**Resolution:** odilitime reviewed PR #17 for the Anthropic plugin, raised concerns about potential Anthropic account bans (which were addressed), identified two code issues via PR comments, and merged the PR after fixes were applied.
+
+**Helper:** Stan0473
+**Helpee:** huhuhu0621_67650
+**Resolution:** Stan0473 recommended supporting multiple chains to reduce friction when deciding between USDC-SPL on Solana versus Base USDC for agent payment settlements.
 
 ## Action Items
 
 ### Technical
 
-- Investigate support for /v1/chat/completions endpoint in OpenAI provider plugin for Nosana model compatibility (mentioned by 0xnemian)
-- Test CROO Network V1 Pioneers Program SDK for the first 100 developer slots (mentioned by minorc)
+- Fix package.json to resolve '@elizaos/core' workspace dependency not found error (mentioned by odilitime)
+- Resolve 'jsonrepair' resolution failure during browser build (mentioned by odilitime)
+- Remove scam messages impersonating odilitime from Discord server (mentioned by odilitime)
+- Implement trust scoring service for agent wallets (mentioned by huhuhu0621_67650)
+- Evaluate multi-chain support for payment settlements (mentioned by Stan0473)
 
 ### Features
 
-- Implement ERC-4337 compliant Account Abstraction wallet generation through CROO Network SDK (mentioned by minorc)
-- Enable agent registration and service listing capabilities via CROO Network infrastructure (mentioned by minorc)
+- Complete ElizaOS v3 development (mentioned by odilitime)
+- Develop Spartan agent for marketing automation with local model support (mentioned by odilitime)
+- Create agentic business demos (mentioned by odilitime)
+- Add streaming support for 'claude -p' command in Anthropic plugin (mentioned by stan0473)
+- Implement TEXT_REASONING_SMALL_MODEL_TYPE with fallback to main model (mentioned by stan0473)
+- Consider revival of agentic DAO stack (mentioned by odilitime)
