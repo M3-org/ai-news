@@ -1,33 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-04-07 to 2026-04-13",
+  "title": "Weekly Report - 2026-04-08 to 2026-04-14",
   "categories": [
-    {
-      "title": "ElizaOS Community Discussion: Token Sentiment and Technical Issues",
-      "content": [
-        {
-          "text": "Community members in the general discussion channel expressed significant pessimism about the ElizaOS token price performance on April 7, 2026. Several users noted the token had declined more than 95 percent from its highs, with some predicting further drops to price levels as low as 0.00023 and 0.0005. Comparisons were made to Ai16z, with users arguing ElizaOS would never replicate that token's performance given its 11 billion token supply. One user described the price action as a pattern of obvious pumping followed by slow dumping, suggesting manipulation and a trajectory toward new all-time lows. Other community members pushed back on the negativity, urging holders to either sell, hedge with derivatives, or hold if they believed in the project's fundamentals at its roughly 5.5 million USD market cap. Broader macroeconomic concerns were also raised, including geopolitical tensions and global market instability as contributing factors to the downturn. A new episode of the Cron Job series was shared by jin, who also mentioned plans to regenerate about one week of AI news data and add fallback models with better credit usage monitoring. A user named JG shared their experience deploying an ElizaOS agent on Hatcher.host, describing it as a smooth one-click process with Groq integration and live logs. Scammer warnings were also issued against at least two users in the channel.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1491150601969598535_bc676078.jpg",
-          "videos": "https://cdn.elizaos.news/elizaos-media/pwzp5qfanpw_e7c1f9f1.mp4"
-        },
-        {
-          "text": "In the coders channel, a user named Dave reported that their eliza-agent was unable to log in to X (formerly Twitter), receiving a page not found error after multiple retries even when using cookies. Odilitime responded by asking which version of ElizaOS and the plugin-twitter the user was running, indicating the issue may be version-specific and requiring further diagnosis.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "posters": "https://cdn.elizaos.news/posters/1775611021914-e1f27.jpg"
-        }
-      ],
-      "topic": "discordrawdata"
-    },
-    {
-      "title": "ElizaOS Development Activity - April 7, 2026",
-      "content": {
-        "text": "On April 7, 2026, the ElizaOS project had no completed work merged across its repositories, but several new pull requests and issues were opened. In the elizaos-plugins/plugin-openrouter repository, a pull request was submitted to fix an issue where PGlite memory artifacts were blocking Windows Git checkouts. In the main elizaos/eliza repository, another pull request was opened to address a fix related to Toon action parameters. On the issue tracking side, two notable issues were raised in elizaos/eliza. The first reported that the MCP server named eliza received an A security grade on Loaditout, successfully passing all 7 evaluated criteria. The second proposed the implementation of delegation chains for autonomous agents, which would introduce scoped authority, spend limits, and cascade revocation to improve trust models within the system.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-07.json",
-        "posters": "https://cdn.elizaos.news/posters/1775611043842-fin2ue.jpg"
-      },
-      "topic": "miscellaneous"
-    },
     {
       "title": "ElizaOS Community Discussion and Development Updates",
       "content": [
@@ -225,7 +199,62 @@
         "posters": "https://cdn.elizaos.news/posters/1776129827349-wh509l.jpg"
       },
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Discussion: Labs Shutdown, Project Status, and Development Updates",
+      "content": [
+        {
+          "text": "A significant discussion unfolded in the general channel on April 14, 2026, centered around leaked internal messages from Shaw (the lead developer) indicating that Eliza Labs was being shut down. A community member shared screenshots from a Telegram group containing two messages attributed to Shaw. The first, dated April 12, stated that Eliza Labs was ceasing all development and operations due to a deteriorating market, a treasury trending toward zero, and an inability to reach revenue targets. The second message, dated April 8, was described as a vent in which Shaw expressed frustration with former team members for failing to ship finished products despite significant spending, and outlined a new focused approach going forward. Odilitime (a core developer and moderator) confirmed the April 12 message was a legitimate internal communication, while characterizing the April 8 message as a vent that was not entirely accurate in his opinion.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/img_3675_2fcb301c.jpg"
+        },
+        {
+          "text": "Community members expressed confusion and concern about whether ElizaOS as a project was shutting down entirely. Odilitime and other contributors clarified that while Eliza Labs as a funded organization was scaling back and stopping payments to some dedicated developers, the ElizaOS open source project itself was continuing. Odilitime noted that contributions were actually rising, that an agent had been deployed to help merge and clean up issues, that version 1.x had been stable for some time, and that version 2.x was in active development. Shaw himself had stated in the internal message that he intended to continue working on Eliza as an open source community project. Community members were encouraged to stay on ElizaOS rather than switching to alternatives. Odilitime also mentioned ongoing work on token marketing using ElizaOS v3, plans for Spartan to create content for marketing, and discussions with Shaw about agentic business demos. A suggestion was raised about converting the project to a DAO structure.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776216063434-rbc7x.png"
+        },
+        {
+          "text": "A separate concern arose in the coders channel when a community member reported being tagged in what appeared to be an airdrop message. Odilitime identified this as scammer activity, noting that scammers were attempting to impersonate him, and asked to be informed of any such instances so they could be cleaned up. In the general discussion channel, Odilitime also mentioned that a bot called migrate-helper was running a security check on his behalf and warned community members to stay alert to impersonation attempts.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "posters": "https://cdn.elizaos.news/posters/1776216093772-vxrdj.png"
+        },
+        {
+          "text": "In the framework development channel, Stan submitted a pull request to the plugin-anthropic repository adding two features: OAuth authentication allowing LLM calls to be routed through a Claude Max subscription instead of API keys, and missing TEXT_REASONING model type handlers. Odilitime reviewed the PR, left comments on two issues found in the code, and ultimately merged it. During the publish process, a build error was encountered related to a missing workspace dependency for elizaos/core and a browser build failure involving an unresolved jsonrepair module. Stan acknowledged missing something and pushed a follow-up PR to address it. Stan also mentioned plans to add streaming support, noting that the claude -p command handles streaming JSON.",
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/17_f7c7468f.jpg"
+        },
+        {
+          "text": "A separate technical discussion in the general channel touched on payment infrastructure for agents built on Solana using the x402 protocol. One developer asked whether to support USDC-SPL on Solana via the PayAI facilitator or to keep settlements in Base USDC only. Stan suggested supporting both and letting the client choose the chain to minimize friction for agents. The developer agreed and indicated they would add USDC-SPL via PayAI alongside Base USDC.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776216114998-v0uner.jpg"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Overall Project Summary: April 14, 2026",
+      "content": [
+        {
+          "text": "The primary focus of the April 14, 2026 project period was stabilizing the CI/CD pipeline across multiple repositories. The team resolved widespread release workflow failures and race conditions caused by concurrent jobs and non-fast-forward push conflicts. This was accomplished by implementing serialization, retry logic, and build fixes across the elizaos/eliza, elizaos-plugins/plugin-anthropic, and elizaos-plugins/registry repositories. Release reliability was further improved by ignoring dirty plugin submodules during the publishing process.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-14.json",
+          "posters": "https://cdn.elizaos.news/posters/1776216212103-hy75wl.png"
+        },
+        {
+          "text": "On the feature side, the Anthropic plugin received notable enhancements, including the addition of OAuth support for Claude Max subscriptions and a new CLI-based headless authentication mode. Core stability improvements were also made, including a legacy fallback for agent restarts and new diagnostics for monitoring plugin state drift.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-14.json",
+          "posters": "https://cdn.elizaos.news/posters/1776216249245-fiedbn.png"
+        },
+        {
+          "text": "Several items remain in progress, including pipeline hooks, multiple dependency bumps for npm, yarn, cargo, and uv groups, and three pending pull requests to add the blueprint.xyz plugin-solentic to the plugin registry. On the issue front, two new release failures were reported for versions v2.0.0-alpha.160 and v2.0.0-alpha.162, while the bulk of previously reported concurrency and release workflow issues across all three repositories were successfully closed.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-14.json",
+          "posters": "https://cdn.elizaos.news/posters/1776216281906-lvqh2i.png"
+        }
+      ],
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1776129841
+  "date": 1776216295
 }
