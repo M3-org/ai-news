@@ -1,80 +1,46 @@
-# elizaOS Discord - 2026-04-14
+# elizaOS Discord - 2026-04-15
 
 ## Summary
 
-### Organizational Transition
+### Security and Moderation
 
-Shaw announced the shutdown of Eliza Labs on April 12, 2026, citing market conditions, depleted treasury, and inability to reach revenue. However, odilitime clarified this represents a shift from paid development to community-driven open source work rather than a complete shutdown. The core framework development continues with Shaw and odilitime leading efforts. The transition separates development discussion (Cozy devs) from economic/community discussion (main Discord). Internal frustrations were revealed about previous team productivity issues and focus on UI over core agent functionality.
+The channels experienced multiple security incidents on April 15, 2026. Scam attempts were identified in the AIRDROP channel by waiser0165 and jvik, which odilitime confirmed as fraudulent. Stan0473 indicated active moderation efforts to remove scam content. In the coders channel, aadenhumphrey_79746 reported a user (ID: 1159555071747563520) for sending fake links, and moderator neuro023 promptly banned the offending user.
 
-### Framework Development Progress
+### New Package Release
 
-ElizaOS v3 is nearing completion. The Spartan agent is being developed for marketing automation with local model support for cost reduction. Plans include agentic business demos and potential revival of agentic DAO stack given improved AI models. Odilitime mentioned repurposing Spartan technology built for previous projects.
+huhuhu0621_67650 announced the release of TrustGate, an Express middleware package for ERC-8004 trust scoring for x402 agents. The package is available on npm as @oceanrun/trustgate and can be integrated with a single line of code to add trust gating to Express endpoints.
 
-### Plugin Development
+### Technical Issues
 
-A pull request for the elizaos-plugins/plugin-anthropic repository added two key features: a 'claude -p' command solution and missing reasoning type support. The PR introduced TEXT_REASONING_SMALL_MODEL_TYPE with fallback to the main model. Additional functionality including streaming support for the 'claude -p' command was prepared in a follow-up PR.
-
-### Payment Infrastructure
-
-Discussion focused on x402 agent payment infrastructure on Solana. huhuhu0621_67650 is building a trust scoring service for agent wallets and evaluating between USDC-SPL on Solana versus Base USDC for settlements. Stan0473 recommended supporting multiple chains to reduce friction.
-
-### Security Concerns
-
-Scammers were impersonating odilitime and sending fake airdrop messages to community members. The scam attempts were identified and required cleanup from the Discord server.
-
-### CI/CD Pipeline Issues
-
-The CI/CD pipeline encountered multiple build errors during package publishing: workspace dependency '@elizaos/core' not found error attributed to alpha path changes, and 'jsonrepair' resolution failure during browser build. Work was ongoing to fix package.json to resolve these issues.
+Mladcepes raised concerns about wallet address and GitHub profile linking issues in both the discussion and coders channels. This question remained unanswered during the day. Ricky_05784 mentioned learning experiences with OpenClaw and discussed API costs versus OAUTH implementation while seeking work opportunities.
 
 ## FAQ
 
-**Q: Is Eliza Labs completely shutting down?**
-A: No, this represents a shift from paid development to community-driven open source work rather than a complete shutdown. Core framework development continues with Shaw and odilitime leading efforts.
+**Q: What is TrustGate and how do I use it?**
+A: TrustGate is an Express middleware package for ERC-8004 trust scoring for x402 agents, released by huhuhu0621_67650. It is available on npm as @oceanrun/trustgate and can be integrated with a single line of code to add trust gating to Express endpoints.
 
-**Q: What is the status of ElizaOS v3?**
-A: ElizaOS v3 is nearing completion according to odilitime.
-
-**Q: What is the Spartan agent?**
-A: Spartan agent is being developed for marketing automation with local model support for cost reduction. The technology is being repurposed from previous projects.
-
-**Q: Which blockchain should be used for agent payment settlements?**
-A: Stan0473 recommended supporting multiple chains to reduce friction, though the discussion focused on USDC-SPL on Solana versus Base USDC.
-
-**Q: What new features were added to the Anthropic plugin?**
-A: The plugin received a 'claude -p' command solution, missing reasoning type support (TEXT_REASONING_SMALL_MODEL_TYPE), and streaming support for the 'claude -p' command.
-
-**Q: What caused the CI/CD pipeline failures?**
-A: Two main issues: workspace dependency '@elizaos/core' not found error due to alpha path changes, and 'jsonrepair' resolution failure during browser build.
+**Q: How are scam attempts being handled in the channels?**
+A: Moderators are actively monitoring and removing scam content. Confirmed fraudulent content in the AIRDROP channel was identified and removed, and users sending fake links are being banned promptly.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** semipai
-**Resolution:** odilitime identified a reported airdrop mention as a scam attempt and requested information about where the message appeared for removal.
+**Issue:** Wallet address and GitHub profile linking problems
+- Helpee: mladcepes
+- Helper: None
+- Resolution: Unresolved - question raised in both discussion and coders channels but received no response
 
-**Helper:** odilitime
-**Helpee:** stan0473
-**Resolution:** odilitime reviewed PR #17 for the Anthropic plugin, raised concerns about potential Anthropic account bans (which were addressed), identified two code issues via PR comments, and merged the PR after fixes were applied.
-
-**Helper:** Stan0473
-**Helpee:** huhuhu0621_67650
-**Resolution:** Stan0473 recommended supporting multiple chains to reduce friction when deciding between USDC-SPL on Solana versus Base USDC for agent payment settlements.
+**Issue:** Fake links and scam attempts
+- Helpee: Community
+- Helper: waiser0165, jvik (identification), odilitime (confirmation), Stan0473 (moderation), neuro023 (enforcement)
+- Resolution: Resolved - scam content removed and offending users banned
 
 ## Action Items
 
 ### Technical
 
-- Fix package.json to resolve '@elizaos/core' workspace dependency not found error (mentioned by odilitime)
-- Resolve 'jsonrepair' resolution failure during browser build (mentioned by odilitime)
-- Remove scam messages impersonating odilitime from Discord server (mentioned by odilitime)
-- Implement trust scoring service for agent wallets (mentioned by huhuhu0621_67650)
-- Evaluate multi-chain support for payment settlements (mentioned by Stan0473)
+- Investigate and resolve wallet address and GitHub profile linking issues (mentioned by mladcepes)
+- Continue monitoring for security threats and scam attempts (mentioned by waiser0165, jvik, Stan0473)
 
-### Features
+### Documentation
 
-- Complete ElizaOS v3 development (mentioned by odilitime)
-- Develop Spartan agent for marketing automation with local model support (mentioned by odilitime)
-- Create agentic business demos (mentioned by odilitime)
-- Add streaming support for 'claude -p' command in Anthropic plugin (mentioned by stan0473)
-- Implement TEXT_REASONING_SMALL_MODEL_TYPE with fallback to main model (mentioned by stan0473)
-- Consider revival of agentic DAO stack (mentioned by odilitime)
+- Document TrustGate integration process and usage examples (mentioned by huhuhu0621_67650)
