@@ -1,35 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-04-08 to 2026-04-14",
+  "title": "Weekly Report - 2026-04-09 to 2026-04-15",
   "categories": [
-    {
-      "title": "ElizaOS Community Discussion and Development Updates",
-      "content": [
-        {
-          "text": "In the general discussion channel, community members expressed skepticism about crypto promises, with some noting that most announcements in the space fail to materialize. Trading sentiment was reported as very bad. A debate arose about ElizaOS being multichain rather than Solana-exclusive, with one user clarifying that ElizaOS supports multiple chains. The elizabao_ai project was described as still in development, managed by Pleasures, with plans to integrate with ElizaCloud and create agents for prediction markets. A user named Amman inquired about a ticket system for a Discord promotion discussion, but was told none exists. A fullstack developer named Yash introduced himself as an open source contributor with five years of experience building AI products, sharing his GitHub and X profiles. A project called Coopa was shared, described as an AI that mirrors user nature rather than corporate models, built on Arweave with a zero-trust approach.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1491488673588580548_85eddca7.jpg",
-            "https://cdn.elizaos.news/elizaos-media/115717039-v-4-s-400_8820ff67.jpg"
-          ]
-        },
-        {
-          "text": "In the coders channel, a developer asked how to prevent agents from performing unsafe actions, with Odilitime responding that having a good feeling for it is the current approach. Odilitime also revealed he is working on new v2.x agents, currently in the develop branch of the repository, undergoing testing before a release and announcement. The update is also integrated inside Milady. ElizaBAO asked if the work is open source and was confirmed it is available on the repo in the develop branch. A representative from BitMart reached out in the coders channel seeking to discuss listing cooperation with the core team. The same Coopa AI project was also shared in this channel.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1491488673588580548_85eddca7.jpg"
-        }
-      ],
-      "topic": "discordrawdata"
-    },
-    {
-      "title": "ElizaOS Project Summary - April 8, 2026",
-      "content": {
-        "text": "Development on April 8, 2026 centered on two main areas: cross-chain interoperability and architectural discussions around agent identity and trust. On the completed work front, a new plugin was initiated to enable cross-chain swaps across more than 10 blockchain networks, added via the MangoSwap ElizaOS plugin pull request in the registry. This represents a significant expansion of cross-chain functionality within the ElizaOS ecosystem. In parallel, active development continues on the plugin-anthropic side, with updates targeting Opus 4.x compatibility, including temperature settings, output caps, and updated naming conventions for ai-sdk v6. A key area requiring community attention is the ongoing debate around inter-agent coordination. Discussions are focused on solving the cold-start trust problem, which refers to how independent agents can establish verifiable trust with one another without prior interaction history. Proposed solutions involve the use of WTRMRK and on-chain credentials, as well as Base L2 append-only attestation sequences to build and verify agent behavioral history. Community input is being sought to finalize the implementation strategy for these mechanisms.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-08.json",
-        "posters": "https://cdn.elizaos.news/posters/1775696836215-y52z4m.jpg"
-      },
-      "topic": "miscellaneous"
-    },
     {
       "title": "ElizaOS Community Discussion and Project Updates",
       "content": [
@@ -254,7 +226,49 @@
         }
       ],
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Discord Community Activity - April 15, 2026",
+      "content": [
+        {
+          "text": "Community members flagged multiple scam attempts in the general discussion channel. A fake airdrop post with an everyone tag and link was identified as a scam by community members and confirmed by core team member Odilitime. A moderator (Stan) worked to remove the scam posts as soon as they were spotted. Additionally, a user was warned about a scammer and told to block them. Warning videos were shared by Dr. Neuro in response to scam-related activity.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "videos": [
+            "https://cdn.elizaos.news/elizaos-media/lv_0_20251104003508_3e28350d.mp4",
+            "https://cdn.elizaos.news/elizaos-media/beware_of_20251030_120806_0000-1_4e980e94.mp4"
+          ],
+          "posters": "https://cdn.elizaos.news/posters/1776302677605-v1xg7a.jpg"
+        },
+        {
+          "text": "In the coders channel, a user (NovaOS) was banned after being reported by Aaden H for sending fake links. Dr. Neuro confirmed the ban. Separately, Mladen Radivoj asked in both the general and coders channels whether anyone had experienced problems linking wallet addresses and GitHub profiles, though no direct answers were recorded. A user named ricky also posted in the general channel offering lead generation, marketing, and sales services, mentioning they had spent significant money learning OpenClaw and wasted API credits.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1494052018866749522_ceb5a2d1.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1494052018866749522_8f369583.mp4"
+        },
+        {
+          "text": "On the development side, Odilitime shared a pull request for the ElizaOS repository (PR 6733) titled 'feat: pipeline hooks'. The PR introduces a pipeline hook subsystem in the elizaos/core package, including registerPipelineHook and applyPipelineHooks with typed support. It is described as useful for the DPE prompt optimizer, plugin-typography, and more. All checks passed with no conflicts at the time of posting.",
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/6733_cce91a5b.jpg"
+        },
+        {
+          "text": "A community member named oceanrun shared a new npm package called @oceanrun/trustgate, described as Express middleware implementing ERC-8004 trust scoring for x402 agents. The package allows developers to add trust gating to any Express endpoint with a single import and one line of code. Documentation is available on npmjs.com.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Plugin Ecosystem Stability and Security Updates - April 15, 2026",
+      "content": {
+        "text": "Development activity on April 15, 2026 centered on improving the stability and security of the ElizaOS plugin ecosystem. Three new pull requests were opened across key repositories. For the Discord plugin, pull request 48 introduced safer default configurations, DM allowlist gating, and generation timeout fallbacks to strengthen security handling. For the Telegram plugin, pull request 27 implemented a fix to prevent duplicate pollers per bot token, addressing bot polling reliability issues. Additionally, pull request 341 was opened against the plugin registry to add the third-party package at-thecolony/elizaos-plugin, expanding the available integrations in the registry.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-15.json",
+        "posters": "https://cdn.elizaos.news/posters/1776302786146-hhzsh6.png"
+      },
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1776216295
+  "date": 1776302800
 }

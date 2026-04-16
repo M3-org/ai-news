@@ -7,14 +7,12 @@
       "content": [
         {
           "text": "Community members flagged multiple scam attempts in the general discussion channel. A fake airdrop post with an everyone tag and link was identified as a scam by community members and confirmed by core team member Odilitime. A moderator (Stan) worked to remove the scam posts as soon as they were spotted. Additionally, a user was warned about a scammer and told to block them. Warning videos were shared by Dr. Neuro in response to scam-related activity.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "videos": [
-            "https://cdn.discordapp.com/attachments/1253563209462448241/1494013866303291472/lv_0_20251104003508.mp4?ex=69e11057&is=69dfbed7&hm=19d82ee74bf3dfc599df0dd12ceb122fda8d6f50824a3bc243bc903d2fd8ed07&",
-            "https://cdn.discordapp.com/attachments/1253563209462448241/1494049992866926673/BEWARE_OF_20251030_120806_0000-1.mp4?ex=69e131fc&is=69dfe07c&hm=0f197faf1e31b3903bf41c404a8bbce7f469ac3ce87949a8d6548d36b3221165&"
-          ]
+            "https://cdn.elizaos.news/elizaos-media/lv_0_20251104003508_3e28350d.mp4",
+            "https://cdn.elizaos.news/elizaos-media/beware_of_20251030_120806_0000-1_4e980e94.mp4"
+          ],
+          "posters": "https://cdn.elizaos.news/posters/1776302677605-v1xg7a.jpg"
         },
         {
           "text": "In the coders channel, a user (NovaOS) was banned after being reported by Aaden H for sending fake links. Dr. Neuro confirmed the ban. Separately, Mladen Radivoj asked in both the general and coders channels whether anyone had experienced problems linking wallet addresses and GitHub profiles, though no direct answers were recorded. A user named ricky also posted in the general channel offering lead generation, marketing, and sales services, mentioning they had spent significant money learning OpenClaw and wasted API credits.",
@@ -22,46 +20,28 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744",
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
-          "images": [
-            "https://media.tenor.com/wEt6BhusryIAAAAe/stare-sam-jackson.png"
-          ],
-          "videos": [
-            "https://media.tenor.com/wEt6BhusryIAAAPo/stare-sam-jackson.mp4"
-          ]
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1494052018866749522_ceb5a2d1.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1494052018866749522_8f369583.mp4"
         },
         {
           "text": "On the development side, Odilitime shared a pull request for the ElizaOS repository (PR 6733) titled 'feat: pipeline hooks'. The PR introduces a pipeline hook subsystem in the elizaos/core package, including registerPipelineHook and applyPipelineHooks with typed support. It is described as useful for the DPE prompt optimizer, plugin-typography, and more. All checks passed with no conflicts at the time of posting.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1377726087789940836"
-          ],
-          "images": [
-            "https://opengraph.githubassets.com/294415df742d93aa1b57618c2221e3dba32c6baa4e4ebc9ee12b0eb6adb5f665/elizaOS/eliza/pull/6733"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836",
+          "images": "https://cdn.elizaos.news/elizaos-media/6733_cce91a5b.jpg"
         },
         {
           "text": "A community member named oceanrun shared a new npm package called @oceanrun/trustgate, described as Express middleware implementing ERC-8004 trust scoring for x402 agents. The package allows developers to add trust gating to any Express endpoint with a single import and one line of code. Documentation is available on npmjs.com.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Plugin Ecosystem Stability and Security Updates - April 15, 2026",
-      "content": [
-        {
-          "text": "Development activity on April 15, 2026 centered on improving the stability and security of the ElizaOS plugin ecosystem. Three new pull requests were opened across key repositories. For the Discord plugin, pull request 48 introduced safer default configurations, DM allowlist gating, and generation timeout fallbacks to strengthen security handling. For the Telegram plugin, pull request 27 implemented a fix to prevent duplicate pollers per bot token, addressing bot polling reliability issues. Additionally, pull request 341 was opened against the plugin registry to add the third-party package at-thecolony/elizaos-plugin, expanding the available integrations in the registry.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-15.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development activity on April 15, 2026 centered on improving the stability and security of the ElizaOS plugin ecosystem. Three new pull requests were opened across key repositories. For the Discord plugin, pull request 48 introduced safer default configurations, DM allowlist gating, and generation timeout fallbacks to strengthen security handling. For the Telegram plugin, pull request 27 implemented a fix to prevent duplicate pollers per bot token, addressing bot polling reliability issues. Additionally, pull request 341 was opened against the plugin registry to add the third-party package at-thecolony/elizaos-plugin, expanding the available integrations in the registry.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-15.json",
+        "posters": "https://cdn.elizaos.news/posters/1776302786146-hhzsh6.png"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -143,8 +123,7 @@
     },
     "NovaOS": {
       "id": "1159555071747563520",
-      "username": "burrito0966_69803",
-      "roles": []
+      "username": "burrito0966_69803"
     },
     "Mladen Radivojević": {
       "id": "406172641636909057",
@@ -284,8 +263,7 @@
     },
     "Кеnе": {
       "id": "1448256787428937860",
-      "username": "rohitt_04x",
-      "roles": []
+      "username": "rohitt_04x"
     },
     "val | Will not DM1st": {
       "id": "978750674051432459",
@@ -308,7 +286,6 @@
     "Jvik": {
       "id": "144141968052715520",
       "username": "jvik",
-      "roles": [],
       "totalMessages": 1
     },
     "Notsquwashy2": {
