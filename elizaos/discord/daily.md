@@ -1,46 +1,52 @@
-# elizaOS Discord - 2026-04-15
+# elizaOS Discord - 2026-04-16
 
 ## Summary
 
-### Security and Moderation
+### Product Development Status
 
-The channels experienced multiple security incidents on April 15, 2026. Scam attempts were identified in the AIRDROP channel by waiser0165 and jvik, which odilitime confirmed as fraudulent. Stan0473 indicated active moderation efforts to remove scam content. In the coders channel, aadenhumphrey_79746 reported a user (ID: 1159555071747563520) for sending fake links, and moderator neuro023 promptly banned the offending user.
+The ElizaOS team confirmed that v3 Eliza is nearing completion, with active development ongoing for both the Milady app and Eliza app. The team's primary focus remains on product development rather than token marketing activities.
 
-### New Package Release
+### Token and Blockchain Deployment
 
-huhuhu0621_67650 announced the release of TrustGate, an Express middleware package for ERC-8004 trust scoring for x402 agents. The package is available on npm as @oceanrun/trustgate and can be integrated with a single line of code to add trust gating to Express endpoints.
+A critical clarification was provided that ElizaOS is already deployed on Solana, contrary to widespread community misconceptions. The migration period for ai16z tokens has officially closed with no workarounds available for those who missed the deadline.
 
-### Technical Issues
+### Communication and Transparency Concerns
 
-Mladcepes raised concerns about wallet address and GitHub profile linking issues in both the discussion and coders channels. This question remained unanswered during the day. Ricky_05784 mentioned learning experiences with OpenClaw and discussed API costs versus OAUTH implementation while seeking work opportunities.
+Community members expressed significant frustration over communication gaps and lack of updates. The X (Twitter) account appears inactive despite having gold check verification. Members strongly advocated for increased transparency, regular roadmap updates, and more frequent product release announcements, particularly given the current momentum in the AI agent market.
+
+### Technical Discussions
+
+odilitime announced plans for a technical discussion about LLM limits with developers, indicating ongoing technical optimization efforts.
 
 ## FAQ
 
-**Q: What is TrustGate and how do I use it?**
-A: TrustGate is an Express middleware package for ERC-8004 trust scoring for x402 agents, released by huhuhu0621_67650. It is available on npm as @oceanrun/trustgate and can be integrated with a single line of code to add trust gating to Express endpoints.
+**Q: Is ElizaOS deployed on Solana?**
+A: Yes, ElizaOS is already deployed on Solana. This was confirmed as a clarification to community misconceptions.
 
-**Q: How are scam attempts being handled in the channels?**
-A: Moderators are actively monitoring and removing scam content. Confirmed fraudulent content in the AIRDROP channel was identified and removed, and users sending fake links are being banned promptly.
+**Q: Can I still migrate my ai16z tokens?**
+A: No, the migration period for ai16z tokens has officially closed and there are no workarounds available.
+
+**Q: What is the current status of v3 Eliza?**
+A: v3 Eliza is nearing completion and the team is actively developing it.
+
+**Q: Why is there limited communication from the team?**
+A: The team is focused on product development rather than token marketing, though community members have expressed strong concerns about the lack of updates.
+
+**Q: What apps are currently in development?**
+A: The team is actively developing both the Milady app and Eliza app.
 
 ## Help Interactions
 
-**Issue:** Wallet address and GitHub profile linking problems
-- Helpee: mladcepes
-- Helper: None
-- Resolution: Unresolved - question raised in both discussion and coders channels but received no response
-
-**Issue:** Fake links and scam attempts
-- Helpee: Community
-- Helper: waiser0165, jvik (identification), odilitime (confirmation), Stan0473 (moderation), neuro023 (enforcement)
-- Resolution: Resolved - scam content removed and offending users banned
+No specific help interactions with clear helper-helpee-resolution patterns were documented in the provided channel summary.
 
 ## Action Items
 
 ### Technical
 
-- Investigate and resolve wallet address and GitHub profile linking issues (mentioned by mladcepes)
-- Continue monitoring for security threats and scam attempts (mentioned by waiser0165, jvik, Stan0473)
+- Conduct technical discussion about LLM limits with developers (mentioned by odilitime)
 
 ### Documentation
 
-- Document TrustGate integration process and usage examples (mentioned by huhuhu0621_67650)
+- Provide roadmap updates to the community (mentioned by community members)
+- Increase communication frequency on ElizaOS social channels (mentioned by community members)
+- Clarify deployment status and product releases more regularly (mentioned by community members)

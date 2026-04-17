@@ -1,7 +1,7 @@
 {
   "date": "all",
   "source": "elizaos",
-  "generated_at": "2026-04-16T01:23:14.917Z",
+  "generated_at": "2026-04-17T01:20:56.595Z",
   "base_path": "elizaos-media",
   "files": [
     {
@@ -61262,13 +61262,46 @@
           "count": 1
         }
       ]
+    },
+    {
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2044765484571353089/img/GDABmeVS0Gf_55Uo.jpg:large",
+      "filename": "embed-thumbnail-1494404264745762877.jpg:large",
+      "unique_name": "embed-thumbnail-1494404264745762877_a904f98d.jpg",
+      "hash": "a904f98d",
+      "type": "image",
+      "media_type": "embed_thumbnail",
+      "message_id": "1494404264745762877",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "555035784378318875",
+      "timestamp": "2026-04-16",
+      "message_content": "https://x.com/elizaok_bsc/status/2044765545455886377?s=20"
+    },
+    {
+      "url": "https://twitter.com/i/videos/tweet/2044765545455886377",
+      "filename": "embed-video-1494404264745762877.com/i/videos/tweet/2044765545455886377",
+      "unique_name": "2044765545455886377_7e58903f.mp4",
+      "hash": "7e58903f",
+      "type": "video",
+      "media_type": "embed_video",
+      "content_type": "video/mp4",
+      "message_id": "1494404264745762877",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "555035784378318875",
+      "timestamp": "2026-04-16",
+      "message_content": "https://x.com/elizaok_bsc/status/2044765545455886377?s=20"
     }
   ],
   "stats": {
-    "total_files": 3047,
+    "total_files": 3049,
     "by_type": {
-      "video": 656,
-      "image": 2364,
+      "video": 657,
+      "image": 2365,
       "document": 25,
       "audio": 2
     },

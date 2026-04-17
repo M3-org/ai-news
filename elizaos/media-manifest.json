@@ -1,119 +1,49 @@
 {
-  "date": "2026-04-15",
+  "date": "2026-04-16",
   "source": "elizaos",
-  "generated_at": "2026-04-16T01:23:13.698Z",
+  "generated_at": "2026-04-17T01:20:55.658Z",
   "base_path": "elizaos-media",
   "files": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1253563209462448241/1494013866303291472/lv_0_20251104003508.mp4?ex=69e11057&is=69dfbed7&hm=19d82ee74bf3dfc599df0dd12ceb122fda8d6f50824a3bc243bc903d2fd8ed07&",
-      "proxy_url": "https://media.discordapp.net/attachments/1253563209462448241/1494013866303291472/lv_0_20251104003508.mp4?ex=69e11057&is=69dfbed7&hm=19d82ee74bf3dfc599df0dd12ceb122fda8d6f50824a3bc243bc903d2fd8ed07&",
-      "filename": "lv_0_20251104003508.mp4",
-      "unique_name": "lv_0_20251104003508_3e28350d.mp4",
-      "hash": "3e28350d",
-      "type": "video",
-      "media_type": "attachment",
-      "size": 1132005,
-      "content_type": "video/mp4",
-      "width": 480,
-      "height": 854,
-      "message_id": "1494013866554953728",
-      "channel_id": "1253563209462448241",
-      "channel_name": "💬-discussion",
-      "guild_id": "1253563208833433701",
-      "guild_name": "elizaOS",
-      "user_id": "403574677164916746",
-      "timestamp": "2026-04-15",
-      "message_content": "",
-      "reactions": [
-        {
-          "emoji": "😂",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "url": "https://cdn.discordapp.com/attachments/1253563209462448241/1494049992866926673/BEWARE_OF_20251030_120806_0000-1.mp4?ex=69e131fc&is=69dfe07c&hm=0f197faf1e31b3903bf41c404a8bbce7f469ac3ce87949a8d6548d36b3221165&",
-      "proxy_url": "https://media.discordapp.net/attachments/1253563209462448241/1494049992866926673/BEWARE_OF_20251030_120806_0000-1.mp4?ex=69e131fc&is=69dfe07c&hm=0f197faf1e31b3903bf41c404a8bbce7f469ac3ce87949a8d6548d36b3221165&",
-      "filename": "BEWARE_OF_20251030_120806_0000-1.mp4",
-      "unique_name": "beware_of_20251030_120806_0000-1_4e980e94.mp4",
-      "hash": "4e980e94",
-      "type": "video",
-      "media_type": "attachment",
-      "size": 2432940,
-      "content_type": "video/mp4",
-      "width": 480,
-      "height": 854,
-      "message_id": "1494049993542205470",
-      "channel_id": "1253563209462448241",
-      "channel_name": "💬-discussion",
-      "guild_id": "1253563208833433701",
-      "guild_name": "elizaOS",
-      "user_id": "403574677164916746",
-      "timestamp": "2026-04-15",
-      "message_content": ""
-    },
-    {
-      "url": "https://media.tenor.com/wEt6BhusryIAAAAe/stare-sam-jackson.png",
-      "filename": "embed-thumbnail-1494052018866749522.png",
-      "unique_name": "embed-thumbnail-1494052018866749522_ceb5a2d1.png",
-      "hash": "ceb5a2d1",
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2044765484571353089/img/GDABmeVS0Gf_55Uo.jpg:large",
+      "filename": "embed-thumbnail-1494404264745762877.jpg:large",
+      "unique_name": "embed-thumbnail-1494404264745762877_a904f98d.jpg",
+      "hash": "a904f98d",
       "type": "image",
       "media_type": "embed_thumbnail",
-      "message_id": "1494052018866749522",
-      "channel_id": "1300025221834739744",
-      "channel_name": "💬-coders",
+      "message_id": "1494404264745762877",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "403574677164916746",
-      "timestamp": "2026-04-15",
-      "message_content": "https://tenor.com/view/stare-sam-jackson-shook-shocked-scary-gif-5260044"
+      "user_id": "555035784378318875",
+      "timestamp": "2026-04-16",
+      "message_content": "https://x.com/elizaok_bsc/status/2044765545455886377?s=20"
     },
     {
-      "url": "https://media.tenor.com/wEt6BhusryIAAAPo/stare-sam-jackson.mp4",
-      "filename": "embed-video-1494052018866749522.mp4",
-      "unique_name": "embed-video-1494052018866749522_8f369583.mp4",
-      "hash": "8f369583",
+      "url": "https://twitter.com/i/videos/tweet/2044765545455886377",
+      "filename": "embed-video-1494404264745762877.com/i/videos/tweet/2044765545455886377",
+      "unique_name": "2044765545455886377_7e58903f.mp4",
+      "hash": "7e58903f",
       "type": "video",
       "media_type": "embed_video",
       "content_type": "video/mp4",
-      "message_id": "1494052018866749522",
-      "channel_id": "1300025221834739744",
-      "channel_name": "💬-coders",
+      "message_id": "1494404264745762877",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
       "guild_id": "1253563208833433701",
       "guild_name": "elizaOS",
-      "user_id": "403574677164916746",
-      "timestamp": "2026-04-15",
-      "message_content": "https://tenor.com/view/stare-sam-jackson-shook-shocked-scary-gif-5260044"
-    },
-    {
-      "url": "https://opengraph.githubassets.com/294415df742d93aa1b57618c2221e3dba32c6baa4e4ebc9ee12b0eb6adb5f665/elizaOS/eliza/pull/6733",
-      "filename": "embed-thumbnail-1493868859348877333.com/294415df742d93aa1b57618c2221e3dba32c6baa4e4ebc9ee12b0eb6adb5f665/elizaOS/eliza/pull/6733",
-      "unique_name": "6733_cce91a5b.jpg",
-      "hash": "cce91a5b",
-      "type": "image",
-      "media_type": "embed_thumbnail",
-      "message_id": "1493868859348877333",
-      "channel_id": "1377726087789940836",
-      "channel_name": "xfn-framework",
-      "guild_id": "1253563208833433701",
-      "guild_name": "elizaOS",
-      "user_id": "580487826420793364",
-      "timestamp": "2026-04-15",
-      "message_content": "https://github.com/elizaOS/eliza/pull/6733\nall checks pass, no conflicts",
-      "reactions": [
-        {
-          "emoji": "<:elizasalute:1304205346885210133>",
-          "count": 1
-        }
-      ]
+      "user_id": "555035784378318875",
+      "timestamp": "2026-04-16",
+      "message_content": "https://x.com/elizaok_bsc/status/2044765545455886377?s=20"
     }
   ],
   "stats": {
-    "total_files": 5,
+    "total_files": 2,
     "by_type": {
-      "video": 3,
-      "image": 2
+      "image": 1,
+      "video": 1
     },
-    "total_size_bytes": 3564945
+    "total_size_bytes": 0
   }
 }
