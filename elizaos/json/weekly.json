@@ -1,42 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-04-09 to 2026-04-15",
+  "title": "Weekly Report - 2026-04-10 to 2026-04-16",
   "categories": [
-    {
-      "title": "ElizaOS Community Discussion and Project Updates",
-      "content": [
-        {
-          "text": "In the general discussion channel, community members expressed frustration about individuals who talk about plans but fail to follow through on them. Separately, there was growing interest and questions around the elizabao_ai project, with users asking what the project is and what they can currently do with it as a user. The elizabao project creator noted that many people are asking about it, suggesting rising hype. Community members also shared optimistic sentiments about breakthroughs happening and the potential of an eliza effect becoming real. One community member highlighted Hatcher.host as a major project currently in free beta, describing it as a platform where users can deploy Eliza agents without needing to write code, manage servers, or acquire hardware. It was described as a cloud computing alternative that allows users to manage and control their own agents, and was recommended as a way to learn how elizaOS functions.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1775783843939-xfpo7.png"
-          ]
-        }
-      ],
-      "topic": "discordrawdata"
-    },
-    {
-      "title": "ElizaOS Project Summary - April 9, 2026",
-      "content": [
-        {
-          "text": "The ElizaOS project on April 9, 2026 focused on foundational framework improvements across the core repository and several plugins. A new agent workspace was introduced to streamline startup processes, and multi-language support for Python and Rust was added to the core framework. Core runtime-composition APIs were also refactored to support flexible character loading via file paths and configuration options. On the plugin side, critical compatibility issues for Opus 4.x were resolved in the Anthropic plugin by migrating to ai-sdk v6 parameter naming conventions, renaming maxTokens to maxOutputTokens, and stabilizing model performance with adjusted temperature settings. Work in progress includes group addressee routing and anti-loop prompt guidance for the core, an event payload compatibility fix for the Anthropic plugin, feature parity improvements for the Discord plugin covering typing indicators, reactions, streaming, and slash commands, and UI refinements for the Telegram plugin to narrow chat display names for improved visual layout.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-09.json"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1775783866438-knj9a.jpg"
-          ]
-        }
-      ],
-      "topic": "miscellaneous"
-    },
     {
       "title": "ElizaOS Community Discussion and Developer Integration Questions",
       "content": [
@@ -268,7 +233,52 @@
         "posters": "https://cdn.elizaos.news/posters/1776302786146-hhzsh6.png"
       },
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Discussion - April 16, 2026",
+      "content": [
+        {
+          "text": "Community members expressed frustration over ElizaOS token underperforming while the broader crypto market was rallying. Several users noted the token showed little to no upward movement compared to other coins. Odilitime acknowledged the token was up on a 24-hour basis and encouraged celebrating small wins, while also noting the ElizaOS X account situation was in Twitter's hands.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776388934779-27x796.png"
+        },
+        {
+          "text": "A heated debate broke out between community members regarding the project's direction. One user accused Shaw and the team of making false promises, failing to deliver revenue, and not communicating with the community. Another user pushed back, stating they were not misleading anyone and confirmed that ElizaOS v3 is almost ready, and the team is actively working on the Milady app and Eliza app. There was general agreement that communication from the team has been poor and that Shaw has not addressed the community directly about unmet promises.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776388956585-901lq.png"
+        },
+        {
+          "text": "Multiple community members urged the team to publish a roadmap on the ElizaOS X account to build momentum, trust, and attention, especially given the favorable market conditions. Odilitime indicated the X account update was in Twitter's hands. Separately, Odilitime announced a discussion space about the limits of LLMs with some developers.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776388977790-culun7m.jpg"
+        },
+        {
+          "text": "A new user asked about migrating their Ai16z tokens to Eliza after missing the deadline. Odilitime confirmed that migration is now closed and stated there was no workaround available.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776388997684-jzmnxf.jpg"
+        },
+        {
+          "text": "A community member shared their participation in the BNB Chain Hackathon, building a value layer that automates alpha discovery and intelligent position building using ElizaOS. They requested votes on the DoraHacks platform as the project entered the judging phase with results expected in May.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1494404264745762877_a904f98d.jpg",
+          "videos": "https://cdn.elizaos.news/elizaos-media/2044765545455886377_7e58903f.mp4"
+        },
+        {
+          "text": "In the developer xfn-framework channel, Stan reported to Odilitime that the topup auto feature does not appear to be working on the cloud environment.",
+          "sources": "https://discord.com/channels/1253563208833433701/1377726087789940836"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Development Activity: April 16, 2026",
+      "content": {
+        "text": "Development activity on April 16, 2026 centered on improving developer tooling consistency and expanding the plugin ecosystem. A key update involved standardizing linting processes in the Ollama plugin by replacing relative biome paths with bunx invocations, ensuring consistent execution across different environments. This change is captured in a pull request that is currently awaiting review. Additionally, a new plugin called megaswap-elizaos-plugin has been submitted to the elizaos-plugins registry and is currently in progress pending approval.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-16.json",
+        "posters": "https://cdn.elizaos.news/posters/1776389044610-6pfaun.jpg"
+      },
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1776302800
+  "date": 1776389058
 }
