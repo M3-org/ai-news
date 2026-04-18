@@ -1,33 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-04-10 to 2026-04-16",
+  "title": "Weekly Report - 2026-04-11 to 2026-04-17",
   "categories": [
-    {
-      "title": "ElizaOS Community Discussion and Developer Integration Questions",
-      "content": [
-        {
-          "text": "In the general discussion channel, community members raised questions about ElizaOS token utility and future plans. One user asked about holding ElizaOS for future airdrops, and a moderator confirmed that some airdrops are planned but no details have been released yet. Another user pressed for specifics on token utility, including buyback timing and Jeju gas fee release, but was told there are no plans beyond what has already been laid out. Some community members expressed frustration over the lack of concrete details, with one noting the vague nature of project updates. On a more positive note, a project called promdict.ai introduced itself as a prompt and predict platform described as a battleground for agents. A community member also shared an upcoming Hong Kong event featuring elizaok_bsc built on ElizaOS. Additionally, a user shared a post about digital ownership and the risks of relying on centralized platforms for storing personal data. One user reported difficulty verifying their wallet on Collab.land and sought help from associates.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1492155893414887574_79080453.jpg"
-        },
-        {
-          "text": "In the developer coders channel, a developer shared details about Orbis implementing the x402 usage-based billing scheme for AI agents natively on Base, enabling agents to authorize a maximum spend and only pay for actual usage across LLM and compute APIs. Separately, a developer integrating a custom dashboard with ElizaOS v2 asked for canonical documentation on the Socket.IO messaging protocol. After extensive debugging, they found that direct emits fail and the working pattern requires emitting a message event with a type field, where type 1 corresponds to ROOM_JOINING and type 2 to SEND_MESSAGE, with authentication requiring an entityId UUID in socket options. They sought official documentation on the complete message type enum, required payload fields, and how to programmatically create a DM channel without using the official UI. A core developer responded by pointing to the ElizaOS documentation site and noted they are currently deep in v3 development, suggesting the use of an AI coding assistant to explore the codebase.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1492003566963916922_e9a1e022.jpg",
-          "videos": "https://cdn.elizaos.news/elizaos-media/2042401551696773289_a2a9abe0.mp4"
-        }
-      ],
-      "topic": "discordrawdata"
-    },
-    {
-      "title": "Activity Summary for 2026-04-10",
-      "content": {
-        "text": "No activity was recorded for the date of 2026-04-10. There is no data or events to report for this period.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-10.json",
-        "posters": "https://cdn.elizaos.news/posters/1775869978524-t7qfku.png"
-      },
-      "topic": "miscellaneous"
-    },
     {
       "title": "ElizaOS Community Discussion: Market Concerns, Bitget Delisting, and Developer Updates",
       "content": [
@@ -278,7 +252,40 @@
         "posters": "https://cdn.elizaos.news/posters/1776389044610-6pfaun.jpg"
       },
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Discussion: Team Structure, Token Concerns, and Developer Tools",
+      "content": [
+        {
+          "text": "A Twitter Space titled 'Limits of LLMs' hosted by Odilitime was shared in the general discussion channel, drawing some community attention. Community members also raised concerns about the ElizaOS token price, with some expressing frustration over declining market cap and lack of visible price movement. One user questioned whether ElizaOS was related to the AI16Z project, reflecting some confusion about the project's history and branding.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1494491046132977845_aa27401e.jpg"
+        },
+        {
+          "text": "A notable discussion emerged around the state of the ElizaOS team following a tweet from Shaw indicating that Eliza Labs is winding down and the project is returning to its core roots. Shaw confirmed he will continue building elizaOS full time, with v3 nearing beta and several teams already building on it. The new version is designed to allow anyone to build their own fully branded autonomous agent. Some community members interpreted this as the project reverting to a community-driven open source model similar to the early ai16z days, while others clarified that a smaller, more technical team remains active. Core contributor Stan clarified that Labs was an experimental organization for sub-projects, and that the current refocus is on the core framework itself, with GitHub activity continuing from both remaining developers and community contributors. Other Labs projects are described as on hold rather than abandoned. A warning was also issued by multiple moderators about a bulk airdrop scam circulating in the community.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776474950843-sii9ni.png"
+        },
+        {
+          "text": "In the coders channel, a developer shared information about the Orbis API, highlighting its AI Agent Memory API which provides persistent memory for AI agents across sessions using four endpoints for storing, retrieving, and listing key-value data with TTL support. A follow-up post introduced the Orbis Referral Program, which allows developers to earn 25 percent of payments made by referred developers through subscriptions and per-call micropayments, paid directly in USDC with no caps or expiry dates.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1494687035795963924_076b4614.jpg",
+            "https://cdn.elizaos.news/elizaos-media/embed-image-1494765645961629797_864b5f86.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Development Activity - April 17, 2026",
+      "content": {
+        "text": "Development activity on April 17, 2026 centered on expanding the ElizaOS ecosystem through new plugin integrations and broader network compatibility. Three pull requests are currently open and awaiting review. In the plugin-evm repository, a pull request has been submitted to add Radius Network support with the chain identifier eip155:723487. In the plugin registry, two separate submissions are pending review: one to add the @thecolony/elizaos-plugin and another to add the megalaunch-elizaos-plugin. All three pull requests require attention from reviewers before they can be merged into the respective repositories.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-17.json",
+        "posters": "https://cdn.elizaos.news/posters/1776474969340-masrs.png"
+      },
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1776389058
+  "date": 1776474982
 }
