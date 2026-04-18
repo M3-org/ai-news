@@ -1,7 +1,7 @@
 {
   "date": "all",
   "source": "elizaos",
-  "generated_at": "2026-04-17T01:20:56.595Z",
+  "generated_at": "2026-04-18T01:14:37.097Z",
   "base_path": "elizaos-media",
   "files": [
     {
@@ -61295,13 +61295,45 @@
       "user_id": "555035784378318875",
       "timestamp": "2026-04-16",
       "message_content": "https://x.com/elizaok_bsc/status/2044765545455886377?s=20"
+    },
+    {
+      "url": "https://pbs.twimg.com/media/HGG_EpSWYAE2KFO.jpg:large",
+      "filename": "embed-image-1494687035795963924.jpg:large",
+      "unique_name": "embed-image-1494687035795963924_076b4614.jpg",
+      "hash": "076b4614",
+      "type": "image",
+      "media_type": "embed_image",
+      "message_id": "1494687035795963924",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "1486451660023664741",
+      "timestamp": "2026-04-17",
+      "message_content": "https://x.com/OrbisAPI/status/2045125813046034775?s=20"
+    },
+    {
+      "url": "https://pbs.twimg.com/media/HGIIPf3aEAAtUC2.jpg:large",
+      "filename": "embed-image-1494765645961629797.jpg:large",
+      "unique_name": "embed-image-1494765645961629797_864b5f86.jpg",
+      "hash": "864b5f86",
+      "type": "image",
+      "media_type": "embed_image",
+      "message_id": "1494765645961629797",
+      "channel_id": "1300025221834739744",
+      "channel_name": "💬-coders",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "1486451660023664741",
+      "timestamp": "2026-04-17",
+      "message_content": "https://x.com/i/status/2045206261235359875"
     }
   ],
   "stats": {
-    "total_files": 3049,
+    "total_files": 3051,
     "by_type": {
       "video": 657,
-      "image": 2365,
+      "image": 2367,
       "document": 25,
       "audio": 2
     },

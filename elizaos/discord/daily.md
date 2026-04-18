@@ -1,52 +1,51 @@
-# elizaOS Discord - 2026-04-16
+# elizaOS Discord - 2026-04-17
 
 ## Summary
 
-### Product Development Status
+### Organizational Restructuring
 
-The ElizaOS team confirmed that v3 Eliza is nearing completion, with active development ongoing for both the Milady app and Eliza app. The team's primary focus remains on product development rather than token marketing activities.
+ElizaOS underwent significant organizational changes following Shaw's announcement about dissolving Eliza Labs. The Labs organization, which previously served as an experimental hub for different framework sub-projects with full-time developers, has been discontinued as this approach was deemed no longer relevant. The project has refocused exclusively on developing the core framework, with the goal of creating a significantly superior version. Other Labs projects have been placed on hold rather than abandoned to enable concentrated effort on the core framework.
 
-### Token and Blockchain Deployment
+### Development Model and Team Structure
 
-A critical clarification was provided that ElizaOS is already deployed on Solana, contrary to widespread community misconceptions. The migration period for ai16z tokens has officially closed with no workarounds available for those who missed the deadline.
+The project has transitioned back to an open contribution model similar to the original ai16z days, moving away from having a dedicated Eliza Labs team. Anyone can now contribute to the project. Despite the organizational changes, GitHub activity remains high with contributions from both remaining developers and the broader community. Multiple community members confirmed that ongoing development activity is clearly visible on the GitHub repository.
 
-### Communication and Transparency Concerns
+### Community Concerns and Token Discussion
 
-Community members expressed significant frustration over communication gaps and lack of updates. The X (Twitter) account appears inactive despite having gold check verification. Members strongly advocated for increased transparency, regular roadmap updates, and more frequent product release announcements, particularly given the current momentum in the AI agent market.
+Significant discussion emerged around token price performance and market cap, with some community members expressing frustration about price movements while others defended the team's prioritization of product quality over token price. Several scam warnings were issued regarding a bulk airdrop. The technical consensus emphasized that development continues with a smaller, more focused team dedicated to framework quality rather than managing multiple sub-projects.
 
-### Technical Discussions
+### Channel Activity
 
-odilitime announced plans for a technical discussion about LLM limits with developers, indicating ongoing technical optimization efforts.
+The coders channel showed minimal technical activity during this period, with only social greetings and two Twitter/X links shared by theredwizarddev related to OrbisAPI, though no accompanying discussion or context was provided.
 
 ## FAQ
 
-**Q: Is ElizaOS deployed on Solana?**
-A: Yes, ElizaOS is already deployed on Solana. This was confirmed as a clarification to community misconceptions.
+**Q: What happened to Eliza Labs?**
+A: Eliza Labs has been dissolved. It was previously an organization for experimenting with different framework sub-projects with full-time developers, but this approach is no longer relevant. The project has refocused exclusively on the core framework.
 
-**Q: Can I still migrate my ai16z tokens?**
-A: No, the migration period for ai16z tokens has officially closed and there are no workarounds available.
+**Q: Are the Labs projects abandoned?**
+A: No, other Labs projects are on hold rather than abandoned. This allows the team to focus resources on the core framework.
 
-**Q: What is the current status of v3 Eliza?**
-A: v3 Eliza is nearing completion and the team is actively developing it.
+**Q: Is development still active?**
+A: Yes, GitHub activity remains high with contributions from both remaining developers and the community. Multiple community members confirmed ongoing development activity is visible on GitHub.
 
-**Q: Why is there limited communication from the team?**
-A: The team is focused on product development rather than token marketing, though community members have expressed strong concerns about the lack of updates.
+**Q: What is the current team structure?**
+A: The project has returned to an open contribution model like the original ai16z days, where anyone can contribute, rather than having a dedicated Eliza Labs team.
 
-**Q: What apps are currently in development?**
-A: The team is actively developing both the Milady app and Eliza app.
+**Q: Why is the team not focused on token price?**
+A: The team is prioritizing product quality and framework development over token price performance.
 
 ## Help Interactions
 
-No specific help interactions with clear helper-helpee-resolution patterns were documented in the provided channel summary.
+No direct help interactions with clear helper-helpee-resolution patterns were documented in the provided channel summaries.
 
 ## Action Items
 
 ### Technical
 
-- Conduct technical discussion about LLM limits with developers (mentioned by odilitime)
+- Continue development on core framework with focus on creating a significantly superior version (mentioned by stan0473)
+- Maintain high GitHub contribution activity from remaining developers and community (mentioned by multiple community members)
 
 ### Documentation
 
-- Provide roadmap updates to the community (mentioned by community members)
-- Increase communication frequency on ElizaOS social channels (mentioned by community members)
-- Clarify deployment status and product releases more regularly (mentioned by community members)
+- Clarify organizational structure changes and open contribution model to community (mentioned by satsbased)
