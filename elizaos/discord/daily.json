@@ -1,67 +1,72 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-17",
-  "date": 1776384000,
+  "title": "elizaOS Discord - 2026-04-18",
+  "date": 1776470400,
   "stats": {
-    "totalMessages": 43,
-    "totalUsers": 21
+    "totalMessages": 46,
+    "totalUsers": 16
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on the organizational restructuring of ElizaOS following Shaw's announcement about dissolving Eliza Labs. The key technical clarification came from stan0473, who explained that Labs was previously an organization for experimenting with different framework sub-projects with full-time developers, but this approach is no longer relevant. The project has refocused exclusively on the core framework itself, aiming for a significantly superior version. GitHub activity remains high with contributions from both remaining developers and the community. Other Labs projects are on hold rather than abandoned to allow focus on the core framework. The discussion also addressed confusion about the team structure - satsbased clarified that the project has returned to an open contribution model like the original ai16z days, where anyone can contribute, rather than having a dedicated Eliza Labs team. Multiple community members confirmed ongoing development activity is visible on GitHub. There was significant discussion about token price concerns and market cap, with some members expressing frustration about price performance while others defended the team's focus on product quality over token price. Several scam warnings were issued regarding a bulk airdrop. The technical consensus is that development continues with a smaller, more focused team working on framework quality rather than multiple sub-projects.",
+      "summary": "The Discord chat segment shows minimal substantive technical discussion. The primary notable interaction involved kullai reporting security vulnerabilities in the open-source application. Initially, kullai inquired about a bug bounty program while tagging multiple team members. Stan0473 suggested creating a pull request or GitHub issue since it's open source. Kullai clarified these were security issues that shouldn't be disclosed publicly and asked about bounty availability. Odilitime (likely a project maintainer) responded that there is no bug bounty but offered to receive details via DM. Kullai initially declined to report without a bounty but then reconsidered as an ethical researcher and shared the security issues privately with odilitime, who acknowledged receipt. A secondary discussion involved valleybeyond7991 questioning the ElizaOS Twitter account's inactivity (no tweets for almost 3 weeks), with satsbased redirecting focus to Milady development as the current priority. Dep14 asked about a suspicious Solana airdrop claiming to be from Odilitime, which spankyxn confirmed as a scam. The majority of the chat consisted of spam accusations and off-topic exchanges with no technical value.",
       "faqs": [
         {
-          "question": "Is ElizaOS the same company as AI16Z?",
-          "askedBy": "waterview4u",
-          "answeredBy": "Unanswered"
+          "question": "Is there a bug bounty program for security vulnerabilities?",
+          "askedBy": "kullai",
+          "answeredBy": "odilitime"
         },
         {
-          "question": "What happened to the Eliza Labs team?",
-          "askedBy": "dannynor",
-          "answeredBy": "stan0473"
+          "question": "What is the situation with ElizaOS Twitter account having no tweets for almost 3 weeks?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "satsbased"
+        },
+        {
+          "question": "Is the Airdrop on Solana sent by Odilitime legitimate?",
+          "askedBy": "dep14",
+          "answeredBy": "spankyxn"
         }
       ],
       "helpInteractions": [
         {
           "helper": "stan0473",
-          "helpee": "Community",
-          "context": "Confusion about team structure and whether there are still developers working on ElizaOS",
-          "resolution": "Explained that Labs was reorganized to focus on core framework with smaller technical team, other projects on hold, GitHub shows active development from developers and community"
-        },
-        {
-          "helper": "stan0473",
-          "helpee": "vampsxbt",
-          "context": "Question about bulk airdrop legitimacy",
-          "resolution": "Confirmed it was a scam"
+          "helpee": "kullai",
+          "context": "kullai wanted to report security issues and asked about bug bounty program",
+          "resolution": "Suggested creating PR or GitHub issue for the open-source project"
         },
         {
           "helper": "odilitime",
-          "helpee": "vampsxbt",
-          "context": "Question about bulk airdrop legitimacy",
-          "resolution": "Confirmed it was a scam"
+          "helpee": "kullai",
+          "context": "kullai had security vulnerabilities to report but no public disclosure was appropriate",
+          "resolution": "Offered to receive security details via DM despite no bug bounty, kullai ultimately shared the issues privately"
+        },
+        {
+          "helper": "spankyxn",
+          "helpee": "dep14",
+          "context": "dep14 received suspicious Solana airdrop claiming to be from Odilitime",
+          "resolution": "Confirmed it was a scam and advised not to click links"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Continue refocusing development efforts on core framework to achieve superior version",
-          "mentionedBy": "stan0473"
+          "description": "Review and address security vulnerabilities reported by kullai",
+          "mentionedBy": "kullai"
         },
         {
           "type": "Technical",
-          "description": "Maintain high GitHub commit activity and community contributions",
-          "mentionedBy": "stan0473"
+          "description": "Focus development efforts on Milady project",
+          "mentionedBy": "satsbased"
         }
       ],
-      "messageCount": 40,
-      "userCount": 19
+      "messageCount": 43,
+      "userCount": 15
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "The chat segment for the #💬-coders channel contains minimal technical discussion. Two Twitter/X links were shared by theredwizarddev related to OrbisAPI, though the specific content of these links is not visible in the transcript. One user (lae4332) posted a greeting ('gm'). No technical discussions, problem-solving sessions, code implementations, or architectural decisions occurred during this time period. The channel activity was limited to social interaction and link sharing without accompanying context or discussion.",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical content. The conversation consists of two brief exchanges: mssundine inquired about being mentioned regarding an airdrop notification, and stan0473 responded characterizing it as a scam. No technical discussions, problem-solving, implementations, or development-related topics were present in this segment. The interaction appears to be off-topic for a coders channel, focusing instead on a potential phishing or scam attempt through Discord mentions.",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
@@ -70,45 +75,34 @@
     }
   ],
   "nicknameMap": {
-    "TheRedWizardDev": {
-      "id": "1486451660023664741",
-      "username": "theredwizarddev",
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
       "roles": [
-        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
         "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "BIBIRAJI": {
-      "id": "956919239946686505",
-      "username": "lae4332",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
         "Fr",
         "utility",
         "Coder",
-        "eliza"
+        "Labs"
       ],
-      "totalMessages": 1
+      "totalMessages": 38
     },
-    "stechannel": {
-      "id": "905999939748888626",
-      "username": "steesteban",
+    "Sundine": {
+      "id": "855359499309154304",
+      "username": "mssundine",
       "roles": [
         "Announcements",
         "Verified"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     },
     "chulylooly": {
       "id": "963012153026150501",
@@ -120,7 +114,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 17
+      "totalMessages": 20
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -149,43 +143,25 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 371
+      "totalMessages": 374
     },
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
+    "kullaisec": {
+      "id": "729634866068455424",
+      "username": "kullai",
       "roles": [
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Server Booster",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Fr",
         "utility",
         "Coder",
-        "Labs"
+        "eliza"
       ],
-      "totalMessages": 35
+      "totalMessages": 6
     },
-    "Vamps": {
-      "id": "593235799714037774",
-      "username": "vampsxbt",
+    "Fiend": {
+      "id": "1392208256109383750",
+      "username": "spankyxn",
       "roles": [
-        "Announcements",
-        "Verified",
-        "Coder"
-      ],
-      "totalMessages": 1
-    },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
-      "roles": [
-        "Verified",
+        "Helper",
+        "Creator",
+        "It",
         "Designer",
         "utility",
         "Coder",
@@ -193,11 +169,187 @@
       ],
       "totalMessages": 2
     },
-    "lenhung21": {
-      "id": "1139579257228636182",
-      "username": "lenhung21_13088",
-      "roles": [],
+    "Mr. Fox(dep14)": {
+      "id": "558061884968927238",
+      "username": "dep14",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
       "totalMessages": 1
+    },
+    "Demente117": {
+      "id": "943169661091053568",
+      "username": "demente117.",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "shad0w": {
+      "id": "308276393450668032",
+      "username": "wakesync",
+      "roles": [
+        "Contributor",
+        "Verified",
+        "External Dev",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor",
+        "Labs"
+      ]
+    },
+    "s": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "puncar": {
+      "id": "840590196775976981",
+      "username": "puncar",
+      "roles": [
+        "Helper",
+        "Labs",
+        "Core Dev",
+        "elizaOS Tester",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 73
+    },
+    "Jarvis": {
+      "id": "1438118447828435028",
+      "username": "janet08032",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ssollex_": {
+      "id": "1465547601008136242",
+      "username": "ssollex_",
+      "roles": [
+        "Trader",
+        "Creator",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "tcm390": {
+      "id": "688478180306452573",
+      "username": "tcm390",
+      "roles": [
+        "Server Booster",
+        "NFT",
+        "Verified",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor",
+        "Labs"
+      ]
+    },
+    "ugvei": {
+      "id": "602476803650748436",
+      "username": "frog.cs",
+      "roles": []
+    },
+    "yojo": {
+      "id": "1334022668063739967",
+      "username": "jobcn",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 22
+    },
+    "keleb": {
+      "id": "1091438996015566919",
+      "username": "keleb432",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 19
+    },
+    "xeno": {
+      "id": "1077669294919397387",
+      "username": "xeno_thales",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 5
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -211,151 +363,7 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 136
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 10
-    },
-    "Cybero": {
-      "id": "692034378863214602",
-      "username": ".cybero",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "hide.o.n": {
-      "id": "1486743497519399044",
-      "username": "hide.o.n",
-      "roles": [],
-      "totalMessages": 45
-    },
-    "Capatainbukky": {
-      "id": "931727084240400404",
-      "username": "btits_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Water View": {
-      "id": "747903512809046057",
-      "username": "waterview4u",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "KAKA": {
-      "id": "1132352755483287705",
-      "username": "kaka083459",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Fonok20": {
-      "id": "978410195942277250",
-      "username": "fonok201348",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Pear 🍐": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 11
-    },
-    "conrad zeus": {
-      "id": "826711071464357948",
-      "username": "conrad_zeus",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Vivek13": {
-      "id": "963725962778927154",
-      "username": "vivek136500",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 138
     },
     "Inhuman Resources": {
       "id": "807727820355797062",
@@ -365,7 +373,7 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 79
+      "totalMessages": 80
     }
   }
 }

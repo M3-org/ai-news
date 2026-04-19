@@ -1,0 +1,379 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-04-18",
+  "date": 1776470400,
+  "stats": {
+    "totalMessages": 46,
+    "totalUsers": 16
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The Discord chat segment shows minimal substantive technical discussion. The primary notable interaction involved kullai reporting security vulnerabilities in the open-source application. Initially, kullai inquired about a bug bounty program while tagging multiple team members. Stan0473 suggested creating a pull request or GitHub issue since it's open source. Kullai clarified these were security issues that shouldn't be disclosed publicly and asked about bounty availability. Odilitime (likely a project maintainer) responded that there is no bug bounty but offered to receive details via DM. Kullai initially declined to report without a bounty but then reconsidered as an ethical researcher and shared the security issues privately with odilitime, who acknowledged receipt. A secondary discussion involved valleybeyond7991 questioning the ElizaOS Twitter account's inactivity (no tweets for almost 3 weeks), with satsbased redirecting focus to Milady development as the current priority. Dep14 asked about a suspicious Solana airdrop claiming to be from Odilitime, which spankyxn confirmed as a scam. The majority of the chat consisted of spam accusations and off-topic exchanges with no technical value.",
+      "faqs": [
+        {
+          "question": "Is there a bug bounty program for security vulnerabilities?",
+          "askedBy": "kullai",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What is the situation with ElizaOS Twitter account having no tweets for almost 3 weeks?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "satsbased"
+        },
+        {
+          "question": "Is the Airdrop on Solana sent by Odilitime legitimate?",
+          "askedBy": "dep14",
+          "answeredBy": "spankyxn"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "stan0473",
+          "helpee": "kullai",
+          "context": "kullai wanted to report security issues and asked about bug bounty program",
+          "resolution": "Suggested creating PR or GitHub issue for the open-source project"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "kullai",
+          "context": "kullai had security vulnerabilities to report but no public disclosure was appropriate",
+          "resolution": "Offered to receive security details via DM despite no bug bounty, kullai ultimately shared the issues privately"
+        },
+        {
+          "helper": "spankyxn",
+          "helpee": "dep14",
+          "context": "dep14 received suspicious Solana airdrop claiming to be from Odilitime",
+          "resolution": "Confirmed it was a scam and advised not to click links"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Review and address security vulnerabilities reported by kullai",
+          "mentionedBy": "kullai"
+        },
+        {
+          "type": "Technical",
+          "description": "Focus development efforts on Milady project",
+          "mentionedBy": "satsbased"
+        }
+      ],
+      "messageCount": 43,
+      "userCount": 15
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical content. The conversation consists of two brief exchanges: mssundine inquired about being mentioned regarding an airdrop notification, and stan0473 responded characterizing it as a scam. No technical discussions, problem-solving, implementations, or development-related topics were present in this segment. The interaction appears to be off-topic for a coders channel, focusing instead on a potential phishing or scam attempt through Discord mentions.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 2
+    }
+  ],
+  "nicknameMap": {
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Labs"
+      ],
+      "totalMessages": 38
+    },
+    "Sundine": {
+      "id": "855359499309154304",
+      "username": "mssundine",
+      "roles": [
+        "Announcements",
+        "Verified"
+      ],
+      "totalMessages": 2
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 20
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 374
+    },
+    "kullaisec": {
+      "id": "729634866068455424",
+      "username": "kullai",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Fiend": {
+      "id": "1392208256109383750",
+      "username": "spankyxn",
+      "roles": [
+        "Helper",
+        "Creator",
+        "It",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Mr. Fox(dep14)": {
+      "id": "558061884968927238",
+      "username": "dep14",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Demente117": {
+      "id": "943169661091053568",
+      "username": "demente117.",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "shad0w": {
+      "id": "308276393450668032",
+      "username": "wakesync",
+      "roles": [
+        "Contributor",
+        "Verified",
+        "External Dev",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor",
+        "Labs"
+      ]
+    },
+    "s": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "puncar": {
+      "id": "840590196775976981",
+      "username": "puncar",
+      "roles": [
+        "Helper",
+        "Labs",
+        "Core Dev",
+        "elizaOS Tester",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "ElizaBAO": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Contributor",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 73
+    },
+    "Jarvis": {
+      "id": "1438118447828435028",
+      "username": "janet08032",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ssollex_": {
+      "id": "1465547601008136242",
+      "username": "ssollex_",
+      "roles": [
+        "Trader",
+        "Creator",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "tcm390": {
+      "id": "688478180306452573",
+      "username": "tcm390",
+      "roles": [
+        "Server Booster",
+        "NFT",
+        "Verified",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor",
+        "Labs"
+      ]
+    },
+    "ugvei": {
+      "id": "602476803650748436",
+      "username": "frog.cs",
+      "roles": []
+    },
+    "yojo": {
+      "id": "1334022668063739967",
+      "username": "jobcn",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 22
+    },
+    "keleb": {
+      "id": "1091438996015566919",
+      "username": "keleb432",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 19
+    },
+    "xeno": {
+      "id": "1077669294919397387",
+      "username": "xeno_thales",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 5
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Server Booster",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 138
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 80
+    }
+  }
+}
