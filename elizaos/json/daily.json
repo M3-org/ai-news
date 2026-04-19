@@ -12,7 +12,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1776561909356-eis19m.png"
+          ]
         },
         {
           "text": "A user raised concerns about the ElizaOS official X (Twitter) account having no posts for nearly three weeks. One community member suggested following the milady development as the current primary focus. Another user noted the account had been inactive for months.",
@@ -20,7 +23,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1776561930429-ay10th.jpg"
+          ]
         },
         {
           "text": "A security researcher reported finding multiple security vulnerabilities in the ElizaOS open source application and asked about a bug bounty program. Core developer Stan directed them to submit a GitHub PR or issue. Odilitime confirmed there is no bug bounty program but offered to receive details via direct message. The researcher initially declined to report without a bounty but later changed their mind, stating they would disclose the issues as an ethical researcher. The details were subsequently sent and acknowledged.",
@@ -28,7 +34,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1776561948797-og0zad.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -42,7 +51,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-04-18.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1776561967432-khc3q.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
