@@ -1,107 +1,95 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-04-18",
+  "title": "Daily Report - 2026-04-19",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Activity - April 18, 2026",
+      "title": "ElizaOS Discord Community Discussion - April 19, 2026",
       "content": [
         {
-          "text": "Multiple scam attempts were reported in the discussion channel throughout the day. A user identified as frog.cs was repeatedly called out as a scammer by several community members, with one user pinging moderators and core developers to take action. Community members were warned not to click suspicious links. A separate scam involving a fake Solana airdrop impersonating Odilitime was also flagged, and users were advised not to engage with it. In the coders channel, a user received a ping about an airdrop and was told it was a scam.",
+          "text": "A user asked whether there is any way to stake ElizaOS tokens. Multiple community members, including DorianD and Odilitime, confirmed that staking is currently not available for ElizaOS.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community member satsbased shared tweets from shawmakesmagic explaining the background behind the ai16z token migration. According to the posts, the migration was forced because the original platform refused to implement voting features, was uncooperative in private communications, and dumped 5 percent of the token supply on holders, ultimately causing significant harm to the project.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HGS1KETb0AAG0qG.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A scam alert was raised in the community after a user reported suspicious airdrop activity in the arena channel, apparently shared by someone impersonating a known community member named kenk. Moderators confirmed it was a scam, warned users not to click any links, banned the impersonating accounts, and confirmed the scammers were nuked and banned.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer posted in the coders channel seeking 1 to 2 project collaborations. They described experience across full-stack development using React, Next.js, Node, Python, and cloud infrastructure, blockchain development including Solidity and Rust for Solana, and AI and machine learning work involving LangChain, OpenAI APIs, vector databases, and RAG pipelines. Notable past projects include an AI trade executor that reduced MEV risk by approximately 40 percent, a generative NFT collection that sold out in 22 minutes, and a cross-chain portfolio tracker using OpenAI to summarize risk. The developer invited anyone with a project to reach out via direct message.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1776561909356-eis19m.png"
-          ]
-        },
-        {
-          "text": "A user raised concerns about the ElizaOS official X (Twitter) account having no posts for nearly three weeks. One community member suggested following the milady development as the current primary focus. Another user noted the account had been inactive for months.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1776561930429-ay10th.jpg"
-          ]
-        },
-        {
-          "text": "A security researcher reported finding multiple security vulnerabilities in the ElizaOS open source application and asked about a bug bounty program. Core developer Stan directed them to submit a GitHub PR or issue. Odilitime confirmed there is no bug bounty program but offered to receive details via direct message. The researcher initially declined to report without a bounty but later changed their mind, stating they would disclose the issues as an ethical researcher. The details were subsequently sent and acknowledged.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1776561948797-og0zad.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Development Summary: April 18, 2026",
+      "title": "ElizaOS Development Summary: April 19, 2026",
       "content": [
         {
-          "text": "Development on April 18, 2026 centered on infrastructure maintenance and dependency management within the core eliza repository, along with expansion of the plugin ecosystem. A large batch of dependency update pull requests was submitted, covering packages such as Supabase and Postgres docker tags updated to v17.6.1.108, @coral-xyz/borsh bumped to ^0.32.0, Capacitor monorepo updated to v8.3.1, Uniswap v2 and v3 SDKs updated to their latest versions, @types/node updated to v25.6.0, gymnasium updated to ~=1.2.3, and the Android Gradle build tools updated to v8.13.2. A Discord chat UX improvement was also submitted, removing heartbeat messages and bumping the orchestrator pin. On the plugin side, a new plugin called @quantoracle/plugin-quantoracle was proposed for addition to the elizaos-plugins registry. Additionally, a new issue was opened proposing a Merxex integration to enable agent-to-agent commerce functionality, indicating the team is evaluating new commercial capabilities for agents built on the platform.",
+          "text": "Development on April 19, 2026 centered on strengthening agent infrastructure through memory and orchestration improvements, while also expanding the plugin ecosystem. On the orchestration and memory side, subagent synthesis was refined by implementing end_turn reading and removing the task-heartbeat module. The InMemoryDatabaseAdapter was improved to handle accurate memory updates when roomId changes occur. Discord routing and submodule dependencies were also updated for the plugin-agent-orchestrator and plugin-cron components. A new plugin called plugin-hiveexchange was introduced to enable agent-native prediction markets. In the plugin registry, two additional plugins are pending addition: elizaos-plugin-deepblue and plugin-elizaos. New discussions have also emerged around integrating Merxex to facilitate commerce between autonomous agents, with two related proposals submitted as open issues.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-18.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-19.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1776561967432-khc3q.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1776470400,
+  "date": 1776556800,
   "nicknameMap": {
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
+    "Masician": {
+      "id": "448849666235301899",
+      "username": "a_absaa6165",
       "roles": [
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Server Booster",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Fr",
         "utility",
-        "Coder",
-        "Labs"
+        "eliza"
       ],
-      "totalMessages": 38
+      "totalMessages": 1
     },
-    "Sundine": {
-      "id": "855359499309154304",
-      "username": "mssundine",
+    "Aseel": {
+      "id": "1064153856805707797",
+      "username": "aseel3510",
       "roles": [
-        "Announcements",
-        "Verified"
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
       ],
       "totalMessages": 2
     },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
+    "Dan": {
+      "id": "727178107425128472",
+      "username": "dan.tnw",
       "roles": [
         "Trader",
-        "Creator",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 20
+      "totalMessages": 1
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -130,213 +118,18 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 374
+      "totalMessages": 376
     },
-    "kullaisec": {
-      "id": "729634866068455424",
-      "username": "kullai",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Fiend": {
-      "id": "1392208256109383750",
-      "username": "spankyxn",
-      "roles": [
-        "Helper",
-        "Creator",
-        "It",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Mr. Fox(dep14)": {
-      "id": "558061884968927238",
-      "username": "dep14",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Demente117": {
-      "id": "943169661091053568",
-      "username": "demente117.",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "shad0w": {
-      "id": "308276393450668032",
-      "username": "wakesync",
-      "roles": [
-        "Contributor",
-        "Verified",
-        "External Dev",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor",
-        "Labs"
-      ]
-    },
-    "s": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "puncar": {
-      "id": "840590196775976981",
-      "username": "puncar",
-      "roles": [
-        "Helper",
-        "Labs",
-        "Core Dev",
-        "elizaOS Tester",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "ElizaBAO": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
-      "roles": [
-        "a-hack",
-        "Creator",
-        "Contributor",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 73
-    },
-    "Jarvis": {
-      "id": "1438118447828435028",
-      "username": "janet08032",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ssollex_": {
-      "id": "1465547601008136242",
-      "username": "ssollex_",
-      "roles": [
-        "Trader",
-        "Creator",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 13
-    },
-    "tcm390": {
-      "id": "688478180306452573",
-      "username": "tcm390",
-      "roles": [
-        "Server Booster",
-        "NFT",
-        "Verified",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor",
-        "Labs"
-      ]
-    },
-    "ugvei": {
-      "id": "602476803650748436",
-      "username": "frog.cs",
-      "roles": []
-    },
-    "yojo": {
-      "id": "1334022668063739967",
-      "username": "jobcn",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 22
-    },
-    "keleb": {
-      "id": "1091438996015566919",
-      "username": "keleb432",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
+    "FeRhaT_@": {
+      "id": "928043254765723688",
+      "username": "ferhat8372",
       "roles": [
         "Trader",
         "Verified",
-        "utility"
+        "utility",
+        "eliza"
       ],
-      "totalMessages": 19
-    },
-    "xeno": {
-      "id": "1077669294919397387",
-      "username": "xeno_thales",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
-      ],
-      "totalMessages": 5
+      "totalMessages": 31
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -350,7 +143,135 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 138
+      "totalMessages": 149
+    },
+    "Apagidinn  [KOL Arc]": {
+      "id": "1436635588387409991",
+      "username": "lora03735_16378",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "fond bcn": {
+      "id": "1170034320036089906",
+      "username": "fondbcn_66738",
+      "roles": []
+    },
+    "val | Will not DM1st": {
+      "id": "978750674051432459",
+      "username": "schokoopa819",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 21
+    },
+    "DeRealAlomzy🍀": {
+      "id": "1167777974184062987",
+      "username": "derealalomzy133",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Labs"
+      ],
+      "totalMessages": 39
+    },
+    "Arceon": {
+      "id": "667765722939654147",
+      "username": "arceon3662",
+      "roles": [
+        "Trader",
+        "Creator",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "Designer",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "@Jack": {
+      "id": "1379116061751902219",
+      "username": "jack1000x_98528",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Henqsan": {
+      "id": "1023964779636871209",
+      "username": "henqsan",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "DorianD": {
+      "id": "918853893100806164",
+      "username": "doriand0963",
+      "roles": [
+        "Partner",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 37
     },
     "Inhuman Resources": {
       "id": "807727820355797062",
@@ -360,7 +281,7 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 80
+      "totalMessages": 81
     }
   }
 }
