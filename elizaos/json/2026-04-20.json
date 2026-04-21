@@ -7,65 +7,37 @@
       "content": [
         {
           "text": "Community members discussed the ElizaOS ecosystem structure, including questions about ElizaOK and its relationship to ElizaOS and ElizaCloud. ElizaOK is built on ElizaCloud, with users registered under ElizaOK feeding into ElizaCloud. ElizaOK currently has no separate token. Community members were directed to wait for Odilitime to provide a more detailed explanation of the broader ElizaOS business model and token utilities. ElizaBAO shared an update about building elizaok_bsc on BNB Chain, receiving acknowledgment from Binance. The community also discussed Eliza v3 being nearly ready, with the vision that agents will help users generate income.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HGXEZbGaUAANsGt.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1495817360928538864_69fd7d9f.jpg"
         },
         {
           "text": "A user asked about the ElizaOS token availability across chains. It was confirmed that the token is available on Solana, BSC, and Base. Shaw shared posts on X hinting at AGI developments and the belief that the best thing an agent can do is help people make money. Community members were encouraged to engage with and share Shaw's posts to spread awareness.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HGWGH4naMAA-9mS.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1495750592331780197_30eab4cd.jpg"
         },
         {
           "text": "A user reported losing approximately 900 dollars worth of crypto after interacting with what appeared to be a support ticket in the channel, likely a scam. Community members warned others to block and report suspicious accounts. A separate user also raised the topic of the Lazarus Group hacking KelpDAO for 210 million dollars and questioned whether AI agents could help enhance security in the DeFi space.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1776734545170-tob8xs.jpg"
         },
         {
           "text": "A user asked about migrating their ai16z tokens from a Ledger wallet. Odilitime confirmed that the migration window is now closed. Another user asked about building examples from the ElizaOS documentation and was pointed to the GitHub repository at the v2.0.0 branch which contains numerous example projects.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://repository-images.githubusercontent.com/826170402/117e591c-58d6-4740-a218-1c9e6ccac2e0"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/117e591c-58d6-4740-a218-1c9e6ccac2e0_2a6a2bac.jpg"
         },
         {
           "text": "In the coders channel, igor from Elisym Labs announced the release of the plugin-elizaos-elisym package, a plugin that converts any ElizaOS v1 agent into a paid provider on the Elisym decentralized AI-agent marketplace. The plugin publishes capability cards over Nostr using NIP-89, accepts encrypted job requests via NIP-90, executes them through the agent model or a SKILL.md tool-use loop, and collects SOL payments on Solana. The plugin includes 110 tests with CI on every pull request and is signed with GitHub Actions provenance. A pull request to the ElizaOS plugin registry is open. Stan requested the plugin be renamed to plugin-elisym or plugin-elizaos-elisym, which was promptly done. A developer also posted in the coders channel looking for project opportunities.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Daily Digest - April 20, 2026",
-      "content": [
-        {
-          "text": "Development on April 20, 2026 centered on improving framework stability through dependency updates and critical bug fixes. On the infrastructure side, the team updated core dependencies including @coral-xyz/borsh, gymnasium, and the Capacitor monorepo, while also performing routine maintenance on development tools such as Uniswap v2/v3 SDKs, @types/node, and Rust WASM-bindgen components. For core stability, a critical memory management bug in InMemoryDatabaseAdapter.updateMemories was resolved to ensure correct roomId handling, and Discord routing issues within app-lifeops were fixed to improve communication reliability. Several new pull requests are currently in progress covering both features and additional dependency updates. On the issue tracking front, a new proposal was opened to standardize agent commerce for tool and service payments, while three earlier proposals related to Merxex agent-to-agent commerce integration were reviewed and closed. This activity signals a strategic shift toward standardizing agent-to-agent commerce protocols as part of the project's broader evolution toward autonomous service facilitation.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-20.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development on April 20, 2026 centered on improving framework stability through dependency updates and critical bug fixes. On the infrastructure side, the team updated core dependencies including @coral-xyz/borsh, gymnasium, and the Capacitor monorepo, while also performing routine maintenance on development tools such as Uniswap v2/v3 SDKs, @types/node, and Rust WASM-bindgen components. For core stability, a critical memory management bug in InMemoryDatabaseAdapter.updateMemories was resolved to ensure correct roomId handling, and Discord routing issues within app-lifeops were fixed to improve communication reliability. Several new pull requests are currently in progress covering both features and additional dependency updates. On the issue tracking front, a new proposal was opened to standardize agent commerce for tool and service payments, while three earlier proposals related to Merxex agent-to-agent commerce integration were reviewed and closed. This activity signals a strategic shift toward standardizing agent-to-agent commerce protocols as part of the project's broader evolution toward autonomous service facilitation.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-20.json"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -219,7 +191,6 @@
     "lvan": {
       "id": "960410690286395422",
       "username": "lvan0699",
-      "roles": [],
       "totalMessages": 1
     },
     "DoirWang": {
@@ -371,8 +342,7 @@
     },
     "Rom": {
       "id": "1475910042417889292",
-      "username": "chitario0",
-      "roles": []
+      "username": "chitario0"
     },
     "palmer": {
       "id": "1075179764140224554",
