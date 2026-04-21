@@ -1,0 +1,70 @@
+name: Load ENV secrets
+description: >
+  Parse the ENV_SECRETS JSON blob, mask every value, and export each key
+  to $GITHUB_ENV so subsequent steps can use them as environment variables.
+
+inputs:
+  unmasked_keys:
+    description: >
+      Comma-separated list of keys whose values should NOT be masked
+      (e.g. public URLs like BUNNY_CDN_URL). Values for all other keys
+      are registered with ::add-mask:: before export.
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Load and mask secrets
+      shell: bash
+      env:
+        UNMASKED_KEYS: ${{ inputs.unmasked_keys }}
+      run: |
+        set -euo pipefail
+
+        if [ -z "${ENV_SECRETS_JSON:-}" ]; then
+          echo "::error::ENV_SECRETS_JSON env var is empty. Set it via env: on the calling step with the ENV_SECRETS secret."
+          exit 1
+        fi
+
+        TMP_FILE="$(mktemp)"
+        chmod 600 "$TMP_FILE"
+        printf '%s' "$ENV_SECRETS_JSON" > "$TMP_FILE"
+
+        if ! jq -e . "$TMP_FILE" >/dev/null 2>&1; then
+          rm -f "$TMP_FILE"
+          echo "::error::ENV_SECRETS is not valid JSON"
+          exit 1
+        fi
+
+        KEY_COUNT="$(jq 'length' "$TMP_FILE")"
+
+        # Build a jq select() expression that excludes unmasked keys from the masking stream.
+        # Values for unmasked keys are still exported — they just don't get ::add-mask:: applied.
+        MASK_SELECT=""
+        if [ -n "${UNMASKED_KEYS:-}" ]; then
+          IFS=',' read -ra KEYS <<< "$UNMASKED_KEYS"
+          COND=""
+          for k in "${KEYS[@]}"; do
+            k_trim="$(echo "$k" | xargs)"
+            [ -z "$k_trim" ] && continue
+            if [ -z "$COND" ]; then
+              COND=".key != \"$k_trim\""
+            else
+              COND="$COND and .key != \"$k_trim\""
+            fi
+          done
+          [ -n "$COND" ] && MASK_SELECT="| select($COND)"
+        fi
+
+        # Mask every sensitive value. jq output goes directly to the ::add-mask:: directive,
+        # never to the log prefix, so values stay out of logs.
+        while IFS= read -r value; do
+          [ -n "$value" ] && echo "::add-mask::$value"
+        done < <(jq -r "to_entries[] $MASK_SELECT | .value" "$TMP_FILE")
+
+        # Export every key=value to $GITHUB_ENV
+        jq -r 'to_entries[] | "\(.key)=\(.value)"' "$TMP_FILE" >> "$GITHUB_ENV"
+
+        rm -f "$TMP_FILE"
+        echo "Loaded $KEY_COUNT keys from ENV_SECRETS"

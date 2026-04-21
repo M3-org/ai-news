@@ -10,3 +10,16 @@ updates:
         update-types:
           - "minor"
           - "patch"
+
+  # Keep GitHub Actions refs (including SHA-pinned third-party actions) fresh.
+  # Scans both .github/workflows/ and .github/actions/ composite actions.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      actions-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"

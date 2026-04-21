@@ -3,14 +3,15 @@ name: CI Checks
 on:
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '22'
           cache: 'npm'
@@ -20,25 +21,23 @@ jobs:
       - name: Type check
         run: npx tsc --noEmit
 
-      - name: Validate workflow YAML
+      - name: Validate workflow YAML and composite actions
         run: |
           pip install pyyaml
-          for f in .github/workflows/*.yml; do
+          for f in .github/workflows/*.yml .github/actions/*/action.yml; do
+            [ -f "$f" ] || continue
             echo "Validating $f..."
             python3 -c "import yaml; yaml.safe_load(open('$f'))"
           done
-          echo "All workflow files are valid YAML"
+          echo "All workflow and action files are valid YAML"
 
       - name: Check for hardcoded secrets
         run: |
           echo "Scanning for potential hardcoded secrets..."
-          RESULTS=$(grep -rn 'password\|token\|key\|secret' .github/workflows/ --include='*.yml' \
+          RESULTS=$(grep -rnE '[A-Z_]*(TOKEN|KEY|SECRET|PASSWORD)[A-Z_]*\s*[:=]\s*["'\''][A-Za-z0-9/+_=.-]{12,}' \
+            .github/workflows/ .github/actions/ --include='*.yml' \
             | grep -v 'secrets\.' \
-            | grep -v '${{' \
-            | grep -v 'required:' \
-            | grep -v 'description:' \
-            | grep -v 'name:' \
-            | grep -v '#' || true)
+            | grep -v '${{' || true)
           if [ -n "$RESULTS" ]; then
             echo "WARNING: Potential hardcoded secrets found:"
             echo "$RESULTS"
@@ -55,3 +54,63 @@ jobs:
             exit 1
           fi
           echo "All workflows use npm ci"
+
+  # Detect whether the PR touches CI/workflow files so we can gate the heavier
+  # dry-run jobs below. Avoids running them on every source-code PR.
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      workflows: ${{ steps.filter.outputs.workflows }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Detect workflow changes
+        id: filter
+        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
+        with:
+          filters: |
+            workflows:
+              - '.github/workflows/**'
+              - '.github/actions/**'
+
+  # Dry-run the reusable data-collection workflow for elizaos. Runs when:
+  #  - A PR touches .github/workflows/** or .github/actions/**, OR
+  #  - Triggered manually via workflow_dispatch.
+  # Produces a `public-elizaos-dry-run` artifact — download and diff vs a baseline
+  # to verify the public/ layout hasn't regressed.
+  #
+  # Fork PRs: pull_request from forks does NOT receive repo secrets, so these
+  # jobs will fail fast on fork PRs (data-collection.yml requires ENV_SECRETS).
+  # Manual dispatch by maintainers always has access to secrets.
+  dry-run-elizaos:
+    needs: changes
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && needs.changes.outputs.workflows == 'true')
+    uses: ./.github/workflows/data-collection.yml
+    with:
+      source_name: elizaos
+      source_display_name: elizaos
+      historical_output: ./output
+      include_discord_summaries: true
+      commit_message_prefix: "[DRY RUN] ElizaOS"
+      dry_run: true
+    secrets:
+      ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
+      SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
+
+  dry-run-hyperfy:
+    needs: changes
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && needs.changes.outputs.workflows == 'true')
+    uses: ./.github/workflows/data-collection.yml
+    with:
+      source_name: hyperfy-discord
+      source_display_name: hyperfy
+      historical_output: ./output/hyperfy
+      include_discord_summaries: false
+      commit_message_prefix: "[DRY RUN] Hyperfy"
+      dry_run: true
+    secrets:
+      ENV_SECRETS: ${{ secrets.ENV_SECRETS }}
+      SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
