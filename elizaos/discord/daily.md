@@ -1,76 +1,48 @@
-# elizaOS Discord - 2026-04-20
+# elizaOS Discord - 2026-04-21
 
 ## Summary
 
-### Token Migration and Scam Incidents
+### Legal Matters
 
-The ai16z token migration period has officially closed, leaving some community members unable to complete their migrations. nelsonlopes_ was unable to migrate approximately $700-900 worth of tokens and subsequently fell victim to a scam through a fraudulent support ticket, resulting in additional fund losses. Community members advised blocking and reporting the scammers involved in the incident.
+The community discussed a lawsuit against the project that was shared via Twitter link. Odilitime explained that the team will respond through their lawyers and emphasized they have code documentation to prove they built everything promised. He characterized the lawsuit as without merit and specifically referenced "number 3" of the lawsuit. The team expressed confidence in their legal position based on their development work and code documentation.
 
-### ElizaOS Product Ecosystem Clarification
+### Plugin Development
 
-Significant clarification was provided regarding the relationship between ElizaOS products. ElizaOK is built with elizacloud and currently has no separate token. All users registered under elizaok flow into elizacloud. The token deployment exists on Solana, BSC, and Base chains. Detailed business model explanations were deferred to odilitime for future discussion.
+Stan0473 mentioned plans to build a plugin for scammers. Odilitime offered to share a plugin he had already started working on for this purpose.
 
-### ElizaOS v3 Development
+### CI/CD Infrastructure Issues
 
-satsbased announced that ElizaOS v3 is nearly ready for release and will enable agents to generate revenue, marking a significant milestone in the platform's development.
+A workflow configuration problem was identified affecting PR #346 in the elizaos-plugins/registry repository. The claude-code-action workflow is failing to fetch an OIDC token due to missing permissions - either the id-token: write permission or github_token is not properly configured. This is a repository configuration issue rather than a code problem.
 
-### Elisym Plugin Integration
+### Community Security
 
-igor.peregudov released @elisym/plugin-elizaos, a plugin integrating ElizaOS v1 agents with the Elisym decentralized AI-agent marketplace. The plugin enables agents to become paid providers by publishing capability cards over Nostr using NIP-89, accepting encrypted job requests via NIP-90, executing them through the agent's model or SKILL.md tool-use loop, and collecting SOL payments on Solana. The implementation includes 110 tests with CI on every PR and is signed with GitHub Actions provenance.
-
-### Technical Support and Documentation
-
-cacophonousstrife sought guidance on building examples from ElizaOS documentation and was directed to the GitHub examples directory. A request for minimax token plan key integration as a provider plugin remained unresolved. Community engagement initiatives emphasized interaction with Shaw's posts and sharing development updates.
+Multiple scam warnings were issued by community members targeting suspicious users in the discussion channel.
 
 ## FAQ
 
-**Q: Has the ai16z token migration period closed?**
-A: Yes, odilitime confirmed that the migration period has closed, and users who did not migrate during the window are unable to do so now.
+**Q: How will the team respond to the lawsuit?**
+A: The team will respond through their lawyers. They have code to prove they built everything promised and consider the lawsuit to be without merit.
 
-**Q: What is the relationship between ElizaOK and elizacloud?**
-A: ElizaOK is built with elizacloud and has no separate token currently. All users registered under elizaok flow into elizacloud.
+**Q: What is causing the CI pipeline failure on PR #346?**
+A: The claude-code-action workflow cannot fetch an OIDC token because of missing permissions - either the id-token: write permission or github_token is not properly configured. This is a repository configuration issue.
 
-**Q: On which chains is the token deployed?**
-A: The token is deployed on Solana, BSC, and Base chains.
-
-**Q: Where can I find ElizaOS building examples?**
-A: Building examples are available in the GitHub examples directory at github.com/elizaOS/eliza/tree/v2.0.0/examples.
-
-**Q: What does the @elisym/plugin-elizaos plugin do?**
-A: The plugin integrates ElizaOS v1 agents with the Elisym decentralized AI-agent marketplace, enabling agents to become paid providers by publishing capability cards over Nostr, accepting encrypted job requests, executing them, and collecting SOL payments on Solana.
-
-**Q: When will ElizaOS v3 be released?**
-A: satsbased announced that ElizaOS v3 is nearly ready and will enable agents to generate revenue, though no specific release date was provided.
+**Q: Which repository is affected by the CI/CD issue?**
+A: The elizaos-plugins/registry repository, specifically PR #346.
 
 ## Help Interactions
 
-**Helper:** odilitime  
-**Helpee:** cacophonousstrife  
-**Resolution:** Directed to the GitHub examples directory at github.com/elizaOS/eliza/tree/v2.0.0/examples for building examples from ElizaOS documentation.
+**Helper:** odilitime
+**Helpee:** stan0473
+**Issue:** Stan0473 mentioned plans to build a plugin for scammers
+**Resolution:** Odilitime offered to share a plugin he had already started working on
 
-**Helper:** Community members  
-**Helpee:** nelsonlopes_  
-**Resolution:** Advised to block and report scammers after falling victim to a fraudulent support ticket scam. Confirmed that token migration period has closed and no further migration is possible.
-
-**Helper:** baogerbao  
-**Helpee:** Community  
-**Resolution:** Clarified that ElizaOK is built with elizacloud, has no separate token, and all users registered under elizaok flow into elizacloud. Deferred detailed business model explanations to odilitime.
-
-**Helper:** igor.peregudov  
-**Helpee:** stan0473  
-**Resolution:** Implemented naming convention change for the plugin as requested by stan0473, changing to either plugin-elisym or plugin-elizaos-elisym.
+**Helper:** stan0473
+**Helpee:** odilitime
+**Issue:** Odilitime asked for clarification about which repository was affected by the CI/CD issue
+**Resolution:** Stan0473 provided the direct link to the problematic PR #346
 
 ## Action Items
 
 ### Technical
 
-- Review PR to the registry (#346) for @elisym/plugin-elizaos integration (mentioned by igor.peregudov)
-- Resolve minimax token plan key integration as a provider plugin (mentioned by community member)
-
-### Features
-
-- Complete and release ElizaOS v3 with revenue generation capabilities for agents (mentioned by satsbased)
-
-### Documentation
-
-- Provide detailed business model explanations for ElizaOS, ElizaOK, and elizacloud relationship (mentioned by baogerbao, deferred to odilitime)
+- Fix the claude-code-action workflow configuration by adding proper id-token: write permission or github_token configuration for PR #346 in elizaos-plugins/registry (mentioned by igor.peregudov)
