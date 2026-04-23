@@ -114,23 +114,11 @@ Create these repository secrets in GitHub:
 
 2. `SQLITE_ENCRYPTION_KEY` — strong password to encrypt the database.
 
-### For Webhook Server Integration (deploy-media-collection.yml)
+### For CDN Media Upload (media-cdn.yml)
 
-3. `COLLECT_WEBHOOK_URL` — Your webhook server endpoint:
-```
-https://your-server.com/run-collect
-```
+3. `BUNNY_STORAGE_ZONE` — Storage zone name from Bunny.net dashboard (Storage → your zone name)
 
-4. `COLLECT_WEBHOOK_SECRET` — HMAC signing secret (generate with `openssl rand -hex 32`):
-```
-a1b2c3d4e5f6...
-```
-
-### For CDN Media Upload (media-cdn-upload.yml)
-
-5. `BUNNY_STORAGE_ZONE` — Storage zone name from Bunny.net dashboard (Storage → your zone name)
-
-6. `BUNNY_STORAGE_PASSWORD` — FTP & API Access password from Bunny.net (Storage → FTP & API Access → Password)
+4. `BUNNY_STORAGE_PASSWORD` — FTP & API Access password from Bunny.net (Storage → FTP & API Access → Password)
 
 **Optional:** Set `BUNNY_CDN_URL` in ENV_SECRETS if using a custom hostname (default: `https://{zone}.b-cdn.net`)
 
@@ -214,7 +202,7 @@ npm run upload-cdn -- --swap-urls ./output/elizaos/json/2024-01-15.json \
 npm run upload-cdn -- --dir ./media/ --remote elizaos-media/ --dry-run
 ```
 
-**Automated:** The `media-cdn-upload.yml` workflow runs daily at 7:30 AM UTC to upload media and create CDN-enriched JSON files.
+**Automated:** The `media-cdn.yml` workflow runs automatically after each `elizaos.yml` data collection completes (daily at midnight UTC), or can be triggered manually via `workflow_dispatch`.
 
 ### Workflow
 
@@ -237,7 +225,6 @@ For running data collection on a server instead of GitHub Actions (recommended f
 4. Generate webhook secret: `openssl rand -hex 32`
 5. Start webhook server:
    ```bash
-   export COLLECT_WEBHOOK_SECRET="your-generated-secret"
    npm run webhook
    ```
 6. Setup reverse proxy (Nginx/Caddy) with HTTPS for production
@@ -247,7 +234,6 @@ For running data collection on a server instead of GitHub Actions (recommended f
 **Webhook Server:**
 ```bash
 # Start server (listens on localhost:3000)
-export COLLECT_WEBHOOK_SECRET="your-secret"
 npm run webhook
 
 # Test webhook locally
@@ -261,17 +247,10 @@ npm run webhook
 ./scripts/collect-daily.sh hyperfy-discord.json 2025-01-15
 ```
 
-**GitHub Actions Integration:**
-- Configure `COLLECT_WEBHOOK_URL` and `COLLECT_WEBHOOK_SECRET` in GitHub Secrets
-- GitHub Actions sends HMAC-signed webhook requests daily at 6 AM UTC
-- View/trigger manual runs at Actions > Daily Media Collection
-- No SSH keys or server access needed
-
 **Benefits of Webhook Approach:**
 - No SSH complexity or key management
 - Secure HMAC signature verification
 - No GitHub file size limits for media downloads
-- GitHub Actions provides scheduling and monitoring
 - Simple HTTP-based integration
 
 ## Media Download

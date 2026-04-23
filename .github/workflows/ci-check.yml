@@ -34,7 +34,7 @@ jobs:
       - name: Check for hardcoded secrets
         run: |
           echo "Scanning for potential hardcoded secrets..."
-          RESULTS=$(grep -rnE '[A-Z_]*(TOKEN|KEY|SECRET|PASSWORD)[A-Z_]*\s*[:=]\s*["'\''][A-Za-z0-9/+_=.-]{12,}' \
+          RESULTS=$(grep -rnE '[A-Z_]*(TOKEN|KEY|SECRET|PASSWORD)[A-Z_]*\s*[:=]\s*["'\'']?[A-Za-z0-9/+_=.-]{12,}' \
             .github/workflows/ .github/actions/ --include='*.yml' \
             | grep -v 'secrets\.' \
             | grep -v '${{' || true)
@@ -82,7 +82,7 @@ jobs:
   # jobs will fail fast on fork PRs (data-collection.yml requires ENV_SECRETS).
   # Manual dispatch by maintainers always has access to secrets.
   dry-run-elizaos:
-    needs: changes
+    needs: [changes, validate]
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'pull_request' && needs.changes.outputs.workflows == 'true')
@@ -99,7 +99,7 @@ jobs:
       SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
 
   dry-run-hyperfy:
-    needs: changes
+    needs: [changes, validate]
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'pull_request' && needs.changes.outputs.workflows == 'true')

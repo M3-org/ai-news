@@ -63,6 +63,17 @@ runs:
           [ -n "$value" ] && echo "::add-mask::$value"
         done < <(jq -r "to_entries[] $MASK_SELECT | .value" "$TMP_FILE")
 
+        # Reject multi-line values: $GITHUB_ENV's KEY=VALUE format cannot transport
+        # them safely and silently corrupts state when values contain newlines.
+        # Only the offending key names are logged — values never touch stdout.
+        BAD_KEYS=$(jq -r 'to_entries[] | select(.value | test("[\r\n]")) | .key' "$TMP_FILE")
+        if [ -n "$BAD_KEYS" ]; then
+          rm -f "$TMP_FILE"
+          echo "::error::ENV_SECRETS contains multi-line values (not supported). Offending keys:"
+          while IFS= read -r k; do echo "  - $k"; done <<< "$BAD_KEYS"
+          exit 1
+        fi
+
         # Export every key=value to $GITHUB_ENV
         jq -r 'to_entries[] | "\(.key)=\(.value)"' "$TMP_FILE" >> "$GITHUB_ENV"
 

@@ -114,6 +114,7 @@ jobs:
           ENV_SECRETS_JSON: ${{ secrets.ENV_SECRETS }}
 
       - name: Fetch and decrypt database
+        id: db
         uses: ./.github/actions/fetch-decrypt-db
         with:
           source_name: ${{ inputs.config_name || 'elizaos' }}
@@ -139,7 +140,7 @@ jobs:
           fi
 
       - name: Download Discord media
-        if: hashFiles('data/elizaos.sqlite') != ''
+        if: steps.db.outputs.decrypted == 'true'
         run: |
           SOURCE="${{ inputs.config_name || 'elizaos' }}"
           DATE="${{ steps.date.outputs.date }}"
@@ -160,7 +161,7 @@ jobs:
           fi
 
       - name: Generate manifest for Discord media
-        if: hashFiles('data/elizaos.sqlite') != ''
+        if: steps.db.outputs.decrypted == 'true'
         run: |
           SOURCE="${{ inputs.config_name || 'elizaos' }}"
           DATE="${{ steps.date.outputs.date }}"
