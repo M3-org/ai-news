@@ -1,55 +1,83 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-04-21",
+  "title": "Daily Report - 2026-04-22",
   "categories": [
     {
-      "title": "ElizaOS Community Updates: Lawsuit Response and Plugin Registry CI Issue",
+      "title": "ElizaOS Community Discussion: Lawsuit Concerns, Token Migration, and Developer Updates",
       "content": [
         {
-          "text": "A federal class action lawsuit was filed in the Southern District of New York (Case 1:26-cv-3238) by Burwick Law against the creators of AI16Z and ElizaOS, alleging consumer protection claims. Community members reacted with a mix of concern and skepticism, with some noting the company may lack funds to pay out any settlement. When asked how the team plans to respond, Odilitime (Core Dev) stated the team is working with lawyers and has the code to prove they built everything they committed to building. Odilitime described the lawsuit as being without merit and commented that Burwick Law's business model of filing such suits is notable. Stan also mentioned plans to build a plugin to address scammer activity that was occurring in the discussion channel around the same time.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1496140921111187656_96ece701.jpg"
+          "text": "Community members expressed frustration and skepticism about the ElizaOS project on April 22, 2026, with some accusing the team of fraud related to the AI16Z token launch and subsequent migration. One user alleged the team dumped tokens on the community and stole 40% of community tokens during the migration. Others suggested the project's troubles stemmed from internal team misconduct rather than the entire team acting in bad faith. Odilitime, a core developer and moderator, defended the project and Shaw personally, stating he had seen Shaw up close and was willing to put his name next to his. Odilitime acknowledged doubts about the project recovering but maintained there was still a chance, noting that tools like OpenClaw and Hermes demonstrated real market demand for what ElizaOS does.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "In the coders channel, developer igor reported that the CI pipeline on a pull request to the ElizaOS plugin registry is failing due to a workflow configuration issue unrelated to his code changes. Specifically, the claude-code-action is unable to fetch an OIDC token because of a missing id-token write permission or github_token in the workflow config. Igor requested that someone with access fix the configuration so the pull request, which adds the elisym/plugin-elizaos-elisym package to the registry, can be properly reviewed. Odilitime asked which repository was affected, and Stan provided the link to the pull request at elizaos-plugins/registry/pull/346.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "images": "https://cdn.elizaos.news/elizaos-media/346_e9726b88.jpg"
+          "text": "Regarding an ongoing lawsuit against the project, community members called for an official statement from the team. Odilitime noted he had no access to the official X account and speculated that lawyers had advised the team to say nothing publicly. One user warned that continued silence could risk consequences such as exchange delistings, drawing parallels to communication failures during the token migration. Another community member pointed out that the same law firm filing the lawsuit against ElizaOS was also pursuing a class action against pump.fun, characterizing the firm as acting similarly to patent trolls.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A user inquired about migrating AI16Z tokens to ELIZAOS after missing the migration window. Odilitime confirmed the migration had closed and was no longer being offered, but offered to add the user's wallet to a waitlist in case migration reopens, describing it as a longshot. Separately, a user asked whether the current ElizaOS v2.x build was stable enough to begin development. Stan confirmed it was usable and clarified the versioning convention, explaining that 0.x was the first version, 1.x the second, and 2.x the third, which has caused some confusion in the community.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the developer channel, a scam warning was issued after a user reported losing 100,000 AI16Z tokens by connecting their wallet to a fraudulent site at bulkdao.co/allocation. The community was warned not to visit the link or connect wallets there. The incident was flagged to moderators for action against the scammer account.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer introduced LemonCake, an open source MIT-licensed plugin for ElizaOS v2 designed to solve the problem of autonomous agents needing to pay for API services without exposing hardcoded API keys or credit cards. The plugin allows agents to use spend-capped, time-boxed, and revocable pay tokens. It supports USDC and JPYC on Polygon, integrates with 32 paid APIs including search, scraping, LLM, and image services, and auto-journals transactions to accounting platforms like QuickBooks and Xero. The developer invited ElizaOS v2 builders to reach out for sandbox credits and asked the community which paid APIs they would most want their agents to access.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/4267993ac0e4b00de120ae9db7c4cef662f476c5e065780235b47d45aaecd686/evidai/lemon-cake"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A community member shared a mental health app called DailyBite, developed in collaboration with two licensed psychologists, offering personalized cognitive behavioral therapy plans with small daily tasks targeting anxiety, stress, and doom-scrolling habits. The app is free during beta and available on iOS and Android. The developer noted they originally used ElizaOS to build an AI agent persona on Twitter, which gained 9 million impressions and 3,300 followers in two months before being repeatedly banned, and later applied those skills to build the mental health application.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/69/c7/51/69c75103-138a-a785-db50-e3110f70c84d/Placeholder.mill/1200x630wa.jpg",
+            "https://play-lh.googleusercontent.com/xE_E9uZSpNSui75tJyhJct2dEhWBumFzJdDtcgBoRdu-DTVx6dJgXxnnlW-T_DgkycIrdm2qKxjkfhWj3Z0vcjY=w600-h300-pc0xffffff-pd"
+          ],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "LifeOps Ecosystem Expansion and Authentication Workflow Refinements (April 21, 2026)",
-      "content": {
-        "text": "Development on April 21, 2026 centered on expanding the LifeOps ecosystem and strengthening authentication workflows across the cloud and core frameworks. On the authentication and cloud infrastructure front, a unified authentication workflow was implemented supporting both wallet and GitHub logins, with server-side Steward token refresh added to resolve silent-logout issues. UI styling inconsistencies and text wrapping problems for EVM and Solana wallet providers were addressed in an update to the React package. The elizaos/cloud repository was also integrated into the project pipeline to enable automated contributor tracking. For LifeOps and agent core enhancements, the app-lifeops application was expanded with new calendar management, travel booking, and cross-platform gateway support. Agent reliability was improved by restoring scenario final-check handlers and integrating task heartbeat functionality into swarm synthesis. A new environment variable, PROMPT_OUTPUT_FORMAT, was added to improve compatibility with models such as Gemini 2.5 Pro and Llama. Database consistency was also improved by updating the in-memory database adapter to sort memories in descending order. Comprehensive dependency updates were performed across the eliza repository, covering tools such as vitest, bun, and various Rust crates including tokio and reqwest. Work in progress includes migrating the app-auth authorize flow to Steward, UI styling alignment for Ethereum and Solana buttons, and a broad set of dependency updates spanning TypeScript, Python, Rust, and Android. A new issue was raised requesting a PII sanitization layer, while issues related to Merxex integration and PII sanitization were closed across multiple repositories.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-21.json",
-        "posters": "https://cdn.elizaos.news/posters/1776820832483-jr4urq.png"
-      },
+      "title": "ElizaOS Daily Digest: April 22, 2026",
+      "content": [
+        {
+          "text": "On April 22, 2026, the ElizaOS ecosystem concentrated on stabilizing core infrastructure and expanding plugin capabilities across its main framework, cloud platform, and plugin registry. A notable open issue requires follow-up on Telegram read receipt optimization to improve message ID fetching and avoid nested lookups (elizaos/eliza#7009). On the completed work front, the Milady CI pipeline was restored after regressions, recovering website blocker and Telegram export functionality while also fixing method collisions in the LifeOps signal client. A broad dependency hardening effort was carried out, covering Rust crates, Python benchmarks, and JavaScript/TypeScript packages to improve security and performance. Infrastructure updates were also applied to mobile and Supabase Postgres components to maintain environment parity. In the cloud platform, authorization flows were migrated to Steward and native Ethereum and Solana login buttons were introduced to improve identity management. A billing classification error that caused incorrect pricing for image-generation models was also resolved. The plugin registry was expanded with the addition of the @elisym/plugin-elizaos package, ensuring proper naming and repository referencing. Work currently in progress includes a local inference hub with a provider switcher and agent local probes, a 2.x/v3 codebase cleanup, prompt bloat reduction efforts, ongoing dependency maintenance, fixes for tenant ID formatting and session expiry handling in the cloud platform, a journal drift repair, and a new Solana escrow and reputation plugin from Holdfast Protocol pending registry addition.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-22.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1776729600,
+  "date": 1776816000,
   "nicknameMap": {
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
-      "roles": [
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Server Booster",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "Labs"
-      ],
-      "totalMessages": 42
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -77,20 +105,263 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 386
+      "totalMessages": 430
+    },
+    "LemonCake": {
+      "id": "1495958507243966686",
+      "username": "lemoncake03027",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "igor": {
       "id": "352113917335568384",
       "username": "igor.peregudov",
       "roles": [
         "Helper",
-        "Partner",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 9
+    },
+    "JOHN": {
+      "id": "1032827510125248572",
+      "username": "john_7428",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Apagidinn  [KOL Arc]": {
+      "id": "1436635588387409991",
+      "username": "lora03735_16378",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "mcbwpns": {
+      "id": "1013837440059969566",
+      "username": "mcbwpns",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Aly. (OnlyPain)": {
+      "id": "1010141883080642620",
+      "username": "desnake.0",
+      "roles": [
+        "Booster",
+        "Trader",
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Labs"
+      ],
+      "totalMessages": 48
+    },
+    "averma": {
+      "id": "481682579913703434",
+      "username": "averma",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 4
+    },
+    "nusko": {
+      "id": "193053923068608513",
+      "username": "nusko_",
+      "roles": [
+        "Coder",
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 32
+    },
+    "RICHAD_PC?": {
+      "id": "934723578748887041",
+      "username": "richad_pc3110",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Simpkins": {
+      "id": "904626065006292993",
+      "username": "thomasames",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "mukund gamer": {
+      "id": "1068828367220113418",
+      "username": "mukundgamer.",
+      "roles": [
+        "Trader",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Kite": {
+      "id": "1140786070095671297",
+      "username": "flykite",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 28
+    },
+    "Rainman": {
+      "id": "1009171434465149028",
+      "username": "rainman1001",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "Sunil": {
+      "id": "1374577460905115750",
+      "username": "sun1lchhaya",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Adrian": {
+      "id": "1074752784806723595",
+      "username": "_adrianop_",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 23
+    },
+    "susan2586g": {
+      "id": "1186484261537198100",
+      "username": "susan2586g",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "aeropedro": {
+      "id": "710872066441871491",
+      "username": "aeropedro",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "arkchain": {
+      "id": "1495830675205521548",
+      "username": "arkchain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -106,9 +377,36 @@
       ],
       "totalMessages": 162
     },
-    "Gonzalez": {
-      "id": "1495614211198423131",
-      "username": "_gonzalez0103"
+    "SLAPPY": {
+      "id": "392644735355060225",
+      "username": "vslappyx",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Fiend": {
+      "id": "1392208256109383750",
+      "username": "spankyxn",
+      "roles": [
+        "Helper",
+        "Creator",
+        "It",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 15
     },
     "hide.o.n": {
       "id": "1486743497519399044",
@@ -122,162 +420,18 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 46
+      "totalMessages": 49
     },
-    "s": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": "Verified",
-      "totalMessages": 14
-    },
-    "团队公会": {
-      "id": "1257039372230983813",
-      "username": "exterminatus0211",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Mike": {
-      "id": "1140337438179459073",
-      "username": "halfmeasures0521",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Lerry": {
-      "id": "1495388602572472351",
-      "username": "lerry0092",
+    "crypto": {
+      "id": "901295081326248026",
+      "username": "lordwallet",
       "roles": [
         "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Jayzen": {
-      "id": "1335738366506827776",
-      "username": "jayzenlunar",
-      "roles": [
         "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 26
-    },
-    "palmer": {
-      "id": "1075179764140224554",
-      "username": "deanwinchester9865",
-      "roles": [
-        "Verified",
-        "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "DeRealAlomzy🍀": {
-      "id": "1167777974184062987",
-      "username": "derealalomzy133",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Gwen💠": {
-      "id": "953803706183327795",
-      "username": "gwen_217",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "F4T3 ObamaNose": {
-      "id": "1028166808915677224",
-      "username": "f4t3obamanose",
-      "roles": [
-        "Trader",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "JONATHAN": {
-      "id": "1032616669878681631",
-      "username": "johnathann47",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 7
     }
   }
 }

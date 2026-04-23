@@ -1,97 +1,171 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-21",
-  "date": 1776729600,
+  "title": "elizaOS Discord - 2026-04-22",
+  "date": 1776816000,
   "stats": {
-    "totalMessages": 25,
-    "totalUsers": 14
+    "totalMessages": 117,
+    "totalUsers": 26
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The channel discussion centered around a lawsuit mentioned via a Twitter link, with community members reacting to legal action against the project. The key technical discussion involved stan0473 mentioning plans to build a plugin for scammers, with odilitime offering to share a plugin he had already started working on. The main substantive exchange occurred when hide.o.n asked about the team's response to the lawsuit. Odilitime explained the team would respond through their lawyers, emphasizing they have code to prove they built everything promised. He characterized the lawsuit as without merit and made specific reference to 'number 3' of the lawsuit. The discussion also included multiple scam warnings from community members (chulylooly and gwen_217) targeting suspicious users. Several users joined asking general questions about tickets and crypto/AI learning, but these received no substantive responses. The overall tone suggested the team is confident in their legal position based on their development work and code documentation.",
+      "summary": "The discussion centered on three main issues: communication challenges, token migration problems, and project viability concerns. Community members expressed frustration about the lack of official statements regarding an ongoing lawsuit, with hide.o.n requesting proactive communication from the team to prevent potential exchange delistings. odilitime explained limited access to official accounts and suggested legal counsel advised silence. The ElizaOS X account inactivity (nearly a month without posts) was raised as a concern for community engagement, though alexeill noted lawsuits typically reduce company communications. A significant token migration issue emerged when aeropedro discovered their self-custodied AI16Z tokens couldn't be migrated to ELIZAOS, as the migration window had closed. odilitime offered to add them to a waitlist but acknowledged it was a longshot. Technical discussion included vslappyx asking about v2.x/v3 stability for agent development, with stan0473 confirming it was ready and explaining the versioning convention (0.x=first, 1.x=second, 2.x=third version). Discord experienced technical issues with posts being auto-deleted without appearing in audit logs, affecting multiple users including flykite and nusko_. odilitime couldn't identify the cause but manually reposted content. nusko_ shared experience building a Jinx AI agent using ElizaOS that achieved 9M impressions and 3.3K followers before Twitter bans. Community sentiment was mixed, with lordwallet accusing the team of fraud and token dumping, while odilitime defended Shaw and noted continued GitHub activity. The discussion touched on project recovery prospects, with odilitime citing openclaw and hermes as proof of market demand, suggesting the token narrative damaged the project more than the technology itself.",
       "faqs": [
         {
-          "question": "Is there a ticket here?",
-          "askedBy": "derealalomzy133",
-          "answeredBy": "Unanswered"
+          "question": "Is v2.x/v3 stable enough to start exploring and building Eliza agents?",
+          "askedBy": "vslappyx",
+          "answeredBy": "stan0473"
         },
         {
-          "question": "How does the team plan to respond to this matter?",
+          "question": "Why is the versioning/tagging convention confusing - why not tag v3 as v3?",
+          "askedBy": "vslappyx",
+          "answeredBy": "stan0473"
+        },
+        {
+          "question": "How can I migrate my self-custodied AI16Z tokens to ELIZAOS?",
+          "askedBy": "aeropedro",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Are my AI16Z tokens now useless since migration closed?",
+          "askedBy": "aeropedro",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Who has access to post on the ElizaOS X account?",
           "askedBy": "hide.o.n",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Why hasn't the ElizaOS X account posted in almost a month?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "alexeill"
+        },
+        {
+          "question": "Are you people done with the project due to the lawsuit?",
+          "askedBy": "averma",
           "answeredBy": "odilitime"
         }
       ],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "stan0473",
-          "context": "stan0473 mentioned building a plugin for scammers",
-          "resolution": "odilitime offered to send the plugin he had already started working on"
+          "helpee": "aeropedro",
+          "context": "User discovered token migration window closed for self-custodied AI16Z tokens",
+          "resolution": "Offered to add wallet to waitlist if migration reopens, though acknowledged it's a longshot"
+        },
+        {
+          "helper": "stan0473",
+          "helpee": "vslappyx",
+          "context": "User confused about version stability and naming convention for Eliza agents",
+          "resolution": "Confirmed v2.x is stable to work on and explained versioning system (0.x=v1, 1.x=v2, 2.x=v3)"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "flykite",
+          "context": "User's posts being auto-deleted by Discord without explanation",
+          "resolution": "Investigated audit logs, couldn't find cause, manually forwarded content from another channel"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "nusko_",
+          "context": "User's posts auto-deleting without showing in logs, couldn't share app link",
+          "resolution": "Manually posted content via DM and shared to another developer server for visibility"
         }
       ],
       "actionItems": [
         {
+          "type": "Documentation",
+          "description": "Post official statement about lawsuit on ElizaOS X account to address community concerns",
+          "mentionedBy": "hide.o.n"
+        },
+        {
           "type": "Technical",
-          "description": "Build a plugin for scammers",
-          "mentionedBy": "stan0473"
+          "description": "Increase activity on ElizaOS X account with posts and retweets for community engagement",
+          "mentionedBy": "valleybeyond7991"
+        },
+        {
+          "type": "Technical",
+          "description": "Investigate and fix Discord auto-moderation issue causing posts to be deleted without audit log entries",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Feature",
+          "description": "Consider reopening token migration window for self-custodied AI16Z holders",
+          "mentionedBy": "aeropedro"
+        },
+        {
+          "type": "Technical",
+          "description": "Improve project monetization strategy following openclaw and hermes market validation",
+          "mentionedBy": "odilitime"
         }
       ],
-      "messageCount": 21,
-      "userCount": 13
+      "messageCount": 97,
+      "userCount": 20
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "The Discord chat segment for the #💬-coders channel contains minimal technical discussion. The primary focus is on a CI/CD workflow issue affecting a pull request. igor.peregudov reported that the CI pipeline is failing on PR #346 in the elizaos-plugins/registry repository due to a configuration problem with the claude-code-action workflow. The specific issue is that the workflow cannot fetch an OIDC token because of missing permissions - either the `id-token: write` permission or `github_token` is not properly configured. This is identified as a repository configuration issue rather than a problem with the code changes in the PR itself. igor.peregudov requested that someone with appropriate permissions fix the workflow configuration so the PR can proceed to review. odilitime responded asking for clarification about which repository was affected, and stan0473 provided the direct link to the problematic PR. Additionally, satsbased made a brief comment encouraging open source contributions, though this was not connected to the main technical discussion thread.",
+      "summary": "The channel focused on three main technical developments: (1) ElizaOS v2/v3 migration planning - odilitime merged elisym into the elizaOS ecosystem, with stan0473 identifying the next quest as porting to v3. igor.peregudov confirmed v2 porting feasibility and inquired about stable release timing for v2 (currently in alpha). (2) Security incident - igor.peregudov lost 100k ai16z tokens to a wallet drainer at bulkdao.co/allocation, serving as a community warning about phishing attacks. The transaction was documented on Solscan. (3) LemonCake plugin launch - lemoncake03027 introduced an open-source (MIT) payment solution for autonomous agents to handle API paywalls. The plugin provides spend-capped, time-boxed, revocable Pay Tokens using USDC/JPYC on Polygon. Integration requires one line in ElizaOS v2 (eliza-plugin-lemoncake). Features include 32 paid APIs, auto-idempotency keys, structured receipts, QuickBooks/Xero/Zoho/freee integration, and KYA tier system. Also available for MCP (Claude/Cursor/Cline) and Dify Marketplace. Sandbox mode available for testing. odilitime approved the implementation.",
       "faqs": [
         {
-          "question": "Which repo has the CI failure?",
-          "askedBy": "odilitime",
-          "answeredBy": "stan0473"
+          "question": "Any thoughts on when we might see a stable release for v2?",
+          "askedBy": "igor.peregudov",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "How much was stolen from your wallet?",
+          "askedBy": "john_7428",
+          "answeredBy": "igor.peregudov"
+        },
+        {
+          "question": "What paid APIs do you wish your agent could call?",
+          "askedBy": "lemoncake03027",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "stan0473",
+          "helper": "igor.peregudov",
+          "helpee": "Community",
+          "context": "Wallet drainer phishing attack at bulkdao.co/allocation",
+          "resolution": "Warned community about the scam link and reverted edit to keep the URL visible for future reference"
+        },
+        {
+          "helper": "john_7428",
           "helpee": "igor.peregudov",
-          "context": "Needed to identify the specific repository with CI workflow issues",
-          "resolution": "Provided direct link to the PR (https://github.com/elizaos-plugins/registry/pull/346)"
+          "context": "Suggested keeping the scam link visible for community awareness",
+          "resolution": "igor.peregudov reverted the edit to maintain the warning"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Fix CI workflow configuration by adding `id-token: write` permission or `github_token` to resolve OIDC token fetch failure in claude-code-action for PR #346",
+          "description": "Port elisym to ElizaOS v3",
+          "mentionedBy": "stan0473"
+        },
+        {
+          "type": "Technical",
+          "description": "Release stable version of ElizaOS v2 (currently in alpha)",
           "mentionedBy": "igor.peregudov"
+        },
+        {
+          "type": "Feature",
+          "description": "Add top-requested paid APIs to LemonCake marketplace",
+          "mentionedBy": "lemoncake03027"
+        },
+        {
+          "type": "Technical",
+          "description": "Onboard Eliza v2 builders with LemonCake sandbox credits",
+          "mentionedBy": "lemoncake03027"
         }
       ],
-      "messageCount": 4,
-      "userCount": 4
+      "messageCount": 20,
+      "userCount": 8
     }
   ],
   "nicknameMap": {
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
-      "roles": [
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Server Booster",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "Labs"
-      ],
-      "totalMessages": 42
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -119,20 +193,263 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 386
+      "totalMessages": 430
+    },
+    "LemonCake": {
+      "id": "1495958507243966686",
+      "username": "lemoncake03027",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "igor": {
       "id": "352113917335568384",
       "username": "igor.peregudov",
       "roles": [
         "Helper",
-        "Partner",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 9
+    },
+    "JOHN": {
+      "id": "1032827510125248572",
+      "username": "john_7428",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Apagidinn  [KOL Arc]": {
+      "id": "1436635588387409991",
+      "username": "lora03735_16378",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "mcbwpns": {
+      "id": "1013837440059969566",
+      "username": "mcbwpns",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Aly. (OnlyPain)": {
+      "id": "1010141883080642620",
+      "username": "desnake.0",
+      "roles": [
+        "Booster",
+        "Trader",
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Labs"
+      ],
+      "totalMessages": 48
+    },
+    "averma": {
+      "id": "481682579913703434",
+      "username": "averma",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 4
+    },
+    "nusko": {
+      "id": "193053923068608513",
+      "username": "nusko_",
+      "roles": [
+        "Coder",
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 32
+    },
+    "RICHAD_PC?": {
+      "id": "934723578748887041",
+      "username": "richad_pc3110",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Simpkins": {
+      "id": "904626065006292993",
+      "username": "thomasames",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "mukund gamer": {
+      "id": "1068828367220113418",
+      "username": "mukundgamer.",
+      "roles": [
+        "Trader",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Kite": {
+      "id": "1140786070095671297",
+      "username": "flykite",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 28
+    },
+    "Rainman": {
+      "id": "1009171434465149028",
+      "username": "rainman1001",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "Sunil": {
+      "id": "1374577460905115750",
+      "username": "sun1lchhaya",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Adrian": {
+      "id": "1074752784806723595",
+      "username": "_adrianop_",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 23
+    },
+    "susan2586g": {
+      "id": "1186484261537198100",
+      "username": "susan2586g",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "aeropedro": {
+      "id": "710872066441871491",
+      "username": "aeropedro",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "arkchain": {
+      "id": "1495830675205521548",
+      "username": "arkchain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -148,10 +465,36 @@
       ],
       "totalMessages": 162
     },
-    "Gonzalez": {
-      "id": "1495614211198423131",
-      "username": "_gonzalez0103",
-      "roles": []
+    "SLAPPY": {
+      "id": "392644735355060225",
+      "username": "vslappyx",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Fiend": {
+      "id": "1392208256109383750",
+      "username": "spankyxn",
+      "roles": [
+        "Helper",
+        "Creator",
+        "It",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 15
     },
     "hide.o.n": {
       "id": "1486743497519399044",
@@ -165,164 +508,18 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 46
+      "totalMessages": 49
     },
-    "s": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 14
-    },
-    "团队公会": {
-      "id": "1257039372230983813",
-      "username": "exterminatus0211",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Mike": {
-      "id": "1140337438179459073",
-      "username": "halfmeasures0521",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Lerry": {
-      "id": "1495388602572472351",
-      "username": "lerry0092",
+    "crypto": {
+      "id": "901295081326248026",
+      "username": "lordwallet",
       "roles": [
         "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Jayzen": {
-      "id": "1335738366506827776",
-      "username": "jayzenlunar",
-      "roles": [
         "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 26
-    },
-    "palmer": {
-      "id": "1075179764140224554",
-      "username": "deanwinchester9865",
-      "roles": [
-        "Verified",
-        "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "DeRealAlomzy🍀": {
-      "id": "1167777974184062987",
-      "username": "derealalomzy133",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Gwen💠": {
-      "id": "953803706183327795",
-      "username": "gwen_217",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "F4T3 ObamaNose": {
-      "id": "1028166808915677224",
-      "username": "f4t3obamanose",
-      "roles": [
-        "Trader",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "JONATHAN": {
-      "id": "1032616669878681631",
-      "username": "johnathann47",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 7
     }
   }
 }
