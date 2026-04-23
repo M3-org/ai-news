@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 1
 
@@ -98,7 +98,7 @@ jobs:
           echo "Processing date: $DATE"
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '22'
           cache: 'npm'
@@ -106,58 +106,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Process secrets
-        run: |
-          echo '${{ secrets.ENV_SECRETS }}' > env_secrets.json
-          chmod 600 env_secrets.json
+      - name: Load ENV secrets
+        uses: ./.github/actions/load-env-secrets
+        with:
+          unmasked_keys: BUNNY_CDN_URL,SITE_URL
+        env:
+          ENV_SECRETS_JSON: ${{ secrets.ENV_SECRETS }}
 
-          # Mask values (except public URLs)
-          jq -r 'to_entries[] | select(.key != "BUNNY_CDN_URL" and .key != "SITE_URL") | .value' env_secrets.json | while read -r value; do
-            if [ -n "$value" ]; then
-              echo "::add-mask::$value"
-            fi
-          done
-
-          # Set environment variables
-          jq -r 'to_entries[] | "\(.key)=\(.value)"' env_secrets.json >> $GITHUB_ENV
-
-          rm -f env_secrets.json
-
-      - name: Check and fetch database
-        run: |
-          mkdir -p data
-
-          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
-            if git ls-tree -r --name-only origin/gh-pages | grep -q "data/elizaos.sqlite.enc"; then
-              echo "Fetching encrypted database from gh-pages..."
-              git show origin/gh-pages:data/elizaos.sqlite.enc > data/elizaos.sqlite.enc
-              echo "Database fetched successfully"
-            else
-              echo "⚠️ No encrypted database found in gh-pages"
-              echo "Continuing without database (Discord media will be skipped)"
-            fi
-          else
-            echo "⚠️ gh-pages branch not found"
-            echo "Continuing without database (Discord media will be skipped)"
-          fi
-
-      - name: Decrypt database
-        if: hashFiles('data/elizaos.sqlite.enc') != ''
+      - name: Fetch and decrypt database
+        id: db
+        uses: ./.github/actions/fetch-decrypt-db
+        with:
+          source_name: ${{ inputs.config_name || 'elizaos' }}
         env:
           SQLITE_ENCRYPTION_KEY: ${{ secrets.SQLITE_ENCRYPTION_KEY }}
-        run: |
-          if [ -z "$SQLITE_ENCRYPTION_KEY" ]; then
-            echo "⚠️ SQLITE_ENCRYPTION_KEY not set, skipping decryption"
-            exit 0
-          fi
-
-          openssl enc -d -aes-256-cbc -pbkdf2 \
-            -in data/elizaos.sqlite.enc \
-            -out data/elizaos.sqlite \
-            -k "$SQLITE_ENCRYPTION_KEY"
-
-          echo "Database decrypted successfully"
-          rm data/elizaos.sqlite.enc
 
       - name: Extract JSON from gh-pages
         run: |
@@ -178,7 +140,7 @@ jobs:
           fi
 
       - name: Download Discord media
-        if: hashFiles('data/elizaos.sqlite') != ''
+        if: steps.db.outputs.decrypted == 'true'
         run: |
           SOURCE="${{ inputs.config_name || 'elizaos' }}"
           DATE="${{ steps.date.outputs.date }}"
@@ -199,7 +161,7 @@ jobs:
           fi
 
       - name: Generate manifest for Discord media
-        if: hashFiles('data/elizaos.sqlite') != ''
+        if: steps.db.outputs.decrypted == 'true'
         run: |
           SOURCE="${{ inputs.config_name || 'elizaos' }}"
           DATE="${{ steps.date.outputs.date }}"
@@ -401,7 +363,7 @@ jobs:
 
       - name: Deploy to gh-pages
         if: inputs.dry_run != 'true'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

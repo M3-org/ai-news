@@ -107,11 +107,11 @@ Optional: `CODEX_API_KEY`, `HYPERFY_DISCORD_TOKEN`, `HYPERFY_DISCORD_GUILD_ID`, 
 
 ### GitHub Actions Workflows
 
-- `elizaos.yml` / `hyperfy.yml` — Daily data collection and summary generation
-- `channel-update.yml` — Monthly channel analysis, creates draft PRs
-- `deploy-media-collection.yml` — Webhook-triggered media collection on VPS
-- `media-cdn.yml` — Daily CDN upload of media files
-- `jsdoc-automation.yml` — Documentation generation
+- `elizaos.yml` / `hyperfy.yml` — Daily data collection and summary generation (thin callers of `data-collection.yml`)
+- `data-collection.yml` — Reusable workflow: fetch/decrypt DB → run historical → generate manifests → re-encrypt → deploy
+- `ci-check.yml` — Pull-request gate: YAML/type/secret checks, plus paths-filter-gated dry-runs of `data-collection.yml`
+- `channel-update.yml` — Weekly channel analysis, creates draft PRs
+- `media-cdn.yml` — Daily CDN upload of media files (auto-triggered after `elizaos.yml`)
 
 ### Data Sources
 

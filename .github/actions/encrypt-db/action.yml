@@ -1,0 +1,49 @@
+name: Encrypt SQLite database
+description: >
+  Encrypt data/<source_name>.sqlite into .sqlite.enc using
+  openssl aes-256-cbc -pbkdf2 and remove the plaintext file.
+  Skips silently if the plaintext DB does not exist.
+
+  The encryption key must be provided as the SQLITE_ENCRYPTION_KEY env var
+  on the calling step, NOT as a composite input.
+
+inputs:
+  source_name:
+    description: 'Source name (DB file stem, e.g. elizaos or hyperfy-discord)'
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Encrypt DB
+      shell: bash
+      env:
+        SOURCE_NAME: ${{ inputs.source_name }}
+      run: |
+        set -euo pipefail
+
+        if [ -n "${SQLITE_ENCRYPTION_KEY:-}" ]; then
+          echo "::add-mask::$SQLITE_ENCRYPTION_KEY"
+        fi
+
+        DB_FILE="data/${SOURCE_NAME}.sqlite"
+        DB_ENC="${DB_FILE}.enc"
+
+        if [ ! -f "${DB_FILE}" ]; then
+          echo "ℹ️  No ${DB_FILE} to encrypt — nothing to do"
+          exit 0
+        fi
+
+        if [ -z "${SQLITE_ENCRYPTION_KEY:-}" ]; then
+          echo "::error::SQLITE_ENCRYPTION_KEY env var is not set"
+          exit 1
+        fi
+
+        echo "Encrypting ${DB_FILE}..."
+        if ! openssl enc -aes-256-cbc -salt -pbkdf2 -in "${DB_FILE}" -out "${DB_ENC}" -k "$SQLITE_ENCRYPTION_KEY"; then
+          echo "::error::Encryption failed"
+          exit 1
+        fi
+        echo "✅ Encryption successful"
+
+        rm -f "${DB_FILE}"
