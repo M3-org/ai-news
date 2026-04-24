@@ -1,0 +1,266 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-04-23",
+  "date": 1776902400,
+  "stats": {
+    "totalMessages": 25,
+    "totalUsers": 12
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on community reorganization following Eliza Labs' transition. A new Cron Job podcast episode (S1E12) was released covering recent project developments including the shutdown announcement, community response, and continued code shipping. The key technical discussion involved clarification about project governance: odilitime confirmed the foundation remains funded and responsible for the token, contrary to assumptions that it was completely dissolved. quanteliza proposed creating a structured forum for community leadership to manage business aspects like social media and website, requesting transparency and organization. odilitime responded by offering access to an existing steering group focused on organizing marketing efforts and potential governance. valleybeyond7991 expressed interest in contributing to social media management and joined the steering group. The conversation also referenced external content including a fixupx post and an AI agent building contest. Overall, the segment shows the community actively working to establish clear organizational structure and leadership roles in the post-Eliza Labs era.",
+      "faqs": [
+        {
+          "question": "Is Eliza Labs gone and is it now just an open community with support?",
+          "askedBy": "quanteliza",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What is steering?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "quanteliza",
+          "context": "Confusion about whether Eliza Labs was completely dissolved and need for structured community organization",
+          "resolution": "Clarified that the foundation is still funded and responsible for the token, offered invitation to existing steering group"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "valleybeyond7991",
+          "context": "Understanding what the steering group does and how to participate",
+          "resolution": "Explained steering group focuses on organizing marketing efforts and potentially governance, invited them to join"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Create new community forum section for discussing leadership structure, business operations, Twitter/website management with transparency",
+          "mentionedBy": "quanteliza"
+        },
+        {
+          "type": "Feature",
+          "description": "Establish structured and transparent governance for community leadership roles",
+          "mentionedBy": "quanteliza"
+        }
+      ],
+      "messageCount": 21,
+      "userCount": 9
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The channel discussion covered two main technical topics. First, arkchain raised concerns about USDC freezing risks for cross-border agent operations and sought alternative payment solutions for agents operating in jurisdictions where asset freezing is a concern. Lemoncake03027 responded by promoting their payment infrastructure built specifically for agent machine-to-machine (M2M) payments, featuring spend-capped JWTs and kill switch functionality, and offered to create an Eliza plugin integration if needed. The second part of the conversation consisted of itssowenn4462 introducing themselves as an AI/ML and Full Stack Engineer, detailing their expertise in autonomous multi-agent systems, RAG pipelines with vector databases like FAISS and Pinecone, voice AI integrations using Vapi and Twilio, workflow automation platforms, and computer vision applications. Their tech stack spans React/Next.js/TypeScript on frontend, Node.js/Python with FastAPI and Django on backend, PostgreSQL/MongoDB/Redis for databases, OpenAI/LangChain/Transformers for AI/LLM work, and AWS infrastructure with Docker and CI/CD pipelines.",
+      "faqs": [
+        {
+          "question": "Are there alternatives to USDC for agents running cross-border or in contexts where USDC freezing is a concern?",
+          "askedBy": "arkchain",
+          "answeredBy": "lemoncake03027"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "lemoncake03027",
+          "helpee": "arkchain",
+          "context": "Looking for USDC alternatives for cross-border agent payments due to freezing concerns",
+          "resolution": "Offered payment infrastructure with spend-capped JWTs and kill switch, specifically built for agent M2M payments, with potential Eliza plugin integration"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Develop Eliza plugin integration for agent M2M payment rail with spend-capped JWTs and kill switch",
+          "mentionedBy": "lemoncake03027"
+        }
+      ],
+      "messageCount": 4,
+      "userCount": 3
+    }
+  ],
+  "nicknameMap": {
+    "itssowenn": {
+      "id": "412084303422291969",
+      "username": "itssowenn4462",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "LemonCake": {
+      "id": "1495958507243966686",
+      "username": "lemoncake03027",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 435
+    },
+    "arkchain": {
+      "id": "1495830675205521548",
+      "username": "arkchain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "hide.o.n": {
+      "id": "1486743497519399044",
+      "username": "hide.o.n",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 52
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 28
+    },
+    "NintyNine": {
+      "id": "914424447040102420",
+      "username": "quanteliza",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "anesic.": {
+      "id": "935676439980814366",
+      "username": "anesic.",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "sano880": {
+      "id": "1255846494511304816",
+      "username": "sano880",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "JONATHAN": {
+      "id": "1032616669878681631",
+      "username": "johnathann47",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Irish": {
+      "id": "1494757425637625937",
+      "username": "irish00619",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 86
+    }
+  }
+}
