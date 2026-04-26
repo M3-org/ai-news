@@ -7,37 +7,25 @@
       "content": [
         {
           "text": "In the general discussion channel, community members exchanged greetings and checked in with one another throughout the day. A notable question was raised about whether any active development work was being done for the degenai project. Odilitime confirmed that work was in progress, specifically mentioning a framework update being worked on. A video was shared in the channel as part of a reply to a community member. There was also a role check performed by Odilitime directed at community member Baoger.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [
-            "https://cdn.discordapp.com/attachments/1253563209462448241/1497585875318735048/lv_0_20251104003508.mp4?ex=69eeb7c8&is=69ed6648&hm=84583f7e60a8399285b2ed779dae2638ac3d7e98c3d71194e088795272ea0bd8&"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "videos": "https://cdn.elizaos.news/elizaos-media/lv_0_20251104003508_b80a1647.mp4",
+          "posters": "https://cdn.elizaos.news/posters/1777166894652-1l4cgp.png"
         },
         {
           "text": "In the coders channel, a technical discussion emerged around Hierarchical Task Networks (HTN) and their potential use in ElizaOS. Community member Thirtieth shared a suggestion from Claude that ElizaOS v2 could upgrade an HTN-lite implementation to a full HTN system by replacing hand-coded decomposition with LLM-based planning when the beta releases. Thirtieth explained that HTN is an AI planning technique originating from the 1970s, used in game AI such as F.E.A.R. and Total War as well as robotics, and claimed ElizaOS v2 added it for agent goal decomposition. Odilitime responded by characterizing it as multistep planning. Community member uplink2501 asked whether HTN bears any similarity to Hierarchical Temporal Memory or LISP. The validity of the HTN claim about ElizaOS v2 was questioned by Thirtieth themselves. Additionally, a suspicious message was posted by user ramson813 offering $400 in Solana to anyone in need, which appears to be a scam solicitation.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1777166914599-mgedh5.jpg"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Development Summary: April 25, 2026",
-      "content": [
-        {
-          "text": "Development on April 25, 2026 focused on enhancing system stability and agent communication logic across the core framework, alongside expanding network and plugin ecosystem support. Key completed work in the core framework included improvements to Electrobun desktop window management, prevention of internal mechanism leaks in agent replies, and enhanced planner action handling to ensure reliable swarm synthesis. System reliability was also addressed through resolving credential conflicts between CLI and OAuth, fixing scheduler task leaks, and enabling proper character rename propagation. On the plugin and network side, the Telegram plugin received robust poller tracking to prevent duplicate instances and ensure clean resource deregistration. EVM network support was expanded with the integration of Radius Network mainnet and testnet into both Rust and Python implementations. Repository maintenance work included cleanup of accidental PGlite database artifacts and updates to the gitignore file to prevent future environment conflicts. Work still in progress includes a feature for x402 paid plugin routes and test harness hardening in the core eliza repository, as well as the addition of new plugins to the registry including plugin-tcg-oracle, plugin-undesirables, and plugin-elizaos.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-25.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development on April 25, 2026 focused on enhancing system stability and agent communication logic across the core framework, alongside expanding network and plugin ecosystem support. Key completed work in the core framework included improvements to Electrobun desktop window management, prevention of internal mechanism leaks in agent replies, and enhanced planner action handling to ensure reliable swarm synthesis. System reliability was also addressed through resolving credential conflicts between CLI and OAuth, fixing scheduler task leaks, and enabling proper character rename propagation. On the plugin and network side, the Telegram plugin received robust poller tracking to prevent duplicate instances and ensure clean resource deregistration. EVM network support was expanded with the integration of Radius Network mainnet and testnet into both Rust and Python implementations. Repository maintenance work included cleanup of accidental PGlite database artifacts and updates to the gitignore file to prevent future environment conflicts. Work still in progress includes a feature for x402 paid plugin routes and test harness hardening in the core eliza repository, as well as the addition of new plugins to the registry including plugin-tcg-oracle, plugin-undesirables, and plugin-elizaos.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-25.json",
+        "posters": "https://cdn.elizaos.news/posters/1777166935742-vopopl.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -98,7 +86,6 @@
     ".R.": {
       "id": "1032803670003294261",
       "username": "ramson813",
-      "roles": [],
       "totalMessages": 1
     },
     "cyborg": {
@@ -194,8 +181,7 @@
     },
     "Davi's": {
       "id": "1433570847318212770",
-      "username": "lord_web_11",
-      "roles": []
+      "username": "lord_web_11"
     },
     "Carissa loverrr": {
       "id": "1214871925386641418",
