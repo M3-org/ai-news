@@ -1,99 +1,151 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-25",
-  "date": 1777075200,
+  "title": "elizaOS Discord - 2026-04-26",
+  "date": 1777161600,
   "stats": {
-    "totalMessages": 20,
+    "totalMessages": 19,
     "totalUsers": 11
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The channel had minimal technical discussion. The most significant technical exchange involved jack1000x_98528 asking about work being done for $degenai, to which odilitime responded that they were working on a framework update with it. The conversation was otherwise dominated by greetings and brief social interactions, with carissabowersei_91078 offering assistance, and roadragedave greeting thinnnn101_101. No concrete technical solutions, implementations, or detailed problem-solving discussions occurred during this segment.",
+      "summary": "The discussion centered on token utility strategy for Eliza, with shawmakesmagic explaining the challenge of implementing token-specific utility without creating user friction. The preferred approach is to accept any payment method users have and use revenue to buy back tokens. Key development updates include v3 nearing completion, an app in final stages, and Eliza Cloud actively taking business with direct app integration. A technical issue was reported regarding the Milady Play Store link from GitHub being non-functional. The team confirmed degenai updates are imminent. The conversation also included community banter about price movements and milestone-based commitments.",
       "faqs": [
         {
-          "question": "Any work being done for $degenai",
-          "askedBy": "jack1000x_98528",
-          "answeredBy": "odilitime"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "carissabowersei_91078",
-          "helpee": "General channel",
-          "context": "Offered general assistance to channel members",
-          "resolution": "Offered help but no specific issue was addressed"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Framework update for $degenai",
-          "mentionedBy": "odilitime"
-        }
-      ],
-      "messageCount": 11,
-      "userCount": 8
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The discussion centered on Hierarchical Task Networks (HTN) implementation in ElizaOS. thirti.eth inquired about building with alpha code and shared Claude's suggestion about upgrading HTN-lite to full HTN when Eliza v2 reaches beta, replacing hand-coded decomposition with LLM planning while maintaining existing triggers and steps. odilitime clarified HTN as a multistep approach. thirti.eth provided technical context explaining HTN as an AI planning technique from the 1970s used in game AI (F.E.A.R., Total War) and robotics, noting ElizaOS v2 added it for agent goal decomposition, though questioned the accuracy of this information. uplink2501 drew comparisons to Hierarchical Temporal Memory (HTM) and LISP. The conversation revealed uncertainty about HTN implementation details in ElizaOS v2 and its relationship to existing planning techniques.",
-      "faqs": [
-        {
-          "question": "What is HTN?",
-          "askedBy": "odilitime",
-          "answeredBy": "thirti.eth"
-        },
-        {
-          "question": "Is it true that ElizaOS v2 added HTN for agent goal decomposition?",
-          "askedBy": "thirti.eth",
+          "question": "Does the Milady Play Store link from GitHub work?",
+          "askedBy": "valleybeyond7991",
           "answeredBy": "Unanswered"
         },
         {
-          "question": "Any similarity to Hierarchical Temporal Memory (HTM)? Or more like LISP?",
-          "askedBy": "uplink2501",
-          "answeredBy": "Unanswered"
+          "question": "Can we expect updates about degenai soon?",
+          "askedBy": "waiser0165",
+          "answeredBy": "chulylooly"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "thirti.eth",
-          "helpee": "odilitime",
-          "context": "odilitime asked what HTN meant in the context of ElizaOS development",
-          "resolution": "thirti.eth explained HTN as Hierarchical Task Networks, an AI planning technique from the 1970s used in game AI and robotics, and its purported use in ElizaOS v2 for agent goal decomposition"
-        }
-      ],
+      "helpInteractions": [],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Upgrade HTN-lite to full HTN when Eliza v2 hits beta by replacing hand-coded decomposition with LLM planning",
-          "mentionedBy": "thirti.eth"
+          "description": "Fix non-functional Milady Play Store link in GitHub repository",
+          "mentionedBy": "valleybeyond7991"
+        },
+        {
+          "type": "Feature",
+          "description": "Complete and release v3 of Eliza",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Feature",
+          "description": "Finalize and launch the Eliza app with Eliza Cloud integration",
+          "mentionedBy": "shawmakesmagic"
         },
         {
           "type": "Documentation",
-          "description": "Verify and document whether ElizaOS v2 actually includes HTN for agent goal decomposition",
-          "mentionedBy": "thirti.eth"
+          "description": "Release degenai updates",
+          "mentionedBy": "chulylooly"
         }
       ],
-      "messageCount": 9,
-      "userCount": 4
+      "messageCount": 18,
+      "userCount": 10
     }
   ],
   "nicknameMap": {
-    "uplink2501": {
-      "id": "394732709026725888",
-      "username": "uplink2501",
+    "Thirtieth": {
+      "id": "512741671335624749",
+      "username": "thirti.eth",
       "roles": [
-        "Helper",
+        "VIP",
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 166
+    },
+    "Arceon": {
+      "id": "667765722939654147",
+      "username": "arceon3662",
+      "roles": [
         "Trader",
-        "[WG] degenspartan",
+        "Creator",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "Designer",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 11
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 28
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 13
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 31
+    },
+    "Quaser M": {
+      "id": "1281266285505810453",
+      "username": "waiser0165",
+      "roles": [
+        "agent dev school - self assign",
+        "Verified",
+        "Dev School Student",
+        "Announcements",
+        "Coder"
+      ],
+      "totalMessages": 18
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -125,30 +177,49 @@
       ],
       "totalMessages": 451
     },
-    "Thirtieth": {
-      "id": "512741671335624749",
-      "username": "thirti.eth",
+    "Seree": {
+      "id": "831422482422431754",
+      "username": "lalanotia",
       "roles": [
-        "VIP",
-        "Verified"
-      ],
-      "totalMessages": 5
-    },
-    ".R.": {
-      "id": "1032803670003294261",
-      "username": "ramson813",
-      "roles": [],
-      "totalMessages": 1
-    },
-    "cyborg": {
-      "id": "832338755930030110",
-      "username": "cyborgxai",
-      "roles": [
-        "Trader",
+        "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 11
+      "totalMessages": 15
+    },
+    "JOHN": {
+      "id": "1032827510125248572",
+      "username": "john_7428",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Sandyku": {
+      "id": "1497515997886677103",
+      "username": "sandykumen",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "NintyNine": {
       "id": "914424447040102420",
@@ -161,116 +232,6 @@
         "eliza"
       ],
       "totalMessages": 6
-    },
-    "@Jack": {
-      "id": "1379116061751902219",
-      "username": "jack1000x_98528",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "RoadRageDave": {
-      "id": "1181587961385594891",
-      "username": "roadragedave",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "TOMTOM": {
-      "id": "931217037966057502",
-      "username": "thinnnn101_101",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Dr. Neuro": {
-      "id": "403574677164916746",
-      "username": "neuro023",
-      "roles": [
-        "platform - self assign",
-        "trust - self assign",
-        "partner portal - self assign",
-        "Creator",
-        "Moderator",
-        "nfts - self assign",
-        "pmairca - self assign",
-        "King",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Contributor",
-        "NFT",
-        "merch - self assign",
-        "events - self-assign",
-        "boom chad",
-        "Coder",
-        "swarms - self assign",
-        "VIP",
-        "Designer"
-      ],
-      "totalMessages": 11
-    },
-    "Davi's": {
-      "id": "1433570847318212770",
-      "username": "lord_web_11",
-      "roles": []
-    },
-    "Carissa loverrr": {
-      "id": "1214871925386641418",
-      "username": "carissabowersei_91078",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Baoger": {
-      "id": "555035784378318875",
-      "username": "baogerbao",
-      "roles": [
-        "a-hack",
-        "Creator",
-        "[WG] degenspartan",
-        "VIP",
-        "Contributor",
-        "[WG] Want to Help",
-        "Verified",
-        "Mini Mod",
-        "Booster",
-        "Designer",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 85
     }
   }
 }

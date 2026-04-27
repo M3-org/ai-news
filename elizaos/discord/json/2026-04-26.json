@@ -1,0 +1,237 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-04-26",
+  "date": 1777161600,
+  "stats": {
+    "totalMessages": 19,
+    "totalUsers": 11
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on token utility strategy for Eliza, with shawmakesmagic explaining the challenge of implementing token-specific utility without creating user friction. The preferred approach is to accept any payment method users have and use revenue to buy back tokens. Key development updates include v3 nearing completion, an app in final stages, and Eliza Cloud actively taking business with direct app integration. A technical issue was reported regarding the Milady Play Store link from GitHub being non-functional. The team confirmed degenai updates are imminent. The conversation also included community banter about price movements and milestone-based commitments.",
+      "faqs": [
+        {
+          "question": "Does the Milady Play Store link from GitHub work?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Can we expect updates about degenai soon?",
+          "askedBy": "waiser0165",
+          "answeredBy": "chulylooly"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Fix non-functional Milady Play Store link in GitHub repository",
+          "mentionedBy": "valleybeyond7991"
+        },
+        {
+          "type": "Feature",
+          "description": "Complete and release v3 of Eliza",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Feature",
+          "description": "Finalize and launch the Eliza app with Eliza Cloud integration",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Documentation",
+          "description": "Release degenai updates",
+          "mentionedBy": "chulylooly"
+        }
+      ],
+      "messageCount": 18,
+      "userCount": 10
+    }
+  ],
+  "nicknameMap": {
+    "Thirtieth": {
+      "id": "512741671335624749",
+      "username": "thirti.eth",
+      "roles": [
+        "VIP",
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 166
+    },
+    "Arceon": {
+      "id": "667765722939654147",
+      "username": "arceon3662",
+      "roles": [
+        "Trader",
+        "Creator",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "Designer",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 28
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 13
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 31
+    },
+    "Quaser M": {
+      "id": "1281266285505810453",
+      "username": "waiser0165",
+      "roles": [
+        "agent dev school - self assign",
+        "Verified",
+        "Dev School Student",
+        "Announcements",
+        "Coder"
+      ],
+      "totalMessages": 18
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 451
+    },
+    "Seree": {
+      "id": "831422482422431754",
+      "username": "lalanotia",
+      "roles": [
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "JOHN": {
+      "id": "1032827510125248572",
+      "username": "john_7428",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Sandyku": {
+      "id": "1497515997886677103",
+      "username": "sandykumen",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "NintyNine": {
+      "id": "914424447040102420",
+      "username": "quanteliza",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    }
+  }
+}
