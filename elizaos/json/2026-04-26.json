@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777253287816-2d6l9r.jpg"
+          ]
         },
         {
           "text": "In the coders channel, a community member clarified the distinction between HTM and HTN in the context of AI agent architecture. HTM stands for how a brain remembers, while HTN stands for how an agent plans. Though both share the word Hierarchical, they are described as fundamentally different concepts and should not be conflated.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777253337795-3xo53.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -33,7 +39,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-04-26.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777253375679-mk6rha.png"
+          ]
         }
       ],
       "topic": "miscellaneous"
