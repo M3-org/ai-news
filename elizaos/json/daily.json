@@ -7,30 +7,20 @@
       "content": [
         {
           "text": "In the general discussion channel, community members expressed concern over the declining value of the ElizaOS token, with one user noting it had dropped below a 5 million dollar market cap. Some members called for reaching out to investors like ai16z and Pantera Capital to help stabilize the market, while others urged the community to build products that could drive token value. Several users expressed financial losses and frustration, though the overall tone remained mixed between concern and calls to action.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
         },
         {
           "text": "A discussion emerged around the historical origins of the ELIZA chatbot, with users learning that the original ELIZA was developed in 1964 and described in a 1966 paper by Joseph Weizenbaum. The chatbot simulated a psychotherapist and gave rise to the so-called ELIZA effect, which describes the human tendency to project emotions and understanding onto computer programs. Community moderator Odilitime shared links to a podcast episode about the history and mystery of ELIZA as well as the Wikipedia article on the ELIZA effect.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "images": [
-            "https://corecursive.com/images/078/wide.png",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Video_Game_Museum_in_Berlin_%2844129332940%29.jpg/960px-Video_Game_Museum_in_Berlin_%2844129332940%29.jpg"
-          ],
-          "videos": []
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1498410361861439648_a37b009d.png",
+            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1498410420527038637_e30913a2.jpg"
+          ]
         },
         {
           "text": "A scam attempt was flagged in the discussion channel when a user posted a suspicious link targeting another member who had asked for help with ElizaOS. Community members quickly warned the targeted user not to click the link, and a moderator confirmed the scammer was banned shortly after. Separately, a user inquired about the long-term plans for a project called Hyperscape and how to access its Discord, with Odilitime responding that the team is working on it and sharing an invite link.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1777340946686-tzq1i9.png"
         },
         {
           "text": "Odilitime also mentioned the existence of an Eliza Army steering group and invited community members interested in contributing to reach out. In the coders channel, activity was minimal, consisting only of brief greetings between a community member and Odilitime.",
@@ -38,24 +28,17 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
-          "videos": []
+          "posters": "https://cdn.elizaos.news/posters/1777341029703-9fpir.png"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Development Summary: April 27, 2026",
-      "content": [
-        {
-          "text": "Development on April 27, 2026 centered on three main areas: monetization infrastructure for Eliza Cloud, agent connectivity improvements, and a major dependency modernization effort. On the monetization front, the team enabled pay-as-you-go container hosting and credit balance management for direct billing from org earnings, and expanded Milady LifeOps with Google Calendar management capabilities. For agent connectivity, GitHub PAT persistence was added for coding sub-agents, credential feedback for n8n workflows was refined, and message handling was strengthened to preserve explicit REPLY actions during race conditions. System stability work included fixing re-export cycles and static node imports to resolve build warnings, synchronizing dev and main branches across repositories, and updating the supabase/postgres Docker dependency to version 17.6.1.112. A significant ecosystem-wide dependency modernization effort was initiated by contributor lalalune, triggering Renovate updates across all core repositories targeting Node.js 24, TypeScript 6, and Rimraf 6. The team is currently awaiting CI results to verify these major version bumps do not break existing infrastructure. Several GitHub authentication issues for the botdick agent and a Discord path verification issue were opened and subsequently closed on the same day. Work in progress includes CI migration diagnostics, AppsView image rendering improvements, and minor patch dependency updates for the elizaos.github.io repository.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-04-27.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development on April 27, 2026 centered on three main areas: monetization infrastructure for Eliza Cloud, agent connectivity improvements, and a major dependency modernization effort. On the monetization front, the team enabled pay-as-you-go container hosting and credit balance management for direct billing from org earnings, and expanded Milady LifeOps with Google Calendar management capabilities. For agent connectivity, GitHub PAT persistence was added for coding sub-agents, credential feedback for n8n workflows was refined, and message handling was strengthened to preserve explicit REPLY actions during race conditions. System stability work included fixing re-export cycles and static node imports to resolve build warnings, synchronizing dev and main branches across repositories, and updating the supabase/postgres Docker dependency to version 17.6.1.112. A significant ecosystem-wide dependency modernization effort was initiated by contributor lalalune, triggering Renovate updates across all core repositories targeting Node.js 24, TypeScript 6, and Rimraf 6. The team is currently awaiting CI results to verify these major version bumps do not break existing infrastructure. Several GitHub authentication issues for the botdick agent and a Discord path verification issue were opened and subsequently closed on the same day. Work in progress includes CI migration diagnostics, AppsView image rendering improvements, and minor patch dependency updates for the elizaos.github.io repository.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-27.json"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -230,7 +213,6 @@
     "PaTBOY": {
       "id": "929213213910892634",
       "username": "_patboy101",
-      "roles": [],
       "totalMessages": 1
     },
     "SecretRecipe": {
@@ -323,7 +305,6 @@
     "RICHAD_PC?": {
       "id": "934723578748887041",
       "username": "richad_pc3110",
-      "roles": [],
       "totalMessages": 1
     },
     "roygbiv": {
