@@ -1,152 +1,70 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-04-26",
-  "date": 1777161600,
+  "title": "elizaOS Discord - 2026-04-27",
+  "date": 1777248000,
   "stats": {
-    "totalMessages": 19,
-    "totalUsers": 11
+    "totalMessages": 49,
+    "totalUsers": 24
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on token utility strategy for Eliza, with shawmakesmagic explaining the challenge of implementing token-specific utility without creating user friction. The preferred approach is to accept any payment method users have and use revenue to buy back tokens. Key development updates include v3 nearing completion, an app in final stages, and Eliza Cloud actively taking business with direct app integration. A technical issue was reported regarding the Milady Play Store link from GitHub being non-functional. The team confirmed degenai updates are imminent. The conversation also included community banter about price movements and milestone-based commitments.",
+      "summary": "This Discord chat segment shows minimal technical discussion, with most content consisting of price concerns, greetings, and off-topic messages. The few technical elements include: odilitime sharing a Hyperscape Discord invite link and mentioning an 'eliza army' steering group for community coordination. A historical discussion emerged about the original 1966 ELIZA chatbot, with odilitime providing educational resources about the ELIZA effect. One user (luminousda) reported issues with Eliza but the problem appeared to resolve itself. A scammer was identified and banned by odilitime. The chat was dominated by token price complaints, with users expressing losses and requesting market-making partnerships with VCs. One user offered development services for AI and full-stack systems. Overall, this segment lacked substantive technical discussions, problem-solving, or implementation details.",
       "faqs": [
         {
-          "question": "Does the Milady Play Store link from GitHub work?",
-          "askedBy": "valleybeyond7991",
-          "answeredBy": "Unanswered"
+          "question": "What's the long-term plan with Hyperscape? And how can I get access to the discord of the project?",
+          "askedBy": "jayzenlunar",
+          "answeredBy": "odilitime"
         },
         {
-          "question": "Can we expect updates about degenai soon?",
-          "askedBy": "waiser0165",
-          "answeredBy": "chulylooly"
+          "question": "Is anyone having issues with eliza rn",
+          "askedBy": "luminousda",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Is there an admin or mod available? I'd love to share an AI agent competition",
+          "askedBy": "clairee_delune",
+          "answeredBy": "odilitime"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "jayzenlunar",
+          "context": "User needed access to Hyperscape Discord",
+          "resolution": "Provided Discord invite link https://discord.gg/Kcb6BQZ4x"
+        },
+        {
+          "helper": "sjknxksjanksa",
+          "helpee": "Community",
+          "context": "Identified scammer support account targeting users",
+          "resolution": "Warned users not to click scammer links, odilitime banned the account"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "luminousda",
+          "context": "User experiencing issues with Eliza",
+          "resolution": "Offered assistance by asking what problems they were having"
+        }
+      ],
       "actionItems": [
         {
-          "type": "Technical",
-          "description": "Fix non-functional Milady Play Store link in GitHub repository",
-          "mentionedBy": "valleybeyond7991"
-        },
-        {
-          "type": "Feature",
-          "description": "Complete and release v3 of Eliza",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Feature",
-          "description": "Finalize and launch the Eliza app with Eliza Cloud integration",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
           "type": "Documentation",
-          "description": "Release degenai updates",
-          "mentionedBy": "chulylooly"
+          "description": "Share AI agent competition information after admin approval",
+          "mentionedBy": "clairee_delune"
+        },
+        {
+          "type": "Feature",
+          "description": "Coordinate eliza army steering group for community involvement",
+          "mentionedBy": "odilitime"
         }
       ],
-      "messageCount": 18,
-      "userCount": 10
+      "messageCount": 47,
+      "userCount": 23
     }
   ],
   "nicknameMap": {
-    "Thirtieth": {
-      "id": "512741671335624749",
-      "username": "thirti.eth",
-      "roles": [
-        "VIP",
-        "Verified"
-      ],
-      "totalMessages": 6
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 166
-    },
-    "Arceon": {
-      "id": "667765722939654147",
-      "username": "arceon3662",
-      "roles": [
-        "Trader",
-        "Creator",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "Designer",
-        "Announcements",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 2
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 11
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 28
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 13
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 31
-    },
-    "Quaser M": {
-      "id": "1281266285505810453",
-      "username": "waiser0165",
-      "roles": [
-        "agent dev school - self assign",
-        "Verified",
-        "Dev School Student",
-        "Announcements",
-        "Coder"
-      ],
-      "totalMessages": 18
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -175,17 +93,24 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 451
+      "totalMessages": 462
     },
-    "Seree": {
-      "id": "831422482422431754",
-      "username": "lalanotia",
+    "BlockMaster0xd²": {
+      "id": "1487591609909383258",
+      "username": "blockmaster0xd2",
       "roles": [
-        "Verified",
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 15
+      "totalMessages": 1
     },
     "JOHN": {
       "id": "1032827510125248572",
@@ -201,11 +126,22 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 8
     },
-    "Sandyku": {
-      "id": "1497515997886677103",
-      "username": "sandykumen",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Rilque": {
+      "id": "928820878899306547",
+      "username": "rilque3024",
       "roles": [
         "Helper",
         "Trader",
@@ -221,17 +157,272 @@
       ],
       "totalMessages": 1
     },
-    "NintyNine": {
-      "id": "914424447040102420",
-      "username": "quanteliza",
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
       "roles": [
-        "[WG] Want to Help",
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 32
+    },
+    "cryptolover": {
+      "id": "980570059749609532",
+      "username": "jamjamjam87",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Drey": {
+      "id": "971737384364433428",
+      "username": "deborah7889",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "➔ 𝓔𝓷𝓽𝓻𝓸𝓹𝔂 𓆸": {
+      "id": "1437166788612980867",
+      "username": "luminousda",
+      "roles": [
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "MAJ : THE UNDERRATED MAJ : THE U": {
+      "id": "1436635588387409991",
+      "username": "sjknxksjanksa",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "PaTBOY": {
+      "id": "929213213910892634",
+      "username": "_patboy101",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "SecretRecipe": {
+      "id": "335811716644601857",
+      "username": "realsecretrecipe",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "Trader",
+        "nfts - self assign",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 2
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 167
+    },
+    "Clairee": {
+      "id": "947833713163661362",
+      "username": "clairee_delune",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Booster",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Jayzen": {
+      "id": "1335738366506827776",
+      "username": "jayzenlunar",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 3
+    },
+    "Rayyan": {
+      "id": "1328983907374338059",
+      "username": "rayyan43727",
+      "roles": [
+        "Trader",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 41
+    },
+    "hussain142": {
+      "id": "1033070581173723156",
+      "username": "hussain1427530",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "RICHAD_PC?": {
+      "id": "934723578748887041",
+      "username": "richad_pc3110",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "roygbiv": {
+      "id": "882354870865231912",
+      "username": "whoisroygbiv",
+      "roles": [
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 2
+    },
+    "Pear 🍐": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 16
+    },
+    "om_santo": {
+      "id": "941032174751203369",
+      "username": "om_santo",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "hide.o.n": {
+      "id": "1486743497519399044",
+      "username": "hide.o.n",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 53
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 31
+    },
+    "Brodie Townsend": {
+      "id": "1210193874233073717",
+      "username": "brodietownsend",
+      "roles": [
+        "Creator",
+        "It",
+        "Verified",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Flat _🆘": {
+      "id": "1149908393310564433",
+      "username": "wesh345555",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     }
   }
 }

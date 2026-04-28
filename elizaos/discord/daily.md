@@ -1,59 +1,62 @@
-# elizaOS Discord - 2026-04-26
+# elizaOS Discord - 2026-04-27
 
 ## Summary
 
-### Token Utility and Business Strategy
+### Community Organization
 
-The team discussed the challenge of implementing token-specific utility for Eliza without creating friction for users. shawmakesmagic explained that the preferred approach is to accept any payment method users have available and use the generated revenue to buy back tokens. This strategy aims to balance token economics with user experience. The discussion acknowledged the difficulty of forcing token utility while maintaining accessibility.
+odilitime shared a Hyperscape Discord invite link and mentioned an 'eliza army' steering group being formed for community coordination purposes.
 
-### Development Progress and Product Updates
+### Historical Context
 
-Multiple significant development milestones were reported. Version 3 of Eliza is nearing completion and approaching release. An application is in its final stages of development. Eliza Cloud is actively taking on business clients with direct app integration capabilities. The team confirmed that degenai updates are imminent and will be released soon.
+A discussion emerged about the original 1966 ELIZA chatbot. odilitime provided educational resources about the ELIZA effect to help community members understand the historical context of the project.
+
+### Security and Moderation
+
+A scammer was identified in the channel and subsequently banned by odilitime to protect community members.
+
+### Token Economics and Market Concerns
+
+The channel was dominated by token price complaints, with users expressing financial losses and requesting market-making partnerships with venture capitalists. Multiple users voiced concerns about the current market performance.
 
 ### Technical Issues
 
-A technical problem was identified with the Milady Play Store link from the GitHub repository being non-functional. This issue was reported by community members attempting to access the resource.
+luminousda reported experiencing issues with Eliza, though the problem appeared to resolve itself without requiring intervention.
 
-### Community Engagement
+### Service Offerings
 
-The channel included community banter regarding price movements and milestone-based commitments from members. Discussions reflected active community participation in tracking project developments and market performance.
+One user offered development services for AI and full-stack systems to the community.
 
 ## FAQ
 
-**Q: What is the strategy for Eliza token utility?**
-A: The preferred approach is to accept any payment method users have and use the revenue generated to buy back tokens, rather than forcing token-specific utility that creates user friction.
+**Q: What is the ELIZA effect?**
+A: odilitime provided educational resources about the ELIZA effect, which relates to the original 1966 ELIZA chatbot. Specific details about the effect were shared through educational materials.
 
-**Q: When will v3 be released?**
-A: Version 3 is nearing completion and is close to release, though no specific date was provided.
+**Q: What is the eliza army steering group?**
+A: It is a community coordination group mentioned by odilitime, intended to help organize community efforts.
 
-**Q: Is Eliza Cloud operational?**
-A: Yes, Eliza Cloud is actively taking business and offers direct app integration.
-
-**Q: When will degenai updates be available?**
-A: The team confirmed that degenai updates are imminent and coming soon.
-
-**Q: Is the Milady Play Store link working?**
-A: No, the Milady Play Store link from GitHub was reported as non-functional.
+**Q: Where can I find the Hyperscape Discord?**
+A: odilitime shared an invite link to the Hyperscape Discord server in the channel.
 
 ## Help Interactions
 
-**Helper:** shawmakesmagic
-**Helpee:** Community members
-**Resolution:** Explained the token utility strategy and clarified that the approach is to accept any payment method and use revenue for token buybacks rather than forcing token-specific utility.
+**Helper:** odilitime
+**Helpee:** luminousda
+**Resolution:** luminousda reported issues with Eliza but the problem resolved itself without requiring direct intervention.
 
-**Helper:** Community members
-**Helpee:** Development team
-**Resolution:** Reported that the Milady Play Store link from GitHub is not functional, alerting the team to a technical issue requiring attention.
+**Helper:** odilitime
+**Helpee:** Community
+**Resolution:** Identified and banned a scammer to protect community members from potential fraud.
 
 ## Action Items
 
 ### Technical
 
-- Fix the non-functional Milady Play Store link from GitHub repository (mentioned by community members)
-- Complete and release version 3 of Eliza (mentioned by shawmakesmagic)
-- Release imminent degenai updates (mentioned by team)
+None identified.
 
 ### Features
 
-- Finalize the application currently in final stages (mentioned by shawmakesmagic)
-- Continue Eliza Cloud business integration with direct app capabilities (mentioned by shawmakesmagic)
+None identified.
+
+### Documentation
+
+- Provide educational resources about the ELIZA effect and the original 1966 ELIZA chatbot (mentioned by odilitime)
