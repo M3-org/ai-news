@@ -1,0 +1,347 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-04-28",
+  "date": 1777334400,
+  "stats": {
+    "totalMessages": 29,
+    "totalUsers": 18
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "Shaw announced that Eliza v3 and Milady integration are nearing completion, with an exciting couple of weeks ahead. He explained his preference for working in quieter development-focused servers to avoid token price discussions and maintain focus on technical work. A significant technical update was revealed: $ELIZA (elizaOS token) is now the default payment method in x402 for elizaOS/Milady services, providing concrete utility to the token. Community members provided feedback on project direction, with zadayos and cryptologos_00014 emphasizing the importance of balancing technical development with community engagement, PR planning, and business strategy. They suggested connecting the token with infrastructure utility, increasing communication frequency, and maintaining focus on relevant topics. The discussion highlighted tension between pure technical development and community/business needs. Kevin111s introduced himself as a software engineer seeking collaboration, specifically looking for a US-based partner to handle client-facing communication while he focuses on building production-ready AI workflows and backend architecture. The community welcomed new members and showed continued support for the project despite concerns about communication gaps.",
+      "faqs": [
+        {
+          "question": "What is milady news?",
+          "askedBy": "phenowin",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Does A mean the ability to bill x402 services with $ELIZA?",
+          "askedBy": "capuzr",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Can we expect some update for $degenai this month?",
+          "askedBy": "jack1000x_98528",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "capuzr",
+          "context": "Clarification needed on whether $ELIZA token can be used to bill x402 services",
+          "resolution": "Confirmed that $elizaOS is the default payment in x402 for elizaOS/Milady"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Complete Eliza v3 and Milady integration",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Documentation",
+          "description": "Post more frequent updates in the Discord channel",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Technical",
+          "description": "Connect the coin with infrastructure utility",
+          "mentionedBy": "cryptologos_00014"
+        },
+        {
+          "type": "Documentation",
+          "description": "Develop PR plan and business plan for project expansion",
+          "mentionedBy": "zadayos"
+        }
+      ],
+      "messageCount": 26,
+      "userCount": 17
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical content. The conversation consists of three brief messages: odilitime addressing a scammer, _danoski greeting the channel, and odilitime responding with a greeting. There are no technical discussions, problem-solving activities, code implementations, or development decisions present in this segment. No meaningful technical exchanges occurred during this time period.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 2
+    }
+  ],
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 470
+    },
+    "danoski": {
+      "id": "665907418949091328",
+      "username": "_danoski",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "@Jack": {
+      "id": "1379116061751902219",
+      "username": "jack1000x_98528",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 34
+    },
+    "capuzr": {
+      "id": "865052931048865843",
+      "username": "capuzr",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Kevin": {
+      "id": "488766383836889111",
+      "username": "kevin111s",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "JONATHAN": {
+      "id": "1032616669878681631",
+      "username": "johnathann47",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Daniel Granado 🦞": {
+      "id": "919807434858586123",
+      "username": "dgranado",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "aydın": {
+      "id": "1139637812325535774",
+      "username": "cabbarhalledecekmis06_58958",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Clairee": {
+      "id": "947833713163661362",
+      "username": "clairee_delune",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Booster",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Phenowin": {
+      "id": "1308194416997171291",
+      "username": "phenowin",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Investors",
+        "trust - self assign",
+        "Trader",
+        "Creator",
+        "nfts - self assign",
+        "Vanguard",
+        "[WG] degenspartan",
+        "[WG] Want to Help",
+        "workgroups - write perms",
+        "Verified",
+        "Dev School Student",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Cryptologos": {
+      "id": "1435565434777763942",
+      "username": "cryptologos_00014",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "laboratorian": {
+      "id": "817312344097947648",
+      "username": "labotests",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 3
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 86
+    },
+    "jaydenrain2023": {
+      "id": "991495620261052548",
+      "username": "jaydenrain20239105",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Flat _🆘": {
+      "id": "1149908393310564433",
+      "username": "wesh345555",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    }
+  }
+}

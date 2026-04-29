@@ -1,62 +1,53 @@
-# elizaOS Discord - 2026-04-27
+# elizaOS Discord - 2026-04-28
 
 ## Summary
 
-### Community Organization
+### Project Development Progress
 
-odilitime shared a Hyperscape Discord invite link and mentioned an 'eliza army' steering group being formed for community coordination purposes.
+Shaw announced that Eliza v3 and Milady integration are nearing completion, with significant progress expected in the coming weeks. The development work has been conducted in quieter, more focused servers to avoid distractions from token price discussions and maintain concentration on technical implementation.
 
-### Historical Context
+### Token Utility and Infrastructure
 
-A discussion emerged about the original 1966 ELIZA chatbot. odilitime provided educational resources about the ELIZA effect to help community members understand the historical context of the project.
+A major technical milestone was revealed: $ELIZA (elizaOS token) has been implemented as the default payment method in x402 for elizaOS/Milady services. This integration provides concrete utility to the token beyond speculative value, connecting it directly to infrastructure usage.
 
-### Security and Moderation
+### Community Engagement and Strategy
 
-A scammer was identified in the channel and subsequently banned by odilitime to protect community members.
+Community members provided feedback on balancing technical development with broader project needs. The discussion highlighted tension between pure development focus and community engagement requirements. Feedback emphasized the importance of PR planning, business strategy, and maintaining regular communication with the community while staying focused on relevant technical topics.
 
-### Token Economics and Market Concerns
+### Collaboration Opportunities
 
-The channel was dominated by token price complaints, with users expressing financial losses and requesting market-making partnerships with venture capitalists. Multiple users voiced concerns about the current market performance.
-
-### Technical Issues
-
-luminousda reported experiencing issues with Eliza, though the problem appeared to resolve itself without requiring intervention.
-
-### Service Offerings
-
-One user offered development services for AI and full-stack systems to the community.
+Kevin111s introduced himself as a software engineer seeking partnership opportunities, specifically looking for a US-based collaborator to handle client-facing communication while he focuses on building production-ready AI workflows and backend architecture.
 
 ## FAQ
 
-**Q: What is the ELIZA effect?**
-A: odilitime provided educational resources about the ELIZA effect, which relates to the original 1966 ELIZA chatbot. Specific details about the effect were shared through educational materials.
+**Q: What is the current status of Eliza v3 and Milady integration?**
+A: Both are nearing completion according to Shaw, with an exciting couple of weeks ahead for the project.
 
-**Q: What is the eliza army steering group?**
-A: It is a community coordination group mentioned by odilitime, intended to help organize community efforts.
+**Q: What is the new utility for the $ELIZA token?**
+A: $ELIZA is now the default payment method in x402 for elizaOS/Milady services, providing concrete infrastructure utility.
 
-**Q: Where can I find the Hyperscape Discord?**
-A: odilitime shared an invite link to the Hyperscape Discord server in the channel.
+**Q: Why has Shaw been working in quieter servers?**
+A: To avoid token price discussions and maintain focus on technical development work without distractions.
+
+**Q: What kind of collaboration is Kevin111s seeking?**
+A: He is looking for a US-based partner to handle client-facing communication while he focuses on building production-ready AI workflows and backend architecture.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** luminousda
-**Resolution:** luminousda reported issues with Eliza but the problem resolved itself without requiring direct intervention.
-
-**Helper:** odilitime
-**Helpee:** Community
-**Resolution:** Identified and banned a scammer to protect community members from potential fraud.
+No specific help interactions with clear resolutions were documented in the provided channel summaries. The coders channel contained only brief greetings and a scammer warning from odilitime.
 
 ## Action Items
 
 ### Technical
 
-None identified.
+- Complete Eliza v3 development (mentioned by Shaw)
+- Finalize Milady integration (mentioned by Shaw)
 
 ### Features
 
-None identified.
+- Continue implementation of $ELIZA token as payment method in x402 infrastructure (mentioned by Shaw)
 
 ### Documentation
 
-- Provide educational resources about the ELIZA effect and the original 1966 ELIZA chatbot (mentioned by odilitime)
+- Increase communication frequency with community (suggested by zadayos and cryptologos_00014)
+- Develop PR planning and business strategy materials (suggested by zadayos and cryptologos_00014)
