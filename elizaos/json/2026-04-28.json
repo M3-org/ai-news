@@ -19,7 +19,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427469390-ck7gad.jpg"
+          ]
         },
         {
           "text": "Odilitime clarified that the $elizaOS token is now the default payment method in x402 for the elizaOS and Milady integration, confirming that the token has been connected to infrastructure utility. When asked whether this means users can bill x402 services with $ELIZA, Odilitime confirmed this is the case.",
@@ -27,7 +30,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427492134-amyox.jpg"
+          ]
         },
         {
           "text": "Activity in the coders channel on April 28 was minimal, consisting only of brief greetings between Odilitime and danoski, along with Odilitime removing a scammer from the channel earlier in the day.",
@@ -35,7 +41,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427529581-3oyzrr.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -49,7 +58,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-04-28.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427550116-m7v4o.jpg"
+          ]
         },
         {
           "text": "Despite the build blocker, several areas of completed work stand out. On the AI provider and authentication front, the cloud infrastructure was modernized by replacing Vercel AI Gateway with OpenRouter, using OpenAI and Anthropic as failovers. CLI authentication hangs were also resolved by implementing auto-clearing for stale Steward and Privy tokens. For the n8n plugin, capabilities were expanded with the addition of TriggerContext for conversation routing and RuntimeContextProvider for improved data handling. Security and credential management were also hardened through disconnect-purge functionality and stricter runtime-fact rules.",
@@ -57,7 +69,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-04-28.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427568841-3e06.jpg"
+          ]
         },
         {
           "text": "A large number of pull requests are currently in progress across multiple repositories. In elizaos/eliza, active work includes a credential mediation layer, a runtime operations manager and widget host refresh, conversation routing propagation to the n8n workflow generator, n8n runtime-context support for Discord and Gmail, credential cache purging on disconnect, a deep-link banner for connector settings, bundling of the build-monetized-app skill, fixes for action formatting and cloud provider model drift, and the addition of CREATE_TASK to explicit intent actions. In elizaos/cloud, work is ongoing to push develop to production and to design a Claude and Codex sub-agent bridge specification.",
@@ -65,7 +80,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-04-28.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1777427709891-j9xzkh.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
