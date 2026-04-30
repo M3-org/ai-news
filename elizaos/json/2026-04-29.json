@@ -1,0 +1,285 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-04-29",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion: Project Updates, Token Concerns, and Developer Activity",
+      "content": [
+        {
+          "text": "Shaw, a core developer of ElizaOS, addressed community concerns about the project's direction and token performance. He explained that making specific public promises is risky due to the potential for bad-faith actors to misquote him, but confirmed that the team is actively working on Eliza Cloud, the framework, an autonomous agent with crypto features, and other revenue-generating strategies. He stated that if the project is profitable, token buybacks are part of the plan. Shaw emphasized he has not abandoned the token or project and is working on it daily, adding that 'round two is gonna start soon.' He also noted that Spartan provides updates every few hours and advised the community to be patient during the current market downturn, saying it is time to build.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Community members responded with general support for Shaw and the team, noting that Shaw continues building even as the token price declines and that all code remains open source. Some members expressed concern about the token potentially being delisted from exchanges and the team moving toward a decentralized exchange only model. One community member mentioned attending a BNB event in Hong Kong and promoting ElizaOS merchandise. There was also lighthearted discussion around a meme token called Cheeto Tiger, with related images and videos shared in the channel.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HG_zROKbMAAwoNH.jpg:large",
+            "https://media.tenor.com/vTi1u0Lb1JsAAAAe/kay-tiktok.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/vTi1u0Lb1JsAAAPo/kay-tiktok.mp4"
+          ]
+        },
+        {
+          "text": "In the coders channel, a user flagged a message as a scam and tagged moderator Odilitime to review it, suggesting ongoing vigilance against scam activity within the developer community.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Ecosystem Update: April 29, 2026",
+      "content": [
+        {
+          "text": "The ElizaOS ecosystem underwent a major architectural shift on April 29, 2026, with the core agent server being decoupled from application-specific packages. This was achieved by migrating to a plugin-lifecycle registration system, improving overall modularity. Hard imports of app packages were removed from the agent server, and dangling imports from deleted re-export shims were cleaned up across the codebase.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-29.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Significant mobile and infrastructure progress was made. A full local agent architecture for Android was implemented, including a foreground service for Bun runtime execution. On the cloud infrastructure side, the platform was migrated from Next.js to a Vite SPA with Hono Workers, and image generation storage was transitioned to R2.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-29.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Runtime reliability and user experience improvements were also delivered. A new NoModelProviderConfiguredError was introduced to give actionable feedback when agents are misconfigured. Telegram read receipt logic was optimized by switching to ID-based fetching, resulting in significant performance improvements.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-29.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Several items remain in progress, including vault and secrets management work, a runtime operations refactor, registry fixes, CI and worker end-to-end test fixes for the cloud platform, and TypeScript build fixes for the Anthropic plugin. Two build configuration issues require attention: a subpath export emission failure in the Telegram plugin and a missing preload file issue affecting fresh clones of the main Eliza repository.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-04-29.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1777420800,
+  "nicknameMap": {
+    "-Matt-": {
+      "id": "279999785770156033",
+      "username": "mattxd_",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 470
+    },
+    "bеn": {
+      "id": "1097218738245341194",
+      "username": "coo_sial",
+      "roles": []
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Hráňa": {
+      "id": "1179707850927374367",
+      "username": "zetorjedric_37643",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 85
+    },
+    "Memelord": {
+      "id": "1249067033035804694",
+      "username": "memecoin_dev",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "a-hack",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "Creator",
+        "pmairca - self assign",
+        "Verified",
+        "Dev School Student",
+        "Coder",
+        "Booster",
+        "Designer",
+        "Poker",
+        "Github - Contributor"
+      ],
+      "totalMessages": 7
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 35
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 4
+    },
+    "Pear 🍐": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 19
+    },
+    "Aiden19": {
+      "id": "1266113062939656212",
+      "username": "aiden190157",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 89
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 19
+    },
+    "@Jack": {
+      "id": "1379116061751902219",
+      "username": "jack1000x_98528",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    }
+  }
+}
