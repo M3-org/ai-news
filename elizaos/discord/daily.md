@@ -1,54 +1,66 @@
-# elizaOS Discord - 2026-04-29
+# elizaOS Discord - 2026-04-30
 
 ## Summary
 
-### Project Development Status
+### ElizaOS v3 Architecture and Development
 
-Shaw provided a comprehensive update on elizaOS development progress, addressing community concerns about the project's direction during market downturns. The team is actively working on multiple initiatives including Eliza Cloud, framework improvements, and an autonomous agent with comprehensive crypto features. Shaw emphasized that Spartan provides regular updates every few hours and the team remains committed to building despite challenging market conditions. Alternative monetization strategies are being explored, with a token buyback strategy planned contingent on profitability. Shaw hinted at an upcoming "round two" but acknowledged the difficulty of making public promises in an environment where statements can be weaponized against builders.
+Shaw outlined the comprehensive architecture for ElizaOS v3, describing it as a full application runtime that supports all devices and platforms. The system moves beyond previous limitations by integrating with all social platforms including iMessage, enabling task issuance to Codex and Claude, and providing subscription management capabilities. The platform allows users to create workflows and runtime applications that can be created, edited, and executed dynamically. A key feature is the ability to monetize applications through Eliza Cloud. Shaw emphasized that development has been continuous for 6 months with cozy devs, and showcased the botdick agent as an example that successfully created its own video game.
 
-### Community Engagement and Support
+### Project Funding and Team Compensation
 
-Community members expressed continued support for the project despite market challenges. Baogerbao highlighted Shaw's commitment to open-source development and community engagement, noting his attendance at BNB events in Hong Kong and creation of merchandise. The team's decision to continue building during the downturn was emphasized as a key differentiator. Zadayos also voiced support for the project's direction. Some skepticism emerged regarding potential exchange delistings and project viability, though supporters countered with affirmations of ongoing development work.
+Shaw provided transparency about the financial challenges facing the project. He explained that the team received no equity when token values collapsed, with ai16z and elizaos tokens only providing basic salary. The v3 development is being funded through personal savings. Shaw noted that when tokens went to zero, it created significant team equity problems and made it difficult to retain developers. He addressed community complaints by clarifying the financial constraints under which the team has been operating.
 
-### Market Context
+### Token Philosophy and Community Building
 
-The broader cryptocurrency market downturn was discussed as context for project performance concerns. Solana's price decline was specifically mentioned as an indicator of overall market conditions affecting token performance across the ecosystem.
+Shaw rejected traditional token utility approaches, advocating instead for culture-building over forced utility mechanisms. He emphasized that the core value proposition is agents that can build anything users want with monetization capabilities, rather than artificial utility creation. This philosophy represents a departure from conventional tokenomics strategies in favor of organic community and product development.
 
-### Developer Interest
+### Technical Challenges and Past Issues
 
-Two developers expressed interest in contributing to the project. Aiden190157 indicated willingness to help, while rsn6958 provided detailed credentials highlighting experience in AI and full-stack development with a focus on production-ready systems.
+The discussion covered various challenges the project has faced, including lawsuit threats, migration issues, and the complications arising from token value collapse. Shaw provided context for why certain decisions were made and how the team has navigated these obstacles while continuing development.
+
+### Security and Local Development
+
+A new developer joined the discussion exploring technical implementation details around local LLM data storage, agent key security, and red team swarm testing methodologies. These topics highlighted ongoing considerations for secure and robust agent deployment.
 
 ## FAQ
 
-**Q: Is the elizaOS team still actively developing the project?**
-A: Yes, Shaw confirmed that the team is actively working on multiple fronts including Eliza Cloud, framework improvements, an autonomous agent with comprehensive crypto features, and alternative monetization strategies. Spartan provides regular updates every few hours.
+**Q: What are the main features of ElizaOS v3?**
+A: ElizaOS v3 is a full application runtime supporting all devices and platforms with integration across all social platforms including iMessage, task issuance to Codex and Claude, subscription management, workflow creation capabilities, and runtime application creation, editing, and execution with monetization through Eliza Cloud.
 
-**Q: What is the team's approach to token buybacks?**
-A: Shaw mentioned that a token buyback strategy is planned but will be contingent on the project achieving profitability first.
+**Q: How is ElizaOS v3 being funded?**
+A: Shaw is funding v3 development through personal savings after the ai16z and elizaos tokens only provided basic salary and the team received no equity when token values collapsed.
 
-**Q: Why hasn't Shaw made more public promises about the project's future?**
-A: Shaw explained that in the current environment, public statements can be used against builders, making it challenging to make commitments publicly.
+**Q: How long has v3 been in development?**
+A: ElizaOS v3 has been in continuous development for 6 months with cozy devs.
 
-**Q: How is elizaOS different from other projects during this market downturn?**
-A: The team's commitment to continuing development and building during the downturn was highlighted as a key differentiator, with Shaw maintaining open-source principles and community engagement.
+**Q: What is the token utility philosophy for the project?**
+A: Shaw rejects traditional forced token utility mechanisms, instead advocating for culture-building and focusing on the core value proposition of agents that can build anything users want with monetization capabilities.
 
-**Q: What is "round two" that Shaw mentioned?**
-A: Shaw hinted at an upcoming "round two" but did not provide specific details about what this entails.
+**Q: What example demonstrates v3 capabilities?**
+A: The botdick agent was showcased as an example that successfully created its own video game, demonstrating the platform's capabilities.
+
+**Q: What challenges has the project faced?**
+A: The project has faced lawsuit threats, migration issues, token value collapse leading to team equity problems, and difficulties retaining developers when compensation became limited.
 
 ## Help Interactions
 
-No specific help interactions with clear resolutions were documented in the provided channel summary.
+Helper: Shaw (shawmakesmagic)
+Helpee: 0xtdl01 (new developer)
+Resolution: Shaw provided context and discussion around local LLM data storage, agent key security, and red team swarm testing as the new developer explored technical implementation details.
 
 ## Action Items
 
 ### Technical
 
-- Continue development on Eliza Cloud platform (mentioned by Shaw)
-- Implement framework improvements for elizaOS (mentioned by Shaw)
-- Build autonomous agent with comprehensive crypto features (mentioned by Shaw)
-- Evaluate and onboard potential contributors aiden190157 and rsn6958 (mentioned by community discussion)
+- Implement local LLM data storage solutions (mentioned by 0xtdl01)
+- Address agent key security considerations (mentioned by 0xtdl01)
+- Develop red team swarm testing methodologies (mentioned by 0xtdl01)
 
 ### Features
 
-- Develop alternative monetization strategies for the project (mentioned by Shaw)
-- Implement token buyback strategy contingent on profitability (mentioned by Shaw)
+- Complete integration with all social platforms including iMessage for v3 (mentioned by Shaw)
+- Implement task issuance capabilities to Codex and Claude (mentioned by Shaw)
+- Build subscription management system (mentioned by Shaw)
+- Develop workflow creation capabilities (mentioned by Shaw)
+- Enable runtime application creation, editing, and execution (mentioned by Shaw)
+- Implement monetization capabilities through Eliza Cloud (mentioned by Shaw)
