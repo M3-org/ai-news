@@ -1,85 +1,104 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-04-30",
+  "title": "Daily Report - 2026-05-01",
   "categories": [
     {
-      "title": "ElizaOS V3 Development Update and Community Discussion",
+      "title": "ElizaOS Community Discussion and Development Updates - May 1, 2026",
       "content": [
         {
-          "text": "Shaw (shawmakesmagic), the lead developer of ElizaOS, addressed community frustrations on April 30, 2026, responding firmly to comparisons with Claude AI and complaints about the project's pace. Shaw emphasized that the team is focused on building and that the server is not a place for price complaints or negativity. He stated that anyone not contributing to the project is welcome to leave, calling for maximal alignment among community members.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "posters": "https://cdn.elizaos.news/posters/1777600377536-19tfv.png"
-        },
-        {
-          "text": "Shaw provided a detailed overview of ElizaOS V3, describing it as a full application runtime that runs across all devices and platforms. Key features include integration with social platforms and iMessage, the ability to issue tasks and control tools like Codex and Claude, workflow creation, and the ability to build and monetize applications at runtime. Shaw noted that the architecture is fundamentally different from other agent frameworks and that the team has been coding nonstop for approximately six months to complete it. He also shared that botdick, an Eliza agent built by one of the cozy devs, independently created its own video game, showcasing the agent's capabilities.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/screenshot_2026-04-30_at_5-07-37_am_b22c02c4.png",
-            "https://cdn.elizaos.news/elizaos-media/screenshot_2026-04-30_at_6-26-58_am_c9433266.png"
-          ]
-        },
-        {
-          "text": "Shaw reflected candidly on the history of the ElizaOS token, explaining that the token effectively failed due to internal disagreements, a threatened lawsuit, and a failed migration. He disclosed that he personally received no significant financial gain from ai16z or ElizaOS beyond a basic salary and is now funding V3 development from personal savings. He expressed frustration at being labeled a scammer while others in the ecosystem engaged in harmful behavior. On the topic of token utility, Shaw argued that memecoins do not need traditional utility and that the real value lies in building a strong culture and the best possible agent. He stated that the utility of ElizaOS is the ability to run the agent and have it build whatever you want, monetized through Eliza Cloud.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "posters": "https://cdn.elizaos.news/posters/1777600397721-7saldo.jpg"
-        },
-        {
-          "text": "An AMA event was announced for April 30, 2026 at 9PM PST featuring Shaw, binkyfishai, and baogerbao to discuss Botdick and ElizaOS V3. A community member also shared that Claude Security entered public beta for Claude Enterprise customers, offering codebase vulnerability scanning, false positive reduction, and patch suggestions.",
+          "text": "In the general discussion channel, a community member asked about a potential Coinbase listing following the token swap completion. Odilitime clarified that exchange talks are always under NDA and no token can publicly discuss them. Separately, a Twitter Space AMA was hosted by Botdick featuring Shaw, which drew around 20 listeners. Community members were thanked for joining the session.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://abs.twimg.com/sticky/cards/TwitterSpacesCardImage.3.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A community member asked about the main advantages of ElizaOS over Orbofi. Odilitime explained that ElizaOS is an open source agentic framework that is more mature and robust, positioning it as a developer-focused AI agent operating system compared to Orbofi which is a consumer-facing AI and Web3 platform with a marketplace and monetization layer. The analogy used was ElizaOS is like Linux while Orbofi is like Shopify or an App Store. It was also noted that with Milady, ElizaOS has an app store layer as well. Shaw added that Orbofi likely uses a fairly different architecture to accomplish similar things.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1499820135928823960/Screenshot_2026-05-01_at_10.09.30_AM.png?ex=69f62fd9&is=69f4de59&hm=b99693a964ef63873e05cefcbb48362f042ae3f137fb09c66942a6a23346ee69&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Shaw shared that he integrated ElizaOS into a small robot from Unitree priced at around 4000 dollars, enabling it to walk around on command. He also mentioned receiving repeated refusals from ChatGPT version 5.5 when applying for a cyber-related program. A departing community member announced they were deleting their online persona across platforms due to a new job, expressing appreciation for the ElizaOS ecosystem.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1499863805125984447/image.png?ex=69f65885&is=69f50705&hm=c1e86eca811acc41b9c2b543ac82a064666a16a9d01f886d018e2b744ac3f74c&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer named trace posted an availability notice highlighting expertise in LLM systems, autonomous agents, workflow automation, multimodal AI, APIs, databases, backend logic, and production reliability, expressing openness to new opportunities in AI product engineering and full-stack builds. Separately, Dawn shared a field report on a failure mode called memory rot observed in long-lived agents after approximately three months of operation. The issue involves retrieval-only memory architectures such as RAG and vector store plus LLM setups, where old facts persist after becoming stale, causing agents to drift from current state without awareness. The proposed fix involves a reconciliation pass with freshness gates on outgoing claims, periodic cross-source diffs, and re-embedding under the current ontology so the system can detect its own staleness proactively. Another community member expressed interest in reading the full report.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1499389488286142595_efc0898b.jpg",
-            "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1499469788332822649_95d60b0d.jpg"
-          ],
-          "videos": "https://vxtwitter.com/tvid/amplify_video/2049892644424232960/vid/avc1/1920x1080/uCif1QH1-Mt11dyW"
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Development Summary: April 30, 2026",
-      "content": {
-        "text": "Development on April 30, 2026 centered on two main areas: AI SDK dependency management and infrastructure improvements. The team updated several core AI SDKs to maintain framework performance and compatibility, including the Anthropic AI SDK updated to version 0.92.0, the AI dependency updated to v6.0.172, and multiple AI SDK provider utilities such as provider-utils updated to v4.0.25, provider updated to v3.0.10, and the OpenAI provider updated to v3.0.55. On the infrastructure side, self-hosted deployment capabilities were enhanced through the addition of CORS support, bearer authentication, and cross-platform build fixes. The Supabase and Postgres Docker tag was also updated to v17.6.1.113 to keep database configurations current. In addition to completed work, two strategic proposals entered active discussion: one for integrating Hive Civilization on Base mainnet to expand the agent ecosystem, and another for integrating SwarmScore to provide agent reputation ratings. These proposals reflect ongoing efforts to broaden the platform's service and reputation capabilities.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-04-30.json"
-      },
+      "title": "ElizaOS Project Summary: May 1, 2026",
+      "content": [
+        {
+          "text": "Development on May 1, 2026 focused on strengthening cross-platform infrastructure and agent runtime reliability. A new secrets vault package, @elizaos/vault, was launched to standardize secrets management across platforms with an integrated Settings UI. Self-hosted connectivity was expanded to support HTTPS dashboards, Capacitor mobile, and Electrobun desktop builds, including secure authentication protocols. Extensive dependency updates were performed across the stack, covering packages such as @anthropic-ai/sdk, various ai SDK packages, @electric-sql/pglite, and @biomejs/biome. CI/CD infrastructure was also refreshed with updates to Supabase Postgres docker tags and GitHub action versions. On the runtime and testing side, test reliability was improved by removing API module mocks in app-core, and critical build issues were resolved including missing preload files and Drizzle pgTable definitions for entity_identities, entity_merge_candidates, and fact_candidates in the plugin-sql migrator. Integration issues related to Hive Civilization x402 services and SwarmScore reputation were also finalized and closed.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-05-01.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1777507200,
+  "date": 1777593600,
   "nicknameMap": {
-    "jin": {
-      "id": "213767993153290250",
-      "username": "dankvr",
+    "mayoe | Patache": {
+      "id": "468544947826458641",
+      "username": "mayoe76",
       "roles": [
-        "God",
-        "a-hack",
-        "regen",
         "Trader",
         "Creator",
-        "Moderator",
-        "Vanguard",
-        "Contributor",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Core Dev",
-        "Coder"
+        "Verified"
       ],
-      "totalMessages": 87
+      "totalMessages": 1
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "Dawn": {
+      "id": "1472843646045786175",
+      "username": "sentient_dawn",
       "roles": [
-        "[WG] Want to Help",
+        "Helper",
         "Verified",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 87
+      "totalMessages": 1
+    },
+    "trace": {
+      "id": "853841524764049429",
+      "username": "trace.g",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
     },
     "Shaw": {
       "id": "498273781589213185",
@@ -92,7 +111,80 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 56
+      "totalMessages": 64
+    },
+    "sipher-seven-eight-five": {
+      "id": "1139674615199834153",
+      "username": "lilgoat_24358",
+      "roles": [],
+      "totalMessages": 5
+    },
+    "Martins": {
+      "id": "1498561562187665470",
+      "username": "martins072535",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "zeerlayer": {
+      "id": "1437079716229025832",
+      "username": "zeerlayer",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 88
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 477
     },
     "Baoger": {
       "id": "555035784378318875",
@@ -111,132 +203,59 @@
         "Coder",
         "Github - Contributor"
       ],
-      "totalMessages": 91
+      "totalMessages": 97
     },
-    "MATTIOBOY 🇦🇺": {
-      "id": "647984767660457994",
-      "username": "mattioboy",
-      "roles": [
-        "NFT",
-        "Verified"
-      ],
-      "totalMessages": 8
-    },
-    "0xfarmed": {
-      "id": "1404118453379534958",
-      "username": "guilly0588",
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
       "roles": [
         "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "King",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "K83": {
-      "id": "946784475357020180",
-      "username": "elroybandicoot",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "Pear 🍐": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 20
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 36
-    },
-    "Kelvin_anderson": {
-      "id": "1336754629353930782",
-      "username": "ticketbo",
-      "roles": [
-        "Trader",
-        "Creator",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Jens": {
-      "id": "1167802862542270564",
-      "username": "jensinio19_83561",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
         "Fr",
         "utility",
         "Coder",
-        "eliza"
+        "Github - Contributor",
+        "Labs Alumni"
       ],
-      "totalMessages": 1
+      "totalMessages": 51
     },
-    "Error P015-A": {
-      "id": "894828425225863179",
-      "username": "your.exit.liquidity",
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
       "roles": [
-        "a-hack",
         "Trader",
+        "[WG] Want to Help",
         "Verified",
-        "Dev School Student",
-        "Booster",
-        "utility",
-        "eliza"
+        "utility"
       ],
-      "totalMessages": 10
+      "totalMessages": 34
     },
-    "Aseel": {
-      "id": "1064153856805707797",
-      "username": "aseel3510",
+    "mike": {
+      "id": "1189017605114183742",
+      "username": "daias_123_33267",
       "roles": [
         "Verified",
         "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 1
     },
-    "william": {
-      "id": "1086891526812082196",
-      "username": "william_12431",
+    "samanth": {
+      "id": "1061342748780794047",
+      "username": "samanthaiii",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
@@ -257,68 +276,58 @@
         "Designer",
         "Coder"
       ],
-      "totalMessages": 12
+      "totalMessages": 13
     },
-    "@Jack": {
-      "id": "1379116061751902219",
-      "username": "jack1000x_98528",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "Mariano": {
-      "id": "663735382059253805",
-      "username": "poderhxc",
-      "roles": [
-        "Creator",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Seree": {
-      "id": "831422482422431754",
-      "username": "lalanotia",
-      "roles": [
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 17
-    },
-    "kik": {
-      "id": "1026232446137684000",
-      "username": ".alex269",
+    "AleA": {
+      "id": "1168553668950360078",
+      "username": "alea_71545",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
-        "Verified",
+        "It",
+        "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "0xTDL ⚡": {
-      "id": "407225635040264193",
-      "username": "0xtdl01",
+    "Оdilitimе👑": {
+      "id": "1385201538107969628",
+      "username": "eblan2233_62332",
+      "roles": []
+    },
+    "Ken": {
+      "id": "1455451463705952298",
+      "username": "kenxybruck",
       "roles": [
         "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
         "utility",
-        "Coder"
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "lamby": {
+      "id": "974642795425980446",
+      "username": "lambyone",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Amit gupta": {
+      "id": "1436005876631601164",
+      "username": "amitgupta0459",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     }
