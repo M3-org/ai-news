@@ -1,141 +1,70 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-03",
-  "date": 1777766400,
+  "title": "elizaOS Discord - 2026-05-04",
+  "date": 1777852800,
   "stats": {
-    "totalMessages": 56,
-    "totalUsers": 13
+    "totalMessages": 36,
+    "totalUsers": 20
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on ElizaOS project development, token economics, and community concerns. Shaw shared three key repositories: plugin-auto-trader, plugin-social-alpha, and spartan, explaining that the social alpha plugin analyzes trenches channels to evaluate if following social signals would be profitable, enabling social copy trading functionality. The main tension arose from community members expressing concerns about token price performance and communication style. Shaw clarified fundamental project philosophy: token holders are not traditional investors, the project prioritizes building revenue-generating products over short-term price action, and buybacks cannot happen without revenue. He emphasized the project aims to build a community of builders, not speculators. Key upcoming developments include ElizaOS V3 launch, Eliza Cloud, and the Milady app which will generate revenue. The team is developing a community PR and marketing plan for the V3 launch. A roadmap discussion occurred with odilitime preparing documentation for the announcements channel and planning to update the GitHub roadmap repository. Shaw stressed that real growth requires years of development (referencing typical 8-year IPO timelines) and that demanding buybacks before establishing revenue would be fatal for any traditional business.",
+      "summary": "The discussion channel showed significant price movement with V3 up 90-130%, generating excitement among community members. Key technical and strategic insights were shared by zadayos, who highlighted that major AI platforms (ChatGPT, Gemini, Claude) have praised elizaos's solution architecture and GitHub code. The project features comprehensive capabilities including scaling to hundreds of thousands of agents, optimized fees, security, and UI/UX. The architecture is designed with flexibility for adding utility tokens and includes hidden features for future developer integration. zadayos emphasized that Shaw's team has delivered beyond initial ai16z promises and predicted the project will transition from memecoin status to essential infrastructure once the launch plan executes and generates market adoption. The community discussed price targets, with 2 billion market cap mentioned as the old ATH, though considered small relative to the product vision. shawmakesmagic confirmed 'much progress today' without elaborating on specifics. A developer (rsn6958) introduced themselves offering AI and full-stack development services focused on production-ready, maintainable systems. Minor discussions included liquidity concerns on Solana and bot management issues. The overall sentiment was bullish with references to Zerebro's 600% gains and expectations for similar performance.",
       "faqs": [
         {
-          "question": "What is the goal of the social alpha plugin?",
-          "askedBy": "Implied question",
-          "answeredBy": "shawmakesmagic"
-        },
-        {
-          "question": "When will buybacks happen for the token?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "shawmakesmagic"
-        },
-        {
-          "question": "What happened to the Babylon airdrop?",
-          "askedBy": "paolin_62616",
+          "question": "What happened to cause the price movement?",
+          "askedBy": "work1730",
           "answeredBy": "Unanswered"
         },
         {
-          "question": "When will ElizaOS V3 launch?",
-          "askedBy": "Community",
-          "answeredBy": "shawmakesmagic"
+          "question": "I bought elizaOs on Solana, I'm confused about the low liquidity on there",
+          "askedBy": "r09600",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "shawmakesmagic",
-          "helpee": "Community",
-          "context": "Understanding the social alpha plugin functionality and use case",
-          "resolution": "Explained it analyzes trenches channels to see if following social signals would be profitable, enabling social copy trading in Telegram channels"
-        },
-        {
-          "helper": "satsbased",
-          "helpee": "paolin_62616",
-          "context": "Concerns about token price and project direction",
-          "resolution": "Clarified that revenue generation from products like Milady app will drive token value appreciation"
-        },
-        {
-          "helper": "alexeill",
-          "helpee": "paolin_62616",
-          "context": "Understanding token buyback mechanics",
-          "resolution": "Explained that buybacks depend on revenue generation and lack of buybacks indicates no revenue yet"
-        },
-        {
           "helper": "odilitime",
-          "helpee": "Community",
-          "context": "Need for clearer communication and roadmap",
-          "resolution": "Prepared roadmap documentation for announcements channel and planned GitHub roadmap update"
+          "helpee": "r09600",
+          "context": "Concerns about Nigerian bots getting out of hand in the chat",
+          "resolution": "odilitime acknowledged they try to keep bots managed"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Launch ElizaOS V3",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Launch Eliza Cloud",
+          "description": "Execute launch plan to get market adoption and generate revenue for elizaos platform",
           "mentionedBy": "zadayos"
         },
         {
           "type": "Technical",
-          "description": "Complete Milady app for revenue generation",
-          "mentionedBy": "satsbased"
+          "description": "Address low liquidity issue on Solana for elizaOs token",
+          "mentionedBy": "r09600"
         },
         {
-          "type": "Documentation",
-          "description": "Update GitHub roadmap repository with text version",
-          "mentionedBy": "odilitime"
-        },
-        {
-          "type": "Documentation",
-          "description": "Post roadmap documentation in announcements channel",
-          "mentionedBy": "odilitime"
-        },
-        {
-          "type": "Feature",
-          "description": "Develop community PR and marketing plan for V3 launch",
-          "mentionedBy": "zadayos"
-        },
-        {
-          "type": "Feature",
-          "description": "Build products that generate revenue for eventual buybacks",
-          "mentionedBy": "shawmakesmagic"
+          "type": "Technical",
+          "description": "Improve bot management and moderation in Discord chat",
+          "mentionedBy": "r09600"
         }
       ],
-      "messageCount": 49,
-      "userCount": 12
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The primary activity involves odilitime sharing a fixupx.com link to a status post. sentient_dawn attempts to follow up with mayoe by sharing a link but encounters issues with the server's spam filter blocking the URL. odilitime explains that spam bot activity has necessitated strict filtering measures and suggests using backticks around URLs (e.g., `https://domain.com`) as a potential workaround to bypass the filter. The conversation is brief and focuses on communication logistics rather than substantive technical problem-solving or development discussions.",
-      "faqs": [
-        {
-          "question": "Does using backticks around URLs like `https://domain.com` work to bypass the spam filter?",
-          "askedBy": "odilitime",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "sentient_dawn",
-          "context": "Server spam filter was blocking URL sharing attempts",
-          "resolution": "Suggested using backticks around URLs as a potential workaround to bypass the filter"
-        }
-      ],
-      "actionItems": [],
-      "messageCount": 4,
-      "userCount": 2
+      "messageCount": 36,
+      "userCount": 20
     }
   ],
   "nicknameMap": {
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
       "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 84
+      "totalMessages": 23
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -165,60 +94,134 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 489
+      "totalMessages": 491
     },
-    "Dawn": {
-      "id": "1472843646045786175",
-      "username": "sentient_dawn",
+    "r09600": {
+      "id": "760658233924124724",
+      "username": "r09600",
       "roles": [
-        "Helper",
-        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 2
     },
-    "Rainman": {
-      "id": "1009171434465149028",
-      "username": "rainman1001",
+    "pangolink": {
+      "id": "913581259329011784",
+      "username": "pangolink",
       "roles": [
-        "Trader",
+        "Partner",
+        "elizaOS Tester",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Associate"
+      ],
+      "totalMessages": 2
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
         "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 20
+      "totalMessages": 89
     },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
       "roles": [
-        "Trader",
-        "[WG] Want to Help",
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 85
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
         "Verified",
         "utility"
       ],
-      "totalMessages": 40
+      "totalMessages": 172
     },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 20
-    },
-    "FeRhaT_@": {
-      "id": "928043254765723688",
-      "username": "ferhat8372",
+    "Emil21": {
+      "id": "1406240329190998158",
+      "username": "emil210748",
       "roles": [
         "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Error P015-A": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
+      "roles": [
+        "a-hack",
+        "Trader",
         "Verified",
+        "Dev School Student",
+        "Booster",
         "utility",
         "eliza"
       ],
-      "totalMessages": 32
+      "totalMessages": 11
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 98
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Biazs": {
+      "id": "268404947048071168",
+      "username": "biazs.",
+      "roles": [
+        "Trader",
+        "utility",
+        "M",
+        "eliza"
+      ],
+      "totalMessages": 15
     },
     "Zaday": {
       "id": "1194534149076299836",
@@ -233,20 +236,81 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 13
+      "totalMessages": 18
     },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
       "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
+        "Trader",
+        "[WG] Want to Help",
         "Verified",
         "utility"
       ],
-      "totalMessages": 171
+      "totalMessages": 41
+    },
+    "Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Seree": {
+      "id": "831422482422431754",
+      "username": "lalanotia",
+      "roles": [
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 19
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "King",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Github - Contributor",
+        "Labs Alumni"
+      ],
+      "totalMessages": 52
+    },
+    "work": {
+      "id": "902158918606798848",
+      "username": "work1730",
+      "roles": [
+        "Verified",
+        "Dev School Student"
+      ],
+      "totalMessages": 1
+    },
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 11
     },
     "paolin": {
       "id": "1437695020441538560",
@@ -260,44 +324,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 46
-    },
-    "Neutral": {
-      "id": "1083516282378395769",
-      "username": "toztas.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "elroybandicoot": {
-      "id": "946784475357020180",
-      "username": "elroybandicoot",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 2
-    },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 47
     }
   }
 }
