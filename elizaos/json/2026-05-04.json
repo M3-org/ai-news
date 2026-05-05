@@ -7,31 +7,19 @@
       "content": [
         {
           "text": "On May 4, 2026, the ElizaOS Discord discussion channel saw significant activity centered around a major price surge for the elizaOS token. Community members reported gains ranging from 90% to 130% from recent lows, with some members taking partial profits while others held positions anticipating further upside. One user noted taking roughly 25% profit during the rapid price movement. Alongside the price action, a community member shared a Jim Carrey reaction gif that received notable engagement, reflecting the celebratory mood in the channel.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://media.tenor.com/bEJ7jfBGIy4AAAAe/jim-carrey-alive.png"
-          ],
-          "videos": [
-            "https://media.tenor.com/bEJ7jfBGIy4AAAPo/jim-carrey-alive.mp4"
-          ]
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1500823378108481596_f57518b0.png",
+          "videos": "https://cdn.elizaos.news/elizaos-media/embed-video-1500823378108481596_5cbe2d1c.mp4"
         },
         {
           "text": "Several community members expressed strong optimism about the project's fundamentals, citing that major AI platforms such as ChatGPT, Gemini, and Claude have reportedly praised the solution architecture and direction of the elizaOS team based on their public GitHub code. Members highlighted features including scalability to hundreds of thousands of agents, fee optimization, security, and UI/UX improvements. One member noted that Shaw's team has delivered on and beyond the original promises made under the ai16z brand, and that investment funds are likely monitoring the project's GitHub closely. Shaw himself commented that there was much progress made that day.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1777944764196-s83gg.png"
         },
         {
           "text": "Other discussion topics included a user questioning the low liquidity of elizaOS on Solana, complaints about Nigerian bots in the chat with a moderator acknowledging efforts to manage them, a developer introducing themselves as someone who builds AI and full-stack systems focused on practical and production-ready software, and a mention of Zerebro being up 600% from its lows. One community member also offered constructive criticism directed at Shaw regarding the importance of careful communication given the community's attention, noting a significant technical knowledge gap between developers and general community members.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1777944786595-oqkb.jpg"
         }
       ],
       "topic": "discordrawdata"
@@ -41,35 +29,22 @@
       "content": [
         {
           "text": "May 4, 2026 saw significant expansion of the ElizaOS ecosystem across several fronts. On the cloud infrastructure and monetization side, support was enabled for monetized container app domains including route ownership and Cloudflare management. System stability was improved by resolving billing data fetch loops and consolidating Pages Functions. The Cloud dashboard and CLI login flows were stabilized through fixes to multiple authentication and session synchronization issues.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json"
         },
         {
           "text": "Plugin and workflow enhancements included the migration of the plugin-slack package into the monorepo, centralizing service and action definitions. The n8n workflow generation system was refined with improved prompt rules, structured clarification requests, and better JSON response handling. UI support for inline clarification quick-picks was also added to the AutomationsView component.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json",
+          "posters": "https://cdn.elizaos.news/posters/1777944822882-eig0s.jpg"
         },
         {
           "text": "New LifeOps modules were introduced to enhance agent autonomy, covering proactive planning, inbox management, health monitoring, and activity reporting. Agent configuration logic was also corrected to ensure vault sentinels are properly skipped during environment variable application. Work in progress includes dependency updates for hono and typescript, as well as a fix to preserve agent entry settings during character configuration builds.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json",
+          "posters": "https://cdn.elizaos.news/posters/1777944853190-0lrjgj.png"
         },
         {
           "text": "Several new issues were identified, including agents incorrectly reporting a lack of task and memory tools, the Telegram wrapper bypassing agent runtime and preventing skill and action dispatch, the dangerously-skip-permissions flag failing to bypass confirmation loops, and activity panel flickering under high-volume WebSocket events. An integration proposal for a scientific paper generation character called CAJAL was reviewed and closed.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-04.json",
+          "posters": "https://cdn.elizaos.news/posters/1777944885539-dwtu1s.png"
         }
       ],
       "topic": "miscellaneous"
