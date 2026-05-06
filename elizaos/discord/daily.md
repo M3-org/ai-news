@@ -1,57 +1,55 @@
-# elizaOS Discord - 2026-05-04
+# elizaOS Discord - 2026-05-05
 
 ## Summary
 
-### Price Performance and Market Movement
+### ElizaOS Model Development
 
-V3 experienced significant price movement with gains of 90-130%, generating excitement across the community. The discussion referenced the old all-time high market cap of 2 billion, though this was considered small relative to the product vision. Community members drew comparisons to Zerebro's 600% gains and expressed expectations for similar performance from elizaOS.
+Shaw provided extensive technical updates on the eliza-1 model training effort. The development uses qwen as the base model, trained specifically in harness for Eliza. Key technical implementations include dflash speculative decoding for performance optimization, caveman compression applied to thinking processes, and turboquant for model quantization. The focus is on creating a general-purpose model, with ongoing housekeeping work in progress. A v2.0.0-beta.0 release was noted as part of the development cycle.
 
-### Technical Architecture and Capabilities
+### Token Migration and Bridging
 
-zadayos provided comprehensive technical insights highlighting that major AI platforms including ChatGPT, Gemini, and Claude have praised elizaOS's solution architecture and GitHub code. The project features capabilities for scaling to hundreds of thousands of agents with optimized fees, security, and UI/UX. The architecture is designed with flexibility for adding utility tokens and includes hidden features intended for future developer integration.
+Community members raised questions about bridging tokens between BSC and Solana networks. Wormhole and debridge were suggested as potential solutions for cross-chain token transfers. The discussion reflected ongoing interest in token operations and migration paths between different blockchain ecosystems.
 
-### Project Vision and Market Position
+### Community Projects and Events
 
-zadayos emphasized that Shaw's team has delivered beyond the initial ai16z promises and predicted the project will transition from memecoin status to essential infrastructure once the launch plan executes and generates market adoption. The assessment positioned elizaOS as having comprehensive capabilities that exceed initial expectations.
+A community member announced their elizaOK project was selected for the Fourmeme Hackathon Top 20. This highlighted active community participation in external events and hackathons related to the ElizaOS ecosystem.
 
-### Development Progress
+### Security Concerns
 
-shawmakesmagic confirmed significant progress was made during the day without providing specific details. A developer (rsn6958) introduced themselves to the community, offering AI and full-stack development services with a focus on production-ready, maintainable systems.
+Multiple scam warnings were issued throughout the chat, indicating ongoing vigilance within the community regarding potential fraudulent activities or malicious actors.
 
-### Community Concerns
+### Market Discussion
 
-Minor discussions addressed liquidity concerns on Solana and bot management issues within the Discord server. Overall sentiment remained bullish despite these operational concerns.
+Brief speculation occurred regarding potential price movements, though this was a minor theme compared to technical development discussions.
 
 ## FAQ
 
-**Q: What price movement did V3 experience?**
-A: V3 was up 90-130% according to community discussions.
+**Q: What base model is being used for eliza-1 training?**
+A: The eliza-1 model uses qwen as the base model, trained in harness specifically for Eliza.
 
-**Q: Which major AI platforms have praised elizaOS?**
-A: ChatGPT, Gemini, and Claude have all praised elizaOS's solution architecture and GitHub code.
+**Q: What technical optimizations are being implemented in the eliza-1 model?**
+A: The model includes dflash speculative decoding for performance optimization, caveman compression applied to thinking processes, and turboquant for model quantization.
 
-**Q: What are the key technical capabilities of elizaOS?**
-A: The platform can scale to hundreds of thousands of agents with optimized fees, security, and UI/UX. It includes flexibility for adding utility tokens and hidden features for future developer integration.
+**Q: How can tokens be bridged between BSC and Solana?**
+A: Community members suggested using wormhole and debridge as solutions for cross-chain token transfers between BSC and Solana networks.
 
-**Q: What was the old all-time high market cap?**
-A: The old ATH was 2 billion market cap, though this is considered small relative to the product vision.
-
-**Q: What is the expected transition for the project?**
-A: The project is expected to transition from memecoin status to essential infrastructure once the launch plan executes and generates market adoption.
+**Q: What is the current release version mentioned?**
+A: A v2.0.0-beta.0 release was noted during the discussions.
 
 ## Help Interactions
 
-No specific help interactions were documented in the provided channel summary.
+Shaw helped community members by providing detailed technical updates on eliza-1 model development, explaining the architecture choices and optimization techniques being implemented.
+
+Community members assisted others asking about token bridging by suggesting wormhole and debridge as potential solutions for BSC to Solana transfers.
+
+Multiple community members issued scam warnings to protect other users from potential fraudulent activities, though specific resolutions were not detailed.
 
 ## Action Items
 
 ### Technical
 
-- Continue development on launch plan execution to drive market adoption (mentioned by zadayos)
-- Address liquidity concerns on Solana (mentioned by community)
-- Resolve bot management issues in Discord (mentioned by community)
-
-### Features
-
-- Implement hidden features designed for future developer integration (mentioned by zadayos)
-- Add utility token flexibility to the architecture (mentioned by zadayos)
+- Continue eliza-1 model training using qwen base model with harness (mentioned by Shaw)
+- Complete ongoing housekeeping work related to model development (mentioned by Shaw)
+- Implement dflash speculative decoding for performance optimization (mentioned by Shaw)
+- Apply caveman compression to thinking processes (mentioned by Shaw)
+- Integrate turboquant for model quantization (mentioned by Shaw)
