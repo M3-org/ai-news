@@ -7,21 +7,13 @@
       "content": [
         {
           "text": "In the general discussion channel, community members noted that while some projects may no longer be actively building, their tokens continue to trade independently. Shaw confirmed active development work, including housekeeping tasks and progress on training a model called eliza-1, described as a general purpose model based on qwen but trained within the Eliza harness. Shaw also mentioned several optimization techniques being applied, including dflash speculative decoding, caveman compression on thinking, and turboquant. A beta release labeled v2.0.0-beta.0 was also noted as having been pushed to GitHub.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1778031051515-x4nv0o.png"
         },
         {
           "text": "A community member named Baoger shared that their project elizaOK was selected as a Top 20 entry in the Fourmeme Hackathon AI Sprint, placed in Group 3, and requested community votes on Binance Square before the May 8th deadline.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://public.bnbstatic.com/images/common/feed-og-image-2.png"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1501167187954765855_1af27120.png"
         },
         {
           "text": "Multiple scam incidents were reported across both the discussion and coders channels. In the discussion channel, users warned others about scam links related to ai16z to ElizaOS migration and bridging ElizaOS from BSC to Solana. In the coders channel, a user named Jacob flagged a scammer and requested a ban from moderator Odilitime. A legitimate answer to the bridging question was provided by satsbased, who suggested using Wormhole or deBridge.",
@@ -29,26 +21,18 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1501076422515494942/f3f906dd-6816-4cb7-865b-393e3e8b7845.png?ex=69fb6a9b&is=69fa191b&hm=9490eb8bfe9b959d3e0ea98dbfdd5a65573ffbf25520a7c5d18314243db4d7ed&"
-          ],
-          "videos": []
+          "images": "https://cdn.elizaos.news/elizaos-media/f3f906dd-6816-4cb7-865b-393e3e8b7845_109024c5.webp"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "Activity Summary for 2026-05-05",
-      "content": [
-        {
-          "text": "No activity was recorded for the date 2026-05-05. There are no events, updates, or notable occurrences to report for this period.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-05.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "No activity was recorded for the date 2026-05-05. There are no events, updates, or notable occurrences to report for this period.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-05.json",
+        "posters": "https://cdn.elizaos.news/posters/1778031078448-9qywu.png"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -73,7 +57,6 @@
     "Flat _🆘": {
       "id": "1149908393310564433",
       "username": "wesh345555",
-      "roles": [],
       "totalMessages": 2
     },
     "Odilitime": {
