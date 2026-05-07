@@ -1,55 +1,51 @@
-# elizaOS Discord - 2026-05-05
+# elizaOS Discord - 2026-05-06
 
 ## Summary
 
-### ElizaOS Model Development
+### Payment Infrastructure Integration
 
-Shaw provided extensive technical updates on the eliza-1 model training effort. The development uses qwen as the base model, trained specifically in harness for Eliza. Key technical implementations include dflash speculative decoding for performance optimization, caveman compression applied to thinking processes, and turboquant for model quantization. The focus is on creating a general-purpose model, with ongoing housekeeping work in progress. A v2.0.0-beta.0 release was noted as part of the development cycle.
+odilitime announced that elizaOS and DegenAI were added as default payment methods in elizaOS for x402 routes, marking a significant milestone in payment system integration for the platform.
 
-### Token Migration and Bridging
+### Project Consolidation and Infrastructure
 
-Community members raised questions about bridging tokens between BSC and Solana networks. Wormhole and debridge were suggested as potential solutions for cross-chain token transfers. The discussion reflected ongoing interest in token operations and migration paths between different blockchain ecosystems.
+Shaw reported that ElizaCloud has been consolidated into the main eliza repository at github.com/elizaOS/eliza. The team migrated away from Vercel hosting to support cheaper container solutions, implementing cost optimization measures for operational efficiency.
 
-### Community Projects and Events
+### Project Structure and Governance
 
-A community member announced their elizaOK project was selected for the Fourmeme Hackathon Top 20. This highlighted active community participation in external events and hackathons related to the ElizaOS ecosystem.
+Shaw clarified that elizaOS operates as a fair launch project without VC backing or traditional team structure. The project consists of builders who use and develop the technology, with the platform enabling developers to build and monetize their own applications on top of the infrastructure. Shaw emphasized that the founder's role focuses on product development rather than token price management.
 
-### Security Concerns
+### Unanswered Technical Inquiries
 
-Multiple scam warnings were issued throughout the chat, indicating ongoing vigilance within the community regarding potential fraudulent activities or malicious actors.
-
-### Market Discussion
-
-Brief speculation occurred regarding potential price movements, though this was a minor theme compared to technical development discussions.
+Several technical questions were posted without resolution, including guru0's inquiry about cloud hosting costs for running Eliza as a Twitter bot and Mac mini hardware feasibility, and binarycookies' question about Hyperfy connectivity status for elizaos.
 
 ## FAQ
 
-**Q: What base model is being used for eliza-1 training?**
-A: The eliza-1 model uses qwen as the base model, trained in harness specifically for Eliza.
+**Q: Where is ElizaCloud now located?**
+A: ElizaCloud has been consolidated into the main eliza repository at github.com/elizaOS/eliza.
 
-**Q: What technical optimizations are being implemented in the eliza-1 model?**
-A: The model includes dflash speculative decoding for performance optimization, caveman compression applied to thinking processes, and turboquant for model quantization.
+**Q: What hosting changes were made to ElizaCloud?**
+A: The team migrated away from Vercel hosting and implemented support for cheaper container solutions to reduce operational costs.
 
-**Q: How can tokens be bridged between BSC and Solana?**
-A: Community members suggested using wormhole and debridge as solutions for cross-chain token transfers between BSC and Solana networks.
+**Q: What is the organizational structure of elizaOS?**
+A: elizaOS operates as a fair launch without VC backing or traditional team structure, consisting of builders who use and develop the technology.
 
-**Q: What is the current release version mentioned?**
-A: A v2.0.0-beta.0 release was noted during the discussions.
+**Q: What payment methods were added to elizaOS?**
+A: elizaOS and DegenAI were added as default payment methods for x402 routes.
+
+**Q: What is the founder's primary focus?**
+A: The founder focuses on product development rather than token price management.
 
 ## Help Interactions
 
-Shaw helped community members by providing detailed technical updates on eliza-1 model development, explaining the architecture choices and optimization techniques being implemented.
-
-Community members assisted others asking about token bridging by suggesting wormhole and debridge as potential solutions for BSC to Solana transfers.
-
-Multiple community members issued scam warnings to protect other users from potential fraudulent activities, though specific resolutions were not detailed.
+No resolved help interactions were documented in the provided channel summaries. Multiple questions were asked but remained unanswered, including guru0's questions about hosting costs and hardware requirements, and binarycookies' inquiry about Hyperfy connectivity.
 
 ## Action Items
 
 ### Technical
 
-- Continue eliza-1 model training using qwen base model with harness (mentioned by Shaw)
-- Complete ongoing housekeeping work related to model development (mentioned by Shaw)
-- Implement dflash speculative decoding for performance optimization (mentioned by Shaw)
-- Apply caveman compression to thinking processes (mentioned by Shaw)
-- Integrate turboquant for model quantization (mentioned by Shaw)
+- Maintain consolidated repository structure at github.com/elizaOS/eliza following ElizaCloud migration (mentioned by Shaw)
+- Continue supporting cheaper container solutions for cost optimization (mentioned by Shaw)
+
+### Documentation
+
+- Direct users to consolidated GitHub repository for ElizaCloud-related inquiries (mentioned by Shaw)
