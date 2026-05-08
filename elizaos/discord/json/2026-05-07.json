@@ -1,0 +1,246 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-07",
+  "date": 1778112000,
+  "stats": {
+    "totalMessages": 22,
+    "totalUsers": 9
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion channel had minimal technical activity. The primary technical question involved Twitter API integration, specifically whether the X API is required or if the login method still works. The user guru0 expressed concern about API costs for posting. odilitime responded that this question was answered in the coders channel. stan0473 flagged an issue with the elizaos.github.io/summary/day page being stuck since May 4th, requesting assistance from a specific user. odilitime speculated this might be related to their GitHub account configuration. The rest of the chat consisted of promotional content for voting and a brief bullish sentiment comment.",
+      "faqs": [
+        {
+          "question": "Do you need X api for twitter now or does login method still work?",
+          "askedBy": "guru0",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "guru0",
+          "context": "Question about Twitter API requirements and login method",
+          "resolution": "Directed to answer in coders channel"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Fix elizaos.github.io/summary/day page stuck since May 4th, investigate GitHub account configuration",
+          "mentionedBy": "stan0473"
+        }
+      ],
+      "messageCount": 7,
+      "userCount": 5
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The discussion centered on a missing Hyperfy plugin for ElizaOS. binarycookies discovered the plugin had been removed from GitHub despite seeing it days earlier, noting version mismatches between elizaos core and the plugin. odilitime confirmed the plugin needed updates and suggested using a coding agent to fix compatibility issues. binarycookies had previously downloaded the starter pack and planned to attempt repairs. odilitime provided a GitHub link to the eliza-3d-hyperfy-starter plugin, though it returned a 404 error. As a workaround, odilitime directly sent binarycookies a zip file of the plugin via DM. A separate discussion addressed Twitter API requirements, with guru0 asking about authentication methods and API costs. odilitime clarified that X API is now required but noted recent pricing revisions made it more affordable. da4tner offered assistance to binarycookies during troubleshooting. itssowenn4462 introduced themselves as an AI Full Stack Engineer with 8+ years experience in AI agents, automation workflows, and multimodal AI, expressing interest in connecting with builders.",
+      "faqs": [
+        {
+          "question": "Do you need X api for twitter now or does login method still work?",
+          "askedBy": "guru0",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Do you need help?",
+          "askedBy": "da4tner",
+          "answeredBy": "binarycookies"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "binarycookies",
+          "context": "Missing Hyperfy plugin from GitHub that was needed for ElizaOS integration",
+          "resolution": "Provided GitHub link initially, then sent zip file directly via DM when link showed 404 error"
+        },
+        {
+          "helper": "da4tner",
+          "helpee": "binarycookies",
+          "context": "Offered assistance while binarycookies was troubleshooting the missing plugin issue",
+          "resolution": "Offer made but binarycookies resolved issue with odilitime's help"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Update Hyperfy plugin to match current elizaos core version",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Fix compatibility issues in Hyperfy plugin using coding agent",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Repair downloaded Hyperfy plugin from starter pack",
+          "mentionedBy": "binarycookies"
+        }
+      ],
+      "messageCount": 15,
+      "userCount": 6
+    }
+  ],
+  "nicknameMap": {
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 12
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 503
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "King",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Github - Contributor",
+        "Labs Alumni"
+      ],
+      "totalMessages": 53
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 87
+    },
+    "guru": {
+      "id": "935324544959397940",
+      "username": "guru0",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 3
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 101
+    },
+    "itssowenn": {
+      "id": "412084303422291969",
+      "username": "itssowenn4462",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "BinaryCookies": {
+      "id": "1314280849264607293",
+      "username": "binarycookies",
+      "roles": [
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "da4tner": {
+      "id": "1141899532049854565",
+      "username": "da4tner",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    }
+  }
+}

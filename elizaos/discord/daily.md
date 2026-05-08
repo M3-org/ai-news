@@ -1,51 +1,56 @@
-# elizaOS Discord - 2026-05-06
+# elizaOS Discord - 2026-05-07
 
 ## Summary
 
-### Payment Infrastructure Integration
+### Twitter API Integration and Authentication
 
-odilitime announced that elizaOS and DegenAI were added as default payment methods in elizaOS for x402 routes, marking a significant milestone in payment system integration for the platform.
+The Twitter/X API integration requirements were clarified across both channels. guru0 raised questions about whether the X API is required or if alternative login methods still work, expressing concern about API costs for posting functionality. odilitime confirmed that the X API is now required for Twitter integration but noted that recent pricing revisions have made it more affordable than previously. This represents a shift from earlier authentication methods that may have been available.
 
-### Project Consolidation and Infrastructure
+### Hyperfy Plugin Compatibility Issues
 
-Shaw reported that ElizaCloud has been consolidated into the main eliza repository at github.com/elizaOS/eliza. The team migrated away from Vercel hosting to support cheaper container solutions, implementing cost optimization measures for operational efficiency.
+A significant technical issue emerged regarding the missing Hyperfy plugin for ElizaOS. binarycookies discovered that the plugin had been removed from the GitHub repository despite having seen it available just days earlier. The investigation revealed version mismatches between the elizaos core and the plugin, indicating compatibility problems. odilitime confirmed the plugin needed updates and suggested using a coding agent to address the compatibility issues. The GitHub link to the eliza-3d-hyperfy-starter plugin returned a 404 error, confirming its removal. As a workaround, odilitime provided binarycookies with a direct zip file of the plugin via DM.
 
-### Project Structure and Governance
+### Documentation and Website Issues
 
-Shaw clarified that elizaOS operates as a fair launch project without VC backing or traditional team structure. The project consists of builders who use and develop the technology, with the platform enabling developers to build and monetize their own applications on top of the infrastructure. Shaw emphasized that the founder's role focuses on product development rather than token price management.
+stan0473 identified a problem with the elizaos.github.io/summary/day page being stuck since May 4th, indicating the daily summary generation process had stopped functioning. odilitime speculated this issue might be related to GitHub account configuration settings, though no immediate resolution was documented.
 
-### Unanswered Technical Inquiries
+### Community Engagement
 
-Several technical questions were posted without resolution, including guru0's inquiry about cloud hosting costs for running Eliza as a Twitter bot and Mac mini hardware feasibility, and binarycookies' question about Hyperfy connectivity status for elizaos.
+itssowenn4462 introduced themselves to the coders channel as an AI Full Stack Engineer with over 8 years of experience in AI agents, automation workflows, and multimodal AI, expressing interest in connecting with other builders in the community.
 
 ## FAQ
 
-**Q: Where is ElizaCloud now located?**
-A: ElizaCloud has been consolidated into the main eliza repository at github.com/elizaOS/eliza.
+**Q: Is the X API required for Twitter integration or does the login method still work?**
+A: The X API is now required for Twitter integration. However, recent pricing revisions have made it more affordable than it was previously.
 
-**Q: What hosting changes were made to ElizaCloud?**
-A: The team migrated away from Vercel hosting and implemented support for cheaper container solutions to reduce operational costs.
+**Q: Where can I find the Hyperfy plugin for ElizaOS?**
+A: The Hyperfy plugin was removed from GitHub due to version compatibility issues with elizaos core. The plugin needs updates to work with current versions. Contact odilitime directly for access to the plugin files while compatibility issues are being resolved.
 
-**Q: What is the organizational structure of elizaOS?**
-A: elizaOS operates as a fair launch without VC backing or traditional team structure, consisting of builders who use and develop the technology.
-
-**Q: What payment methods were added to elizaOS?**
-A: elizaOS and DegenAI were added as default payment methods for x402 routes.
-
-**Q: What is the founder's primary focus?**
-A: The founder focuses on product development rather than token price management.
+**Q: Why is the elizaos.github.io/summary/day page stuck since May 4th?**
+A: The issue may be related to GitHub account configuration. The root cause is still being investigated.
 
 ## Help Interactions
 
-No resolved help interactions were documented in the provided channel summaries. Multiple questions were asked but remained unanswered, including guru0's questions about hosting costs and hardware requirements, and binarycookies' inquiry about Hyperfy connectivity.
+**Helper:** odilitime
+**Helpee:** guru0
+**Resolution:** Clarified that X API is now required for Twitter integration and that recent pricing changes have made it more affordable.
+
+**Helper:** odilitime
+**Helpee:** binarycookies
+**Resolution:** Confirmed the Hyperfy plugin was removed due to version compatibility issues, provided a GitHub link (which returned 404), and ultimately sent a zip file of the plugin directly via DM as a workaround.
+
+**Helper:** da4tner
+**Helpee:** binarycookies
+**Resolution:** Offered assistance during troubleshooting of the Hyperfy plugin issue.
 
 ## Action Items
 
 ### Technical
 
-- Maintain consolidated repository structure at github.com/elizaOS/eliza following ElizaCloud migration (mentioned by Shaw)
-- Continue supporting cheaper container solutions for cost optimization (mentioned by Shaw)
+- Fix version compatibility issues between elizaos core and the Hyperfy plugin (mentioned by odilitime)
+- Investigate and resolve the elizaos.github.io/summary/day page being stuck since May 4th (mentioned by stan0473)
+- Update the Hyperfy plugin to work with current elizaos core versions (mentioned by odilitime)
 
 ### Documentation
 
-- Direct users to consolidated GitHub repository for ElizaCloud-related inquiries (mentioned by Shaw)
+- Update documentation regarding X API requirements and pricing for Twitter integration (mentioned by guru0, odilitime)

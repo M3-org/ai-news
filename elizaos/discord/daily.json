@@ -1,185 +1,101 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-06",
-  "date": 1778025600,
+  "title": "elizaOS Discord - 2026-05-07",
+  "date": 1778112000,
   "stats": {
-    "totalMessages": 30,
-    "totalUsers": 22
+    "totalMessages": 22,
+    "totalUsers": 9
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The channel discussion centered on ElizaOS development updates and community management. The most significant technical announcement came from odilitime, who reported that elizaOS and DegenAI were added as default payment methods in elizaOS for x402 routes. This represents a concrete integration milestone for the payment infrastructure. Shaw provided critical project updates, explaining that ElizaCloud has been consolidated into the main eliza repository at github.com/elizaOS/eliza. The team migrated away from Vercel hosting and implemented support for cheaper container solutions to reduce operational costs. Shaw clarified the project structure, emphasizing that elizaOS operates as a fair launch without VC backing or traditional team structure, consisting instead of builders who use and develop the technology. The platform enables developers to build and monetize their own applications on top of the infrastructure. An inquiry about ElizaCloud-specific communication channels was addressed, with Shaw directing users to the consolidated GitHub repository. The discussion also included community management aspects, with Shaw setting clear expectations about the founder's role focusing on product development rather than token price management, and warning against negative commentary. The technical focus remained on infrastructure improvements, cost optimization, and payment system integration.",
+      "summary": "The discussion channel had minimal technical activity. The primary technical question involved Twitter API integration, specifically whether the X API is required or if the login method still works. The user guru0 expressed concern about API costs for posting. odilitime responded that this question was answered in the coders channel. stan0473 flagged an issue with the elizaos.github.io/summary/day page being stuck since May 4th, requesting assistance from a specific user. odilitime speculated this might be related to their GitHub account configuration. The rest of the chat consisted of promotional content for voting and a brief bullish sentiment comment.",
       "faqs": [
         {
-          "question": "Do you need developer?",
-          "askedBy": "aiden190157",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Is there any specific separate chat or news stream / update log specifically for the ElizaCloud?",
-          "askedBy": "avant_lakshman",
-          "answeredBy": "shawmakesmagic"
+          "question": "Do you need X api for twitter now or does login method still work?",
+          "askedBy": "guru0",
+          "answeredBy": "odilitime"
         }
       ],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "avant_lakshman",
-          "context": "User asking if there were problems with ElizaCloud",
-          "resolution": "Checked in to diagnose potential issues"
-        },
-        {
-          "helper": "shawmakesmagic",
-          "helpee": "avant_lakshman",
-          "context": "User seeking ElizaCloud-specific communication channels",
-          "resolution": "Directed to consolidated GitHub repository at github.com/elizaOS/eliza and explained migration from Vercel with container cost optimizations"
+          "helpee": "guru0",
+          "context": "Question about Twitter API requirements and login method",
+          "resolution": "Directed to answer in coders channel"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Completed integration of elizaOS and DegenAI as default payment methods for x402 routes",
-          "mentionedBy": "odilitime"
-        },
-        {
-          "type": "Technical",
-          "description": "Migrate ElizaCloud from Vercel to cheaper container infrastructure",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Documentation",
-          "description": "Consolidate ElizaCloud documentation into main eliza repository at github.com/elizaOS/eliza",
-          "mentionedBy": "shawmakesmagic"
+          "description": "Fix elizaos.github.io/summary/day page stuck since May 4th, investigate GitHub account configuration",
+          "mentionedBy": "stan0473"
         }
       ],
-      "messageCount": 27,
-      "userCount": 19
+      "messageCount": 7,
+      "userCount": 5
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "This Discord chat segment contains three brief inquiries with no substantive technical discussions or resolutions. guru0 asked about cloud hosting costs for running Eliza as a Twitter bot and whether it's feasible on Mac mini hardware, but received no response. tomy.0315 posted a general developer availability message without specific context. binarycookies inquired about Hyperfy connectivity status for elizaos, also without receiving an answer. No technical solutions, implementations, or decisions were documented in this segment. The chat represents unanswered questions rather than active problem-solving or development discussions.",
+      "summary": "The discussion centered on a missing Hyperfy plugin for ElizaOS. binarycookies discovered the plugin had been removed from GitHub despite seeing it days earlier, noting version mismatches between elizaos core and the plugin. odilitime confirmed the plugin needed updates and suggested using a coding agent to fix compatibility issues. binarycookies had previously downloaded the starter pack and planned to attempt repairs. odilitime provided a GitHub link to the eliza-3d-hyperfy-starter plugin, though it returned a 404 error. As a workaround, odilitime directly sent binarycookies a zip file of the plugin via DM. A separate discussion addressed Twitter API requirements, with guru0 asking about authentication methods and API costs. odilitime clarified that X API is now required but noted recent pricing revisions made it more affordable. da4tner offered assistance to binarycookies during troubleshooting. itssowenn4462 introduced themselves as an AI Full Stack Engineer with 8+ years experience in AI agents, automation workflows, and multimodal AI, expressing interest in connecting with builders.",
       "faqs": [
         {
-          "question": "What's expected costs of running Eliza on cloud for a twitter bot? and is it even possible on a Mac mini or not?",
+          "question": "Do you need X api for twitter now or does login method still work?",
           "askedBy": "guru0",
-          "answeredBy": "Unanswered"
+          "answeredBy": "odilitime"
         },
         {
-          "question": "Does elizaos still connect to Hyperfy?",
-          "askedBy": "binarycookies",
-          "answeredBy": "Unanswered"
+          "question": "Do you need help?",
+          "askedBy": "da4tner",
+          "answeredBy": "binarycookies"
         }
       ],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "binarycookies",
+          "context": "Missing Hyperfy plugin from GitHub that was needed for ElizaOS integration",
+          "resolution": "Provided GitHub link initially, then sent zip file directly via DM when link showed 404 error"
+        },
+        {
+          "helper": "da4tner",
+          "helpee": "binarycookies",
+          "context": "Offered assistance while binarycookies was troubleshooting the missing plugin issue",
+          "resolution": "Offer made but binarycookies resolved issue with odilitime's help"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Update Hyperfy plugin to match current elizaos core version",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Fix compatibility issues in Hyperfy plugin using coding agent",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Repair downloaded Hyperfy plugin from starter pack",
+          "mentionedBy": "binarycookies"
+        }
+      ],
+      "messageCount": 15,
+      "userCount": 6
     }
   ],
   "nicknameMap": {
-    "BinaryCookies": {
-      "id": "1314280849264607293",
-      "username": "binarycookies",
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
       "roles": [
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "! ^ lucky tomy ^ !": {
-      "id": "561610283122950194",
-      "username": "tomy.0315",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "guru": {
-      "id": "935324544959397940",
-      "username": "guru0",
-      "roles": [
+        "NFT",
         "Verified"
       ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 91
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 96
-    },
-    "Bogdan Lazurenko": {
-      "id": "969177115536797696",
-      "username": "avant_lakshman",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Booster",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "sarah9838g": {
-      "id": "1186489080414998640",
-      "username": "sarah9838g",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    ".marcofriendster.": {
-      "id": "1473709323442983158",
-      "username": ".marcofriendster.",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 12
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -209,122 +125,104 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 495
+      "totalMessages": 503
     },
-    "Cyber_Shai": {
-      "id": "1155015781826969601",
-      "username": "cyber_shai",
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "King",
+        "Server Booster",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "Github - Contributor",
+        "Labs Alumni"
+      ],
+      "totalMessages": 53
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 87
+    },
+    "guru": {
+      "id": "935324544959397940",
+      "username": "guru0",
       "roles": [
         "Verified"
       ],
-      "totalMessages": 5
-    },
-    "hide.o.n": {
-      "id": "1486743497519399044",
-      "username": "hide.o.n",
-      "roles": [],
-      "totalMessages": 56
-    },
-    "playful_gull_34324": {
-      "id": "1484379089627386007",
-      "username": "playful_gull_34324",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Seree": {
-      "id": "831422482422431754",
-      "username": "lalanotia",
-      "roles": [
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 20
-    },
-    "Alexander": {
-      "id": "1368710976400134215",
-      "username": "shults1",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Smoudert": {
-      "id": "1186690676872720465",
-      "username": "scepdaxx._45070",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Lele": {
-      "id": "1308846958793982004",
-      "username": "pex74",
-      "roles": [],
       "totalMessages": 3
     },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
       "roles": [
-        "Helper",
-        "Trader",
+        "a-hack",
         "Creator",
         "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 21
-    },
-    "Mustapha Khalid 🛠..": {
-      "id": "1450541816804937952",
-      "username": "bug.villa_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "elroybandicoot": {
-      "id": "946784475357020180",
-      "username": "elroybandicoot",
-      "roles": [
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
         "Verified",
-        "Poker"
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 101
+    },
+    "itssowenn": {
+      "id": "412084303422291969",
+      "username": "itssowenn4462",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 3
+    },
+    "BinaryCookies": {
+      "id": "1314280849264607293",
+      "username": "binarycookies",
+      "roles": [
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 10
     },
     "da4tner": {
       "id": "1141899532049854565",
@@ -342,32 +240,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "Aiden19": {
-      "id": "1266113062939656212",
-      "username": "aiden190157",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "trace": {
-      "id": "853841524764049429",
-      "username": "trace.g",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
+      "totalMessages": 3
     }
   }
 }
