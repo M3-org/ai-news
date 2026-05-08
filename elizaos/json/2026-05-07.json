@@ -10,51 +10,31 @@
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          ]
         },
         {
           "text": "A user named BinaryCookies reported issues with a missing plugin on GitHub, noting that the elizaOS core did not match the plugin and that it had been removed from the repository. Odilitime shared a link to the eliza-3d-hyperfy-starter plugin on GitHub, but the link returned a 404 error. Odilitime resolved the issue by sending the plugin zip file directly via direct message. The suggestion was also made to use a coding agent to help fix compatibility issues between the plugin and the core.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
         },
         {
           "text": "Stan alerted jin (dankvr) that the elizaOS GitHub summary page at elizaos.github.io/summary/day had been stuck since May 4th and requested assistance when available. Odilitime speculated the issue might be related to the GitHub account. Separately, Baoger shared a post promoting a vote for elizaOK, noting the vote was ending soon.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HHsjAzTbkAEfI84.jpg:large"
-          ],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1501842987532025990_eacb6f5e.jpg"
         },
         {
           "text": "A new community member introduced themselves in the coders channel as an AI Full Stack Engineer with over 8 years of experience working on AI agents, automation workflows, and multimodal AI, expressing interest in connecting with others building interesting projects.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
         }
       ],
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Development Activity: May 7, 2026",
-      "content": [
-        {
-          "text": "Development activity on May 7, 2026 was centered on infrastructure and configuration improvements, specifically around environment variable management in the ElizaOS documentation site. The primary work in progress was a new pull request submitted to the elizaos.github.io repository, which proposes adding an ImportMetaENV interface to the next.config.js file to improve how environment variables are handled. No technical tasks were completed and no issues were closed across any repositories on this date.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-07.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "Development activity on May 7, 2026 was centered on infrastructure and configuration improvements, specifically around environment variable management in the ElizaOS documentation site. The primary work in progress was a new pull request submitted to the elizaos.github.io repository, which proposes adding an ImportMetaENV interface to the next.config.js file to improve how environment variables are handled. No technical tasks were completed and no issues were closed across any repositories on this date.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-07.json",
+        "posters": "https://cdn.elizaos.news/posters/1778205240781-hnbn3g.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -146,9 +126,7 @@
     "guru": {
       "id": "935324544959397940",
       "username": "guru0",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 3
     },
     "Baoger": {
