@@ -1,0 +1,99 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-08",
+  "date": 1778198400,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord segment contains minimal substantive technical discussion. The primary content consists of self-promotional messages and general greetings rather than collaborative problem-solving. harry346165 shared details of a completed client project featuring a modern web stack (Next.js 15, React 19, TypeScript, Tailwind, Shadcn, TanStack Query, Prisma, PostgreSQL, Redis) deployed on AWS with Docker-Kubernetes orchestration. The AI implementation utilized LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o, incorporating RAG (Retrieval-Augmented Generation) over Pinecone and Weaviate vector databases. The developer indicated capability with blockchain integration and PlayStation ecosystem work. cryptologos_00014 posted market analysis regarding ElizaOS coin, noting positive net fund flow despite declining prices, suggesting potential market manipulation. Two users (xwasi and radu83._49711) posted brief introductions seeking collaboration opportunities, with radu83._49711 mentioning experience building autonomous blockchain agents using FastAPI and Next.js. magicyte shared an external link without context. No technical discussions, debugging sessions, or collaborative problem-solving occurred in this segment.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 5,
+      "userCount": 5
+    }
+  ],
+  "nicknameMap": {
+    "@RaduAI": {
+      "id": "1488362331577647266",
+      "username": "radu83._49711",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 92
+    },
+    "wasi": {
+      "id": "625718745603637299",
+      "username": "xwasi",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Cryptologos": {
+      "id": "1435565434777763942",
+      "username": "cryptologos_00014",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Harry38485": {
+      "id": "448849666235301899",
+      "username": "harry346165",
+      "roles": [
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Capo": {
+      "id": "1369460215698821224",
+      "username": "_cryptocapo.trading_",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
