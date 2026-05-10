@@ -1,0 +1,169 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-09",
+  "date": 1778284800,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal substantive content. The conversation consists of brief greetings between manatizer and jakethemussboii5140, followed by uthman_apexlabs requesting someone to check a direct message containing a screenshot. No technical discussions, decisions, or problem-solving occurred in this segment. There were no implementations, solutions, or meaningful technical exchanges documented. The interaction appears to be primarily social with one user attempting to redirect a conversation to private messages.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The conversation includes three brief messages: odilitime makes a cryptic statement about blockchain being good relays without elaboration or context. binarycookies expresses frustration about coding difficulties, specifically mentioning problems with movement functionality in what appears to be a chat application with bubble UI elements - they've successfully implemented chat bubbles but are stuck on movement mechanics. dieantwoord1337 posts a single-word scam warning without context. No technical solutions were provided, no implementations were discussed in detail, and no meaningful problem-solving occurred during this segment.",
+      "faqs": [
+        {
+          "question": "How do I fix the movement issue in my chat application?",
+          "askedBy": "binarycookies",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Debug and fix movement functionality in chat application with bubble UI",
+          "mentionedBy": "binarycookies"
+        }
+      ],
+      "messageCount": 3,
+      "userCount": 3
+    }
+  ],
+  "nicknameMap": {
+    "Uthman | ApexLabs": {
+      "id": "1085177689536737310",
+      "username": "uthman_apexlabs",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 87
+    },
+    "Jake the muss boii": {
+      "id": "698427710464196678",
+      "username": "jakethemussboii5140",
+      "roles": [
+        "Trader",
+        "It",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Manatizer": {
+      "id": "1374104838316494973",
+      "username": "manatizer",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Die Antwoord": {
+      "id": "224320540402253824",
+      "username": "dieantwoord1337",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "merch - self assign",
+        "Verified",
+        "Dev School Student",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "ben": {
+      "id": "938865721130242058",
+      "username": "krit_1.2",
+      "roles": []
+    },
+    "BinaryCookies": {
+      "id": "1314280849264607293",
+      "username": "binarycookies",
+      "roles": [
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 504
+    }
+  }
+}

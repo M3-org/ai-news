@@ -1,37 +1,41 @@
-# elizaOS Discord - 2026-05-08
+# elizaOS Discord - 2026-05-09
 
 ## Summary
 
-### Client Project Showcase
+### Social Interactions and Greetings
 
-harry346165 presented a completed client project featuring a modern full-stack architecture. The technical stack included Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI components, TanStack Query for data fetching, Prisma ORM with PostgreSQL database, and Redis for caching. The deployment infrastructure utilized AWS services with Docker containerization and Kubernetes orchestration. The AI implementation incorporated LangGraph and CrewAI agents, leveraging Claude 3.5 and GPT-4o language models. The system implemented Retrieval-Augmented Generation (RAG) architecture using both Pinecone and Weaviate vector databases. The developer indicated additional capabilities in blockchain integration and PlayStation ecosystem development.
+The discussion channel saw minimal activity with basic greetings exchanged between manatizer and jakethemussboii5140. uthman_apexlabs requested someone to check a direct message containing a screenshot, but no follow-up discussion occurred in the public channel.
 
-### Market Analysis
+### Blockchain and Infrastructure
 
-cryptologos_00014 provided market analysis for ElizaOS coin, observing a pattern of positive net fund flow occurring simultaneously with declining price action. This divergence suggested potential market manipulation activity affecting the token's price discovery mechanism.
+In the coders channel, odilitime made a brief comment about blockchain being good relays, though no context or elaboration was provided to explain the statement or its application.
 
-### Community Introductions
+### Development Challenges
 
-Multiple community members posted brief introductions seeking collaboration opportunities. xwasi posted a general greeting and collaboration request. radu83._49711 introduced themselves with background in building autonomous blockchain agents using FastAPI for backend services and Next.js for frontend development. magicyte shared an external link without additional context.
+binarycookies reported difficulties with coding a chat application, specifically struggling with implementing movement functionality despite successfully creating chat bubbles with a bubble UI. The issue remained unresolved with no solutions offered.
+
+### Security Warnings
+
+dieantwoord1337 posted a single-word scam warning in the coders channel without providing context or details about the specific threat.
 
 ## FAQ
 
-**Q: What technology stack was used in harry346165's client project?**
-A: The project used Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI, TanStack Query, Prisma ORM, PostgreSQL, and Redis. It was deployed on AWS using Docker and Kubernetes orchestration.
+**Q: What blockchain functionality was discussed?**
+A: odilitime mentioned that blockchain makes good relays, but provided no additional context or technical details about implementation or use cases.
 
-**Q: What AI technologies were implemented in the client project?**
-A: The project utilized LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o models, with RAG implementation over Pinecone and Weaviate vector databases.
+**Q: What coding problem was reported?**
+A: binarycookies was having difficulty implementing movement functionality in a chat application with bubble UI elements, despite successfully implementing the chat bubbles themselves.
 
-**Q: What market pattern was observed for ElizaOS coin?**
-A: The coin showed positive net fund flow while experiencing declining prices, suggesting potential market manipulation.
-
-**Q: What technologies does radu83._49711 have experience with?**
-A: They have experience building autonomous blockchain agents using FastAPI for backend and Next.js for frontend development.
+**Q: Were there any security concerns raised?**
+A: dieantwoord1337 posted a scam warning, but no details were provided about the nature or source of the threat.
 
 ## Help Interactions
 
-No direct help interactions or problem-solving exchanges occurred in this discussion segment. The messages consisted primarily of project showcases, market observations, and introduction posts without collaborative troubleshooting or technical assistance requests.
+binarycookies requested help with movement functionality in their chat application development but received no responses or solutions from other channel members. The issue remains unresolved.
 
 ## Action Items
 
-No specific action items, feature requests, or documentation needs were identified in these discussions.
+### Technical
+
+- Investigate and resolve movement functionality issues in chat application with bubble UI (mentioned by binarycookies)
+- Follow up on scam warning to provide context and details (mentioned by dieantwoord1337)

@@ -1,0 +1,155 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-05-09",
+  "categories": [
+    {
+      "title": "Discord Community Activity Summary - May 9, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, brief greetings were exchanged between community members Manatizer and Jake the muss boii. Separately, Uthman from ApexLabs reached out to jin via direct message, requesting that jin check a screenshot that had been sent privately.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, Odilitime noted that blockchains make good relays. BinaryCookies expressed frustration with their coding progress, mentioning difficulty with movement functionality in their project, though they had made some progress getting chat working in a bubble interface. Additionally, a message in the channel was flagged as a scam by community member Die Antwoord in response to another user.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1778284800,
+  "nicknameMap": {
+    "Uthman | ApexLabs": {
+      "id": "1085177689536737310",
+      "username": "uthman_apexlabs",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 87
+    },
+    "Jake the muss boii": {
+      "id": "698427710464196678",
+      "username": "jakethemussboii5140",
+      "roles": [
+        "Trader",
+        "It",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Manatizer": {
+      "id": "1374104838316494973",
+      "username": "manatizer",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Die Antwoord": {
+      "id": "224320540402253824",
+      "username": "dieantwoord1337",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "merch - self assign",
+        "Verified",
+        "Dev School Student",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "ben": {
+      "id": "938865721130242058",
+      "username": "krit_1.2",
+      "roles": []
+    },
+    "BinaryCookies": {
+      "id": "1314280849264607293",
+      "username": "binarycookies",
+      "roles": [
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 504
+    }
+  }
+}

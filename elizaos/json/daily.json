@@ -1,121 +1,155 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-08",
+  "title": "Daily Report - 2026-05-09",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion: AI Development, Market Observations, and Collaboration",
+      "title": "Discord Community Activity Summary - May 9, 2026",
       "content": [
         {
-          "text": "A developer shared their recent project experience building a full-stack AI web platform for a client, utilizing a modern tech stack including Next.js 15, React 19, TypeScript, Tailwind, Shadcn, TanStack Query, Prisma, PostgreSQL, Redis, and a Docker-Kubernetes AWS backend. The project also incorporated LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o, with advanced RAG pipelines over Pinecone and Weaviate. The developer noted comfort with blockchain integrations and PlayStation ecosystem work, and expressed openness to taking on similar full-stack and AI projects.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "posters": "https://cdn.elizaos.news/posters/1778291262926-6f5ub.png"
+          "text": "In the general discussion channel, brief greetings were exchanged between community members Manatizer and Jake the muss boii. Separately, Uthman from ApexLabs reached out to jin via direct message, requesting that jin check a screenshot that had been sent privately.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "A community member raised observations about ElizaOS coin market behavior, noting that the token has shown positive net fund flow every week since its launch, meaning more dollar volume comes from buying at higher prices than selling at lower ones. Despite this, the price continues to fall, leading the member to speculate that an entity, possibly an AI, is strategically selling when the cost of price impact is low and buying when large sell volume is available.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "posters": "https://cdn.elizaos.news/posters/1778291282728-53vn9b.jpg"
-        },
-        {
-          "text": "A community member shared a post referencing ELIZAOS and RUBY tokens, including associated contract addresses and links to related content. Another member introduced themselves as a full-stack AI builder focused on creating autonomous blockchain agents using FastAPI, Next.js, and on-chain coordination systems. A separate member asked who to contact for a potential collaboration opportunity.",
-          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1502335701554036829_2e0ada01.jpg",
-          "videos": "https://cdn.elizaos.news/elizaos-media/2052776719707185356_4230a5d0.mp4"
-        },
-        {
-          "text": "In the coders channel, a community member posted a request seeking an API endpoint receiver for server-to-server IP-to-IP communication, as well as a receiver for USDT transactions, and directed interested parties to contact them via WhatsApp.",
-          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-          "posters": "https://cdn.elizaos.news/posters/1778291303951-yx7o7.jpg"
+          "text": "In the coders channel, Odilitime noted that blockchains make good relays. BinaryCookies expressed frustration with their coding progress, mentioning difficulty with movement functionality in their project, though they had made some progress getting chat working in a bubble interface. Additionally, a message in the channel was flagged as a scam by community member Die Antwoord in response to another user.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
-    },
-    {
-      "title": "ElizaOS Development Update: May 8, 2026",
-      "content": {
-        "text": "Development activity on May 8, 2026 centered on improving security documentation for the DeFi plugin ecosystem. The main focus was initiating documentation updates to integrate SafeAgent, a token safety tool, into the DeFi plugin registry. A pull request, elizaos/docs#84, was opened to add SafeAgent to the registry and is currently awaiting review before the integration can be finalized.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-05-08.json",
-        "posters": "https://cdn.elizaos.news/posters/1778291325502-yr8ht6.jpg"
-      },
-      "topic": "miscellaneous"
     }
   ],
-  "date": 1778198400,
+  "date": 1778284800,
   "nicknameMap": {
-    "@RaduAI": {
-      "id": "1488362331577647266",
-      "username": "radu83._49711",
+    "Uthman | ApexLabs": {
+      "id": "1085177689536737310",
+      "username": "uthman_apexlabs",
       "roles": [
         "Helper",
         "Trader",
-        "[WG] degenspartan",
+        "Creator",
         "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "Core Dev",
+        "Coder"
       ],
-      "totalMessages": 1
+      "totalMessages": 87
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 92
-    },
-    "wasi": {
-      "id": "625718745603637299",
-      "username": "xwasi",
+    "Jake the muss boii": {
+      "id": "698427710464196678",
+      "username": "jakethemussboii5140",
       "roles": [
         "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Cryptologos": {
-      "id": "1435565434777763942",
-      "username": "cryptologos_00014",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
-      "roles": [
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Capo": {
-      "id": "1369460215698821224",
-      "username": "_cryptocapo.trading_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "Manatizer": {
+      "id": "1374104838316494973",
+      "username": "manatizer",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Die Antwoord": {
+      "id": "224320540402253824",
+      "username": "dieantwoord1337",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "merch - self assign",
+        "Verified",
+        "Dev School Student",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "ben": {
+      "id": "938865721130242058",
+      "username": "krit_1.2",
+      "roles": []
+    },
+    "BinaryCookies": {
+      "id": "1314280849264607293",
+      "username": "binarycookies",
+      "roles": [
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 504
     }
   }
 }
