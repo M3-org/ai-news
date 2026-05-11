@@ -1,131 +1,52 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-09",
+  "title": "Daily Report - 2026-05-10",
   "categories": [
     {
-      "title": "Discord Community Activity Summary - May 9, 2026",
+      "title": "ElizaOS Discord Community Activity - May 10, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, brief greetings were exchanged between community members Manatizer and Jake the muss boii. Separately, Uthman from ApexLabs reached out to jin via direct message, requesting that jin check a screenshot that had been sent privately.",
+          "text": "In the general discussion channel, community members exchanged casual greetings throughout the day, with several users saying hi and hello across different time zones. One user shared a Mother's Day message wishing all mothers a happy day. A developer named Ginga posted a professional introduction, describing themselves as someone who builds AI and full-stack systems focused on practical, production-ready software. They emphasized clean, maintainable, and secure systems over hype, and invited others to reach out for collaboration.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1778377722042-t169z5.png"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, Odilitime noted that blockchains make good relays. BinaryCookies expressed frustration with their coding progress, mentioning difficulty with movement functionality in their project, though they had made some progress getting chat working in a bubble interface. Additionally, a message in the channel was flagged as a scam by community member Die Antwoord in response to another user.",
+          "text": "In the coders channel, a user asked about the cost of running an Eliza agent as a Twitter bot on a daily basis. Odilitime responded that it used to cost around 100 dollars per month but has since dropped to approximately 10 dollars per month, though the actual cost depends on configuration choices such as the number of replies and other usage factors. Separately, one user flagged a message as a scam, and another user questioned whether something had been compromised, suggesting some security awareness activity in the channel.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1778377739968-xfcs8a.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1778284800,
+  "date": 1778371200,
   "nicknameMap": {
-    "Uthman | ApexLabs": {
-      "id": "1085177689536737310",
-      "username": "uthman_apexlabs",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
+    "GokuMaster64": {
+      "id": "997128982740861048",
+      "username": "gokumaster64",
+      "roles": [],
       "totalMessages": 1
     },
-    "jin": {
-      "id": "213767993153290250",
-      "username": "dankvr",
-      "roles": [
-        "God",
-        "a-hack",
-        "regen",
-        "Trader",
-        "Creator",
-        "Moderator",
-        "Vanguard",
-        "Contributor",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 87
-    },
-    "Jake the muss boii": {
-      "id": "698427710464196678",
-      "username": "jakethemussboii5140",
-      "roles": [
-        "Trader",
-        "It",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Manatizer": {
-      "id": "1374104838316494973",
-      "username": "manatizer",
-      "roles": [
-        "Trader",
-        "Designer",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "Die Antwoord": {
-      "id": "224320540402253824",
-      "username": "dieantwoord1337",
-      "roles": [
-        "platform - self assign",
-        "trust - self assign",
-        "swarms - self assign",
-        "events - self-assign",
-        "agent dev school - self assign",
-        "nfts - self assign",
-        "pmairca - self assign",
-        "merch - self assign",
-        "Verified",
-        "Dev School Student",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "ben": {
-      "id": "938865721130242058",
-      "username": "krit_1.2",
+    "bеn": {
+      "id": "1485023832845848637",
+      "username": "buss10067",
       "roles": []
     },
-    "BinaryCookies": {
-      "id": "1314280849264607293",
-      "username": "binarycookies",
+    "7OROY": {
+      "id": "926414864325427230",
+      "username": "7oroy",
       "roles": [
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "[WG] Merch",
+        "Server Booster",
+        "Verified"
       ],
-      "totalMessages": 11
+      "totalMessages": 1
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -155,7 +76,145 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 504
+      "totalMessages": 505
+    },
+    "guru": {
+      "id": "935324544959397940",
+      "username": "guru0",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 4
+    },
+    "musilmachuc1977": {
+      "id": "1290696244099940364",
+      "username": "musilmachuc1977",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 24
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 15
+    },
+    "Biazs": {
+      "id": "268404947048071168",
+      "username": "biazs.",
+      "roles": [
+        "Trader",
+        "utility",
+        "M",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "JOHN💠": {
+      "id": "953803706183327795",
+      "username": "johnwins1790",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Ushush": {
+      "id": "776344263955972106",
+      "username": "ushush420",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 88
     }
   }
 }

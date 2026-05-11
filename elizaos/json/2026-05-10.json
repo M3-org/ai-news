@@ -1,0 +1,220 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-05-10",
+  "categories": [
+    {
+      "title": "ElizaOS Discord Community Activity - May 10, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members exchanged casual greetings throughout the day, with several users saying hi and hello across different time zones. One user shared a Mother's Day message wishing all mothers a happy day. A developer named Ginga posted a professional introduction, describing themselves as someone who builds AI and full-stack systems focused on practical, production-ready software. They emphasized clean, maintainable, and secure systems over hype, and invited others to reach out for collaboration.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a user asked about the cost of running an Eliza agent as a Twitter bot on a daily basis. Odilitime responded that it used to cost around 100 dollars per month but has since dropped to approximately 10 dollars per month, though the actual cost depends on configuration choices such as the number of replies and other usage factors. Separately, one user flagged a message as a scam, and another user questioned whether something had been compromised, suggesting some security awareness activity in the channel.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1778371200,
+  "nicknameMap": {
+    "GokuMaster64": {
+      "id": "997128982740861048",
+      "username": "gokumaster64",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "bеn": {
+      "id": "1485023832845848637",
+      "username": "buss10067",
+      "roles": []
+    },
+    "7OROY": {
+      "id": "926414864325427230",
+      "username": "7oroy",
+      "roles": [
+        "[WG] Merch",
+        "Server Booster",
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 505
+    },
+    "guru": {
+      "id": "935324544959397940",
+      "username": "guru0",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 4
+    },
+    "musilmachuc1977": {
+      "id": "1290696244099940364",
+      "username": "musilmachuc1977",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "33coded": {
+      "id": "1422240545660600562",
+      "username": "33.coded",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 24
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 15
+    },
+    "Biazs": {
+      "id": "268404947048071168",
+      "username": "biazs.",
+      "roles": [
+        "Trader",
+        "utility",
+        "M",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "JOHN💠": {
+      "id": "953803706183327795",
+      "username": "johnwins1790",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Ushush": {
+      "id": "776344263955972106",
+      "username": "ushush420",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "jin": {
+      "id": "213767993153290250",
+      "username": "dankvr",
+      "roles": [
+        "God",
+        "a-hack",
+        "regen",
+        "Trader",
+        "Creator",
+        "Moderator",
+        "Vanguard",
+        "Contributor",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 88
+    }
+  }
+}
