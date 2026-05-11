@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1778464557559-x6a4go.jpg"
+          ]
         },
         {
           "text": "In the coders channel, a user asked about the cost of running an Eliza agent as a Twitter bot on a daily basis. Odilitime responded that it used to cost around 100 dollars per month but has since dropped to approximately 10 dollars per month, though the actual cost depends on configuration choices such as the number of replies and other usage factors. Separately, one user flagged a message as a scam, and another user questioned whether something had been compromised, suggesting some security awareness activity in the channel.",
