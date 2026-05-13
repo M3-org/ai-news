@@ -1,47 +1,44 @@
-# elizaOS Discord - 2026-05-11
+# elizaOS Discord - 2026-05-12
 
 ## Summary
 
-### Service Introductions and Self Promotion
+### Plugin Registry Infrastructure
 
-Multiple engineers introduced themselves and advertised their technical capabilities in the discussion channel. _ky0078 specializes in autonomous agents using LangChain, AutoGen, and CrewAI, with experience in multimodal AI including voice assistants and trading bots. harry346165 focuses on Next.js 15, React 19, and TypeScript combined with AI tools like LangChain and LangGraph. fabio7311 emphasized over 10 years of machine learning experience with expertise in GANs, SOMs, DBNs, PINNs, and SNNs for production systems. trace.g highlighted project management capabilities for LLM systems and RAG implementations.
+The v2 registry infrastructure for third-party Eliza plugins encountered technical issues. Plugin-undesirables@2.0.3 was prepared for submission with generated JSON metadata, but attempts to access the elizaos-plugins/registry repository and plugins.elizacloud.ai resulted in 404 errors. The plugin uses BUSL-1.1 licensing which prevents direct PRs to the monorepo. Investigation into the registry access issues is ongoing, with potential policy changes being considered to revert back to PRs directly to the elizaOS/eliza repository.
 
-### Multi Agent Orchestrator Testing Request
+### Community Introductions
 
-A developer sought permission to test a Python-based multi-agent orchestrator built with claude-agent-sdk on the ElizaOS Discord server. The system features an A2A-protocol read-only research agent with integrations for Tavily, fetch, DuckDuckGo, and arXiv via Model Context Protocol. The agent would operate in a sandbox channel with restricted permissions including read-only access, no direct messages, and response only to @-mentions. The developer had previously contacted the official email and was seeking OAuth invite/whitelist procedures.
+New community members introduced themselves in the discussion channel. One member shared their background in AI and full-stack development, emphasizing expertise in practical problem-solving, clean code practices, and production-ready systems with focus on efficiency, accuracy, user experience, maintainability, and security.
 
-### Token and Project Concerns
+### Security Concerns
 
-Community member .chomppp raised concerns about ElizaOS token support and noted that Shaw had removed ElizaOS from his X bio. This observation received no response from other community members.
-
-### Market Commentary
-
-Brief comments from satsbased mentioned favorable market conditions and the need for a catalyst, though no detailed discussion followed.
+Discord server security issues were identified with compromised admin accounts and ongoing scammer activity requiring attention from moderators.
 
 ## FAQ
 
-**Q: What integrations does the multi-agent orchestrator support?**
-A: The orchestrator includes integrations for Tavily, fetch, DuckDuckGo, and arXiv via Model Context Protocol (MCP).
+**Q: How do I submit a plugin to the v2 registry?**
+A: The v2 registry submission process is currently under investigation due to 404 errors when accessing the elizaos-plugins/registry repo and plugins.elizacloud.ai. A potential policy change may revert the process back to PRs directly to the elizaOS/eliza repository.
 
-**Q: What permissions would the research agent have in the Discord server?**
-A: The agent would have read-only access, no direct message capabilities, and would only respond to @-mentions in a sandbox channel.
+**Q: Can I submit a plugin with BUSL-1.1 licensing to the monorepo?**
+A: No, BUSL-1.1 licensing prevents direct PRs to the monorepo. Alternative submission methods through the v2 registry are being developed.
 
-**Q: Does the multi-agent orchestrator need to be ported to Eliza?**
-A: The developer expressed willingness to port the Python solution to Eliza if required by the community, though it was initially built using claude-agent-sdk.
-
-**Q: Who handles OAuth setup for testing agents on the ElizaOS Discord?**
-A: odilitime handles OAuth setup and offered to assist via direct message.
+**Q: Why am I getting 404 errors when trying to access the plugin registry?**
+A: This is a known issue currently under investigation by the development team. The registry infrastructure may have been accidentally affected.
 
 ## Help Interactions
 
 **Helper:** odilitime
-**Helpee:** rma_bot
-**Resolution:** odilitime offered to handle OAuth setup via direct message for testing the multi-agent orchestrator on the Discord server, providing the administrative support needed to proceed with the sandbox testing.
+**Helpee:** thegreatluna8713
+**Resolution:** Acknowledged the 404 errors on elizaos-plugins/registry repo and plugins.elizacloud.ai. Investigation initiated to determine if the issue was accidental. Mentioned potential policy change to revert to PRs directly to elizaOS/eliza repository. Resolution pending.
 
 ## Action Items
 
 ### Technical
 
-- Test multi-agent orchestrator with A2A-protocol research agent in sandbox channel (mentioned by rma_bot)
-- Set up OAuth invite/whitelist for research agent testing (mentioned by rma_bot, to be handled by odilitime)
-- Potentially port Python-based orchestrator to Eliza framework if community requires (mentioned by rma_bot)
+- Investigate 404 errors on elizaos-plugins/registry repo and plugins.elizacloud.ai (mentioned by odilitime)
+- Address compromised admin accounts and scammer activity in Discord server (mentioned by shrektwo, odilitime)
+- Determine final policy for plugin submission process between v2 registry and direct PRs (mentioned by odilitime)
+
+### Documentation
+
+- Clarify plugin submission process for BUSL-1.1 licensed plugins once registry issues are resolved (mentioned by thegreatluna8713)

@@ -1,74 +1,95 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-11",
-  "date": 1778457600,
+  "title": "elizaOS Discord - 2026-05-12",
+  "date": 1778544000,
   "stats": {
-    "totalMessages": 13,
-    "totalUsers": 12
+    "totalMessages": 16,
+    "totalUsers": 7
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment consists primarily of introductory messages and self-promotional posts from various AI and full-stack engineers. The channel shows minimal technical discussion or problem-solving activity. Multiple users (a.debbie, valleybeyond7991, lambyone) posted brief greetings. The bulk of content came from engineers advertising their services: _ky0078 specializes in autonomous agents using LangChain, AutoGen, CrewAI, and multimodal AI including voice assistants and trading bots; harry346165 focuses on Next.js 15, React 19, TypeScript stack combined with AI tools like LangChain and LangGraph; fabio7311 emphasizes 10+ years in ML with expertise in GANs, SOMs, DBNs, PINNs, and SNNs for production systems; trace.g highlighted project management approach for LLM systems and RAG implementations. One notable non-technical discussion occurred when .chomppp raised concerns about ElizaOS token support and Shaw removing ElizaOS from his X bio, though this received no response. satsbased made brief comments about favorable market conditions and needing a catalyst. No concrete technical problems were solved, no architectural decisions were made, and no implementation details were discussed. The segment represents a networking/introduction phase rather than active development collaboration.",
-      "faqs": [
-        {
-          "question": "Is the team still supporting the ElizaOS token, or has it been abandoned? I also noticed that Shaw removed ElizaOS from his X bio.",
-          "askedBy": ".chomppp",
-          "answeredBy": "Unanswered"
-        }
-      ],
+      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of introductory messages and casual greetings. User rsn6958 posted a self-introduction describing their background in AI and full-stack development, emphasizing practical problem-solving, clean code practices, and production-ready systems. The message highlights focus areas including efficiency, accuracy, user experience, maintainability, and security. User brickolascage made a brief comment about someone's computer skills, though the context is unclear. User dondada0420 greeted the channel and inquired about chatters. No technical problems were solved, no architectural decisions were made, and no concrete implementations were discussed. The segment lacks meaningful technical discourse, code reviews, debugging sessions, or collaborative problem-solving that would typically characterize active development discussions.",
+      "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 10,
-      "userCount": 9
+      "messageCount": 4,
+      "userCount": 3
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "A developer (rma_bot) reached out to the coders channel seeking permission to test a multi-agent orchestrator built in Python using claude-agent-sdk. The system includes an A2A-protocol read-only research agent with integrations for Tavily, fetch, DuckDuckGo, and arXiv via MCP (Model Context Protocol). The agent is designed to operate in a sandbox channel with restricted permissions: read-only access, no direct messages, and only responds to @-mentions. The developer had previously contacted inquiries@elizalabs.ai and was looking for the appropriate contact regarding OAuth invite/whitelist procedures. They expressed willingness to port the solution to Eliza if required by the community. odilitime responded offering to handle the OAuth setup via direct message, providing the needed administrative support for testing the agent on the server.",
+      "summary": "The main technical discussion centered on v2 registry infrastructure for third-party Eliza plugins. thegreatluna8713 reported that plugin-undesirables@2.0.3 is ready for submission to the v2 registry but encountered 404 errors when attempting to access the elizaos-plugins/registry repo and plugins.elizacloud.ai. They have generated JSON metadata prepared and noted their plugin uses BUSL-1.1 licensing, preventing direct PR to the monorepo. odilitime acknowledged the issue and indicated they would investigate, suggesting it might be accidental. They also mentioned a potential policy change to revert back to PRs directly to elizaOS/eliza repository. The conversation was interrupted by security concerns when shrektwo noticed suspicious activity, identifying compromised admin accounts. odilitime confirmed ongoing scammer issues in the Discord. The technical resolution for the registry submission process remains pending investigation.",
       "faqs": [
         {
-          "question": "Who can I DM about OAuth-invite/whitelist for testing my multi-agent orchestrator?",
-          "askedBy": "rma_bot",
+          "question": "I've got a third-party plugin (plugin-undesirables@2.0.3) ready for the v2 registry. The target elizaos-plugins/registry repo and plugins.elizacloud.ai are returning 404s. Is the v2 registry infra still private pending the 2.0.0-beta launch? Should I hold my PR until the repo goes public?",
+          "askedBy": "thegreatluna8713",
           "answeredBy": "odilitime"
         }
       ],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "rma_bot",
-          "context": "rma_bot needed OAuth access to test a multi-agent orchestrator on the server and was unsure who to contact for whitelist/invite permissions",
-          "resolution": "odilitime offered to handle the OAuth setup via direct message"
+          "helpee": "thegreatluna8713",
+          "context": "Unable to access v2 registry infrastructure (404 errors on elizaos-plugins/registry and plugins.elizacloud.ai) for third-party plugin submission",
+          "resolution": "Acknowledged the issue and committed to investigating; suggested potential policy change to revert to PRs to elizaOS/eliza"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Set up OAuth invite/whitelist for rma_bot's multi-agent orchestrator testing in sandbox channel",
-          "mentionedBy": "rma_bot"
+          "description": "Investigate 404 errors on elizaos-plugins/registry repo and plugins.elizacloud.ai for v2 registry access",
+          "mentionedBy": "odilitime"
         },
         {
-          "type": "Feature",
-          "description": "Evaluate potential porting of Python-based multi-agent orchestrator (with Tavily/fetch/DuckDuckGo/arXiv MCP integrations) to Eliza framework",
-          "mentionedBy": "rma_bot"
+          "type": "Technical",
+          "description": "Determine final submission process for v2 third-party plugins and communicate to plugin developers",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Address Discord security issues with compromised admin accounts",
+          "mentionedBy": "shrektwo"
         }
       ],
-      "messageCount": 3,
-      "userCount": 3
+      "messageCount": 12,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "sailorpepe.eth": {
-      "id": "920440808509931560",
-      "username": "thegreatluna8713",
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "brickolascage": {
+      "id": "283082734979514370",
+      "username": "brickolascage",
       "roles": [
         "Verified",
         "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 10
+      "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 6
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -98,127 +119,42 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 506
+      "totalMessages": 510
     },
-    "rma_bot": {
-      "id": "1503114998099218577",
-      "username": "rma_bot",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "trace": {
-      "id": "853841524764049429",
-      "username": "trace.g",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 175
-    },
-    "lamby": {
-      "id": "974642795425980446",
-      "username": "lambyone",
+    "RoomTemp IQ": {
+      "id": "212762270080434177",
+      "username": "shrektwo",
       "roles": [
         "Verified"
       ],
-      "totalMessages": 2
+      "totalMessages": 6
     },
-    "fabio": {
-      "id": "1119922199223087116",
-      "username": "fabio7311",
+    "sailorpepe.eth": {
+      "id": "920440808509931560",
+      "username": "thegreatluna8713",
       "roles": [
-        "Trader",
-        "[WG] degenspartan",
         "Verified",
-        "utility",
         "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
-      "roles": [
         "utility",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 11
     },
-    "chomppp": {
-      "id": "795728567538679808",
-      "username": ".chomppp",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 1
-    },
-    "!     KY   !": {
-      "id": "764630968739954718",
-      "username": "_ky0078",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 42
-    },
-    "A. Debbie": {
-      "id": "1499750627528675468",
-      "username": "a.debbie",
+    "$cott": {
+      "id": "1443150982945968259",
+      "username": "scottnuttall_",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "It",
-        "Verified",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 6
     }
   }
 }

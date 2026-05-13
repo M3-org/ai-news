@@ -1,0 +1,160 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-12",
+  "date": 1778544000,
+  "stats": {
+    "totalMessages": 16,
+    "totalUsers": 7
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of introductory messages and casual greetings. User rsn6958 posted a self-introduction describing their background in AI and full-stack development, emphasizing practical problem-solving, clean code practices, and production-ready systems. The message highlights focus areas including efficiency, accuracy, user experience, maintainability, and security. User brickolascage made a brief comment about someone's computer skills, though the context is unclear. User dondada0420 greeted the channel and inquired about chatters. No technical problems were solved, no architectural decisions were made, and no concrete implementations were discussed. The segment lacks meaningful technical discourse, code reviews, debugging sessions, or collaborative problem-solving that would typically characterize active development discussions.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 4,
+      "userCount": 3
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The main technical discussion centered on v2 registry infrastructure for third-party Eliza plugins. thegreatluna8713 reported that plugin-undesirables@2.0.3 is ready for submission to the v2 registry but encountered 404 errors when attempting to access the elizaos-plugins/registry repo and plugins.elizacloud.ai. They have generated JSON metadata prepared and noted their plugin uses BUSL-1.1 licensing, preventing direct PR to the monorepo. odilitime acknowledged the issue and indicated they would investigate, suggesting it might be accidental. They also mentioned a potential policy change to revert back to PRs directly to elizaOS/eliza repository. The conversation was interrupted by security concerns when shrektwo noticed suspicious activity, identifying compromised admin accounts. odilitime confirmed ongoing scammer issues in the Discord. The technical resolution for the registry submission process remains pending investigation.",
+      "faqs": [
+        {
+          "question": "I've got a third-party plugin (plugin-undesirables@2.0.3) ready for the v2 registry. The target elizaos-plugins/registry repo and plugins.elizacloud.ai are returning 404s. Is the v2 registry infra still private pending the 2.0.0-beta launch? Should I hold my PR until the repo goes public?",
+          "askedBy": "thegreatluna8713",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "thegreatluna8713",
+          "context": "Unable to access v2 registry infrastructure (404 errors on elizaos-plugins/registry and plugins.elizacloud.ai) for third-party plugin submission",
+          "resolution": "Acknowledged the issue and committed to investigating; suggested potential policy change to revert to PRs to elizaOS/eliza"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Investigate 404 errors on elizaos-plugins/registry repo and plugins.elizacloud.ai for v2 registry access",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Determine final submission process for v2 third-party plugins and communicate to plugin developers",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Technical",
+          "description": "Address Discord security issues with compromised admin accounts",
+          "mentionedBy": "shrektwo"
+        }
+      ],
+      "messageCount": 12,
+      "userCount": 4
+    }
+  ],
+  "nicknameMap": {
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "brickolascage": {
+      "id": "283082734979514370",
+      "username": "brickolascage",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 510
+    },
+    "RoomTemp IQ": {
+      "id": "212762270080434177",
+      "username": "shrektwo",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "sailorpepe.eth": {
+      "id": "920440808509931560",
+      "username": "thegreatluna8713",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "$cott": {
+      "id": "1443150982945968259",
+      "username": "scottnuttall_",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    }
+  }
+}
