@@ -1,96 +1,100 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-12",
-  "date": 1778544000,
+  "title": "elizaOS Discord - 2026-05-13",
+  "date": 1778630400,
   "stats": {
-    "totalMessages": 16,
-    "totalUsers": 7
+    "totalMessages": 21,
+    "totalUsers": 11
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of introductory messages and casual greetings. User rsn6958 posted a self-introduction describing their background in AI and full-stack development, emphasizing practical problem-solving, clean code practices, and production-ready systems. The message highlights focus areas including efficiency, accuracy, user experience, maintainability, and security. User brickolascage made a brief comment about someone's computer skills, though the context is unclear. User dondada0420 greeted the channel and inquired about chatters. No technical problems were solved, no architectural decisions were made, and no concrete implementations were discussed. The segment lacks meaningful technical discourse, code reviews, debugging sessions, or collaborative problem-solving that would typically characterize active development discussions.",
-      "faqs": [],
+      "summary": "The discussion centered on Eliza v3 development progress and the new Eliza-1 model series. mahmoudamer7645 raised critical questions about v3's current focus, specifically whether development prioritizes infrastructure stabilization or is approaching public release of the full autonomous agent workflow stack. They also inquired about the integration status of the new identity/AgentID system in the upcoming architecture. zadayos announced the latest Eliza-1 model series based on Qwen3.5, detailing a comprehensive range from 0.6B (mobile-optimized) to 27B-1M (million token context). The series includes a new 0.8B model currently training on H200 hardware, with models scaled for different deployment scenarios from phones to servers. The technical specifications indicate a strategic approach to model deployment across various hardware constraints, with particular emphasis on offline capability for the smallest models and extended context windows for the largest variants.",
+      "faqs": [
+        {
+          "question": "Are there any level 3 updates?",
+          "askedBy": "mahmoudamer7645",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Can you clarify whether the current v3 progress is mainly focused on infrastructure stabilization first, or are we close to seeing the full autonomous agent workflow stack exposed publicly?",
+          "askedBy": "mahmoudamer7645",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "How much of the new identity / AgentID system is already integrated into the upcoming architecture?",
+          "askedBy": "mahmoudamer7645",
+          "answeredBy": "Unanswered"
+        }
+      ],
       "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 4,
-      "userCount": 3
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Complete v3 infrastructure stabilization and autonomous agent workflow stack development",
+          "mentionedBy": "mahmoudamer7645"
+        },
+        {
+          "type": "Technical",
+          "description": "Integrate identity/AgentID system into v3 architecture",
+          "mentionedBy": "mahmoudamer7645"
+        },
+        {
+          "type": "Technical",
+          "description": "Complete training of Eliza-1 0.8B model on H200 hardware",
+          "mentionedBy": "zadayos"
+        }
+      ],
+      "messageCount": 13,
+      "userCount": 11
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "The main technical discussion centered on v2 registry infrastructure for third-party Eliza plugins. thegreatluna8713 reported that plugin-undesirables@2.0.3 is ready for submission to the v2 registry but encountered 404 errors when attempting to access the elizaos-plugins/registry repo and plugins.elizacloud.ai. They have generated JSON metadata prepared and noted their plugin uses BUSL-1.1 licensing, preventing direct PR to the monorepo. odilitime acknowledged the issue and indicated they would investigate, suggesting it might be accidental. They also mentioned a potential policy change to revert back to PRs directly to elizaOS/eliza repository. The conversation was interrupted by security concerns when shrektwo noticed suspicious activity, identifying compromised admin accounts. odilitime confirmed ongoing scammer issues in the Discord. The technical resolution for the registry submission process remains pending investigation.",
+      "summary": "blankey1717 introduced GODL, a gamified on-chain mining protocol on Solana, proposing integration with elizaOS. GODL exposes system functionality through SDKs, websocket streams, automation hooks, and a skill.md file specifically designed for agent/tool integrations. The protocol enables autonomous agents to interact with mining/staking mechanics, including autonomous mining/staking strategies, agent-managed wallets, competing mining behaviors, and public leaderboards/performance tracking. odilitime confirmed that elizaOS can use the skill.md format directly as-is, indicating compatibility with their existing agent architecture. blankey1717 emphasized that GODL's skill.md + SDK/websocket setup naturally maps to elizaOS's agent/tool usage framework, suggesting potential for experiments with autonomous mining/staking behaviors and competing agent strategies. The conversation concluded with blankey1717 offering to connect the elizaOS team with GODL developers and moving to DMs to share links and agent information without bot interference.",
       "faqs": [
         {
-          "question": "I've got a third-party plugin (plugin-undesirables@2.0.3) ready for the v2 registry. The target elizaos-plugins/registry repo and plugins.elizacloud.ai are returning 404s. Is the v2 registry infra still private pending the 2.0.0-beta launch? Should I hold my PR until the repo goes public?",
-          "askedBy": "thegreatluna8713",
+          "question": "Can elizaOS use GODL's skill.md format?",
+          "askedBy": "blankey1717",
           "answeredBy": "odilitime"
+        },
+        {
+          "question": "Does GODL have a website?",
+          "askedBy": "odilitime",
+          "answeredBy": "blankey1717"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "odilitime",
-          "helpee": "thegreatluna8713",
-          "context": "Unable to access v2 registry infrastructure (404 errors on elizaos-plugins/registry and plugins.elizacloud.ai) for third-party plugin submission",
-          "resolution": "Acknowledged the issue and committed to investigating; suggested potential policy change to revert to PRs to elizaOS/eliza"
+          "helper": "blankey1717",
+          "helpee": "odilitime",
+          "context": "Providing information about GODL protocol integration possibilities with elizaOS",
+          "resolution": "Shared details about GODL's SDK, websocket streams, and skill.md setup for agent integrations, offered to connect with GODL developers"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Investigate 404 errors on elizaos-plugins/registry repo and plugins.elizacloud.ai for v2 registry access",
-          "mentionedBy": "odilitime"
+          "description": "Explore integration between elizaOS and GODL protocol using skill.md format",
+          "mentionedBy": "blankey1717"
         },
         {
           "type": "Technical",
-          "description": "Determine final submission process for v2 third-party plugins and communicate to plugin developers",
-          "mentionedBy": "odilitime"
+          "description": "Review GODL SDK/websocket setup for autonomous agent mining/staking strategies",
+          "mentionedBy": "blankey1717"
         },
         {
-          "type": "Technical",
-          "description": "Address Discord security issues with compromised admin accounts",
-          "mentionedBy": "shrektwo"
+          "type": "Documentation",
+          "description": "Share GODL docs and skill.md with elizaOS team",
+          "mentionedBy": "blankey1717"
         }
       ],
-      "messageCount": 12,
-      "userCount": 4
+      "messageCount": 8,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
-      "roles": [
-        "Trader",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "brickolascage": {
-      "id": "283082734979514370",
-      "username": "brickolascage",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -119,42 +123,177 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 510
+      "totalMessages": 514
     },
-    "RoomTemp IQ": {
-      "id": "212762270080434177",
-      "username": "shrektwo",
+    "blankey": {
+      "id": "896156160577663047",
+      "username": "blankey1717",
       "roles": [
-        "Verified"
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 6
     },
-    "sailorpepe.eth": {
-      "id": "920440808509931560",
-      "username": "thegreatluna8713",
+    "SUN | VietDark WUMP": {
+      "id": "835190056947417138",
+      "username": "viet.nguyen",
       "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
         "Verified",
-        "Coder",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 11
+      "totalMessages": 1
     },
-    "$cott": {
-      "id": "1443150982945968259",
-      "username": "scottnuttall_",
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 16
+    },
+    "Cаche 👑": {
+      "id": "1314183791878737930",
+      "username": "solanalfg",
+      "roles": []
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 102
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 23
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 12
+    },
+    "Nirа 👑": {
+      "id": "1319559875260583966",
+      "username": "virtet0593",
+      "roles": []
+    },
+    "mahmoudamer": {
+      "id": "910121649737695252",
+      "username": "mahmoudamer7645",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Andres Russo": {
+      "id": "1214888640069636138",
+      "username": "andresrussonl_44071",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 1
+    },
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 5
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 43
     }
   }
 }
