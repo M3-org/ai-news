@@ -1,57 +1,46 @@
-# elizaOS Discord - 2026-05-13
+# elizaOS Discord - 2026-05-14
 
 ## Summary
 
-### Eliza v3 Development and Architecture
+### AI Model Development and Optimization
 
-mahmoudamer7645 raised critical questions about the current development focus of Eliza v3, specifically whether efforts are concentrated on infrastructure stabilization or approaching public release of the full autonomous agent workflow stack. They also inquired about the integration status of the new identity/AgentID system in the upcoming architecture, highlighting concerns about the direction and priorities of the v3 development roadmap.
+shawmakesmagic reported current usage of Qwen models with optimizations and announced development of a fine-tuning pipeline aimed at improving model performance specifically for action calling and planning tasks.
 
-### Eliza-1 Model Series Release
+### AI Agent Escrow Protocol Architecture
 
-zadayos announced the latest Eliza-1 model series based on Qwen3.5, featuring a comprehensive range of models from 0.6B to 27B-1M parameters. The series includes a 0.6B model optimized for mobile deployment with offline capability, a new 0.8B model currently training on H200 hardware, and a 27B-1M variant with million token context windows. The technical specifications demonstrate a strategic approach to model deployment across various hardware constraints, from phones to servers, with different models scaled for specific deployment scenarios.
+A novel escrow protocol designed for AI agents was introduced, deployed on Base Mainnet. The protocol implements a Pay or Burn mechanism that removes human arbitration by using game theory principles - if agents cannot reach agreement on task outcomes, escrowed funds are burned to eliminate incentives for malicious behavior. The architecture features 100% pull-payment design to protect against reverting receiver contracts and adopts a zero UI approach, providing only raw smart contracts with SDKs in Python and C++. The creator is actively seeking architectural feedback from the community.
 
-### GODL Protocol Integration Proposal
+### API Integration and Rate Limiting Issues
 
-blankey1717 introduced GODL, a gamified on-chain mining protocol on Solana, proposing integration with elizaOS. The protocol exposes system functionality through SDKs, websocket streams, automation hooks, and a skill.md file designed for agent/tool integrations. GODL enables autonomous agents to interact with mining and staking mechanics, including autonomous strategies, agent-managed wallets, competing mining behaviors, and public leaderboards with performance tracking. odilitime confirmed that elizaOS can use the skill.md format directly, indicating compatibility with existing agent architecture.
+A technical issue was reported regarding Neynar API credit consumption, where actual usage reached 300 credits per hour versus the expected 4 credits per hour on the v2/farcaster/notifications endpoint. This occurred despite the user overriding the default 120-second polling interval. Community members suggested webhooks as a potential solution to reduce credit consumption.
 
 ## FAQ
 
-**Q: What is the current development focus of Eliza v3?**
-A: mahmoudamer7645 raised this question, asking whether development prioritizes infrastructure stabilization or is approaching public release of the full autonomous agent workflow stack. The question remains unanswered in the provided discussions.
+**Q: What models is shawmakesmagic currently using?**
+A: Qwen models with optimizations, and they are developing a fine-tuning pipeline to improve performance for action calling and planning.
 
-**Q: What is the integration status of the new identity/AgentID system in Eliza v3?**
-A: mahmoudamer7645 inquired about this, but no response was provided in the available discussion logs.
+**Q: How does the AI agent escrow protocol handle disputes?**
+A: It uses a Pay or Burn mechanism where if agents cannot agree on task outcomes, the escrowed funds are burned, eliminating expected value for malicious actors and removing the need for human arbitration.
 
-**Q: What models are included in the new Eliza-1 series?**
-A: The Eliza-1 model series based on Qwen3.5 includes models ranging from 0.6B (mobile-optimized with offline capability) to 27B-1M (with million token context). A new 0.8B model is currently training on H200 hardware.
+**Q: What blockchain is the AI agent escrow protocol deployed on?**
+A: Base Mainnet.
 
-**Q: Can elizaOS use GODL's skill.md format directly?**
-A: Yes, odilitime confirmed that elizaOS can use the skill.md format as-is, indicating compatibility with their existing agent architecture.
+**Q: Why does the escrow protocol use a pull-payment design?**
+A: To protect against reverting receiver contracts.
 
-**Q: What capabilities does GODL enable for autonomous agents?**
-A: GODL enables autonomous mining and staking strategies, agent-managed wallets, competing mining behaviors, and public leaderboards with performance tracking through SDKs, websocket streams, and automation hooks.
+**Q: How can Neynar API credit consumption be reduced?**
+A: Community members suggested using webhooks instead of polling to reduce credit consumption.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** blankey1717
-**Resolution:** odilitime confirmed that elizaOS can use GODL's skill.md format directly as-is, validating the compatibility of GODL's integration approach with elizaOS's existing agent architecture.
+A user reported unexpectedly high Neynar API credit consumption (300 credits/hour vs expected 4/hour) on the v2/farcaster/notifications endpoint despite overriding the default polling interval. A community member suggested implementing webhooks as a solution to reduce credit consumption. Resolution status was not explicitly confirmed in the discussion.
+
+The creator of the AI agent escrow protocol requested architectural feedback from the community on their Pay or Burn mechanism and overall protocol design. No specific resolution or feedback responses were documented in the provided summary.
 
 ## Action Items
 
 ### Technical
 
-- Clarify whether Eliza v3 development is focused on infrastructure stabilization or approaching public release of the full autonomous agent workflow stack (mentioned by mahmoudamer7645)
-- Complete training of the 0.8B Eliza-1 model on H200 hardware (mentioned by zadayos)
-- Integrate GODL protocol with elizaOS using skill.md format and SDK/websocket setup (mentioned by blankey1717)
-
-### Features
-
-- Implement autonomous mining and staking strategies for agents using GODL protocol (mentioned by blankey1717)
-- Enable agent-managed wallets for GODL integration (mentioned by blankey1717)
-- Develop competing agent strategies and public leaderboards for GODL mining behaviors (mentioned by blankey1717)
-
-### Documentation
-
-- Provide status update on the new identity/AgentID system integration in Eliza v3 architecture (mentioned by mahmoudamer7645)
-- Share GODL links and agent information with elizaOS team (mentioned by blankey1717)
+- Develop and implement fine-tuning pipeline for Qwen models to improve action calling and planning performance (mentioned by shawmakesmagic)
+- Gather architectural feedback on AI agent escrow protocol design and Pay or Burn mechanism (mentioned by escrow protocol creator)
+- Investigate webhook implementation to reduce Neynar API credit consumption (suggested by community member)
