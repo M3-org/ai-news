@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1778896201549-m2f8b.jpg"
+          ]
         },
         {
           "text": "In the coders channel, a developer named ReaWorks introduced themselves and described a project they are exploring: a simple escrow primitive for AI-agent work built on Base. The design involves a buyer locking funds, an agent or seller completing work, and the buyer releasing payment, with dispute and timeout paths kept minimal to ensure the incentive structure remains auditable. ReaWorks expressed interest in understanding how agent frameworks like elizaOS should interface with payment and settlement flows without embedding excessive trust logic into the agent runtime itself. This reflects a broader interest in integrating financial primitives with AI agent systems in a transparent and secure way.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1778896227347-j546gk.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -33,7 +39,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-05-15.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1778896245041-hxnos.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
