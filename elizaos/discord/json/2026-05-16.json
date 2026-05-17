@@ -1,0 +1,183 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-16",
+  "date": 1778889600,
+  "stats": {
+    "totalMessages": 12,
+    "totalUsers": 8
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on two main topics: a partnership announcement and V3 release timing. ivgamer3467 provided details about a deal between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize an Agentic SME solution using the ElizaOS framework. The partnership timeline includes a 30-day period for v1 development followed by 90 days for full deployment. This represents a significant commercial application of the ElizaOS framework for small and medium enterprises. The discussion also touched on V3 release expectations, with lalanotia noting it had been 2 weeks since Shaw indicated an imminent release. There was some skepticism from ame05230523 regarding the partnership details, but ivgamer3467 clarified it involves a Canadian listed entity with outlined timelines. A minor moderation inquiry about unbanning a user named 'arisae' was addressed by odilitime, who confirmed no user by that name was found in the ban list.",
+      "faqs": [
+        {
+          "question": "When will the V3 be released?",
+          "askedBy": "lalanotia",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Is anyone with the name arisae banned?",
+          "askedBy": "fifogarihafilag",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "fifogarihafilag",
+          "context": "Request to unban user named arisae",
+          "resolution": "Checked ban list and confirmed no user with that name was found banned"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Complete v1 of Agentic SME solution within 30-day timeline for Secure Blockchain Development Corp partnership",
+          "mentionedBy": "ivgamer3467"
+        },
+        {
+          "type": "Technical",
+          "description": "Full deployment of Agentic SME solution using ElizaOS framework within 90 days following v1",
+          "mentionedBy": "ivgamer3467"
+        }
+      ],
+      "messageCount": 11,
+      "userCount": 7
+    }
+  ],
+  "nicknameMap": {
+    "xeno": {
+      "id": "1077669294919397387",
+      "username": "xeno_thales",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 6
+    },
+    "marianodim": {
+      "id": "728793672241643530",
+      "username": "marianodim",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "Dominuś 🔥": {
+      "id": "1442643504009318533",
+      "username": "dominus06573",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "IVgamer": {
+      "id": "480843095882072066",
+      "username": "ivgamer3467",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Ame": {
+      "id": "1484588964315660500",
+      "username": "ame05230523",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 35
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 518
+    },
+    "WizphicsX": {
+      "id": "1479216742030114910",
+      "username": "wizphicsx",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Seree": {
+      "id": "831422482422431754",
+      "username": "lalanotia",
+      "roles": [
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 22
+    }
+  }
+}

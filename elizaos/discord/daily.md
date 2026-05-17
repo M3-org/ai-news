@@ -1,35 +1,50 @@
-# elizaOS Discord - 2026-05-15
+# elizaOS Discord - 2026-05-16
 
 ## Summary
 
-### Community Engagement
+### ElizaOS Commercial Partnership
 
-The Discord channel experienced light activity on 2026-05-15, with members exchanging greetings and brief updates. The conversation remained casual with minimal technical depth throughout the day.
+ivgamer3467 announced a partnership between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize an Agentic SME solution using the ElizaOS framework. The deal involves a Canadian listed entity with a structured timeline: 30 days for v1 development followed by 90 days for full deployment. This represents a significant commercial application targeting small and medium enterprises. ame05230523 expressed skepticism about the partnership details, but ivgamer3467 clarified the legitimacy and outlined timelines of the arrangement.
 
-### Development Updates
+### V3 Release Timeline
 
-A brief development update was shared regarding eliza OZ, with fifogarihafilag confirming active work on the project when asked by rexxbaee. No specific technical details or implementation specifics were discussed.
+lalanotia noted that two weeks had passed since Shaw indicated the V3 release was imminent, raising questions about the current status and expected timeline for the release.
 
-### Partnership Announcements
+### Moderation Inquiry
 
-ivgamer3467 referenced a partnership announcement that occurred during the day, though no additional context or details about the partnership were provided in the available discussion.
+A minor moderation issue was addressed regarding a user named 'arisae'. odilitime investigated the ban list and confirmed no user by that name was found, resolving the unbanning request.
 
 ## FAQ
 
-**Q: What is the status of eliza OZ?**
-A: fifogarihafilag confirmed they are currently working on eliza OZ when asked by rexxbaee, but no specific timeline or details were shared.
+**Q: What is the partnership between Secure Blockchain Development Corp. and Eliza Foundation?**
+A: The partnership involves commercializing an Agentic SME solution using the ElizaOS framework. It includes a 30-day period for v1 development followed by 90 days for full deployment, targeting small and medium enterprises.
 
-**Q: Was there a partnership announcement?**
-A: ivgamer3467 mentioned that a partnership announcement was made during the day, but no further details were provided in the discussion.
+**Q: When is V3 expected to be released?**
+A: Shaw indicated the release was imminent approximately two weeks ago, but no specific release date has been confirmed yet.
+
+**Q: Was the user 'arisae' found in the ban list?**
+A: No, odilitime checked the ban list and confirmed no user by that name was found.
 
 ## Help Interactions
 
-**Helper:** fifogarihafilag
-**Helpee:** rexxbaee
-**Resolution:** rexxbaee inquired about the status of eliza OZ updates. fifogarihafilag confirmed they are actively working on it, providing a brief status update.
+**Helper:** odilitime
+**Helpee:** User inquiring about 'arisae' ban status
+**Resolution:** odilitime checked the ban list and confirmed no user named 'arisae' was found, resolving the unbanning inquiry.
+
+**Helper:** ivgamer3467
+**Helpee:** ame05230523
+**Resolution:** ivgamer3467 clarified details about the Secure Blockchain Development Corp. partnership, confirming it involves a Canadian listed entity with outlined timelines for development and deployment.
 
 ## Action Items
 
 ### Technical
 
-- Continue development work on eliza OZ (mentioned by fifogarihafilag)
+None identified.
+
+### Features
+
+None identified.
+
+### Documentation
+
+None identified.
