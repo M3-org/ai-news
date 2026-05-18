@@ -1,130 +1,80 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-16",
-  "date": 1778889600,
+  "title": "elizaOS Discord - 2026-05-17",
+  "date": 1778976000,
   "stats": {
-    "totalMessages": 12,
-    "totalUsers": 8
+    "totalMessages": 10,
+    "totalUsers": 5
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on two main topics: a partnership announcement and V3 release timing. ivgamer3467 provided details about a deal between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize an Agentic SME solution using the ElizaOS framework. The partnership timeline includes a 30-day period for v1 development followed by 90 days for full deployment. This represents a significant commercial application of the ElizaOS framework for small and medium enterprises. The discussion also touched on V3 release expectations, with lalanotia noting it had been 2 weeks since Shaw indicated an imminent release. There was some skepticism from ame05230523 regarding the partnership details, but ivgamer3467 clarified it involves a Canadian listed entity with outlined timelines. A minor moderation inquiry about unbanning a user named 'arisae' was addressed by odilitime, who confirmed no user by that name was found in the ban list.",
+      "summary": "This Discord chat segment shows minimal technical activity. The primary discussion involves samuel12240 seeking assistance with migrating from ai16z to ElizaOS after missing a migration deadline. They attempted to contact administrators via email without receiving a response and requested help from the community multiple times. The issue appears unresolved based on the transcript. Later, keil0780 introduced themselves as a full-stack developer with expertise in React, Node.js, Python, OpenAI API, and PyTorch, offering collaboration opportunities for AI-based tools and workflow automation projects. No technical discussions, problem-solving sessions, or concrete implementations were documented in this segment.",
       "faqs": [
         {
-          "question": "When will the V3 be released?",
-          "askedBy": "lalanotia",
+          "question": "How can I migrate ai16z to ElizaOS after missing the deadline?",
+          "askedBy": "samuel12240",
           "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Is anyone with the name arisae banned?",
-          "askedBy": "fifogarihafilag",
-          "answeredBy": "odilitime"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "fifogarihafilag",
-          "context": "Request to unban user named arisae",
-          "resolution": "Checked ban list and confirmed no user with that name was found banned"
-        }
-      ],
+      "helpInteractions": [],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Complete v1 of Agentic SME solution within 30-day timeline for Secure Blockchain Development Corp partnership",
-          "mentionedBy": "ivgamer3467"
-        },
-        {
-          "type": "Technical",
-          "description": "Full deployment of Agentic SME solution using ElizaOS framework within 90 days following v1",
-          "mentionedBy": "ivgamer3467"
+          "description": "Migrate ai16z to ElizaOS for samuel12240 who missed the migration deadline",
+          "mentionedBy": "samuel12240"
         }
       ],
-      "messageCount": 11,
-      "userCount": 7
+      "messageCount": 4,
+      "userCount": 2
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel shows minimal technical activity. The conversation consists primarily of casual greetings and self-introductions rather than substantive technical discussions. odilitime provided a brief status update indicating low activity. retrojew shared a link to a Twitter post about 'FIFA for AI Agents,' described as a Football Fantasy league for AI Agents, though no technical discussion or implementation details followed. keil0780 introduced themselves as a full-stack developer, outlining their technical stack including React, Node.js, Python, OpenAI API, and PyTorch. They mentioned experience building web platforms, internal tools, automation systems, and AI-integrated applications, with recent focus on AI-based tools and workflow automation while freelancing. The developer expressed interest in collaboration opportunities. No technical problems were solved, no architectural decisions were made, and no code implementations were discussed during this segment. The chat represents networking and community building rather than active development work.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "xeno": {
-      "id": "1077669294919397387",
-      "username": "xeno_thales",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
       "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
+        "VIP",
+        "Vanguard",
+        "Verified"
       ],
-      "totalMessages": 6
+      "totalMessages": 16
     },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
+    "Keil": {
+      "id": "397222760029618186",
+      "username": "keil0780",
       "roles": [
         "Trader",
-        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 4
+      "totalMessages": 2
     },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "Dominuś 🔥": {
-      "id": "1442643504009318533",
-      "username": "dominus06573",
+    "retrojew": {
+      "id": "407598203538767872",
+      "username": "retrojew",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
-    },
-    "IVgamer": {
-      "id": "480843095882072066",
-      "username": "ivgamer3467",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Ame": {
-      "id": "1484588964315660500",
-      "username": "ame05230523",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 35
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -154,30 +104,42 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 518
+      "totalMessages": 519
     },
-    "WizphicsX": {
-      "id": "1479216742030114910",
-      "username": "wizphicsx",
+    "samuel1": {
+      "id": "541452582783156245",
+      "username": "samuel12240",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Leofaso77": {
+      "id": "1125654997095428176",
+      "username": "leofaso77",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
+        "It",
         "Verified",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
-      ],
-      "totalMessages": 1
+      ]
     },
-    "Seree": {
-      "id": "831422482422431754",
-      "username": "lalanotia",
-      "roles": [
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 22
+    "Lowell": {
+      "id": "1120885393835966585",
+      "username": "lowell9195",
+      "roles": [],
+      "totalMessages": 2
     }
   }
 }

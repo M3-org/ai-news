@@ -1,122 +1,99 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-16",
+  "title": "Daily Report - 2026-05-17",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - May 16, 2026",
+      "title": "ElizaOS Community Updates - May 17, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, community members raised several topics. A user requested an unban for someone named arisae, to which a moderator responded that no one by that name appeared to be banned. Another user asked about the release of V3, noting that Shaw had previously indicated it would arrive soon, though no confirmed release date was provided. Separately, a discussion emerged around a reported partnership between the Secure Blockchain Development Corp and the Eliza Foundation, aimed at commercializing an Agentic SME solution using the ElizaOS framework. One user described it as a Canadian listed entity deal with a 30-day timeline for a v1 and approximately 90 days for full deployment. Another user expressed skepticism, suggesting nothing had been formally signed, which prompted a rebuttal defending the legitimacy and outlined timeline of the partnership. In the coders channel, activity was minimal with only a casual greeting posted.",
+          "text": "A user named samuel1 raised concerns in the discussion channel about missing the migration deadline for ai16z to ElizaOS. They mentioned having sent an email but received no response, and asked for assistance from admins or community members to help with the migration process.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A full-stack developer named Keil introduced themselves in both the discussion and coders channels, highlighting experience with React, Node.js, Python, OpenAI API, and PyTorch. They specialize in web platforms, internal tools, automation systems, and AI-integrated applications, and expressed interest in collaborating on interesting projects while freelancing.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1778982851057-f8pvxb.jpg"
-          ]
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a concept described as FIFA for AI Agents was shared, referring to a Football Fantasy league designed for AI Agents. The link was shared alongside an image previewing the concept.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HIhkjqRW4AAjDit.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the partners channel, DannyNOR NoFapArc noted that a few AI-related coins are gaining traction, primarily on the Base blockchain. They expressed cautious optimism about a potential turnaround, noting that the outcome depends largely on the project's plans going forward.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Activity Summary for 2026-05-16",
+      "title": "ElizaOS Development Summary: May 17, 2026",
       "content": [
         {
-          "text": "No activity was recorded for the date of 2026-05-16. There is no data or events to report for this period.",
+          "text": "Development on May 17, 2026 centered on hardening cross-platform infrastructure across three main areas: Live USB stability, Android local-inference, and CI/CD consolidation. On the OS infrastructure side, the team advanced the Live USB architecture with production-ready update manifests, systemd-based health checks, refined branded launcher labels, UDisks configurations, and validated root-mode boot configurations and live demo paths. For Android local-inference and voice features, the team stabilized native loader integration for stock Android APKs, enabled native TTS playback, improved voice hint forwarding for streaming plugins, and added long-generation support for Android direct paths to optimize chat performance. CI/CD improvements included resolving Docker build failures by consolidating workflows and merging image configuration files, as well as improving cloud reliability by integrating node health checks into the provisioning-worker daemon. Two issues require urgent team attention: the OpenVINO Runtime RFC needs input to finalize recommender logic and prevent accidental LLM routing, and the Speculative Decoding SWA Gate requires ongoing validation of a new fallback patch across 27B-class models. On the positive side, two issues were closed: M-RoPE position validation and speculative decoding compatibility on Lunar Lake/Vulkan were resolved, and an investigation into Qwen2.5-14B bandwidth performance concluded with no persistent kernel regression found. Active work in progress includes fixes for circular symlink issues in the app-core pruner, connector capability detection and sub-agent UX redesign, first-party satellites and dynamic view host bridge development, shell foundation improvements with accessibility and contrast enhancements, and a Swift runtime RPC bridge.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-05-16.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-05-17.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1778982874838-0xase4.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1778889600,
+  "date": 1778976000,
   "nicknameMap": {
-    "xeno": {
-      "id": "1077669294919397387",
-      "username": "xeno_thales",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
       "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
+        "VIP",
+        "Vanguard",
+        "Verified"
       ],
-      "totalMessages": 6
+      "totalMessages": 16
     },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
+    "Keil": {
+      "id": "397222760029618186",
+      "username": "keil0780",
       "roles": [
         "Trader",
-        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 4
+      "totalMessages": 2
     },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "Dominuś 🔥": {
-      "id": "1442643504009318533",
-      "username": "dominus06573",
+    "retrojew": {
+      "id": "407598203538767872",
+      "username": "retrojew",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
-    },
-    "IVgamer": {
-      "id": "480843095882072066",
-      "username": "ivgamer3467",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Ame": {
-      "id": "1484588964315660500",
-      "username": "ame05230523",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 35
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -146,30 +123,42 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 518
+      "totalMessages": 519
     },
-    "WizphicsX": {
-      "id": "1479216742030114910",
-      "username": "wizphicsx",
+    "samuel1": {
+      "id": "541452582783156245",
+      "username": "samuel12240",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Leofaso77": {
+      "id": "1125654997095428176",
+      "username": "leofaso77",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
+        "It",
         "Verified",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
-      ],
-      "totalMessages": 1
+      ]
     },
-    "Seree": {
-      "id": "831422482422431754",
-      "username": "lalanotia",
-      "roles": [
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 22
+    "Lowell": {
+      "id": "1120885393835966585",
+      "username": "lowell9195",
+      "roles": [],
+      "totalMessages": 2
     }
   }
 }

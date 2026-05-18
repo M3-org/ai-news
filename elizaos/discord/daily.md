@@ -1,39 +1,38 @@
-# elizaOS Discord - 2026-05-16
+# elizaOS Discord - 2026-05-17
 
 ## Summary
 
-### ElizaOS Commercial Partnership
+### Migration Support Issues
 
-ivgamer3467 announced a partnership between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize an Agentic SME solution using the ElizaOS framework. The deal involves a Canadian listed entity with a structured timeline: 30 days for v1 development followed by 90 days for full deployment. This represents a significant commercial application targeting small and medium enterprises. ame05230523 expressed skepticism about the partnership details, but ivgamer3467 clarified the legitimacy and outlined timelines of the arrangement.
+samuel12240 reported difficulties migrating from ai16z to ElizaOS after missing the migration deadline. They attempted to contact administrators via email but received no response. The issue remained unresolved throughout the discussion, with multiple requests for community assistance going unanswered.
 
-### V3 Release Timeline
+### Developer Introductions and Networking
 
-lalanotia noted that two weeks had passed since Shaw indicated the V3 release was imminent, raising questions about the current status and expected timeline for the release.
+keil0780 introduced themselves across multiple channels as a full-stack developer with expertise in React, Node.js, Python, OpenAI API, and PyTorch. They described their experience building web platforms, internal tools, automation systems, and AI-integrated applications, with recent focus on AI-based tools and workflow automation while freelancing. They expressed interest in collaboration opportunities.
 
-### Moderation Inquiry
+### AI Agent Gaming Projects
 
-A minor moderation issue was addressed regarding a user named 'arisae'. odilitime investigated the ban list and confirmed no user by that name was found, resolving the unbanning request.
+retrojew shared a link to a Twitter post about a Football Fantasy league concept for AI Agents, described as "FIFA for AI Agents." No technical implementation details or further discussion followed this announcement.
+
+### Channel Activity Status
+
+odilitime provided a brief status update indicating low activity levels in the community channels during this period.
 
 ## FAQ
 
-**Q: What is the partnership between Secure Blockchain Development Corp. and Eliza Foundation?**
-A: The partnership involves commercializing an Agentic SME solution using the ElizaOS framework. It includes a 30-day period for v1 development followed by 90 days for full deployment, targeting small and medium enterprises.
+**Q: How can someone migrate from ai16z to ElizaOS after missing the deadline?**
+A: This question was raised by samuel12240 but remained unanswered in the discussion. They attempted email contact with administrators without success.
 
-**Q: When is V3 expected to be released?**
-A: Shaw indicated the release was imminent approximately two weeks ago, but no specific release date has been confirmed yet.
-
-**Q: Was the user 'arisae' found in the ban list?**
-A: No, odilitime checked the ban list and confirmed no user by that name was found.
+**Q: What technologies does keil0780 specialize in?**
+A: keil0780 specializes in React, Node.js, Python, OpenAI API, and PyTorch, with experience in web platforms, internal tools, automation systems, and AI-integrated applications.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** User inquiring about 'arisae' ban status
-**Resolution:** odilitime checked the ban list and confirmed no user named 'arisae' was found, resolving the unbanning inquiry.
-
-**Helper:** ivgamer3467
-**Helpee:** ame05230523
-**Resolution:** ivgamer3467 clarified details about the Secure Blockchain Development Corp. partnership, confirming it involves a Canadian listed entity with outlined timelines for development and deployment.
+**Interaction 1:**
+- Helpee: samuel12240
+- Issue: Needed assistance migrating from ai16z to ElizaOS after missing migration deadline and receiving no response from administrators via email
+- Helper: None
+- Resolution: Unresolved - no community members provided assistance
 
 ## Action Items
 
