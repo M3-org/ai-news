@@ -1,55 +1,63 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-17",
-  "date": 1778976000,
+  "title": "elizaOS Discord - 2026-05-18",
+  "date": 1779062400,
   "stats": {
-    "totalMessages": 10,
-    "totalUsers": 5
+    "totalMessages": 15,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical activity. The primary discussion involves samuel12240 seeking assistance with migrating from ai16z to ElizaOS after missing a migration deadline. They attempted to contact administrators via email without receiving a response and requested help from the community multiple times. The issue appears unresolved based on the transcript. Later, keil0780 introduced themselves as a full-stack developer with expertise in React, Node.js, Python, OpenAI API, and PyTorch, offering collaboration opportunities for AI-based tools and workflow automation projects. No technical discussions, problem-solving sessions, or concrete implementations were documented in this segment.",
-      "faqs": [
-        {
-          "question": "How can I migrate ai16z to ElizaOS after missing the deadline?",
-          "askedBy": "samuel12240",
-          "answeredBy": "Unanswered"
-        }
-      ],
+      "summary": "This Discord chat segment contains primarily introductory messages and self-promotional posts rather than technical discussions or problem-solving. The channel saw several users introducing themselves and their services. wizphicsx requested contact information for leadership regarding strategic partnerships. Two developers (rsn6958 and keil0780) posted their credentials and availability for collaboration, focusing on AI, full-stack development, and automation systems. _0rkz_ introduced BYTE Protocol, a per-byte data settlement layer on Arbitrum that uses staking mechanisms and on-chain quality enforcement, with over 10,000 messages settled on testnet and 8 live data feeds. Rick posted a failed Pushover notification test. No substantive technical discussions, problem-solving sessions, or collaborative help interactions occurred during this segment. The chat was dominated by networking and service offerings rather than active development work or technical troubleshooting.",
+      "faqs": [],
       "helpInteractions": [],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Migrate ai16z to ElizaOS for samuel12240 who missed the migration deadline",
-          "mentionedBy": "samuel12240"
-        }
-      ],
-      "messageCount": 4,
-      "userCount": 2
+      "actionItems": [],
+      "messageCount": 10,
+      "userCount": 7
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel shows minimal technical activity. The conversation consists primarily of casual greetings and self-introductions rather than substantive technical discussions. odilitime provided a brief status update indicating low activity. retrojew shared a link to a Twitter post about 'FIFA for AI Agents,' described as a Football Fantasy league for AI Agents, though no technical discussion or implementation details followed. keil0780 introduced themselves as a full-stack developer, outlining their technical stack including React, Node.js, Python, OpenAI API, and PyTorch. They mentioned experience building web platforms, internal tools, automation systems, and AI-integrated applications, with recent focus on AI-based tools and workflow automation while freelancing. The developer expressed interest in collaboration opportunities. No technical problems were solved, no architectural decisions were made, and no code implementations were discussed during this segment. The chat represents networking and community building rather than active development work.",
-      "faqs": [],
+      "summary": "This Discord channel segment consists entirely of self-promotional messages from developers seeking collaboration opportunities. No actual technical discussions, problem-solving, or implementation details occurred. Four users (keil0780, xpes2273, trace.g, and harry346165) posted introductions highlighting their technical backgrounds. keil0780 posted twice, first reaching out to a specific user and later introducing themselves as a full-stack developer with React, Node.js, Python, OpenAI API, and PyTorch experience. xpes2273 asked about connecting Claude AI agent to AgentKey but received no responses. trace.g described their focus on transitioning manual workflows to reliable AI systems with expertise in LLM systems, agents, RAG, and multimodal AI. harry346165 shared details about a completed client project using Next.js 15, React 19, TypeScript, Tailwind, Shadcn, TanStack Query, Prisma, PostgreSQL, Redis, Docker-Kubernetes on AWS, with LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o, plus RAG implementation over Pinecone and Weaviate. The channel showed no collaborative technical work, code reviews, debugging sessions, or meaningful technical exchanges during this period.",
+      "faqs": [
+        {
+          "question": "How do I properly connect and setup Claude AI agent to AgentKey?",
+          "askedBy": "xpes2273",
+          "answeredBy": "Unanswered"
+        }
+      ],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "messageCount": 5,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
+    "Harry38485": {
+      "id": "448849666235301899",
+      "username": "harry346165",
       "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
+        "utility",
+        "eliza"
       ],
-      "totalMessages": 16
+      "totalMessages": 4
+    },
+    "trace": {
+      "id": "853841524764049429",
+      "username": "trace.g",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
     },
     "Keil": {
       "id": "397222760029618186",
@@ -60,67 +68,64 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 5
     },
-    "retrojew": {
-      "id": "407598203538767872",
-      "username": "retrojew",
+    "Xpes": {
+      "id": "1218488218702446692",
+      "username": "xpes2273",
       "roles": [
-        "Helper",
-        "Trader",
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Baoger": {
+      "id": "555035784378318875",
+      "username": "baogerbao",
+      "roles": [
+        "a-hack",
         "Creator",
         "[WG] degenspartan",
+        "VIP",
+        "Contributor",
+        "[WG] Want to Help",
+        "Verified",
+        "Mini Mod",
+        "Booster",
+        "Designer",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 102
+    },
+    "_0rkz_": {
+      "id": "1444953482695020544",
+      "username": "_0rkz_",
+      "roles": [
+        "Helper",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "God",
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
         "Verified",
-        "Booster",
-        "Hoplite",
-        "Migration Support",
-        "Helper",
-        "Github - Contributor",
-        "Labs Alumni",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 519
-    },
-    "samuel1": {
-      "id": "541452582783156245",
-      "username": "samuel12240",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
         "Coder",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 8
     },
-    "Leofaso77": {
-      "id": "1125654997095428176",
-      "username": "leofaso77",
+    "Newyorkyankees": {
+      "id": "1488362013032972308",
+      "username": "solutioncrew1",
       "roles": [
         "Helper",
         "Trader",
@@ -133,13 +138,38 @@
         "utility",
         "Coder",
         "eliza"
-      ]
+      ],
+      "totalMessages": 3
     },
-    "Lowell": {
-      "id": "1120885393835966585",
-      "username": "lowell9195",
-      "roles": [],
+    "Andres durella": {
+      "id": "1214888640069636138",
+      "username": "andresrussonl_44071",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
       "totalMessages": 2
+    },
+    "WizphicsX": {
+      "id": "1479216742030114910",
+      "username": "wizphicsx",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
     }
   }
 }
