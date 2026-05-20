@@ -1,44 +1,61 @@
-# elizaOS Discord - 2026-05-18
+# elizaOS Discord - 2026-05-19
 
 ## Summary
 
-### Self Promotion and Networking
+### elizaOS v2.0.0 Release
 
-The channels were dominated by developers introducing themselves and seeking collaboration opportunities. keil0780 posted in both channels highlighting full-stack development skills including React, Node.js, Python, OpenAI API, and PyTorch. rsn6958 introduced themselves as an AI developer with experience in LLMs, RAG systems, and automation. trace.g emphasized expertise in transitioning manual workflows to AI systems with focus on LLM systems, agents, RAG, and multimodal AI. harry346165 shared details of a completed client project showcasing a comprehensive tech stack.
+A new version of elizaOS (v2.0.0) was released on May 19, 2026. Users inquired about release notes and features, with references made to v3 launch being close. The discussion indicated the project is in early stages focusing on product delivery including the elizaOS framework, Milady app, and Eliza Cloud before finalizing tokenomics details.
 
-### Partnership and Business Development
+### Token Economics and Governance
 
-wizphicsx requested contact information for leadership regarding strategic partnerships. _0rkz_ introduced BYTE Protocol, a per-byte data settlement layer built on Arbitrum that uses staking mechanisms and on-chain quality enforcement, reporting over 10,000 messages settled on testnet with 8 live data feeds.
+mbat8088 asked comprehensive questions about $elizaOS token utility and economics. odilitime provided authoritative clarifications on several key points: elizaOS did not launch Milady but built on their stack using fees; Milady has separate cloud infrastructure for its own buybacks; no additional tokens are planned except possibly Babylon in the distant future; no formal buyback percentage has been set as the focus remains on achieving profitability first; and no formal governance structure currently exists. The legal structure relationship between Milady and elizaOS was also discussed.
 
-### Technical Stack Demonstrations
+### Developer Networking and Integration
 
-harry346165 described a completed project using Next.js 15, React 19, TypeScript, Tailwind, Shadcn, TanStack Query, Prisma, PostgreSQL, Redis, and Docker-Kubernetes on AWS. The project incorporated LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o, with RAG implementation over Pinecone and Weaviate vector databases.
+Multiple developers posted availability for collaboration opportunities. keil0780 and rsn6958 offered services in the discussion channel, while keil0780 and trace.g posted detailed introductions in the coders channel. keil0780 specializes in React, Node.js, Python, OpenAI API, and PyTorch for AI-integrated applications and workflow automation. trace.g positions themselves as an AI and Full Stack Engineer specializing in LLM systems, agents, RAG, multimodal AI, and automation. based.bid announced their recently published SDK and expressed interest in integrating with ElizaOS, with odilitime responding that they are working on trading bots.
 
 ## FAQ
 
-**Q: What is BYTE Protocol?**
-A: BYTE Protocol is a per-byte data settlement layer built on Arbitrum that uses staking mechanisms and on-chain quality enforcement. It has settled over 10,000 messages on testnet and currently operates 8 live data feeds.
+**Q: What is the relationship between Milady and elizaOS?**
+A: elizaOS did not launch Milady but built on their stack using fees. Milady has separate cloud infrastructure for its own buybacks.
 
-**Q: How can someone connect Claude AI agent to AgentKey?**
-A: This question was asked by xpes2273 but received no responses in the channel.
+**Q: Are there plans for additional tokens?**
+A: No additional tokens are planned except possibly Babylon in the distant future.
 
-**Q: What technologies were used in the client project mentioned?**
-A: The project used Next.js 15, React 19, TypeScript, Tailwind, Shadcn, TanStack Query, Prisma, PostgreSQL, Redis, Docker-Kubernetes on AWS, LangGraph and CrewAI agents powered by Claude 3.5 and GPT-4o, with RAG implementation over Pinecone and Weaviate.
+**Q: What is the buyback mechanism and percentage target?**
+A: No formal buyback percentage has been set. The focus remains on achieving profitability first before finalizing these details.
+
+**Q: Is there a governance structure for elizaOS?**
+A: No formal governance structure currently exists.
+
+**Q: What products is elizaOS currently focused on delivering?**
+A: The project is focusing on the elizaOS framework, Milady app, and Eliza Cloud.
+
+**Q: What is based.bid building with ElizaOS?**
+A: They are working on trading bots and have published an SDK for integration.
 
 ## Help Interactions
 
-No help interactions occurred during this period. xpes2273 asked about connecting Claude AI agent to AgentKey but received no responses or assistance.
+**Helper:** odilitime
+**Helpee:** mbat8088
+**Resolution:** Provided comprehensive answers about token economics, clarifying the relationship between Milady and elizaOS, buyback mechanisms, token plans, and governance structure. Explained that the project is in early stages focusing on product delivery before finalizing tokenomics.
+
+**Helper:** odilitime
+**Helpee:** based.bid
+**Resolution:** Responded to their integration inquiry by explaining they are working on trading bots.
 
 ## Action Items
 
 ### Technical
 
-None identified. No active development work or technical tasks were discussed.
+- Integration exploration between based.bid SDK and ElizaOS for trading bots (mentioned by based.bid, odilitime)
+- Continue development on elizaOS framework, Milady app, and Eliza Cloud (mentioned by odilitime)
 
 ### Features
 
-None identified. No feature requests or development plans were mentioned.
+- Achieve profitability before setting formal buyback percentages (mentioned by odilitime)
+- Potential Babylon token consideration in distant future (mentioned by odilitime)
 
 ### Documentation
 
-None identified. No documentation needs were expressed.
+- Release notes and features documentation needed for v2.0.0 (mentioned by community inquiry)

@@ -1,0 +1,264 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-05-19",
+  "categories": [
+    {
+      "title": "ElizaOS v2.0.0 Release and Community Discussion",
+      "content": [
+        {
+          "text": "ElizaOS v2.0.0 was published on May 19, 2026, announced in the discussion channel and met with positive reactions from community members. A community member noted that v3 is also expected to launch soon.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A community member raised several questions about elizaOS token economics and project structure. Core team member Odilitime provided clarifications: Milady and elizaOS are not the same legal entity, as the team took fees and built something on their own stack. Milady has its own cloud infrastructure, and profits from it would fuel Milady buybacks rather than elizaOS buybacks. No additional tokens beyond the existing ones are planned, with a possible Babylon token considered far in the future. There is currently no formalized buyback percentage, as the focus remains on achieving profitability first. No formal governance mechanism for buyback decisions has been established yet.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer announced the recent publication of their SDK and expressed interest in integrating ElizaOS. Odilitime mentioned working on trading bots. Several developers also introduced themselves in both channels, highlighting backgrounds in full-stack development, AI systems, LLM orchestration, RAG, automation, and tools built with React, Node.js, Python, OpenAI API, and PyTorch, and expressed openness to freelance or collaborative opportunities.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1779148800,
+  "nicknameMap": {
+    "trace": {
+      "id": "853841524764049429",
+      "username": "trace.g",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Keil": {
+      "id": "397222760029618186",
+      "username": "keil0780",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 521
+    },
+    "based.bid": {
+      "id": "1400461215033065554",
+      "username": "based.bid",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "MHBSPIRIT": {
+      "id": "1090111813909233664",
+      "username": "mhbspirit",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "mao": {
+      "id": "756963441477943326",
+      "username": "lamaojames",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "mbat": {
+      "id": "792267409541169172",
+      "username": "mbat8088",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 18
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "THE VOICE": {
+      "id": "1328416722239225958",
+      "username": "i.am.the.voice",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 176
+    },
+    "soyrubio": {
+      "id": "625801409148878848",
+      "username": "soyrubio",
+      "roles": [
+        "merch - self assign",
+        "workgroups - write perms",
+        "Verified",
+        "Announcements",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 25
+    },
+    "WILL": {
+      "id": "1032827510125248572",
+      "username": "will_2472",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "Micheal": {
+      "id": "1505364591079587932",
+      "username": "micheal014886",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
