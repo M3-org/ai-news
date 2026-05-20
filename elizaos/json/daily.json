@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779242594683-x93cj.jpg"
+          ]
         },
         {
           "text": "A community member raised several questions about elizaOS token economics and project structure. Core team member Odilitime provided clarifications: Milady and elizaOS are not the same legal entity, as the team took fees and built something on their own stack. Milady has its own cloud infrastructure, and profits from it would fuel Milady buybacks rather than elizaOS buybacks. No additional tokens beyond the existing ones are planned, with a possible Babylon token considered far in the future. There is currently no formalized buyback percentage, as the focus remains on achieving profitability first. No formal governance mechanism for buyback decisions has been established yet.",
@@ -28,7 +31,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779242642636-gfrrqr.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
