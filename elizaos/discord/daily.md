@@ -1,61 +1,50 @@
-# elizaOS Discord - 2026-05-19
+# elizaOS Discord - 2026-05-20
 
 ## Summary
 
-### elizaOS v2.0.0 Release
+### ElizaOS Technical Achievements
 
-A new version of elizaOS (v2.0.0) was released on May 19, 2026. Users inquired about release notes and features, with references made to v3 launch being close. The discussion indicated the project is in early stages focusing on product delivery including the elizaOS framework, Milady app, and Eliza Cloud before finalizing tokenomics details.
+zadayos successfully booted ElizaOS Debian RISC-V 64-bit ISO on QEMU chip emulator in 35 seconds, demonstrating cross-architecture compatibility. shawmakesmagic confirmed that Eliza v3 is now running on elizaOS (Linux) on an emulated RISC-V chip called 'eliza e1', marking a major milestone in hardware abstraction. A question was raised about whether a physical Eliza E1 chip is being developed, but this remained unanswered.
 
-### Token Economics and Governance
+### Strategic Business Decisions
 
-mbat8088 asked comprehensive questions about $elizaOS token utility and economics. odilitime provided authoritative clarifications on several key points: elizaOS did not launch Milady but built on their stack using fees; Milady has separate cloud infrastructure for its own buybacks; no additional tokens are planned except possibly Babylon in the distant future; no formal buyback percentage has been set as the focus remains on achieving profitability first; and no formal governance structure currently exists. The legal structure relationship between Milady and elizaOS was also discussed.
+shawmakesmagic announced that the previously mentioned Babylon airdrop for elizaos holders will not proceed due to budget constraints. The team is now focusing exclusively on elizaOS development. zadayos strongly supported this strategic pivot, advocating for a single-token focus similar to ETH/SOL utility models, with ecosystem token creation left to the market.
 
-### Developer Networking and Integration
+### DeFi Plugin Development
 
-Multiple developers posted availability for collaboration opportunities. keil0780 and rsn6958 offered services in the discussion channel, while keil0780 and trace.g posted detailed introductions in the coders channel. keil0780 specializes in React, Node.js, Python, OpenAI API, and PyTorch for AI-integrated applications and workflow automation. trace.g positions themselves as an AI and Full Stack Engineer specializing in LLM systems, agents, RAG, multimodal AI, and automation. based.bid announced their recently published SDK and expressed interest in integrating with ElizaOS, with odilitime responding that they are working on trading bots.
+janabr8973 announced a new DeFi plugin for Eliza on Base/Aave, offering real-time solvency scoring and flash-crash simulations. The plugin is available via NPM package @centinel-risk-protocol/eliza-plugin-centinel and is seeking community testing and feedback.
+
+### Token Clarifications
+
+odilitime confirmed that the Milady token buyback refers to the BNB version of the token.
 
 ## FAQ
 
-**Q: What is the relationship between Milady and elizaOS?**
-A: elizaOS did not launch Milady but built on their stack using fees. Milady has separate cloud infrastructure for its own buybacks.
+**Q: What is the Eliza e1 chip?**
+A: The Eliza e1 is an emulated RISC-V chip running on QEMU that successfully boots ElizaOS Debian RISC-V 64-bit ISO in 35 seconds. Eliza v3 is currently running on elizaOS (Linux) on this emulated chip.
 
-**Q: Are there plans for additional tokens?**
-A: No additional tokens are planned except possibly Babylon in the distant future.
+**Q: Will there be a Babylon airdrop for elizaos holders?**
+A: No, the Babylon airdrop will not happen due to budget constraints. The team is now focusing exclusively on elizaOS development.
 
-**Q: What is the buyback mechanism and percentage target?**
-A: No formal buyback percentage has been set. The focus remains on achieving profitability first before finalizing these details.
+**Q: Which version of the Milady token is being bought back?**
+A: The BNB version of the Milady token is the one being bought back.
 
-**Q: Is there a governance structure for elizaOS?**
-A: No formal governance structure currently exists.
+**Q: What does the new Centinel DeFi plugin offer?**
+A: The plugin provides real-time solvency scoring and flash-crash simulations for Eliza on Base/Aave networks. It is available as an NPM package at @centinel-risk-protocol/eliza-plugin-centinel.
 
-**Q: What products is elizaOS currently focused on delivering?**
-A: The project is focusing on the elizaOS framework, Milady app, and Eliza Cloud.
-
-**Q: What is based.bid building with ElizaOS?**
-A: They are working on trading bots and have published an SDK for integration.
+**Q: Is there a physical Eliza E1 chip being developed?**
+A: This question was raised but remains unanswered.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** mbat8088
-**Resolution:** Provided comprehensive answers about token economics, clarifying the relationship between Milady and elizaOS, buyback mechanisms, token plans, and governance structure. Explained that the project is in early stages focusing on product delivery before finalizing tokenomics.
-
-**Helper:** odilitime
-**Helpee:** based.bid
-**Resolution:** Responded to their integration inquiry by explaining they are working on trading bots.
+No direct help interactions were documented in the provided channel summaries.
 
 ## Action Items
 
 ### Technical
 
-- Integration exploration between based.bid SDK and ElizaOS for trading bots (mentioned by based.bid, odilitime)
-- Continue development on elizaOS framework, Milady app, and Eliza Cloud (mentioned by odilitime)
+- Test and provide feedback on the new DeFi plugin @centinel-risk-protocol/eliza-plugin-centinel (mentioned by janabr8973)
 
 ### Features
 
-- Achieve profitability before setting formal buyback percentages (mentioned by odilitime)
-- Potential Babylon token consideration in distant future (mentioned by odilitime)
-
-### Documentation
-
-- Release notes and features documentation needed for v2.0.0 (mentioned by community inquiry)
+- Continue development focus on elizaOS following strategic pivot away from Babylon airdrop (mentioned by shawmakesmagic)

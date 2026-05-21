@@ -1,127 +1,69 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-19",
-  "date": 1779148800,
+  "title": "elizaOS Discord - 2026-05-20",
+  "date": 1779235200,
   "stats": {
     "totalMessages": 23,
-    "totalUsers": 14
+    "totalUsers": 15
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The main discussion centered on elizaOS v2.0.0 release announcement and token economics clarification. A new version (v2.0.0) was released, with users inquiring about release notes and features. The most significant technical discussion involved mbat8088 asking detailed questions about $elizaOS token utility and economics. Key questions covered: legal structure relationship between Milady and elizaOS, buyback mechanisms from product profits, potential Milady token plans, buyback percentage targets, and governance structure. odilitime provided authoritative answers clarifying that elizaOS did not launch Milady but built on their stack using fees, Milady has separate cloud infrastructure for its own buybacks, no additional tokens planned except possibly Babylon in distant future, no formal buyback percentage set as focus remains on achieving profitability first, and no formal governance structure currently exists. The discussion revealed the project is in early stages focusing on product delivery (elizaOS framework, Milady app, Eliza Cloud) before finalizing tokenomics details. Two developers (keil0780 and rsn6958) posted availability for collaboration on AI and full-stack projects. A scammer was called out by mbat8088. Reference was made to v3 launch being close and previous post by Odi in another channel from May 3rd.",
+      "summary": "The discussion centered on significant technical achievements with ElizaOS. zadayos successfully booted ElizaOS Debian RISC-V 64-bit ISO on QEMU chip emulator in 35 seconds, demonstrating cross-architecture compatibility. shawmakesmagic confirmed Eliza v3 is running on elizaOS (Linux) on an emulated RISC-V chip called 'eliza e1', representing a major milestone in hardware abstraction. When asked about custom chip development, the question about a physical Eliza E1 chip remained unanswered. On the business side, shawmakesmagic clarified that the previously mentioned Babylon airdrop for elizaos holders will not happen due to budget constraints, with the team now focusing exclusively on elizaOS development. This strategic pivot was strongly supported by zadayos, who advocated for single-token focus similar to ETH/SOL utility models, leaving ecosystem token creation to the market. Regarding Milady token buyback, odilitime confirmed it's the BNB version. janabr8973 announced a new DeFi plugin for Eliza on Base/Aave, offering real-time solvency scoring and flash-crash simulations via NPM package @centinel-risk-protocol/eliza-plugin-centinel, seeking community testing and feedback.",
       "faqs": [
         {
-          "question": "What is the $elizaOS token utility?",
-          "askedBy": "mbat8088",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "What's new in v2? Cannot find release notes",
-          "askedBy": "soyrubio",
+          "question": "Do you intend to make your own chip (Eliza E1) for Elizaos in the future?",
+          "askedBy": "zadayos",
           "answeredBy": "Unanswered"
         },
         {
-          "question": "Are Milady and elizaOS the same legal entity?",
-          "askedBy": "mbat8088",
+          "question": "Which milady token buyback with milady app revenue? It's on BNB or on Solana?",
+          "askedBy": "waiser0165",
           "answeredBy": "odilitime"
         },
         {
-          "question": "Does product profits buyback include Milady revenue or only Eliza Cloud revenue?",
-          "askedBy": "mbat8088",
-          "answeredBy": "odilitime"
+          "question": "Is the CA on coingecko correct for bnb/base/eth?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "Is there a separate Milady token planned?",
-          "askedBy": "mbat8088",
-          "answeredBy": "odilitime"
+          "question": "Any update for degenai?",
+          "askedBy": "jack1000x_98528",
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "Is there a specific buyback percentage target?",
-          "askedBy": "mbat8088",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Will buyback percentage be set through formal governance or team discretion?",
-          "askedBy": "mbat8088",
-          "answeredBy": "odilitime"
+          "question": "I remember an airdrop to elizaos holders was mentioned long ago did it happen?",
+          "askedBy": "alexeill",
+          "answeredBy": "shawmakesmagic"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "mdmnvest",
-          "helpee": "mbat8088",
-          "context": "mbat8088 asked about elizaOS token utility and was directed to information",
-          "resolution": "Pointed to post from Odi in another channel from May 3rd"
-        },
-        {
           "helper": "odilitime",
-          "helpee": "mbat8088",
-          "context": "Detailed questions about token economics, legal structure, buybacks, and governance",
-          "resolution": "Provided comprehensive answers clarifying Milady relationship, no new tokens planned, no formal buyback percentage yet, and no formal governance structure"
+          "helpee": "waiser0165",
+          "context": "Confusion about which Milady token (BNB or Solana) is used for buyback with Milady app revenue",
+          "resolution": "Confirmed it's the BNB version of the token"
         }
       ],
       "actionItems": [
         {
-          "type": "Documentation",
-          "description": "Publish v2.0.0 release notes with feature details",
-          "mentionedBy": "soyrubio"
+          "type": "Technical",
+          "description": "Test and provide feedback on Centinel Risk Protocol Eliza plugin for DeFi agents on Base/Aave with real-time solvency scoring and flash-crash simulations",
+          "mentionedBy": "janabr8973"
         },
         {
-          "type": "Documentation",
-          "description": "Formalize and document token buyback percentage and governance mechanisms",
-          "mentionedBy": "mbat8088"
-        },
-        {
-          "type": "Technical",
-          "description": "Focus on achieving profitability with product stack before finalizing tokenomics",
-          "mentionedBy": "odilitime"
+          "type": "Feature",
+          "description": "Focus exclusively on elizaOS development and create multiple utility token uses similar to ETH or SOL model",
+          "mentionedBy": "zadayos"
         }
       ],
-      "messageCount": 17,
-      "userCount": 12
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord channel segment shows early-stage community introductions and networking. based.bid announced their recently published SDK and expressed interest in integrating with ElizaOS, seeking to understand what community members are building. odilitime responded that they are working on trading bots. Two full-stack developers (keil0780 and trace.g) posted detailed introductions offering their services. keil0780 specializes in React, Node.js, Python, OpenAI API, and PyTorch, focusing on AI-integrated applications and workflow automation. trace.g positions themselves as an AI + Full Stack Engineer specializing in LLM systems, agents, RAG, multimodal AI, and automation, emphasizing their ability to transition projects from manual workflows and prototypes to production-ready AI systems with clean orchestration and scalable backend flows. Both developers are actively seeking freelance, contract, or collaboration opportunities. No technical problems were solved, no specific implementations were discussed, and no concrete decisions were made during this segment. The conversation represents typical community networking and service offerings rather than active development discussion.",
-      "faqs": [
-        {
-          "question": "What is everyone here working on?",
-          "askedBy": "based.bid",
-          "answeredBy": "odilitime"
-        }
-      ],
-      "helpInteractions": [],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Integrate based.bid SDK with ElizaOS",
-          "mentionedBy": "based.bid"
-        }
-      ],
-      "messageCount": 6,
-      "userCount": 4
+      "messageCount": 22,
+      "userCount": 14
     }
   ],
   "nicknameMap": {
-    "trace": {
-      "id": "853841524764049429",
-      "username": "trace.g",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "Keil": {
+    "handsome": {
       "id": "397222760029618186",
       "username": "keil0780",
       "roles": [
@@ -130,7 +72,17 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 7
+      "totalMessages": 8
+    },
+    "JanaBr": {
+      "id": "453351290068795424",
+      "username": "janabr8973",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -160,124 +112,52 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 521
+      "totalMessages": 523
     },
-    "based.bid": {
-      "id": "1400461215033065554",
-      "username": "based.bid",
+    "marianodim": {
+      "id": "728793672241643530",
+      "username": "marianodim",
       "roles": [
+        "Trader",
         "Verified",
-        "Coder",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 4
+      "totalMessages": 5
     },
-    "MHBSPIRIT": {
-      "id": "1090111813909233664",
-      "username": "mhbspirit",
+    "KittyAmiee": {
+      "id": "951750794686906388",
+      "username": "amieeee3",
       "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "mao": {
-      "id": "756963441477943326",
-      "username": "lamaojames",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "mbat": {
-      "id": "792267409541169172",
-      "username": "mbat8088",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
-      "roles": [
-        "auto.fun enjoyer",
-        "Trader",
-        "King",
-        "[WG] degenspartan",
-        "VIP",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
-      ],
-      "totalMessages": 18
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "THE VOICE": {
-      "id": "1328416722239225958",
-      "username": "i.am.the.voice",
+    "momrykelgnea1983": {
+      "id": "1300018423413211190",
+      "username": "momrykelgnea1983_90215",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
-      ]
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 176
-    },
-    "soyrubio": {
-      "id": "625801409148878848",
-      "username": "soyrubio",
-      "roles": [
-        "merch - self assign",
-        "workgroups - write perms",
-        "Verified",
-        "Announcements",
-        "Coder"
       ],
       "totalMessages": 1
     },
@@ -294,41 +174,114 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 25
+      "totalMessages": 28
     },
-    "WILL": {
-      "id": "1032827510125248572",
-      "username": "will_2472",
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 101
+    },
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 23
+    },
+    "Mr. Ronnie  Ďebryne 🛠️": {
+      "id": "1481782207600394316",
+      "username": "stackvector",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
         "It",
-        "Verified",
+        "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 11
+      "totalMessages": 4
     },
-    "Micheal": {
-      "id": "1505364591079587932",
-      "username": "micheal014886",
+    "@Jack": {
+      "id": "1379116061751902219",
+      "username": "jack1000x_98528",
       "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
         "Creator",
         "[WG] degenspartan",
         "Verified",
-        "Booster",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "malik0063": {
+      "id": "1117690457502253146",
+      "username": "malik0063.",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
         "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "meme": {
+      "id": "1460715672379326829",
+      "username": "mine_7.7.7",
+      "roles": [
+        "Trader",
+        "Creator",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 45
+    },
+    "Quaser M": {
+      "id": "1281266285505810453",
+      "username": "waiser0165",
+      "roles": [
+        "agent dev school - self assign",
+        "Verified",
+        "Dev School Student",
+        "Announcements",
+        "Coder"
+      ],
+      "totalMessages": 19
     }
   }
 }
