@@ -1,65 +1,100 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-20",
-  "date": 1779235200,
+  "title": "elizaOS Discord - 2026-05-21",
+  "date": 1779321600,
   "stats": {
-    "totalMessages": 23,
-    "totalUsers": 15
+    "totalMessages": 18,
+    "totalUsers": 11
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on significant technical achievements with ElizaOS. zadayos successfully booted ElizaOS Debian RISC-V 64-bit ISO on QEMU chip emulator in 35 seconds, demonstrating cross-architecture compatibility. shawmakesmagic confirmed Eliza v3 is running on elizaOS (Linux) on an emulated RISC-V chip called 'eliza e1', representing a major milestone in hardware abstraction. When asked about custom chip development, the question about a physical Eliza E1 chip remained unanswered. On the business side, shawmakesmagic clarified that the previously mentioned Babylon airdrop for elizaos holders will not happen due to budget constraints, with the team now focusing exclusively on elizaOS development. This strategic pivot was strongly supported by zadayos, who advocated for single-token focus similar to ETH/SOL utility models, leaving ecosystem token creation to the market. Regarding Milady token buyback, odilitime confirmed it's the BNB version. janabr8973 announced a new DeFi plugin for Eliza on Base/Aave, offering real-time solvency scoring and flash-crash simulations via NPM package @centinel-risk-protocol/eliza-plugin-centinel, seeking community testing and feedback.",
+      "summary": "The discussion channel featured a brief update on elizaOS development and community onboarding. The key technical announcement was that elizaOS v2.0 was recently released with a major focus on native-apps integration, representing a significant architectural shift from previous versions. A returning community member inquired about the current state of the AI agent after several months away, seeking information on release status, usage, and quality. Another member requested live demonstrations or YouTube examples to understand the platform's capabilities and best practices. A new user joined expressing interest in getting started with elizaOS. The conversation was relatively light with several social messages and shared links to Twitter/X posts and spaces discussing agents and related content. No deep technical discussions, implementation details, or problem-solving occurred during this segment.",
       "faqs": [
         {
-          "question": "Do you intend to make your own chip (Eliza E1) for Elizaos in the future?",
-          "askedBy": "zadayos",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Which milady token buyback with milady app revenue? It's on BNB or on Solana?",
-          "askedBy": "waiser0165",
+          "question": "Can anyone provide the latest on this ai agent, I have been away for a few months",
+          "askedBy": "planz1015",
           "answeredBy": "odilitime"
         },
         {
-          "question": "Is the CA on coingecko correct for bnb/base/eth?",
-          "askedBy": "valleybeyond7991",
-          "answeredBy": "Unanswered"
+          "question": "has it been released/ how do we use it/ is it any good",
+          "askedBy": "planz1015",
+          "answeredBy": "odilitime"
         },
         {
-          "question": "Any update for degenai?",
-          "askedBy": "jack1000x_98528",
+          "question": "Are there any live or youtube examples to see to get an idea of what this can do and how best to use it?",
+          "askedBy": "greggblazer",
           "answeredBy": "Unanswered"
-        },
-        {
-          "question": "I remember an airdrop to elizaos holders was mentioned long ago did it happen?",
-          "askedBy": "alexeill",
-          "answeredBy": "shawmakesmagic"
         }
       ],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "waiser0165",
-          "context": "Confusion about which Milady token (BNB or Solana) is used for buyback with Milady app revenue",
-          "resolution": "Confirmed it's the BNB version of the token"
+          "helpee": "planz1015",
+          "context": "User returning after months away seeking update on AI agent status and usage",
+          "resolution": "Informed that elizaOS v2.0 was just released with heavy focus on native-apps"
+        },
+        {
+          "helper": "bright022655",
+          "helpee": "planz1015",
+          "context": "User asking for latest information on the AI agent",
+          "resolution": "Offered to provide specific information based on user's needs"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Provide live or YouTube examples demonstrating elizaOS capabilities and best practices",
+          "mentionedBy": "greggblazer"
+        },
+        {
+          "type": "Documentation",
+          "description": "Create getting started guide for new users exploring elizaOS",
+          "mentionedBy": "rip.s"
+        }
+      ],
+      "messageCount": 14,
+      "userCount": 10
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The channel discussion centered on dockerizing a VoiceAI white label agency platform for local deployment. greggblazer, a founder, sought advice on containerization challenges. keil0780 provided detailed technical guidance, identifying key pain points: real-time voice dependencies, GPU access, networking, persistent storage, and latency stability across environments. The recommended approach was to separate services (inference, API, database, queue/worker) and containerize gradually rather than attempting a monolithic migration. greggblazer confirmed progress to two working containers but expressed the goal of achieving single-container deployment for mass deployment ease. The conversation highlighted the challenge of merging frontend, backend, and database containers into one unified container. keil0780 later introduced themselves as a full-stack AI developer interested in AI integrations, workflow automation, SaaS platforms, backend systems, AI agents, and productivity applications.",
+      "faqs": [
+        {
+          "question": "Any advice on dockerizing a VoiceAI white label agency platform so it can go local?",
+          "askedBy": "greggblazer",
+          "answeredBy": "keil0780"
+        },
+        {
+          "question": "Any experience in merging front/backend to database in containers into one?",
+          "askedBy": "greggblazer",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "keil0780",
+          "helpee": "greggblazer",
+          "context": "Dockerizing VoiceAI platform for local deployment with challenges around real-time voice, GPU access, and latency",
+          "resolution": "Advised separating services (inference, API, database, queue/worker) and containerizing gradually instead of monolithic approach"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Test and provide feedback on Centinel Risk Protocol Eliza plugin for DeFi agents on Base/Aave with real-time solvency scoring and flash-crash simulations",
-          "mentionedBy": "janabr8973"
+          "description": "Merge two working containers (frontend/backend and database) into single container for mass deployment",
+          "mentionedBy": "greggblazer"
         },
         {
-          "type": "Feature",
-          "description": "Focus exclusively on elizaOS development and create multiple utility token uses similar to ETH or SOL model",
-          "mentionedBy": "zadayos"
+          "type": "Technical",
+          "description": "Handle real-time voice dependencies, GPU access, networking, and persistent storage in containerized environment",
+          "mentionedBy": "keil0780"
         }
       ],
-      "messageCount": 22,
-      "userCount": 14
+      "messageCount": 4,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
@@ -72,17 +107,37 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 10
     },
-    "JanaBr": {
-      "id": "453351290068795424",
-      "username": "janabr8973",
+    "MrBL🔥ZE😎": {
+      "id": "528051778722463774",
+      "username": "greggblazer",
       "roles": [
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
+    },
+    "dEXploarer": {
+      "id": "458148462639316993",
+      "username": "dexploarer",
+      "roles": [
+        "Helper",
+        "Trader",
+        "King",
+        "elizaOS Tester",
+        "VIP",
+        "Contributor",
+        "NFT",
+        "Verified",
+        "merch - self assign",
+        "Poker",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor"
+      ],
+      "totalMessages": 3
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -112,58 +167,11 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 523
+      "totalMessages": 526
     },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "KittyAmiee": {
-      "id": "951750794686906388",
-      "username": "amieeee3",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "momrykelgnea1983": {
-      "id": "1300018423413211190",
-      "username": "momrykelgnea1983_90215",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
+    "rips": {
+      "id": "588474944858619925",
+      "username": "rip.s",
       "roles": [
         "Helper",
         "Trader",
@@ -174,61 +182,58 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 28
+      "totalMessages": 1
     },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
       "roles": [
-        "Moderator",
-        "Labs Alumni",
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 93
+    },
+    "Fox": {
+      "id": "1212460573107814412",
+      "username": "therealfox69",
+      "roles": [
+        "It",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 101
+      "totalMessages": 1
     },
-    "Alexei": {
-      "id": "648599269951143936",
-      "username": "alexeill",
+    "EL POTATO": {
+      "id": "1130854298398502952",
+      "username": "elpotato999",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "planZ": {
+      "id": "558978110541004801",
+      "username": "planz1015",
       "roles": [
         "Verified"
       ],
-      "totalMessages": 23
+      "totalMessages": 3
     },
-    "Mr. Ronnie  Ďebryne 🛠️": {
-      "id": "1481782207600394316",
-      "username": "stackvector",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "@Jack": {
-      "id": "1379116061751902219",
-      "username": "jack1000x_98528",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 8
-    },
-    "malik0063": {
-      "id": "1117690457502253146",
-      "username": "malik0063.",
+    "Bright 💫": {
+      "id": "1493147121669636218",
+      "username": "bright022655",
       "roles": [
         "Helper",
         "Trader",
@@ -243,45 +248,6 @@
         "eliza"
       ],
       "totalMessages": 1
-    },
-    "meme": {
-      "id": "1460715672379326829",
-      "username": "mine_7.7.7",
-      "roles": [
-        "Trader",
-        "Creator",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 45
-    },
-    "Quaser M": {
-      "id": "1281266285505810453",
-      "username": "waiser0165",
-      "roles": [
-        "agent dev school - self assign",
-        "Verified",
-        "Dev School Student",
-        "Announcements",
-        "Coder"
-      ],
-      "totalMessages": 19
     }
   }
 }

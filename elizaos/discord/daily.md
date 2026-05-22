@@ -1,50 +1,58 @@
-# elizaOS Discord - 2026-05-20
+# elizaOS Discord - 2026-05-21
 
 ## Summary
 
-### ElizaOS Technical Achievements
+### elizaOS Platform Development
 
-zadayos successfully booted ElizaOS Debian RISC-V 64-bit ISO on QEMU chip emulator in 35 seconds, demonstrating cross-architecture compatibility. shawmakesmagic confirmed that Eliza v3 is now running on elizaOS (Linux) on an emulated RISC-V chip called 'eliza e1', marking a major milestone in hardware abstraction. A question was raised about whether a physical Eliza E1 chip is being developed, but this remained unanswered.
+elizaOS v2.0 was recently released with a major architectural shift focusing on native-apps integration. This represents a significant milestone in the platform's evolution from previous versions. Community members are seeking information about the current state of the AI agent, including release status, usage patterns, and overall quality after several months of development.
 
-### Strategic Business Decisions
+### Community Onboarding and Learning Resources
 
-shawmakesmagic announced that the previously mentioned Babylon airdrop for elizaos holders will not proceed due to budget constraints. The team is now focusing exclusively on elizaOS development. zadayos strongly supported this strategic pivot, advocating for a single-token focus similar to ETH/SOL utility models, with ecosystem token creation left to the market.
+New and returning users are joining the elizaOS community seeking guidance on getting started with the platform. There is demand for live demonstrations and YouTube examples to help users understand platform capabilities and best practices. The discussion included social engagement with shared links to Twitter/X posts and spaces discussing agents and related content.
 
-### DeFi Plugin Development
+### Docker Containerization for VoiceAI Platform
 
-janabr8973 announced a new DeFi plugin for Eliza on Base/Aave, offering real-time solvency scoring and flash-crash simulations. The plugin is available via NPM package @centinel-risk-protocol/eliza-plugin-centinel and is seeking community testing and feedback.
+A technical discussion focused on dockerizing a VoiceAI white label agency platform for local deployment. The conversation addressed challenges of containerizing complex real-time voice applications, including GPU access requirements, networking configurations, persistent storage management, and latency stability across different deployment environments. The recommended approach involved separating services into distinct containers for inference, API, database, and queue/worker components rather than attempting monolithic containerization.
 
-### Token Clarifications
+### Service Architecture and Deployment Strategy
 
-odilitime confirmed that the Milady token buyback refers to the BNB version of the token.
+The discussion explored the trade-offs between multi-container and single-container deployment approaches. While a gradual separation of services into multiple containers was recommended for technical stability, there was interest in achieving single-container deployment to simplify mass deployment processes. The challenge of merging frontend, backend, and database containers into one unified container was identified as a key technical consideration.
 
 ## FAQ
 
-**Q: What is the Eliza e1 chip?**
-A: The Eliza e1 is an emulated RISC-V chip running on QEMU that successfully boots ElizaOS Debian RISC-V 64-bit ISO in 35 seconds. Eliza v3 is currently running on elizaOS (Linux) on this emulated chip.
+**Q: What is the current state of elizaOS and what was recently released?**
+A: elizaOS v2.0 was recently released with a major focus on native-apps integration, representing a significant architectural shift from previous versions.
 
-**Q: Will there be a Babylon airdrop for elizaos holders?**
-A: No, the Babylon airdrop will not happen due to budget constraints. The team is now focusing exclusively on elizaOS development.
+**Q: What are the main challenges in dockerizing a VoiceAI platform?**
+A: The key challenges include managing real-time voice dependencies, GPU access, networking configurations, persistent storage, and maintaining latency stability across different deployment environments.
 
-**Q: Which version of the Milady token is being bought back?**
-A: The BNB version of the Milady token is the one being bought back.
+**Q: What is the recommended approach for containerizing a complex VoiceAI application?**
+A: The recommended approach is to separate services into distinct containers for inference, API, database, and queue/worker components, and containerize gradually rather than attempting a monolithic migration all at once.
 
-**Q: What does the new Centinel DeFi plugin offer?**
-A: The plugin provides real-time solvency scoring and flash-crash simulations for Eliza on Base/Aave networks. It is available as an NPM package at @centinel-risk-protocol/eliza-plugin-centinel.
+**Q: Is it possible to deploy a VoiceAI platform in a single container?**
+A: While technically possible, merging frontend, backend, and database into one unified container presents significant challenges. A multi-container approach with separated services is generally more stable and maintainable.
 
-**Q: Is there a physical Eliza E1 chip being developed?**
-A: This question was raised but remains unanswered.
+**Q: Where can I find demonstrations or examples of elizaOS capabilities?**
+A: Community members have requested live demonstrations and YouTube examples, indicating these resources may be needed or in development.
 
 ## Help Interactions
 
-No direct help interactions were documented in the provided channel summaries.
+**Helper:** keil0780
+**Helpee:** greggblazer
+**Issue:** Dockerizing a VoiceAI white label agency platform for local deployment
+**Resolution:** keil0780 provided detailed technical guidance on containerization strategy, identifying key pain points including real-time voice dependencies, GPU access, networking, persistent storage, and latency stability. Recommended separating services into distinct containers for inference, API, database, and queue/worker components and containerizing gradually rather than attempting monolithic migration. greggblazer confirmed progress to two working containers.
 
 ## Action Items
 
 ### Technical
 
-- Test and provide feedback on the new DeFi plugin @centinel-risk-protocol/eliza-plugin-centinel (mentioned by janabr8973)
+- Separate VoiceAI platform services into distinct containers for inference, API, database, and queue/worker components (mentioned by keil0780)
+- Address GPU access requirements for containerized voice inference services (mentioned by keil0780)
+- Configure networking and persistent storage for multi-container deployment (mentioned by keil0780)
+- Resolve latency stability issues across different deployment environments (mentioned by keil0780)
+- Investigate feasibility of single-container deployment for mass deployment ease (mentioned by greggblazer)
 
-### Features
+### Documentation
 
-- Continue development focus on elizaOS following strategic pivot away from Babylon airdrop (mentioned by shawmakesmagic)
+- Create live demonstrations or YouTube examples showing elizaOS capabilities and best practices (requested by community members)
+- Develop onboarding materials for new users getting started with elizaOS (requested by community members)
