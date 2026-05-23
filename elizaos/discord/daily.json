@@ -1,143 +1,79 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-21",
-  "date": 1779321600,
+  "title": "elizaOS Discord - 2026-05-22",
+  "date": 1779408000,
   "stats": {
-    "totalMessages": 18,
-    "totalUsers": 11
+    "totalMessages": 8,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel featured a brief update on elizaOS development and community onboarding. The key technical announcement was that elizaOS v2.0 was recently released with a major focus on native-apps integration, representing a significant architectural shift from previous versions. A returning community member inquired about the current state of the AI agent after several months away, seeking information on release status, usage, and quality. Another member requested live demonstrations or YouTube examples to understand the platform's capabilities and best practices. A new user joined expressing interest in getting started with elizaOS. The conversation was relatively light with several social messages and shared links to Twitter/X posts and spaces discussing agents and related content. No deep technical discussions, implementation details, or problem-solving occurred during this segment.",
-      "faqs": [
-        {
-          "question": "Can anyone provide the latest on this ai agent, I have been away for a few months",
-          "askedBy": "planz1015",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "has it been released/ how do we use it/ is it any good",
-          "askedBy": "planz1015",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Are there any live or youtube examples to see to get an idea of what this can do and how best to use it?",
-          "askedBy": "greggblazer",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "planz1015",
-          "context": "User returning after months away seeking update on AI agent status and usage",
-          "resolution": "Informed that elizaOS v2.0 was just released with heavy focus on native-apps"
-        },
-        {
-          "helper": "bright022655",
-          "helpee": "planz1015",
-          "context": "User asking for latest information on the AI agent",
-          "resolution": "Offered to provide specific information based on user's needs"
-        }
-      ],
+      "summary": "The channel featured several community introductions and a major product launch. rsn6958 introduced themselves as an experienced Web3 developer offering support for blockchain development, smart contracts, Solidity, and dApp integrations. keil0780 introduced themselves as a full-stack and AI developer focused on AI integrations, workflow automation, SaaS platforms, backend systems, AI agents, dashboards, and productivity applications. The main technical highlight was shawmakesmagic's announcement of waifu.fun going live - an agentic launchpad built using elizaOS v3 agents. The platform was developed by an agent named Sol (The Architect) and is fully open source with code available on GitHub. waifu.fun represents a novel approach to agent-powered launchpads in the Web3 space. issaarts offered digital art and animation services to the community. The discussion was primarily introductory with the waifu.fun launch being the only concrete technical development shared.",
+      "faqs": [],
+      "helpInteractions": [],
       "actionItems": [
         {
-          "type": "Documentation",
-          "description": "Provide live or YouTube examples demonstrating elizaOS capabilities and best practices",
-          "mentionedBy": "greggblazer"
-        },
-        {
-          "type": "Documentation",
-          "description": "Create getting started guide for new users exploring elizaOS",
-          "mentionedBy": "rip.s"
+          "type": "Feature",
+          "description": "waifu.fun agentic launchpad launched - built with elizaOS v3 agents, open source platform for agent-powered launches",
+          "mentionedBy": "shawmakesmagic"
         }
       ],
-      "messageCount": 14,
-      "userCount": 10
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The channel discussion centered on dockerizing a VoiceAI white label agency platform for local deployment. greggblazer, a founder, sought advice on containerization challenges. keil0780 provided detailed technical guidance, identifying key pain points: real-time voice dependencies, GPU access, networking, persistent storage, and latency stability across environments. The recommended approach was to separate services (inference, API, database, queue/worker) and containerize gradually rather than attempting a monolithic migration. greggblazer confirmed progress to two working containers but expressed the goal of achieving single-container deployment for mass deployment ease. The conversation highlighted the challenge of merging frontend, backend, and database containers into one unified container. keil0780 later introduced themselves as a full-stack AI developer interested in AI integrations, workflow automation, SaaS platforms, backend systems, AI agents, and productivity applications.",
-      "faqs": [
-        {
-          "question": "Any advice on dockerizing a VoiceAI white label agency platform so it can go local?",
-          "askedBy": "greggblazer",
-          "answeredBy": "keil0780"
-        },
-        {
-          "question": "Any experience in merging front/backend to database in containers into one?",
-          "askedBy": "greggblazer",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "keil0780",
-          "helpee": "greggblazer",
-          "context": "Dockerizing VoiceAI platform for local deployment with challenges around real-time voice, GPU access, and latency",
-          "resolution": "Advised separating services (inference, API, database, queue/worker) and containerizing gradually instead of monolithic approach"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Merge two working containers (frontend/backend and database) into single container for mass deployment",
-          "mentionedBy": "greggblazer"
-        },
-        {
-          "type": "Technical",
-          "description": "Handle real-time voice dependencies, GPU access, networking, and persistent storage in containerized environment",
-          "mentionedBy": "keil0780"
-        }
-      ],
-      "messageCount": 4,
-      "userCount": 2
+      "messageCount": 7,
+      "userCount": 7
     }
   ],
   "nicknameMap": {
-    "handsome": {
-      "id": "397222760029618186",
-      "username": "keil0780",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "MrBL🔥ZE😎": {
-      "id": "528051778722463774",
-      "username": "greggblazer",
+    "JanaBr": {
+      "id": "453351290068795424",
+      "username": "janabr8973",
       "roles": [
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 2
     },
-    "dEXploarer": {
-      "id": "458148462639316993",
-      "username": "dexploarer",
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
       "roles": [
-        "Helper",
-        "Trader",
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 102
+    },
+    "shad0w": {
+      "id": "308276393450668032",
+      "username": "wakesync",
+      "roles": [
         "King",
-        "elizaOS Tester",
         "VIP",
         "Contributor",
-        "NFT",
         "Verified",
-        "merch - self assign",
-        "Poker",
+        "External Dev",
         "Core Dev",
         "Coder",
-        "Github - Contributor"
+        "Github - Contributor",
+        "Labs Alumni"
+      ]
+    },
+    "laboratorian": {
+      "id": "817312344097947648",
+      "username": "labotests",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer"
       ],
-      "totalMessages": 3
+      "totalMessages": 4
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -167,87 +103,57 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 526
+      "totalMessages": 527
     },
-    "rips": {
-      "id": "588474944858619925",
-      "username": "rip.s",
+    "handsome": {
+      "id": "397222760029618186",
+      "username": "keil0780",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 11
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
       "roles": [
-        "[WG] Want to Help",
         "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 93
-    },
-    "Fox": {
-      "id": "1212460573107814412",
-      "username": "therealfox69",
-      "roles": [
-        "It",
-        "Verified",
+        "Designer",
         "utility",
         "Coder",
         "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "EL POTATO": {
-      "id": "1130854298398502952",
-      "username": "elpotato999",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 1
-    },
-    "planZ": {
-      "id": "558978110541004801",
-      "username": "planz1015",
-      "roles": [
-        "Verified"
       ],
       "totalMessages": 3
     },
-    "Bright 💫": {
-      "id": "1493147121669636218",
-      "username": "bright022655",
+    "Daiki": {
+      "id": "710693640992981034",
+      "username": "daiki.9877",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
         "[WG] degenspartan",
         "It",
         "Verified",
-        "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
     }
   }
 }
