@@ -1,40 +1,42 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-22",
-  "categories": {
-    "title": "waifu.fun Launch and Community Introductions",
-    "content": [
-      {
-        "text": "The major highlight of the day was the official launch of waifu.fun, an open source agentic launchpad built by shad0w and Sol, powered by elizaOS v3 agents. The platform allows tokenized agents to launch and run on Eliza Cloud, with their applications generating revenue that can be shared with holders. The first agent on the platform is Sol, The Architect, who reportedly built waifu.fun itself. The source code is publicly available on GitHub at github.com/waifufun/waifu.fun, and Sol's profile can be found at github.com/0xSolace. The announcement was made by Shaw to the entire server community.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1507425674250555552_95c2bdfd.png",
-          "https://cdn.elizaos.news/elizaos-media/257989456-v-4-s-400_c38bab82.jpg",
-          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1507510461287890994_51249fb7.jpg"
-        ]
-      },
-      {
-        "text": "Several community members introduced themselves in the discussion channel. Ginga, a Web3 developer with experience in smart contracts, offered to help others with Solidity, dApp integrations, gas behavior issues, and testnet versus mainnet differences. Issa, a digital artist, offered design services including animations and banners and asked if the team needed an artist. A full stack and AI developer named handsome expressed interest in connecting with founders and developers, highlighting expertise in AI integrations, SaaS platforms, backend systems, APIs, AI agents, dashboards, and productivity tools. In the coders channel, JanaBr announced a newly published Eliza plugin for DeFi agents on Base and Aave, available on NPM under the package name centinel-risk-protocol/eliza-plugin-centinel, offering real-time solvency scoring and flash-crash simulations, and requested community feedback.",
-        "sources": [
-          "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "https://discord.com/channels/1253563208833433701/1300025221834739744"
-        ]
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1779408000,
-  "nicknameMap": {
-    "JanaBr": {
-      "id": "453351290068795424",
-      "username": "janabr8973",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
+  "title": "Daily Report - 2026-05-23",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion and Project Updates",
+      "content": [
+        {
+          "text": "Community members discussed where to purchase ElizaOS tokens, with Shaw confirming that the most liquidity is currently on BSC. Shaw also noted that the ai16z to ElizaOS migration is no longer available, as the team that managed that process has since moved on. Shaw shared a video showcasing ElizaOS during this exchange.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1507623629372784640/elizaOS.mp4?ex=6a133c2b&is=6a11eaab&hm=c59a9089e05f8b175af3b8488047fb4cdcafab36f734943d4bbfe46b73cc26ed&"
+          ]
+        },
+        {
+          "text": "A community member asked about the Babylon project after being unable to log in. Shaw explained that the project ran out of funding and was effectively shut down, with the team having moved on. Shaw noted that some elements of Babylon, specifically training simulations, have been repurposed and integrated into the new ElizaOS under the name Feed, though the full game was not carried over.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Other general community activity included a founder reaching out to learn how AI agent teams handle security when agents have wallet access, covering topics like spending caps and prompt injection. A senior engineer introduced themselves as a freelancer with experience in AI systems, Next.js, and RAG pipelines, expressing interest in connecting with other builders. A community member also asked about the roadmap for ElizaOS over the next few months, though no detailed response was captured in the discussion.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
       ],
-      "totalMessages": 2
-    },
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1779494400,
+  "nicknameMap": {
     "Shaw": {
       "id": "498273781589213185",
       "username": "shawmakesmagic",
@@ -46,34 +48,173 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 102
+      "totalMessages": 105
     },
-    "shad0w": {
-      "id": "308276393450668032",
-      "username": "wakesync",
+    "koH": {
+      "id": "332777441414348801",
+      "username": "kohx",
       "roles": [
-        "King",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "External Dev",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor",
-        "Labs Alumni"
-      ]
-    },
-    "laboratorian": {
-      "id": "817312344097947648",
-      "username": "labotests",
-      "roles": [
+        "a-hack",
         "Trader",
         "Creator",
         "Verified",
+        "Dev School Student",
         "Booster",
-        "Designer"
+        "Designer",
+        "Coder"
       ],
-      "totalMessages": 4
+      "totalMessages": 1
+    },
+    "₩/€": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 12
+    },
+    "marianodim": {
+      "id": "728793672241643530",
+      "username": "marianodim",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "handsome": {
+      "id": "397222760029618186",
+      "username": "keil0780",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 12
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 17
+    },
+    "BigCokes": {
+      "id": "1222145743247118366",
+      "username": "bigcokes",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 19
+    },
+    "かびごんぬ": {
+      "id": "1017448449773424711",
+      "username": "gonnu7052",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Lakexide_Crypto 🌕": {
+      "id": "1241711878720192573",
+      "username": "lakexidealpha",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "blublue": {
+      "id": "756845366346907678",
+      "username": "blublue3781",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 29
+    },
+    "BabyShark": {
+      "id": "348307312584294400",
+      "username": "babyshark0x",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 3
+    },
+    "MATTIOBOY 🇦🇺": {
+      "id": "647984767660457994",
+      "username": "mattioboy",
+      "roles": [
+        "NFT",
+        "Verified"
+      ],
+      "totalMessages": 13
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -104,56 +245,6 @@
         "Coder"
       ],
       "totalMessages": 527
-    },
-    "handsome": {
-      "id": "397222760029618186",
-      "username": "keil0780",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 11
-    },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Daiki": {
-      "id": "710693640992981034",
-      "username": "daiki.9877",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
     }
   }
 }
