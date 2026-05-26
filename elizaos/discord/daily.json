@@ -1,60 +1,174 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-24",
-  "date": 1779580800,
+  "title": "elizaOS Discord - 2026-05-25",
+  "date": 1779667200,
   "stats": {
-    "totalMessages": 5,
-    "totalUsers": 2
+    "totalMessages": 12,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on the announcement of Eliza's launch of the first economic agent launchpad called 'waifu'. satsbased shared that Sol the architect and an Eliza agent were the primary builders of this launchpad platform. The announcement was accompanied by a link to a Twitter/X post providing more details about the launch. This represents a significant milestone in economic agent infrastructure, combining AI agent capabilities with a launchpad mechanism for deployment.",
+      "summary": "This Discord chat segment contains primarily introductory messages and self-promotions rather than technical discussions. The only substantive technical interaction involves .maxlife encountering an error while manually launching on waifu and attempting to upload to flap. The error message indicates a 400 status with 'Operations and map are required' when using flap upload. The user mentioned retrying multiple times without success. No resolution or detailed troubleshooting was provided in this segment. The remaining messages consist of: rsn6958 introducing themselves as an AI and full stack developer with experience in RAG systems, workflow automation, and SaaS platforms; sindy.eth recruiting for an onchain game project seeking testers, moderators, and Solidity developers; itssowenn4462 presenting their background in AI/ML and full stack engineering with focus on autonomous systems, RAG pipelines, voice AI, and computer vision. Their tech stack includes React, Next.js, Node.js, Python, PostgreSQL, MongoDB, OpenAI, LangChain, and AWS services. Other messages were brief greetings or requests (dexploarer sharing a link, stackvector mentioning a proposal submission, .tutak greeting the channel, and .maxlife requesting an invite code). No architectural decisions, implementation details, or problem resolutions were discussed in depth during this segment.",
       "faqs": [
         {
-          "question": "What did Eliza launch?",
-          "askedBy": "Implicit",
-          "answeredBy": "satsbased"
+          "question": "Can I have an invite code to create my own?",
+          "askedBy": ".maxlife",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Economic agent launchpad 'waifu' launched by Eliza, built by Sol the architect and Eliza agent",
-          "mentionedBy": "satsbased"
+          "type": "Technical",
+          "description": "Debug flap upload error: 400 status with 'Operations and map are required' message when manually launching on waifu",
+          "mentionedBy": ".maxlife"
         }
       ],
-      "messageCount": 5,
-      "userCount": 2
+      "messageCount": 10,
+      "userCount": 7
     }
   ],
   "nicknameMap": {
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
+    "dEXploarer": {
+      "id": "458148462639316993",
+      "username": "dexploarer",
       "roles": [
+        "Helper",
+        "Trader",
         "King",
-        "Mini Mod",
+        "elizaOS Tester",
         "VIP",
         "Contributor",
+        "NFT",
         "Verified",
-        "utility"
+        "merch - self assign",
+        "Poker",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor"
       ],
-      "totalMessages": 180
+      "totalMessages": 5
     },
-    "GBLIN": {
-      "id": "1448243095396290590",
-      "username": "gblin_digital",
+    "Kolade Oluwaseun": {
+      "id": "1276124981331234818",
+      "username": "koladeoluwaseun2_65745",
       "roles": [
-        "It",
-        "Verified",
+        "Trader",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "itssowenn": {
+      "id": "412084303422291969",
+      "username": "itssowenn4462",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "KING DAZZY": {
+      "id": "1481782207600394316",
+      "username": "stackvector",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Boolean": {
+      "id": "1203350496816136234",
+      "username": "boolean_96",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Maxlife_FL": {
+      "id": "712313689709215775",
+      "username": ".maxlife",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 105
+    },
+    "tutak": {
+      "id": "966980410317869056",
+      "username": ".tutak",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Sindy": {
+      "id": "1186396318302732288",
+      "username": "sindy.eth",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 11
     }
   }
 }
