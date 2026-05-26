@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779760766425-kzozsv.jpg"
+          ]
         },
         {
           "text": "In the coders channel, a market update was shared covering Bitcoin, Solana, and XRP. Bitcoin was noted as consolidating around the 77,400 dollar range with strong dominance at a 1.45 trillion dollar market cap, with a notable headline involving Trump Media moving 2,650 BTC to Crypto.com. Solana was trading near 86.85 dollars, described as sensitive to macro sentiment but maintaining strong on-chain activity. XRP was hovering around 1.35 dollars with technical support at the 1.28 to 1.30 floor, driven by institutional accumulation and spot XRP ETF inflows, with traders watching for a push toward the 2.00 to 2.35 resistance range. The broader market tone was described as having deep liquidity anchored by stablecoins, with Tether at 184 billion and USDC at 79 billion, and whale rotation identified as the dominant theme of the week.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779760785960-fcv04e.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
