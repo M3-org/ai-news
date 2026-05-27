@@ -1,174 +1,122 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-25",
-  "date": 1779667200,
+  "title": "elizaOS Discord - 2026-05-26",
+  "date": 1779753600,
   "stats": {
-    "totalMessages": 12,
-    "totalUsers": 8
+    "totalMessages": 13,
+    "totalUsers": 5
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains primarily introductory messages and self-promotions rather than technical discussions. The only substantive technical interaction involves .maxlife encountering an error while manually launching on waifu and attempting to upload to flap. The error message indicates a 400 status with 'Operations and map are required' when using flap upload. The user mentioned retrying multiple times without success. No resolution or detailed troubleshooting was provided in this segment. The remaining messages consist of: rsn6958 introducing themselves as an AI and full stack developer with experience in RAG systems, workflow automation, and SaaS platforms; sindy.eth recruiting for an onchain game project seeking testers, moderators, and Solidity developers; itssowenn4462 presenting their background in AI/ML and full stack engineering with focus on autonomous systems, RAG pipelines, voice AI, and computer vision. Their tech stack includes React, Next.js, Node.js, Python, PostgreSQL, MongoDB, OpenAI, LangChain, and AWS services. Other messages were brief greetings or requests (dexploarer sharing a link, stackvector mentioning a proposal submission, .tutak greeting the channel, and .maxlife requesting an invite code). No architectural decisions, implementation details, or problem resolutions were discussed in depth during this segment.",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary substantive exchange involved aticmel asking about the status of Eliza, to which odilitime clarified that while the company (labs) is defunct, the open source project remains active. Aticmel mentioned returning to Linux after a break and noted inability to run JavaScript on their host system, indicating potential deployment constraints. A secondary concern raised was spam from bots attempting to create fake support ticket rooms, with aticmel requesting the development team address this security issue. Thomas.ken93 posted a portfolio link seeking collaboration or full-time employment opportunities. The chat also included brief mentions of Hermes (assumed to be a related tool or project) and commentary about influencers promoting development practices. Overall, this segment lacked deep technical problem-solving or implementation discussions, consisting mainly of status inquiries and community observations.",
       "faqs": [
         {
-          "question": "Can I have an invite code to create my own?",
-          "askedBy": ".maxlife",
-          "answeredBy": "Unanswered"
+          "question": "What's the status of Eliza - is it gone or still alive?",
+          "askedBy": "aticmel",
+          "answeredBy": "odilitime"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "aticmel",
+          "context": "Uncertainty about whether Eliza project was still operational",
+          "resolution": "Clarified that the labs company is dead but the open source project continues"
+        }
+      ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Debug flap upload error: 400 status with 'Operations and map are required' message when manually launching on waifu",
-          "mentionedBy": ".maxlife"
+          "description": "Develop anti-spam system to combat bots creating fake support ticket invitation rooms",
+          "mentionedBy": "aticmel"
         }
       ],
-      "messageCount": 10,
-      "userCount": 7
+      "messageCount": 13,
+      "userCount": 5
     }
   ],
   "nicknameMap": {
-    "dEXploarer": {
-      "id": "458148462639316993",
-      "username": "dexploarer",
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
       "roles": [
-        "Helper",
+        "auto.fun enjoyer",
         "Trader",
         "King",
-        "elizaOS Tester",
+        "[WG] degenspartan",
         "VIP",
-        "Contributor",
-        "NFT",
         "Verified",
-        "merch - self assign",
-        "Poker",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor"
+        "Booster",
+        "Designer",
+        "Coder"
       ],
-      "totalMessages": 5
+      "totalMessages": 20
     },
-    "Kolade Oluwaseun": {
-      "id": "1276124981331234818",
-      "username": "koladeoluwaseun2_65745",
+    "Talented_Alien": {
+      "id": "1271347673437438045",
+      "username": "talented_alien",
       "roles": [
         "Trader",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "itssowenn": {
-      "id": "412084303422291969",
-      "username": "itssowenn4462",
+    "attic mel": {
+      "id": "350903534226505728",
+      "username": "aticmel",
       "roles": [
-        "Helper",
         "Trader",
+        "Verified",
+        "Coder",
+        "Dev School Student"
+      ],
+      "totalMessages": 9
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
         "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "KING DAZZY": {
-      "id": "1481782207600394316",
-      "username": "stackvector",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Boolean": {
-      "id": "1203350496816136234",
-      "username": "boolean_96",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "Maxlife_FL": {
-      "id": "712313689709215775",
-      "username": ".maxlife",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
         "Moderator",
-        "Labs Alumni",
+        "[WG] degenspartan",
+        "pmairca - self assign",
         "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 105
-    },
-    "tutak": {
-      "id": "966980410317869056",
-      "username": ".tutak",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Verified",
-        "Dev School Student",
         "Booster",
-        "Designer",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
         "Coder"
       ],
-      "totalMessages": 2
+      "totalMessages": 528
     },
-    "Sindy": {
-      "id": "1186396318302732288",
-      "username": "sindy.eth",
+    "! 𝕿𝖍𝖔𝖒𝖆𝖘 𝕶𝖊𝖓": {
+      "id": "317970896935452672",
+      "username": "thomas.ken93",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
-        "It",
         "Verified",
-        "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 11
+      "totalMessages": 2
     }
   }
 }

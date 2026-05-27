@@ -1,39 +1,48 @@
-# elizaOS Discord - 2026-05-25
+# elizaOS Discord - 2026-05-26
 
 ## Summary
 
-### Technical Issues
+### Project Status and Continuity
 
-.maxlife encountered a 400 status error when attempting to upload to flap after manually launching on waifu. The error message indicated 'Operations and map are required' when using the flap upload command. Multiple retry attempts were unsuccessful, and no resolution was provided during the discussion.
+The Eliza open source project remains active despite the company (labs) being defunct. This clarification was provided by odilitime in response to questions about the project's current state. The distinction between the commercial entity and the open source initiative is important for community members evaluating continued involvement.
 
-### Community Introductions
+### Technical Environment and Deployment Constraints
 
-Several developers introduced themselves and their technical backgrounds. rsn6958 presented themselves as an AI and full stack developer with experience in RAG systems, workflow automation, and SaaS platforms. itssowenn4462 shared their expertise in AI/ML and full stack engineering, focusing on autonomous systems, RAG pipelines, voice AI, and computer vision, with a tech stack including React, Next.js, Node.js, Python, PostgreSQL, MongoDB, OpenAI, LangChain, and AWS services.
+Aticmel reported returning to Linux after a break and noted an inability to run JavaScript on their host system. This indicates potential deployment or development environment constraints that may affect participation in the project.
 
-### Recruitment and Collaboration
+### Security and Spam Issues
 
-sindy.eth announced recruitment efforts for an onchain game project, seeking testers, moderators, and Solidity developers. stackvector mentioned submitting a proposal, though no details were provided about the proposal content.
+Bot spam attempting to create fake support ticket rooms was identified as an ongoing problem. This security concern requires attention from the development team to protect community members from fraudulent support channels.
+
+### Employment and Collaboration Opportunities
+
+Thomas.ken93 shared a portfolio link seeking collaboration opportunities or full-time employment, indicating community members are looking for professional engagement related to the project ecosystem.
 
 ## FAQ
 
-**Q: What error occurs when uploading to flap after manually launching on waifu?**
-A: A 400 status error with the message 'Operations and map are required' appears when using the flap upload command.
+**Q: Is the Eliza project still active?**
+A: Yes, the open source project remains active. While the company (labs) is defunct, the open source initiative continues.
 
-**Q: What technical skills does itssowenn4462 offer?**
-A: AI/ML and full stack engineering with focus on autonomous systems, RAG pipelines, voice AI, and computer vision. Their tech stack includes React, Next.js, Node.js, Python, PostgreSQL, MongoDB, OpenAI, LangChain, and AWS services.
-
-**Q: What positions are available for the onchain game project?**
-A: The project is seeking testers, moderators, and Solidity developers.
+**Q: What security issues are affecting the Discord server?**
+A: Bots are attempting to create fake support ticket rooms, which represents a spam and security concern for community members.
 
 ## Help Interactions
 
-**Issue:** .maxlife experienced a 400 status error with 'Operations and map are required' message when attempting to upload to flap after manually launching on waifu.
-**Helper:** None
-**Resolution:** Unresolved - multiple retry attempts failed with no solution provided.
+**Helper:** odilitime  
+**Helpee:** aticmel  
+**Resolution:** Clarified that while the company (labs) is defunct, the Eliza open source project remains active.
 
 ## Action Items
 
 ### Technical
 
-- Investigate and resolve the flap upload 400 error related to 'Operations and map are required' (reported by .maxlife)
-- Provide .maxlife with an invite code as requested (mentioned by .maxlife)
+- Address bot spam creating fake support ticket rooms (mentioned by aticmel)
+- Investigate JavaScript runtime limitations on Linux host systems (mentioned by aticmel)
+
+### Features
+
+None identified.
+
+### Documentation
+
+None identified.

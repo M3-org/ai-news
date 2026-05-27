@@ -1,176 +1,111 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-25",
+  "title": "Daily Report - 2026-05-26",
   "categories": [
     {
-      "title": "Discord Community Activity - May 25, 2026",
+      "title": "ElizaOS Community Discussion - May 26, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, two developers introduced themselves and their services. One full stack and AI developer highlighted experience in AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications, emphasizing secure and scalable production systems. A second AI/ML and full stack engineer outlined work in autonomous multi-agent systems, RAG pipelines, voice AI, workflow automation, and computer vision, with a tech stack spanning React, Next.js, Node.js, Python, PostgreSQL, AWS, and various LLM frameworks. A separate post advertised open roles for an onchain game project seeking testers, moderators, and Solidity developers on a remote and flexible basis. A technical issue was reported involving a file upload error on the Waifu platform, with the error message indicating missing operations and map fields during a flap upload attempt. A user also shared a post on social media calling out a crypto and AI commentator for being behind on key developments in the space. Additionally, a proposal was sent between community members regarding a previously discussed matter.",
+          "text": "In the general discussion channel, a developer named Thomas Ken posted seeking collaboration opportunities or full-time hiring, sharing their portfolio link. Separately, a user named attic mel returned to the community after a break, asking about the status of the Eliza project. Odilitime, a core developer and moderator, clarified that the labs company is no longer operating but the open source project remains active. Attic mel also noted they had switched back to Linux and could not run JavaScript on their host, suggesting they might revisit the project in about four months. Attic mel additionally flagged a spam issue involving bots inviting users to fake support ticket rooms and requested that moderators develop countermeasures. A separate post from MDMnvest shared a link to an ElizaOS ecosystem fund announcement promoting a predictions game for ElizaOS token holders, described as offering utility for the community.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1779760766425-kzozsv.jpg"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a market update was shared covering Bitcoin, Solana, and XRP. Bitcoin was noted as consolidating around the 77,400 dollar range with strong dominance at a 1.45 trillion dollar market cap, with a notable headline involving Trump Media moving 2,650 BTC to Crypto.com. Solana was trading near 86.85 dollars, described as sensitive to macro sentiment but maintaining strong on-chain activity. XRP was hovering around 1.35 dollars with technical support at the 1.28 to 1.30 floor, driven by institutional accumulation and spot XRP ETF inflows, with traders watching for a push toward the 2.00 to 2.35 resistance range. The broader market tone was described as having deep liquidity anchored by stablecoins, with Tether at 184 billion and USDC at 79 billion, and whale rotation identified as the dominant theme of the week.",
+          "text": "The coders channel had no messages or activity recorded for this date.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1779760785960-fcv04e.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1779667200,
+  "date": 1779753600,
   "nicknameMap": {
-    "dEXploarer": {
-      "id": "458148462639316993",
-      "username": "dexploarer",
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
       "roles": [
-        "Helper",
+        "auto.fun enjoyer",
         "Trader",
         "King",
-        "elizaOS Tester",
+        "[WG] degenspartan",
         "VIP",
-        "Contributor",
-        "NFT",
         "Verified",
-        "merch - self assign",
-        "Poker",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor"
+        "Booster",
+        "Designer",
+        "Coder"
       ],
-      "totalMessages": 5
+      "totalMessages": 20
     },
-    "Kolade Oluwaseun": {
-      "id": "1276124981331234818",
-      "username": "koladeoluwaseun2_65745",
+    "Talented_Alien": {
+      "id": "1271347673437438045",
+      "username": "talented_alien",
       "roles": [
         "Trader",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "itssowenn": {
-      "id": "412084303422291969",
-      "username": "itssowenn4462",
+    "attic mel": {
+      "id": "350903534226505728",
+      "username": "aticmel",
       "roles": [
-        "Helper",
         "Trader",
+        "Verified",
+        "Coder",
+        "Dev School Student"
+      ],
+      "totalMessages": 9
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
         "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "KING DAZZY": {
-      "id": "1481782207600394316",
-      "username": "stackvector",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Boolean": {
-      "id": "1203350496816136234",
-      "username": "boolean_96",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "Maxlife_FL": {
-      "id": "712313689709215775",
-      "username": ".maxlife",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
         "Moderator",
-        "Labs Alumni",
+        "[WG] degenspartan",
+        "pmairca - self assign",
         "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 105
-    },
-    "tutak": {
-      "id": "966980410317869056",
-      "username": ".tutak",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Verified",
-        "Dev School Student",
         "Booster",
-        "Designer",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
         "Coder"
       ],
-      "totalMessages": 2
+      "totalMessages": 528
     },
-    "Sindy": {
-      "id": "1186396318302732288",
-      "username": "sindy.eth",
+    "! 𝕿𝖍𝖔𝖒𝖆𝖘 𝕶𝖊𝖓": {
+      "id": "317970896935452672",
+      "username": "thomas.ken93",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
-        "It",
         "Verified",
-        "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 11
+      "totalMessages": 2
     }
   }
 }

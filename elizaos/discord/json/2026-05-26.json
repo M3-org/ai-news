@@ -1,0 +1,122 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-26",
+  "date": 1779753600,
+  "stats": {
+    "totalMessages": 13,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary substantive exchange involved aticmel asking about the status of Eliza, to which odilitime clarified that while the company (labs) is defunct, the open source project remains active. Aticmel mentioned returning to Linux after a break and noted inability to run JavaScript on their host system, indicating potential deployment constraints. A secondary concern raised was spam from bots attempting to create fake support ticket rooms, with aticmel requesting the development team address this security issue. Thomas.ken93 posted a portfolio link seeking collaboration or full-time employment opportunities. The chat also included brief mentions of Hermes (assumed to be a related tool or project) and commentary about influencers promoting development practices. Overall, this segment lacked deep technical problem-solving or implementation discussions, consisting mainly of status inquiries and community observations.",
+      "faqs": [
+        {
+          "question": "What's the status of Eliza - is it gone or still alive?",
+          "askedBy": "aticmel",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "aticmel",
+          "context": "Uncertainty about whether Eliza project was still operational",
+          "resolution": "Clarified that the labs company is dead but the open source project continues"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Develop anti-spam system to combat bots creating fake support ticket invitation rooms",
+          "mentionedBy": "aticmel"
+        }
+      ],
+      "messageCount": 13,
+      "userCount": 5
+    }
+  ],
+  "nicknameMap": {
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 20
+    },
+    "Talented_Alien": {
+      "id": "1271347673437438045",
+      "username": "talented_alien",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "attic mel": {
+      "id": "350903534226505728",
+      "username": "aticmel",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Coder",
+        "Dev School Student"
+      ],
+      "totalMessages": 9
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 528
+    },
+    "! 𝕿𝖍𝖔𝖒𝖆𝖘 𝕶𝖊𝖓": {
+      "id": "317970896935452672",
+      "username": "thomas.ken93",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    }
+  }
+}
