@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779847637221-ev9jzv.jpg"
+          ]
         },
         {
           "text": "The coders channel had no messages or activity recorded for this date.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779847657412-gpl3um.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
