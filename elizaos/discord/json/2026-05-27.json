@@ -1,0 +1,87 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-27",
+  "date": 1779840000,
+  "stats": {
+    "totalMessages": 5,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains three self-introductory messages from developers rather than technical discussions. rsn6958 introduced themselves as an AI and full stack developer with experience in AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications, emphasizing practical business solutions over hype. magicyte shared a Twitter/X link without context. anton_0413 announced completion of 'Resilience Bridge,' a predictive platform for a client in Australia that detects early financial and wellbeing stress and provides actionable plans through an AI Coach. The project took 3 months to develop, focusing on building a predictive engine and AI coaching functionality. anton_0413 is currently in handover phase and seeking new opportunities. No technical discussions, problem-solving, or collaborative interactions occurred in this segment - it consists entirely of professional introductions and project announcements.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
+    }
+  ],
+  "nicknameMap": {
+    "waily": {
+      "id": "401193241967460362",
+      "username": "anton_0413",
+      "roles": [
+        "Helper",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 94
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 12
+    },
+    "Xpes": {
+      "id": "1218488218702446692",
+      "username": "xpes2273",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "ZENITHXXS.": {
+      "id": "1474337688273424395",
+      "username": "zenithxxs",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    }
+  }
+}
