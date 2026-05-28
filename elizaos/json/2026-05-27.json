@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779933051606-ffjxga.jpg"
+          ]
         },
         {
           "text": "In the coders channel, Xpes shared observations from experimenting with AgentKey MCP inside an OpenClaw setup while testing an AI workflow project. He noted that the integration allowed an AI agent to pull live Twitter and Reddit discussions for sentiment analysis and trend monitoring in real time, rather than relying on static summaries. The agent was able to compare real-time community narratives around topics and tokens, making outputs more dynamic. Xpes also explored autonomous research workflows and live search tasks using the tooling. He mentioned encountering some Windows-specific setup challenges but found the integration smoother than expected once configured. He noted that the MCP tooling space is becoming increasingly interesting and that testing of different workflows is ongoing.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1779933079992-dc5zta.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
