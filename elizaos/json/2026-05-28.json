@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780020035735-347l6k.jpg"
+          ]
         },
         {
           "text": "In the coders channel, several notable posts appeared. Lefttoorz shared information about the Mantle Network Turing Test Hackathon, described as the first onchain benchmark for agentic AI at scale. The event features a $100K prize pool across six tracks including AI Trading and Strategy, AI Alpha and Data, AI and RWA, Consumer and Viral DApps, AI DevTools, and Agentic Wallets and Economy. Submissions are open from May 1 through June 15, 2026. Additionally, multiple users posted what appear to be solicitation or self-promotion messages, including a job listing for a project called Sunflower Polygon seeking beta testers, moderators, and developers, a freelance developer advertising full-stack and AI development services covering technologies such as Next.js, React, LangChain, and various blockchain integrations, and a small development team seeking a communication support person for international client work on a profit-based pay arrangement.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780020068130-ax78e9.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
