@@ -1,0 +1,100 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-28",
+  "date": 1779926400,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord channel segment contains no substantive technical discussions, problem-solving, or development conversations. The entire transcript consists of four promotional/recruitment posts with no interaction between users. lefttoorz announced Mantle Network's Turing Test Hackathon featuring a $100K prize pool across six AI-focused tracks including AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets, with submissions open from May 1 to June 15, 2026. j00hn_sm1th posted a recruitment notice for the Sunflower Polygon Team seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable pay for blockchain work involving smart contracts and Solidity. harry346165 shared a detailed portfolio listing full-stack and AI capabilities including Next.js 15, React 19, TypeScript, various ORMs, cloud platforms, AI frameworks like LangChain, LangGraph, CrewAI, AutoGen, multiple LLM models, RAG implementations, and vector databases. fixer1123 posted seeking communication support for international client coordination with light hours and profit-based compensation. No technical questions were asked, no problems were solved, no code was shared, and no community members engaged with each other's posts. The channel activity was purely informational announcements without any collaborative technical discourse or knowledge exchange.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 4,
+      "userCount": 4
+    }
+  ],
+  "nicknameMap": {
+    "lefttoorz": {
+      "id": "1083587805646684230",
+      "username": "lefttoorz",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 529
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Harry38485": {
+      "id": "448849666235301899",
+      "username": "harry346165",
+      "roles": [
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "BnbGuru": {
+      "id": "944880809934991430",
+      "username": "j00hn_sm1th",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

@@ -1,37 +1,31 @@
-# elizaOS Discord - 2026-05-27
+# elizaOS Discord - 2026-05-28
 
 ## Summary
 
-### Developer Introductions
+### Hackathon Announcements
 
-Three developers introduced themselves in the discussion channel. rsn6958 presented their background as an AI and full stack developer with expertise in AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications, emphasizing a focus on practical business solutions. anton_0413 announced completion of a 3-month project called Resilience Bridge, a predictive platform for an Australian client that detects early financial and wellbeing stress signals and provides actionable plans through an AI Coach. The developer is currently in the handover phase and seeking new opportunities.
+Mantle Network announced the Turing Test Hackathon with a $100K prize pool running from May 1 to June 15, 2026. The hackathon features six AI-focused tracks: AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets.
 
-### Project Announcements
+### Recruitment and Job Opportunities
 
-magicyte shared a Twitter/X link without additional context. anton_0413 provided details about Resilience Bridge, highlighting the development of a predictive engine and AI coaching functionality designed to help users address financial and wellbeing challenges proactively.
+Multiple recruitment posts were shared in the channel. The Sunflower Polygon Team is seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable compensation for blockchain work involving smart contracts and Solidity. A separate post sought communication support for international client coordination with profit-based compensation.
+
+### Developer Portfolios
+
+A developer shared their comprehensive technical portfolio showcasing full-stack and AI capabilities including Next.js 15, React 19, TypeScript, various ORMs, cloud platforms (AWS, Azure, GCP), AI frameworks (LangChain, LangGraph, CrewAI, AutoGen), multiple LLM models, RAG implementations, and vector databases.
 
 ## FAQ
 
-**Q: What is Resilience Bridge?**
-A: Resilience Bridge is a predictive platform that detects early financial and wellbeing stress signals and provides actionable plans through an AI Coach. It was developed over 3 months for a client in Australia.
+**Q: What is the Mantle Network Turing Test Hackathon?**
+A: It is a hackathon with a $100K prize pool featuring six AI-focused tracks including AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets. Submissions are open from May 1 to June 15, 2026.
 
-**Q: What technologies does rsn6958 specialize in?**
-A: rsn6958 specializes in AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications, with a focus on practical business solutions.
+**Q: What positions is the Sunflower Polygon Team hiring for?**
+A: They are seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable pay for blockchain work involving smart contracts and Solidity.
 
 ## Help Interactions
 
-No help interactions occurred in this discussion segment. The messages consisted entirely of self-introductions and project announcements without collaborative problem-solving.
+No help interactions occurred in the channel during this period. All posts were announcements or recruitment notices with no community engagement or problem-solving discussions.
 
 ## Action Items
 
-### Technical
-
-None identified.
-
-### Features
-
-None identified.
-
-### Documentation
-
-None identified.
+No action items were identified in the discussions.

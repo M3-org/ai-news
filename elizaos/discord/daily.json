@@ -1,29 +1,76 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-27",
-  "date": 1779840000,
+  "title": "elizaOS Discord - 2026-05-28",
+  "date": 1779926400,
   "stats": {
-    "totalMessages": 5,
+    "totalMessages": 6,
     "totalUsers": 5
   },
   "categories": [
     {
-      "channelId": "1253563209462448241",
-      "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains three self-introductory messages from developers rather than technical discussions. rsn6958 introduced themselves as an AI and full stack developer with experience in AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications, emphasizing practical business solutions over hype. magicyte shared a Twitter/X link without context. anton_0413 announced completion of 'Resilience Bridge,' a predictive platform for a client in Australia that detects early financial and wellbeing stress and provides actionable plans through an AI Coach. The project took 3 months to develop, focusing on building a predictive engine and AI coaching functionality. anton_0413 is currently in handover phase and seeking new opportunities. No technical discussions, problem-solving, or collaborative interactions occurred in this segment - it consists entirely of professional introductions and project announcements.",
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord channel segment contains no substantive technical discussions, problem-solving, or development conversations. The entire transcript consists of four promotional/recruitment posts with no interaction between users. lefttoorz announced Mantle Network's Turing Test Hackathon featuring a $100K prize pool across six AI-focused tracks including AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets, with submissions open from May 1 to June 15, 2026. j00hn_sm1th posted a recruitment notice for the Sunflower Polygon Team seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable pay for blockchain work involving smart contracts and Solidity. harry346165 shared a detailed portfolio listing full-stack and AI capabilities including Next.js 15, React 19, TypeScript, various ORMs, cloud platforms, AI frameworks like LangChain, LangGraph, CrewAI, AutoGen, multiple LLM models, RAG implementations, and vector databases. fixer1123 posted seeking communication support for international client coordination with light hours and profit-based compensation. No technical questions were asked, no problems were solved, no code was shared, and no community members engaged with each other's posts. The channel activity was purely informational announcements without any collaborative technical discourse or knowledge exchange.",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "messageCount": 4,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "waily": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "lefttoorz": {
+      "id": "1083587805646684230",
+      "username": "lefttoorz",
       "roles": [
         "Helper",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 529
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
         "Verified",
         "Designer",
         "utility",
@@ -32,56 +79,22 @@
       ],
       "totalMessages": 1
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "Harry38485": {
+      "id": "448849666235301899",
+      "username": "harry346165",
       "roles": [
-        "[WG] Want to Help",
-        "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 94
+      "totalMessages": 5
     },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "BnbGuru": {
+      "id": "944880809934991430",
+      "username": "j00hn_sm1th",
       "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
+        "Verified"
       ],
-      "totalMessages": 12
-    },
-    "Xpes": {
-      "id": "1218488218702446692",
-      "username": "xpes2273",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "ZENITHXXS.": {
-      "id": "1474337688273424395",
-      "username": "zenithxxs",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
+      "totalMessages": 1
     }
   }
 }
