@@ -1,40 +1,37 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-28",
-  "date": 1779926400,
+  "title": "elizaOS Discord - 2026-05-29",
+  "date": 1780012800,
   "stats": {
     "totalMessages": 6,
     "totalUsers": 5
   },
   "categories": [
     {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord channel segment contains no substantive technical discussions, problem-solving, or development conversations. The entire transcript consists of four promotional/recruitment posts with no interaction between users. lefttoorz announced Mantle Network's Turing Test Hackathon featuring a $100K prize pool across six AI-focused tracks including AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets, with submissions open from May 1 to June 15, 2026. j00hn_sm1th posted a recruitment notice for the Sunflower Polygon Team seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable pay for blockchain work involving smart contracts and Solidity. harry346165 shared a detailed portfolio listing full-stack and AI capabilities including Next.js 15, React 19, TypeScript, various ORMs, cloud platforms, AI frameworks like LangChain, LangGraph, CrewAI, AutoGen, multiple LLM models, RAG implementations, and vector databases. fixer1123 posted seeking communication support for international client coordination with light hours and profit-based compensation. No technical questions were asked, no problems were solved, no code was shared, and no community members engaged with each other's posts. The channel activity was purely informational announcements without any collaborative technical discourse or knowledge exchange.",
-      "faqs": [],
-      "helpInteractions": [],
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The Discord channel shows minimal technical discussion. The primary activity involves a partnership inquiry from chistormze representing SKALE Labs seeking contact information. A user doc022597 inquired about manual migration assistance for pre-snapshot holdings from August 2025, having missed the February 4th portal deadline. The moderator odilitime clarified that manual migration is no longer available as the migration period has closed. Additionally, sjknxksjanksa posted a detailed 0DTE (zero days to expiration) options trading analysis covering put and call wall dynamics at various price levels (730-755 range), outlining specific trading strategies including long bias above 741 targeting 745-747, defensive positioning around 734-735, and recommending avoidance of the 735-740 no-trade zone. The analysis emphasized dealer hedging behavior and structural support levels. One user fifogarihafilag mentioned an NFT drop without elaboration. Overall, the segment lacks substantive technical development discussions or collaborative problem-solving beyond the migration status clarification.",
+      "faqs": [
+        {
+          "question": "Which moderator can I DM or ping for manual migration help if even still available for pre-snapshot holders who missed the Feb 4th portal?",
+          "askedBy": "doc022597",
+          "answeredBy": "odilitime - Manual migration is not available, the migration is closed"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "doc022597",
+          "context": "User missed February 4th migration portal and sought manual migration assistance for pre-snapshot holdings from August 2025",
+          "resolution": "Clarified that manual migration is no longer available and the migration period has closed"
+        }
+      ],
       "actionItems": [],
-      "messageCount": 4,
-      "userCount": 4
+      "messageCount": 6,
+      "userCount": 5
     }
   ],
   "nicknameMap": {
-    "lefttoorz": {
-      "id": "1083587805646684230",
-      "username": "lefttoorz",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -63,36 +60,65 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 529
+      "totalMessages": 530
     },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
+    "Doc": {
+      "id": "540701983196315659",
+      "username": "doc022597",
       "roles": [
         "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "THE UNDERRATED MAJ": {
+      "id": "1436635588387409991",
+      "username": "sjknxksjanksa",
+      "roles": [
+        "Helper",
+        "Trader",
         "Creator",
+        "[WG] degenspartan",
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 14
     },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 94
     },
-    "BnbGuru": {
-      "id": "944880809934991430",
-      "username": "j00hn_sm1th",
+    "Chistormze | SKALE": {
+      "id": "936772852156358696",
+      "username": "chistormze",
       "roles": [
-        "Verified"
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     }

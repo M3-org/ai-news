@@ -1,0 +1,126 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-05-29",
+  "date": 1780012800,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The Discord channel shows minimal technical discussion. The primary activity involves a partnership inquiry from chistormze representing SKALE Labs seeking contact information. A user doc022597 inquired about manual migration assistance for pre-snapshot holdings from August 2025, having missed the February 4th portal deadline. The moderator odilitime clarified that manual migration is no longer available as the migration period has closed. Additionally, sjknxksjanksa posted a detailed 0DTE (zero days to expiration) options trading analysis covering put and call wall dynamics at various price levels (730-755 range), outlining specific trading strategies including long bias above 741 targeting 745-747, defensive positioning around 734-735, and recommending avoidance of the 735-740 no-trade zone. The analysis emphasized dealer hedging behavior and structural support levels. One user fifogarihafilag mentioned an NFT drop without elaboration. Overall, the segment lacks substantive technical development discussions or collaborative problem-solving beyond the migration status clarification.",
+      "faqs": [
+        {
+          "question": "Which moderator can I DM or ping for manual migration help if even still available for pre-snapshot holders who missed the Feb 4th portal?",
+          "askedBy": "doc022597",
+          "answeredBy": "odilitime - Manual migration is not available, the migration is closed"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "doc022597",
+          "context": "User missed February 4th migration portal and sought manual migration assistance for pre-snapshot holdings from August 2025",
+          "resolution": "Clarified that manual migration is no longer available and the migration period has closed"
+        }
+      ],
+      "actionItems": [],
+      "messageCount": 6,
+      "userCount": 5
+    }
+  ],
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 530
+    },
+    "Doc": {
+      "id": "540701983196315659",
+      "username": "doc022597",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "THE UNDERRATED MAJ": {
+      "id": "1436635588387409991",
+      "username": "sjknxksjanksa",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 14
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 94
+    },
+    "Chistormze | SKALE": {
+      "id": "936772852156358696",
+      "username": "chistormze",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

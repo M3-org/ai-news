@@ -1,31 +1,48 @@
-# elizaOS Discord - 2026-05-28
+# elizaOS Discord - 2026-05-29
 
 ## Summary
 
-### Hackathon Announcements
+### Partnership and Business Development
 
-Mantle Network announced the Turing Test Hackathon with a $100K prize pool running from May 1 to June 15, 2026. The hackathon features six AI-focused tracks: AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets.
+SKALE Labs representative chistormze reached out seeking partnership contact information for collaboration opportunities with the elizaOS project.
 
-### Recruitment and Job Opportunities
+### Token Migration
 
-Multiple recruitment posts were shared in the channel. The Sunflower Polygon Team is seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable compensation for blockchain work involving smart contracts and Solidity. A separate post sought communication support for international client coordination with profit-based compensation.
+A user inquired about manual migration options for pre-snapshot holdings from August 2025 after missing the February 4th deadline. The moderator confirmed that the migration period has officially closed and manual migrations are no longer available.
 
-### Developer Portfolios
+### Trading Analysis
 
-A developer shared their comprehensive technical portfolio showcasing full-stack and AI capabilities including Next.js 15, React 19, TypeScript, various ORMs, cloud platforms (AWS, Azure, GCP), AI frameworks (LangChain, LangGraph, CrewAI, AutoGen), multiple LLM models, RAG implementations, and vector databases.
+Detailed 0DTE options trading analysis was shared covering put and call wall dynamics in the 730-755 price range, including specific trading strategies based on dealer hedging behavior and structural support levels.
+
+### NFT Activities
+
+Brief mention of an NFT drop without additional context or details provided.
 
 ## FAQ
 
-**Q: What is the Mantle Network Turing Test Hackathon?**
-A: It is a hackathon with a $100K prize pool featuring six AI-focused tracks including AI Trading, AI Alpha & Data, AI × RWA, Consumer DApps, AI DevTools, and Agentic Wallets. Submissions are open from May 1 to June 15, 2026.
+**Q: Can I still manually migrate my pre-snapshot holdings from August 2025 if I missed the February 4th portal deadline?**
+A: No, manual migration is no longer available as the migration period has closed.
 
-**Q: What positions is the Sunflower Polygon Team hiring for?**
-A: They are seeking beta testers at $35/hour, moderators at $450/week, and developers with negotiable pay for blockchain work involving smart contracts and Solidity.
+**Q: What are the key trading levels for 0DTE options strategies?**
+A: Long bias above 741 targeting 745-747, defensive positioning around 734-735, and avoidance of the 735-740 no-trade zone due to dealer hedging dynamics.
 
 ## Help Interactions
 
-No help interactions occurred in the channel during this period. All posts were announcements or recruitment notices with no community engagement or problem-solving discussions.
+**Helper:** odilitime
+**Helpee:** doc022597
+**Issue:** Request for manual migration assistance for pre-snapshot holdings from August 2025 after missing the February 4th deadline
+**Resolution:** Clarified that manual migration is no longer available as the migration period has closed
 
 ## Action Items
 
-No action items were identified in the discussions.
+### Technical
+
+None identified.
+
+### Features
+
+None identified.
+
+### Documentation
+
+None identified.

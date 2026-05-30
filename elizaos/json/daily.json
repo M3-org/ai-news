@@ -1,54 +1,26 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-28",
+  "title": "Daily Report - 2026-05-29",
   "categories": [
     {
-      "title": "ElizaOS Community Discord Activity - May 28, 2026",
+      "title": "Discord Community Discussion Summary - May 29, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, Odilitime clarified that Shaw has not launched any new token, addressing what appears to be community speculation or rumors on the topic.",
+          "text": "In the general discussion channel, several topics came up throughout the day. A representative from SKALE Labs named Chistormze reached out to Odilitime asking who the best person to contact regarding a partnership opportunity. A community member named Doc, identifying as a pre-snapshot holder from August 2025, asked about manual migration help after missing the February 4th portal deadline. Odilitime confirmed that manual migration is no longer available and that the migration process is closed. Separately, a user shared a detailed 0DTE options trade analysis covering key price levels including put concentration zones around 733 to 735, call wall resistance at 741, and upside targets at 745 to 747 and 750 to 755. The analysis described a spring-loaded setup with two trade strategies: a long bias above 741 targeting the call wall, and a defensive long around 734 to 735 if the put wall holds. The analysis cautioned against naked shorts below 730 and identified 735 to 740 as a no-trade zone with low risk-reward. The coders channel and partners channel had no activity recorded for this date.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780020035735-347l6k.jpg"
-          ]
-        },
-        {
-          "text": "In the coders channel, several notable posts appeared. Lefttoorz shared information about the Mantle Network Turing Test Hackathon, described as the first onchain benchmark for agentic AI at scale. The event features a $100K prize pool across six tracks including AI Trading and Strategy, AI Alpha and Data, AI and RWA, Consumer and Viral DApps, AI DevTools, and Agentic Wallets and Economy. Submissions are open from May 1 through June 15, 2026. Additionally, multiple users posted what appear to be solicitation or self-promotion messages, including a job listing for a project called Sunflower Polygon seeking beta testers, moderators, and developers, a freelance developer advertising full-stack and AI development services covering technologies such as Next.js, React, LangChain, and various blockchain integrations, and a small development team seeking a communication support person for international client work on a profit-based pay arrangement.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780020068130-ax78e9.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1779926400,
+  "date": 1780012800,
   "nicknameMap": {
-    "lefttoorz": {
-      "id": "1083587805646684230",
-      "username": "lefttoorz",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -77,36 +49,65 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 529
+      "totalMessages": 530
     },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
+    "Doc": {
+      "id": "540701983196315659",
+      "username": "doc022597",
       "roles": [
         "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "THE UNDERRATED MAJ": {
+      "id": "1436635588387409991",
+      "username": "sjknxksjanksa",
+      "roles": [
+        "Helper",
+        "Trader",
         "Creator",
+        "[WG] degenspartan",
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 14
     },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 94
     },
-    "BnbGuru": {
-      "id": "944880809934991430",
-      "username": "j00hn_sm1th",
+    "Chistormze | SKALE": {
+      "id": "936772852156358696",
+      "username": "chistormze",
       "roles": [
-        "Verified"
+        "utility",
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     }
