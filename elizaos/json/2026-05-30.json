@@ -1,64 +1,41 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-05-30",
-  "categories": [
-    {
-      "title": "ElizaOS Community Discussion: Token Status, Plugin Updates, and Developer Activity",
-      "content": [
-        {
-          "text": "A community member raised concerns about whether the ElizaOS team had abandoned the ElizaOS token, noting that a wallet address starting with 'eliza' on Solscan had sold all its tokens months ago and that the team was no longer shilling the token as before. Odilitime, a core developer, responded that while the team's current focus is on waifu.fun, ElizaOS is not dead or abandoned. He also pointed to a third-party project from the ElizaEco Fund that is building prediction game utility for ElizaOS token holders.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A developer asked about the status of plugin-solana and whether it had been removed from the ElizaOS repository. Odilitime clarified that plugin-solana has been moved into the main Eliza repo and is now available as plugin-wallet, with the Solana-specific code located at the path plugins/plugin-wallet/src/chains/solana in the develop branch on GitHub.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A developer announced plans to build a plugin-kamino integration for ElizaOS and asked if anyone else was working on the same. Odilitime confirmed he had started some work on it, primarily for version 1.x, and offered to share the code. The developer was also advised to submit a pull request to contribute the plugin directly to the elizaOS/eliza GitHub repository.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, a backend and AI developer introduced themselves and shared experience building a multi-agent workflow platform using ElizaOS. The platform used specialized agents for research, data processing, content generation, and tool execution. Key challenges included context management, memory persistence, and recovery from failed actions across long-running workflows. The tech stack included ElizaOS, TypeScript, Node.js, PostgreSQL, Redis, Docker, Kubernetes, and OpenAI APIs. The platform successfully automated repetitive operational tasks and reduced manual coordination overhead.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A developer in the coders channel reported an issue after deploying a new Docker image of their agent, which had previously been running as a container on ElizaCloud. The agent was prompting for login credentials including a display name and password, and the developer was unsure what to enter since they had registered and logged in via email.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1510397268954452008/image.png?ex=6a1caa92&is=6a1b5912&hm=8b55f52e17c6e5a4365656d2c219f560c8627d1d8c9c3af5672662eef48d4f1d&"
-          ],
-          "videos": []
-        },
-        {
-          "text": "In the partners channel, DorianD asked if anyone had a connection to someone with command over a Cerebras CS-3 node, with no responses recorded.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Discussion: Token Status, Plugin Updates, and Developer Activity",
+    "content": [
+      {
+        "text": "A community member raised concerns about whether the ElizaOS team had abandoned the ElizaOS token, noting that a wallet address starting with 'eliza' on Solscan had sold all its tokens months ago and that the team was no longer shilling the token as before. Odilitime, a core developer, responded that while the team's current focus is on waifu.fun, ElizaOS is not dead or abandoned. He also pointed to a third-party project from the ElizaEco Fund that is building prediction game utility for ElizaOS token holders.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1780193364370-7b6yhm.jpg"
+      },
+      {
+        "text": "A developer asked about the status of plugin-solana and whether it had been removed from the ElizaOS repository. Odilitime clarified that plugin-solana has been moved into the main Eliza repo and is now available as plugin-wallet, with the Solana-specific code located at the path plugins/plugin-wallet/src/chains/solana in the develop branch on GitHub.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1780193382527-9y84oa.jpg"
+      },
+      {
+        "text": "A developer announced plans to build a plugin-kamino integration for ElizaOS and asked if anyone else was working on the same. Odilitime confirmed he had started some work on it, primarily for version 1.x, and offered to share the code. The developer was also advised to submit a pull request to contribute the plugin directly to the elizaOS/eliza GitHub repository.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+      },
+      {
+        "text": "In the coders channel, a backend and AI developer introduced themselves and shared experience building a multi-agent workflow platform using ElizaOS. The platform used specialized agents for research, data processing, content generation, and tool execution. Key challenges included context management, memory persistence, and recovery from failed actions across long-running workflows. The tech stack included ElizaOS, TypeScript, Node.js, PostgreSQL, Redis, Docker, Kubernetes, and OpenAI APIs. The platform successfully automated repetitive operational tasks and reduced manual coordination overhead.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "posters": "https://cdn.elizaos.news/posters/1780193423920-fnqer.jpg"
+      },
+      {
+        "text": "A developer in the coders channel reported an issue after deploying a new Docker image of their agent, which had previously been running as a container on ElizaCloud. The agent was prompting for login credentials including a display name and password, and the developer was unsure what to enter since they had registered and logged in via email.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "images": "https://cdn.elizaos.news/elizaos-media/image_0cdcb561.webp"
+      },
+      {
+        "text": "In the partners channel, DorianD asked if anyone had a connection to someone with command over a Cerebras CS-3 node, with no responses recorded.",
+        "sources": "https://discord.com/channels/1253563208833433701/1301363808421543988",
+        "posters": "https://cdn.elizaos.news/posters/1780193444813-zc7zyf.jpg"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1780099200,
   "nicknameMap": {
     "DorianD": {
