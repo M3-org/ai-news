@@ -1,29 +1,135 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-05-29",
+  "title": "Daily Report - 2026-05-30",
   "categories": [
     {
-      "title": "Discord Community Discussion Summary - May 29, 2026",
+      "title": "ElizaOS Community Discussion: Token Status, Plugin Updates, and Developer Activity",
       "content": [
         {
-          "text": "In the general discussion channel, several topics came up throughout the day. A representative from SKALE Labs named Chistormze reached out to Odilitime asking who the best person to contact regarding a partnership opportunity. A community member named Doc, identifying as a pre-snapshot holder from August 2025, asked about manual migration help after missing the February 4th portal deadline. Odilitime confirmed that manual migration is no longer available and that the migration process is closed. Separately, a user shared a detailed 0DTE options trade analysis covering key price levels including put concentration zones around 733 to 735, call wall resistance at 741, and upside targets at 745 to 747 and 750 to 755. The analysis described a spring-loaded setup with two trade strategies: a long bias above 741 targeting the call wall, and a defensive long around 734 to 735 if the put wall holds. The analysis cautioned against naked shorts below 730 and identified 735 to 740 as a no-trade zone with low risk-reward. The coders channel and partners channel had no activity recorded for this date.",
+          "text": "A community member raised concerns about whether the ElizaOS team had abandoned the ElizaOS token, noting that a wallet address starting with 'eliza' on Solscan had sold all its tokens months ago and that the team was no longer shilling the token as before. Odilitime, a core developer, responded that while the team's current focus is on waifu.fun, ElizaOS is not dead or abandoned. He also pointed to a third-party project from the ElizaEco Fund that is building prediction game utility for ElizaOS token holders.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer asked about the status of plugin-solana and whether it had been removed from the ElizaOS repository. Odilitime clarified that plugin-solana has been moved into the main Eliza repo and is now available as plugin-wallet, with the Solana-specific code located at the path plugins/plugin-wallet/src/chains/solana in the develop branch on GitHub.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer announced plans to build a plugin-kamino integration for ElizaOS and asked if anyone else was working on the same. Odilitime confirmed he had started some work on it, primarily for version 1.x, and offered to share the code. The developer was also advised to submit a pull request to contribute the plugin directly to the elizaOS/eliza GitHub repository.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a backend and AI developer introduced themselves and shared experience building a multi-agent workflow platform using ElizaOS. The platform used specialized agents for research, data processing, content generation, and tool execution. Key challenges included context management, memory persistence, and recovery from failed actions across long-running workflows. The tech stack included ElizaOS, TypeScript, Node.js, PostgreSQL, Redis, Docker, Kubernetes, and OpenAI APIs. The platform successfully automated repetitive operational tasks and reduced manual coordination overhead.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer in the coders channel reported an issue after deploying a new Docker image of their agent, which had previously been running as a container on ElizaCloud. The agent was prompting for login credentials including a display name and password, and the developer was unsure what to enter since they had registered and logged in via email.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1510397268954452008/image.png?ex=6a1caa92&is=6a1b5912&hm=8b55f52e17c6e5a4365656d2c219f560c8627d1d8c9c3af5672662eef48d4f1d&"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the partners channel, DorianD asked if anyone had a connection to someone with command over a Cerebras CS-3 node, with no responses recorded.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780106107675-moaa2j.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1780012800,
+  "date": 1780099200,
   "nicknameMap": {
+    "DorianD": {
+      "id": "918853893100806164",
+      "username": "doriand0963",
+      "roles": [
+        "Partner",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 38
+    },
+    "lordsedano": {
+      "id": "648943156334821395",
+      "username": "johnsedanonft",
+      "roles": [
+        "Designer",
+        "Verified",
+        "Poker",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "= ★ 𝗗.𝗜𝗿𝗲𝗹 ★ =": {
+      "id": "221462246763659264",
+      "username": "daiki.201",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Navneet Sahu": {
+      "id": "1271118644650311823",
+      "username": "n4vnt",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -52,34 +158,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 530
-    },
-    "Doc": {
-      "id": "540701983196315659",
-      "username": "doc022597",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "THE UNDERRATED MAJ": {
-      "id": "1436635588387409991",
-      "username": "sjknxksjanksa",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 14
+      "totalMessages": 536
     },
     "enigma289": {
       "id": "1163546195063480360",
@@ -91,28 +170,62 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 9
+      "totalMessages": 11
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "ordinals_explorer": {
+      "id": "1274794543299956816",
+      "username": "btcordinals888",
       "roles": [
-        "[WG] Want to Help",
+        "Trader",
         "Verified",
+        "Fr",
         "utility",
         "eliza"
       ],
-      "totalMessages": 94
+      "totalMessages": 2
     },
-    "Chistormze | SKALE": {
-      "id": "936772852156358696",
-      "username": "chistormze",
+    "STOPENAi": {
+      "id": "1079475054649278544",
+      "username": "open_ai2090",
       "roles": [
+        "Helper",
+        "Trader",
+        "It",
+        "Verified",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "notmejonny": {
+      "id": "953323029935579166",
+      "username": "notmejonny6633",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "CALVIN": {
+      "id": "1176604297904005212",
+      "username": "calvin_16w",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
     }
   }
 }

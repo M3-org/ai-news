@@ -1,48 +1,50 @@
-# elizaOS Discord - 2026-05-29
+# elizaOS Discord - 2026-05-30
 
 ## Summary
 
-### Partnership and Business Development
+### Codebase Reorganization
 
-SKALE Labs representative chistormze reached out seeking partnership contact information for collaboration opportunities with the elizaOS project.
+The plugin-solana component has been relocated and integrated into the main eliza repository. The plugin is now available as plugin-wallet under the chains/solana subdirectory, representing a significant structural change to the elizaOS codebase architecture.
 
-### Token Migration
+### Plugin Development and Contributions
 
-A user inquired about manual migration options for pre-snapshot holdings from August 2025 after missing the February 4th deadline. The moderator confirmed that the migration period has officially closed and manual migrations are no longer available.
+Active development is underway for a plugin-kamino integration for elizaOS. The contribution process for new plugins follows standard pull request procedures to the official repository. Previous Kamino integration work exists that includes read functionality for version 1.x, which may serve as a reference for ongoing development efforts.
 
-### Trading Analysis
+### Project Status and Direction
 
-Detailed 0DTE options trading analysis was shared covering put and call wall dynamics in the 730-755 price range, including specific trading strategies based on dealer hedging behavior and structural support levels.
-
-### NFT Activities
-
-Brief mention of an NFT drop without additional context or details provided.
+The elizaOS project remains active despite team focus shifting to waifu.fun. Ongoing projects continue to involve the elizaOS token, and the project is not abandoned. Community concerns were raised about team commitment to the ElizaOS token following observed token sales from team-associated addresses.
 
 ## FAQ
 
-**Q: Can I still manually migrate my pre-snapshot holdings from August 2025 if I missed the February 4th portal deadline?**
-A: No, manual migration is no longer available as the migration period has closed.
+**Q: Where is plugin-solana located now?**
+A: Plugin-solana has been moved and integrated into the main eliza repository as plugin-wallet, specifically under the chains/solana subdirectory.
 
-**Q: What are the key trading levels for 0DTE options strategies?**
-A: Long bias above 741 targeting 745-747, defensive positioning around 734-735, and avoidance of the 735-740 no-trade zone due to dealer hedging dynamics.
+**Q: How can I contribute a new plugin to elizaOS?**
+A: New plugins can be contributed through pull requests to the official repository.
+
+**Q: Is elizaOS still being actively developed?**
+A: Yes, elizaOS is neither dead nor abandoned. While team focus has shifted to waifu.fun, there are ongoing projects involving the elizaOS token.
+
+**Q: Is there existing code for Kamino integration?**
+A: Yes, there is code from a previous Kamino integration attempt that includes read functionality for version 1.x, which can be shared as a reference.
 
 ## Help Interactions
 
 **Helper:** odilitime
-**Helpee:** doc022597
-**Issue:** Request for manual migration assistance for pre-snapshot holdings from August 2025 after missing the February 4th deadline
-**Resolution:** Clarified that manual migration is no longer available as the migration period has closed
+**Helpee:** n4vnt
+**Resolution:** Clarified that plugin-solana has been moved to the main eliza repository as plugin-wallet under chains/solana subdirectory. Confirmed the contribution process for the plugin-kamino development and offered to share existing Kamino integration code with read functionality for version 1.x.
+
+**Helper:** odilitime
+**Helpee:** btcordinals888
+**Resolution:** Addressed concerns about project status by clarifying that elizaOS is not dead or abandoned, explaining that while team focus shifted to waifu.fun, ongoing projects continue with the elizaOS token.
 
 ## Action Items
 
 ### Technical
 
-None identified.
+- Complete development of plugin-kamino for elizaOS (mentioned by n4vnt)
+- Review and potentially utilize existing Kamino integration code with read functionality for version 1.x (mentioned by odilitime)
 
 ### Features
 
-None identified.
-
-### Documentation
-
-None identified.
+- Submit pull request for plugin-kamino contribution to official repository (mentioned by n4vnt)
