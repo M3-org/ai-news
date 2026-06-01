@@ -1,90 +1,95 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-05-30",
-  "date": 1780099200,
+  "title": "elizaOS Discord - 2026-05-31",
+  "date": 1780185600,
   "stats": {
-    "totalMessages": 27,
-    "totalUsers": 11
+    "totalMessages": 9,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The main technical discussion centered around the plugin-solana migration in elizaOS. User n4vnt discovered that plugin-solana was no longer in its original location and sought clarification. odilitime explained that plugin-solana has been moved and integrated into the main eliza repository as plugin-wallet, specifically under the chains/solana subdirectory. This represents a structural reorganization of the codebase. n4vnt is actively developing a plugin-kamino for elizaOS and expressed interest in contributing it to the official repository. odilitime confirmed the contribution process through pull requests and offered to share code from a previous Kamino integration attempt that included read functionality for version 1.x. Regarding project status, odilitime clarified that while team focus has shifted to waifu.fun, elizaOS is neither dead nor abandoned, with ongoing projects involving the elizaOS token. A non-technical discussion involved btcordinals888 questioning the team's commitment to the $ElizaOS token after observing token sales from a team-associated address months ago.",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary substantive contribution came from faouzi_122, who introduced Arsenal Quant and the Arsenal Decision Engine project. This is a high-performance decision oracle designed specifically for DeFi agents. Key technical details include: integration with elizaOS via MCP (Model Context Protocol), implementation of L402 Lightning protocol for payment processing, and focus on the DeFAI (Decentralized Finance AI) space. The project aims to provide decision-making capabilities for autonomous DeFi agents. The rest of the chat consisted of morning greetings from community members (odilitime, n4vnt, fifogarihafilag, anton_0413) and a follow-up question from dondada0420 inquiring about project progress. No technical problems were solved, no implementation details were discussed, and no concrete decisions were made during this segment.",
       "faqs": [
         {
-          "question": "Does team already abandoned $ElizaOS token? I saw from solscan the address starts with eliza sold all its token few months ago.",
-          "askedBy": "btcordinals888",
-          "answeredBy": "odilitime"
-        },
+          "question": "How is the work going dude",
+          "askedBy": "dondada0420",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 6,
+      "userCount": 6
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The primary activity consists of odilitime mentioning another user (via Discord ID 177801706963337216) suggesting they investigate an unspecified issue. stan0473 responds acknowledging the request. The remainder of the chat is dominated by sososo7997 posting what appears to be a job recruitment message seeking English-speaking partners for operational tasks in specific regions (US, Canada, UAE). No technical problems were solved, no code was discussed, and no development decisions were made during this segment. The chat lacks substantive technical content, implementation details, or meaningful developer collaboration.",
+      "faqs": [
         {
-          "question": "What happened to plugin-solana?",
-          "askedBy": "n4vnt",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Is anyone else building plugin-kamino in elizaOS?",
-          "askedBy": "n4vnt",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Is there any way to contribute that plugin directly to the elizaOS/eliza repo?",
-          "askedBy": "n4vnt",
-          "answeredBy": "odilitime"
+          "question": "What issue needs to be looked into?",
+          "askedBy": "odilitime",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "n4vnt",
-          "context": "n4vnt couldn't find plugin-solana and needed to know its location for reference while building plugin-kamino",
-          "resolution": "odilitime explained that plugin-solana was moved into the main eliza repo as plugin-wallet, specifically at plugins/plugin-wallet/src/chains/solana, and provided direct GitHub links"
-        },
-        {
-          "helper": "odilitime",
-          "helpee": "n4vnt",
-          "context": "n4vnt wanted to contribute plugin-kamino to the official elizaOS repository but didn't know the process",
-          "resolution": "odilitime confirmed the standard PR (pull request) process for contributions and offered to share code from a previous Kamino integration attempt"
-        },
-        {
-          "helper": "odilitime",
-          "helpee": "btcordinals888",
-          "context": "btcordinals888 was concerned about whether the team had abandoned the $ElizaOS token after observing token sales",
-          "resolution": "odilitime clarified that elizaOS is not dead or abandoned despite team focus on waifu.fun, and referenced ongoing projects involving the token"
+          "helpee": "User ID 177801706963337216",
+          "context": "Unspecified issue requiring investigation",
+          "resolution": "stan0473 acknowledged and agreed to check the issue, but no resolution was provided in this segment"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Complete development of plugin-kamino for elizaOS and submit PR to main repository",
-          "mentionedBy": "n4vnt"
-        },
-        {
-          "type": "Technical",
-          "description": "Share Kamino plugin code (1.x read functionality) with n4vnt for reference",
+          "description": "Investigate unspecified issue mentioned by odilitime",
           "mentionedBy": "odilitime"
         }
       ],
-      "messageCount": 24,
-      "userCount": 8
+      "messageCount": 3,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "DorianD": {
-      "id": "918853893100806164",
-      "username": "doriand0963",
+    "so": {
+      "id": "488766383836889111",
+      "username": "sososo7997",
       "roles": [
-        "Partner",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 38
+      "totalMessages": 4
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Moderator",
+        "Server Booster",
+        "King",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Cloud",
+        "Fr",
+        "utility",
+        "Coder",
+        "Github - Contributor",
+        "Labs Alumni"
+      ],
+      "totalMessages": 54
     },
     "lordsedano": {
       "id": "648943156334821395",
@@ -96,48 +101,6 @@
         "Coder"
       ],
       "totalMessages": 1
-    },
-    "= ★ 𝗗.𝗜𝗿𝗲𝗹 ★ =": {
-      "id": "221462246763659264",
-      "username": "daiki.201",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
-      "roles": [
-        "Trader",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Navneet Sahu": {
-      "id": "1271118644650311823",
-      "username": "n4vnt",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 9
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -167,7 +130,58 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 536
+      "totalMessages": 538
+    },
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "Navneet Sahu": {
+      "id": "1271118644650311823",
+      "username": "n4vnt",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "Faouzi122": {
+      "id": "1509802771002687571",
+      "username": "faouzi_122",
+      "roles": [
+        "Helper",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "waily": {
+      "id": "401193241967460362",
+      "username": "anton_0413",
+      "roles": [
+        "Helper",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
     },
     "enigma289": {
       "id": "1163546195063480360",
@@ -179,62 +193,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 11
-    },
-    "ordinals_explorer": {
-      "id": "1274794543299956816",
-      "username": "btcordinals888",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Fr",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "STOPENAi": {
-      "id": "1079475054649278544",
-      "username": "open_ai2090",
-      "roles": [
-        "Helper",
-        "Trader",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "notmejonny": {
-      "id": "953323029935579166",
-      "username": "notmejonny6633",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "CALVIN": {
-      "id": "1176604297904005212",
-      "username": "calvin_16w",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 12
     }
   }
 }
