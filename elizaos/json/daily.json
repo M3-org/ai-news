@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780367451129-lks459.png"
+          ]
         },
         {
           "text": "Questions were raised about whether the ElizaOS project is still active. A community member suggested the team had shifted focus to a project called Waifu on the BSC chain and left the main ElizaOS token in a halt. Odilitime, a moderator and core developer, clarified that Waifu Fun does not have its own token, that Solace on Waifu has a token called Waifu, and explicitly stated that the team has not left ElizaOS.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780367471017-oikczn.jpg"
+          ]
         },
         {
           "text": "Several new members introduced themselves in the discussion channel. Ana-Maria from NeverBell, a project building infrastructure for AI agents to interact with financial markets through natural language and controlled execution, asked about the appropriate channel to find early testers and was directed to contact Odilitime as the moderator. Another user asked about inviting a core team member for an AMA session focused on technical implementations. General greetings and welcomes were exchanged among new and existing community members. In the coders channel, brief greetings were exchanged between a helper and Odilitime.",
@@ -42,7 +48,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-06-01.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780367521645-2v2ds.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
