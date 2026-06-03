@@ -1,0 +1,149 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-02",
+  "date": 1780358400,
+  "stats": {
+    "totalMessages": 17,
+    "totalUsers": 7
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on clarifying the ElizaOS ecosystem architecture and a significant plugin development initiative. stan0473 provided a comprehensive breakdown of the ecosystem components: ElizaOS as the agent-building framework, ElizaCloud as the hosting infrastructure for fully-featured agents, Milady as a consumer-facing UI for life management, and Waifu as a side project for agent competition and economies where all agents run on ElizaCloud. The main technical focus was n4vnt's proposal to build a comprehensive Kamino plugin for ElizaOS. Kamino is described as a critical Solana protocol covering lending, borrowing, automated liquidity vaults, yield farms, and limit orders. n4vnt identified the lack of Kamino integration as a gap and aims to build a plugin covering all core features, noting that Kamino is exploring AI adoption. stan0473 confirmed all plugins now live in elizaOS/eliza and directed n4vnt to fork and target the develop branch, warning that things move fast and require frequent rebasing. anton_0413 validated the importance of the plugin, noting it would enable ElizaOS agents to perform meaningful DeFi actions beyond information retrieval, while highlighting the challenge of designing reliable abstractions for lending, vault management, and risk-sensitive operations while maintaining developer experience simplicity. n4vnt confirmed taking a measured approach, having written only a few actions so far to ensure quality. The discussion also included a brief comparison question about Waifu's similarity to Virtuals, and tomy.0315 posted availability for AI automation engineering work.",
+      "faqs": [
+        {
+          "question": "Is Waifu similar to Virtuals?",
+          "askedBy": "alexeill",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Is there a contribution guide or a specific branch I should target for the PR?",
+          "askedBy": "n4vnt",
+          "answeredBy": "stan0473"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "stan0473",
+          "helpee": "n4vnt",
+          "context": "n4vnt needed guidance on contributing a Kamino plugin to ElizaOS and where to submit the work",
+          "resolution": "stan0473 directed to fork elizaOS/eliza, target the develop branch, use Claude to read readme/structure, and keep rebasing due to fast-moving development"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Build comprehensive Kamino plugin for ElizaOS covering lending, borrowing, automated liquidity vaults, yield farms, and limit orders",
+          "mentionedBy": "n4vnt"
+        },
+        {
+          "type": "Technical",
+          "description": "Design reliable abstractions around lending, vault management and risk-sensitive operations while keeping developer experience simple for Kamino plugin",
+          "mentionedBy": "anton_0413"
+        }
+      ],
+      "messageCount": 17,
+      "userCount": 7
+    }
+  ],
+  "nicknameMap": {
+    "! ^ lucky tomy ^ !": {
+      "id": "561610283122950194",
+      "username": "tomy.0315",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Navneet Sahu": {
+      "id": "1271118644650311823",
+      "username": "n4vnt",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 16
+    },
+    "waily": {
+      "id": "401193241967460362",
+      "username": "anton_0413",
+      "roles": [
+        "Helper",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "Stan ⚡": {
+      "id": "177801706963337216",
+      "username": "stan0473",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "events - self-assign",
+        "Announcements",
+        "Moderator",
+        "Server Booster",
+        "King",
+        "Core Dev",
+        "VIP",
+        "Contributor",
+        "workgroups - write perms",
+        "Verified",
+        "Cloud",
+        "Fr",
+        "utility",
+        "Coder",
+        "Github - Contributor",
+        "Labs Alumni"
+      ],
+      "totalMessages": 59
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 16
+    },
+    "laboratorian": {
+      "id": "817312344097947648",
+      "username": "labotests",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 5
+    },
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 24
+    }
+  }
+}
