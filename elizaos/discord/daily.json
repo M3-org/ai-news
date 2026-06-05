@@ -1,72 +1,85 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-03",
-  "date": 1780444800,
+  "title": "elizaOS Discord - 2026-06-04",
+  "date": 1780531200,
   "stats": {
-    "totalMessages": 23,
-    "totalUsers": 12
+    "totalMessages": 14,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion primarily focused on clarifying the relationship between ElizaOS, Hyperia, and Hyperforge. A key clarification was provided that Hyperia is a separate team from ElizaOS, not a joint venture like Babylon. Shaw started both Hyperia and Hyperforge, with Hyperforge being the world-building component of Hyperia. However, Shaw's current involvement with Hyperia appears limited to possibly an advisory role, as he is now focused on elizaOS/milady/wafiu/cloud projects. The chat also included a developer offering assistance to the community and a project announcement for Neverbell, an early-stage project exploring AI agents interacting with financial systems through user-defined controls and permissions.",
-      "faqs": [
+      "summary": "This Discord chat segment shows primarily introductory and networking activity rather than technical discussions. The most notable contribution came from marsel_51932, an AI Engineer and Security Researcher who introduced specialized services for elizaOS projects. Key offerings include: custom plugin development for production-ready API connectors and multi-agent setups, AI and on-chain security focusing on adversarial AI methodologies for smart contract security and preventing prompt injection attacks on autonomous agents, and heavy automation expertise with Python, FastAPI, and cross-cloud infrastructure. The security focus is particularly relevant for elizaOS, emphasizing protection against agent draining and malicious transaction signing through proper execution boundary auditing. saulodigital from Intuition Box expressed interest in ecosystem collaboration, mentioning upcoming bounties and seeking partnership opportunities with the elizaOS developer community. anton_0413 indicated availability as a developer seeking opportunities. The segment also included casual greetings and a social media link share from odilitime, but no substantive technical discussions, problem-solving sessions, or implementation details were present in this chat window.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [
         {
-          "question": "What happened to Hyperforge?",
-          "askedBy": "jayzenlunar",
-          "answeredBy": "odilitime"
+          "type": "Feature",
+          "description": "Custom plugin development for API connectors and multi-agent setups",
+          "mentionedBy": "marsel_51932"
         },
         {
-          "question": "What is Hyperforge and is the team involved in it?",
-          "askedBy": "jayzenlunar",
-          "answeredBy": "odilitime"
+          "type": "Technical",
+          "description": "AI and on-chain security auditing for agent execution boundaries and prompt injection prevention",
+          "mentionedBy": "marsel_51932"
         },
         {
-          "question": "What's Hyperia's connection to ElizaOS and what's Hyperforge's connection to ElizaOS?",
-          "askedBy": "jayzenlunar",
-          "answeredBy": "odilitime"
+          "type": "Feature",
+          "description": "Collaboration opportunity with Intuition Box for developer bounties",
+          "mentionedBy": "saulodigital"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "jayzenlunar",
-          "context": "Confusion about the relationship between Hyperforge, Hyperia, and ElizaOS",
-          "resolution": "Clarified that Hyperia is a separate team (not a joint venture), Shaw started both projects, Hyperforge is the world-building part of Hyperia, and Shaw is likely now just an advisor focused on other projects"
-        }
-      ],
+      "messageCount": 8,
+      "userCount": 8
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the 💬-coders channel contains minimal technical content. The conversation consists primarily of brief administrative and social interactions. om1d_sa issued a scammer alert mentioning two users, to which odilitime responded with acknowledgment. anton_0413 posted an inquiry seeking developer opportunities, though this received no responses during the captured timeframe. dondada0420 posted a greeting to the channel. No technical discussions, problem-solving sessions, code implementations, or development decisions occurred during this segment. The chat lacks substantive technical content, architectural discussions, debugging sessions, or collaborative coding activities that would typically characterize a developer-focused channel.",
+      "faqs": [],
+      "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 23,
-      "userCount": 12
+      "messageCount": 5,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 17
-    },
-    "_AM_T_M_": {
-      "id": "626481140278231040",
-      "username": "_am_t_m_",
-      "roles": [
-        "Trader",
-        "Creator",
+        "Partner",
+        "Vanguard",
         "NFT",
         "Verified",
+        "Associate"
+      ],
+      "totalMessages": 2
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 105
+    },
+    "DON DADA": {
+      "id": "1386045358768918679",
+      "username": "dondada0420",
+      "roles": [
+        "Trader",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
     },
     "anton_0413": {
       "id": "401193241967460362",
@@ -79,7 +92,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 7
+      "totalMessages": 9
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -109,66 +122,35 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 547
+      "totalMessages": 549
     },
-    "Cotyrox": {
-      "id": "1185978924795170898",
-      "username": "cotyrox",
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
       "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Coreyg | criptix": {
-      "id": "1164152828512714793",
-      "username": "coreygkhchvc",
-      "roles": [
-        "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "It",
         "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "werxy0": {
-      "id": "1094834884364738580",
-      "username": "werxy0_72965",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
+        "Dev School Student",
         "Designer",
         "utility",
         "Coder",
+        "Hoplite",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     },
-    "Ksue": {
-      "id": "1158726140131819563",
-      "username": "kayodesola",
-      "roles": [],
-      "totalMessages": 1
+    "АреАddiсt.еth": {
+      "id": "623256727558815754",
+      "username": "i.films",
+      "roles": []
     },
-    "!                - ☆ NeuralX ☆ -": {
-      "id": "892772507361378395",
-      "username": "neural.x",
+    "Saulo": {
+      "id": "403183888798711809",
+      "username": "saulodigital",
       "roles": [
         "Helper",
-        "a-hack",
         "Trader",
         "Creator",
         "[WG] degenspartan",
@@ -182,28 +164,36 @@
       ],
       "totalMessages": 1
     },
-    "CALVIN": {
-      "id": "1176604297904005212",
-      "username": "calvin_16w",
+    "cola": {
+      "id": "1313767173868752966",
+      "username": "kevindevin126",
       "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
         "Verified",
-        "Designer",
-        "Fr",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 18
     },
-    "Kyler": {
-      "id": "1320348191513776138",
-      "username": "kylebanks0656",
+    "Marsel": {
+      "id": "1418237443760586755",
+      "username": "marsel_51932",
       "roles": [
+        "Helper",
         "Trader",
+        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
@@ -211,40 +201,20 @@
       ],
       "totalMessages": 1
     },
-    "Jayzen": {
-      "id": "1335738366506827776",
-      "username": "jayzenlunar",
+    "TrueZeiko": {
+      "id": "1511953089907789899",
+      "username": "truezeiko_60558",
       "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
         "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 8
-    },
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
-      "roles": [
-        "Helper",
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Moderator",
-        "Server Booster",
-        "King",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Cloud",
-        "Fr",
+        "Designer",
         "utility",
         "Coder",
-        "Github - Contributor",
-        "Labs Alumni"
+        "eliza"
       ],
-      "totalMessages": 59
+      "totalMessages": 1
     }
   }
 }

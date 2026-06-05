@@ -1,43 +1,47 @@
-# elizaOS Discord - 2026-06-03
+# elizaOS Discord - 2026-06-04
 
 ## Summary
 
-### Project Relationships and Organizational Structure
+### Professional Introductions and Service Offerings
 
-The main discussion centered on clarifying the organizational relationships between ElizaOS, Hyperia, and Hyperforge. Hyperia was confirmed to be a separate team from ElizaOS, distinct from joint ventures like Babylon. Shaw founded both Hyperia and Hyperforge, with Hyperforge serving as the world-building component within Hyperia. Shaw's current involvement with Hyperia appears to be limited, possibly in an advisory capacity only, as his focus has shifted to elizaOS, milady, wafiu, and cloud projects.
+marsel_51932, an AI Engineer and Security Researcher, introduced specialized services for elizaOS projects including custom plugin development for production-ready API connectors and multi-agent setups, AI and on-chain security focusing on adversarial AI methodologies for smart contract security, and prevention of prompt injection attacks on autonomous agents. The security focus emphasizes protection against agent draining and malicious transaction signing through proper execution boundary auditing, with expertise in Python, FastAPI, and cross-cloud infrastructure automation.
 
-### Community Support and New Projects
+### Community Collaboration and Opportunities
 
-A developer offered assistance to the community for those needing help. Additionally, Neverbell was announced as an early-stage project exploring AI agents that interact with financial systems through user-defined controls and permissions.
+saulodigital from Intuition Box expressed interest in ecosystem collaboration, mentioning upcoming bounties and seeking partnership opportunities with the elizaOS developer community. anton_0413 indicated availability as a developer seeking opportunities in both the discussion and coders channels, though no responses were received during the captured timeframe.
+
+### Security and Moderation
+
+om1d_sa issued a scammer alert mentioning two users in the coders channel, which was acknowledged by odilitime. This represents the primary moderation activity during the day.
 
 ## FAQ
 
-**Q: What is the relationship between ElizaOS and Hyperia?**
-A: Hyperia is a separate team from ElizaOS, not a joint venture like Babylon. They are distinct organizations.
+**Q: What security services are available for elizaOS projects?**
+A: marsel_51932 offers AI and on-chain security services focusing on adversarial AI methodologies for smart contract security, preventing prompt injection attacks on autonomous agents, and protecting against agent draining and malicious transaction signing through proper execution boundary auditing.
 
-**Q: What is Hyperforge?**
-A: Hyperforge is the world-building component of Hyperia. It was started by Shaw along with Hyperia.
+**Q: What types of custom development are available for elizaOS?**
+A: Custom plugin development services are available for production-ready API connectors and multi-agent setups, with expertise in Python, FastAPI, and cross-cloud infrastructure automation.
 
-**Q: Is Shaw still involved with Hyperia?**
-A: Shaw's current involvement with Hyperia appears limited to possibly an advisory role. He is now focused on elizaOS, milady, wafiu, and cloud projects.
-
-**Q: What is Neverbell?**
-A: Neverbell is an early-stage project that explores AI agents interacting with financial systems through user-defined controls and permissions.
+**Q: Are there collaboration opportunities with elizaOS?**
+A: Intuition Box is seeking partnership opportunities with the elizaOS developer community and has upcoming bounties available.
 
 ## Help Interactions
 
-A developer offered general assistance to the community, though no specific help requests or resolutions were documented in the provided summary.
+No substantive help interactions with resolutions occurred during this period. anton_0413 posted inquiries seeking developer opportunities in both channels but received no responses during the captured timeframe.
 
 ## Action Items
 
 ### Technical
 
-None identified.
+- Implement security auditing for execution boundaries to prevent agent draining and malicious transaction signing (mentioned by marsel_51932)
+- Develop adversarial AI methodologies for smart contract security (mentioned by marsel_51932)
+- Create protection mechanisms against prompt injection attacks on autonomous agents (mentioned by marsel_51932)
 
 ### Features
 
-None identified.
+- Develop custom plugins for production-ready API connectors (mentioned by marsel_51932)
+- Build multi-agent setup capabilities (mentioned by marsel_51932)
 
 ### Documentation
 
-None identified.
+None identified during this period.
