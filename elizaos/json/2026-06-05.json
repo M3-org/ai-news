@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780711126542-20rf83.jpg"
+          ]
         },
         {
           "text": "In the coders channel, ross continued his conversation about feeling overwhelmed by the volume of information available in the ecosystem. Odilitime offered reassurance, noting there is no real time pressure and that curiosity is a better driver than urgency. Odilitime also pointed out that LLMs are a great tool for breaking down complex questions, and encouraged ross that now is a great time to start learning. Ross acknowledged that his sense of urgency comes from a mix of personal and altruistic motivations, and that every new piece of content he encounters raises more questions.",
@@ -33,7 +36,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-06-05.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780711170618-tdan6i.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
