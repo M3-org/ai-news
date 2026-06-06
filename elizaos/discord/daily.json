@@ -1,98 +1,118 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-04",
-  "date": 1780531200,
+  "title": "elizaOS Discord - 2026-06-05",
+  "date": 1780617600,
   "stats": {
-    "totalMessages": 14,
-    "totalUsers": 10
+    "totalMessages": 29,
+    "totalUsers": 7
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows primarily introductory and networking activity rather than technical discussions. The most notable contribution came from marsel_51932, an AI Engineer and Security Researcher who introduced specialized services for elizaOS projects. Key offerings include: custom plugin development for production-ready API connectors and multi-agent setups, AI and on-chain security focusing on adversarial AI methodologies for smart contract security and preventing prompt injection attacks on autonomous agents, and heavy automation expertise with Python, FastAPI, and cross-cloud infrastructure. The security focus is particularly relevant for elizaOS, emphasizing protection against agent draining and malicious transaction signing through proper execution boundary auditing. saulodigital from Intuition Box expressed interest in ecosystem collaboration, mentioning upcoming bounties and seeking partnership opportunities with the elizaOS developer community. anton_0413 indicated availability as a developer seeking opportunities. The segment also included casual greetings and a social media link share from odilitime, but no substantive technical discussions, problem-solving sessions, or implementation details were present in this chat window.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [
+      "summary": "This Discord chat segment contains primarily casual conversation with minimal technical content. The discussion centers around market conditions, with cyber_shai noting significant market downturn and expressing a survival mindset. ross.ross.ross joins the conversation expressing confusion about being both early and late to understanding the ecosystem, seeking to comprehend the broader context rather than needing immediate technical help. They mention discovering the space through examining their 401k during a career crisis related to AI disruption, then exploring their wife's pension, altcoins, and eventually arriving at this community. odilitime provides brief guidance, suggesting ross.ross.ross check out the coders channel for more information. ultimatepokeflute briefly asks about Eliza waking up, though this receives no direct response. The conversation lacks substantive technical discussions, implementation details, or problem-solving activities. Most exchanges are brief acknowledgments or personal reflections on market conditions and personal discovery journeys into the crypto/AI space.",
+      "faqs": [
         {
-          "type": "Feature",
-          "description": "Custom plugin development for API connectors and multi-agent setups",
-          "mentionedBy": "marsel_51932"
+          "question": "Yall got a help line!?",
+          "askedBy": "ross.ross.ross",
+          "answeredBy": "odilitime"
         },
         {
-          "type": "Technical",
-          "description": "AI and on-chain security auditing for agent execution boundaries and prompt injection prevention",
-          "mentionedBy": "marsel_51932"
+          "question": "Eliza going to wake up?",
+          "askedBy": "ultimatepokeflute",
+          "answeredBy": "Unanswered"
         },
         {
-          "type": "Feature",
-          "description": "Collaboration opportunity with Intuition Box for developer bounties",
-          "mentionedBy": "saulodigital"
+          "question": "Can I help in any way?",
+          "askedBy": "ross.ross.ross",
+          "answeredBy": "Unanswered"
         }
       ],
-      "messageCount": 8,
-      "userCount": 8
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "ross.ross.ross",
+          "context": "ross.ross.ross was trying to understand the ecosystem and where to get information",
+          "resolution": "odilitime directed them to check here and mentioned the coders channel as a good resource"
+        }
+      ],
+      "actionItems": [],
+      "messageCount": 23,
+      "userCount": 7
     },
     {
       "channelId": "1300025221834739744",
       "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the 💬-coders channel contains minimal technical content. The conversation consists primarily of brief administrative and social interactions. om1d_sa issued a scammer alert mentioning two users, to which odilitime responded with acknowledgment. anton_0413 posted an inquiry seeking developer opportunities, though this received no responses during the captured timeframe. dondada0420 posted a greeting to the channel. No technical discussions, problem-solving sessions, code implementations, or development decisions occurred during this segment. The chat lacks substantive technical content, architectural discussions, debugging sessions, or collaborative coding activities that would typically characterize a developer-focused channel.",
-      "faqs": [],
-      "helpInteractions": [],
+      "summary": "This Discord chat segment from the #💬-coders channel contains a brief philosophical discussion about learning and information overload rather than technical content. ross.ross.ross expressed feeling overwhelmed by the volume of information available and experiencing time pressure to learn, though acknowledged this pressure stems from eagerness rather than external deadlines. The user mentioned having mixed motives - both selfish and altruistic - for wanting to learn quickly, and noted that exploring new topics generates exponentially more questions. odilitime responded by questioning the source of time pressure and later suggested that LLMs (Large Language Models) are valuable tools for making complex questions more accessible, noting that the current era is an excellent time for learning due to these AI-assisted resources. The conversation was supportive and reflective rather than focused on specific technical implementations, code solutions, or concrete development tasks. No actual coding problems were solved, no technical decisions were made, and no specific technologies or implementations were discussed in detail.",
+      "faqs": [
+        {
+          "question": "Why the time pressure?",
+          "askedBy": "odilitime",
+          "answeredBy": "ross.ross.ross"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "ross.ross.ross",
+          "context": "Feeling overwhelmed by information overload and time pressure while learning",
+          "resolution": "Suggested using LLMs as tools to make harder questions easier and encouraged that now is a great time to learn"
+        }
+      ],
       "actionItems": [],
-      "messageCount": 5,
-      "userCount": 4
+      "messageCount": 6,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
-      "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
-        "Verified",
-        "Associate"
-      ],
-      "totalMessages": 2
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 105
-    },
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
-      "roles": [
-        "Trader",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
       "roles": [
         "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
         "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 9
+      "totalMessages": 14
+    },
+    "Sloshed": {
+      "id": "1282638617151275012",
+      "username": "sloshed0701",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 20
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -122,29 +142,46 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 549
+      "totalMessages": 558
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "digitalalchemy": {
+      "id": "734636383548997693",
+      "username": "ultimatepokeflute",
       "roles": [
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Dev School Student",
         "Designer",
         "utility",
-        "Coder",
-        "Hoplite",
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "Arizona999 🔥": {
+      "id": "1170526866088669265",
+      "username": "arizona999_99826",
+      "roles": []
+    },
+    "Cyber_Shai": {
+      "id": "1155015781826969601",
+      "username": "cyber_shai",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "₩/€": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 2
-    },
-    "АреАddiсt.еth": {
-      "id": "623256727558815754",
-      "username": "i.films",
-      "roles": []
+      "totalMessages": 13
     },
     "Saulo": {
       "id": "403183888798711809",
@@ -157,58 +194,6 @@
         "Verified",
         "Dev School Student",
         "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "cola": {
-      "id": "1313767173868752966",
-      "username": "kevindevin126",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 18
-    },
-    "Marsel": {
-      "id": "1418237443760586755",
-      "username": "marsel_51932",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "TrueZeiko": {
-      "id": "1511953089907789899",
-      "username": "truezeiko_60558",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
         "Designer",
         "utility",
         "Coder",

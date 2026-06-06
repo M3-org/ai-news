@@ -1,97 +1,94 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-04",
+  "title": "Daily Report - 2026-06-05",
   "categories": [
     {
-      "title": "elizaOS Discord Community Activity - June 4, 2026",
+      "title": "Community Discussion: Market Conditions, Ecosystem Learning, and AI Shift",
       "content": [
         {
-          "text": "In the general discussion channel, several community members introduced themselves and shared their work. An AI Engineer and Security Researcher named Marsel posted a detailed introduction highlighting expertise in agentic workflows, Web3 security, custom plugin development for elizaOS projects, and automation using Python and FastAPI. He expressed interest in developer tasks, plugin building, and security audits for agentic workflows. Separately, a representative from Intuition Box, a developer ecosystem, reached out to the community about two upcoming bounties and expressed interest in collaborating with the elizaOS developer community, asking for the appropriate contact or permission to share the bounties publicly. Odilitime also shared a link to an upcoming Twitter Space event.",
+          "text": "In the general discussion channel, community members reflected on the current difficult market conditions, with one user noting the market is in a rough state and that survival is the priority. A newer member named ross shared his personal journey of discovering the AI and crypto ecosystem after concerns about job security due to AI, leading him to explore investments and eventually land in this community. He expressed feeling both early and late to the space, and was overwhelmed by how much has been happening without his awareness. He asked if there were ways he could contribute and help the community. Odilitime encouraged him to just participate and offered to boost any relevant tweets. The conversation had a lighthearted and welcoming tone, with several members expressing solidarity.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780625226515-h8ijdc.png"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a scammer alert was raised by community member Omid Sa, tagging a user and notifying moderator Odilitime, who acknowledged the report. A developer also posted asking if anyone was looking to hire a developer, mirroring a similar message posted in the general discussion channel.",
+          "text": "In the coders channel, ross continued his conversation about feeling overwhelmed by the volume of information available in the ecosystem. Odilitime offered reassurance, noting there is no real time pressure and that curiosity is a better driver than urgency. Odilitime also pointed out that LLMs are a great tool for breaking down complex questions, and encouraged ross that now is a great time to start learning. Ross acknowledged that his sense of urgency comes from a mix of personal and altruistic motivations, and that every new piece of content he encounters raises more questions.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780625255561-exio4i.png"
-          ]
-        },
-        {
-          "text": "In the partners channel, DEMIAN from DAPPCRAFT reached out to Shaw to explore a potential collaboration involving an AI DePIN project with approximately 0.5 billion in fully diluted valuation. DEMIAN indicated a close relationship with the project team and suggested there could be significant mutual value, requesting to set up a call to connect Shaw with them.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780625300193-lx2nkt.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
+    },
+    {
+      "title": "Eliza Cloud Infrastructure and Agent Autonomy Update - June 5, 2026",
+      "content": [
+        {
+          "text": "Development on June 5, 2026 centered on hardening Eliza Cloud infrastructure and advancing agent autonomy features. A production outage is currently active, with login failures caused by OAuth 400 errors affecting the Sign in with Eliza Cloud flow. This requires immediate coordination to deploy signing secrets and update tenant redirect allowlists. Additionally, a ledger mismatch between app-credits and org-balance is blocking seamless spending and awaiting an architectural resolution.\n\nOn the security front, the team implemented PKCE for Steward OAuth, added request signing for Steward proxy calls, and introduced scoped token minting with specific trade:order permissions. API reliability was improved through new container management routes and updated CORS policies for third-party app integrations.\n\nAgent autonomy saw meaningful progress, with autonomous goal-driven loops now enabled for monetized applications, allowing agents to self-manage spending caps. Agent management was also improved by exposing execution modes such as Shared versus Dedicated and integrating recovery controls into the app surface.\n\nOn the developer experience side, the UI received a liquid-glass motion styling pass, Cloud SDK affordances were refined, and environment-specific issues blocking Windows E2E test execution were resolved. A previously reported voice-to-entity binding failure was closed after correctly registering routes for the plugin-local-inference pipeline.\n\nWork still in progress includes keeping local first-run selection local, adding a third-party plugin registry entry for plugin-madeonsol, and building out smoke tests for the monetized-app loop on the cloud mock environment.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-05.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1780531200,
+  "date": 1780617600,
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
-      "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
-        "Verified",
-        "Associate"
-      ],
-      "totalMessages": 2
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 105
-    },
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
-      "roles": [
-        "Trader",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
       "roles": [
         "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
         "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 9
+      "totalMessages": 14
+    },
+    "Sloshed": {
+      "id": "1282638617151275012",
+      "username": "sloshed0701",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 20
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -121,29 +118,46 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 549
+      "totalMessages": 558
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "digitalalchemy": {
+      "id": "734636383548997693",
+      "username": "ultimatepokeflute",
       "roles": [
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Dev School Student",
         "Designer",
         "utility",
-        "Coder",
-        "Hoplite",
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "Arizona999 🔥": {
+      "id": "1170526866088669265",
+      "username": "arizona999_99826",
+      "roles": []
+    },
+    "Cyber_Shai": {
+      "id": "1155015781826969601",
+      "username": "cyber_shai",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "₩/€": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 2
-    },
-    "АреАddiсt.еth": {
-      "id": "623256727558815754",
-      "username": "i.films",
-      "roles": []
+      "totalMessages": 13
     },
     "Saulo": {
       "id": "403183888798711809",
@@ -156,58 +170,6 @@
         "Verified",
         "Dev School Student",
         "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "cola": {
-      "id": "1313767173868752966",
-      "username": "kevindevin126",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 18
-    },
-    "Marsel": {
-      "id": "1418237443760586755",
-      "username": "marsel_51932",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "TrueZeiko": {
-      "id": "1511953089907789899",
-      "username": "truezeiko_60558",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
         "Designer",
         "utility",
         "Coder",
