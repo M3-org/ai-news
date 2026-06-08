@@ -1,12 +1,31 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "source": "elizaos",
-  "generated_at": "2026-06-07T02:12:33.782Z",
+  "generated_at": "2026-06-08T02:30:37.016Z",
   "base_path": "elizaos-media",
-  "files": [],
+  "files": [
+    {
+      "url": "https://pbs.twimg.com/media/HKOKiTCWcAE7N-t.jpg:large",
+      "filename": "embed-image-1513206848038375595.jpg:large",
+      "unique_name": "embed-image-1513206848038375595_65f395bc.jpg",
+      "hash": "65f395bc",
+      "type": "image",
+      "media_type": "embed_image",
+      "message_id": "1513206848038375595",
+      "channel_id": "1253563209462448241",
+      "channel_name": "💬-discussion",
+      "guild_id": "1253563208833433701",
+      "guild_name": "elizaOS",
+      "user_id": "807727820355797062",
+      "timestamp": "2026-06-07",
+      "message_content": "https://x.com/i/status/2063645378197545357"
+    }
+  ],
   "stats": {
-    "total_files": 0,
-    "by_type": {},
+    "total_files": 1,
+    "by_type": {
+      "image": 1
+    },
     "total_size_bytes": 0
   }
 }
