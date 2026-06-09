@@ -1,126 +1,271 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-06-01 to 2026-06-07",
+  "title": "Weekly Report - 2026-06-02 to 2026-06-08",
   "categories": [
     {
-      "title": "Weekly Discord Discussions",
+      "title": "ElizaOS Ecosystem Clarification and Kamino Plugin Development Discussion",
       "content": [
         {
-          "text": "Community members sought clarification on the ElizaOS ecosystem structure. Stan outlined four distinct components: ElizaOS is the core agent framework, ElizaCloud is the infrastructure hosting layer, Milady is a consumer-facing UI for personal task management, and Waifu is a side project where agents compete and manage their own economies running entirely on ElizaCloud. Odilitime also clarified that Waifu Fun does not have its own token, that Solace on Waifu has a token called Waifu, and that the team has not left ElizaOS despite community speculation to the contrary.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/image_7d0bf21a.png"
-          ],
-          "videos": [],
+          "text": "A community discussion took place clarifying the distinct components of the ElizaOS ecosystem after some confusion among members. Stan outlined the four main pieces: ElizaOS is the core framework for building agents, ElizaCloud is the infrastructure layer that hosts and runs pre-packaged agents, Milady is a consumer-facing UI that uses agents to help manage personal tasks and device interactions, and Waifu is a side project where agents can compete and manage their own economies, with all Waifu agents running entirely on ElizaCloud as its hosting layer. A community member asked whether Waifu was similar to Virtuals, prompting this clarification.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/image_7d0bf21a.png"
+        },
+        {
+          "text": "A separate thread in the discussion focused on a proposed Kamino plugin for ElizaOS. Developer Navneet Sahu explained that ElizaOS currently lacks a Kamino integration despite Kamino being one of the most significant protocols on Solana, covering lending, borrowing, automated liquidity vaults, yield farms, and limit orders. Navneet expressed intent to build a comprehensive plugin covering all of Kamino's core features, noting that Kamino has shown interest in adopting AI and that a proper integration could attract their attention. Stan confirmed that all plugins now live in the elizaOS/eliza repository and encouraged Navneet to fork and start building on the develop branch, advising to keep rebasing frequently given the fast pace of development. Other community members noted that a Kamino plugin would give ElizaOS agents access to meaningful DeFi actions beyond simple information retrieval, while also acknowledging the challenge of designing reliable abstractions around risk-sensitive operations like lending and vault management while keeping the developer experience straightforward. Navneet confirmed he is taking a careful, deliberate approach and has written a few actions so far.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
           "posters": "https://cdn.elizaos.news/posters/1780454190207-qsh5kr.jpg"
-        },
-        {
-          "text": "Developer Ben (Smeltor) introduced a multi-chain DeFi abstraction project covering swap, earn, perps, bridge, and borrow functionality across protocols including Kamino, Aave, Morpho, Compound, and Hyperliquid in a single non-custodial integration that returns signable calldata. He asked whether builders prefer an abstraction layer or owning each individual integration. Separately, developer Navneet Sahu announced plans to build a comprehensive Kamino plugin for ElizaOS, noting Kamino is one of the most significant protocols on Solana and has shown interest in AI adoption. Stan confirmed all plugins now live in the elizaOS/eliza repository and advised building on the develop branch with frequent rebasing.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780367451129-lks459.png"
-        },
-        {
-          "text": "Odilitime clarified that Hyperforge is the world-building component of a project called Hyperia, which is a separate team and not a joint venture. Both Hyperia and ElizaOS were started by Shaw, though Shaw may now serve only as an advisor to Hyperia while focusing primarily on ElizaOS, Milady, Waifu, and cloud initiatives. Ana-Maria from NeverBell, a project building infrastructure for AI agents to interact with financial markets through natural language and controlled execution, also posted a call for early testers, with the team funding accounts for experimentation.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780540363548-va121g.jpg"
-        },
-        {
-          "text": "A new member named Thaoryel introduced herself as someone experienced with AI companions and asked whether ElizaOS supports Discord integration, voice generation via ElevenLabs, image generation, and long-term relationship development features. Odilitime confirmed most capabilities are supported via plugin-discord and shared a link to a dedicated ElizaOS developer Discord. He also mentioned that Ruby, an ElizaOS-based agent, can generate videos and images when the appropriate model is downloaded, and shared RubyTrivia on X as an example.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://cdn.elizaos.news/elizaos-media/embed-image-1513206848038375595_65f395bc.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, builderr_guru raised the question of how to benchmark agent quality versus luck for trading agents, describing a testing harness using a single decide() function with identical data forward-tested on hidden periods, noting that simple risk-off logic consistently outperformed leveraged momentum strategies during real market downturns. Separately, Cabal_hunter introduced a live on-chain funding tracer called Cabal-Hunter that detects coordinated wallet activity before a bot executes a trade, available as a pay-per-query MCP server at 0.05 USDC per query integrating with Claude, Cursor, and ElizaOS via plugin-x402-solana.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780885952110-sgns9j.png"
-        },
-        {
-          "text": "Shaw posted a request for community members with spare compute to run an agent task analyzing the ArkLib GitHub repository for code quality and potential LLM-generated content, though the bot Rick returned a failure response. Odilitime confirmed that the AI16Z token migration window has closed and no further conversions are possible for tokens held in self-custody wallets. A scammer alert was raised in the coders channel by Omid Sa and acknowledged by Odilitime. DEMIAN from DAPPCRAFT reached out in the partners channel to explore a potential collaboration involving an AI DePIN project with approximately 0.5 billion in fully diluted valuation.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744",
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780625300193-lx2nkt.png"
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Weekly Development Updates",
+      "title": "Eliza Project Summary: June 2, 2026",
+      "content": {
+        "text": "Development on June 2, 2026 centered on stabilizing Eliza Cloud infrastructure and improving desktop startup performance. Key completed work included enabling the per-agent web UI by default for better sandbox interaction, isolating the Steward tenant for staging with service-key provisioning, and fixing billing logic to ensure token budget guarantees for reasoning models. On the desktop side, first-use stalls were eliminated through deferred model warmup, app initialization was accelerated via a tray-first startup approach with decoupled UI spawning, and fresh-clone builds were made more reliable through automated workspace package installation. Core orchestrator improvements included closing race conditions that caused duplicate replies, refining message routing to prioritize coding tasks, suppressing leaked JSON envelopes in user replies, and removing approximately 919 lines of dead voice subsystem code. Two issues currently require urgent attention: a proposed router-internal recovery design to fix data mangling in sub-agent completion narration (issue 8162), and a decision needed on whether to adjust consumer-side bundling policies or modify app-core to resolve transitive dependency externalization (issue 8142). New issues have also been filed regarding logger resolution failures in tests and Storybook rendering failures for components importing the core package. Several previously open issues related to cloud and inference stability regressions, orchestrator and runtime leaks, and fresh-clone build blockers have been resolved and closed. Contributor NubsCarson was recognized for providing critical architectural analysis on the sub-agent routing issues.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-02.json",
+        "posters": "https://cdn.elizaos.news/posters/1780454216684-lv3y7j.png"
+      },
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Discussion: Hyperia, Hyperforge, and Project Updates",
       "content": [
         {
-          "text": "The week's most notable launch was the /orchestrator coding workbench, which achieves parity with Claude-Code and Codex-style workflows using the opencode and Cerebras backend. A new keyless WEB_FETCH action was introduced to enable live information retrieval for non-Anthropic models. ACP request reliability was improved by preserving JSON-RPC error data fields during error handling. Race conditions causing duplicate replies were closed, message routing was refined to prioritize coding tasks, and approximately 919 lines of dead voice subsystem code were removed. Infrastructure work resolved cloud agent sandbox routing and startup failures and streamlined deployment pipelines with environment-specific triggers.",
+          "text": "A community member asked about Hyperforge and its connection to ElizaOS. Odilitime clarified that Hyperforge is the world-building component of a project called Hyperia, which is a separate team and not a joint venture like Babylon. Both Hyperia and ElizaOS were started by Shaw, though Odilitime noted that Shaw may now only serve as an advisor to Hyperia, as he appears to be focused primarily on ElizaOS, milady, wafiu, and cloud initiatives. A community member also posted a call for testers for an early-stage project called Neverbell, which explores AI agents interacting with financial systems through user-defined permissions and controls, with the team funding accounts for experimentation. The rest of the channel activity consisted largely of greetings and a developer offering assistance to anyone needing development help.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-01.json",
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-02.json"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780367521645-2v2ds.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780540363548-va121g.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Daily Summary: June 3, 2026",
+      "content": [
+        {
+          "text": "Development on June 3, 2026 centered on four main areas: cloud authentication stability, UI improvements, CI/CD alignment, and ecosystem expansion. On the authentication front, the team resolved magic-link sign-in failures on the staging environment by updating CSP, CORS, and app-auth context handling across multiple pull requests. For UI and documentation, a new prompt-suggestion strip was added to the ContinuousChatOverlay to improve user onboarding, and Storybook documentation was expanded to cover nine core UI primitives, enhancing the developer experience. System stability efforts included aligning smoke tests and workspace dependencies for consistency across Bun and Vite canary builds, as well as adding typed error signaling for missing native bindings to improve local inference reliability. The ecosystem was expanded by integrating the @1claw/plugin-elizaos plugin into the curated registry, bringing support for HSM-backed secrets and multi-chain signing. Work in progress includes a cloud SSO pairing handler for a dashboard popup flow and syncing the Odysseus UI to the latest upstream changes in the plugin-task-coordinator.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-03.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "elizaOS Discord Community Activity - June 4, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, several community members introduced themselves and shared their work. An AI Engineer and Security Researcher named Marsel posted a detailed introduction highlighting expertise in agentic workflows, Web3 security, custom plugin development for elizaOS projects, and automation using Python and FastAPI. He expressed interest in developer tasks, plugin building, and security audits for agentic workflows. Separately, a representative from Intuition Box, a developer ecosystem, reached out to the community about two upcoming bounties and expressed interest in collaborating with the elizaOS developer community, asking for the appropriate contact or permission to share the bounties publicly. Odilitime also shared a link to an upcoming Twitter Space event.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780625226515-h8ijdc.png"
+          ]
         },
         {
-          "text": "Cloud authentication was stabilized across multiple days, resolving magic-link sign-in failures on staging by updating CSP, CORS, and app-auth context handling, and later fixing session drops, OAuth redirect issues, and Steward cookie hydration problems. The Steward SDK was updated to v0.10.1 to address passkey failures and improve multi-factor authentication handling. PKCE was implemented for Steward OAuth, request signing was added for Steward proxy calls, and scoped token minting with specific trade:order permissions was introduced. A production outage caused by OAuth 400 errors affecting the Sign in with Eliza Cloud flow was identified as requiring immediate coordination.",
+          "text": "In the coders channel, a scammer alert was raised by community member Omid Sa, tagging a user and notifying moderator Odilitime, who acknowledged the report. A developer also posted asking if anyone was looking to hire a developer, mirroring a similar message posted in the general discussion channel.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-03.json",
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-05.json",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780625255561-exio4i.png"
+          ]
+        },
+        {
+          "text": "In the partners channel, DEMIAN from DAPPCRAFT reached out to Shaw to explore a potential collaboration involving an AI DePIN project with approximately 0.5 billion in fully diluted valuation. DEMIAN indicated a close relationship with the project team and suggested there could be significant mutual value, requesting to set up a call to connect Shaw with them.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780625300193-lx2nkt.png"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Community Discussion: Market Conditions, Ecosystem Learning, and AI Shift",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members reflected on the current difficult market conditions, with one user noting the market is in a rough state and that survival is the priority. A newer member named ross shared his personal journey of discovering the AI and crypto ecosystem after concerns about job security due to AI, leading him to explore investments and eventually land in this community. He expressed feeling both early and late to the space, and was overwhelmed by how much has been happening without his awareness. He asked if there were ways he could contribute and help the community. Odilitime encouraged him to just participate and offered to boost any relevant tweets. The conversation had a lighthearted and welcoming tone, with several members expressing solidarity.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780711126542-20rf83.jpg"
+          ]
+        },
+        {
+          "text": "In the coders channel, ross continued his conversation about feeling overwhelmed by the volume of information available in the ecosystem. Odilitime offered reassurance, noting there is no real time pressure and that curiosity is a better driver than urgency. Odilitime also pointed out that LLMs are a great tool for breaking down complex questions, and encouraged ross that now is a great time to start learning. Ross acknowledged that his sense of urgency comes from a mix of personal and altruistic motivations, and that every new piece of content he encounters raises more questions.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Eliza Cloud Infrastructure and Agent Autonomy Update - June 5, 2026",
+      "content": [
+        {
+          "text": "Development on June 5, 2026 centered on hardening Eliza Cloud infrastructure and advancing agent autonomy features. A production outage is currently active, with login failures caused by OAuth 400 errors affecting the Sign in with Eliza Cloud flow. This requires immediate coordination to deploy signing secrets and update tenant redirect allowlists. Additionally, a ledger mismatch between app-credits and org-balance is blocking seamless spending and awaiting an architectural resolution.\n\nOn the security front, the team implemented PKCE for Steward OAuth, added request signing for Steward proxy calls, and introduced scoped token minting with specific trade:order permissions. API reliability was improved through new container management routes and updated CORS policies for third-party app integrations.\n\nAgent autonomy saw meaningful progress, with autonomous goal-driven loops now enabled for monetized applications, allowing agents to self-manage spending caps. Agent management was also improved by exposing execution modes such as Shared versus Dedicated and integrating recovery controls into the app surface.\n\nOn the developer experience side, the UI received a liquid-glass motion styling pass, Cloud SDK affordances were refined, and environment-specific issues blocking Windows E2E test execution were resolved. A previously reported voice-to-entity binding failure was closed after correctly registering routes for the plugin-local-inference pipeline.\n\nWork still in progress includes keeping local first-run selection local, adding a third-party plugin registry entry for plugin-madeonsol, and building out smoke tests for the monetized-app loop on the cloud mock environment.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-05.json"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780711170618-tdan6i.jpg"
+          ]
+        }
+      ],
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "DeFi AI Agent Developer Recruitment in Community Channels",
+      "content": [
+        {
+          "text": "In the discussion channel, a developer named Ginga posted looking for work opportunities. Henry responded, introducing himself as someone building an AI agent that autonomously manages a DeFi portfolio using x402 for the Casper Agentic Buildathon. Henry specified he needs a developer with knowledge of Eliza or similar frameworks. Another community member, enigma289, expressed interest in the AI-focused direction of the project. The coders channel, which directs users to the ElizaOS documentation for getting started, had no activity recorded on the same date.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Eliza Project Update: June 6, 2026",
+      "content": [
+        {
+          "text": "Development on June 6, 2026 centered on two major themes: stabilizing the Eliza Cloud infrastructure and modularizing the core plugin architecture. On the infrastructure side, authentication flows were stabilized by resolving session drops, OAuth redirect issues, and Steward cookie hydration problems. The Steward SDK was updated to v0.10.1 to address passkey failures and improve multi-factor authentication handling. Additional fixes addressed tenant isolation for staging environments and optimized mobile onboarding and CLI authentication. For plugin architecture, the plugin-lifeops monolith was decomposed into a new plugin-personal-assistant orchestrator and six domain-focused plugins, representing a significant step toward a more modular system. The third-party registry was also expanded with the addition of a new plugin. On the feature and data integrity side, scope-aware history-based prompt suggestions were implemented on the suggestions API endpoint, and a long-standing credit ledger issue was resolved by unifying app-credit purchases and inference spending into a single organization-level ledger, eliminating stranded credits. CI/CD reliability was improved through the addition of smoke tests for the cloud mock stack and cleanup of broken route verification. Several pull requests across cloud and API, orchestrator and plugins, and UI and dependencies areas remain in progress.",
+          "sources": [
             "https://elizaos.github.io/api/summaries/overall/day/2026-06-06.json"
           ],
           "images": [],
           "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Discussion: AI Companions, Agent Benchmarking, and On-Chain Tools",
+      "content": [
+        {
+          "text": "In the general discussion channel, a new member named Thaoryel introduced herself as someone experienced with AI companions and expressed interest in building a conversational AI companion using ElizaOS, rather than a business or automation agent. She asked whether ElizaOS supports Discord integration, voice generation via ElevenLabs, image generation, and long-term relationship development features. Odilitime confirmed that most of these capabilities are supported, noting that the platform primarily uses plugin-discord, and shared a link to a dedicated ElizaOS developer Discord for further assistance. He also mentioned that Ruby, an ElizaOS-based agent, can generate videos and images when the appropriate model is downloaded. A link to RubyTrivia on X was shared as an example of an ElizaOS-built agent.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1513206848038375595_65f395bc.jpg"
         },
         {
-          "text": "The plugin-lifeops monolith was decomposed into a new plugin-personal-assistant orchestrator and six domain-focused plugins, representing a significant step toward a more modular system. The third-party plugin registry was expanded with the addition of the @1claw/plugin-elizaos plugin bringing HSM-backed secrets and multi-chain signing support, and a new plugin-madeonsol entry is in progress. Storybook documentation was expanded to cover nine core UI primitives. A scope-aware history-based prompt suggestions feature was implemented on the suggestions API endpoint.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-03.json",
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-06.json"
-          ],
-          "images": [],
-          "videos": []
+          "text": "Also in the general channel, a user asked about the possibility of a manual migration review for AI16Z tokens held in a self-custody wallet before the February 2025 snapshot. Odilitime confirmed that the migration window has closed and no further conversions are possible. Separately, ross asked about inviting developer friends to the server and was told that was fine, and that a separate developer-focused Discord also exists. The server was noted to have ongoing issues with scam bots despite efforts to remove them. Shaw posted a request for community members with spare compute to run an agent task analyzing the ArkLib GitHub repository for code quality and potential LLM-generated content, though the bot Rick returned a failure response to the request.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
         },
         {
-          "text": "Eliza Cloud Apps launched on June 7 with per-tenant isolated container hosting including database isolation, custom URLs, and metered billing. Terraform modules were deployed for the apps data-plane and CI workflows were established for staging and production. Container lifecycle management capabilities including PATCH, DELETE, and scale operations were added to the Cloud API. The ElizaCloudClient was expanded with a transcribeAudio function for voice and speech-to-text support. A long-standing credit ledger issue was resolved by unifying app-credit purchases and inference spending into a single organization-level ledger, eliminating stranded credits. An outstanding audit of scaling and ingress gaps is needed to finalize the go-live.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-07.json"
-          ],
-          "images": [],
-          "videos": [],
+          "text": "In the coders channel, builderr_guru raised the question of how to benchmark agent quality versus luck, particularly for trading agents. He described a testing harness he built using a single decide() function with identical data and fills, forward-tested on hidden periods, with top performers re-evaluated on additional hidden periods to distinguish skill from luck. He noted that simple risk-off logic consistently outperformed leveraged momentum strategies during real market downturns. Separately, Cabal_hunter introduced a tool called Cabal-Hunter, a live on-chain funding tracer designed to detect coordinated wallet activity before a bot executes a trade. He described a case where a token with a clean audit had six wallets all funded from the same source 47 seconds before the first trade, which later resulted in a rug pull. The tool is available as a pay-per-query MCP server at 0.05 USDC per query with no API key required, and integrates with Claude, Cursor, and ElizaOS via the plugin-x402-solana package. A GitHub template for Python and ElizaOS integration was also shared.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "posters": "https://cdn.elizaos.news/posters/1780885952110-sgns9j.png"
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Eliza Cloud Apps Launch and Infrastructure Development - June 7, 2026",
+      "content": [
+        {
+          "text": "Development on June 7, 2026 was centered on the launch of Eliza Cloud Apps, with the team implementing per-tenant isolated container hosting that includes database isolation, custom URLs, and metered billing. Terraform modules were deployed for the apps data-plane, and CI workflows were established for both staging and production environments. Container lifecycle management capabilities including PATCH, DELETE, and scale operations were added to the Cloud API, and an encryption-free path for tenant cluster admin DSNs was enabled to streamline provisioning workflows.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-07.json",
           "posters": "https://cdn.elizaos.news/posters/1780885982963-x66jar.png"
         },
         {
-          "text": "Agent autonomy saw meaningful progress with autonomous goal-driven loops now enabled for monetized applications, allowing agents to self-manage spending caps. Agent management was improved by exposing execution modes such as Shared versus Dedicated and integrating recovery controls into the app surface. Desktop startup performance was improved by eliminating first-use stalls through deferred model warmup and a tray-first startup approach with decoupled UI spawning. Fresh-clone builds were made more reliable through automated workspace package installation. The UI received a liquid-glass motion styling pass and Cloud SDK affordances were refined.",
+          "text": "On the Cloud API and SDK side, the ElizaCloudClient was expanded with a transcribeAudio function to support voice and speech-to-text capabilities. Billing accuracy was improved by fixing cron logic related to earnings conversion failures, and authentication issues affecting WebSocket and EventSource connections were resolved by enabling token passing via query parameters.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-07.json",
+          "posters": "https://cdn.elizaos.news/posters/1780886014271-uhf3x8.png"
+        },
+        {
+          "text": "Several platform stability and bug fixes were completed, including resolving UI 404 and 500 errors by mounting missing routes and bundling the LiFi SDK. Domain registration logic was corrected to prevent erroneous charges for failed stub registrations, and provisioning daemon issues were addressed including Steward platform-key path integration and agent token expiration limits. One outstanding issue requires attention: an audit of scaling and ingress gaps is needed to finalize the Eliza Cloud Apps go-live, specifically regarding database and container isolation. Multiple pull requests across infrastructure, cloud, plugins, and core areas remain in progress.",
+          "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-07.json",
+          "posters": "https://cdn.elizaos.news/posters/1780886034889-u5wg6d.jpg"
+        }
+      ],
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Discord Community Activity - June 8, 2026",
+      "content": [
+        {
+          "text": "In the general discussion and coders channels, two notable solicitation posts appeared from user Doniyorov, who framed their messages around auditing the elizaos/plugin-discord architecture and the voice.ts file. The posts described the user as a Senior AI Architect with a TradFi and quantitative background seeking an immediate contract buyout of $45,000 USDT or a structured yearly retainer, citing a local liquidity crunch. The user offered 40 to 80 hours per week of work covering agent orchestration optimization, custom plugin wrapper development, and off-chain state management, and invited interested parties to DM them for a live technical discussion. These posts appeared across both the discussion and coders channels in near-identical form, suggesting coordinated self-promotion rather than organic technical conversation.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-05.json",
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-02.json"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1780711170618-tdan6i.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780970142389-1r0md8.png"
+          ]
+        },
+        {
+          "text": "Also in the coders channel, a user identified as anton_0413 posted a request for a new collaborator after a previous colleague became unavailable due to other work commitments. The user acknowledged the post might resemble an advertisement but encouraged interested community members to reach out via DM for details, explicitly noting it was not spam or a scam.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780970164761-brb3.png"
+          ]
+        },
+        {
+          "text": "In the partners channel, user DEMIAN from DAPPCRAFT sent a soft ping to Shaw, a moderator and Labs Alumni, referencing a prior message thread. No further context or response was recorded in the available data.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780970185231-gu14hq.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Eliza Cloud Apps Development Update - June 8, 2026",
+      "content": [
+        {
+          "text": "Development on June 8, 2026 focused on stabilizing the Eliza Cloud Apps data plane, with the team successfully resolving several P0 blockers related to ingress routing, tenant database isolation, and port allocation. Core infrastructure for app deployment is nearing completion, but critical billing leaks have been identified that must be addressed before moving to production.\n\nOn the completed work front, the team enabled reverse-proxying via a new per-app Caddy routing client, implemented collision-safe host-port allocation for high-density deployments, and enforced strict tenant isolation through DSN injection for database URLs. Infrastructure and CI/CD stability improvements included resolving Terraform application errors and stabilizing staging environments for BitRouter, as well as fixing runtime image dependency issues by hoisting the plugin-wallet module. BitRouter and AI pricing issues were also resolved, including HTTP 402 and 5xx errors by switching to BYOK API-key mode and forcing pricing for OpenAI text-embedding models.\n\nTwo key concerns require immediate attention. First, four billing leaks have been identified in the Apps hosting and per-tenant-DB model that must be investigated before go-live. Second, production deployment is recommended to be delayed as infrastructure-level cloud-init configurations for Caddy, pgbouncer, and provisioning-lifecycle management remain unresolved.\n\nSeveral pull requests are currently in progress covering infrastructure and database work, new features and UX improvements, and bug fixes.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-08.json"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1780970205495-kkz6g8.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1780886105
+  "date": 1780970218
 }
