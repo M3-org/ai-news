@@ -1,110 +1,195 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-08",
+  "title": "Daily Report - 2026-06-09",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Activity - June 8, 2026",
+      "title": "ElizaOS Community Discussion and Plugin Registry Updates",
       "content": [
         {
-          "text": "In the general discussion and coders channels, two notable solicitation posts appeared from user Doniyorov, who framed their messages around auditing the elizaos/plugin-discord architecture and the voice.ts file. The posts described the user as a Senior AI Architect with a TradFi and quantitative background seeking an immediate contract buyout of $45,000 USDT or a structured yearly retainer, citing a local liquidity crunch. The user offered 40 to 80 hours per week of work covering agent orchestration optimization, custom plugin wrapper development, and off-chain state management, and invited interested parties to DM them for a live technical discussion. These posts appeared across both the discussion and coders channels in near-identical form, suggesting coordinated self-promotion rather than organic technical conversation.",
+          "text": "A developer submitted a pull request (PR #8294) to add a third-party plugin called @usenami/plugin-signer to the ElizaOS registry. This plugin is described as a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave for security. The developer asked about the review process and whether elizaOS/eliza was still the correct target repository. A community member confirmed that plugins now go into the main eliza repo, and that the review process is handled by Shaw's agent with an estimated turnaround of approximately 48 hours. The PR targets the develop branch and adds a JSON entry under packages/registry/entries/third-party.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780970142389-1r0md8.png"
-          ]
+          "videos": []
         },
         {
-          "text": "Also in the coders channel, a user identified as anton_0413 posted a request for a new collaborator after a previous colleague became unavailable due to other work commitments. The user acknowledged the post might resemble an advertisement but encouraged interested community members to reach out via DM for details, explicitly noting it was not spam or a scam.",
+          "text": "A new service called CallTyro was announced in the coders channel. It is described as a free agent registry for ElizaOS agents that allows agents to register once and be discovered automatically by other agents. The service is available at calltyro.com/register.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780970164761-brb3.png"
-          ]
+          "videos": []
         },
         {
-          "text": "In the partners channel, user DEMIAN from DAPPCRAFT sent a soft ping to Shaw, a moderator and Labs Alumni, referencing a prior message thread. No further context or response was recorded in the available data.",
+          "text": "General discussion in the community channel included brief greetings from multiple users, a question about whether the project is currently working, and a mention of a competition. No detailed technical context was provided for these exchanges.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780970185231-gu14hq.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Eliza Cloud Apps Development Update - June 8, 2026",
+      "title": "Eliza Cloud Infrastructure Hardening and App Deployment Finalization - June 9, 2026",
       "content": [
         {
-          "text": "Development on June 8, 2026 focused on stabilizing the Eliza Cloud Apps data plane, with the team successfully resolving several P0 blockers related to ingress routing, tenant database isolation, and port allocation. Core infrastructure for app deployment is nearing completion, but critical billing leaks have been identified that must be addressed before moving to production.\n\nOn the completed work front, the team enabled reverse-proxying via a new per-app Caddy routing client, implemented collision-safe host-port allocation for high-density deployments, and enforced strict tenant isolation through DSN injection for database URLs. Infrastructure and CI/CD stability improvements included resolving Terraform application errors and stabilizing staging environments for BitRouter, as well as fixing runtime image dependency issues by hoisting the plugin-wallet module. BitRouter and AI pricing issues were also resolved, including HTTP 402 and 5xx errors by switching to BYOK API-key mode and forcing pricing for OpenAI text-embedding models.\n\nTwo key concerns require immediate attention. First, four billing leaks have been identified in the Apps hosting and per-tenant-DB model that must be investigated before go-live. Second, production deployment is recommended to be delayed as infrastructure-level cloud-init configurations for Caddy, pgbouncer, and provisioning-lifecycle management remain unresolved.\n\nSeveral pull requests are currently in progress covering infrastructure and database work, new features and UX improvements, and bug fixes.",
+          "text": "Development on June 9, 2026 centered on strengthening the Eliza Cloud infrastructure and finalizing app deployment logic in preparation for a stable Product 2 go-live. A key blocker remains the Google OAuth issue where a missing tenant-level redirect allowlist is preventing progress, tracked in issue 8257. Additionally, final infrastructure hardening and daemon restart coordination are still required to complete the Eliza Cloud Apps scaling transition per issue 8321.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-08.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-09.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1780970205495-kkz6g8.jpg"
-          ]
+          "videos": []
+        },
+        {
+          "text": "On the completed work front, the team made significant strides in cloud infrastructure and cost optimization. Dedicated tenant-DB nodes were made optional to reduce fixed costs for low-density apps. A multi-project Hetzner deployment pattern was implemented to bypass server quota limits. Terraform workflows were hardened with fail-closed variables and state locking, and infrastructure reliability was improved through GHA control-plane management and server type default fixes.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-09.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "App deployment and database lifecycle management also saw notable completions. Opt-in per-tenant databases were enabled along with automated teardown and slot-release upon app deletion. Verified custom domains were integrated into the apps ingress stack, and autoscaler efficiency was enhanced with environment-overridable buffer settings and tier labeling. Tooling improvements included repairs to the cloud-sdk route-coverage audit tool and added drift protection for apps-data-plane VMs to ignore name changes.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-09.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Work currently in progress includes infrastructure fixes for pgbouncer, ports, and environment contracts, as well as Steward OAuth PKCE implementations for both Feed and login surfaces. Additional active work covers billing, ingress, and tenant DB teardown fixes, gating npm publish on global-install smoke tests, and registry updates for the Reddit and Neynar plugins. A new proposal was also filed for a Runtime Open Federation, which envisions a permissionless multi-agent network where agents can earn USDC rewards.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-09.json"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1780876800,
+  "date": 1780963200,
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
       "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
         "Verified",
-        "Associate"
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Amanda": {
+      "id": "471014062378057768",
+      "username": "amanda089446",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "bigalex777": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
       ],
       "totalMessages": 3
     },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
       "roles": [
-        "Moderator",
-        "Labs Alumni",
+        "Trader",
+        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 106
+      "totalMessages": 1
     },
-    "Tutsipop": {
-      "id": "1072569990865223710",
-      "username": "tutsipop5244",
+    "Dr.AB": {
+      "id": "987387414588817429",
+      "username": "drab1901",
       "roles": [
-        "It",
+        "Trader",
+        "Creator",
         "Verified",
-        "Fr",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Doniyorov": {
-      "id": "726714328203526165",
-      "username": "doniyorv7503",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 573
+    },
+    "Alexander": {
+      "id": "919951628394717194",
+      "username": "naked_monk",
       "roles": [
         "Helper",
-        "It",
+        "Trader",
+        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
@@ -112,29 +197,27 @@
       ],
       "totalMessages": 2
     },
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "Lexpo4777": {
+      "id": "776566651964751924",
+      "username": "lexpo4777",
       "roles": [
-        "Helper",
+        "Fr",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "[WG] degenspartan",
+        "utility"
       ],
-      "totalMessages": 12
+      "totalMessages": 1
     },
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Trader",
-        "Designer",
+        "Verified",
+        "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 12
+      "totalMessages": 15
     }
   }
 }

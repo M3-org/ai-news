@@ -1,42 +1,37 @@
-# elizaOS Discord - 2026-06-08
+# elizaOS Discord - 2026-06-09
 
 ## Summary
 
-### Recruitment and Collaboration
+### Third Party Plugin Registry Submission
 
-anton_0413 in the coders channel posted a request seeking a new collaborator after their previous partner became unavailable, asking interested parties to reach out via direct message.
+naked_monk submitted PR #8294 to add the @usenami/plugin-signer to the ElizaOS third-party plugin registry. The plugin is a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave for enhanced security. The PR targets the develop branch of the main eliza repository at elizaOS/eliza, with the registry entry located at packages/registry/entries/third-party/usenami__plugin-signer.json. All CI checks passed successfully with no requested changes.
 
-### Service Offerings and Availability
+### Plugin Registry Review Process
 
-doniyorv7503 introduced themselves across both discussion and coders channels as a Senior AI Architect with TradFi and quantitative background. They announced 100% availability at 40-80 hours per week and offered services including agent orchestration optimization, custom plugin wrapper development for voice and message interaction layers, and off-chain state management. They requested either a $45k USDT contract buyout or yearly retainer arrangement.
-
-### Technical Auditing
-
-doniyorv7503 reported conducting an audit of the @elizaos/plugin-discord architecture, specifically examining voice.ts and the voice manager's handling of real-time voice event management and text synchronization under load. They expressed readiness for immediate technical deep-dives on Eliza's core architecture and state synchronization at the code level.
+odilitime clarified the plugin submission workflow, confirming that third-party plugins should be submitted to the main eliza repository rather than a separate location. Shaw's agent is responsible for reviewing third-party registry entries, with a typical turnaround time of approximately 48 hours. The contributor inquired about whether any additional changes were needed from their side after the initial submission.
 
 ## FAQ
 
-**Q: What is doniyorv7503 currently auditing in the elizaOS codebase?**
-A: They are auditing the @elizaos/plugin-discord architecture, specifically examining voice.ts and the voice manager's handling of real-time voice event management and text synchronization under load.
+**Q: Where should third-party plugins be submitted for the ElizaOS registry?**
+A: Third-party plugins should be submitted to the main eliza repository at elizaOS/eliza, targeting the develop branch.
 
-**Q: What services is doniyorv7503 offering?**
-A: They are offering agent orchestration optimization, custom plugin wrapper development particularly for voice and message interaction layers, and off-chain state management.
+**Q: Who reviews third-party plugin registry submissions?**
+A: Shaw's agent typically reviews third-party registry entries.
 
-**Q: What are doniyorv7503's contract terms?**
-A: They are requesting either a $45k USDT contract buyout or yearly retainer in exchange for 40-80 hours per week of development work.
+**Q: What is the expected turnaround time for third-party plugin reviews?**
+A: The approximate turnaround time is 48 hours.
 
-**Q: What is anton_0413 looking for?**
-A: They are seeking a new collaborator after their previous partner became unavailable.
+**Q: What does the @usenami/plugin-signer do?**
+A: It is a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave for secure key management.
 
 ## Help Interactions
 
-No help interactions were resolved during this period. The messages consisted primarily of introductions and service offerings without collaborative problem-solving or technical assistance exchanges.
+**Helper:** odilitime
+**Helpee:** naked_monk
+**Resolution:** odilitime confirmed that the plugin submission to the main eliza repo was correct and explained that Shaw's agent reviews third-party registry entries with approximately 48-hour turnaround. The PR #8294 had already passed CI with no requested changes.
 
 ## Action Items
 
 ### Technical
 
-- Conduct technical deep-dive on Eliza's core architecture and state synchronization at code level (mentioned by doniyorv7503)
-- Complete audit of @elizaos/plugin-discord architecture focusing on voice.ts (mentioned by doniyorv7503)
-- Optimize agent orchestration (mentioned by doniyorv7503)
-- Develop custom plugin wrappers for voice and message interaction layers (mentioned by doniyorv7503)
+- Review PR #8294 for @usenami/plugin-signer third-party plugin registry entry (mentioned by naked_monk, to be reviewed by Shaw's agent)

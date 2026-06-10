@@ -1,0 +1,193 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-09",
+  "date": 1780963200,
+  "stats": {
+    "totalMessages": 17,
+    "totalUsers": 10
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on a third-party plugin registry submission. naked_monk opened PR #8294 to add @usenami/plugin-signer to the ElizaOS registry - a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave. The PR targets the main eliza repo at elizaOS/eliza on the develop branch, adding the entry at packages/registry/entries/third-party/usenami__plugin-signer.json. CI passed with no requested changes. odilitime confirmed that plugins should go into the main eliza repo and indicated Shaw's agent typically reviews third-party registry entries with an approximate 48-hour turnaround time. The contributor sought clarification on the review process and whether any additional changes were needed from their side. ross.ross.ross made references to a competition or race but provided no technical context.",
+      "faqs": [
+        {
+          "question": "What's the typical turnaround for third-party registry additions to get reviewed/merged, and is elizaOS/eliza still the right target?",
+          "askedBy": "naked_monk",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Who reviews/merges third-party registry entries, and roughly how long does it usually take?",
+          "askedBy": "naked_monk",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "naked_monk",
+          "context": "Clarifying where plugins should be submitted and the review process for third-party registry entries",
+          "resolution": "Confirmed plugins go into main eliza repo and Shaw's agent reviews with ~48 hour turnaround"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Review and merge PR #8294 adding @usenami/plugin-signer to third-party registry",
+          "mentionedBy": "naked_monk"
+        }
+      ],
+      "messageCount": 16,
+      "userCount": 9
+    }
+  ],
+  "nicknameMap": {
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Amanda": {
+      "id": "471014062378057768",
+      "username": "amanda089446",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "bigalex777": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Dr.AB": {
+      "id": "987387414588817429",
+      "username": "drab1901",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 573
+    },
+    "Alexander": {
+      "id": "919951628394717194",
+      "username": "naked_monk",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Lexpo4777": {
+      "id": "776566651964751924",
+      "username": "lexpo4777",
+      "roles": [
+        "Fr",
+        "Verified",
+        "[WG] degenspartan",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 15
+    }
+  }
+}

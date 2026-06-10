@@ -1,77 +1,165 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-08",
-  "date": 1780876800,
+  "title": "elizaOS Discord - 2026-06-09",
+  "date": 1780963200,
   "stats": {
-    "totalMessages": 7,
-    "totalUsers": 5
+    "totalMessages": 17,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation begins with basic greetings from dondada0420. The primary content comes from doniyorv7503, who introduces themselves as a Senior AI Architect conducting an audit of the @elizaos/plugin-discord architecture. They specifically mention examining voice.ts and the voice manager's handling of real-time voice event management and text synchronization under load. The user is seeking immediate contract work, requesting a $45k USDT contract buyout or yearly retainer in exchange for 40-80 hours per week of development work. They offer services including optimizing agent orchestration, writing custom plugin wrappers for voice/message interaction layers, and managing off-chain state. The user emphasizes their availability for immediate technical deep-dives on Eliza's core architecture and state synchronization at the code level. No actual technical problems were solved, no architectural decisions were made, and no concrete implementations were discussed in this segment. The chat represents a job-seeking post rather than collaborative technical discussion.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 2
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The Discord channel had minimal technical discussion during this period. The segment primarily consisted of three messages: anton_0413 posted a request seeking a new collaborator after their previous partner became unavailable, asking interested parties to contact via DM. doniyorv7503 introduced themselves as a Senior AI Architect with TradFi/quantitative background, currently auditing the @elizaos/plugin-discord architecture, specifically examining voice.ts and the voice manager's handling of real-time voice event management and text synchronization under load. They announced 100% availability (40-80 hours/week) and offered services including agent orchestration optimization, custom plugin wrapper development (particularly for voice/message interaction layers), and off-chain state management. They expressed readiness for immediate technical deep-dives on Eliza's core architecture and state synchronization at the code level. tutsipop5244 posted a single word message with no technical content. No actual technical discussions, problem-solving, or collaborative work occurred in this segment.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "summary": "The discussion centered on a third-party plugin registry submission. naked_monk opened PR #8294 to add @usenami/plugin-signer to the ElizaOS registry - a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave. The PR targets the main eliza repo at elizaOS/eliza on the develop branch, adding the entry at packages/registry/entries/third-party/usenami__plugin-signer.json. CI passed with no requested changes. odilitime confirmed that plugins should go into the main eliza repo and indicated Shaw's agent typically reviews third-party registry entries with an approximate 48-hour turnaround time. The contributor sought clarification on the review process and whether any additional changes were needed from their side. ross.ross.ross made references to a competition or race but provided no technical context.",
+      "faqs": [
+        {
+          "question": "What's the typical turnaround for third-party registry additions to get reviewed/merged, and is elizaOS/eliza still the right target?",
+          "askedBy": "naked_monk",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Who reviews/merges third-party registry entries, and roughly how long does it usually take?",
+          "askedBy": "naked_monk",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "naked_monk",
+          "context": "Clarifying where plugins should be submitted and the review process for third-party registry entries",
+          "resolution": "Confirmed plugins go into main eliza repo and Shaw's agent reviews with ~48 hour turnaround"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Review and merge PR #8294 adding @usenami/plugin-signer to third-party registry",
+          "mentionedBy": "naked_monk"
+        }
+      ],
+      "messageCount": 16,
+      "userCount": 9
     }
   ],
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
       "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
         "Verified",
-        "Associate"
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Amanda": {
+      "id": "471014062378057768",
+      "username": "amanda089446",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "bigalex777": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
       ],
       "totalMessages": 3
     },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
       "roles": [
-        "Moderator",
-        "Labs Alumni",
+        "Trader",
+        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 106
+      "totalMessages": 1
     },
-    "Tutsipop": {
-      "id": "1072569990865223710",
-      "username": "tutsipop5244",
+    "Dr.AB": {
+      "id": "987387414588817429",
+      "username": "drab1901",
       "roles": [
-        "It",
+        "Trader",
+        "Creator",
         "Verified",
-        "Fr",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Doniyorov": {
-      "id": "726714328203526165",
-      "username": "doniyorv7503",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 573
+    },
+    "Alexander": {
+      "id": "919951628394717194",
+      "username": "naked_monk",
       "roles": [
         "Helper",
-        "It",
+        "Trader",
+        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
@@ -79,29 +167,27 @@
       ],
       "totalMessages": 2
     },
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "Lexpo4777": {
+      "id": "776566651964751924",
+      "username": "lexpo4777",
       "roles": [
-        "Helper",
+        "Fr",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "[WG] degenspartan",
+        "utility"
       ],
-      "totalMessages": 12
+      "totalMessages": 1
     },
-    "DON DADA": {
-      "id": "1386045358768918679",
-      "username": "dondada0420",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Trader",
-        "Designer",
+        "Verified",
+        "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 12
+      "totalMessages": 15
     }
   }
 }
