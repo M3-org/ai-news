@@ -1,81 +1,76 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-09",
-  "date": 1780963200,
+  "title": "elizaOS Discord - 2026-06-10",
+  "date": 1781049600,
   "stats": {
-    "totalMessages": 17,
+    "totalMessages": 18,
     "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on a third-party plugin registry submission. naked_monk opened PR #8294 to add @usenami/plugin-signer to the ElizaOS registry - a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave. The PR targets the main eliza repo at elizaOS/eliza on the develop branch, adding the entry at packages/registry/entries/third-party/usenami__plugin-signer.json. CI passed with no requested changes. odilitime confirmed that plugins should go into the main eliza repo and indicated Shaw's agent typically reviews third-party registry entries with an approximate 48-hour turnaround time. The contributor sought clarification on the review process and whether any additional changes were needed from their side. ross.ross.ross made references to a competition or race but provided no technical context.",
+      "summary": "This Discord chat segment shows minimal technical discussion, consisting primarily of introductory messages and networking attempts. The channel activity was dominated by community members introducing themselves and offering services. ross.ross.ross expressed interest in helping with bots and attempted to share links that were deleted by moderators. odilitime confirmed the presence of moderators. fixer1123 posted a job opportunity seeking communication support for an international development team with light weekly hours and profit-based compensation. neural.x introduced themselves as an AI & Full-Stack Engineer specializing in SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, with focus on production-ready AI systems for business problems. anton_0413 offered software development assistance. capson01 expressed interest in connecting. teeam0059 asked about supplies distribution for holders. No substantial technical discussions, problem-solving sessions, or implementation details were shared during this segment.",
       "faqs": [
         {
-          "question": "What's the typical turnaround for third-party registry additions to get reviewed/merged, and is elizaOS/eliza still the right target?",
-          "askedBy": "naked_monk",
-          "answeredBy": "odilitime"
+          "question": "Can I help with the bots?",
+          "askedBy": "ross.ross.ross",
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "Who reviews/merges third-party registry entries, and roughly how long does it usually take?",
-          "askedBy": "naked_monk",
-          "answeredBy": "odilitime"
+          "question": "Who is still holding and haven't received supplies?",
+          "askedBy": "teeam0059",
+          "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "naked_monk",
-          "context": "Clarifying where plugins should be submitted and the review process for third-party registry entries",
-          "resolution": "Confirmed plugins go into main eliza repo and Shaw's agent reviews with ~48 hour turnaround"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Review and merge PR #8294 adding @usenami/plugin-signer to third-party registry",
-          "mentionedBy": "naked_monk"
-        }
-      ],
-      "messageCount": 16,
-      "userCount": 9
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 15,
+      "userCount": 8
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains three brief messages over approximately 13 hours. The first message from fixer1123 is a job posting seeking a communication coordinator for a small international development team. The role involves client communication support, joining calls, and ensuring clear expectations. Technical familiarity is helpful but not required, with light weekly hours and profit-based compensation. The second message from 8714240023 appears to be an IP address or identifier (001.16.110.fd) without context. The third message from issaarts is a self-introduction and service offering for digital arts, animations, and banners, seeking opportunities to work with the team as an artist or co-artist, with willingness to provide samples. No technical discussions, problem-solving, or development decisions occurred in this segment. No questions were asked or answered, no help interactions took place, and no specific technical tasks or feature requests were discussed.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "Nulucre dba Legacy Chain": {
-      "id": "949063485873082388",
-      "username": "nulucredbalegacychain",
+    "anton_0413": {
+      "id": "401193241967460362",
+      "username": "anton_0413",
       "roles": [
         "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
         "Verified",
         "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 13
     },
-    "Amanda": {
-      "id": "471014062378057768",
-      "username": "amanda089446",
-      "roles": [],
+    "Luancryptodev": {
+      "id": "1440455829831811072",
+      "username": "teeam0059",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
       "totalMessages": 1
     },
-    "ross": {
-      "id": "906787451438260236",
-      "username": "ross.ross.ross",
+    "!                - ☆ NeuralX ☆ -": {
+      "id": "892772507361378395",
+      "username": "neural.x",
       "roles": [
         "Helper",
         "a-hack",
         "Trader",
         "Creator",
-        "Server Booster",
         "[WG] degenspartan",
         "Verified",
         "Dev School Student",
@@ -85,22 +80,13 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 26
+      "totalMessages": 2
     },
-    "bigalex777": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
+    "Capson": {
+      "id": "689949476772905120",
+      "username": "capson01",
       "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
-      "roles": [
+        "Helper",
         "Trader",
         "[WG] degenspartan",
         "Verified",
@@ -110,18 +96,41 @@
       ],
       "totalMessages": 1
     },
-    "Dr.AB": {
-      "id": "987387414588817429",
-      "username": "drab1901",
+    "Ken": {
+      "id": "1455451463705952298",
+      "username": "kenxybruck",
       "roles": [
         "Trader",
-        "Creator",
-        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 97
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -151,43 +160,66 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 573
+      "totalMessages": 574
     },
-    "Alexander": {
-      "id": "919951628394717194",
-      "username": "naked_monk",
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 34
+    },
+    "GracePower": {
+      "id": "1313438370193608765",
+      "username": "bitch909090",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
         "[WG] degenspartan",
+        "It",
         "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
+      "roles": [
+        "Verified",
+        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 4
     },
-    "Lexpo4777": {
-      "id": "776566651964751924",
-      "username": "lexpo4777",
+    "Diwash Budhathoki": {
+      "id": "1436686007792701470",
+      "username": "8714240023",
       "roles": [
-        "Fr",
-        "Verified",
-        "[WG] degenspartan",
-        "utility"
+        "Trader",
+        "Helper",
+        "utility",
+        "eliza"
       ],
       "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 15
     }
   }
 }

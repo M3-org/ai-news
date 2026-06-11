@@ -1,0 +1,216 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-06-10",
+  "categories": [
+    {
+      "title": "Community Introductions and Collaboration Opportunities",
+      "content": [
+        {
+          "text": "In the general discussion channel, several community members introduced themselves and expressed interest in contributing. A user named ross asked about helping with bots and inquired about shilling opportunities. Odilitime noted that the server has active moderators. A developer named NeuralX introduced themselves as an AI and Full-Stack Engineer working on SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, expressing interest in connecting with founders and engineers building practical AI systems. A software developer named anton_0413 also introduced themselves and offered assistance via direct message. A user named magicyte shared a post about Ruby Trivia, a free Web3 and crypto project focused on fun and accessibility, requiring only an email login. Fixer posted a job opportunity for a communication support role within a small international developer team, offering light weekly hours and profit-based pay.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://jf.x.com/images/media-preview/2064710267586383938"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, Fixer posted the same communication support job opportunity for their international developer team. A user named Diwash Budhathoki shared a QR code image along with a network address string. Issa, a digital artist, introduced themselves and offered services including digital art, animations, and banners, asking if the team or any community members were in need of an artist or co-artist and offering to provide samples upon request.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1514300564471812199/QR_Code1779868749262_0.png?ex=6a2addcc&is=6a298c4c&hm=c1724e072ac2690b2ac8e3c13bf9951fe2d723e789862936a477220bbffe0068&"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1781049600,
+  "nicknameMap": {
+    "anton_0413": {
+      "id": "401193241967460362",
+      "username": "anton_0413",
+      "roles": [
+        "Helper",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "Luancryptodev": {
+      "id": "1440455829831811072",
+      "username": "teeam0059",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "!                - ☆ NeuralX ☆ -": {
+      "id": "892772507361378395",
+      "username": "neural.x",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Capson": {
+      "id": "689949476772905120",
+      "username": "capson01",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Ken": {
+      "id": "1455451463705952298",
+      "username": "kenxybruck",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 97
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 574
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 34
+    },
+    "GracePower": {
+      "id": "1313438370193608765",
+      "username": "bitch909090",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Diwash Budhathoki": {
+      "id": "1436686007792701470",
+      "username": "8714240023",
+      "roles": [
+        "Trader",
+        "Helper",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

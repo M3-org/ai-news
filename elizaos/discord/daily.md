@@ -1,37 +1,48 @@
-# elizaOS Discord - 2026-06-09
+# elizaOS Discord - 2026-06-10
 
 ## Summary
 
-### Third Party Plugin Registry Submission
+### Job Opportunities and Recruitment
 
-naked_monk submitted PR #8294 to add the @usenami/plugin-signer to the ElizaOS third-party plugin registry. The plugin is a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave for enhanced security. The PR targets the develop branch of the main eliza repository at elizaOS/eliza, with the registry entry located at packages/registry/entries/third-party/usenami__plugin-signer.json. All CI checks passed successfully with no requested changes.
+fixer1123 posted a job opportunity in both the discussion and coders channels seeking a communication coordinator for a small international development team. The role involves client communication support, joining calls, and ensuring clear expectations. Technical familiarity is helpful but not required, with light weekly hours and profit-based compensation.
 
-### Plugin Registry Review Process
+### Community Introductions and Service Offerings
 
-odilitime clarified the plugin submission workflow, confirming that third-party plugins should be submitted to the main eliza repository rather than a separate location. Shaw's agent is responsible for reviewing third-party registry entries, with a typical turnaround time of approximately 48 hours. The contributor inquired about whether any additional changes were needed from their side after the initial submission.
+Multiple community members introduced themselves and offered various services. neural.x introduced themselves as an AI & Full-Stack Engineer specializing in SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, with focus on production-ready AI systems for business problems. issaarts offered services for digital arts, animations, and banners, seeking opportunities to work with the team as an artist or co-artist and expressed willingness to provide samples. anton_0413 offered software development assistance. capson01 expressed interest in connecting with others.
+
+### Community Management and Moderation
+
+ross.ross.ross attempted to share links that were deleted by moderators. odilitime confirmed the presence of moderators in the channel, demonstrating active moderation of the community.
+
+### Token and Distribution Inquiries
+
+teeam0059 asked about supplies distribution for holders, though no response or clarification was provided in the chat segment.
 
 ## FAQ
 
-**Q: Where should third-party plugins be submitted for the ElizaOS registry?**
-A: Third-party plugins should be submitted to the main eliza repository at elizaOS/eliza, targeting the develop branch.
+**Q: Are there moderators active in the elizaOS Discord?**
+A: Yes, odilitime confirmed that moderators are present and actively moderating content, as evidenced by deleted links from ross.ross.ross.
 
-**Q: Who reviews third-party plugin registry submissions?**
-A: Shaw's agent typically reviews third-party registry entries.
+**Q: What job opportunity is available with the development team?**
+A: A communication coordinator position is available for a small international development team, involving client communication support, joining calls, and ensuring clear expectations. Technical familiarity is helpful but not required, with light weekly hours and profit-based compensation.
 
-**Q: What is the expected turnaround time for third-party plugin reviews?**
-A: The approximate turnaround time is 48 hours.
-
-**Q: What does the @usenami/plugin-signer do?**
-A: It is a keyless CEX/DEX signer that stores exchange API keys inside an AWS Nitro Enclave for secure key management.
+**Q: What services are community members offering?**
+A: neural.x offers AI & Full-Stack Engineering services specializing in SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards. issaarts offers digital arts, animations, and banners. anton_0413 offers software development assistance.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** naked_monk
-**Resolution:** odilitime confirmed that the plugin submission to the main eliza repo was correct and explained that Shaw's agent reviews third-party registry entries with approximately 48-hour turnaround. The PR #8294 had already passed CI with no requested changes.
+No substantive help interactions occurred during this period. ross.ross.ross expressed interest in helping with bots but no specific assistance was provided or requested.
 
 ## Action Items
 
 ### Technical
 
-- Review PR #8294 for @usenami/plugin-signer third-party plugin registry entry (mentioned by naked_monk, to be reviewed by Shaw's agent)
+None identified.
+
+### Features
+
+None identified.
+
+### Documentation
+
+None identified.
