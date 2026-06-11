@@ -1,34 +1,22 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-06-10",
-  "categories": [
-    {
-      "title": "Community Introductions and Collaboration Opportunities",
-      "content": [
-        {
-          "text": "In the general discussion channel, several community members introduced themselves and expressed interest in contributing. A user named ross asked about helping with bots and inquired about shilling opportunities. Odilitime noted that the server has active moderators. A developer named NeuralX introduced themselves as an AI and Full-Stack Engineer working on SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, expressing interest in connecting with founders and engineers building practical AI systems. A software developer named anton_0413 also introduced themselves and offered assistance via direct message. A user named magicyte shared a post about Ruby Trivia, a free Web3 and crypto project focused on fun and accessibility, requiring only an email login. Fixer posted a job opportunity for a communication support role within a small international developer team, offering light weekly hours and profit-based pay.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://jf.x.com/images/media-preview/2064710267586383938"
-          ],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, Fixer posted the same communication support job opportunity for their international developer team. A user named Diwash Budhathoki shared a QR code image along with a network address string. Issa, a digital artist, introduced themselves and offered services including digital art, animations, and banners, asking if the team or any community members were in need of an artist or co-artist and offering to provide samples upon request.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1514300564471812199/QR_Code1779868749262_0.png?ex=6a2addcc&is=6a298c4c&hm=c1724e072ac2690b2ac8e3c13bf9951fe2d723e789862936a477220bbffe0068&"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "Community Introductions and Collaboration Opportunities",
+    "content": [
+      {
+        "text": "In the general discussion channel, several community members introduced themselves and expressed interest in contributing. A user named ross asked about helping with bots and inquired about shilling opportunities. Odilitime noted that the server has active moderators. A developer named NeuralX introduced themselves as an AI and Full-Stack Engineer working on SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, expressing interest in connecting with founders and engineers building practical AI systems. A software developer named anton_0413 also introduced themselves and offered assistance via direct message. A user named magicyte shared a post about Ruby Trivia, a free Web3 and crypto project focused on fun and accessibility, requiring only an email login. Fixer posted a job opportunity for a communication support role within a small international developer team, offering light weekly hours and profit-based pay.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/2064710267586383938_e1fe7c3e.jpg"
+      },
+      {
+        "text": "In the coders channel, Fixer posted the same communication support job opportunity for their international developer team. A user named Diwash Budhathoki shared a QR code image along with a network address string. Issa, a digital artist, introduced themselves and offered services including digital art, animations, and banners, asking if the team or any community members were in need of an artist or co-artist and offering to provide samples upon request.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "images": "https://cdn.elizaos.news/elizaos-media/qr_code1779868749262_0_c3403fed.png"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1781049600,
   "nicknameMap": {
     "anton_0413": {
