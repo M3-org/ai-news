@@ -1,115 +1,95 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-10",
-  "categories": {
-    "title": "Community Introductions and Collaboration Opportunities",
-    "content": [
-      {
-        "text": "In the general discussion channel, several community members introduced themselves and expressed interest in contributing. A user named ross asked about helping with bots and inquired about shilling opportunities. Odilitime noted that the server has active moderators. A developer named NeuralX introduced themselves as an AI and Full-Stack Engineer working on SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, expressing interest in connecting with founders and engineers building practical AI systems. A software developer named anton_0413 also introduced themselves and offered assistance via direct message. A user named magicyte shared a post about Ruby Trivia, a free Web3 and crypto project focused on fun and accessibility, requiring only an email login. Fixer posted a job opportunity for a communication support role within a small international developer team, offering light weekly hours and profit-based pay.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/2064710267586383938_e1fe7c3e.jpg"
-      },
-      {
-        "text": "In the coders channel, Fixer posted the same communication support job opportunity for their international developer team. A user named Diwash Budhathoki shared a QR code image along with a network address string. Issa, a digital artist, introduced themselves and offered services including digital art, animations, and banners, asking if the team or any community members were in need of an artist or co-artist and offering to provide samples upon request.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "images": "https://cdn.elizaos.news/elizaos-media/qr_code1779868749262_0_c3403fed.png"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1781049600,
+  "title": "Daily Report - 2026-06-11",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - June 11, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, several members introduced themselves and shared their professional backgrounds. One developer described their focus on AI and full-stack development, including AI assistants, RAG-powered knowledge systems, workflow automation, and SaaS platforms, emphasizing practical and reliable software over hype. Another AI/ML and full-stack engineer outlined expertise in AI chatbots, RAG systems, voice AI assistants, automation workflows, and full-stack SaaS platforms using tools like OpenAI, Claude, LangChain, LangGraph, Python, FastAPI, and Next.js, inviting collaboration on AI projects.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer shared a technical approach to handling high-volume blockchain data processing. They noted that standard RPC combined with Python struggles during volatility spikes, causing AI parsing issues and high token costs. Their solution involved building a local gRPC pipeline that filters data before it reaches the AI, keeping fast data in RAM to avoid token usage and only using MCP for deeper analysis, achieving sub-millisecond latency. They announced plans to spin up cloud nodes and were seeking five developers to help stress test the architecture.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A lighthearted leaderboard competition took place in the discussion channel, with one member noting that another user had surpassed one million points. A second member tracked their own climb from fifth to third to second place, mentioning they were farming points through science trivia. The leading member responded confidently, sharing a God of War Zeus GIF in response to the challenge. Separately, a moderator commented that trivia questions needed to be made harder, and also noted that a referenced project was not elizaOS.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://media.tenor.com/u9xv3-6tbgMAAAAe/god-of-war-zeus.png"
+          ],
+          "videos": [
+            "https://media.tenor.com/u9xv3-6tbgMAAAPo/god-of-war-zeus.mp4"
+          ]
+        },
+        {
+          "text": "Ruby Labs AI was shared in the discussion channel, with the project describing itself as a Web3 initiative aiming to bridge the gap between traditional web users and onchain users in a novel way.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://jf.x.com/images/media-preview/2064866173947084992"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the partners channel, a partner named DEMIAN from DAPPCRAFT reached out to inquire about a potential collaboration, referencing a prior message. A moderator expressed willingness to review the details, and DEMIAN followed up by sending specifics via direct message. DEMIAN also expressed strong motivation to bring together two products they are passionate about.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a moderator briefly confirmed that things were in good standing with a short affirmative response.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Overall Project Summary: June 11, 2026",
+      "content": [
+        {
+          "text": "Development on June 11, 2026 centered on stabilizing the agent orchestrator and cloud infrastructure. A key highlight was the enablement of autonomous sub-agent dispatching via the USE_SKILL broker to support monetized-app loops. Cloud infrastructure improvements included managing data-plane private networks via Terraform, decoupling control-plane DNS from VM creation, and fixing affiliate revenue-share tracking for embeddings and voice inference. The plugin ecosystem was expanded with the registration of elizaos-plugin-neynar-search and elizaos-plugin-coinrailz, along with integration of the plugin-signer for secure order signing via AWS Nitro Enclaves. Bug fixes addressed orchestrator session timeout handling, Windows environment variable forwarding, cloud-frontend environment variable passthrough, and removal of stale dependencies. CLI stability was also improved by resolving global installation crashes for elizaos and the elizaos CLI by fixing bin shim imports and removing incompatible dependencies. Currently, the team is focused on resolving a blocked issue involving Android build synchronization, specifically related to web-less APK builds, Capacitor plugin registration, capacitor.plugins.json synchronization, and asset server path resolution.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-11.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1781136000,
   "nicknameMap": {
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "Helper",
+        "Partner",
+        "Vanguard",
+        "NFT",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "Associate"
       ],
-      "totalMessages": 13
-    },
-    "Luancryptodev": {
-      "id": "1440455829831811072",
-      "username": "teeam0059",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "!                - ☆ NeuralX ☆ -": {
-      "id": "892772507361378395",
-      "username": "neural.x",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Capson": {
-      "id": "689949476772905120",
-      "username": "capson01",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ken": {
-      "id": "1455451463705952298",
-      "username": "kenxybruck",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 97
-    },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
+      "totalMessages": 6
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -139,17 +119,16 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 574
+      "totalMessages": 578
     },
-    "ross": {
-      "id": "906787451438260236",
-      "username": "ross.ross.ross",
+    "!                - ☆ NeuralX ☆ -": {
+      "id": "892772507361378395",
+      "username": "neural.x",
       "roles": [
         "Helper",
         "a-hack",
         "Trader",
         "Creator",
-        "Server Booster",
         "[WG] degenspartan",
         "Verified",
         "Dev School Student",
@@ -159,43 +138,136 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 34
+      "totalMessages": 3
     },
-    "GracePower": {
-      "id": "1313438370193608765",
-      "username": "bitch909090",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 25
+    },
+    "! CarlGatz": {
+      "id": "1500207435996991548",
+      "username": "carlgatz",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Balbron": {
+      "id": "1019633035710308352",
+      "username": "balbron",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 50
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 100
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 16
+    },
+    "ZA'ZA☘️": {
+      "id": "1508508940256678049",
+      "username": "belsonjnr_30830",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "ANNA": {
+      "id": "951750794686906388",
+      "username": "anna392",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "𝕬𝖑𝖛𝖎𝖓 ⚔️ 𝕬𝖉𝖆𝖒 | SIGNA": {
+      "id": "1428477976412029031",
+      "username": "alvin_adam1",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
-      "roles": [
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 4
+      "totalMessages": 1
     },
-    "Diwash Budhathoki": {
-      "id": "1436686007792701470",
-      "username": "8714240023",
+    "James": {
+      "id": "1188516772861706352",
+      "username": "toji_04367",
       "roles": [
-        "Trader",
         "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1

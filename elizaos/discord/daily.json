@@ -1,136 +1,85 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-10",
-  "date": 1781049600,
+  "title": "elizaOS Discord - 2026-06-11",
+  "date": 1781136000,
   "stats": {
-    "totalMessages": 18,
-    "totalUsers": 10
+    "totalMessages": 29,
+    "totalUsers": 13
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical discussion, consisting primarily of introductory messages and networking attempts. The channel activity was dominated by community members introducing themselves and offering services. ross.ross.ross expressed interest in helping with bots and attempted to share links that were deleted by moderators. odilitime confirmed the presence of moderators. fixer1123 posted a job opportunity seeking communication support for an international development team with light weekly hours and profit-based compensation. neural.x introduced themselves as an AI & Full-Stack Engineer specializing in SaaS products, LLM applications, RAG systems, AI agents, automation tools, backend APIs, and dashboards, with focus on production-ready AI systems for business problems. anton_0413 offered software development assistance. capson01 expressed interest in connecting. teeam0059 asked about supplies distribution for holders. No substantial technical discussions, problem-solving sessions, or implementation details were shared during this segment.",
+      "summary": "This Discord chat segment shows minimal technical discussion, primarily consisting of introductions and casual conversation. The most significant technical contribution came from carlgatz, who described building a local gRPC pipeline to optimize AI token processing during high-volume spikes. The solution involves filtering data before AI processing, keeping fast operations in RAM to avoid token costs, and only using MCP for deep analysis, achieving sub-millisecond latency. Carlgatz is seeking 5 developers to stress test the system and plans to share architecture details. Two users (rsn6958 and neural.x) posted detailed introductions highlighting their AI/ML and full-stack development expertise, focusing on RAG systems, AI agents, voice assistants, and SaaS platforms. The chat also included leaderboard competition discussion between magicyte and valleybeyond7991, with odilitime commenting on the need for harder trivia questions. No concrete implementations were shared beyond carlgatz's high-level architecture description.",
       "faqs": [
         {
-          "question": "Can I help with the bots?",
-          "askedBy": "ross.ross.ross",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Who is still holding and haven't received supplies?",
-          "askedBy": "teeam0059",
-          "answeredBy": "Unanswered"
+          "question": "Are you looking for developers to help with AI projects?",
+          "askedBy": "Implicit",
+          "answeredBy": "carlgatz - seeking 5 devs for stress testing gRPC system; rsn6958 and neural.x offering AI/ML development services"
         }
       ],
       "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 15,
-      "userCount": 8
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Stress test local gRPC pipeline for AI token processing optimization with 5 developers",
+          "mentionedBy": "carlgatz"
+        },
+        {
+          "type": "Technical",
+          "description": "Spin up cloud nodes for gRPC-based AI processing system",
+          "mentionedBy": "carlgatz"
+        },
+        {
+          "type": "Documentation",
+          "description": "Share gRPC architecture and stress test findings with community",
+          "mentionedBy": "carlgatz"
+        },
+        {
+          "type": "Feature",
+          "description": "Implement harder trivia questions for the platform",
+          "mentionedBy": "odilitime"
+        }
+      ],
+      "messageCount": 24,
+      "userCount": 12
     },
     {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains three brief messages over approximately 13 hours. The first message from fixer1123 is a job posting seeking a communication coordinator for a small international development team. The role involves client communication support, joining calls, and ensuring clear expectations. Technical familiarity is helpful but not required, with light weekly hours and profit-based compensation. The second message from 8714240023 appears to be an IP address or identifier (001.16.110.fd) without context. The third message from issaarts is a self-introduction and service offering for digital arts, animations, and banners, seeking opportunities to work with the team as an artist or co-artist, with willingness to provide samples. No technical discussions, problem-solving, or development decisions occurred in this segment. No questions were asked or answered, no help interactions took place, and no specific technical tasks or feature requests were discussed.",
+      "channelId": "1301363808421543988",
+      "channelName": "🥇-partners",
+      "summary": "This Discord chat segment from the partners channel shows demian_dappcraft reaching out to partners with a proposal. The interaction is brief, with demian_dappcraft initially pinging the partners role seeking attention for an opportunity. odilitime responds positively, offering to review details. demian_dappcraft then sends information via direct message and expresses strong enthusiasm about connecting two products they are passionate about. The conversation represents an initial partnership inquiry rather than a technical discussion. No technical implementations, solutions, or concrete decisions were made in this segment. The exchange is primarily about establishing communication for a potential collaboration between two products, with the substantive discussion deferred to private messages.",
       "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "demian_dappcraft",
+          "context": "demian_dappcraft was seeking attention from partners for a proposal or opportunity",
+          "resolution": "odilitime agreed to look at the details, and demian_dappcraft sent information via DM"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Explore potential collaboration between two products that demian_dappcraft is passionate about",
+          "mentionedBy": "demian_dappcraft"
+        }
+      ],
+      "messageCount": 4,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
-    "anton_0413": {
-      "id": "401193241967460362",
-      "username": "anton_0413",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "Helper",
+        "Partner",
+        "Vanguard",
+        "NFT",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "Associate"
       ],
-      "totalMessages": 13
-    },
-    "Luancryptodev": {
-      "id": "1440455829831811072",
-      "username": "teeam0059",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "!                - ☆ NeuralX ☆ -": {
-      "id": "892772507361378395",
-      "username": "neural.x",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Capson": {
-      "id": "689949476772905120",
-      "username": "capson01",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ken": {
-      "id": "1455451463705952298",
-      "username": "kenxybruck",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 97
-    },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
+      "totalMessages": 6
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -160,17 +109,16 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 574
+      "totalMessages": 578
     },
-    "ross": {
-      "id": "906787451438260236",
-      "username": "ross.ross.ross",
+    "!                - ☆ NeuralX ☆ -": {
+      "id": "892772507361378395",
+      "username": "neural.x",
       "roles": [
         "Helper",
         "a-hack",
         "Trader",
         "Creator",
-        "Server Booster",
         "[WG] degenspartan",
         "Verified",
         "Dev School Student",
@@ -180,43 +128,136 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 34
+      "totalMessages": 3
     },
-    "GracePower": {
-      "id": "1313438370193608765",
-      "username": "bitch909090",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 25
+    },
+    "! CarlGatz": {
+      "id": "1500207435996991548",
+      "username": "carlgatz",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Balbron": {
+      "id": "1019633035710308352",
+      "username": "balbron",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 50
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 100
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 16
+    },
+    "ZA'ZA☘️": {
+      "id": "1508508940256678049",
+      "username": "belsonjnr_30830",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "ANNA": {
+      "id": "951750794686906388",
+      "username": "anna392",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "𝕬𝖑𝖛𝖎𝖓 ⚔️ 𝕬𝖉𝖆𝖒 | SIGNA": {
+      "id": "1428477976412029031",
+      "username": "alvin_adam1",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
-      "roles": [
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 4
+      "totalMessages": 1
     },
-    "Diwash Budhathoki": {
-      "id": "1436686007792701470",
-      "username": "8714240023",
+    "James": {
+      "id": "1188516772861706352",
+      "username": "toji_04367",
       "roles": [
-        "Trader",
         "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1
