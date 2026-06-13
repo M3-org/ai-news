@@ -1,86 +1,58 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-11",
-  "date": 1781136000,
+  "title": "elizaOS Discord - 2026-06-12",
+  "date": 1781222400,
   "stats": {
-    "totalMessages": 29,
-    "totalUsers": 13
+    "totalMessages": 12,
+    "totalUsers": 5
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical discussion, primarily consisting of introductions and casual conversation. The most significant technical contribution came from carlgatz, who described building a local gRPC pipeline to optimize AI token processing during high-volume spikes. The solution involves filtering data before AI processing, keeping fast operations in RAM to avoid token costs, and only using MCP for deep analysis, achieving sub-millisecond latency. Carlgatz is seeking 5 developers to stress test the system and plans to share architecture details. Two users (rsn6958 and neural.x) posted detailed introductions highlighting their AI/ML and full-stack development expertise, focusing on RAG systems, AI agents, voice assistants, and SaaS platforms. The chat also included leaderboard competition discussion between magicyte and valleybeyond7991, with odilitime commenting on the need for harder trivia questions. No concrete implementations were shared beyond carlgatz's high-level architecture description.",
+      "summary": "The discussion centered on two main topics: technical issues with elizacloud signup and a strategic ecosystem integration proposal. valorenvk reported being unable to sign up for elizacloud, receiving a tenant invitation error (\"Tenant 'elizacloud' requires an invitation to join\"). odilitime confirmed the issue was escalated to the team and someone is investigating, awaiting confirmation of a fix. The more substantial discussion involved valorenvk's proposal to integrate elizaOS with peaq's machine operating system (peaqOS). The proposal suggests creating a native @elizaos/plugin-peaq to enable over 3 million devices on peaq's network to use elizaOS as their autonomous reasoning and decision-making framework. This would position elizaOS as the primary agentic framework for real-world robots and IoT devices operating on a decentralized, pay-per-task basis. The integration would complement peaq's recent Akash integration for hardware compute, providing a fully decentralized AI backend alternative to centralized providers like OpenAI or Google. The strategic value includes network effects as the machine economy scales and positioning elizaOS in the hardware/physical robotics narrative.",
       "faqs": [
         {
-          "question": "Are you looking for developers to help with AI projects?",
-          "askedBy": "Implicit",
-          "answeredBy": "carlgatz - seeking 5 devs for stress testing gRPC system; rsn6958 and neural.x offering AI/ML development services"
+          "question": "Can I sign up for elizacloud? I'm getting an error that says the tenant requires an invitation to join",
+          "askedBy": "valorenvk",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Has the team looked into integrating elizaOS with peaq's machine operating system layer (peaqOS)?",
+          "askedBy": "valorenvk",
+          "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Stress test local gRPC pipeline for AI token processing optimization with 5 developers",
-          "mentionedBy": "carlgatz"
-        },
-        {
-          "type": "Technical",
-          "description": "Spin up cloud nodes for gRPC-based AI processing system",
-          "mentionedBy": "carlgatz"
-        },
-        {
-          "type": "Documentation",
-          "description": "Share gRPC architecture and stress test findings with community",
-          "mentionedBy": "carlgatz"
-        },
-        {
-          "type": "Feature",
-          "description": "Implement harder trivia questions for the platform",
-          "mentionedBy": "odilitime"
-        }
-      ],
-      "messageCount": 24,
-      "userCount": 12
-    },
-    {
-      "channelId": "1301363808421543988",
-      "channelName": "🥇-partners",
-      "summary": "This Discord chat segment from the partners channel shows demian_dappcraft reaching out to partners with a proposal. The interaction is brief, with demian_dappcraft initially pinging the partners role seeking attention for an opportunity. odilitime responds positively, offering to review details. demian_dappcraft then sends information via direct message and expresses strong enthusiasm about connecting two products they are passionate about. The conversation represents an initial partnership inquiry rather than a technical discussion. No technical implementations, solutions, or concrete decisions were made in this segment. The exchange is primarily about establishing communication for a potential collaboration between two products, with the substantive discussion deferred to private messages.",
-      "faqs": [],
       "helpInteractions": [
         {
           "helper": "odilitime",
-          "helpee": "demian_dappcraft",
-          "context": "demian_dappcraft was seeking attention from partners for a proposal or opportunity",
-          "resolution": "odilitime agreed to look at the details, and demian_dappcraft sent information via DM"
+          "helpee": "valorenvk",
+          "context": "valorenvk couldn't sign up for elizacloud due to tenant invitation error",
+          "resolution": "odilitime confirmed the issue was passed to the team and someone is investigating, waiting for fix confirmation"
         }
       ],
       "actionItems": [
         {
+          "type": "Technical",
+          "description": "Fix elizacloud signup issue - tenant invitation error blocking user registration",
+          "mentionedBy": "valorenvk"
+        },
+        {
           "type": "Feature",
-          "description": "Explore potential collaboration between two products that demian_dappcraft is passionate about",
-          "mentionedBy": "demian_dappcraft"
+          "description": "Build native @elizaos/plugin-peaq integration to connect elizaOS with peaq's 3M+ device network for autonomous reasoning and decision-making",
+          "mentionedBy": "valorenvk"
+        },
+        {
+          "type": "Feature",
+          "description": "Position elizaOS as premier agentic framework layer for peaq's decentralized machine operating system and robotics network",
+          "mentionedBy": "valorenvk"
         }
       ],
-      "messageCount": 4,
-      "userCount": 2
+      "messageCount": 12,
+      "userCount": 5
     }
   ],
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
-      "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
-        "Verified",
-        "Associate"
-      ],
-      "totalMessages": 6
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -109,26 +81,37 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 578
+      "totalMessages": 581
     },
-    "!                - ☆ NeuralX ☆ -": {
-      "id": "892772507361378395",
-      "username": "neural.x",
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
       "roles": [
-        "Helper",
-        "a-hack",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "Verified",
         "Dev School Student",
-        "Booster",
         "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 6
     },
     "enigma289": {
       "id": "1163546195063480360",
@@ -140,7 +123,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 25
+      "totalMessages": 27
     },
     "! CarlGatz": {
       "id": "1500207435996991548",
@@ -151,116 +134,7 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 4
-    },
-    "Balbron": {
-      "id": "1019633035710308352",
-      "username": "balbron",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 50
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 100
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 16
-    },
-    "ZA'ZA☘️": {
-      "id": "1508508940256678049",
-      "username": "belsonjnr_30830",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "ANNA": {
-      "id": "951750794686906388",
-      "username": "anna392",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "𝕬𝖑𝖛𝖎𝖓 ⚔️ 𝕬𝖉𝖆𝖒 | SIGNA": {
-      "id": "1428477976412029031",
-      "username": "alvin_adam1",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "James": {
-      "id": "1188516772861706352",
-      "username": "toji_04367",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 5
     }
   }
 }

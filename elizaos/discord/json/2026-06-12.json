@@ -1,0 +1,140 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-12",
+  "date": 1781222400,
+  "stats": {
+    "totalMessages": 12,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on two main topics: technical issues with elizacloud signup and a strategic ecosystem integration proposal. valorenvk reported being unable to sign up for elizacloud, receiving a tenant invitation error (\"Tenant 'elizacloud' requires an invitation to join\"). odilitime confirmed the issue was escalated to the team and someone is investigating, awaiting confirmation of a fix. The more substantial discussion involved valorenvk's proposal to integrate elizaOS with peaq's machine operating system (peaqOS). The proposal suggests creating a native @elizaos/plugin-peaq to enable over 3 million devices on peaq's network to use elizaOS as their autonomous reasoning and decision-making framework. This would position elizaOS as the primary agentic framework for real-world robots and IoT devices operating on a decentralized, pay-per-task basis. The integration would complement peaq's recent Akash integration for hardware compute, providing a fully decentralized AI backend alternative to centralized providers like OpenAI or Google. The strategic value includes network effects as the machine economy scales and positioning elizaOS in the hardware/physical robotics narrative.",
+      "faqs": [
+        {
+          "question": "Can I sign up for elizacloud? I'm getting an error that says the tenant requires an invitation to join",
+          "askedBy": "valorenvk",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Has the team looked into integrating elizaOS with peaq's machine operating system layer (peaqOS)?",
+          "askedBy": "valorenvk",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "valorenvk",
+          "context": "valorenvk couldn't sign up for elizacloud due to tenant invitation error",
+          "resolution": "odilitime confirmed the issue was passed to the team and someone is investigating, waiting for fix confirmation"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Fix elizacloud signup issue - tenant invitation error blocking user registration",
+          "mentionedBy": "valorenvk"
+        },
+        {
+          "type": "Feature",
+          "description": "Build native @elizaos/plugin-peaq integration to connect elizaOS with peaq's 3M+ device network for autonomous reasoning and decision-making",
+          "mentionedBy": "valorenvk"
+        },
+        {
+          "type": "Feature",
+          "description": "Position elizaOS as premier agentic framework layer for peaq's decentralized machine operating system and robotics network",
+          "mentionedBy": "valorenvk"
+        }
+      ],
+      "messageCount": 12,
+      "userCount": 5
+    }
+  ],
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 581
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 27
+    },
+    "! CarlGatz": {
+      "id": "1500207435996991548",
+      "username": "carlgatz",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    }
+  }
+}

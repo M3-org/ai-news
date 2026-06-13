@@ -1,45 +1,44 @@
-# elizaOS Discord - 2026-06-11
+# elizaOS Discord - 2026-06-12
 
 ## Summary
 
-### Performance Optimization
+### elizacloud Signup Issues
 
-carlgatz described building a local gRPC pipeline to optimize AI token processing during high-volume spikes. The solution filters data before AI processing, keeps fast operations in RAM to avoid token costs, and only uses MCP for deep analysis, achieving sub-millisecond latency. The system is designed to handle high-volume data processing efficiently while minimizing AI token usage costs.
+valorenvk encountered a technical problem when attempting to sign up for elizacloud, receiving an error message stating "Tenant 'elizacloud' requires an invitation to join." odilitime acknowledged the issue and confirmed it had been escalated to the team for investigation, with the team awaiting confirmation that the problem has been resolved.
 
-### Community Engagement
+### peaq Ecosystem Integration Proposal
 
-The discussion channel featured introductions from rsn6958 and neural.x, both highlighting expertise in AI/ML and full-stack development with focus on RAG systems, AI agents, voice assistants, and SaaS platforms. Leaderboard competition discussion occurred between magicyte and valleybeyond7991, with odilitime suggesting the need for harder trivia questions.
-
-### Partnership Development
-
-demian_dappcraft initiated a partnership inquiry in the partners channel, reaching out to connect two products. odilitime responded positively and agreed to review details, with substantive discussion moving to direct messages.
+valorenvk proposed a strategic integration between elizaOS and peaq's machine operating system (peaqOS). The proposal involves creating a native @elizaos/plugin-peaq that would enable over 3 million devices on peaq's network to utilize elizaOS as their autonomous reasoning and decision-making framework. This integration would position elizaOS as the primary agentic framework for real-world robots and IoT devices operating on a decentralized, pay-per-task basis. The integration would complement peaq's recent Akash integration for hardware compute, providing a fully decentralized AI backend as an alternative to centralized providers like OpenAI or Google. The strategic benefits include network effects as the machine economy scales and positioning elizaOS within the hardware and physical robotics narrative.
 
 ## FAQ
 
-**Q: What architecture did carlgatz use for optimizing AI token processing?**
-A: carlgatz built a local gRPC pipeline that filters data before AI processing, keeps fast operations in RAM to avoid token costs, and only uses MCP for deep analysis, achieving sub-millisecond latency.
+**Q: What error occurs when trying to sign up for elizacloud?**
+A: Users receive an error message stating "Tenant 'elizacloud' requires an invitation to join" when attempting to sign up for elizacloud.
 
-**Q: How many developers is carlgatz seeking for stress testing?**
-A: carlgatz is seeking 5 developers to stress test the system.
+**Q: What is the proposed peaq integration for elizaOS?**
+A: The proposal involves creating a native @elizaos/plugin-peaq to enable over 3 million devices on peaq's network to use elizaOS as their autonomous reasoning and decision-making framework for real-world robots and IoT devices.
 
-**Q: What expertise did the new community members highlight?**
-A: rsn6958 and neural.x highlighted expertise in AI/ML, full-stack development, RAG systems, AI agents, voice assistants, and SaaS platforms.
+**Q: How would the peaq integration benefit elizaOS?**
+A: The integration would provide network effects as the machine economy scales, position elizaOS in the hardware and physical robotics narrative, and offer a fully decentralized AI backend alternative to centralized providers.
+
+**Q: What does peaq's network offer?**
+A: peaq operates a machine operating system (peaqOS) with over 3 million devices that operate on a decentralized, pay-per-task basis, and has recently integrated with Akash for hardware compute.
 
 ## Help Interactions
 
-No formal help interactions were documented in these channel summaries. carlgatz offered to share architecture details with developers interested in stress testing but no specific help requests were resolved.
+**Helper:** odilitime
+**Helpee:** valorenvk
+**Issue:** Unable to sign up for elizacloud due to tenant invitation error
+**Resolution:** Issue escalated to team for investigation, awaiting confirmation of fix
 
 ## Action Items
 
 ### Technical
 
-- Stress test the local gRPC pipeline system with 5 developers (mentioned by carlgatz)
-- Share architecture details of the token optimization pipeline (mentioned by carlgatz)
+- Investigate and resolve elizacloud signup tenant invitation error (mentioned by odilitime)
+- Develop native @elizaos/plugin-peaq for peaq ecosystem integration (mentioned by valorenvk)
 
 ### Features
 
-- Implement harder trivia questions for the leaderboard competition (mentioned by odilitime)
-
-### Documentation
-
-- Document the gRPC pipeline architecture for token optimization (mentioned by carlgatz)
+- Enable elizaOS integration with over 3 million devices on peaq's network (mentioned by valorenvk)
+- Implement autonomous reasoning and decision-making framework for real-world robots and IoT devices (mentioned by valorenvk)
