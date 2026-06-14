@@ -1,58 +1,140 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-12",
-  "date": 1781222400,
+  "title": "elizaOS Discord - 2026-06-13",
+  "date": 1781308800,
   "stats": {
-    "totalMessages": 12,
-    "totalUsers": 5
+    "totalMessages": 29,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on two main topics: technical issues with elizacloud signup and a strategic ecosystem integration proposal. valorenvk reported being unable to sign up for elizacloud, receiving a tenant invitation error (\"Tenant 'elizacloud' requires an invitation to join\"). odilitime confirmed the issue was escalated to the team and someone is investigating, awaiting confirmation of a fix. The more substantial discussion involved valorenvk's proposal to integrate elizaOS with peaq's machine operating system (peaqOS). The proposal suggests creating a native @elizaos/plugin-peaq to enable over 3 million devices on peaq's network to use elizaOS as their autonomous reasoning and decision-making framework. This would position elizaOS as the primary agentic framework for real-world robots and IoT devices operating on a decentralized, pay-per-task basis. The integration would complement peaq's recent Akash integration for hardware compute, providing a fully decentralized AI backend alternative to centralized providers like OpenAI or Google. The strategic value includes network effects as the machine economy scales and positioning elizaOS in the hardware/physical robotics narrative.",
+      "summary": "The discussion channel showed minimal technical activity, primarily consisting of community concerns and promotional content. The most significant topic was a detailed fact-check posted by bangrrr2914 regarding ElizaOS's financial relationship with Secure Blockchain Dev Corp. This analysis outlined a timeline from October 2025 to May 2026, detailing how Eliza Foundation allocated 750k CAD into a placement alongside 500k CAD from Sebastian Quinn Watson, a core defendant in a NY legal case. The post raised concerns about circular fund flow and potential exit liquidity strategies. Community member zadayos inquired about Shaw's recent activity, bug fixes on Eliza Cloud, and launch plans. A brief exchange occurred between odilitime and valorenvk discussing the presence of scam bots in the channel. User ghss44 questioned whether the team had lost faith or abandoned the project, to which om1d_sa responded by directing them to progress channels. User mfairy posted promotional content about a 24-hour launch collaboration opportunity related to PumpFun and DeFi. Multiple Twitter links were shared by magicyte without context. The overall technical discussion was limited, with most substantive content focused on financial transparency concerns rather than development progress.",
       "faqs": [
         {
-          "question": "Can I sign up for elizacloud? I'm getting an error that says the tenant requires an invitation to join",
-          "askedBy": "valorenvk",
-          "answeredBy": "odilitime"
+          "question": "Is Shaw doing okay? I haven't seen him commit any new code recently. Are the bugs on Eliza Cloud about to be fixed? Will it affect the launch plan? Have you guys run a small-scale pilot yet?",
+          "askedBy": "zadayos",
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "Has the team looked into integrating elizaOS with peaq's machine operating system layer (peaqOS)?",
-          "askedBy": "valorenvk",
-          "answeredBy": "Unanswered"
+          "question": "Why is there so many scam bots here?",
+          "askedBy": "odilitime",
+          "answeredBy": "valorenvk"
+        },
+        {
+          "question": "Did you guys lose faith in the project? Or kind of abandoned it?",
+          "askedBy": "ghss44",
+          "answeredBy": "om1d_sa"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "odilitime",
-          "helpee": "valorenvk",
-          "context": "valorenvk couldn't sign up for elizacloud due to tenant invitation error",
-          "resolution": "odilitime confirmed the issue was passed to the team and someone is investigating, waiting for fix confirmation"
+          "helper": "om1d_sa",
+          "helpee": "ghss44",
+          "context": "User questioned whether the team had abandoned the project",
+          "resolution": "Directed to daily progress channels for updates on ongoing development"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Fix elizacloud signup issue - tenant invitation error blocking user registration",
-          "mentionedBy": "valorenvk"
+          "description": "Fix bugs on Eliza Cloud platform",
+          "mentionedBy": "zadayos"
         },
         {
-          "type": "Feature",
-          "description": "Build native @elizaos/plugin-peaq integration to connect elizaOS with peaq's 3M+ device network for autonomous reasoning and decision-making",
-          "mentionedBy": "valorenvk"
-        },
-        {
-          "type": "Feature",
-          "description": "Position elizaOS as premier agentic framework layer for peaq's decentralized machine operating system and robotics network",
-          "mentionedBy": "valorenvk"
+          "type": "Documentation",
+          "description": "Review and verify financial flow structure regarding Secure Blockchain Dev Corp investment and circular fund flow concerns",
+          "mentionedBy": "bangrrr2914"
         }
       ],
-      "messageCount": 12,
-      "userCount": 5
+      "messageCount": 20,
+      "userCount": 9
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The discussion centered on two main technical topics: world models implementation and ElizaOS version management. wonderwomancode explained that proper implementation requires world models, recommending Google's Vertex with the Genie model as an immediate solution. They're developing tooling for ElizaOS to make this more accessible, expected in about a month, with plans for migration guides and agent tools. The best results come from fine-tuned world models specific to the use case. om1d_sa encountered version update issues, stuck on ElizaOS v1.7.2 despite attempting updates and reinstallation. odilitime provided the solution: use the develop branch for 2.x versions, which is the current standard practice among most developers rather than waiting for stable releases on the main branch.",
+      "faqs": [
+        {
+          "question": "How can I update ElizaOS from v1.7.2 to v2 branch?",
+          "askedBy": "om1d_sa",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Should I move to alpha branch for v2 update or wait for stable update on normal branch?",
+          "askedBy": "om1d_sa",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "wonderwomancode",
+          "helpee": "General",
+          "context": "Inquiry about proper implementation approach for a project",
+          "resolution": "Recommended world models using Google Vertex with Genie model, mentioned upcoming ElizaOS tooling in a month with migration guides"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "om1d_sa",
+          "context": "Unable to update ElizaOS from v1.7.2 to v2 despite reinstallation attempts",
+          "resolution": "Advised to use develop branch for 2.x versions as that's what most developers are using"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Develop tooling for ElizaOS to easily spin up world model projects (estimated one month)",
+          "mentionedBy": "wonderwomancode"
+        },
+        {
+          "type": "Documentation",
+          "description": "Create migration guides for developers building on Vertex to transition to new ElizaOS world model tooling",
+          "mentionedBy": "wonderwomancode"
+        },
+        {
+          "type": "Technical",
+          "description": "Develop agent tool for world model integration with ElizaOS",
+          "mentionedBy": "wonderwomancode"
+        }
+      ],
+      "messageCount": 9,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Bawss": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -81,24 +163,19 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 581
+      "totalMessages": 588
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Dev School Student",
-        "Designer",
         "utility",
         "Coder",
-        "Hoplite",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 29
     },
     "Dominiek": {
       "id": "648092975855042560",
@@ -111,30 +188,116 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 12
     },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 103
+    },
+    "Mfairy": {
+      "id": "927200781529153536",
+      "username": "mfairy",
       "roles": [
         "Trader",
         "Verified",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 27
+      "totalMessages": 30
     },
-    "! CarlGatz": {
-      "id": "1500207435996991548",
-      "username": "carlgatz",
+    "mactron": {
+      "id": "1464200888531943571",
+      "username": "bravespirit161_74720",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "aionedark2606": {
+      "id": "710303424217874516",
+      "username": "aionedark2606",
       "roles": [
         "Verified",
-        "Coder",
+        "Designer",
         "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Angela Steffens": {
+      "id": "403684446299095042",
+      "username": "wonderwomancode",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "Creator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "merch - self assign",
+        "workgroups - write perms",
+        "Verified",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "builderr_guru": {
+      "id": "1511654649000890478",
+      "username": "builderradmin",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 2
     }
   }
 }

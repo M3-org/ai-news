@@ -1,44 +1,98 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-12",
+  "title": "Daily Report - 2026-06-13",
   "categories": [
     {
-      "title": "ElizaCloud Sign-Up Issue and Ecosystem Integration Suggestion",
+      "title": "ElizaOS Community Discussion: Project Updates, Scam Concerns, and Developer Activity",
       "content": [
         {
-          "text": "A user reported being unable to sign up for ElizaCloud, receiving an error message stating that the ElizaCloud tenant requires an invitation to join. The user expressed interest in using the platform to build projects but was blocked from accessing it. Another community member tagged Odilitime to bring attention to the issue. Odilitime confirmed awareness of the problem, noting that it had already been passed to the team and that someone was actively looking into it, with a fix expected once resolved. Separately, a community member proposed an ecosystem integration idea involving connecting the elizaOS modular agent framework with peaq's machine operating system layer, referencing peaqOS and a robotics platform. The suggestion highlighted that peaq has over 3 million devices onboarding using decentralized micro-services on a pay-per-task basis. The user proposed building a native elizaOS plugin for peaq so that real-world robots, fleets, and devices could use elizaOS as their primary AI backend for autonomous reasoning and decision making, reducing dependence on centralized AI providers and expanding elizaOS into the hardware and physical robotics space.",
+          "text": "Community members raised questions about the health of the ElizaOS project, including whether lead developer Shaw is still active and whether bugs on Eliza Cloud are close to being resolved. One member noted that daily progress can be tracked in dedicated channels, suggesting development is ongoing. A separate concern was raised about the high volume of scam bots and bad actors in the discussion channel, which was acknowledged by multiple members including a core moderator.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1781316396130-uzj078.jpg"
-          ]
+          "videos": []
+        },
+        {
+          "text": "A detailed fact-check post was shared regarding ElizaOS and a company called SecureBlockchain Dev Corp. According to the post, a Canadian micro-cap company rebranded into SecureBlockchain Dev Corp in October 2025, then acquired AgenticSolutions in February 2026. In April 2026, the company raised 1.5 million CAD, with the Eliza Foundation reportedly allocating 750k CAD of holder funds into this placement. An official B2B joint development contract announcement followed in May 2026. The post warned that the structure resembles a circular fund flow, with insiders potentially using the stock market as an exit strategy, and urged community members not to act as passive exit liquidity.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "An AI trivia and gaming project called Ruby shared updates in the discussion channel, announcing new practice categories including Film, Comics, Cartoons, and World Geography as part of its v0.1.1 release on June 13, 2026. The project also posted daily trivia challenges and indicated more categories and features are planned.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HKqinpEXAAAPMup.jpg:large",
+            "https://pbs.twimg.com/media/HKqkSdOWYAAgoaU.jpg:large",
+            "https://pbs.twimg.com/media/HKtNVdbWUAAMLvz.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer named Omid Sa reported being stuck on ElizaOS version 1.7.2 and unable to update to the version 2 branch despite reinstalling. Core developer Odilitime advised using the develop branch, noting that most active developers are already working from it for the 2.x line. A separate discussion touched on using world models for agent development, with one contributor mentioning tooling being built on ElizaOS for this purpose, expected to be ready in about a month, and pointing to Google Vertex with the Genie model as a current alternative.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Eliza Cloud Apps Infrastructure Update (Jun 12, 2026)",
+      "title": "Eliza Cloud Apps Infrastructure Progress - June 13, 2026",
       "content": [
         {
-          "text": "Development on June 12, 2026 centered on stabilizing the Eliza Cloud Apps infrastructure, with a focus on the control-plane and ingress configurations. Two key items were completed: ingress for the staging app node was enabled by implementing the Caddy front door in the app-node cloud-init (PR #8394), and the production migration process was streamlined by automating Headscale installation in the control-plane cloud-init (PR #8393). A significant blocker remains in issue #8321, where progress on the apps-data-plane go-live is stalled due to a state-provider mismatch involving an orphaned random_password resource. To address this and reduce manual intervention, several new pull requests are in progress: a one-shot workflow to remove orphaned apps-data-plane state entries (#8400), a dispatchable workflow to arm the apps daemon without manual SSH (#8398), and an idempotent script for arming the apps-daemon (#8397). Additional in-progress work includes a dependency update for esbuild from 0.28.0 to 0.28.1 (#8399), a dependency update for pypdf from 6.10.2 to 6.12.0 (#8396), and added EvoLink support to plugin-openai (#8395). Active discussions around issue #8321 continue to focus on resolving scaling and ingress gaps, with staging verification and node replacement planned before any production deployment.",
+          "text": "Development on June 13, 2026 centered on finalizing the Eliza Cloud Apps infrastructure, with the team successfully arming the apps daemon and stabilizing the staging environment through modular infrastructure-as-code driven deployments. A key achievement was enabling APPS_DEPLOY_ENABLED on staging and implementing an idempotent workflow to arm the apps daemon, eliminating the need for manual SSH intervention. Security was also enhanced by configuring the daemon to fetch tenant DSNs from shared terraform outputs and routing file operations through sudo. On the database side, a critical resource leak was resolved where deleted apps failed to drop Postgres instances or release cluster slots. Terraform lockfile and dependency errors were also addressed by adding missing provider hashes and creating a workflow to remove orphaned state entries. For testing and stability, 50 characterization tests were added for the warm-pool decision engine, and local runtime state management was refined to prevent stale data issues while reducing debug log noise. Authentication was confirmed stable, with production verification showing OAuth and magic-link logins functioning correctly. Work still in progress includes CI optimization to gate expensive test lanes and a feature to arm build-from-repo functionality on the daemon. The Cloud Apps Scaling and Ingress effort is near completion, pending final administrative configuration of the staging tenant and registry settings before end-to-end testing can begin.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-12.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-13.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1781316415056-0pltdm.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1781222400,
+  "date": 1781308800,
   "nicknameMap": {
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Bawss": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -67,24 +121,19 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 581
+      "totalMessages": 588
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Dev School Student",
-        "Designer",
         "utility",
         "Coder",
-        "Hoplite",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 29
     },
     "Dominiek": {
       "id": "648092975855042560",
@@ -97,30 +146,116 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 6
+      "totalMessages": 12
     },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 103
+    },
+    "Mfairy": {
+      "id": "927200781529153536",
+      "username": "mfairy",
       "roles": [
         "Trader",
         "Verified",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 27
+      "totalMessages": 30
     },
-    "! CarlGatz": {
-      "id": "1500207435996991548",
-      "username": "carlgatz",
+    "mactron": {
+      "id": "1464200888531943571",
+      "username": "bravespirit161_74720",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "aionedark2606": {
+      "id": "710303424217874516",
+      "username": "aionedark2606",
       "roles": [
         "Verified",
-        "Coder",
+        "Designer",
         "utility",
+        "Coder",
+        "eliza"
+      ]
+    },
+    "Angela Steffens": {
+      "id": "403684446299095042",
+      "username": "wonderwomancode",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "Creator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "merch - self assign",
+        "workgroups - write perms",
+        "Verified",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "builderr_guru": {
+      "id": "1511654649000890478",
+      "username": "builderradmin",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 2
     }
   }
 }

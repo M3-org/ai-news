@@ -1,44 +1,66 @@
-# elizaOS Discord - 2026-06-12
+# elizaOS Discord - 2026-06-13
 
 ## Summary
 
-### elizacloud Signup Issues
+### Financial Transparency and Governance Concerns
 
-valorenvk encountered a technical problem when attempting to sign up for elizacloud, receiving an error message stating "Tenant 'elizacloud' requires an invitation to join." odilitime acknowledged the issue and confirmed it had been escalated to the team for investigation, with the team awaiting confirmation that the problem has been resolved.
+bangrrr2914 posted a detailed fact-check regarding ElizaOS's financial relationship with Secure Blockchain Dev Corp, outlining a timeline from October 2025 to May 2026. The analysis detailed how Eliza Foundation allocated 750k CAD into a placement alongside 500k CAD from Sebastian Quinn Watson, a core defendant in a NY legal case. The post raised concerns about circular fund flow and potential exit liquidity strategies. This represented the most substantial discussion in the general channel, though it focused on financial rather than technical matters.
 
-### peaq Ecosystem Integration Proposal
+### Project Status and Team Activity
 
-valorenvk proposed a strategic integration between elizaOS and peaq's machine operating system (peaqOS). The proposal involves creating a native @elizaos/plugin-peaq that would enable over 3 million devices on peaq's network to utilize elizaOS as their autonomous reasoning and decision-making framework. This integration would position elizaOS as the primary agentic framework for real-world robots and IoT devices operating on a decentralized, pay-per-task basis. The integration would complement peaq's recent Akash integration for hardware compute, providing a fully decentralized AI backend as an alternative to centralized providers like OpenAI or Google. The strategic benefits include network effects as the machine economy scales and positioning elizaOS within the hardware and physical robotics narrative.
+Community members expressed concerns about project direction and team engagement. ghss44 questioned whether the team had lost faith or abandoned the project. zadayos inquired about Shaw's recent activity, bug fixes on Eliza Cloud, and launch plans. om1d_sa directed concerned users to progress channels for updates on development work.
+
+### World Models Implementation
+
+wonderwomancode provided detailed guidance on implementing world models in ElizaOS. They explained that proper implementation requires world models and recommended Google's Vertex with the Genie model as an immediate solution. New tooling is being developed for ElizaOS to make world models more accessible, with an expected release in about a month. The best results come from fine-tuned world models specific to individual use cases, and migration guides and agent tools are planned.
+
+### Version Management and Development Workflow
+
+Discussion revealed that ElizaOS version management follows a specific workflow where the develop branch contains 2.x versions while the main branch lags behind. om1d_sa encountered issues being stuck on version 1.7.2 despite attempting updates and reinstallation. Most developers work from the develop branch rather than waiting for stable releases on the main branch.
+
+### Community Moderation Issues
+
+Brief discussion occurred between odilitime and valorenvk regarding the presence of scam bots in the discussion channel. mfairy posted promotional content about a 24-hour launch collaboration opportunity related to PumpFun and DeFi.
 
 ## FAQ
 
-**Q: What error occurs when trying to sign up for elizacloud?**
-A: Users receive an error message stating "Tenant 'elizacloud' requires an invitation to join" when attempting to sign up for elizacloud.
+**Q: What is the recommended approach for implementing world models in ElizaOS?**
+A: Use Google's Vertex with the Genie model as an immediate solution. For best results, fine-tune world models specific to your use case. New tooling for ElizaOS is being developed to make this more accessible, expected in about a month with migration guides and agent tools.
 
-**Q: What is the proposed peaq integration for elizaOS?**
-A: The proposal involves creating a native @elizaos/plugin-peaq to enable over 3 million devices on peaq's network to use elizaOS as their autonomous reasoning and decision-making framework for real-world robots and IoT devices.
+**Q: Why am I stuck on ElizaOS v1.7.2 when trying to update?**
+A: The develop branch contains the current 2.x versions, not the main branch. Most developers use the develop branch rather than waiting for stable releases on main.
 
-**Q: How would the peaq integration benefit elizaOS?**
-A: The integration would provide network effects as the machine economy scales, position elizaOS in the hardware and physical robotics narrative, and offer a fully decentralized AI backend alternative to centralized providers.
+**Q: Has the ElizaOS team abandoned the project?**
+A: No, users should check the progress channels for updates on ongoing development work.
 
-**Q: What does peaq's network offer?**
-A: peaq operates a machine operating system (peaqOS) with over 3 million devices that operate on a decentralized, pay-per-task basis, and has recently integrated with Akash for hardware compute.
+**Q: When will the new world models tooling be available?**
+A: The tooling is expected to be released in about a month, including migration guides and agent tools.
 
 ## Help Interactions
 
 **Helper:** odilitime
-**Helpee:** valorenvk
-**Issue:** Unable to sign up for elizacloud due to tenant invitation error
-**Resolution:** Issue escalated to team for investigation, awaiting confirmation of fix
+**Helpee:** om1d_sa
+**Issue:** Stuck on ElizaOS v1.7.2 despite attempting updates and reinstallation
+**Resolution:** Use the develop branch for 2.x versions, which is the current standard practice among developers rather than waiting for stable releases on the main branch
+
+**Helper:** om1d_sa
+**Helpee:** ghss44
+**Issue:** Concerns about whether the team had lost faith or abandoned the project
+**Resolution:** Directed to progress channels to see ongoing development work
+
+**Helper:** wonderwomancode
+**Helpee:** General community
+**Issue:** Questions about implementing world models in ElizaOS
+**Resolution:** Provided detailed guidance on using Google's Vertex with Genie model as immediate solution, with information about upcoming tooling and best practices for fine-tuning
 
 ## Action Items
 
 ### Technical
 
-- Investigate and resolve elizacloud signup tenant invitation error (mentioned by odilitime)
-- Develop native @elizaos/plugin-peaq for peaq ecosystem integration (mentioned by valorenvk)
+- Develop tooling for ElizaOS to make world models more accessible, expected in about a month (mentioned by wonderwomancode)
+- Address scam bot presence in discussion channel (mentioned by odilitime and valorenvk)
 
-### Features
+### Documentation
 
-- Enable elizaOS integration with over 3 million devices on peaq's network (mentioned by valorenvk)
-- Implement autonomous reasoning and decision-making framework for real-world robots and IoT devices (mentioned by valorenvk)
+- Create migration guides for world models implementation (mentioned by wonderwomancode)
+- Document agent tools for world models (mentioned by wonderwomancode)
