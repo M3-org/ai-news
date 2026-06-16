@@ -1,32 +1,72 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-14",
+  "title": "Daily Report - 2026-06-15",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion and Technical Issues - June 14, 2026",
+      "title": "ElizaOS Community Discussion - June 15, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, several users reported access and technical issues with ElizaOS Cloud. One user encountered a white screen problem on Windows when running the development UI, despite the agent being ready and skills synced, with cache clearing and browser switching not resolving the issue. Another user was unable to access ElizaOS Cloud, receiving an error stating that the tenant 'elizacloud' requires an invitation to join. This user also reported that onboarding was not working for multiple applications including Babylon and Milady, and was unable to change the OpenRouter API through Milady. Odilitime acknowledged the ElizaOS Cloud access issue and confirmed that Babylon is currently on hold, noting a conversation with Shaw about reviving its social media component. A separate user asked about the best way to bridge ElizaOS from BNB to Solana. There was also a question about the status of Milady, with the GitHub repository noted as being silent. The channel also contained spam messages, including a self-promotional post advertising web and AI development services, a crypto recovery scam advertisement, and a post offering to buy old crypto wallets with transaction history.",
+          "text": "Development update: Odilitime confirmed that all work has been moved to the Eliza repository. A community member asked if there was anything available to interact with yet, indicating interest in testing current builds.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A scam warning was raised in the discussion channel. A user asked for help with an ai16z to new token migration and received a suspicious step-by-step message instructing them to use a so-called Blockchain Diagnostics Tool and connect their wallet via a third-party dApp. Community members quickly identified and flagged this as a scam. The user confirmed they could not find an official migration link and noted that search results indicated the migration window had already closed.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A developer opportunity was shared in the discussion channel involving a collaboration between Intuition and MetaMask using the ERC-7710 Delegation Framework and the Intuition Knowledge Graph. Five bounty missions totaling 7500 USDC were announced: M09 a tutorial mission for 1000 USDC, M10 a Liquid Democracy proof of concept for 1000 USDC, M11 a production-ready Liquid Democracy implementation for 3000 USDC gated on completion of M10, M12 an Intuition Skill Delegation task for 500 USDC, and M13 a Caveat Enforcers Registry for 2000 USDC. Applications can be submitted at intuition.box/missions with screening beginning June 22. A joint Twitter Space was scheduled for June 16 at 11am ET with MetaMask Dev to walk through all missions. The poster also expressed interest in discussing a collaboration with elizaOS.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A tweet was shared promoting a project aiming to bridge the gap between crypto and non-crypto users, with a Telegram link for users to reserve a spot and a game to play.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://jf.x.com/images/media-preview/2066371906979193229"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A Ruby Trivia game result was shared, with one user scoring 9 out of 10 and another user admitting they scored only 5 out of 10.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HK48ve-WkAA6dLj.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a user posted a greeting to the community with no further technical discussion recorded for the day.",
+          "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1781490792830-4pwyd6.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Development Summary: June 14, 2026",
+      "title": "Eliza Cloud Apps Platform - Launch Stabilization Update (Jun 15, 2026)",
       "content": [
         {
-          "text": "Development on June 14, 2026 centered on two main areas: CI/CD pipeline optimization and a wave of improvements to agent orchestration and core provider logic. On the infrastructure side, the team completed implementation of path-based gating for expensive test lanes in the eliza repository, reducing unnecessary test execution for server, client, and plugin workflows while preserving full coverage during scheduled runs. This work was captured in merged PR 8408, with a follow-up PR 8414 opened to make expensive lanes label-gated and more explainable. In parallel, several pull requests were opened targeting the plugin-agent-orchestrator and core systems. These include adding acknowledgment progress mode and deduplication of spawn acknowledgments, fixing sub-agent routing so that app-build spawns are routed based on the originating user request rather than the planner's terse task description, and preventing route-prefix or data-source URLs from being surfaced as sub-agent deliverables. Core fixes addressed bounding relationships provider output and preserving model-chosen coding delegations rather than demoting them to simple direct replies. An additional fix was opened for the plugin-codex-cli to ensure the codex planner works correctly with the native-tools planner.",
+          "text": "Development on June 15, 2026 focused on stabilizing the Eliza Cloud Apps platform ahead of its upcoming launch, with meaningful progress across authentication, billing integrity, and deployment automation. The team is in the final stages of a staging-to-production cutover, with core platform features verified and ready for deployment.\n\nTwo critical blockers remain. The release pipeline is currently halted due to insufficient NPM_TOKEN permissions for @elizaos/* packages (issue #8428). Additionally, the Cloud 10-user launch tracking issue (#8434) requires final infrastructure configuration and production flag activation before it can proceed.\n\nOn the completed side, the team enabled build-from-repo functionality so the platform can build user repositories directly, activated APPS_DEPLOY_ENABLED on the arm deployment path, and automated CI/CD for the headscale cloud service. Authentication was improved by standardizing Steward OAuth PKCE across all login surfaces, which resolved production login failures. The model catalog was also updated to use healthy Cerebras defaults for better gateway stability. Billing integrity was hardened through an idempotent container-billing cron job to prevent double-debiting, and organization credit balance defaults were adjusted to $0 to stop unintended free credit allocation. CI efficiency was also improved with label-gated path classifiers for expensive test lanes.\n\nSeveral pull requests are actively in progress, including enabling APPS_DEPLOY_ENABLED for production, fixing a staging frontend proxy alias, configuring HEADSCALE_PUBLIC_URL via CI, wiring apps deployment and tenant-DB end-to-end tests into CI, and adding optional per-tenant database support to the edad example app. Ongoing discussions continue around Cloud Apps scaling and ingress, with the edad app serving as the primary test subject.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-14.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-15.json"
           ],
           "images": [],
           "videos": []
@@ -35,29 +75,48 @@
       "topic": "miscellaneous"
     }
   ],
-  "date": 1781395200,
+  "date": 1781481600,
   "nicknameMap": {
-    "Seain": {
-      "id": "1188218675807928384",
-      "username": "lileky_07844",
+    "Obito": {
+      "id": "1512397538962051087",
+      "username": "obito031838",
       "roles": [
-        "Trader",
-        "utility",
-        "It",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Mahender": {
-      "id": "1394197161293643894",
-      "username": "mahe7754",
-      "roles": [
-        "Trader",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 36
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 105
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -87,43 +146,15 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 590
+      "totalMessages": 595
     },
-    "joei4928": {
-      "id": "998969129958645790",
-      "username": "joei4928",
+    "Sapog": {
+      "id": "1052197256838774845",
+      "username": "sapog_kun",
       "roles": [
+        "Trader",
         "Helper",
         "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Kate  expert services": {
-      "id": "1507909086493278341",
-      "username": "kate_experts34",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "osja": {
-      "id": "1415649024819597434",
-      "username": "osja",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
         "eliza"
       ],
       "totalMessages": 1
@@ -138,39 +169,72 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 31
+      "totalMessages": 33
     },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
+    "Saulo": {
+      "id": "403183888798711809",
+      "username": "saulodigital",
       "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 6
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "Mahender": {
+      "id": "1394197161293643894",
+      "username": "mahe7754",
       "roles": [
         "Trader",
-        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 25
+      "totalMessages": 3
     },
-    "GALAtio": {
-      "id": "962385678564458528",
-      "username": "galatio12",
+    "Ryan": {
+      "id": "1516096733208121384",
+      "username": "ryan067828",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 48
+    },
+    "chen": {
+      "id": "1383143764410765396",
+      "username": "chen_898888",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
@@ -179,39 +243,22 @@
       ],
       "totalMessages": 1
     },
-    "9zelinder": {
-      "id": "1514753864618868850",
-      "username": "9zelinder",
+    "imcryptor": {
+      "id": "959015387620605952",
+      "username": "imcryptor",
       "roles": [
-        "Helper",
-        "Verified",
         "utility",
+        "Verified",
         "Coder",
-        "eliza"
+        "auto.fun enjoyer"
       ],
       "totalMessages": 1
     },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
+    "osja": {
+      "id": "1415649024819597434",
+      "username": "osja",
       "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 181
-    },
-    "Bawss": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
+        "Trader",
         "utility",
         "Coder",
         "eliza"

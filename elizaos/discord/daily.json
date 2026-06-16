@@ -1,104 +1,140 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-14",
-  "date": 1781395200,
+  "title": "elizaOS Discord - 2026-06-15",
+  "date": 1781481600,
   "stats": {
-    "totalMessages": 26,
+    "totalMessages": 27,
     "totalUsers": 12
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel showed minimal technical activity with primarily support requests and status inquiries. The main technical issue reported was a white/blank screen problem on Windows when running 'bun run dev:ui' - the agent starts successfully and skills sync, but the browser displays only a blank screen despite cache clearing, hard refresh attempts, and testing across different browsers. Multiple users reported access issues with elizaCloud, specifically receiving tenant invitation requirement errors when attempting to join. One user inquired about bridging elizaOS from BNB to Solana but received no technical response. There were mentions of various platform access issues including Babylon (confirmed on hold by odilitime, with plans to revive the social media component after discussion with Shaw), and Milady (users unable to access elizaCloud through it or modify OpenRouter API settings). A user asked about Milady development updates, noting GitHub activity has been silent. No concrete solutions were provided for the reported technical issues during this chat segment.",
+      "summary": "The discussion channel covered several key topics. The primary technical update was odilitime confirming that all work has been consolidated into the eliza repository. A community member (ryan067828) encountered a scam attempt regarding ai16z token migration, which was quickly identified by the community (paolin_62616). Ryan confirmed the official migration window has closed with no legitimate links available. Saulodigital presented a significant collaboration opportunity involving Semantic Delegation with the ERC-7710 Delegation Framework and Intuition Knowledge Graph, offering $7,500 USDC across 5 missions. The missions include: M09 Tutorial ($1,000), M10 Liquid Democracy POC ($1,000), M11 Liquid Democracy Production ($3,000), M12 Intuition Skill Delegation ($500), and M13 Caveat Enforcers Registry ($2,000). The framework combines authority and meaning layers to enable previously impossible application designs. Saulodigital expressed interest in collaborating with elizaOS. Odilitime directed mahe7754 to DM for proposal submission after automod issues prevented direct posting.",
       "faqs": [
         {
-          "question": "White/blank screen problem on Windows - bun run dev:ui starts, agent ready, skills synced, but browser shows only white screen. Tried cache clear, hard refresh, different browsers. Anyone had this issue?",
-          "askedBy": "9zelinder",
+          "question": "Anything we can play with now?",
+          "askedBy": "imcryptor",
           "answeredBy": "Unanswered"
         },
         {
-          "question": "What is the best way to bridge elizaOS from BNB to Solana?",
-          "askedBy": "valorenvk",
-          "answeredBy": "Unanswered"
+          "question": "Can someone help me on ai16z to new token migration?",
+          "askedBy": "ryan067828",
+          "answeredBy": "paolin_62616"
         },
         {
-          "question": "Any Milady update? Github is silent",
-          "askedBy": "osja",
-          "answeredBy": "Unanswered"
+          "question": "How can I send my proposal?",
+          "askedBy": "mahe7754",
+          "answeredBy": "odilitime"
         }
       ],
       "helpInteractions": [
         {
+          "helper": "paolin_62616",
+          "helpee": "ryan067828",
+          "context": "ryan067828 received a scam message about ai16z token migration with suspicious wallet connection instructions",
+          "resolution": "paolin_62616 identified it as a scam, preventing potential fraud"
+        },
+        {
           "helper": "odilitime",
-          "helpee": "valorenvk",
-          "context": "User inquiring about Babylon platform status and access issues",
-          "resolution": "Confirmed Babylon is on hold, mentioned discussion with Shaw about reviving the social media part"
+          "helpee": "mahe7754",
+          "context": "mahe7754 needed to submit a proposal but didn't know the process",
+          "resolution": "odilitime instructed to send via DM"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "saulodigital",
+          "context": "saulodigital's post was removed by automod",
+          "resolution": "odilitime suggested posting in chunks to bypass automod"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Fix white/blank screen issue on Windows when running bun run dev:ui despite successful agent start and skill sync",
-          "mentionedBy": "9zelinder"
-        },
-        {
-          "type": "Technical",
-          "description": "Resolve elizaCloud tenant invitation requirement error blocking user access",
-          "mentionedBy": "valorenvk"
-        },
-        {
-          "type": "Technical",
-          "description": "Fix Milady platform access issues preventing elizaCloud connection and OpenRouter API modification",
-          "mentionedBy": "valorenvk"
+          "description": "Consolidate all work into eliza repository (completed)",
+          "mentionedBy": "odilitime"
         },
         {
           "type": "Feature",
-          "description": "Implement or document bridging solution for elizaOS from BNB to Solana",
-          "mentionedBy": "valorenvk"
+          "description": "Implement ERC-7710 Delegation Framework integration with Intuition Knowledge Graph",
+          "mentionedBy": "saulodigital"
         },
         {
           "type": "Technical",
-          "description": "Resume development and provide updates on Milady project (GitHub activity silent)",
-          "mentionedBy": "osja"
+          "description": "M09 Mission: Create tutorial with demo, written guide, and video for full delegation lifecycle",
+          "mentionedBy": "saulodigital"
+        },
+        {
+          "type": "Technical",
+          "description": "M10 Mission: Build Liquid Democracy POC with Graph Domain Caveat Enforcer and 3-tier chain",
+          "mentionedBy": "saulodigital"
+        },
+        {
+          "type": "Technical",
+          "description": "M11 Mission: Develop production-ready hardened Liquid Democracy system (audit-ready, gated on M10)",
+          "mentionedBy": "saulodigital"
+        },
+        {
+          "type": "Technical",
+          "description": "M12 Mission: Add ERC-7710 delegation to Intuition agent skill",
+          "mentionedBy": "saulodigital"
+        },
+        {
+          "type": "Technical",
+          "description": "M13 Mission: Create permissionless Caveat Enforcers Registry with community curation",
+          "mentionedBy": "saulodigital"
+        },
+        {
+          "type": "Feature",
+          "description": "Explore collaboration between Intuition and elizaOS",
+          "mentionedBy": "saulodigital"
         }
       ],
-      "messageCount": 23,
-      "userCount": 9
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains no technical discussions, development activities, or coding-related content. The conversation consists entirely of three unrelated messages: a general greeting from joei4928, a partnership inquiry from mahe7754, and a solicitation from lileky_07844 regarding purchasing cryptocurrency wallets with transaction history. No programming problems were discussed, no solutions were implemented, and no technical decisions were made. The channel appears to have been used for non-technical purposes during this time period, with messages that are more appropriate for business development or trading channels rather than a coders-focused discussion space.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "messageCount": 26,
+      "userCount": 12
     }
   ],
   "nicknameMap": {
-    "Seain": {
-      "id": "1188218675807928384",
-      "username": "lileky_07844",
+    "Obito": {
+      "id": "1512397538962051087",
+      "username": "obito031838",
       "roles": [
-        "Trader",
-        "utility",
-        "It",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Mahender": {
-      "id": "1394197161293643894",
-      "username": "mahe7754",
-      "roles": [
-        "Trader",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 36
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 105
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -128,43 +164,15 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 590
+      "totalMessages": 595
     },
-    "joei4928": {
-      "id": "998969129958645790",
-      "username": "joei4928",
+    "Sapog": {
+      "id": "1052197256838774845",
+      "username": "sapog_kun",
       "roles": [
+        "Trader",
         "Helper",
         "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Kate  expert services": {
-      "id": "1507909086493278341",
-      "username": "kate_experts34",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "osja": {
-      "id": "1415649024819597434",
-      "username": "osja",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
         "eliza"
       ],
       "totalMessages": 1
@@ -179,39 +187,72 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 31
+      "totalMessages": 33
     },
-    "Harry38485": {
-      "id": "448849666235301899",
-      "username": "harry346165",
+    "Saulo": {
+      "id": "403183888798711809",
+      "username": "saulodigital",
       "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 6
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "Mahender": {
+      "id": "1394197161293643894",
+      "username": "mahe7754",
       "roles": [
         "Trader",
-        "[WG] degenspartan",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 25
+      "totalMessages": 3
     },
-    "GALAtio": {
-      "id": "962385678564458528",
-      "username": "galatio12",
+    "Ryan": {
+      "id": "1516096733208121384",
+      "username": "ryan067828",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 48
+    },
+    "chen": {
+      "id": "1383143764410765396",
+      "username": "chen_898888",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
@@ -220,39 +261,22 @@
       ],
       "totalMessages": 1
     },
-    "9zelinder": {
-      "id": "1514753864618868850",
-      "username": "9zelinder",
+    "imcryptor": {
+      "id": "959015387620605952",
+      "username": "imcryptor",
       "roles": [
-        "Helper",
-        "Verified",
         "utility",
+        "Verified",
         "Coder",
-        "eliza"
+        "auto.fun enjoyer"
       ],
       "totalMessages": 1
     },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
+    "osja": {
+      "id": "1415649024819597434",
+      "username": "osja",
       "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 181
-    },
-    "Bawss": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
+        "Trader",
         "utility",
         "Coder",
         "eliza"

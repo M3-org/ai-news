@@ -1,62 +1,60 @@
-# elizaOS Discord - 2026-06-14
+# elizaOS Discord - 2026-06-15
 
 ## Summary
 
-### Technical Issues and Bugs
+### Repository Consolidation
 
-Users reported a persistent white/blank screen problem on Windows when running 'bun run dev:ui'. The agent starts successfully and skills sync properly, but the browser displays only a blank screen. The issue persists despite cache clearing, hard refresh attempts, and testing across different browsers including Chrome and Firefox.
+Odilitime confirmed that all development work has been consolidated into the eliza repository, marking a significant organizational milestone for the project.
 
-### Platform Access Problems
+### Security and Scam Prevention
 
-Multiple users encountered access issues with elizaCloud, specifically receiving tenant invitation requirement errors when attempting to join. Users reported being unable to access elizaCloud through Milady or modify OpenRouter API settings. These access problems affected multiple entry points to the platform.
+A community member encountered a scam attempt related to ai16z token migration. The community quickly identified the fraudulent activity, with confirmation that the official migration window has closed and no legitimate migration links are currently available.
 
-### Platform Status and Development
+### Collaboration Opportunities
 
-Babylon platform was confirmed to be on hold by odilitime, with plans to revive the social media component after discussion with Shaw. Users inquired about Milady development updates, noting that GitHub activity has been silent with no recent commits or updates visible.
+Saulodigital presented a major collaboration proposal involving Semantic Delegation with the ERC-7710 Delegation Framework and Intuition Knowledge Graph. The proposal includes five missions totaling $7,500 USDC in funding, combining authority and meaning layers to enable new application designs. The framework aims to expand capabilities in delegation and knowledge management.
 
-### Cross-Chain Functionality
+### Proposal Submission Process
 
-A user inquired about bridging elizaOS from BNB to Solana but received no technical response or guidance on the feasibility or process for cross-chain operations.
-
-### Off-Topic Activity
-
-The coders channel contained non-technical content including partnership inquiries and cryptocurrency wallet purchase solicitations, which were not appropriate for the technical discussion space.
+Community members seeking to submit proposals were directed to use direct messaging channels after encountering automod restrictions in public channels.
 
 ## FAQ
 
-**Q: How do I fix the white/blank screen when running 'bun run dev:ui' on Windows?**
-A: No solution was provided during this discussion period. The issue persists despite cache clearing, hard refresh attempts, and testing across different browsers. The agent starts successfully and skills sync, but the browser displays only a blank screen.
+**Q: Has all work been consolidated into a single repository?**
+A: Yes, odilitime confirmed that all work has been consolidated into the eliza repository.
 
-**Q: How can I access elizaCloud if I'm getting a tenant invitation requirement error?**
-A: No solution was provided. Multiple users reported this issue when attempting to join elizaCloud, but no workaround or fix was shared during this time period.
+**Q: Is there a legitimate ai16z token migration happening?**
+A: No, the official migration window has closed. Any current migration links are scams and should be avoided.
 
-**Q: What is the status of the Babylon platform?**
-A: According to odilitime, Babylon is currently on hold. There are plans to revive the social media component after discussion with Shaw, but no specific timeline was provided.
+**Q: What collaboration opportunities are available with the ERC-7710 Delegation Framework?**
+A: There are five missions available totaling $7,500 USDC: M09 Tutorial ($1,000), M10 Liquid Democracy POC ($1,000), M11 Liquid Democracy Production ($3,000), M12 Intuition Skill Delegation ($500), and M13 Caveat Enforcers Registry ($2,000).
 
-**Q: Is it possible to bridge elizaOS from BNB to Solana?**
-A: No response or technical guidance was provided for this question during the discussion period.
-
-**Q: Are there any recent updates to Milady development?**
-A: No updates were shared. Users noted that GitHub activity has been silent with no recent commits visible.
+**Q: How can I submit a proposal if automod prevents posting?**
+A: Contact odilitime via direct message to submit proposals when automod restrictions prevent public posting.
 
 ## Help Interactions
 
-No successful help interactions were completed during this period. Multiple users requested assistance with technical issues including the blank screen problem on Windows, elizaCloud access errors, and cross-chain bridging questions, but no solutions or resolutions were provided. The only informational response came from odilitime regarding Babylon's status, which confirmed the platform is on hold rather than resolving a technical issue.
+**Helper:** paolin_62616
+**Helpee:** ryan067828
+**Resolution:** Identified a scam attempt regarding ai16z token migration and confirmed that the official migration window has closed with no legitimate links available.
+
+**Helper:** odilitime
+**Helpee:** mahe7754
+**Resolution:** Directed the user to submit their proposal via direct message after automod issues prevented posting in the public channel.
 
 ## Action Items
 
 ### Technical
 
-- Investigate and resolve the white/blank screen issue when running 'bun run dev:ui' on Windows, where the agent starts successfully but the browser displays only a blank screen (reported by multiple users)
-- Fix elizaCloud tenant invitation requirement errors preventing users from accessing the platform (reported by multiple users)
-- Restore access to elizaCloud through Milady and enable OpenRouter API settings modification (reported by users)
-- Revive the Babylon social media component after discussion with Shaw (mentioned by odilitime)
+- Evaluate integration of ERC-7710 Delegation Framework with Intuition Knowledge Graph for semantic delegation capabilities (mentioned by saulodigital)
+- Develop Liquid Democracy Proof of Concept as part of Mission M10 (mentioned by saulodigital)
+- Implement production-ready Liquid Democracy system for Mission M11 (mentioned by saulodigital)
+- Create Caveat Enforcers Registry for Mission M13 (mentioned by saulodigital)
 
 ### Features
 
-- Provide guidance or implementation for bridging elizaOS from BNB to Solana (requested by user)
+- Implement Intuition Skill Delegation functionality for Mission M12 (mentioned by saulodigital)
 
 ### Documentation
 
-- Document the current status and roadmap for Milady development given the silent GitHub activity (concern raised by users)
-- Clarify the process for obtaining elizaCloud tenant invitations and access requirements (needed based on user confusion)
+- Create tutorial for Semantic Delegation framework as part of Mission M09 (mentioned by saulodigital)
