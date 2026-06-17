@@ -1,109 +1,129 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-15",
-  "date": 1781481600,
+  "title": "elizaOS Discord - 2026-06-16",
+  "date": 1781568000,
   "stats": {
-    "totalMessages": 27,
-    "totalUsers": 12
+    "totalMessages": 15,
+    "totalUsers": 11
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel covered several key topics. The primary technical update was odilitime confirming that all work has been consolidated into the eliza repository. A community member (ryan067828) encountered a scam attempt regarding ai16z token migration, which was quickly identified by the community (paolin_62616). Ryan confirmed the official migration window has closed with no legitimate links available. Saulodigital presented a significant collaboration opportunity involving Semantic Delegation with the ERC-7710 Delegation Framework and Intuition Knowledge Graph, offering $7,500 USDC across 5 missions. The missions include: M09 Tutorial ($1,000), M10 Liquid Democracy POC ($1,000), M11 Liquid Democracy Production ($3,000), M12 Intuition Skill Delegation ($500), and M13 Caveat Enforcers Registry ($2,000). The framework combines authority and meaning layers to enable previously impossible application designs. Saulodigital expressed interest in collaborating with elizaOS. Odilitime directed mahe7754 to DM for proposal submission after automod issues prevented direct posting.",
+      "summary": "This Discord chat segment shows minimal technical discussion or development activity. The conversation consists primarily of casual greetings and brief exchanges. One user (rsn6958) inquired about developer opportunities, and another user (ross.ross.ross) asked about ordering humanoid robots, referencing a news article with a dead link mentioning a quantity of 420,000 units. The only substantive response came from odilitime, who indicated that no active hiring is occurring at the moment and mentioned that a couple of project ideas had been started but ultimately fell apart. The rest of the chat contains social media links, greetings (GM/Gm), and casual interactions without technical substance or problem-solving discussions.",
       "faqs": [
         {
-          "question": "Anything we can play with now?",
-          "askedBy": "imcryptor",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Can someone help me on ai16z to new token migration?",
-          "askedBy": "ryan067828",
-          "answeredBy": "paolin_62616"
-        },
-        {
-          "question": "How can I send my proposal?",
-          "askedBy": "mahe7754",
+          "question": "Is there anyone looking for a developer?",
+          "askedBy": "rsn6958",
           "answeredBy": "odilitime"
+        },
+        {
+          "question": "Are you guys still taking orders for the humanoid robots?",
+          "askedBy": "ross.ross.ross",
+          "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "paolin_62616",
-          "helpee": "ryan067828",
-          "context": "ryan067828 received a scam message about ai16z token migration with suspicious wallet connection instructions",
-          "resolution": "paolin_62616 identified it as a scam, preventing potential fraud"
-        },
-        {
-          "helper": "odilitime",
-          "helpee": "mahe7754",
-          "context": "mahe7754 needed to submit a proposal but didn't know the process",
-          "resolution": "odilitime instructed to send via DM"
-        },
-        {
-          "helper": "odilitime",
-          "helpee": "saulodigital",
-          "context": "saulodigital's post was removed by automod",
-          "resolution": "odilitime suggested posting in chunks to bypass automod"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Consolidate all work into eliza repository (completed)",
-          "mentionedBy": "odilitime"
-        },
-        {
-          "type": "Feature",
-          "description": "Implement ERC-7710 Delegation Framework integration with Intuition Knowledge Graph",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Technical",
-          "description": "M09 Mission: Create tutorial with demo, written guide, and video for full delegation lifecycle",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Technical",
-          "description": "M10 Mission: Build Liquid Democracy POC with Graph Domain Caveat Enforcer and 3-tier chain",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Technical",
-          "description": "M11 Mission: Develop production-ready hardened Liquid Democracy system (audit-ready, gated on M10)",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Technical",
-          "description": "M12 Mission: Add ERC-7710 delegation to Intuition agent skill",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Technical",
-          "description": "M13 Mission: Create permissionless Caveat Enforcers Registry with community curation",
-          "mentionedBy": "saulodigital"
-        },
-        {
-          "type": "Feature",
-          "description": "Explore collaboration between Intuition and elizaOS",
-          "mentionedBy": "saulodigital"
-        }
-      ],
-      "messageCount": 26,
-      "userCount": 12
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 13,
+      "userCount": 11
     }
   ],
   "nicknameMap": {
-    "Obito": {
-      "id": "1512397538962051087",
-      "username": "obito031838",
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
       "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "bobjonesgood": {
+      "id": "1262625588577828886",
+      "username": "bobjonesgood_63805",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 2
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 13
+    },
+    "Solify": {
+      "id": "1458856350221340683",
+      "username": "solify020",
+      "roles": [
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 34
     },
     "ross": {
       "id": "906787451438260236",
@@ -123,18 +143,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 36
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 105
+      "totalMessages": 39
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -164,88 +173,11 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 595
+      "totalMessages": 596
     },
-    "Sapog": {
-      "id": "1052197256838774845",
-      "username": "sapog_kun",
-      "roles": [
-        "Trader",
-        "Helper",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 33
-    },
-    "Saulo": {
-      "id": "403183888798711809",
-      "username": "saulodigital",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Mahender": {
-      "id": "1394197161293643894",
-      "username": "mahe7754",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Ryan": {
-      "id": "1516096733208121384",
-      "username": "ryan067828",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 48
-    },
-    "chen": {
-      "id": "1383143764410765396",
-      "username": "chen_898888",
+    "SHAURYA": {
+      "id": "882833249095802911",
+      "username": "shaurya04762",
       "roles": [
         "Helper",
         "Trader",
@@ -261,27 +193,27 @@
       ],
       "totalMessages": 1
     },
-    "imcryptor": {
-      "id": "959015387620605952",
-      "username": "imcryptor",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "utility",
         "Verified",
         "Coder",
-        "auto.fun enjoyer"
-      ],
-      "totalMessages": 1
-    },
-    "osja": {
-      "id": "1415649024819597434",
-      "username": "osja",
-      "roles": [
-        "Trader",
         "utility",
-        "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 17
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 106
     }
   }
 }
