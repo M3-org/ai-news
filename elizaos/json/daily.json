@@ -1,142 +1,87 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-16",
-  "categories": {
-    "title": "ElizaOS Community Discussion and Development Updates",
-    "content": [
-      {
-        "text": "In the general discussion channel, community members exchanged casual greetings throughout the day. A user named ross inquired about whether orders were still being taken for humanoid robots, referencing a news article with a dead link mentioning an amount of 420,000. Odilitime responded that the idea had been started but fell apart. A developer named Ginga asked if anyone was looking to hire a developer. Inhuman Resources shared a Web3 trivia game post promoting an online learning platform with multiple categories, describing it as a safe and fun space for everyone. Ross also shared an episode of the Cron Job series titled The Orchestrator Awakens covering the week of May 31 to June 6, 2026, which highlighted ElizaOS launching a coding workbench achieving parity with Claude Code and Codex, a production outage affecting Eliza Cloud login, the decomposition of the monolithic plugin-lifeops into seven modular plugins, and a surge of DeFAI builders joining the ecosystem.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/2066698024126951893_2156c3b5.jpg",
-          "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1516311446135378023_eb12b438.jpg"
-        ],
-        "videos": "https://cdn.elizaos.news/elizaos-media/snmysusiqq0-start-69_df8dd4fd.mp4"
-      },
-      {
-        "text": "In the coders channel, activity was minimal with community members Solify and bobjonesgood exchanging brief greetings. The channel topic directs users to the official ElizaOS documentation at docs.elizaos.ai to get started with building agents.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1781663578880-fr89l3.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1781568000,
+  "title": "Daily Report - 2026-06-17",
+  "categories": [
+    {
+      "title": "ElizaOS Discord Community Discussion - June 17, 2026",
+      "content": [
+        {
+          "text": "A community member named Bawss raised a debate about whether elizaOS should remain fully open source in 2026, arguing that the AI landscape has become highly competitive and secretive. He suggested the team should consider monetizing their tools and potentially only open-sourcing older versions of their software, similar to how Elon Musk handled xAI. He expressed concern that larger companies could replicate their work faster and that the project appeared to lack clear direction and resources, referencing past issues related to the a16z migration and alleged loss of funds. Community members pushed back on this view. IVgamer pointed out that open source does not necessarily mean losing competitive advantage, as being the foundation of a technology still holds value, and noted that a commercialization partnership between Secure Blockchain Development Corp. and the Eliza Foundation already exists for enterprise-level AI agents built on the elizaOS framework. Ross added that providing free access to knowledge is a form of equity and is never aimless. Bawss acknowledged he lacked full understanding of these developments and asked for clarification on the commercialization efforts.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A user named Ryan reported missing the deadline to migrate legacy AI16Z tokens to ELIZAOS, with the tokens sitting untouched in a private Coinbase wallet. He asked whether any alternative process, smart contract pool, or manual appeal existed for holders who missed the migration cutoff, or whether the window was strictly finalized with no fallback option.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Spam and scam activity was noted across both the general discussion and coders channels. Multiple messages were flagged as scams, including a user named Josh repeatedly posting offers to buy old Solana wallets with transaction history for amounts ranging from 0.5 SOL to 2 SOL or more depending on wallet age. Another user posted a fake airdrop message claiming a 500 dollar prize. A mini moderator named Omid Sa flagged the issue of scammer tagging, noting that the dedicated mini mod channel no longer exists, making it necessary to tag scammers in main channels. Odilitime confirmed granting Omid Sa mini mod powers to help address this. A warning video was also shared in the discussion channel related to scam awareness.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [
+            "https://cdn.discordapp.com/attachments/1253563209462448241/1516794912102813867/BEWARE_OF_20251030_120806_0000-1.mp4?ex=6a349997&is=6a334817&hm=54b82ab53f1f03cefe5e8c96d392cf58a1fe5409418cf6eee6b24a8cb0b4d1dd&"
+          ]
+        },
+        {
+          "text": "Inhuman Resources shared a trivia post from X asking which Allied nation suffered the highest total military and civilian casualties in World War II, with answer options including the United States, Great Britain, the Soviet Union, and China. A second trivia question was also shared asking which 1992 holiday movie featured a cameo by Donald Trump at the Plaza Hotel. Community members also briefly discussed the Federal Reserve interest rate decision, with one member predicting no change.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HK-8n_LW0AIJFBE.jpg:large"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1781654400,
   "nicknameMap": {
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "Josh": {
+      "id": "1516132129095024690",
+      "username": "josh015555",
       "roles": [
         "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Bawss": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
         "Creator",
         "[WG] degenspartan",
-        "Mini Mod",
         "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "bobjonesgood": {
-      "id": "1262625588577828886",
-      "username": "bobjonesgood_63805",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Dr. Neuro": {
-      "id": "403574677164916746",
-      "username": "neuro023",
-      "roles": [
-        "platform - self assign",
-        "trust - self assign",
-        "partner portal - self assign",
-        "Creator",
-        "Moderator",
-        "nfts - self assign",
-        "pmairca - self assign",
-        "King",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Contributor",
-        "NFT",
-        "merch - self assign",
-        "events - self-assign",
-        "boom chad",
-        "Coder",
-        "swarms - self assign",
-        "VIP",
-        "Designer"
-      ],
-      "totalMessages": 13
-    },
-    "Solify": {
-      "id": "1458856350221340683",
-      "username": "solify020",
-      "roles": [
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 34
-    },
-    "ross": {
-      "id": "906787451438260236",
-      "username": "ross.ross.ross",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Server Booster",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Booster",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 39
+      "totalMessages": 4
+    },
+    "IVgamer": {
+      "id": "480843095882072066",
+      "username": "ivgamer3467",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 7
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -166,36 +111,169 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 596
+      "totalMessages": 599
     },
-    "SHAURYA": {
-      "id": "882833249095802911",
-      "username": "shaurya04762",
+    "Jay viania {LTS} 🇬🇧": {
+      "id": "1467843425578778776",
+      "username": "winner.lts",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
         "Designer",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "? Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Server Booster",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 41
+    },
+    "Levi henry": {
+      "id": "1462721034569383998",
+      "username": "henry006213",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "sailorpepe.eth": {
+      "id": "920440808509931560",
+      "username": "thegreatluna8713",
       "roles": [
         "Verified",
         "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 17
+      "totalMessages": 12
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 14
+    },
+    "will": {
+      "id": "1176604297904005212",
+      "username": "will_24723",
+      "roles": [],
+      "totalMessages": 3
+    },
+    "Ryan": {
+      "id": "1516096733208121384",
+      "username": "ryan067828",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 106
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "AL": {
+      "id": "1515614612807090247",
+      "username": "al_jbi",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "laboratorian": {
+      "id": "817312344097947648",
+      "username": "labotests",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 6
     },
     "Inhuman Resources": {
       "id": "807727820355797062",
@@ -206,7 +284,75 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 106
+      "totalMessages": 108
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 31
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "$DMNDHANDSADev": {
+      "id": "1516089215845269535",
+      "username": "cryptomeme0762",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Obito": {
+      "id": "1512397538962051087",
+      "username": "obito031838",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Hernan Moreno": {
+      "id": "778764622790393866",
+      "username": "hernanmoreno9225",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     }
   }
 }

@@ -1,32 +1,39 @@
-# elizaOS Discord - 2026-06-16
+# elizaOS Discord - 2026-06-17
 
 ## Summary
 
-### Employment and Hiring
+### Open Source Strategy and Monetization
 
-The current status of hiring at elizaOS was clarified, with no active recruitment occurring at the moment. A couple of project ideas were initiated but ultimately did not materialize into ongoing work.
+ghss44 raised concerns about ElizaOS's open-source approach in the competitive 2026 AI landscape, arguing that fully open-sourcing everything may cause the project to fall behind competitors. They suggested a hybrid model similar to Elon Musk's Grok approach: monetizing the latest features while open-sourcing older versions. They expressed worry about lack of clear direction and resources, mentioning potential funding issues after migration due to a16z lawsuit threats. ivgamer3467 defended the open-source strategy, explaining it accelerates progress through community contributions, bug fixes, and feedback. They referenced a partnership between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize enterprise-level AI agents built on the open-source elizaOS framework.
 
-### Hardware and Product Inquiries
+### Token Migration Issues
 
-Discussion emerged around ordering humanoid robots, with a reference to a news article mentioning a quantity of 420,000 units, though the link provided was non-functional.
+ryan067828 inquired about missed AI16Z to ELIZAOS token migration, asking whether alternative processes exist for users who missed the original migration deadline.
 
-### Community Engagement
+### Moderation and Spam Management
 
-The channel saw light social activity with community members exchanging greetings and sharing social media links, though substantive technical discussion was minimal.
+The coders channel experienced significant spam activity with users advertising wallet purchases and airdrop scams. om1d_sa and odilitime discussed moderation capabilities, with om1d_sa noting that the minimod channel no longer exists, requiring scammers to be tagged in main channels. Odilitime confirmed granting minimod powers to om1d_sa to help address the ongoing moderation challenges.
+
+### Off-Topic Discussions
+
+Brief exchanges included matthib predicting no change in Federal Reserve decisions and various casual greetings throughout the discussion channel.
 
 ## FAQ
 
-**Q: Is elizaOS currently hiring developers?**
-A: No, there is no active hiring occurring at the moment. A couple of project ideas were started but fell apart.
+**Q: Should ElizaOS continue its fully open-source approach or adopt a hybrid monetization model?**
+A: ivgamer3467 argues the open-source approach accelerates progress through community contributions, bug fixes, and feedback. A partnership between Secure Blockchain Development Corp. and the Eliza Foundation exists to commercialize enterprise-level AI agents built on the open-source framework. However, ghss44 suggests a hybrid model where latest features are monetized while older versions remain open-source to remain competitive.
 
-**Q: How can someone order humanoid robots mentioned in the discussion?**
-A: A news article was referenced regarding ordering 420,000 units, but the link provided was dead and no functional ordering information was available.
+**Q: Is there an alternative process for users who missed the AI16Z to ELIZAOS token migration?**
+A: ryan067828 asked this question but no answer was provided in the discussion.
+
+**Q: How can moderators handle scammers now that the minimod channel no longer exists?**
+A: According to om1d_sa and odilitime, moderators with minimod powers need to tag scammers directly in main channels since the dedicated minimod channel is no longer available.
 
 ## Help Interactions
 
 **Helper:** odilitime
-**Helpee:** rsn6958
-**Resolution:** Clarified that no active hiring is currently taking place and explained that some project ideas had been initiated but did not continue.
+**Helpee:** om1d_sa
+**Resolution:** odilitime granted minimod powers to om1d_sa to help with moderation duties, particularly for tagging scammers in main channels after the minimod channel was removed.
 
 ## Action Items
 
