@@ -1,51 +1,35 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-06-17",
-  "categories": [
-    {
-      "title": "ElizaOS Discord Community Discussion - June 17, 2026",
-      "content": [
-        {
-          "text": "A community member named Bawss raised a debate about whether elizaOS should remain fully open source in 2026, arguing that the AI landscape has become highly competitive and secretive. He suggested the team should consider monetizing their tools and potentially only open-sourcing older versions of their software, similar to how Elon Musk handled xAI. He expressed concern that larger companies could replicate their work faster and that the project appeared to lack clear direction and resources, referencing past issues related to the a16z migration and alleged loss of funds. Community members pushed back on this view. IVgamer pointed out that open source does not necessarily mean losing competitive advantage, as being the foundation of a technology still holds value, and noted that a commercialization partnership between Secure Blockchain Development Corp. and the Eliza Foundation already exists for enterprise-level AI agents built on the elizaOS framework. Ross added that providing free access to knowledge is a form of equity and is never aimless. Bawss acknowledged he lacked full understanding of these developments and asked for clarification on the commercialization efforts.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A user named Ryan reported missing the deadline to migrate legacy AI16Z tokens to ELIZAOS, with the tokens sitting untouched in a private Coinbase wallet. He asked whether any alternative process, smart contract pool, or manual appeal existed for holders who missed the migration cutoff, or whether the window was strictly finalized with no fallback option.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Spam and scam activity was noted across both the general discussion and coders channels. Multiple messages were flagged as scams, including a user named Josh repeatedly posting offers to buy old Solana wallets with transaction history for amounts ranging from 0.5 SOL to 2 SOL or more depending on wallet age. Another user posted a fake airdrop message claiming a 500 dollar prize. A mini moderator named Omid Sa flagged the issue of scammer tagging, noting that the dedicated mini mod channel no longer exists, making it necessary to tag scammers in main channels. Odilitime confirmed granting Omid Sa mini mod powers to help address this. A warning video was also shared in the discussion channel related to scam awareness.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [
-            "https://cdn.discordapp.com/attachments/1253563209462448241/1516794912102813867/BEWARE_OF_20251030_120806_0000-1.mp4?ex=6a349997&is=6a334817&hm=54b82ab53f1f03cefe5e8c96d392cf58a1fe5409418cf6eee6b24a8cb0b4d1dd&"
-          ]
-        },
-        {
-          "text": "Inhuman Resources shared a trivia post from X asking which Allied nation suffered the highest total military and civilian casualties in World War II, with answer options including the United States, Great Britain, the Soviet Union, and China. A second trivia question was also shared asking which 1992 holiday movie featured a cameo by Donald Trump at the Plaza Hotel. Community members also briefly discussed the Federal Reserve interest rate decision, with one member predicting no change.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HK-8n_LW0AIJFBE.jpg:large"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Discord Community Discussion - June 17, 2026",
+    "content": [
+      {
+        "text": "A community member named Bawss raised a debate about whether elizaOS should remain fully open source in 2026, arguing that the AI landscape has become highly competitive and secretive. He suggested the team should consider monetizing their tools and potentially only open-sourcing older versions of their software, similar to how Elon Musk handled xAI. He expressed concern that larger companies could replicate their work faster and that the project appeared to lack clear direction and resources, referencing past issues related to the a16z migration and alleged loss of funds. Community members pushed back on this view. IVgamer pointed out that open source does not necessarily mean losing competitive advantage, as being the foundation of a technology still holds value, and noted that a commercialization partnership between Secure Blockchain Development Corp. and the Eliza Foundation already exists for enterprise-level AI agents built on the elizaOS framework. Ross added that providing free access to knowledge is a form of equity and is never aimless. Bawss acknowledged he lacked full understanding of these developments and asked for clarification on the commercialization efforts.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1781749889584-56ex5j.jpg"
+      },
+      {
+        "text": "A user named Ryan reported missing the deadline to migrate legacy AI16Z tokens to ELIZAOS, with the tokens sitting untouched in a private Coinbase wallet. He asked whether any alternative process, smart contract pool, or manual appeal existed for holders who missed the migration cutoff, or whether the window was strictly finalized with no fallback option.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+      },
+      {
+        "text": "Spam and scam activity was noted across both the general discussion and coders channels. Multiple messages were flagged as scams, including a user named Josh repeatedly posting offers to buy old Solana wallets with transaction history for amounts ranging from 0.5 SOL to 2 SOL or more depending on wallet age. Another user posted a fake airdrop message claiming a 500 dollar prize. A mini moderator named Omid Sa flagged the issue of scammer tagging, noting that the dedicated mini mod channel no longer exists, making it necessary to tag scammers in main channels. Odilitime confirmed granting Omid Sa mini mod powers to help address this. A warning video was also shared in the discussion channel related to scam awareness.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "videos": "https://cdn.elizaos.news/elizaos-media/beware_of_20251030_120806_0000-1_919e2970.mp4",
+        "posters": "https://cdn.elizaos.news/posters/1781749932444-bxj9v.jpg"
+      },
+      {
+        "text": "Inhuman Resources shared a trivia post from X asking which Allied nation suffered the highest total military and civilian casualties in World War II, with answer options including the United States, Great Britain, the Soviet Union, and China. A second trivia question was also shared asking which 1992 holiday movie featured a cameo by Donald Trump at the Plaza Hotel. Community members also briefly discussed the Federal Reserve interest rate decision, with one member predicting no change.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1516636994166460466_4c60e2e8.jpg"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1781654400,
   "nicknameMap": {
     "Josh": {
@@ -216,7 +200,6 @@
     "will": {
       "id": "1176604297904005212",
       "username": "will_24723",
-      "roles": [],
       "totalMessages": 3
     },
     "Ryan": {
