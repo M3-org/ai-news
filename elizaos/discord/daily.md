@@ -1,50 +1,58 @@
-# elizaOS Discord - 2026-06-17
+# elizaOS Discord - 2026-06-18
 
 ## Summary
 
-### Open Source Strategy and Monetization
+### Business Model and Monetization Strategy
 
-ghss44 raised concerns about ElizaOS's open-source approach in the competitive 2026 AI landscape, arguing that fully open-sourcing everything may cause the project to fall behind competitors. They suggested a hybrid model similar to Elon Musk's Grok approach: monetizing the latest features while open-sourcing older versions. They expressed worry about lack of clear direction and resources, mentioning potential funding issues after migration due to a16z lawsuit threats. ivgamer3467 defended the open-source strategy, explaining it accelerates progress through community contributions, bug fixes, and feedback. They referenced a partnership between Secure Blockchain Development Corp. and the Eliza Foundation to commercialize enterprise-level AI agents built on the open-source elizaOS framework.
+odilitime clarified that ElizaOS plans to monetize through a cloud platform while maintaining its goal of democratizing AI access. The platform aims to balance commercial viability with accessibility objectives.
 
-### Token Migration Issues
+### Platform Accessibility and User Experience
 
-ryan067828 inquired about missed AI16Z to ELIZAOS token migration, asking whether alternative processes exist for users who missed the original migration deadline.
+ghss44 extensively criticized ElizaOS for complexity that excludes non-developers, arguing that despite being available since December 2024, the value proposition remains unclear to general users. They advocated for a no-code, button-based interface similar to consumer applications, with features like easy agent creation for social media automation including Instagram likes, post replies, and content suggestions. om1d_sa countered that Eliza cloud already provides no-code agent creation, modification, and deployment capabilities.
 
-### Moderation and Spam Management
+### Branding and Market Positioning
 
-The coders channel experienced significant spam activity with users advertising wallet purchases and airdrop scams. om1d_sa and odilitime discussed moderation capabilities, with om1d_sa noting that the minimod channel no longer exists, requiring scammers to be tagged in main channels. Odilitime confirmed granting minimod powers to om1d_sa to help address the ongoing moderation challenges.
+ghss44 proposed rebranding from "Eliza Cloud" to "ELIZA OS" for better market positioning, arguing the current name suggests storage functionality rather than agent deployment capabilities.
 
-### Off-Topic Discussions
+### Legal Controversy and Token Issues
 
-Brief exchanges included matthib predicting no change in Federal Reserve decisions and various casual greetings throughout the discussion channel.
+Discussion emerged regarding a lawsuit against AI16Z founders, with allegations of faking AI agents and misleading investors in a $2.6B scheme. Accusations included insider trading related to token launches. The original $eliza token reportedly crashed 87% when a new $ELIZA token was released.
+
+### Technical Issues
+
+Users reported accessibility problems with elizacloud and connection issues with Milady cloud.
 
 ## FAQ
 
-**Q: Should ElizaOS continue its fully open-source approach or adopt a hybrid monetization model?**
-A: ivgamer3467 argues the open-source approach accelerates progress through community contributions, bug fixes, and feedback. A partnership between Secure Blockchain Development Corp. and the Eliza Foundation exists to commercialize enterprise-level AI agents built on the open-source framework. However, ghss44 suggests a hybrid model where latest features are monetized while older versions remain open-source to remain competitive.
+**Q: What is ElizaOS's business model?**
+A: ElizaOS aims to monetize through a cloud platform while maintaining goals of democratizing AI access.
 
-**Q: Is there an alternative process for users who missed the AI16Z to ELIZAOS token migration?**
-A: ryan067828 asked this question but no answer was provided in the discussion.
+**Q: Does ElizaOS offer no-code capabilities?**
+A: Yes, according to om1d_sa, Eliza cloud already provides no-code agent creation, modification, and deployment capabilities.
 
-**Q: How can moderators handle scammers now that the minimod channel no longer exists?**
-A: According to om1d_sa and odilitime, moderators with minimod powers need to tag scammers directly in main channels since the dedicated minimod channel is no longer available.
+**Q: What happened with the $eliza token?**
+A: The original $eliza token crashed 87% when a new $ELIZA token was released, amid controversy involving AI16Z founders.
+
+**Q: What accessibility features are being requested?**
+A: Users are requesting a no-code, button-based interface with features for social media automation including Instagram likes, post replies, and content suggestions.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** om1d_sa
-**Resolution:** odilitime granted minimod powers to om1d_sa to help with moderation duties, particularly for tagging scammers in main channels after the minimod channel was removed.
+No substantive help interactions with clear resolutions were documented in the provided channel summaries.
 
 ## Action Items
 
-### Technical
-
-None identified.
-
 ### Features
 
-None identified.
+- Implement no-code, button-based interface for non-developers (mentioned by ghss44)
+- Add social media automation features including Instagram likes, post replies, and content suggestions (mentioned by ghss44)
 
 ### Documentation
 
-None identified.
+- Clarify value proposition for general users (mentioned by ghss44)
+
+### Technical
+
+- Fix elizacloud accessibility issues (reported by users)
+- Resolve Milady cloud connection problems (reported by users)
+- Consider rebranding from "Eliza Cloud" to "ELIZA OS" (mentioned by ghss44)
