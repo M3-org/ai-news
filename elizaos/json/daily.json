@@ -4,33 +4,23 @@
   "categories": [
     {
       "title": "ElizaOS Community Discussion - June 20, 2026",
-      "content": [
-        {
-          "text": "In the general discussion channel, community members raised questions and concerns about waifu.fun, a platform associated with the ElizaOS ecosystem. One user questioned the purpose of waifu.fun, noting confusion about who it is intended for and what it does, specifically asking whether it is meant to launch trading agents. Odilitime, a core developer and moderator, acknowledged that he did not build the platform and is still working to understand it himself, but mentioned plans to launch his own agent on it that week to learn more. A separate community member raised a broader concern about token strategy, warning that waifu.fun using its own token rather than ELIZAOS could dilute value and increase market skepticism, urging the team to focus on strengthening one primary token before issuing additional ones. A scammer was also briefly flagged in the channel and was reportedly handled. Additionally, a user inquired about how to contact the team regarding a potential partnership. The coders channel had no activity recorded for the day.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HLRrPDCWcAAMxP7.jpg:large"
-          ],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "In the general discussion channel, community members raised questions and concerns about waifu.fun, a platform associated with the ElizaOS ecosystem. One user questioned the purpose of waifu.fun, noting confusion about who it is intended for and what it does, specifically asking whether it is meant to launch trading agents. Odilitime, a core developer and moderator, acknowledged that he did not build the platform and is still working to understand it himself, but mentioned plans to launch his own agent on it that week to learn more. A separate community member raised a broader concern about token strategy, warning that waifu.fun using its own token rather than ELIZAOS could dilute value and increase market skepticism, urging the team to focus on strengthening one primary token before issuing additional ones. A scammer was also briefly flagged in the channel and was reportedly handled. Additionally, a user inquired about how to contact the team regarding a potential partnership. The coders channel had no activity recorded for the day.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1517954925903085680_66045b2d.jpg"
+      },
       "topic": "discordrawdata"
     },
     {
       "title": "ElizaOS Cloud Infrastructure and Managed Agent Improvements (June 20, 2026)",
-      "content": [
-        {
-          "text": "On June 20, 2026, the ElizaOS development team focused on improving the scalability and reliability of managed agents within the framework. A critical connection pooling issue that caused a 'too many clients' error was resolved by transitioning to a local in-container PGlite database architecture for managed agents. This change significantly improved scalability and stability. Additionally, lean chat plugins were integrated to ensure compatibility with the updated managed agent architecture.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-20.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "On June 20, 2026, the ElizaOS development team focused on improving the scalability and reliability of managed agents within the framework. A critical connection pooling issue that caused a 'too many clients' error was resolved by transitioning to a local in-container PGlite database architecture for managed agents. This change significantly improved scalability and stability. Additionally, lean chat plugins were integrated to ensure compatibility with the updated managed agent architecture.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-20.json",
+        "posters": "https://cdn.elizaos.news/posters/1782009066367-1yqaob.png"
+      },
       "topic": "miscellaneous"
     }
   ],
