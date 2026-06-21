@@ -1,0 +1,164 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-06-20",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - June 20, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members raised questions and concerns about waifu.fun, a platform associated with the ElizaOS ecosystem. One user questioned the purpose of waifu.fun, noting confusion about who it is intended for and what it does, specifically asking whether it is meant to launch trading agents. Odilitime, a core developer and moderator, acknowledged that he did not build the platform and is still working to understand it himself, but mentioned plans to launch his own agent on it that week to learn more. A separate community member raised a broader concern about token strategy, warning that waifu.fun using its own token rather than ELIZAOS could dilute value and increase market skepticism, urging the team to focus on strengthening one primary token before issuing additional ones. A scammer was also briefly flagged in the channel and was reportedly handled. Additionally, a user inquired about how to contact the team regarding a potential partnership. The coders channel had no activity recorded for the day.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HLRrPDCWcAAMxP7.jpg:large"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Cloud Infrastructure and Managed Agent Improvements (June 20, 2026)",
+      "content": [
+        {
+          "text": "On June 20, 2026, the ElizaOS development team focused on improving the scalability and reliability of managed agents within the framework. A critical connection pooling issue that caused a 'too many clients' error was resolved by transitioning to a local in-container PGlite database architecture for managed agents. This change significantly improved scalability and stability. Additionally, lean chat plugins were integrated to ensure compatibility with the updated managed agent architecture.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-20.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
+    }
+  ],
+  "date": 1781913600,
+  "nicknameMap": {
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 113
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 612
+    },
+    "Baws": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 24
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 32
+    },
+    "Xpes": {
+      "id": "1218488218702446692",
+      "username": "xpes2273",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "!": {
+      "id": "247484060119597056",
+      "username": "thewaifuai",
+      "roles": [
+        "Coder",
+        "utility",
+        "Verified",
+        "Dev School Student"
+      ],
+      "totalMessages": 1
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Jack|safepal": {
+      "id": "1157386415911469056",
+      "username": "surydamkery147",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

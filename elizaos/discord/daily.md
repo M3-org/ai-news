@@ -1,57 +1,45 @@
-# elizaOS Discord - 2026-06-19
+# elizaOS Discord - 2026-06-20
 
 ## Summary
 
-### Product Positioning and Branding Strategy
+### Token Strategy and Platform Consolidation
 
-ghss44 provided comprehensive feedback on repositioning ElizaOS, advocating for a shift from "Eliza Cloud" to "Eliza OS" to establish it as "the operating system for AI agents." The emphasis was on building for everyday consumers rather than exclusively technical users and traders, with a focus on ease of use and leveraging the Eliza mascot's visual appeal for marketing purposes.
+zadayos raised concerns about waifu.fun using a separate token instead of $ELIZAOS, arguing this creates market dilution and skepticism within the community. The concern centered on why the platform maintains its own token rather than consolidating around the main ELIZAOS token, suggesting this fragmentation could harm overall ecosystem value.
 
-### Development Status and Product Readiness
+### Platform Purpose and Value Proposition
 
-j_choy clarified that the project remains under active development with the full product not yet released. vavityva inquired about Hyperforge's development status, with odilitime confirming the team was actively working over 3 weeks prior but expressing uncertainty about the current development state.
+ghss44 questioned the fundamental purpose of waifu.fun, asking who the target users are and why they should engage with the platform. Specific confusion existed around what launching trading agents means in the context of the platform. This revealed a broader knowledge gap about waifu.fun's value proposition even among community members.
 
-### Financial Allegations and Governance Concerns
+### Platform Development and Understanding
 
-bangrrr2914 posted detailed allegations regarding financial arrangements between Eliza Foundation and Secure Blockchain Dev Corp, claiming circular fund flows and potential exit strategies through a Canadian micro-cap company acquisition. The allegations outlined a timeline from October 2025 through May 2026 involving a 750k CAD allocation and connections to Sebastian Quinn Watson. Multiple users issued warnings about scam-related concerns.
+odilitime acknowledged not having built waifu.fun and being in the process of understanding the platform themselves. They mentioned plans to launch their own agent during the week to gain more practical insight into how the platform functions.
+
+### Community Moderation
+
+A scammer was reported in the channel and was apparently handled by moderators, though details of the resolution were not provided in the summary.
 
 ## FAQ
 
-**Q: What is the recommended branding approach for ElizaOS?**
-A: The recommendation is to rebrand from "Eliza Cloud" to "Eliza OS" and position it as "the operating system for AI agents," focusing on everyday consumers rather than just technical users and traders.
+**Q: Why does waifu.fun use its own token instead of $ELIZAOS?**
+A: This question was raised by zadayos but remained unanswered in the discussion. The concern is that having separate tokens creates market dilution and skepticism.
 
-**Q: Is the ElizaOS product fully released?**
-A: No, the project is still under active development and the full product has not yet been released.
+**Q: Who are the target users of waifu.fun and why should they use it?**
+A: This question from ghss44 was not definitively answered. odilitime acknowledged not having built the platform and being in the process of understanding it themselves.
 
-**Q: What is the current status of Hyperforge development?**
-A: The team was actively working on it over 3 weeks prior to the discussion, but the current status is uncertain.
-
-**Q: What financial concerns were raised about Eliza Foundation?**
-A: Allegations were made about circular fund flows between Eliza Foundation and Secure Blockchain Dev Corp, including claims about a 750k CAD allocation and potential exit strategies through a Canadian micro-cap company acquisition.
+**Q: What does launching trading agents on waifu.fun mean?**
+A: This question from ghss44 was not answered in the discussion.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** vavityva
-**Resolution:** Provided information that the Hyperforge team was actively working over 3 weeks prior, though current status was uncertain.
-
-**Helper:** j_choy
-**Helpee:** General community
-**Resolution:** Clarified that the project is still under active development and the full product has not yet been released.
+No resolved help interactions were documented in the provided channel summary. ghss44 sought clarification from the community about waifu.fun's purpose but did not receive a definitive answer. odilitime acknowledged the knowledge gap but could not provide immediate assistance as they were still learning about the platform themselves.
 
 ## Action Items
 
 ### Technical
 
-- Investigate and address the financial allegations regarding Eliza Foundation and Secure Blockchain Dev Corp relationships (mentioned by bangrrr2914)
-- Clarify current development status of Hyperforge (mentioned by vavityva, odilitime)
-
-### Features
-
-- Implement ease of use improvements targeting everyday consumers rather than just technical users (mentioned by ghss44)
-- Leverage Eliza mascot visual appeal in product design and marketing (mentioned by ghss44)
+- Launch a personal agent on waifu.fun to better understand platform functionality (mentioned by odilitime)
 
 ### Documentation
 
-- Rebrand from "Eliza Cloud" to "Eliza OS" across all materials (mentioned by ghss44)
-- Update positioning to emphasize "the operating system for AI agents" (mentioned by ghss44)
-- Provide transparency regarding financial arrangements and governance structure (mentioned by bangrrr2914)
+- Clarify waifu.fun's value proposition and target user base (implied by ghss44's questions)
+- Document the rationale for waifu.fun's separate token versus using $ELIZAOS (implied by zadayos's concerns)
