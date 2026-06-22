@@ -1,41 +1,80 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-20",
+  "title": "Daily Report - 2026-06-21",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - June 20, 2026",
-      "content": {
-        "text": "In the general discussion channel, community members raised questions and concerns about waifu.fun, a platform associated with the ElizaOS ecosystem. One user questioned the purpose of waifu.fun, noting confusion about who it is intended for and what it does, specifically asking whether it is meant to launch trading agents. Odilitime, a core developer and moderator, acknowledged that he did not build the platform and is still working to understand it himself, but mentioned plans to launch his own agent on it that week to learn more. A separate community member raised a broader concern about token strategy, warning that waifu.fun using its own token rather than ELIZAOS could dilute value and increase market skepticism, urging the team to focus on strengthening one primary token before issuing additional ones. A scammer was also briefly flagged in the channel and was reportedly handled. Additionally, a user inquired about how to contact the team regarding a potential partnership. The coders channel had no activity recorded for the day.",
-        "sources": [
-          "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "https://discord.com/channels/1253563208833433701/1300025221834739744"
-        ],
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1517954925903085680_66045b2d.jpg"
-      },
+      "title": "Discord Community Activity Summary - June 21, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, a brief conversation took place between users chulylooly and Odilitime regarding an unidentified topic, with a reference to waifu.fun mentioned as a possible answer. The exchange was inconclusive with chulylooly indicating they had no idea about the subject. Shortly after, the channel was targeted by two separate spam and scam messages. User Levi henry posted a message promoting a rugpull scheme, claiming to have made $24,000 and soliciting others via direct message. User kim6erly followed with an unsolicited job recruitment post advertising paid roles such as beta tester, moderator, developer, and community manager, and used an at-everyone mention to maximize visibility. These messages are consistent with common social engineering and scam tactics seen in crypto and tech community servers. The coders channel had no activity recorded for the same date.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
       "topic": "discordrawdata"
     },
     {
-      "title": "ElizaOS Cloud Infrastructure and Managed Agent Improvements (June 20, 2026)",
-      "content": {
-        "text": "On June 20, 2026, the ElizaOS development team focused on improving the scalability and reliability of managed agents within the framework. A critical connection pooling issue that caused a 'too many clients' error was resolved by transitioning to a local in-container PGlite database architecture for managed agents. This change significantly improved scalability and stability. Additionally, lean chat plugins were integrated to ensure compatibility with the updated managed agent architecture.",
-        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-20.json",
-        "posters": "https://cdn.elizaos.news/posters/1782009066367-1yqaob.png"
-      },
+      "title": "ElizaOS Daily Summary: June 21, 2026",
+      "content": [
+        {
+          "text": "Development on June 21, 2026 focused on framework hardening, UI/UX refinements, and performance optimizations. A mandatory end-to-end ship-gate was established for all plugin routes and commands to ensure comprehensive verification before merging, and UI smoke test specs were updated to align with current product designs for more reliable CI feedback. On the UI/UX front, a new Retry feature was introduced to improve chat reliability, cloud-agent handoffs were made more visible, mobile rendering bugs for the cloud-handoff banner were resolved, and error messaging for rate-limited chat replies was improved. Performance work included optimizations to agent cold-boot times, fixes for sub-agent execution failures, reduced chat latency through parallelized document-recovery searches, and standardized rate-limit detection across the codebase. An urgent open issue requires attention regarding on-device inference, specifically resolving a head_dim incompatibility between 256 and 128 values and addressing non-deterministic races in Mali GPU kernels for Flash Attention. Work in progress includes seeding dedicated-agent personas from default characters, emitting json_object for Cerebras models, refactoring plugin-x auto-posting, CI cleanup to drop duplicate test lanes, batch embedding drain requests, and support for callback functions in character templates.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-21.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1781913600,
+  "date": 1782000000,
   "nicknameMap": {
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "kim6erly": {
+      "id": "1163529573267427429",
+      "username": ".kim6erly.",
       "roles": [
-        "[WG] Want to Help",
-        "Verified",
+        "Trader",
+        "Creator",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 113
+      "totalMessages": 2
+    },
+    "Levi henry": {
+      "id": "1462721034569383998",
+      "username": "henry006213",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 38
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -65,7 +104,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 612
+      "totalMessages": 613
     },
     "Baws": {
       "id": "1407990525050490900",
@@ -80,75 +119,6 @@
         "eliza"
       ],
       "totalMessages": 24
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 32
-    },
-    "Xpes": {
-      "id": "1218488218702446692",
-      "username": "xpes2273",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "!": {
-      "id": "247484060119597056",
-      "username": "thewaifuai",
-      "roles": [
-        "Coder",
-        "utility",
-        "Verified",
-        "Dev School Student"
-      ],
-      "totalMessages": 1
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Jack|safepal": {
-      "id": "1157386415911469056",
-      "username": "surydamkery147",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
     }
   }
 }

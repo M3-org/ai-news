@@ -1,73 +1,65 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-20",
-  "date": 1781913600,
+  "title": "elizaOS Discord - 2026-06-21",
+  "date": 1782000000,
   "stats": {
-    "totalMessages": 16,
-    "totalUsers": 8
+    "totalMessages": 6,
+    "totalUsers": 4
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel had minimal technical activity. The primary substantive topic was a community concern raised by zadayos about token strategy, questioning why waifu.fun uses its own token separate from $ELIZAOS and advocating for consolidation to avoid market dilution and skepticism. ghss44 sought clarification on waifu.fun's purpose and target users, specifically asking why users should engage with the platform and what launching trading agents means. odilitime acknowledged not having built waifu.fun and being in the process of understanding it themselves, mentioning plans to launch their own agent during the week to gain more insight. The conversation revealed a knowledge gap around waifu.fun's value proposition even among community members. A scammer was briefly reported and apparently handled. A partnership inquiry from xpes2273 went unanswered. The channel showed limited technical problem-solving or concrete implementation discussions.",
-      "faqs": [
-        {
-          "question": "Does waifu.fun use its own token separate from $ELIZAOS, and should the team focus on one main token instead?",
-          "askedBy": "zadayos",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Why should a person use waifu.fun as a user?",
-          "askedBy": "ghss44",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Who do I contact regarding a potential partnership?",
-          "askedBy": "xpes2273",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "ghss44",
-          "context": "ghss44 was trying to understand waifu.fun's purpose and target users",
-          "resolution": "odilitime clarified they were also trying to understand it and planned to launch their own agent to learn more, but did not provide a complete answer"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Documentation",
-          "description": "Clarify waifu.fun's purpose, target users, and value proposition for end users",
-          "mentionedBy": "ghss44"
-        },
-        {
-          "type": "Technical",
-          "description": "Address token strategy concerns regarding waifu.fun having separate token from $ELIZAOS",
-          "mentionedBy": "zadayos"
-        },
-        {
-          "type": "Documentation",
-          "description": "Provide clear explanation of what 'launching trading agents' means on waifu.fun",
-          "mentionedBy": "ghss44"
-        }
-      ],
-      "messageCount": 16,
-      "userCount": 8
+      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of brief, unclear exchanges and spam messages. The initial exchange between chulylooly and odilitime references 'waifu.fun' but lacks context or technical detail. The remainder of the chat is dominated by spam: henry006213 promotes a cryptocurrency scam ('rugpull'), and .kim6erly posts a recruitment scam with an @everyone mention offering various positions. No legitimate technical discussions, problem-solving, implementations, or decisions occurred during this segment. The chat demonstrates the need for moderation to filter spam and scam content.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 6,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "kim6erly": {
+      "id": "1163529573267427429",
+      "username": ".kim6erly.",
       "roles": [
-        "[WG] Want to Help",
-        "Verified",
+        "Trader",
+        "Creator",
+        "Designer",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 113
+      "totalMessages": 2
+    },
+    "Levi henry": {
+      "id": "1462721034569383998",
+      "username": "henry006213",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 38
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -97,7 +89,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 612
+      "totalMessages": 613
     },
     "Baws": {
       "id": "1407990525050490900",
@@ -112,75 +104,6 @@
         "eliza"
       ],
       "totalMessages": 24
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 32
-    },
-    "Xpes": {
-      "id": "1218488218702446692",
-      "username": "xpes2273",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "!": {
-      "id": "247484060119597056",
-      "username": "thewaifuai",
-      "roles": [
-        "Coder",
-        "utility",
-        "Verified",
-        "Dev School Student"
-      ],
-      "totalMessages": 1
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Jack|safepal": {
-      "id": "1157386415911469056",
-      "username": "surydamkery147",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
     }
   }
 }
