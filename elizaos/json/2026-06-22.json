@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782180092605-95l24n.png"
+          ]
         },
         {
           "text": "Questions arose regarding the ElizaOS token and foundation. One community member asked whether the foundation planned to add liquidity for trading ElizaOS on the Solana chain. A core developer responded that they do not communicate directly with the foundation, though they confirmed the foundation manages the token. The identity of foundation members was also inquired about but not answered. Separately, a notable on-chain event was flagged by a community member who observed large token movements from a wallet associated with Shaw, which had been dormant for approximately eight months and moved from 1.02 billion tokens to zero. Other members noted the migration occurred around November or December, roughly seven months prior, and acknowledged the legitimacy of the question given the wallet's long period of inactivity.",
@@ -27,7 +30,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782180155830-hquw3r.png"
+          ]
         },
         {
           "text": "In the coders channel, a single greeting was posted by a community member with no further technical discussion recorded for the day.",
@@ -35,7 +41,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782180187363-3g9l8e.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
