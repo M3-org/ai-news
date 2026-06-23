@@ -1,24 +1,179 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-21",
-  "date": 1782000000,
+  "title": "elizaOS Discord - 2026-06-22",
+  "date": 1782086400,
   "stats": {
-    "totalMessages": 6,
-    "totalUsers": 4
+    "totalMessages": 26,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of brief, unclear exchanges and spam messages. The initial exchange between chulylooly and odilitime references 'waifu.fun' but lacks context or technical detail. The remainder of the chat is dominated by spam: henry006213 promotes a cryptocurrency scam ('rugpull'), and .kim6erly posts a recruitment scam with an @everyone mention offering various positions. No legitimate technical discussions, problem-solving, implementations, or decisions occurred during this segment. The chat demonstrates the need for moderation to filter spam and scam content.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 6,
-      "userCount": 4
+      "summary": "The discussion channel featured minimal technical content, primarily consisting of community questions and general conversation. The most notable technical mention was odilitime announcing the launch of Ruby Trivia. A community member (.chomppp) inquired about the foundation's plans to add liquidity for ElizaOS trading on Solana, but odilitime clarified he doesn't communicate with the foundation and that the foundation manages the token. There was discussion about foundation membership, though no specific names were provided. A blockchain-related question emerged from paolin_62616 regarding large token movements from Shaw's wallet (1.02B to 0), which had been dormant for 8 months. ghss44 suggested this could be normal wallet switching or tokenomics-related activities for marketing purposes. The conversation also touched on naming conventions, with ghss44 advocating for using 'Eliza OS' instead of 'eliza cloud' and emphasizing it should be positioned as an operating system for AI agents. A developer (rsn6958) posted seeking opportunities, though no specific technical requirements or responses were captured. The channel saw several new members joining and sharing social media links, but no substantial technical implementations, code discussions, or concrete problem-solving occurred during this segment.",
+      "faqs": [
+        {
+          "question": "Will foundation add liquidity in near future to trade ElizaOS on Solana chain?",
+          "askedBy": ".chomppp",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Did foundation get allocation during migration?",
+          "askedBy": ".chomppp",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Who are on the foundation?",
+          "askedBy": ".chomppp",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Why were there large token movements from Shaw's wallet from 1.02B to 0?",
+          "askedBy": "paolin_62616",
+          "answeredBy": "ghss44"
+        },
+        {
+          "question": "Can we expect eliza cloud in 2026?",
+          "askedBy": "ghss44",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Is there anyone looking for a developer?",
+          "askedBy": "rsn6958",
+          "answeredBy": "chulylooly"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": ".chomppp",
+          "context": "Questions about foundation liquidity plans and token management",
+          "resolution": "Clarified that he doesn't communicate with foundation and that foundation manages the token"
+        },
+        {
+          "helper": "ghss44",
+          "helpee": "paolin_62616",
+          "context": "Question about large token movements from Shaw's wallet",
+          "resolution": "Explained it could be normal wallet switching or tokenomics-related activities for marketing"
+        },
+        {
+          "helper": "chulylooly",
+          "helpee": "rsn6958",
+          "context": "Developer seeking opportunities",
+          "resolution": "Asked for clarification on what kind of developer"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Launch Ruby Trivia",
+          "mentionedBy": "odilitime"
+        },
+        {
+          "type": "Documentation",
+          "description": "Use 'Eliza OS' naming convention instead of 'eliza cloud' to position as operating system for AI agents",
+          "mentionedBy": "ghss44"
+        }
+      ],
+      "messageCount": 25,
+      "userCount": 9
     }
   ],
   "nicknameMap": {
+    "Obito": {
+      "id": "1512397538962051087",
+      "username": "obito031838",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Richer_Claude": {
+      "id": "1518748764892827713",
+      "username": "richer_claude_51183",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 115
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 41
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "CryPn0": {
+      "id": "899786116968874005",
+      "username": "crypn00",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 52
+    },
+    "Baws": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 31
+    },
     "kim6erly": {
       "id": "1163529573267427429",
       "username": ".kim6erly.",
@@ -32,34 +187,17 @@
       ],
       "totalMessages": 2
     },
-    "Levi henry": {
-      "id": "1462721034569383998",
-      "username": "henry006213",
+    "chomppp": {
+      "id": "795728567538679808",
+      "username": ".chomppp",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
+        "Verified",
         "Designer",
-        "Fr",
         "utility",
-        "Coder",
-        "eliza"
+        "Coder"
       ],
       "totalMessages": 4
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 38
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -89,21 +227,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 613
-    },
-    "Baws": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 24
+      "totalMessages": 616
     }
   }
 }
