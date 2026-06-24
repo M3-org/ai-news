@@ -1,50 +1,39 @@
-# elizaOS Discord - 2026-06-22
+# elizaOS Discord - 2026-06-23
 
 ## Summary
 
-### Product Launch
+### Financial Transparency Concerns
 
-odilitime announced the launch of Ruby Trivia, marking a new product release for the community.
+A community member raised serious allegations regarding the Eliza Foundation's B2B announcement, claiming that 750k CAD of holder assets were transferred to Secure Blockchain Dev Corp during an April 2026 funding round. The allegation suggests that subsequent B2B development contracts may be circulating these same funds to create the appearance of organic enterprise revenue rather than representing genuine business activity. The post also noted that Sebastian Quinn Watson, a co-founder of the acquired Agentic Solutions, is currently a defendant in an active case in the NY Southern District Court against Eliza. The community member demanded transparency regarding fund flows and warned about potential exit liquidity schemes.
 
-### Token Economics and Liquidity
+### ElizaOS Plugin Development
 
-Community member .chomppp raised questions about the foundation's plans to add liquidity for ElizaOS trading on Solana. odilitime clarified that he does not communicate with the foundation and that the foundation manages the token independently. A blockchain-related concern emerged regarding large token movements from Shaw's wallet, with 1.02B tokens moving to 0 after 8 months of dormancy. ghss44 suggested this could be normal wallet switching behavior or tokenomics-related activities for marketing purposes.
-
-### Branding and Positioning
-
-ghss44 advocated for using 'Eliza OS' instead of 'eliza cloud' as the naming convention, emphasizing that the project should be positioned as an operating system for AI agents rather than a cloud service.
-
-### Community Growth
-
-The channel saw several new members joining and sharing social media links, though no substantial technical implementations or discussions occurred during this period.
-
-### Employment Opportunities
-
-Developer rsn6958 posted seeking opportunities within the community, though no specific technical requirements or responses were captured.
+A new plugin for ElizaOS agents was released that enables autonomous participation in skill-based contests on Solana mainnet. The @omniology/plugin-omniology allows agents to compete in themed contests including Art, Story, and Joke categories that occur every 88 seconds. An LLM judge scores entries and distributes real USDC prizes on-chain. The plugin has demonstrated strong performance with a 72% win rate across 289 contests, earning $3.35 USDC with a 0.01 USDC entry fee per contest. The system operates fully autonomously without requiring human intervention and can be installed via npm.
 
 ## FAQ
 
-**Q: Will the foundation add liquidity for ElizaOS trading on Solana?**
-A: odilitime clarified that he doesn't communicate with the foundation and that the foundation manages the token. No specific plans were shared.
+**Q: What is the @omniology/plugin-omniology plugin?**
+A: It is a new plugin for ElizaOS agents that enables autonomous participation in skill-based contests on Solana mainnet. Agents can compete in themed contests for Art, Story, and Joke categories every 88 seconds, with an LLM judge scoring entries and distributing USDC prizes on-chain.
 
-**Q: What explains the large token movement from Shaw's wallet (1.02B to 0) after 8 months?**
-A: ghss44 suggested this could be normal wallet switching or tokenomics-related activities for marketing purposes.
+**Q: What is the performance record of the omniology plugin?**
+A: The plugin has achieved a 72% win rate across 289 contests, earning $3.35 USDC with an entry fee of 0.01 USDC per contest.
 
-**Q: What should the project be called - Eliza Cloud or Eliza OS?**
-A: ghss44 advocated for using 'Eliza OS' and positioning it as an operating system for AI agents.
+**Q: What are the allegations regarding the Eliza Foundation's B2B announcement?**
+A: A community member alleged that 750k CAD of holder assets were transferred to Secure Blockchain Dev Corp during an April 2026 funding round, and that subsequent B2B development contracts may be circulating these same funds to create the appearance of organic enterprise revenue.
+
+**Q: Who is Sebastian Quinn Watson in relation to Eliza?**
+A: Sebastian Quinn Watson is a co-founder of the acquired Agentic Solutions and is currently a defendant in an active NY Southern District Court case against Eliza.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** .chomppp
-**Resolution:** Clarified that he does not communicate with the foundation and that the foundation manages the token independently regarding liquidity questions.
-
-**Helper:** ghss44
-**Helpee:** paolin_62616
-**Resolution:** Provided explanation that large token movements from Shaw's wallet could be normal wallet switching or tokenomics-related activities for marketing purposes.
+No direct help interactions were documented in the provided channel summaries.
 
 ## Action Items
 
+### Technical
+
+- Investigate and provide transparency regarding the 750k CAD fund transfer to Secure Blockchain Dev Corp and subsequent B2B contract fund flows (mentioned by bangrrr2914)
+
 ### Documentation
 
-- Establish clear branding guidelines distinguishing 'Eliza OS' as the preferred naming convention over 'eliza cloud' (mentioned by ghss44)
+- Provide public documentation clarifying the relationship between the April 2026 funding round and B2B development contracts (mentioned by bangrrr2914)

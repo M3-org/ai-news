@@ -1,204 +1,35 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-22",
-  "date": 1782086400,
+  "title": "elizaOS Discord - 2026-06-23",
+  "date": 1782172800,
   "stats": {
-    "totalMessages": 26,
-    "totalUsers": 10
+    "totalMessages": 9,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion channel featured minimal technical content, primarily consisting of community questions and general conversation. The most notable technical mention was odilitime announcing the launch of Ruby Trivia. A community member (.chomppp) inquired about the foundation's plans to add liquidity for ElizaOS trading on Solana, but odilitime clarified he doesn't communicate with the foundation and that the foundation manages the token. There was discussion about foundation membership, though no specific names were provided. A blockchain-related question emerged from paolin_62616 regarding large token movements from Shaw's wallet (1.02B to 0), which had been dormant for 8 months. ghss44 suggested this could be normal wallet switching or tokenomics-related activities for marketing purposes. The conversation also touched on naming conventions, with ghss44 advocating for using 'Eliza OS' instead of 'eliza cloud' and emphasizing it should be positioned as an operating system for AI agents. A developer (rsn6958) posted seeking opportunities, though no specific technical requirements or responses were captured. The channel saw several new members joining and sharing social media links, but no substantial technical implementations, code discussions, or concrete problem-solving occurred during this segment.",
-      "faqs": [
-        {
-          "question": "Will foundation add liquidity in near future to trade ElizaOS on Solana chain?",
-          "askedBy": ".chomppp",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Did foundation get allocation during migration?",
-          "askedBy": ".chomppp",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Who are on the foundation?",
-          "askedBy": ".chomppp",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Why were there large token movements from Shaw's wallet from 1.02B to 0?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "ghss44"
-        },
-        {
-          "question": "Can we expect eliza cloud in 2026?",
-          "askedBy": "ghss44",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Is there anyone looking for a developer?",
-          "askedBy": "rsn6958",
-          "answeredBy": "chulylooly"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": ".chomppp",
-          "context": "Questions about foundation liquidity plans and token management",
-          "resolution": "Clarified that he doesn't communicate with foundation and that foundation manages the token"
-        },
-        {
-          "helper": "ghss44",
-          "helpee": "paolin_62616",
-          "context": "Question about large token movements from Shaw's wallet",
-          "resolution": "Explained it could be normal wallet switching or tokenomics-related activities for marketing"
-        },
-        {
-          "helper": "chulylooly",
-          "helpee": "rsn6958",
-          "context": "Developer seeking opportunities",
-          "resolution": "Asked for clarification on what kind of developer"
-        }
-      ],
+      "summary": "The Discord channel discussion was dominated by a critical post from bangrrr2914 alleging financial irregularities in the Eliza Foundation's B2B announcement. The user claims that 750k CAD of holder assets were transferred to Secure Blockchain Dev Corp during an April 2026 funding round, with subsequent B2B development contracts merely circulating these same funds to create the appearance of organic enterprise revenue. The post also highlights that Sebastian Quinn Watson, a co-founder of the acquired Agentic Solutions, is a defendant in an active NY Southern District Court case against Eliza. The user demands transparency regarding the fund flow and warns the community about potential exit liquidity schemes. The only technical contribution came from richer_claude_51183, who announced the release of @omniology/plugin-omniology, a new plugin for ElizaOS agents that enables autonomous participation in skill-based contests on Solana mainnet. The plugin allows agents to compete in themed contests (Art, Story, Joke) every 88 seconds, with an LLM judge scoring entries and distributing real USDC prizes on-chain. The plugin has demonstrated a 72% win rate across 289 contests, earning $3.35 USDC with a 0.01 USDC entry fee per contest. Installation is straightforward via npm, and the system operates fully autonomously without human intervention. The remaining messages were brief greetings and promotional content without substantive technical discussion.",
+      "faqs": [],
+      "helpInteractions": [],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Launch Ruby Trivia",
-          "mentionedBy": "odilitime"
+          "type": "Documentation",
+          "description": "Provide transparency documentation regarding 750k CAD fund flow between Eliza Foundation and Secure Blockchain Dev Corp",
+          "mentionedBy": "bangrrr2914"
         },
         {
-          "type": "Documentation",
-          "description": "Use 'Eliza OS' naming convention instead of 'eliza cloud' to position as operating system for AI agents",
-          "mentionedBy": "ghss44"
+          "type": "Technical",
+          "description": "Investigate and clarify the relationship between B2B development contracts and the April 2026 funding round",
+          "mentionedBy": "bangrrr2914"
         }
       ],
-      "messageCount": 25,
-      "userCount": 9
+      "messageCount": 8,
+      "userCount": 7
     }
   ],
   "nicknameMap": {
-    "Obito": {
-      "id": "1512397538962051087",
-      "username": "obito031838",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Richer_Claude": {
-      "id": "1518748764892827713",
-      "username": "richer_claude_51183",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 115
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 41
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 18
-    },
-    "CryPn0": {
-      "id": "899786116968874005",
-      "username": "crypn00",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 52
-    },
-    "Baws": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 31
-    },
-    "kim6erly": {
-      "id": "1163529573267427429",
-      "username": ".kim6erly.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "chomppp": {
-      "id": "795728567538679808",
-      "username": ".chomppp",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 4
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -227,7 +58,83 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 616
+      "totalMessages": 617
+    },
+    "Richer_Claude": {
+      "id": "1518748764892827713",
+      "username": "richer_claude_51183",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Ghost CRD": {
+      "id": "1516192177108287504",
+      "username": "emilynoelle0247",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 42
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 19
+    },
+    "BOGEEYMAN": {
+      "id": "838867505576673310",
+      "username": "bogeeymane3",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 116
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
     }
   }
 }

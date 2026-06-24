@@ -1,23 +1,12 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-22",
+  "title": "Daily Report - 2026-06-23",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - June 22, 2026",
+      "title": "ElizaOS Community Discussion - June 23, 2026",
       "content": [
         {
-          "text": "The ElizaOS community discussed several topics on June 22, 2026. A Ruby Trivia initiative was announced and promoted, with trivia challenges shared publicly on social media covering topics such as Marvel Comics and stock market history. Community members engaged with these posts as part of an ongoing engagement effort.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782180092605-95l24n.png"
-          ]
-        },
-        {
-          "text": "Questions arose regarding the ElizaOS token and foundation. One community member asked whether the foundation planned to add liquidity for trading ElizaOS on the Solana chain. A core developer responded that they do not communicate directly with the foundation, though they confirmed the foundation manages the token. The identity of foundation members was also inquired about but not answered. Separately, a notable on-chain event was flagged by a community member who observed large token movements from a wallet associated with Shaw, which had been dormant for approximately eight months and moved from 1.02 billion tokens to zero. Other members noted the migration occurred around November or December, roughly seven months prior, and acknowledged the legitimacy of the question given the wallet's long period of inactivity.",
+          "text": "A community member raised serious concerns about the Eliza Foundation's recent B2B announcement, alleging that 750,000 CAD of holder assets were transferred into a company called SecureBlockchain Dev Corp during an April 2026 funding round. The claim suggests that a subsequent B2B development contract simply moves those same funds back, creating the appearance of organic enterprise revenue rather than genuine external corporate adoption. The post also noted that a co-founder of an acquired company called Agentric Solutions remains a defendant in an active legal case in the NY Southern District Court against Eliza. The author characterized the arrangement as a circular loop designed to manufacture balance sheet metrics and called on the community to demand transparency regarding the fund flow.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
@@ -25,152 +14,59 @@
           "videos": []
         },
         {
-          "text": "A community member asked whether Eliza Cloud or ElizaOS could be expected in 2026. Another member emphasized using the name ElizaOS, describing it as an operating system for AI agents designed to be accessible to everyone. A developer also posted in the community asking if anyone was looking to hire, and another member inquired about the type of development work being sought. A new member introduced themselves as brand new to Eliza and expressed gratitude for being welcomed into the community.",
+          "text": "A developer introduced themselves in the discussion channel as an AI and full stack developer specializing in practical software solutions including AI assistants, RAG-powered knowledge systems, workflow automation, SaaS platforms, and real-time applications. They emphasized a focus on secure, scalable, and maintainable systems over hype and invited anyone building AI products or custom applications to reach out.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782180155830-hquw3r.png"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a single greeting was posted by a community member with no further technical discussion recorded for the day.",
+          "text": "A new ElizaOS plugin called omniology/plugin-omniology was announced, enabling ElizaOS agents to autonomously compete in skill-based contests on Solana mainnet. The plugin enters agents into themed contests every 88 seconds covering categories such as Art, Story, and Joke, with an LLM judge scoring entries and paying winners in USDC on-chain. Early reported results included 289 contests, a 72 percent win rate, and 3.35 USDC earned. The entry fee is 0.01 USDC per contest.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "A shared post highlighted mountain ranges in the USA as part of a trivia and exploration AI project called Ruby Trivia AI, which explores global niches to help users learn about the planet.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HLeKlRqWEAA5076.jpg:large"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Activity in the coders channel was minimal on this date, with only a brief greeting posted by a moderator.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782180187363-3g9l8e.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Infrastructure and Core Stability Updates (June 23, 2026)",
+      "content": [
+        {
+          "text": "Development activity on June 23, 2026 in the elizaos/eliza repository focused entirely on infrastructure improvements and core system stability. Three new pull requests were opened to address reliability concerns. PR 9074 introduces a fallback mechanism to the uncapped path for direct-reply requests, improving resilience in reply handling. PR 9072 adjusts stale-job recovery sizing to prevent provision flapping that could occur during cold-boot scenarios, enhancing cloud job recovery behavior. PR 9070 updates agent logic to correctly handle lookups using the all: true parameter for pinned dual-stack web-fetch configurations, resolving IP-related errors. All three changes reflect a targeted effort to strengthen the underlying systems before further feature development.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-23.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1782086400,
+  "date": 1782172800,
   "nicknameMap": {
-    "Obito": {
-      "id": "1512397538962051087",
-      "username": "obito031838",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Richer_Claude": {
-      "id": "1518748764892827713",
-      "username": "richer_claude_51183",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 115
-    },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
-      "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 41
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 18
-    },
-    "CryPn0": {
-      "id": "899786116968874005",
-      "username": "crypn00",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 52
-    },
-    "Baws": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 31
-    },
-    "kim6erly": {
-      "id": "1163529573267427429",
-      "username": ".kim6erly.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "chomppp": {
-      "id": "795728567538679808",
-      "username": ".chomppp",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 4
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -199,7 +95,83 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 616
+      "totalMessages": 617
+    },
+    "Richer_Claude": {
+      "id": "1518748764892827713",
+      "username": "richer_claude_51183",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Ghost CRD": {
+      "id": "1516192177108287504",
+      "username": "emilynoelle0247",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 42
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 19
+    },
+    "BOGEEYMAN": {
+      "id": "838867505576673310",
+      "username": "bogeeymane3",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 116
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
     }
   }
 }
