@@ -1,0 +1,216 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-24",
+  "date": 1782259200,
+  "stats": {
+    "totalMessages": 10,
+    "totalUsers": 9
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of: (1) A recruitment post from fixer1123 seeking an English-speaking liaison to help their development team communicate with U.S. clients - this is a non-technical role focused on client communication and meeting coordination with flexible hours and project-based compensation; (2) Brief off-topic comments including a joke about npm packages from chulylooly; (3) Token-related inquiries from imcryptor asking about $elizaOS token staking and utility features, and bigalex777 asking about token status; (4) A scam alert from om1d_sa warning about specific users; (5) A positive sentiment comment from cryptomikk about project health. No technical implementations, code discussions, architectural decisions, or problem-solving occurred in this segment. No concrete solutions were provided to any questions raised. The chat lacks substantive development-related content.",
+      "faqs": [
+        {
+          "question": "wen $elizaOS token staking or token utility?",
+          "askedBy": "imcryptor",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Token alive?",
+          "askedBy": "bigalex777",
+          "answeredBy": "cryptomikk"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Implement token staking functionality for $elizaOS",
+          "mentionedBy": "imcryptor"
+        },
+        {
+          "type": "Feature",
+          "description": "Add token utility features for $elizaOS",
+          "mentionedBy": "imcryptor"
+        }
+      ],
+      "messageCount": 7,
+      "userCount": 7
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The conversation consists primarily of three non-technical messages: a request for team contact from 0xcryptomania, a job posting from fixer1123 seeking an English-speaking liaison for client communication (not a coding role), and a brief question from parthiavin about English proficiency. No technical discussions, problem-solving, code implementations, or development decisions occurred during this segment. The channel activity was limited to administrative requests and recruitment outreach rather than coding-related content.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
+    }
+  ],
+  "nicknameMap": {
+    "cryptomikk": {
+      "id": "784089502029053963",
+      "username": "cryptomikk",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "mysterious_seahorse_62821": {
+      "id": "1412312524346490911",
+      "username": "mysterious_seahorse_62821",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "Jack|safepal": {
+      "id": "1157386415911469056",
+      "username": "surydamkery147",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "JAMES": {
+      "id": "1474267656327528538",
+      "username": "jamesson101",
+      "roles": [],
+      "totalMessages": 4
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 617
+    },
+    "imcryptor": {
+      "id": "959015387620605952",
+      "username": "imcryptor",
+      "roles": [
+        "utility",
+        "Verified",
+        "Coder",
+        "auto.fun enjoyer"
+      ],
+      "totalMessages": 2
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 43
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Parthia Vin": {
+      "id": "188292018018058242",
+      "username": "parthiavin.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "CryptoMania": {
+      "id": "1473525361550692616",
+      "username": "0xcryptomania",
+      "roles": [
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

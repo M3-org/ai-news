@@ -1,39 +1,55 @@
-# elizaOS Discord - 2026-06-23
+# elizaOS Discord - 2026-06-24
 
 ## Summary
 
-### Financial Transparency Concerns
+### Recruitment and Staffing
 
-A community member raised serious allegations regarding the Eliza Foundation's B2B announcement, claiming that 750k CAD of holder assets were transferred to Secure Blockchain Dev Corp during an April 2026 funding round. The allegation suggests that subsequent B2B development contracts may be circulating these same funds to create the appearance of organic enterprise revenue rather than representing genuine business activity. The post also noted that Sebastian Quinn Watson, a co-founder of the acquired Agentic Solutions, is currently a defendant in an active case in the NY Southern District Court against Eliza. The community member demanded transparency regarding fund flows and warned about potential exit liquidity schemes.
+A recruitment post from fixer1123 appeared in both the discussion and coders channels seeking an English-speaking liaison to facilitate communication between their development team and U.S. clients. The role focuses on client communication and meeting coordination rather than technical work, offering flexible hours and project-based compensation. parthiavin inquired about English proficiency requirements for this position.
 
-### ElizaOS Plugin Development
+### Token Related Inquiries
 
-A new plugin for ElizaOS agents was released that enables autonomous participation in skill-based contests on Solana mainnet. The @omniology/plugin-omniology allows agents to compete in themed contests including Art, Story, and Joke categories that occur every 88 seconds. An LLM judge scores entries and distributes real USDC prizes on-chain. The plugin has demonstrated strong performance with a 72% win rate across 289 contests, earning $3.35 USDC with a 0.01 USDC entry fee per contest. The system operates fully autonomously without requiring human intervention and can be installed via npm.
+Multiple users raised questions about the elizaOS token. imcryptor asked about $elizaOS token staking capabilities and utility features. bigalex777 inquired about the current status of the token. No answers were provided to these questions in the chat segments.
+
+### Security Concerns
+
+om1d_sa issued a scam alert warning the community about specific users, though details of the specific users were not included in the summary provided.
+
+### Project Sentiment
+
+cryptomikk expressed positive sentiment about the project's health, though no specific details about what prompted this assessment were included.
+
+### Administrative Requests
+
+0xcryptomania requested contact information for the team in the coders channel.
 
 ## FAQ
 
-**Q: What is the @omniology/plugin-omniology plugin?**
-A: It is a new plugin for ElizaOS agents that enables autonomous participation in skill-based contests on Solana mainnet. Agents can compete in themed contests for Art, Story, and Joke categories every 88 seconds, with an LLM judge scoring entries and distributing USDC prizes on-chain.
+**Q: Does the $elizaOS token have staking capabilities?**
+A: No answer was provided in the discussion.
 
-**Q: What is the performance record of the omniology plugin?**
-A: The plugin has achieved a 72% win rate across 289 contests, earning $3.35 USDC with an entry fee of 0.01 USDC per contest.
+**Q: What is the utility of the $elizaOS token?**
+A: No answer was provided in the discussion.
 
-**Q: What are the allegations regarding the Eliza Foundation's B2B announcement?**
-A: A community member alleged that 750k CAD of holder assets were transferred to Secure Blockchain Dev Corp during an April 2026 funding round, and that subsequent B2B development contracts may be circulating these same funds to create the appearance of organic enterprise revenue.
+**Q: What is the current status of the token?**
+A: No answer was provided in the discussion.
 
-**Q: Who is Sebastian Quinn Watson in relation to Eliza?**
-A: Sebastian Quinn Watson is a co-founder of the acquired Agentic Solutions and is currently a defendant in an active NY Southern District Court case against Eliza.
+**Q: What are the English proficiency requirements for the liaison role?**
+A: No answer was provided in the discussion.
 
 ## Help Interactions
 
-No direct help interactions were documented in the provided channel summaries.
+No help interactions with resolutions were documented in these channel summaries. Multiple questions were asked but none received answers or solutions.
 
 ## Action Items
 
 ### Technical
 
-- Investigate and provide transparency regarding the 750k CAD fund transfer to Secure Blockchain Dev Corp and subsequent B2B contract fund flows (mentioned by bangrrr2914)
+None identified.
+
+### Features
+
+None identified.
 
 ### Documentation
 
-- Provide public documentation clarifying the relationship between the April 2026 funding round and B2B development contracts (mentioned by bangrrr2914)
+None identified.
