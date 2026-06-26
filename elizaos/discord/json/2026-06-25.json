@@ -1,0 +1,167 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-25",
+  "date": 1782345600,
+  "stats": {
+    "totalMessages": 14,
+    "totalUsers": 8
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment shows minimal technical activity, primarily consisting of social media link sharing and community concerns about project status. The main discussion centered around project viability, with bigalex777 repeatedly questioning whether the token was 'dead' due to low chat and Twitter activity, and expressing concerns about ongoing lawsuits. matthib initially responded harshly but later apologized. skywalkerzzz expressed optimism about the project reaching 10m valuation. dannynor provided reassurance by noting continued GitHub activity. odilitime shared multiple Twitter/X links throughout the day, including Ruby Trivia AI posts, and acknowledged the need to post screenshots. No concrete technical implementations, problem-solving, or development decisions were discussed in this segment.",
+      "faqs": [
+        {
+          "question": "Is the token dead?",
+          "askedBy": "bigalex777",
+          "answeredBy": "dannynor"
+        },
+        {
+          "question": "Should I buy the token given the lawsuits and low activity?",
+          "askedBy": "bigalex777",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "dannynor",
+          "helpee": "bigalex777",
+          "context": "Concerns about project abandonment and token viability",
+          "resolution": "Reassured by pointing out ongoing GitHub activity"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Post screenshots to demonstrate project activity",
+          "mentionedBy": "odilitime"
+        }
+      ],
+      "messageCount": 12,
+      "userCount": 6
+    }
+  ],
+  "nicknameMap": {
+    "Redvoid": {
+      "id": "353670598955892737",
+      "username": "redvoid8344",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "a-hack",
+        "partner portal - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "King",
+        "pmairca - self assign",
+        "Contributor",
+        "merch - self assign",
+        "Verified",
+        "workgroups - write perms",
+        "Announcements",
+        "Poker",
+        "Github - Contributor"
+      ],
+      "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 20
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 620
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 18
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "? Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "SkyWalker⚔️": {
+      "id": "910461114356203520",
+      "username": "skywalkerzzz",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 117
+    }
+  }
+}

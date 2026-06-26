@@ -1,127 +1,92 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-24",
+  "title": "Daily Report - 2026-06-25",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Activity - June 24, 2026",
+      "title": "Ruby Trivia Token and Developer Activity Discussion",
       "content": [
         {
-          "text": "A user named Fixer posted an identical recruitment message in both the general discussion and coders channels, seeking an English-speaking client liaison for a development team expanding into the U.S. market. The role required no coding skills, only communication and organizational abilities, with flexible hours and performance-based compensation. The post was met with skepticism, including a sarcastic reply questioning the poster's English proficiency, and community moderators flagged the user along with another account as potential scammers, tagging a moderator for action.",
+          "text": "Community members discussed the Ruby Trivia project and its $TRIVIA token, which launched on Solana as part of a multi-game trivia platform featuring server-scored games, live and async multiplayer, mobile support, and eight languages. Holding $TRIVIA provides an in-game score multiplier. An official Telegram channel was announced as live. One user repeatedly questioned whether the token was dead due to low chat and Twitter activity, which prompted a terse response from another community member. Despite concerns about low activity and mentions of ongoing lawsuits, other members expressed optimism, with one predicting the project could reach a 10 million valuation. A core developer acknowledged the need to post screenshots to demonstrate progress, and another member noted that GitHub activity was still ongoing. The Ruby Trivia AI account also announced an upcoming Twitter Space. Separately, in the coders channel, two developers posted availability notices, one looking for work and another offering development services via direct message.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353048441-lcwxtj.png"
-          ]
-        },
-        {
-          "text": "In the general discussion channel, community members raised ongoing concerns about the elizaOS token, with one user asking about staking and token utility features, expressing frustration over the long wait. Another user simply asked if the token was still alive. A community member responded positively, stating the project was in good health. A separate user in the coders channel requested a direct message from a team member without further elaboration.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          "images": [
+            "https://pbs.twimg.com/media/HLoN9mUWMAAMz_l.jpg:large"
           ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353068621-76unp1.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Project Update: June 24, 2026",
+      "title": "ElizaOS Major Architectural Update: Gemma 4 Migration and Pipeline Hardening",
       "content": [
         {
-          "text": "Development on June 24, 2026 centered on two main areas: finalizing streaming documentation and addressing critical cloud infrastructure security concerns. On the completed side, the team wrapped up documentation for token-by-token dashboard streaming, including in-browser video evidence verifying the functionality against Together AI cloud models. On the infrastructure front, two pull requests are currently in progress targeting cloud security and networking. One PR aims to isolate untrusted app builds from the runtime fleet and has been flagged as a high-priority Product-2 blocker requiring immediate review. A second PR addresses network configuration by binding app host ports to loopback and routing through a node-local Caddy instance for app ingress. These open items represent critical blockers that must be resolved to ensure a secure cloud deployment.",
+          "text": "On June 25, 2026, the ElizaOS ecosystem completed a significant architectural transition, migrating core training, reinforcement learning, and local inference defaults from Qwen to Gemma 4 across all model sizes including E2B, E4B, 12B, and 31B variants. This migration ensures full compatibility with Eliza-1 release tiers and represents a foundational shift in the model ecosystem.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-24.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-25.json"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353109028-i66f0o.png"
-          ]
+          "videos": []
+        },
+        {
+          "text": "The team also hardened voice and vision pipelines by enhancing live half-duplex voice interactions through advanced acoustic echo cancellation primitives and activating the Kokoro TTS engine. On the performance side, agent startup latency was reduced via telemetry-driven boot breakdowns and persistent warm hosts for vision and computer-use tasks. Codebase stability was further improved by enforcing strict type-checking and refactoring Turbo build tasks for better cache efficiency.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-25.json"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Several pull requests are currently in progress, including work to filter chat document retrieval by requester access context, UI fixes for memory-type badge styling and Storybook mock providers, CI improvements to fail Hetzner end-to-end tests on invalid cloud authentication, cloud test contracts for AI pricing provider outage resilience, and hardening of the desktop shell and view applications.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-25.json"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "miscellaneous"
     }
   ],
-  "date": 1782259200,
+  "date": 1782345600,
   "nicknameMap": {
-    "cryptomikk": {
-      "id": "784089502029053963",
-      "username": "cryptomikk",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "CryptoInfo": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "mysterious_seahorse_62821": {
-      "id": "1412312524346490911",
-      "username": "mysterious_seahorse_62821",
+    "Redvoid": {
+      "id": "353670598955892737",
+      "username": "redvoid8344",
       "roles": [
         "Helper",
+        "platform - self assign",
         "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
+        "partner portal - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "King",
+        "pmairca - self assign",
+        "Contributor",
+        "merch - self assign",
         "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
+        "workgroups - write perms",
+        "Announcements",
+        "Poker",
+        "Github - Contributor"
       ],
       "totalMessages": 1
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
         "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
         "Coder",
-        "Hoplite",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 15
-    },
-    "Jack|safepal": {
-      "id": "1157386415911469056",
-      "username": "surydamkery147",
-      "roles": [],
-      "totalMessages": 1
-    },
-    "JAMES": {
-      "id": "1474267656327528538",
-      "username": "jamesson101",
-      "roles": [],
-      "totalMessages": 4
+      "totalMessages": 20
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -151,67 +116,61 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 617
+      "totalMessages": 620
     },
-    "imcryptor": {
-      "id": "959015387620605952",
-      "username": "imcryptor",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
       "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 18
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
         "utility",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "? Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "SkyWalker⚔️": {
+      "id": "910461114356203520",
+      "username": "skywalkerzzz",
+      "roles": [
         "Verified",
         "Coder",
-        "auto.fun enjoyer"
+        "utility",
+        "eliza"
       ],
       "totalMessages": 2
     },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
       "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 43
-    },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
-      "roles": [
-        "Trader",
-        "Creator",
+        "[WG] Want to Help",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Parthia Vin": {
-      "id": "188292018018058242",
-      "username": "parthiavin.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "CryptoMania": {
-      "id": "1473525361550692616",
-      "username": "0xcryptomania",
-      "roles": [
         "utility",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 117
     }
   }
 }

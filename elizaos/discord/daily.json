@@ -1,126 +1,83 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-24",
-  "date": 1782259200,
+  "title": "elizaOS Discord - 2026-06-25",
+  "date": 1782345600,
   "stats": {
-    "totalMessages": 10,
-    "totalUsers": 9
+    "totalMessages": 14,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of: (1) A recruitment post from fixer1123 seeking an English-speaking liaison to help their development team communicate with U.S. clients - this is a non-technical role focused on client communication and meeting coordination with flexible hours and project-based compensation; (2) Brief off-topic comments including a joke about npm packages from chulylooly; (3) Token-related inquiries from imcryptor asking about $elizaOS token staking and utility features, and bigalex777 asking about token status; (4) A scam alert from om1d_sa warning about specific users; (5) A positive sentiment comment from cryptomikk about project health. No technical implementations, code discussions, architectural decisions, or problem-solving occurred in this segment. No concrete solutions were provided to any questions raised. The chat lacks substantive development-related content.",
+      "summary": "This Discord chat segment shows minimal technical activity, primarily consisting of social media link sharing and community concerns about project status. The main discussion centered around project viability, with bigalex777 repeatedly questioning whether the token was 'dead' due to low chat and Twitter activity, and expressing concerns about ongoing lawsuits. matthib initially responded harshly but later apologized. skywalkerzzz expressed optimism about the project reaching 10m valuation. dannynor provided reassurance by noting continued GitHub activity. odilitime shared multiple Twitter/X links throughout the day, including Ruby Trivia AI posts, and acknowledged the need to post screenshots. No concrete technical implementations, problem-solving, or development decisions were discussed in this segment.",
       "faqs": [
         {
-          "question": "wen $elizaOS token staking or token utility?",
-          "askedBy": "imcryptor",
-          "answeredBy": "Unanswered"
+          "question": "Is the token dead?",
+          "askedBy": "bigalex777",
+          "answeredBy": "dannynor"
         },
         {
-          "question": "Token alive?",
+          "question": "Should I buy the token given the lawsuits and low activity?",
           "askedBy": "bigalex777",
-          "answeredBy": "cryptomikk"
+          "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "dannynor",
+          "helpee": "bigalex777",
+          "context": "Concerns about project abandonment and token viability",
+          "resolution": "Reassured by pointing out ongoing GitHub activity"
+        }
+      ],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Implement token staking functionality for $elizaOS",
-          "mentionedBy": "imcryptor"
-        },
-        {
-          "type": "Feature",
-          "description": "Add token utility features for $elizaOS",
-          "mentionedBy": "imcryptor"
+          "type": "Documentation",
+          "description": "Post screenshots to demonstrate project activity",
+          "mentionedBy": "odilitime"
         }
       ],
-      "messageCount": 7,
-      "userCount": 7
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The conversation consists primarily of three non-technical messages: a request for team contact from 0xcryptomania, a job posting from fixer1123 seeking an English-speaking liaison for client communication (not a coding role), and a brief question from parthiavin about English proficiency. No technical discussions, problem-solving, code implementations, or development decisions occurred during this segment. The channel activity was limited to administrative requests and recruitment outreach rather than coding-related content.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 3
+      "messageCount": 12,
+      "userCount": 6
     }
   ],
   "nicknameMap": {
-    "cryptomikk": {
-      "id": "784089502029053963",
-      "username": "cryptomikk",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "CryptoInfo": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "mysterious_seahorse_62821": {
-      "id": "1412312524346490911",
-      "username": "mysterious_seahorse_62821",
+    "Redvoid": {
+      "id": "353670598955892737",
+      "username": "redvoid8344",
       "roles": [
         "Helper",
+        "platform - self assign",
         "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
+        "partner portal - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "King",
+        "pmairca - self assign",
+        "Contributor",
+        "merch - self assign",
         "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
+        "workgroups - write perms",
+        "Announcements",
+        "Poker",
+        "Github - Contributor"
       ],
       "totalMessages": 1
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
         "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
         "Coder",
-        "Hoplite",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 15
-    },
-    "Jack|safepal": {
-      "id": "1157386415911469056",
-      "username": "surydamkery147",
-      "roles": [],
-      "totalMessages": 1
-    },
-    "JAMES": {
-      "id": "1474267656327528538",
-      "username": "jamesson101",
-      "roles": [],
-      "totalMessages": 4
+      "totalMessages": 20
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -150,67 +107,61 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 617
+      "totalMessages": 620
     },
-    "imcryptor": {
-      "id": "959015387620605952",
-      "username": "imcryptor",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
       "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 18
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
         "utility",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "? Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 10
+    },
+    "SkyWalker⚔️": {
+      "id": "910461114356203520",
+      "username": "skywalkerzzz",
+      "roles": [
         "Verified",
         "Coder",
-        "auto.fun enjoyer"
+        "utility",
+        "eliza"
       ],
       "totalMessages": 2
     },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
       "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 43
-    },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
-      "roles": [
-        "Trader",
-        "Creator",
+        "[WG] Want to Help",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "Parthia Vin": {
-      "id": "188292018018058242",
-      "username": "parthiavin.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "CryptoMania": {
-      "id": "1473525361550692616",
-      "username": "0xcryptomania",
-      "roles": [
         "utility",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 117
     }
   }
 }
