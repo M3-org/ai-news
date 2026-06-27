@@ -1,123 +1,86 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-25",
-  "date": 1782345600,
+  "title": "elizaOS Discord - 2026-06-26",
+  "date": 1782432000,
   "stats": {
-    "totalMessages": 14,
+    "totalMessages": 8,
     "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical activity, primarily consisting of social media link sharing and community concerns about project status. The main discussion centered around project viability, with bigalex777 repeatedly questioning whether the token was 'dead' due to low chat and Twitter activity, and expressing concerns about ongoing lawsuits. matthib initially responded harshly but later apologized. skywalkerzzz expressed optimism about the project reaching 10m valuation. dannynor provided reassurance by noting continued GitHub activity. odilitime shared multiple Twitter/X links throughout the day, including Ruby Trivia AI posts, and acknowledged the need to post screenshots. No concrete technical implementations, problem-solving, or development decisions were discussed in this segment.",
+      "summary": "The discussion channel shows community sentiment around project development and leadership. Members express confidence in Captain Shaw's active involvement in Eliza development, with om1d_sa noting his consistent activity. zadayos reports that Shaw has been successfully resolving all technical issues without encountering blockers, with hopes for impactful decisions before market launch. Community concerns emerged around token investment timing, with bigalex777 questioning purchase safety given lack of recent Twitter updates and mentions of ongoing lawsuits. dannynor echoed the need for project updates. j_choy sought clarification on lawsuit details but received no response. issaarts introduced themselves as a digital artist offering services including animations and banners, proposing to create samples if the team needs artistic support. The segment reflects a mix of technical optimism regarding development progress alongside community desire for more transparent communication about project status and legal matters.",
       "faqs": [
         {
-          "question": "Is the token dead?",
+          "question": "Is it worth buying a token now, or is it dangerous? There haven't been any updates on Twitter in a while, there are lawsuits going on...",
           "askedBy": "bigalex777",
-          "answeredBy": "dannynor"
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "Should I buy the token given the lawsuits and low activity?",
-          "askedBy": "bigalex777",
+          "question": "Lawsuit where?",
+          "askedBy": "j_choy",
           "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "dannynor",
-          "helpee": "bigalex777",
-          "context": "Concerns about project abandonment and token viability",
-          "resolution": "Reassured by pointing out ongoing GitHub activity"
-        }
-      ],
+      "helpInteractions": [],
       "actionItems": [
         {
           "type": "Documentation",
-          "description": "Post screenshots to demonstrate project activity",
-          "mentionedBy": "odilitime"
+          "description": "Provide project status update to community regarding development progress and address concerns about lack of Twitter updates",
+          "mentionedBy": "dannynor"
+        },
+        {
+          "type": "Documentation",
+          "description": "Clarify information about mentioned lawsuits and provide transparency on legal matters",
+          "mentionedBy": "bigalex777"
         }
       ],
-      "messageCount": 12,
-      "userCount": 6
+      "messageCount": 7,
+      "userCount": 7
     }
   ],
   "nicknameMap": {
-    "Redvoid": {
-      "id": "353670598955892737",
-      "username": "redvoid8344",
+    "MOGXXX": {
+      "id": "506828358923845662",
+      "username": "mogxxx.",
       "roles": [
-        "Helper",
-        "platform - self assign",
-        "a-hack",
-        "partner portal - self assign",
-        "trust - self assign",
-        "swarms - self assign",
-        "events - self-assign",
-        "agent dev school - self assign",
-        "nfts - self assign",
-        "King",
-        "pmairca - self assign",
-        "Contributor",
-        "merch - self assign",
         "Verified",
-        "workgroups - write perms",
-        "Announcements",
-        "Poker",
-        "Github - Contributor"
+        "Poker"
       ],
       "totalMessages": 1
     },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "lamby": {
+      "id": "974642795425980446",
+      "username": "lambyone",
       "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 20
-    },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "God",
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Migration Support",
-        "Helper",
-        "Github - Contributor",
-        "Labs Alumni",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 620
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
         "Verified"
       ],
-      "totalMessages": 18
+      "totalMessages": 3
+    },
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
     },
     "CryptoInfo": {
       "id": "1074932974677659679",
@@ -127,41 +90,50 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 9
     },
-    "? Matthib123": {
-      "id": "252087926849142784",
-      "username": "matthib",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 19
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 33
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
       "roles": [
         "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
         "Verified",
-        "Fr",
+        "Dev School Student",
+        "Designer",
         "utility",
-        "eliza"
-      ],
-      "totalMessages": 10
-    },
-    "SkyWalker⚔️": {
-      "id": "910461114356203520",
-      "username": "skywalkerzzz",
-      "roles": [
-        "Verified",
         "Coder",
-        "utility",
+        "Hoplite",
         "eliza"
       ],
-      "totalMessages": 2
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 117
+      "totalMessages": 16
     }
   }
 }

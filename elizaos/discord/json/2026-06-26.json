@@ -1,0 +1,139 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-26",
+  "date": 1782432000,
+  "stats": {
+    "totalMessages": 8,
+    "totalUsers": 8
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion channel shows community sentiment around project development and leadership. Members express confidence in Captain Shaw's active involvement in Eliza development, with om1d_sa noting his consistent activity. zadayos reports that Shaw has been successfully resolving all technical issues without encountering blockers, with hopes for impactful decisions before market launch. Community concerns emerged around token investment timing, with bigalex777 questioning purchase safety given lack of recent Twitter updates and mentions of ongoing lawsuits. dannynor echoed the need for project updates. j_choy sought clarification on lawsuit details but received no response. issaarts introduced themselves as a digital artist offering services including animations and banners, proposing to create samples if the team needs artistic support. The segment reflects a mix of technical optimism regarding development progress alongside community desire for more transparent communication about project status and legal matters.",
+      "faqs": [
+        {
+          "question": "Is it worth buying a token now, or is it dangerous? There haven't been any updates on Twitter in a while, there are lawsuits going on...",
+          "askedBy": "bigalex777",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Lawsuit where?",
+          "askedBy": "j_choy",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Provide project status update to community regarding development progress and address concerns about lack of Twitter updates",
+          "mentionedBy": "dannynor"
+        },
+        {
+          "type": "Documentation",
+          "description": "Clarify information about mentioned lawsuits and provide transparency on legal matters",
+          "mentionedBy": "bigalex777"
+        }
+      ],
+      "messageCount": 7,
+      "userCount": 7
+    }
+  ],
+  "nicknameMap": {
+    "MOGXXX": {
+      "id": "506828358923845662",
+      "username": "mogxxx.",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "lamby": {
+      "id": "974642795425980446",
+      "username": "lambyone",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 3
+    },
+    "Issa_arts": {
+      "id": "1217012270287028286",
+      "username": "issaarts",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 19
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 33
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 16
+    }
+  }
+}
