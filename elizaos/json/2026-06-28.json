@@ -26,7 +26,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-06-28.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782699022906-ci9vx.jpg"
+          ]
         }
       ],
       "topic": "miscellaneous"
