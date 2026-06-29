@@ -1,0 +1,51 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-28",
+  "date": 1782604800,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "Meluhnee": {
+      "id": "1351936312307093516",
+      "username": "meluhnee0221",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Termignator": {
+      "id": "827785733682757633",
+      "username": "termignatorqr",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}

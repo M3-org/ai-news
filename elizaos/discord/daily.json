@@ -1,187 +1,51 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-27",
-  "date": 1782518400,
+  "title": "elizaOS Discord - 2026-06-28",
+  "date": 1782604800,
   "stats": {
-    "totalMessages": 9,
-    "totalUsers": 9
+    "totalMessages": 0,
+    "totalUsers": 0
   },
-  "categories": [
-    {
-      "channelId": "1253563209462448241",
-      "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal technical discussion. The primary content is a self-introduction from sososo7997, who presents themselves as a Senior AI Full-Stack Software Engineer with expertise in modern web technologies (React, Next.js, FastAPI, Node.js), AI systems (OpenAI Agents SDK, LangGraph, OpenClaw, Hermes), and cloud infrastructure (Docker, Kubernetes). They describe their focus on building production-ready AI systems including voice agents, multi-agent orchestration, autonomous workflows, and AI automation integrated with CRMs and business tools. Their current learning areas include Advanced RAG with vector search and semantic retrieval, LLMOps infrastructure with observability and evaluation pipelines, and reliable AI engineering practices. The remainder of the chat consists of brief community interactions regarding a token situation, with odilitime indicating they can no longer speak about an unspecified topic, and dannynor clarifying that only Shaw has authority to discuss it. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this segment.",
-      "faqs": [
-        {
-          "question": "Why can't you talk about it anymore?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "dannynor"
-        },
-        {
-          "question": "Is there something wrong with the token?",
-          "askedBy": "valorenvk",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 9,
-      "userCount": 9
-    }
-  ],
+  "categories": [],
   "nicknameMap": {
-    "warion": {
-      "id": "913838080912408626",
-      "username": "warion6146",
+    "Meluhnee": {
+      "id": "1351936312307093516",
+      "username": "meluhnee0221",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "DOLPHINS 🐬": {
-      "id": "1447276654052380851",
-      "username": "vivacious_dolphin_68016",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "dorothy1730d": {
-      "id": "1186600767025582101",
-      "username": "dorothy1730d",
-      "roles": [
-        "Trader",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 20
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 53
-    },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 30
-    },
-    "CM": {
-      "id": "1488610175702270084",
-      "username": "crsmng",
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
     },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "God",
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Migration Support",
-        "Helper",
-        "Github - Contributor",
-        "Labs Alumni",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 621
-    },
-    "CryptoInfo": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "so": {
-      "id": "488766383836889111",
-      "username": "sososo7997",
+    "Termignator": {
+      "id": "827785733682757633",
+      "username": "termignatorqr",
       "roles": [
         "Verified",
-        "Designer",
-        "utility",
         "Coder",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 1
     }
   }
 }

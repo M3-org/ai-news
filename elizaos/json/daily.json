@@ -1,54 +1,29 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-06-27",
+  "title": "Daily Report - 2026-06-28",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Discussion Summary - June 27, 2026",
+      "title": "ElizaOS Community Activity - June 28, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, a user posted a detailed self-introduction presenting themselves as a Senior AI Full-Stack Software Engineer with expertise in React, Next.js, FastAPI, Node.js, agentic AI frameworks such as OpenAI Agents SDK and LangGraph, and AI automation systems. The user expressed openness to collaborating with startups building AI products and invited contact for potential work opportunities.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782612628868-s42hs.png"
-          ]
-        },
-        {
-          "text": "A separate thread in the discussion channel involved community members asking about a token and why a particular person could no longer speak about it. A user identified as DannyNOR responded that only Shaw can speak on the matter, and that Shaw is currently too occupied with other priorities to focus on the token. No further details were provided about the nature of the token or the underlying issue.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782612649109-uav1uk.png"
-          ]
-        },
-        {
-          "text": "Several brief social exchanges also took place in the discussion channel, including a new member greeting the community and being welcomed by another user, as well as a general friendly message wishing members a good day and profitable outcomes. The coders channel had no activity recorded for this date.",
+          "text": "In the general discussion channel, a brief greeting was posted by user Termignator with no further conversation following it. In the coders channel, a user named Nulucre dba Legacy Chain promoted a service called CallTyro, describing it as an open agent registry with reputation scoring and session contracts built for ElizaOS agents. According to the post, agents registered through CallTyro build a fulfillment rate and reputation score that is visible to other agents when deciding whether to connect. The user invited others to register for free at calltyro.com/register. Another user, Meluhnee, responded briefly with a dismissive reaction, suggesting skepticism toward the promotion.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782612666925-iap0c9.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Overall Project Summary - June 27, 2026",
+      "title": "ElizaOS Development Summary: June 28, 2026",
       "content": [
         {
-          "text": "Development on June 27, 2026 focused on advancing the cloud-agent MVP through streamlined provisioning and authentication flows, alongside significant improvements to macOS desktop computer-use capabilities. On the cloud infrastructure side, the team enabled a flag-gated tier flip allowing users to request shared cloud agents on first-run, removed redundant cloud-ui components and orphaned tools to streamline the interface, and standardized cloud URL canonicalization for consistency. For computer use and core enhancements, full input coverage for macOS desktop CUA was achieved by resolving window listing and platform-specific bugs, TemplateType functions were enabled for CharacterInput definitions, and Steward OAuth login was finalized through URL fragment parsing for exchange codes. The ecosystem was also expanded with the integration of plugin-x402-endpoints into the community registry, providing access to 28 global data endpoints. Work in progress includes a series of new pull requests targeting cloud and agent handoff logic, codex and desktop environment optimization, and UI/UX improvements.",
+          "text": "Development on June 28, 2026 centered on stabilizing cloud infrastructure with three major focus areas: agent handoff mechanisms, security hardening, and orchestrator improvements. The team implemented a robust agent handoff flow with message queuing to ensure zero data loss during agent switches, added an invisible re-point mechanism to prevent UI flashes, automated cleanup of transient bridges, and added end-to-end verification for handoff flows in the cloud test harness. On the security front, critical measures were deployed including IP-pinned safeFetch, environment variable denylists, isolated database provisioning, rate-limiting backstops, sybil-prevention guards, and a runtime kill-switch for cloud feature flags. Production regressions were resolved where agents were incorrectly defaulting to local inference instead of cloud topology, orchestrator build-relay issues were fixed, sub-agent failure evaluation was improved, and PaddleOcrService was updated to support version 3.x. Active work in progress includes inference hot-path caching in staging, cache pagination fixes, and refinements to orchestrator and agent communication. Open issues requiring attention include ongoing discussions around defense-in-depth improvements for sybil-prevention and CI-gated tenant isolation, as well as tuning activation-gates for wake word performance to reduce false positives. New issues were filed covering a latency bottleneck in dedicated-agent chat and umbrella items for technical debt, testing, and security models. Closed issues include a resolved production crash on the OAuth authorize page and addressed dedicated cloud agent inference fallback failures.",
           "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-27.json"
+            "https://elizaos.github.io/api/summaries/overall/day/2026-06-28.json"
           ],
           "images": [],
           "videos": []
@@ -57,160 +32,46 @@
       "topic": "miscellaneous"
     }
   ],
-  "date": 1782518400,
+  "date": 1782604800,
   "nicknameMap": {
-    "warion": {
-      "id": "913838080912408626",
-      "username": "warion6146",
+    "Meluhnee": {
+      "id": "1351936312307093516",
+      "username": "meluhnee0221",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "DOLPHINS 🐬": {
-      "id": "1447276654052380851",
-      "username": "vivacious_dolphin_68016",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "dorothy1730d": {
-      "id": "1186600767025582101",
-      "username": "dorothy1730d",
-      "roles": [
-        "Trader",
-        "It",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 20
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 53
-    },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 30
-    },
-    "CM": {
-      "id": "1488610175702270084",
-      "username": "crsmng",
+    "Nulucre dba Legacy Chain": {
+      "id": "949063485873082388",
+      "username": "nulucredbalegacychain",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
     },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "God",
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Migration Support",
-        "Helper",
-        "Github - Contributor",
-        "Labs Alumni",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 621
-    },
-    "CryptoInfo": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 9
-    },
-    "so": {
-      "id": "488766383836889111",
-      "username": "sososo7997",
+    "Termignator": {
+      "id": "827785733682757633",
+      "username": "termignatorqr",
       "roles": [
         "Verified",
-        "Designer",
-        "utility",
         "Coder",
+        "utility",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 1
     }
   }
 }
