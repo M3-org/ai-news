@@ -1,0 +1,176 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-06-29",
+  "date": 1782691200,
+  "stats": {
+    "totalMessages": 12,
+    "totalUsers": 8
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The conversation consists primarily of introductory messages and general inquiries. bigalex777 asked about the project's development status, noting a $5 million capitalization. iamsue88 inquired about previous capitalization figures, to which bigalex777 suggested checking independently. coconut7118 posted seeking French-speaking community members or English speakers willing to share knowledge and motivation. garium_sulphate introduced themselves as a PM and content writer. The segment lacks substantive technical discussions, problem-solving activities, or concrete implementations. No development decisions were made, and no technical solutions were proposed or implemented during this conversation period.",
+      "faqs": [
+        {
+          "question": "Can you tell me if the project is currently under development? The capitalization is already $5 million.",
+          "askedBy": "bigalex777",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "How much before?",
+          "askedBy": "iamsue88",
+          "answeredBy": "bigalex777"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 7,
+      "userCount": 6
+    },
+    {
+      "channelId": "1301363808421543988",
+      "channelName": "🥇-partners",
+      "summary": "This Discord chat segment from the 🥇-partners channel contains a brief exchange between demian_dappcraft and odilitime regarding a potential collaboration opportunity. Demian_dappcraft reached out to arrange a 30-minute call to discuss a partnership, mentioning that Bitfury is the lead investor in their project and expressing belief that collaboration would be mutually beneficial. Odilitime responded that they had asked about the proposal but received no response, and indicated they would follow up by bumping the request. The conversation is minimal and primarily focused on scheduling and initial outreach rather than technical implementation or problem-solving. No concrete technical discussions, decisions, or solutions were presented in this segment. The exchange represents early-stage partnership exploration without substantive technical content or actionable outcomes at this point.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Arrange 30-minute call to discuss potential collaboration with Bitfury-backed project",
+          "mentionedBy": "demian_dappcraft"
+        }
+      ],
+      "messageCount": 5,
+      "userCount": 2
+    }
+  ],
+  "nicknameMap": {
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 623
+    },
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
+      "roles": [
+        "Partner",
+        "Vanguard",
+        "NFT",
+        "Verified",
+        "Associate"
+      ],
+      "totalMessages": 9
+    },
+    "baby groot": {
+      "id": "396540381195534349",
+      "username": "babygroot26",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 106
+    },
+    "DEVILMAN": {
+      "id": "730996256050249768",
+      "username": "coconut7118",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Verified",
+        "Dev School Student",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Obito": {
+      "id": "1512397538962051087",
+      "username": "obito031838",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "CryptoInfo": {
+      "id": "1074932974677659679",
+      "username": "bigalex777",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 11
+    },
+    "IAmSue": {
+      "id": "975459367761637477",
+      "username": "iamsue88",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Garium Sulphate": {
+      "id": "1222348936782807090",
+      "username": "garium_sulphate",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
