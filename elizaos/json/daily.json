@@ -4,34 +4,26 @@
   "categories": [
     {
       "title": "ElizaOS Community Discussion - June 30, 2026",
-      "content": [
-        {
-          "text": "In the general discussion channel, community members shared updates about Ruby, an AI agent project that has expanded into Telegram and Discord with features like a Trivia bot, which was highlighted as a notable advancement in agentic systems. The shared posts referenced various crypto tickers and promoted Ruby Trivia as a standout feature of the project's rebirth. A user named RangerKeith inquired about potential AMA collaboration opportunities with the ElizaOS team. CryptoInfo asked about admin status in reply to one of the Ruby posts, and Odilitime directed them to check the GitHub repository for information. Other general greetings and casual conversation took place throughout the day. One user, groggs, noted that while AI development is accelerating, crypto Twitter has been unusually quiet, suggesting the community is in a building phase before the next market swing. The coders channel had no activity recorded for the day.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/HMBxTHwWQAArV0U.jpg:large",
-            "https://pbs.twimg.com/media/HMGVrnNWAAAqrrj.jpg:large"
-          ],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "In the general discussion channel, community members shared updates about Ruby, an AI agent project that has expanded into Telegram and Discord with features like a Trivia bot, which was highlighted as a notable advancement in agentic systems. The shared posts referenced various crypto tickers and promoted Ruby Trivia as a standout feature of the project's rebirth. A user named RangerKeith inquired about potential AMA collaboration opportunities with the ElizaOS team. CryptoInfo asked about admin status in reply to one of the Ruby posts, and Odilitime directed them to check the GitHub repository for information. Other general greetings and casual conversation took place throughout the day. One user, groggs, noted that while AI development is accelerating, crypto Twitter has been unusually quiet, suggesting the community is in a building phase before the next market swing. The coders channel had no activity recorded for the day.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "images": [
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1521339328230330558_099a8362.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1521663537502748723_877b21eb.jpg"
+        ]
+      },
       "topic": "discordrawdata"
     },
     {
       "title": "Overall Project Summary: June 30, 2026",
-      "content": [
-        {
-          "text": "June 30, 2026 saw significant progress across voice infrastructure, agent orchestration, and build systems. On the voice and desktop front, real-time wake-word detection was enabled via OpenWakeWordDetector, the desktop UI was streamlined by removing legacy stacks, and voice end-to-end testing was advanced with new Apple Stage-B STT benchmarks and real-device evidence. For agent orchestration and security, the team hardened agent security by introducing read-only verifiers, sub-agent spend-cap warnings, and improved prompt-injection protections. On the infrastructure side, plugin builds were consolidated onto a shared driver for better type-safety, CI/CD pipelines were optimized for cloud reliability, and the plugin registry was expanded with the addition of elizaos-plugin-quantumscan and eliza-plugin-klymax402. Work currently in progress includes a real-Chromium benchmark engine lane and CI gate for the browser plugin, a MiniWoB++ benchmark test lane, a memory watchdog with crash-recovery and soak harness featuring iOS watchdog parity, and a UI test to record a chat-sheet transition as an animated GIF.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-30.json"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
+      "content": {
+        "text": "June 30, 2026 saw significant progress across voice infrastructure, agent orchestration, and build systems. On the voice and desktop front, real-time wake-word detection was enabled via OpenWakeWordDetector, the desktop UI was streamlined by removing legacy stacks, and voice end-to-end testing was advanced with new Apple Stage-B STT benchmarks and real-device evidence. For agent orchestration and security, the team hardened agent security by introducing read-only verifiers, sub-agent spend-cap warnings, and improved prompt-injection protections. On the infrastructure side, plugin builds were consolidated onto a shared driver for better type-safety, CI/CD pipelines were optimized for cloud reliability, and the plugin registry was expanded with the addition of elizaos-plugin-quantumscan and eliza-plugin-klymax402. Work currently in progress includes a real-Chromium benchmark engine lane and CI gate for the browser plugin, a MiniWoB++ benchmark test lane, a memory watchdog with crash-recovery and soak harness featuring iOS watchdog parity, and a UI test to record a chat-sheet transition as an animated GIF.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-30.json",
+        "posters": "https://cdn.elizaos.news/posters/1782871871283-rknm9b.jpg"
+      },
       "topic": "miscellaneous"
     }
   ],
@@ -51,9 +43,7 @@
     "groggs": {
       "id": "932948552559239198",
       "username": "grogggs",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 2
     },
     "laboratorian": {
