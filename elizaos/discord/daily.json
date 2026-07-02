@@ -1,108 +1,46 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-06-30",
-  "date": 1782777600,
+  "title": "elizaOS Discord - 2026-07-01",
+  "date": 1782864000,
   "stats": {
-    "totalMessages": 10,
-    "totalUsers": 8
+    "totalMessages": 9,
+    "totalUsers": 7
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical discussion or development activity. The conversation consists primarily of casual greetings and social interactions. One user (rangerkeith) inquired about arranging an AMA collaboration with the Eliza OS team. Another user (odilitime) provided a brief response directing someone to check GitHub, though the context of what to check is unclear. A user named grogggs made an observation about AI development activity versus crypto Twitter (CT) engagement, noting that the current quiet period may represent a building phase before market sentiment shifts. Two Twitter/X links were shared by magicyte without context. The segment contains no substantive technical discussions, problem-solving sessions, code implementations, or architectural decisions. No specific features were discussed, no bugs were reported or resolved, and no documentation updates were mentioned. The chat reflects a quiet period with community members checking in but not engaging in meaningful technical discourse.",
+      "summary": "This Discord chat segment contains minimal substantive content. The conversation consists entirely of greeting messages from six community members (om1d_sa, findme0998, tarawolf, migueellz, schlegelcrypto, and odilitime) exchanged over approximately 12 hours. There are no technical discussions, problem-solving activities, decisions made, or implementations discussed. The only notable element is a user mention by om1d_sa at the beginning of the segment, though no context or follow-up is provided. This appears to be a quiet period in the channel with members simply acknowledging their presence.",
       "faqs": [],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "Unknown",
-          "context": "User needed information about something related to the project",
-          "resolution": "Directed to check the GitHub repository"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Documentation",
-          "description": "Arrange AMA collaboration discussion with team",
-          "mentionedBy": "rangerkeith"
-        }
-      ],
-      "messageCount": 10,
-      "userCount": 8
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 6,
+      "userCount": 6
     }
   ],
   "nicknameMap": {
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 119
-    },
-    "groggs": {
-      "id": "932948552559239198",
-      "username": "grogggs",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 2
-    },
-    "laboratorian": {
-      "id": "817312344097947648",
-      "username": "labotests",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer"
-      ],
-      "totalMessages": 7
-    },
-    "qwerky": {
-      "id": "686903379783319555",
-      "username": "qwerky8",
-      "roles": [
-        "Booster",
-        "Creator",
-        "NFT"
-      ],
-      "totalMessages": 1
-    },
-    "Neon": {
-      "id": "1418006708281802802",
-      "username": "trustmeto",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Kenk": {
-      "id": "699264581729779733",
-      "username": "k_carv",
-      "roles": [
+        "Partner",
         "Vanguard",
-        "Server Booster",
-        "Contributor",
         "NFT",
         "Verified",
-        "Coder",
-        "Booster",
-        "Designer",
-        "Poker",
-        "External Dev"
-      ]
+        "Associate"
+      ],
+      "totalMessages": 10
+    },
+    "Schlegel": {
+      "id": "178545509693128704",
+      "username": "schlegelcrypto",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -132,17 +70,67 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 624
+      "totalMessages": 625
     },
-    "CryptoInfo": {
-      "id": "1074932974677659679",
-      "username": "bigalex777",
+    "MiGuEl UpLiFT": {
+      "id": "526933634498953226",
+      "username": "migueellz",
       "roles": [
         "Trader",
+        "Verified",
         "utility",
         "eliza"
       ],
-      "totalMessages": 12
+      "totalMessages": 1
+    },
+    "taraWolf": {
+      "id": "1096416164751622165",
+      "username": "tarawolf",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 6
+    },
+    "Ljames69": {
+      "id": "1250250460720529521",
+      "username": "findme0998",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 17
     },
     "RangerKeith": {
       "id": "762269778471419915",
