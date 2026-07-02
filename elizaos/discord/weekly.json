@@ -1,16 +1,16 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-06-24 to 2026-06-30",
-  "weekOf": "2026-06-24",
+  "title": "elizaOS Weekly Summary - 2026-06-25 to 2026-07-01",
+  "weekOf": "2026-06-25",
   "dateRange": {
-    "start": "2026-06-24",
-    "end": "2026-06-30"
+    "start": "2026-06-25",
+    "end": "2026-07-01"
   },
-  "generatedAt": 1782871883,
+  "generatedAt": 1782957930,
   "stats": {
-    "totalMessages": 63,
-    "totalUsers": 50,
+    "totalMessages": 62,
+    "totalUsers": 48,
     "averageMessagesPerDay": 9,
     "activeDays": 7,
     "peakDay": {
@@ -21,13 +21,8 @@
   "channelSummary": {
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 52,
+      "totalMessages": 51,
       "daysActive": 6
-    },
-    "1300025221834739744": {
-      "name": "💬-coders",
-      "totalMessages": 3,
-      "daysActive": 1
     },
     "1301363808421543988": {
       "name": "🥇-partners",
@@ -36,222 +31,6 @@
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-06-24",
-      "date": 1782259200,
-      "stats": {
-        "totalMessages": 10,
-        "totalUsers": 9
-      },
-      "categories": [
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of: (1) A recruitment post from fixer1123 seeking an English-speaking liaison to help their development team communicate with U.S. clients - this is a non-technical role focused on client communication and meeting coordination with flexible hours and project-based compensation; (2) Brief off-topic comments including a joke about npm packages from chulylooly; (3) Token-related inquiries from imcryptor asking about $elizaOS token staking and utility features, and bigalex777 asking about token status; (4) A scam alert from om1d_sa warning about specific users; (5) A positive sentiment comment from cryptomikk about project health. No technical implementations, code discussions, architectural decisions, or problem-solving occurred in this segment. No concrete solutions were provided to any questions raised. The chat lacks substantive development-related content.",
-          "faqs": [
-            {
-              "question": "wen $elizaOS token staking or token utility?",
-              "askedBy": "imcryptor",
-              "answeredBy": "Unanswered"
-            },
-            {
-              "question": "Token alive?",
-              "askedBy": "bigalex777",
-              "answeredBy": "cryptomikk"
-            }
-          ],
-          "helpInteractions": [],
-          "actionItems": [
-            {
-              "type": "Feature",
-              "description": "Implement token staking functionality for $elizaOS",
-              "mentionedBy": "imcryptor"
-            },
-            {
-              "type": "Feature",
-              "description": "Add token utility features for $elizaOS",
-              "mentionedBy": "imcryptor"
-            }
-          ],
-          "messageCount": 7,
-          "userCount": 7
-        },
-        {
-          "channelId": "1300025221834739744",
-          "channelName": "💬-coders",
-          "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The conversation consists primarily of three non-technical messages: a request for team contact from 0xcryptomania, a job posting from fixer1123 seeking an English-speaking liaison for client communication (not a coding role), and a brief question from parthiavin about English proficiency. No technical discussions, problem-solving, code implementations, or development decisions occurred during this segment. The channel activity was limited to administrative requests and recruitment outreach rather than coding-related content.",
-          "faqs": [],
-          "helpInteractions": [],
-          "actionItems": [],
-          "messageCount": 3,
-          "userCount": 3
-        }
-      ],
-      "nicknameMap": {
-        "cryptomikk": {
-          "id": "784089502029053963",
-          "username": "cryptomikk",
-          "roles": [
-            "Verified",
-            "Coder",
-            "utility"
-          ],
-          "totalMessages": 1
-        },
-        "CryptoInfo": {
-          "id": "1074932974677659679",
-          "username": "bigalex777",
-          "roles": [
-            "Trader",
-            "utility",
-            "eliza"
-          ],
-          "totalMessages": 5
-        },
-        "mysterious_seahorse_62821": {
-          "id": "1412312524346490911",
-          "username": "mysterious_seahorse_62821",
-          "roles": [
-            "Helper",
-            "a-hack",
-            "Trader",
-            "Creator",
-            "[WG] degenspartan",
-            "It",
-            "Verified",
-            "Dev School Student",
-            "Booster",
-            "Designer",
-            "Fr",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 1
-        },
-        "Omid Sa": {
-          "id": "1430561551169097791",
-          "username": "om1d_sa",
-          "roles": [
-            "Trader",
-            "Creator",
-            "[WG] degenspartan",
-            "Mini Mod",
-            "Verified",
-            "Dev School Student",
-            "Designer",
-            "utility",
-            "Coder",
-            "Hoplite",
-            "eliza"
-          ],
-          "totalMessages": 15
-        },
-        "Jack|safepal": {
-          "id": "1157386415911469056",
-          "username": "surydamkery147",
-          "roles": [],
-          "totalMessages": 1
-        },
-        "JAMES": {
-          "id": "1474267656327528538",
-          "username": "jamesson101",
-          "roles": [],
-          "totalMessages": 4
-        },
-        "Odilitime": {
-          "id": "580487826420793364",
-          "username": "odilitime",
-          "roles": [
-            "God",
-            "platform - self assign",
-            "partner portal - self assign",
-            "Community Ops",
-            "Creator",
-            "Moderator",
-            "[WG] degenspartan",
-            "pmairca - self assign",
-            "Verified",
-            "Booster",
-            "Hoplite",
-            "Migration Support",
-            "Helper",
-            "Github - Contributor",
-            "Labs Alumni",
-            "Trader",
-            "Contributor",
-            "merch - self assign",
-            "events - self-assign",
-            "[WG] Elizacon - granted",
-            "Spartan Dev",
-            "Core Dev",
-            "Coder"
-          ],
-          "totalMessages": 617
-        },
-        "imcryptor": {
-          "id": "959015387620605952",
-          "username": "imcryptor",
-          "roles": [
-            "utility",
-            "Verified",
-            "Coder",
-            "auto.fun enjoyer"
-          ],
-          "totalMessages": 2
-        },
-        "chulylooly": {
-          "id": "963012153026150501",
-          "username": "chulylooly",
-          "roles": [
-            "Trader",
-            "Creator",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 43
-        },
-        "Fixer": {
-          "id": "1484634836864991336",
-          "username": "fixer1123.",
-          "roles": [
-            "Trader",
-            "Creator",
-            "Verified",
-            "Designer",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 6
-        },
-        "Parthia Vin": {
-          "id": "188292018018058242",
-          "username": "parthiavin.",
-          "roles": [
-            "Trader",
-            "Creator",
-            "Verified",
-            "Designer",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 1
-        },
-        "CryptoMania": {
-          "id": "1473525361550692616",
-          "username": "0xcryptomania",
-          "roles": [
-            "utility",
-            "eliza"
-          ],
-          "totalMessages": 1
-        }
-      }
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-06-25",
@@ -1117,6 +896,156 @@
             "eliza"
           ],
           "totalMessages": 12
+        },
+        "RangerKeith": {
+          "id": "762269778471419915",
+          "username": "rangerkeith",
+          "roles": [
+            "Helper",
+            "Trader",
+            "It",
+            "Verified",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        }
+      }
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-07-01",
+      "date": 1782864000,
+      "stats": {
+        "totalMessages": 9,
+        "totalUsers": 7
+      },
+      "categories": [
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "This Discord chat segment contains minimal substantive content. The conversation consists entirely of greeting messages from six community members (om1d_sa, findme0998, tarawolf, migueellz, schlegelcrypto, and odilitime) exchanged over approximately 12 hours. There are no technical discussions, problem-solving activities, decisions made, or implementations discussed. The only notable element is a user mention by om1d_sa at the beginning of the segment, though no context or follow-up is provided. This appears to be a quiet period in the channel with members simply acknowledging their presence.",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 6,
+          "userCount": 6
+        }
+      ],
+      "nicknameMap": {
+        "DEMIAN | DAPPCRAFT | ai2^4z": {
+          "id": "436194365627695104",
+          "username": "demian_dappcraft",
+          "roles": [
+            "Partner",
+            "Vanguard",
+            "NFT",
+            "Verified",
+            "Associate"
+          ],
+          "totalMessages": 10
+        },
+        "Schlegel": {
+          "id": "178545509693128704",
+          "username": "schlegelcrypto",
+          "roles": [
+            "Helper",
+            "Verified",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 3
+        },
+        "Odilitime": {
+          "id": "580487826420793364",
+          "username": "odilitime",
+          "roles": [
+            "God",
+            "platform - self assign",
+            "partner portal - self assign",
+            "Community Ops",
+            "Creator",
+            "Moderator",
+            "[WG] degenspartan",
+            "pmairca - self assign",
+            "Verified",
+            "Booster",
+            "Hoplite",
+            "Migration Support",
+            "Helper",
+            "Github - Contributor",
+            "Labs Alumni",
+            "Trader",
+            "Contributor",
+            "merch - self assign",
+            "events - self-assign",
+            "[WG] Elizacon - granted",
+            "Spartan Dev",
+            "Core Dev",
+            "Coder"
+          ],
+          "totalMessages": 625
+        },
+        "MiGuEl UpLiFT": {
+          "id": "526933634498953226",
+          "username": "migueellz",
+          "roles": [
+            "Trader",
+            "Verified",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "taraWolf": {
+          "id": "1096416164751622165",
+          "username": "tarawolf",
+          "roles": [
+            "Trader",
+            "Verified",
+            "Dev School Student",
+            "Booster",
+            "Designer",
+            "Coder"
+          ],
+          "totalMessages": 6
+        },
+        "Ljames69": {
+          "id": "1250250460720529521",
+          "username": "findme0998",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Verified",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "Omid Sa": {
+          "id": "1430561551169097791",
+          "username": "om1d_sa",
+          "roles": [
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "Mini Mod",
+            "Verified",
+            "Dev School Student",
+            "Designer",
+            "utility",
+            "Coder",
+            "Hoplite",
+            "eliza"
+          ],
+          "totalMessages": 17
         },
         "RangerKeith": {
           "id": "762269778471419915",

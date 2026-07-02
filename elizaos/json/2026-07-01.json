@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957808276-944ze7.png"
+          ]
         },
         {
           "text": "In the coders channel, a user named Schlegel introduced Paxeer Network, describing it as an EVM layer 1 blockchain built for agent commerce. Key features highlighted include native payment rails, 200ms block times, near instant finality, and low gas fees. The project claims to be chain agnostic through LayerX integration and positions itself as a settlement layer suited for eliza agents. Schlegel, who identified himself as the head of Public Relations and Integration, mentioned the project has been in development for 2.5 years and shared a link to a developer tracker at paxeer-matrix-chart.vercel.app. He expressed interest in connecting with the elizaOS community to demonstrate their work and stated they have built and tested an agent on their chain.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957838661-u7jes.jpg"
+          ]
         },
         {
           "text": "In the partners channel, DEMIAN from DAPPCRAFT reached out to the jintern bot requesting assistance, though no further details about the nature of the request were provided in the available messages.",
@@ -27,7 +33,10 @@
             "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957858700-24c6ws.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
@@ -41,7 +50,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957877110-fluui.jpg"
+          ]
         },
         {
           "text": "On the security front, the team finalized the embedded SPA bootstrap for the /embed endpoint, integrating Discord OAuth2 and session token validation. Production-grade fail-closed security guards were deployed for rate limiting and payout status checks, ensuring that cloud-hosted applications default to a secure state under failure conditions.",
@@ -49,7 +61,10 @@
             "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957914905-sz0ma9.png"
+          ]
         },
         {
           "text": "Mobile stability saw meaningful progress with the implementation of real-device Android smoke tests covering touch gestures, sleep-wake cycles, and view-runtime soaking. Benchmark harnesses were also calibrated with reasoning-safe token budgets and real-Chromium browser testing to ensure reliable and accurate performance measurements across the ecosystem. Several pull requests remain in progress, including fixes for cloud app structured confirmations, desktop icon inclusion, UI launcher audit stabilization, and a new PTY service plugin for an interactive CLI experience.",

@@ -1,54 +1,7 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-06-24 to 2026-06-30",
+  "title": "Weekly Report - 2026-06-25 to 2026-07-01",
   "categories": [
-    {
-      "title": "ElizaOS Discord Community Activity - June 24, 2026",
-      "content": [
-        {
-          "text": "A user named Fixer posted an identical recruitment message in both the general discussion and coders channels, seeking an English-speaking client liaison for a development team expanding into the U.S. market. The role required no coding skills, only communication and organizational abilities, with flexible hours and performance-based compensation. The post was met with skepticism, including a sarcastic reply questioning the poster's English proficiency, and community moderators flagged the user along with another account as potential scammers, tagging a moderator for action.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353048441-lcwxtj.png"
-          ]
-        },
-        {
-          "text": "In the general discussion channel, community members raised ongoing concerns about the elizaOS token, with one user asking about staking and token utility features, expressing frustration over the long wait. Another user simply asked if the token was still alive. A community member responded positively, stating the project was in good health. A separate user in the coders channel requested a direct message from a team member without further elaboration.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353068621-76unp1.png"
-          ]
-        }
-      ],
-      "topic": "discordrawdata"
-    },
-    {
-      "title": "Project Update: June 24, 2026",
-      "content": [
-        {
-          "text": "Development on June 24, 2026 centered on two main areas: finalizing streaming documentation and addressing critical cloud infrastructure security concerns. On the completed side, the team wrapped up documentation for token-by-token dashboard streaming, including in-browser video evidence verifying the functionality against Together AI cloud models. On the infrastructure front, two pull requests are currently in progress targeting cloud security and networking. One PR aims to isolate untrusted app builds from the runtime fleet and has been flagged as a high-priority Product-2 blocker requiring immediate review. A second PR addresses network configuration by binding app host ports to loopback and routing through a node-local Caddy instance for app ingress. These open items represent critical blockers that must be resolved to ensure a secure cloud deployment.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-24.json"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1782353109028-i66f0o.png"
-          ]
-        }
-      ],
-      "topic": "miscellaneous"
-    },
     {
       "title": "Ruby Trivia Token and Developer Activity Discussion",
       "content": {
@@ -268,7 +221,82 @@
         "posters": "https://cdn.elizaos.news/posters/1782871871283-rknm9b.jpg"
       },
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Activity and Paxeer Network Introduction",
+      "content": [
+        {
+          "text": "On July 1, 2026, the general discussion channel saw light activity with several community members including taraWolf, Ljames69, MiGuEl UpLiFT, Schlegel, and Odilitime exchanging brief greetings. One message from Omid Sa referenced Odilitime in a reply thread. Overall conversation in the social channel was minimal with no substantive technical discussions taking place.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957808276-944ze7.png"
+          ]
+        },
+        {
+          "text": "In the coders channel, a user named Schlegel introduced Paxeer Network, describing it as an EVM layer 1 blockchain built for agent commerce. Key features highlighted include native payment rails, 200ms block times, near instant finality, and low gas fees. The project claims to be chain agnostic through LayerX integration and positions itself as a settlement layer suited for eliza agents. Schlegel, who identified himself as the head of Public Relations and Integration, mentioned the project has been in development for 2.5 years and shared a link to a developer tracker at paxeer-matrix-chart.vercel.app. He expressed interest in connecting with the elizaOS community to demonstrate their work and stated they have built and tested an agent on their chain.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957838661-u7jes.jpg"
+          ]
+        },
+        {
+          "text": "In the partners channel, DEMIAN from DAPPCRAFT reached out to the jintern bot requesting assistance, though no further details about the nature of the request were provided in the available messages.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957858700-24c6ws.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Daily Digest: July 1, 2026",
+      "content": [
+        {
+          "text": "On July 1, 2026, the ElizaOS team concentrated on three major areas of improvement: internationalization-friendly routing, embedded application security, and mobile and benchmark stability. Core actions including VISION, ALARM, MUSIC, PREDICTION_MARKET, and DOCUMENT were refactored to use structured operation parameters instead of English keyword regex, significantly improving internationalization support. The team also formalized a shortcut allow-list boundary for intent resolution to further harden the routing layer.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957877110-fluui.jpg"
+          ]
+        },
+        {
+          "text": "On the security front, the team finalized the embedded SPA bootstrap for the /embed endpoint, integrating Discord OAuth2 and session token validation. Production-grade fail-closed security guards were deployed for rate limiting and payout status checks, ensuring that cloud-hosted applications default to a secure state under failure conditions.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957914905-sz0ma9.png"
+          ]
+        },
+        {
+          "text": "Mobile stability saw meaningful progress with the implementation of real-device Android smoke tests covering touch gestures, sleep-wake cycles, and view-runtime soaking. Benchmark harnesses were also calibrated with reasoning-safe token budgets and real-Chromium browser testing to ensure reliable and accurate performance measurements across the ecosystem. Several pull requests remain in progress, including fixes for cloud app structured confirmations, desktop icon inclusion, UI launcher audit stabilization, and a new PTY service plugin for an interactive CLI experience.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "miscellaneous"
     }
   ],
-  "date": 1782871885
+  "date": 1782957931
 }
