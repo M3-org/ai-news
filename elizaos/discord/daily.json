@@ -1,46 +1,84 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-01",
-  "date": 1782864000,
+  "title": "elizaOS Discord - 2026-07-02",
+  "date": 1782950400,
   "stats": {
-    "totalMessages": 9,
-    "totalUsers": 7
+    "totalMessages": 23,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal substantive content. The conversation consists entirely of greeting messages from six community members (om1d_sa, findme0998, tarawolf, migueellz, schlegelcrypto, and odilitime) exchanged over approximately 12 hours. There are no technical discussions, problem-solving activities, decisions made, or implementations discussed. The only notable element is a user mention by om1d_sa at the beginning of the segment, though no context or follow-up is provided. This appears to be a quiet period in the channel with members simply acknowledging their presence.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 6,
-      "userCount": 6
+      "summary": "The discussion centered on USDC becoming the default payout asset in Eliza (PR #10732) instead of $elizaos tokens. zadayos raised concerns that this change eliminates $elizaos buybacks and reduces token utility. odilitime clarified that USDC is the default payout (not payment) for the new cloud business, while $elizaos remains an accepted payment token. The rationale is that businesses receiving payouts in $elizaos would likely dump the token, making USDC a safer option that actually benefits the token long-term. j_choy initially confused payment vs payout but received clarification. gblin_digital announced plugin-gblin 0.2.4, introducing GET_GBLIN_RISK_ATTESTATION action that allows Eliza agents to obtain cryptographic proof of market risk checks before trading. The agent pays $0.003 in USDC on Base (gasless) for a 10-minute EIP-712-signed proof of BTC/ETH risk regime. The plugin also includes treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality for invoice payments. All 4 actions and 1 provider work against live Base mainnet. mdmnvest shared a Twitter Spaces link about Ruby Trivia discussing vibe-coded games on an AMA.",
+      "faqs": [
+        {
+          "question": "Does the USDC default payout mean no more $elizaos buybacks and decreased token utility?",
+          "askedBy": "zadayos",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Does $elizaos still exist in the ecosystem if USDC is the default payment?",
+          "askedBy": "j_choy",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What's the role of $elizaos if USDC is the default payment?",
+          "askedBy": "j_choy",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What's the best server for beginners?",
+          "askedBy": "alwaysscriptor04",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "zadayos",
+          "context": "Concern that USDC default payout eliminates $elizaos buybacks and reduces token utility",
+          "resolution": "Clarified that USDC payouts are better for the token since businesses would dump $elizaos, and that $elizaos remains an accepted payment token"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "j_choy",
+          "context": "Confusion about whether $elizaos still exists in ecosystem and its role with USDC default",
+          "resolution": "Explained that USDC is default payout not payment, and $elizaos is still one of the accepted crypto tokens"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "plugin-gblin 0.2.4 released with GET_GBLIN_RISK_ATTESTATION action for cryptographic proof of market risk checks before trading",
+          "mentionedBy": "gblin_digital"
+        },
+        {
+          "type": "Feature",
+          "description": "Implement treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality in plugin-gblin",
+          "mentionedBy": "gblin_digital"
+        },
+        {
+          "type": "Documentation",
+          "description": "Gather feedback on what other proofs agents would want to attach to their actions",
+          "mentionedBy": "gblin_digital"
+        }
+      ],
+      "messageCount": 22,
+      "userCount": 9
     }
   ],
   "nicknameMap": {
-    "DEMIAN | DAPPCRAFT | ai2^4z": {
-      "id": "436194365627695104",
-      "username": "demian_dappcraft",
-      "roles": [
-        "Partner",
-        "Vanguard",
-        "NFT",
-        "Verified",
-        "Associate"
-      ],
-      "totalMessages": 10
-    },
-    "Schlegel": {
-      "id": "178545509693128704",
-      "username": "schlegelcrypto",
+    "hamada ramadan": {
+      "id": "650379229128818699",
+      "username": "hamadaramadan1633",
       "roles": [
         "Helper",
-        "Verified",
         "utility",
+        "It",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 1
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -70,35 +108,91 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 625
+      "totalMessages": 633
     },
-    "MiGuEl UpLiFT": {
-      "id": "526933634498953226",
-      "username": "migueellz",
+    "alwaysscriptor04": {
+      "id": "1085461910591385661",
+      "username": "alwaysscriptor04",
+      "roles": [],
+      "totalMessages": 2
+    },
+    "GBLIN": {
+      "id": "1448243095396290590",
+      "username": "gblin_digital",
       "roles": [
-        "Trader",
+        "It",
         "Verified",
         "utility",
+        "Coder",
         "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "amiller": {
+      "id": "536404663491362837",
+      "username": "socrates1024",
+      "roles": [
+        "Verified"
       ],
       "totalMessages": 1
     },
-    "taraWolf": {
-      "id": "1096416164751622165",
-      "username": "tarawolf",
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
       "roles": [
+        "auto.fun enjoyer",
         "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
         "Verified",
-        "Dev School Student",
         "Booster",
         "Designer",
         "Coder"
       ],
-      "totalMessages": 6
+      "totalMessages": 21
     },
-    "Ljames69": {
-      "id": "1250250460720529521",
-      "username": "findme0998",
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 52
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 36
+    },
+    "ericrivera": {
+      "id": "291346487315529729",
+      "username": "ericrivera9124",
       "roles": [
         "Helper",
         "Trader",
@@ -112,39 +206,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
-      ],
-      "totalMessages": 17
-    },
-    "RangerKeith": {
-      "id": "762269778471419915",
-      "username": "rangerkeith",
-      "roles": [
-        "Helper",
-        "Trader",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 2
     }
   }
 }

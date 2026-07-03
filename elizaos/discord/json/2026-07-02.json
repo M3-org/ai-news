@@ -1,0 +1,212 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-02",
+  "date": 1782950400,
+  "stats": {
+    "totalMessages": 23,
+    "totalUsers": 10
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on USDC becoming the default payout asset in Eliza (PR #10732) instead of $elizaos tokens. zadayos raised concerns that this change eliminates $elizaos buybacks and reduces token utility. odilitime clarified that USDC is the default payout (not payment) for the new cloud business, while $elizaos remains an accepted payment token. The rationale is that businesses receiving payouts in $elizaos would likely dump the token, making USDC a safer option that actually benefits the token long-term. j_choy initially confused payment vs payout but received clarification. gblin_digital announced plugin-gblin 0.2.4, introducing GET_GBLIN_RISK_ATTESTATION action that allows Eliza agents to obtain cryptographic proof of market risk checks before trading. The agent pays $0.003 in USDC on Base (gasless) for a 10-minute EIP-712-signed proof of BTC/ETH risk regime. The plugin also includes treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality for invoice payments. All 4 actions and 1 provider work against live Base mainnet. mdmnvest shared a Twitter Spaces link about Ruby Trivia discussing vibe-coded games on an AMA.",
+      "faqs": [
+        {
+          "question": "Does the USDC default payout mean no more $elizaos buybacks and decreased token utility?",
+          "askedBy": "zadayos",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "Does $elizaos still exist in the ecosystem if USDC is the default payment?",
+          "askedBy": "j_choy",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What's the role of $elizaos if USDC is the default payment?",
+          "askedBy": "j_choy",
+          "answeredBy": "odilitime"
+        },
+        {
+          "question": "What's the best server for beginners?",
+          "askedBy": "alwaysscriptor04",
+          "answeredBy": "odilitime"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "odilitime",
+          "helpee": "zadayos",
+          "context": "Concern that USDC default payout eliminates $elizaos buybacks and reduces token utility",
+          "resolution": "Clarified that USDC payouts are better for the token since businesses would dump $elizaos, and that $elizaos remains an accepted payment token"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "j_choy",
+          "context": "Confusion about whether $elizaos still exists in ecosystem and its role with USDC default",
+          "resolution": "Explained that USDC is default payout not payment, and $elizaos is still one of the accepted crypto tokens"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "plugin-gblin 0.2.4 released with GET_GBLIN_RISK_ATTESTATION action for cryptographic proof of market risk checks before trading",
+          "mentionedBy": "gblin_digital"
+        },
+        {
+          "type": "Feature",
+          "description": "Implement treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality in plugin-gblin",
+          "mentionedBy": "gblin_digital"
+        },
+        {
+          "type": "Documentation",
+          "description": "Gather feedback on what other proofs agents would want to attach to their actions",
+          "mentionedBy": "gblin_digital"
+        }
+      ],
+      "messageCount": 22,
+      "userCount": 9
+    }
+  ],
+  "nicknameMap": {
+    "hamada ramadan": {
+      "id": "650379229128818699",
+      "username": "hamadaramadan1633",
+      "roles": [
+        "Helper",
+        "utility",
+        "It",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 633
+    },
+    "alwaysscriptor04": {
+      "id": "1085461910591385661",
+      "username": "alwaysscriptor04",
+      "roles": [],
+      "totalMessages": 2
+    },
+    "GBLIN": {
+      "id": "1448243095396290590",
+      "username": "gblin_digital",
+      "roles": [
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "amiller": {
+      "id": "536404663491362837",
+      "username": "socrates1024",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 21
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 52
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "Zaday": {
+      "id": "1194534149076299836",
+      "username": "zadayos",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 36
+    },
+    "ericrivera": {
+      "id": "291346487315529729",
+      "username": "ericrivera9124",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    }
+  }
+}
