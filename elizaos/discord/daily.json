@@ -1,84 +1,127 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-02",
-  "date": 1782950400,
+  "title": "elizaOS Discord - 2026-07-03",
+  "date": 1783036800,
   "stats": {
-    "totalMessages": 23,
-    "totalUsers": 10
+    "totalMessages": 16,
+    "totalUsers": 8
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on USDC becoming the default payout asset in Eliza (PR #10732) instead of $elizaos tokens. zadayos raised concerns that this change eliminates $elizaos buybacks and reduces token utility. odilitime clarified that USDC is the default payout (not payment) for the new cloud business, while $elizaos remains an accepted payment token. The rationale is that businesses receiving payouts in $elizaos would likely dump the token, making USDC a safer option that actually benefits the token long-term. j_choy initially confused payment vs payout but received clarification. gblin_digital announced plugin-gblin 0.2.4, introducing GET_GBLIN_RISK_ATTESTATION action that allows Eliza agents to obtain cryptographic proof of market risk checks before trading. The agent pays $0.003 in USDC on Base (gasless) for a 10-minute EIP-712-signed proof of BTC/ETH risk regime. The plugin also includes treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality for invoice payments. All 4 actions and 1 provider work against live Base mainnet. mdmnvest shared a Twitter Spaces link about Ruby Trivia discussing vibe-coded games on an AMA.",
+      "summary": "This Discord segment shows minimal technical discussion and primarily consists of community concerns about project communication and token status. The chat opens with odilitime sharing two external links without context. A community member (jams0883) questions if the project is dead due to lack of news, while imcryptor asks about the $elizaOS token. matthib responds that the project is still active and building despite repeated questions. This triggers a lengthy exchange where paolin_62616 criticizes the communication approach, noting the official X account hasn't updated since May, the Discord is inactive, and the token price is hitting new lows. paolin_62616 specifically praises odilitime as the only team member providing active, polite, and fruitful contributions since the original team split. matthib clarifies they are not staff, which was misunderstood due to profile indicators. The segment ends with jams0883 sharing a Shaw tweet and odilitime asking for context, with ghss44 clarifying it was a reply to an old November 2024 Ansem post, not recent activity. No technical implementations, code discussions, or concrete solutions were presented in this chat segment.",
       "faqs": [
         {
-          "question": "Does the USDC default payout mean no more $elizaos buybacks and decreased token utility?",
-          "askedBy": "zadayos",
-          "answeredBy": "odilitime"
+          "question": "Is the project dead? Why hasn't there been any news?",
+          "askedBy": "jams0883",
+          "answeredBy": "matthib"
         },
         {
-          "question": "Does $elizaos still exist in the ecosystem if USDC is the default payment?",
-          "askedBy": "j_choy",
-          "answeredBy": "odilitime"
+          "question": "So nobody care about $elizaOS token?",
+          "askedBy": "imcryptor",
+          "answeredBy": "Unanswered"
         },
         {
-          "question": "What's the role of $elizaos if USDC is the default payment?",
-          "askedBy": "j_choy",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "What's the best server for beginners?",
-          "askedBy": "alwaysscriptor04",
-          "answeredBy": "odilitime"
+          "question": "How did that start?",
+          "askedBy": "odilitime",
+          "answeredBy": "ghss44"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "odilitime",
-          "helpee": "zadayos",
-          "context": "Concern that USDC default payout eliminates $elizaos buybacks and reduces token utility",
-          "resolution": "Clarified that USDC payouts are better for the token since businesses would dump $elizaos, and that $elizaos remains an accepted payment token"
+          "helper": "matthib",
+          "helpee": "jams0883",
+          "context": "Question about whether the project is dead",
+          "resolution": "Confirmed project is still alive and building"
         },
         {
-          "helper": "odilitime",
-          "helpee": "j_choy",
-          "context": "Confusion about whether $elizaos still exists in ecosystem and its role with USDC default",
-          "resolution": "Explained that USDC is default payout not payment, and $elizaos is still one of the accepted crypto tokens"
+          "helper": "ghss44",
+          "helpee": "odilitime",
+          "context": "Confusion about a Shaw tweet context",
+          "resolution": "Clarified it was a reply to an old November 2024 Ansem post, not recent"
         }
       ],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "plugin-gblin 0.2.4 released with GET_GBLIN_RISK_ATTESTATION action for cryptographic proof of market risk checks before trading",
-          "mentionedBy": "gblin_digital"
-        },
-        {
-          "type": "Feature",
-          "description": "Implement treasury health checks, idle USDC parking into on-chain indexes, and JIT-swap functionality in plugin-gblin",
-          "mentionedBy": "gblin_digital"
+          "type": "Documentation",
+          "description": "Improve team communication and update official X account (last update from May)",
+          "mentionedBy": "paolin_62616"
         },
         {
           "type": "Documentation",
-          "description": "Gather feedback on what other proofs agents would want to attach to their actions",
-          "mentionedBy": "gblin_digital"
+          "description": "Increase Discord chat activity and community engagement",
+          "mentionedBy": "paolin_62616"
         }
       ],
-      "messageCount": 22,
-      "userCount": 9
+      "messageCount": 14,
+      "userCount": 7
     }
   ],
   "nicknameMap": {
-    "hamada ramadan": {
-      "id": "650379229128818699",
-      "username": "hamadaramadan1633",
+    "LiveBy4Crypto": {
+      "id": "472105577980624926",
+      "username": "nikki_tai",
       "roles": [
         "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
         "utility",
-        "It",
+        "Coder",
         "eliza"
       ],
+      "totalMessages": 2
+    },
+    "Redvoid": {
+      "id": "353670598955892737",
+      "username": "redvoid8344",
+      "roles": [
+        "Helper",
+        "platform - self assign",
+        "a-hack",
+        "partner portal - self assign",
+        "trust - self assign",
+        "swarms - self assign",
+        "events - self-assign",
+        "agent dev school - self assign",
+        "nfts - self assign",
+        "King",
+        "pmairca - self assign",
+        "Contributor",
+        "merch - self assign",
+        "Verified",
+        "workgroups - write perms",
+        "Announcements",
+        "Poker",
+        "Github - Contributor"
+      ],
       "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 20
+    },
+    "Baws": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 32
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -108,105 +151,71 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 633
+      "totalMessages": 636
     },
-    "alwaysscriptor04": {
-      "id": "1085461910591385661",
-      "username": "alwaysscriptor04",
-      "roles": [],
-      "totalMessages": 2
-    },
-    "GBLIN": {
-      "id": "1448243095396290590",
-      "username": "gblin_digital",
+    "Kai": {
+      "id": "790400113779802114",
+      "username": "jams0883",
       "roles": [
+        "Trader",
+        "Verified"
+      ],
+      "totalMessages": 3
+    },
+    "? Matthib123": {
+      "id": "252087926849142784",
+      "username": "matthib",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Fr",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
         "It",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 56
     },
-    "amiller": {
-      "id": "536404663491362837",
-      "username": "socrates1024",
+    "imcryptor": {
+      "id": "959015387620605952",
+      "username": "imcryptor",
       "roles": [
-        "Verified"
+        "utility",
+        "Verified",
+        "Coder",
+        "auto.fun enjoyer"
       ],
-      "totalMessages": 1
+      "totalMessages": 3
     },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
+    "WonderLand2077": {
+      "id": "1522127116898926653",
+      "username": "wonderland_2077",
       "roles": [
-        "auto.fun enjoyer",
+        "Helper",
         "Trader",
-        "King",
+        "Creator",
         "[WG] degenspartan",
-        "VIP",
+        "It",
         "Verified",
         "Booster",
         "Designer",
-        "Coder"
-      ],
-      "totalMessages": 21
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 52
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 8
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 36
-    },
-    "ericrivera": {
-      "id": "291346487315529729",
-      "username": "ericrivera9124",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 1
     }
   }
 }

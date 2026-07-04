@@ -1,54 +1,57 @@
-# elizaOS Discord - 2026-07-02
+# elizaOS Discord - 2026-07-03
 
 ## Summary
 
-### Eliza Cloud Business Payout Configuration
+### Project Status and Communication Concerns
 
-The Eliza project is implementing USDC as the default payout asset for its new cloud business service through PR #10732. This change sparked discussion about token economics and utility. The key distinction is between payment tokens (what customers pay with) and payout tokens (what service providers receive). While $elizaos remains an accepted payment token, service providers will receive USDC payouts by default. The rationale is that businesses receiving $elizaos tokens would likely sell them immediately, creating sell pressure. Using USDC for payouts actually protects the token from this dumping behavior while maintaining $elizaos as a payment option, preserving some token utility.
+Community members expressed concerns about the project's activity level, with questions about whether the project was dead due to lack of updates. matthib clarified that the project is still active and building despite the absence of visible updates. paolin_62616 raised significant concerns about communication gaps, noting the official X account has not posted since May, the Discord appears inactive, and the token price continues declining. The community member specifically praised odilitime as the only team member providing consistent, polite, and productive contributions since the original team split.
 
-### Gblin Plugin Risk Management Features
+### Token Discussion
 
-The plugin-gblin package released version 0.2.4 with significant new functionality for Eliza agents. The centerpiece is the GET_GBLIN_RISK_ATTESTATION action, which provides cryptographic proof of market risk assessments before executing trades. Agents pay $0.003 in USDC on Base network for a 10-minute validity EIP-712-signed attestation that verifies BTC/ETH risk regime status. The plugin operates in a gasless manner on Base mainnet. Additional features include treasury health monitoring, automated idle USDC parking into on-chain indexes, and just-in-time swap functionality for invoice payments. All four actions and one provider are production-ready against live Base mainnet.
+imcryptor inquired about the $elizaOS token status amid concerns about project activity. The discussion highlighted community anxiety about the token's declining price reaching new lows, though no specific technical or financial details were provided.
 
-### Community Events and Content
+### Social Media Activity Clarification
 
-A Twitter Spaces event was shared discussing Ruby Trivia and vibe-coded games in an AMA format.
+jams0883 shared a Shaw tweet that initially appeared to be recent activity. However, ghss44 clarified that the tweet was actually a reply to an old post from Ansem dating back to November 2024, not new engagement or updates from the project.
+
+### Team Structure Clarification
+
+A misunderstanding arose regarding team roles when matthib clarified they are not staff members, despite profile indicators suggesting otherwise. This confusion highlighted the need for clearer role identification within the community.
 
 ## FAQ
 
-**Q: Does the USDC payout change eliminate $elizaos token buybacks?**
-A: The change affects payouts for the cloud business service, not payments. While $elizaos remains an accepted payment token, service providers receive USDC to prevent immediate token dumping that would create sell pressure.
+**Q: Is the elizaOS project dead?**
+A: No, according to matthib, the project is still active and building despite the lack of visible updates and communication.
 
-**Q: What is the difference between payment and payout in the Eliza cloud business context?**
-A: Payment refers to what customers use to pay for services (where $elizaos is still accepted), while payout refers to what service providers receive for their services (which defaults to USDC).
+**Q: What is the status of the $elizaOS token?**
+A: The token price has been hitting new lows, though no specific technical or financial details were provided in the discussion.
 
-**Q: How much does a Gblin risk attestation cost and how long is it valid?**
-A: A risk attestation costs $0.003 in USDC on Base network and remains valid for 10 minutes. The transaction is gasless for the agent.
+**Q: Why hasn't the official X account posted since May?**
+A: No official explanation was provided in the discussion, though this was raised as a significant communication concern by community members.
 
-**Q: What type of cryptographic proof does the Gblin risk attestation provide?**
-A: It provides an EIP-712-signed proof that verifies the current BTC/ETH market risk regime status before trading.
+**Q: Was the Shaw tweet recent project activity?**
+A: No, ghss44 clarified it was a reply to an old November 2024 post from Ansem, not recent engagement.
+
+**Q: Who are the current active team members?**
+A: paolin_62616 identified odilitime as the only team member providing active and consistent contributions since the original team split, though specific team composition was not detailed.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** zadayos
-**Issue:** Confusion about USDC becoming default payout and concerns about eliminating $elizaos token utility and buybacks
-**Resolution:** Clarified that USDC is the default payout (not payment) for cloud business, while $elizaos remains accepted as payment. Explained that businesses receiving $elizaos payouts would dump tokens, so USDC payouts actually benefit token economics long-term.
+**Helper:** ghss44
+**Helpee:** jams0883 and the broader community
+**Resolution:** Clarified that the Shaw tweet shared was not recent activity but rather a reply to an old November 2024 post from Ansem, preventing misinformation about project engagement.
 
-**Helper:** odilitime
-**Helpee:** j_choy
-**Issue:** Confusion between payment versus payout terminology
-**Resolution:** Provided clarification on the distinction between payment tokens (what customers pay with) and payout tokens (what service providers receive).
+**Helper:** matthib
+**Helpee:** jams0883 and community members questioning project status
+**Resolution:** Confirmed the project is still active and building, addressing concerns about whether the project was dead.
+
+**Helper:** matthib
+**Helpee:** Community members
+**Resolution:** Clarified their role as a non-staff member to correct misunderstandings about team structure.
 
 ## Action Items
 
-### Technical
+### Documentation
 
-- Implement USDC as default payout asset for Eliza cloud business in PR #10732 (mentioned by odilitime)
-- Deploy plugin-gblin 0.2.4 with GET_GBLIN_RISK_ATTESTATION action on Base mainnet (mentioned by gblin_digital)
-
-### Features
-
-- Integrate treasury health checks into Gblin plugin (mentioned by gblin_digital)
-- Implement idle USDC parking into on-chain indexes (mentioned by gblin_digital)
-- Add JIT-swap functionality for invoice payments (mentioned by gblin_digital)
+- Improve communication transparency and provide regular updates to the community, particularly through the official X account which has been inactive since May (mentioned by paolin_62616)
+- Clarify team member roles and staff status to prevent confusion about who represents the project officially (mentioned by matthib)
