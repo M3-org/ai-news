@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783129579176-t5am4g.jpg"
+          ]
         },
         {
           "text": "In the coders channel, a helper asked a developer about their programming language and skill set, referencing earlier messages in the thread, but no substantive technical discussion was captured in the available data.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783129599193-c6jdnp.png"
+          ]
         }
       ],
       "topic": "discordrawdata"
