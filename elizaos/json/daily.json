@@ -1,102 +1,32 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-03",
+  "title": "Daily Report - 2026-07-04",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion - July 3, 2026",
+      "title": "ElizaOS Community Discussion and Developer Activity - July 4, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, community members expressed frustration over the perceived lack of communication from the ElizaOS team. One user questioned whether the project was dead due to an absence of news, while another noted that the $elizaOS token appeared to be ignored. A community member responded that the project is still alive and building, though this response was criticized as arrogant and unhelpful by another user who pointed out that the official X account had not posted since May, the chat was largely inactive, and the token price was hitting new all-time lows. A debate followed about the appropriate way to address community concerns, with one participant clarifying they were not part of the staff. One user specifically praised Odilitime as the only team-adjacent member who had consistently provided accurate information in a polite and respectful manner since the original team split. Separately, a link was shared to a post by shawmakesmagic that generated brief discussion, with one user noting the post was actually a reply to an older message from November 2024 rather than recent content.",
+          "text": "In the general discussion channel, community members exchanged casual greetings throughout the day. One user raised a concern about whether the project was still active, and a community member confirmed that development is ongoing daily and pointed to GitHub activity as evidence. There was also an unsolicited message promoting a coin launch scheme and a separate post seeking international communication support staff for a small development team, offering profit-based pay.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783129579176-t5am4g.jpg"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a helper asked a developer about their programming language and skill set, referencing earlier messages in the thread, but no substantive technical discussion was captured in the available data.",
+          "text": "In the coders channel, a developer asked about connecting to LMStudio and quickly found the answer independently, referencing the official ElizaOS plugin at github.com/elizaOS/eliza/tree/develop/plugins/plugin-lmstudio. Separately, a developer shared a new plugin called cabal-hunter, built to address a gap in trading agents where on-chain wallet data is not considered. The plugin traces holder clusters and funding sources, flags bundled buys, serial rug deployers, and honeypot liquidity pools. It is available via npm as elizaos-plugin-cabal-hunter with the first 100 scans free. The developer requested feedback from others running trading agents on what additional signals would be useful before a buy decision.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783129599193-c6jdnp.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1783036800,
+  "date": 1783123200,
   "nicknameMap": {
-    "LiveBy4Crypto": {
-      "id": "472105577980624926",
-      "username": "nikki_tai",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Redvoid": {
-      "id": "353670598955892737",
-      "username": "redvoid8344",
-      "roles": [
-        "Helper",
-        "platform - self assign",
-        "a-hack",
-        "partner portal - self assign",
-        "trust - self assign",
-        "swarms - self assign",
-        "events - self-assign",
-        "agent dev school - self assign",
-        "nfts - self assign",
-        "King",
-        "pmairca - self assign",
-        "Contributor",
-        "merch - self assign",
-        "Verified",
-        "workgroups - write perms",
-        "Announcements",
-        "Poker",
-        "Github - Contributor"
-      ],
-      "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 20
-    },
-    "Baws": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 32
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -125,57 +55,30 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 636
+      "totalMessages": 638
     },
-    "Kai": {
-      "id": "790400113779802114",
-      "username": "jams0883",
+    "Cabal_hunter": {
+      "id": "1513212079727972443",
+      "username": "paulf76",
       "roles": [
-        "Trader",
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 6
+    },
+    "Kyle | Dev": {
+      "id": "1320188136193654834",
+      "username": "tcgkylee",
+      "roles": [
         "Verified"
       ],
       "totalMessages": 3
     },
-    "? Matthib123": {
-      "id": "252087926849142784",
-      "username": "matthib",
-      "roles": [
-        "Trader",
-        "Verified",
-        "Fr",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 13
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 56
-    },
-    "imcryptor": {
-      "id": "959015387620605952",
-      "username": "imcryptor",
-      "roles": [
-        "utility",
-        "Verified",
-        "Coder",
-        "auto.fun enjoyer"
-      ],
-      "totalMessages": 3
-    },
-    "WonderLand2077": {
-      "id": "1522127116898926653",
-      "username": "wonderland_2077",
+    "foreverredtears1": {
+      "id": "1176596854713106596",
+      "username": "foreverredtears1",
       "roles": [
         "Helper",
         "Trader",
@@ -183,11 +86,123 @@
         "[WG] degenspartan",
         "It",
         "Verified",
-        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Gowenn": {
+      "id": "1176593656438861867",
+      "username": "gwenn909",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "NekiyK": {
+      "id": "1212798289666375764",
+      "username": "nekiyk",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 3
+    },
+    "Fixer": {
+      "id": "1484634836864991336",
+      "username": "fixer1123.",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "Oliva": {
+      "id": "1462627440701608264",
+      "username": "oliva2556",
+      "roles": [
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 15
+    },
+    "PastucCryptos": {
+      "id": "974643831360352266",
+      "username": "pastuccryptos",
+      "roles": [
+        "a-hack",
+        "Creator",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Coder"
       ],
       "totalMessages": 1
     }
