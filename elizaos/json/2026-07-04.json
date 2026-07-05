@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783216251675-2a2apa.png"
+          ]
         },
         {
           "text": "In the coders channel, a developer asked about connecting to LMStudio and quickly found the answer independently, referencing the official ElizaOS plugin at github.com/elizaOS/eliza/tree/develop/plugins/plugin-lmstudio. Separately, a developer shared a new plugin called cabal-hunter, built to address a gap in trading agents where on-chain wallet data is not considered. The plugin traces holder clusters and funding sources, flags bundled buys, serial rug deployers, and honeypot liquidity pools. It is available via npm as elizaos-plugin-cabal-hunter with the first 100 scans free. The developer requested feedback from others running trading agents on what additional signals would be useful before a buy decision.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783216270317-5v0ia5.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
