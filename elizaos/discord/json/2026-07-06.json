@@ -1,0 +1,99 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-06",
+  "date": 1783296000,
+  "stats": {
+    "totalMessages": 10,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal substantive technical discussion. The primary content consists of commentary about the Eliza token's price decline and migration to Ethereum. User hellspawnbarbarain expressed frustration about the token's value dropping significantly (described as going 'from billion to 0') and attributed this to conflicts with Elon Musk. They also criticized the decision to migrate to ETH, claiming it inflated the token supply while providing liquidity to Ethereum rather than benefiting the project. The remainder of the chat consists of brief greetings and off-topic commentary with no technical substance, problem-solving, or meaningful development discussions.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 9,
+      "userCount": 6
+    }
+  ],
+  "nicknameMap": {
+    "lesusuly@": {
+      "id": "1513360796246216784",
+      "username": "lesusuly",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "you.": {
+      "id": "817410655346622465",
+      "username": "you.0083",
+      "roles": [
+        "Trader",
+        "It",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 182
+    },
+    "ZKR": {
+      "id": "1198637970694098974",
+      "username": "buccaner80_38572",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "hyper": {
+      "id": "961302195087745034",
+      "username": "hyper0672",
+      "roles": [
+        "Helper",
+        "Creator",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 24
+    }
+  }
+}

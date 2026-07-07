@@ -1,43 +1,27 @@
-# elizaOS Discord - 2026-07-05
+# elizaOS Discord - 2026-07-06
 
 ## Summary
 
-### Organizational Structure and Changes
+### Token Price Performance
 
-ElizaOS underwent significant organizational restructuring with Labs being dissolved in April 2026. The foundation remains active and continues to support open source development. Despite the dissolution of Labs, cloud development work continues with positive progress reported. Development activity remains visible on GitHub, and the organizational changes have not impacted cloud delivery timelines.
+User hellspawnbarbarain expressed significant frustration about the Eliza token's dramatic price decline, describing it as going "from billion to 0." The user attributed this decline to conflicts with Elon Musk that negatively impacted the project's valuation.
 
-### Security and Compliance
+### Ethereum Migration Criticism
 
-ElizaOS's security certification status was clarified: elizacloud utilizes SOC 2 Type II certified providers rather than holding direct SOC 2 certification itself. This distinction is important for understanding the platform's security posture and compliance framework.
-
-### Community Communication Concerns
-
-Community members raised concerns about decreased activity on Twitter and outdated information in the AI-Elizaos-Updates channel. These communication gaps have led to questions about the project's current status and ongoing development efforts.
+The decision to migrate the Eliza token to Ethereum drew criticism from hellspawnbarbarain, who argued that the migration inflated the token supply while primarily providing liquidity benefits to the Ethereum ecosystem rather than to the Eliza project itself. The user viewed this strategic decision as detrimental to token holders.
 
 ## FAQ
 
-**Q: Is ElizaOS SOC 2 certified?**
-A: Elizacloud uses SOC 2 Type II certified providers rather than being directly SOC 2 certified itself.
+**Q: What caused the Eliza token price decline?**
+A: According to hellspawnbarbarain, the token's significant price drop was attributed to conflicts with Elon Musk that negatively affected the project.
 
-**Q: What happened to ElizaOS Labs?**
-A: Labs was dissolved in April 2026, though the foundation remains active and open source contributors continue development work.
-
-**Q: Is cloud development still ongoing?**
-A: Yes, cloud development continues with positive progress being reported despite the organizational changes.
-
-**Q: Where can I see current development activity?**
-A: Development activity is visible on GitHub, where contributors continue to work on the project.
-
-**Q: Have the organizational changes affected cloud delivery timelines?**
-A: No, the organizational changes do not impact cloud delivery timelines.
+**Q: What concerns exist about the Ethereum migration?**
+A: Hellspawnbarbarain criticized the ETH migration for allegedly inflating token supply and providing liquidity to Ethereum rather than benefiting the Eliza project directly.
 
 ## Help Interactions
 
-No specific help interactions with clear helper-helpee relationships were documented in the provided channel summary.
+No help interactions were documented in the provided channel summaries.
 
 ## Action Items
 
-### Documentation
-
-- Update AI-Elizaos-Updates channel with current information (mentioned by community members)
-- Clarify organizational structure and team composition publicly (mentioned by community members)
+No action items were identified in the provided channel summaries.
