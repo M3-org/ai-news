@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783389228960-qwt9m9.png"
+          ]
         },
         {
           "text": "In the coders channel, an AI engineer introduced themselves and expressed interest in contributing to projects being built within the ElizaOS ecosystem. The individual listed expertise in AI agents, agentic workflows, model training and fine tuning, retrieval-augmented generation, model context protocol, large language model integrations, multi-agent systems, AI automation, and AI-powered software as a service applications. They also noted full stack development experience and invited others to connect if they needed an additional engineer.",

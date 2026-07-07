@@ -1,16 +1,16 @@
 {
   "type": "discordWeeklySummary",
   "server": "elizaOS",
-  "title": "elizaOS Weekly Summary - 2026-06-29 to 2026-07-05",
-  "weekOf": "2026-06-29",
+  "title": "elizaOS Weekly Summary - 2026-06-30 to 2026-07-06",
+  "weekOf": "2026-06-30",
   "dateRange": {
-    "start": "2026-06-29",
-    "end": "2026-07-05"
+    "start": "2026-06-30",
+    "end": "2026-07-06"
   },
-  "generatedAt": 1783303074,
+  "generatedAt": 1783389261,
   "stats": {
-    "totalMessages": 99,
-    "totalUsers": 60,
+    "totalMessages": 97,
+    "totalUsers": 58,
     "averageMessagesPerDay": 14,
     "activeDays": 7,
     "peakDay": {
@@ -21,13 +21,8 @@
   "channelSummary": {
     "1253563209462448241": {
       "name": "💬-discussion",
-      "totalMessages": 81,
+      "totalMessages": 83,
       "daysActive": 7
-    },
-    "1301363808421543988": {
-      "name": "🥇-partners",
-      "totalMessages": 5,
-      "daysActive": 1
     },
     "1300025221834739744": {
       "name": "💬-coders",
@@ -36,182 +31,6 @@
     }
   },
   "days": [
-    {
-      "server": "elizaOS",
-      "title": "elizaOS Discord - 2026-06-29",
-      "date": 1782691200,
-      "stats": {
-        "totalMessages": 12,
-        "totalUsers": 8
-      },
-      "categories": [
-        {
-          "channelId": "1253563209462448241",
-          "channelName": "💬-discussion",
-          "summary": "This Discord chat segment contains minimal technical discussion. The conversation consists primarily of introductory messages and general inquiries. bigalex777 asked about the project's development status, noting a $5 million capitalization. iamsue88 inquired about previous capitalization figures, to which bigalex777 suggested checking independently. coconut7118 posted seeking French-speaking community members or English speakers willing to share knowledge and motivation. garium_sulphate introduced themselves as a PM and content writer. The segment lacks substantive technical discussions, problem-solving activities, or concrete implementations. No development decisions were made, and no technical solutions were proposed or implemented during this conversation period.",
-          "faqs": [
-            {
-              "question": "Can you tell me if the project is currently under development? The capitalization is already $5 million.",
-              "askedBy": "bigalex777",
-              "answeredBy": "Unanswered"
-            },
-            {
-              "question": "How much before?",
-              "askedBy": "iamsue88",
-              "answeredBy": "bigalex777"
-            }
-          ],
-          "helpInteractions": [],
-          "actionItems": [],
-          "messageCount": 7,
-          "userCount": 6
-        },
-        {
-          "channelId": "1301363808421543988",
-          "channelName": "🥇-partners",
-          "summary": "This Discord chat segment from the 🥇-partners channel contains a brief exchange between demian_dappcraft and odilitime regarding a potential collaboration opportunity. Demian_dappcraft reached out to arrange a 30-minute call to discuss a partnership, mentioning that Bitfury is the lead investor in their project and expressing belief that collaboration would be mutually beneficial. Odilitime responded that they had asked about the proposal but received no response, and indicated they would follow up by bumping the request. The conversation is minimal and primarily focused on scheduling and initial outreach rather than technical implementation or problem-solving. No concrete technical discussions, decisions, or solutions were presented in this segment. The exchange represents early-stage partnership exploration without substantive technical content or actionable outcomes at this point.",
-          "faqs": [],
-          "helpInteractions": [],
-          "actionItems": [
-            {
-              "type": "Feature",
-              "description": "Arrange 30-minute call to discuss potential collaboration with Bitfury-backed project",
-              "mentionedBy": "demian_dappcraft"
-            }
-          ],
-          "messageCount": 5,
-          "userCount": 2
-        }
-      ],
-      "nicknameMap": {
-        "Odilitime": {
-          "id": "580487826420793364",
-          "username": "odilitime",
-          "roles": [
-            "God",
-            "platform - self assign",
-            "partner portal - self assign",
-            "Community Ops",
-            "Creator",
-            "Moderator",
-            "[WG] degenspartan",
-            "pmairca - self assign",
-            "Verified",
-            "Booster",
-            "Hoplite",
-            "Migration Support",
-            "Helper",
-            "Github - Contributor",
-            "Labs Alumni",
-            "Trader",
-            "Contributor",
-            "merch - self assign",
-            "events - self-assign",
-            "[WG] Elizacon - granted",
-            "Spartan Dev",
-            "Core Dev",
-            "Coder"
-          ],
-          "totalMessages": 623
-        },
-        "DEMIAN | DAPPCRAFT | ai2^4z": {
-          "id": "436194365627695104",
-          "username": "demian_dappcraft",
-          "roles": [
-            "Partner",
-            "Vanguard",
-            "NFT",
-            "Verified",
-            "Associate"
-          ],
-          "totalMessages": 9
-        },
-        "baby groot": {
-          "id": "396540381195534349",
-          "username": "babygroot26",
-          "roles": [
-            "Trader",
-            "utility",
-            "eliza"
-          ],
-          "totalMessages": 1
-        },
-        "Shaw": {
-          "id": "498273781589213185",
-          "username": "shawmakesmagic",
-          "roles": [
-            "Moderator",
-            "Labs Alumni",
-            "Verified",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 106
-        },
-        "DEVILMAN": {
-          "id": "730996256050249768",
-          "username": "coconut7118",
-          "roles": [
-            "a-hack",
-            "Creator",
-            "Verified",
-            "Dev School Student",
-            "utility"
-          ],
-          "totalMessages": 1
-        },
-        "Obito": {
-          "id": "1512397538962051087",
-          "username": "obito031838",
-          "roles": [
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 5
-        },
-        "CryptoInfo": {
-          "id": "1074932974677659679",
-          "username": "bigalex777",
-          "roles": [
-            "Trader",
-            "utility",
-            "eliza"
-          ],
-          "totalMessages": 11
-        },
-        "IAmSue": {
-          "id": "975459367761637477",
-          "username": "iamsue88",
-          "roles": [
-            "Trader",
-            "Verified",
-            "utility",
-            "Coder",
-            "eliza"
-          ],
-          "totalMessages": 3
-        },
-        "Garium Sulphate": {
-          "id": "1222348936782807090",
-          "username": "garium_sulphate",
-          "roles": [
-            "Helper",
-            "Trader",
-            "Creator",
-            "[WG] degenspartan",
-            "It",
-            "Verified",
-            "Designer",
-            "Fr",
-            "utility",
-            "eliza"
-          ],
-          "totalMessages": 1
-        }
-      }
-    },
     {
       "server": "elizaOS",
       "title": "elizaOS Discord - 2026-06-30",
@@ -1405,6 +1224,105 @@
             "eliza"
           ],
           "totalMessages": 1
+        }
+      }
+    },
+    {
+      "server": "elizaOS",
+      "title": "elizaOS Discord - 2026-07-06",
+      "date": 1783296000,
+      "stats": {
+        "totalMessages": 10,
+        "totalUsers": 6
+      },
+      "categories": [
+        {
+          "channelId": "1253563209462448241",
+          "channelName": "💬-discussion",
+          "summary": "This Discord chat segment contains minimal substantive technical discussion. The primary content consists of commentary about the Eliza token's price decline and migration to Ethereum. User hellspawnbarbarain expressed frustration about the token's value dropping significantly (described as going 'from billion to 0') and attributed this to conflicts with Elon Musk. They also criticized the decision to migrate to ETH, claiming it inflated the token supply while providing liquidity to Ethereum rather than benefiting the project. The remainder of the chat consists of brief greetings and off-topic commentary with no technical substance, problem-solving, or meaningful development discussions.",
+          "faqs": [],
+          "helpInteractions": [],
+          "actionItems": [],
+          "messageCount": 9,
+          "userCount": 6
+        }
+      ],
+      "nicknameMap": {
+        "lesusuly@": {
+          "id": "1513360796246216784",
+          "username": "lesusuly",
+          "roles": [
+            "Helper",
+            "Trader",
+            "Creator",
+            "[WG] degenspartan",
+            "It",
+            "Designer",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "you.": {
+          "id": "817410655346622465",
+          "username": "you.0083",
+          "roles": [
+            "Trader",
+            "It",
+            "Fr",
+            "utility",
+            "Coder",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "satsbased": {
+          "id": "1184466248520699967",
+          "username": "satsbased",
+          "roles": [
+            "King",
+            "Mini Mod",
+            "VIP",
+            "Contributor",
+            "Verified",
+            "utility"
+          ],
+          "totalMessages": 182
+        },
+        "ZKR": {
+          "id": "1198637970694098974",
+          "username": "buccaner80_38572",
+          "roles": [
+            "Trader",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 1
+        },
+        "hyper": {
+          "id": "961302195087745034",
+          "username": "hyper0672",
+          "roles": [
+            "Helper",
+            "Creator",
+            "Verified",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 2
+        },
+        "Alexander the cock": {
+          "id": "183673299857833985",
+          "username": "hellspawnbarbarain",
+          "roles": [
+            "Trader",
+            "Verified",
+            "utility",
+            "eliza"
+          ],
+          "totalMessages": 24
         }
       }
     }

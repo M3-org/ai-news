@@ -1,98 +1,97 @@
 {
   "type": "elizaosWeeklySummary",
-  "title": "Weekly Report - 2026-06-29 to 2026-07-05",
+  "title": "Weekly Report - 2026-06-30 to 2026-07-06",
   "categories": [
     {
-      "title": "Weekly Discord Discussions",
+      "title": "ElizaOS Community Discussion - June 30, 2026",
+      "content": {
+        "text": "In the general discussion channel, community members shared updates about Ruby, an AI agent project that has expanded into Telegram and Discord with features like a Trivia bot, which was highlighted as a notable advancement in agentic systems. The shared posts referenced various crypto tickers and promoted Ruby Trivia as a standout feature of the project's rebirth. A user named RangerKeith inquired about potential AMA collaboration opportunities with the ElizaOS team. CryptoInfo asked about admin status in reply to one of the Ruby posts, and Odilitime directed them to check the GitHub repository for information. Other general greetings and casual conversation took place throughout the day. One user, groggs, noted that while AI development is accelerating, crypto Twitter has been unusually quiet, suggesting the community is in a building phase before the next market swing. The coders channel had no activity recorded for the day.",
+        "sources": [
+          "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "https://discord.com/channels/1253563208833433701/1300025221834739744"
+        ],
+        "images": [
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1521339328230330558_099a8362.jpg",
+          "https://cdn.elizaos.news/elizaos-media/embed-image-1521663537502748723_877b21eb.jpg"
+        ]
+      },
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "Overall Project Summary: June 30, 2026",
+      "content": {
+        "text": "June 30, 2026 saw significant progress across voice infrastructure, agent orchestration, and build systems. On the voice and desktop front, real-time wake-word detection was enabled via OpenWakeWordDetector, the desktop UI was streamlined by removing legacy stacks, and voice end-to-end testing was advanced with new Apple Stage-B STT benchmarks and real-device evidence. For agent orchestration and security, the team hardened agent security by introducing read-only verifiers, sub-agent spend-cap warnings, and improved prompt-injection protections. On the infrastructure side, plugin builds were consolidated onto a shared driver for better type-safety, CI/CD pipelines were optimized for cloud reliability, and the plugin registry was expanded with the addition of elizaos-plugin-quantumscan and eliza-plugin-klymax402. Work currently in progress includes a real-Chromium benchmark engine lane and CI gate for the browser plugin, a MiniWoB++ benchmark test lane, a memory watchdog with crash-recovery and soak harness featuring iOS watchdog parity, and a UI test to record a chat-sheet transition as an animated GIF.",
+        "sources": "https://elizaos.github.io/api/summaries/overall/day/2026-06-30.json",
+        "posters": "https://cdn.elizaos.news/posters/1782871871283-rknm9b.jpg"
+      },
+      "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Community Activity and Paxeer Network Introduction",
       "content": [
         {
-          "text": "Community members expressed frustration over perceived lack of communication from the ElizaOS team across multiple days. Users questioned whether the project was still active, noting the official X account had not posted since May, the chat was largely inactive, and the token price was hitting new all-time lows. Odilitime was specifically praised as the only team-adjacent member consistently providing accurate and respectful information. On July 5, Odilitime clarified that ElizaOS Labs was dissolved in April but the foundation remains active, open source contributors continue to help, and work on ElizaCloud is ongoing. Community members were directed to GitHub activity as evidence of continued development.",
+          "text": "On July 1, 2026, the general discussion channel saw light activity with several community members including taraWolf, Ljames69, MiGuEl UpLiFT, Schlegel, and Odilitime exchanging brief greetings. One message from Omid Sa referenced Odilitime in a reply thread. Overall conversation in the social channel was minimal with no substantive technical discussions taking place.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1783129579176-t5am4g.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957808276-944ze7.png"
+          ]
         },
         {
-          "text": "A discussion arose regarding a code change (issue #10732) that sets USDC as the default payout asset instead of the elizaOS token. A community member raised concerns that this could reduce elizaOS token utility and eliminate buybacks. Odilitime clarified that the change is specifically about payouts, not payments, and that paying out in elizaOS would likely cause businesses to dump the token, making USDC a safer option. Odilitime confirmed that elizaOS remains one of the accepted crypto tokens for payments, and that USDC payouts apply to the new cloud business services.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1783043244783-kch25s.jpg"
-        },
-        {
-          "text": "On July 5, a user asked whether ElizaOS is SOC 2 Type II certified and ready for enterprise use. Odilitime confirmed that ElizaCloud uses SOC 2 Type II certified providers. A community member also noted that the AI-ElizaOS-Updates channel has not been updated in a long time and requested someone address it.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1783303062647-ie5jmp.jpg"
-        },
-        {
-          "text": "GBLIN announced the release of plugin-gblin version 0.2.4 for Eliza agents. The update introduces a new action called GET_GBLIN_RISK_ATTESTATION, which allows an agent to pay $0.003 via x402 in USDC on Base gaslessly and receive a 10-minute EIP-712-signed proof of the current BTC/ETH risk regime. The proof can be attached to subsequent agent actions and verified by any counterparty for free. The plugin also includes treasury health checks, the ability to park idle USDC into an on-chain index, and JIT-swaps back to USDC for invoice payments, totaling 4 actions and 1 provider running against live Base mainnet.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, a developer shared a new plugin called cabal-hunter, built to address a gap in trading agents where on-chain wallet data is not considered. The plugin traces holder clusters and funding sources, flags bundled buys, serial rug deployers, and honeypot liquidity pools. It is available via npm as elizaos-plugin-cabal-hunter with the first 100 scans free. The developer requested feedback from others running trading agents on what additional signals would be useful before a buy decision.",
+          "text": "In the coders channel, a user named Schlegel introduced Paxeer Network, describing it as an EVM layer 1 blockchain built for agent commerce. Key features highlighted include native payment rails, 200ms block times, near instant finality, and low gas fees. The project claims to be chain agnostic through LayerX integration and positions itself as a settlement layer suited for eliza agents. Schlegel, who identified himself as the head of Public Relations and Integration, mentioned the project has been in development for 2.5 years and shared a link to a developer tracker at paxeer-matrix-chart.vercel.app. He expressed interest in connecting with the elizaOS community to demonstrate their work and stated they have built and tested an agent on their chain.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1783216270317-5v0ia5.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957838661-u7jes.jpg"
+          ]
         },
         {
-          "text": "In the coders channel, Schlegel introduced Paxeer Network, describing it as an EVM layer 1 blockchain built for agent commerce with native payment rails, 200ms block times, near instant finality, and low gas fees. The project claims to be chain agnostic through LayerX integration and positions itself as a settlement layer suited for eliza agents. Schlegel, identified as head of Public Relations and Integration, mentioned the project has been in development for 2.5 years and shared a developer tracker link. He expressed interest in connecting with the elizaOS community and stated they have built and tested an agent on their chain.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1782957838661-u7jes.jpg"
-        },
-        {
-          "text": "In the partners channel, a representative from DAPPCRAFT reached out to Odilitime requesting a 30-minute call to discuss a potential collaboration, noting that Bitfury is the lead investor in their project. Odilitime responded indicating they had already inquired about the matter but received no response and planned to follow up. Later in the week, DEMIAN from DAPPCRAFT also reached out to the jintern bot requesting assistance.",
+          "text": "In the partners channel, DEMIAN from DAPPCRAFT reached out to the jintern bot requesting assistance, though no further details about the nature of the request were provided in the available messages.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1301363808421543988"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1782785171679-vl7l0b.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957858700-24c6ws.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
     },
     {
-      "title": "Weekly Project Updates",
+      "title": "ElizaOS Daily Digest: July 1, 2026",
       "content": [
         {
-          "text": "June 30 saw significant progress across voice infrastructure, agent orchestration, and build systems. Real-time wake-word detection was enabled via OpenWakeWordDetector, the desktop UI was streamlined by removing legacy stacks, and voice end-to-end testing was advanced with new Apple Stage-B STT benchmarks. The team hardened agent security by introducing read-only verifiers, sub-agent spend-cap warnings, and improved prompt-injection protections. Plugin builds were consolidated onto a shared driver for better type-safety, CI/CD pipelines were optimized for cloud reliability, and the plugin registry was expanded with the addition of elizaos-plugin-quantumscan and eliza-plugin-klymax402.",
-          "sources": [
-            "https://elizaos.github.io/api/summaries/overall/day/2026-06-30.json"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1782871871283-rknm9b.jpg"
-        },
-        {
-          "text": "On July 1, the ElizaOS team focused on internationalization-friendly routing, embedded application security, and mobile and benchmark stability. Core actions including VISION, ALARM, MUSIC, PREDICTION_MARKET, and DOCUMENT were refactored to use structured operation parameters instead of English keyword regex, significantly improving internationalization support. The team also formalized a shortcut allow-list boundary for intent resolution to further harden the routing layer. On the security front, the embedded SPA bootstrap for the /embed endpoint was finalized, integrating Discord OAuth2 and session token validation. Production-grade fail-closed security guards were deployed for rate limiting and payout status checks.",
+          "text": "On July 1, 2026, the ElizaOS team concentrated on three major areas of improvement: internationalization-friendly routing, embedded application security, and mobile and benchmark stability. Core actions including VISION, ALARM, MUSIC, PREDICTION_MARKET, and DOCUMENT were refactored to use structured operation parameters instead of English keyword regex, significantly improving internationalization support. The team also formalized a shortcut allow-list boundary for intent resolution to further harden the routing layer.",
           "sources": [
             "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
           ],
           "images": [],
           "videos": [],
-          "posters": "https://cdn.elizaos.news/posters/1782957877110-fluui.jpg"
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957877110-fluui.jpg"
+          ]
         },
         {
-          "text": "Mobile stability saw meaningful progress with the implementation of real-device Android smoke tests covering touch gestures, sleep-wake cycles, and view-runtime soaking. Benchmark harnesses were also calibrated with reasoning-safe token budgets and real-Chromium browser testing to ensure reliable and accurate performance measurements. Several pull requests remain in progress, including fixes for cloud app structured confirmations, desktop icon inclusion, UI launcher audit stabilization, and a new PTY service plugin for an interactive CLI experience.",
+          "text": "On the security front, the team finalized the embedded SPA bootstrap for the /embed endpoint, integrating Discord OAuth2 and session token validation. Production-grade fail-closed security guards were deployed for rate limiting and payout status checks, ensuring that cloud-hosted applications default to a secure state under failure conditions.",
+          "sources": [
+            "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1782957914905-sz0ma9.png"
+          ]
+        },
+        {
+          "text": "Mobile stability saw meaningful progress with the implementation of real-device Android smoke tests covering touch gestures, sleep-wake cycles, and view-runtime soaking. Benchmark harnesses were also calibrated with reasoning-safe token budgets and real-Chromium browser testing to ensure reliable and accurate performance measurements across the ecosystem. Several pull requests remain in progress, including fixes for cloud app structured confirmations, desktop icon inclusion, UI launcher audit stabilization, and a new PTY service plugin for an interactive CLI experience.",
           "sources": [
             "https://elizaos.github.io/api/summaries/overall/day/2026-07-01.json"
           ],
@@ -101,7 +100,133 @@
         }
       ],
       "topic": "miscellaneous"
+    },
+    {
+      "title": "ElizaOS Token Utility, Plugin Updates, and Community Discussion",
+      "content": [
+        {
+          "text": "A discussion arose in the community regarding a code change (issue #10732) that sets USDC as the default payout asset instead of the elizaOS token. A community member raised concerns that this change could reduce elizaOS token utility and eliminate buybacks. Odilitime clarified that this change is specifically about payouts, not payments, and that paying out in elizaOS would likely cause businesses to dump the token, making USDC a safer and potentially better option for the ecosystem. Odilitime further confirmed that elizaOS remains one of the accepted crypto tokens for payments, and that USDC payouts apply to the new cloud business services. The clarification was well received by the community.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "posters": "https://cdn.elizaos.news/posters/1783043244783-kch25s.jpg"
+        },
+        {
+          "text": "A community member shared a Twitter Space link featuring Ruby Trivia speaking on an AMA about vibe-coded games hosted by Looplay, discussing whether we are entering a golden age of that genre.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+          "images": "https://cdn.elizaos.news/elizaos-media/embed-image-1522256242045751386_aa27401e.jpg"
+        },
+        {
+          "text": "GBLIN announced the release of plugin-gblin version 0.2.4 for Eliza agents. The update introduces a new action called GET_GBLIN_RISK_ATTESTATION, which allows an agent to pay $0.003 via x402 in USDC on Base gaslessly and receive a 10-minute EIP-712-signed proof of the current BTC/ETH risk regime. The proof can be attached to subsequent agent actions and verified by any counterparty for free. The plugin also includes treasury health checks, the ability to park idle USDC into an on-chain index, and JIT-swaps back to USDC for invoice payments, totaling 4 actions and 1 provider all running against live Base mainnet. The developer invited feedback from anyone running trading or treasury agents.",
+          "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241"
+        },
+        {
+          "text": "In the coders channel, a community member posted two images without additional context, likely related to a development or technical question.",
+          "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+          "images": [
+            "https://cdn.elizaos.news/elizaos-media/image_03d42c87.jpg",
+            "https://cdn.elizaos.news/elizaos-media/image_d6b1b317.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion - July 3, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members expressed frustration over the perceived lack of communication from the ElizaOS team. One user questioned whether the project was dead due to an absence of news, while another noted that the $elizaOS token appeared to be ignored. A community member responded that the project is still alive and building, though this response was criticized as arrogant and unhelpful by another user who pointed out that the official X account had not posted since May, the chat was largely inactive, and the token price was hitting new all-time lows. A debate followed about the appropriate way to address community concerns, with one participant clarifying they were not part of the staff. One user specifically praised Odilitime as the only team-adjacent member who had consistently provided accurate information in a polite and respectful manner since the original team split. Separately, a link was shared to a post by shawmakesmagic that generated brief discussion, with one user noting the post was actually a reply to an older message from November 2024 rather than recent content.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783129579176-t5am4g.jpg"
+          ]
+        },
+        {
+          "text": "In the coders channel, a helper asked a developer about their programming language and skill set, referencing earlier messages in the thread, but no substantive technical discussion was captured in the available data.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783129599193-c6jdnp.png"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion and Developer Activity - July 4, 2026",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members exchanged casual greetings throughout the day. One user raised a concern about whether the project was still active, and a community member confirmed that development is ongoing daily and pointed to GitHub activity as evidence. There was also an unsolicited message promoting a coin launch scheme and a separate post seeking international communication support staff for a small development team, offering profit-based pay.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783216251675-2a2apa.png"
+          ]
+        },
+        {
+          "text": "In the coders channel, a developer asked about connecting to LMStudio and quickly found the answer independently, referencing the official ElizaOS plugin at github.com/elizaOS/eliza/tree/develop/plugins/plugin-lmstudio. Separately, a developer shared a new plugin called cabal-hunter, built to address a gap in trading agents where on-chain wallet data is not considered. The plugin traces holder clusters and funding sources, flags bundled buys, serial rug deployers, and honeypot liquidity pools. It is available via npm as elizaos-plugin-cabal-hunter with the first 100 scans free. The developer requested feedback from others running trading agents on what additional signals would be useful before a buy decision.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783216270317-5v0ia5.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion - July 5, 2026",
+      "content": [
+        {
+          "text": "Community members discussed the current state of ElizaOS and its organizational structure. A user asked whether ElizaOS is SOC 2 Type II certified and ready for enterprise use. Odilitime confirmed that ElizaCloud uses SOC 2 Type II certified providers. Separately, questions arose about the status of the ElizaOS team and its reduced activity on social media. Odilitime clarified that ElizaOS Labs was dissolved in April, but the foundation remains active and open source contributors continue to help. When asked whether the dissolution of Labs impacts ElizaCloud delivery, Odilitime stated that work on ElizaCloud is ongoing and progressing well. A community member also noted that the AI-ElizaOS-Updates channel has not been updated in a long time and requested someone address it. Another user suggested checking GitHub to see active contributors.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783303062647-ie5jmp.jpg"
+          ]
+        }
+      ],
+      "topic": "discordrawdata"
+    },
+    {
+      "title": "ElizaOS Community Discussion and Developer Activity",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members expressed frustration over the decline of the Eliza token. One user attributed the token's collapse to a conflict with Elon Musk, noting that the price dropped from a billion-dollar valuation to near zero. The migration to Ethereum was also criticized for inflating the token supply while providing liquidity to the Ethereum network rather than benefiting holders. Sentiment in the channel was largely negative and demotivated. One user posted a hostile message dismissing the community as unproductive, which was met with minimal reaction from others.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783389228960-qwt9m9.png"
+          ]
+        },
+        {
+          "text": "In the coders channel, an AI engineer introduced themselves and expressed interest in contributing to projects being built within the ElizaOS ecosystem. The individual listed expertise in AI agents, agentic workflows, model training and fine tuning, retrieval-augmented generation, model context protocol, large language model integrations, multi-agent systems, AI automation, and AI-powered software as a service applications. They also noted full stack development experience and invited others to connect if they needed an additional engineer.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
     }
   ],
-  "date": 1783303111
+  "date": 1783389263
 }
