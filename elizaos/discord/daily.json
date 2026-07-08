@@ -1,66 +1,67 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-06",
-  "date": 1783296000,
+  "title": "elizaOS Discord - 2026-07-07",
+  "date": 1783382400,
   "stats": {
-    "totalMessages": 10,
-    "totalUsers": 6
+    "totalMessages": 4,
+    "totalUsers": 4
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal substantive technical discussion. The primary content consists of commentary about the Eliza token's price decline and migration to Ethereum. User hellspawnbarbarain expressed frustration about the token's value dropping significantly (described as going 'from billion to 0') and attributed this to conflicts with Elon Musk. They also criticized the decision to migrate to ETH, claiming it inflated the token supply while providing liquidity to Ethereum rather than benefiting the project. The remainder of the chat consists of brief greetings and off-topic commentary with no technical substance, problem-solving, or meaningful development discussions.",
-      "faqs": [],
+      "summary": "The chat segment shows minimal technical discussion. The primary technical point mentioned was a migration away from Ai16z platform, with odilitime noting they attempted to gain more traction elsewhere but had to migrate. One user (rsn6958) inquired about developer opportunities. The conversation also included non-technical content including inappropriate comments and a social media link share. Overall, this segment lacks substantial technical discussions, problem-solving activities, or concrete implementations to analyze.",
+      "faqs": [
+        {
+          "question": "Is there anyone looking for a developer?",
+          "askedBy": "rsn6958",
+          "answeredBy": "Unanswered"
+        }
+      ],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 9,
-      "userCount": 6
+      "messageCount": 4,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "lesusuly@": {
-      "id": "1513360796246216784",
-      "username": "lesusuly",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "you.": {
-      "id": "817410655346622465",
-      "username": "you.0083",
-      "roles": [
-        "Trader",
-        "It",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
         "Verified",
-        "utility"
+        "Coder",
+        "utility",
+        "eliza"
       ],
-      "totalMessages": 182
+      "totalMessages": 21
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 22
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 25
     },
     "ZKR": {
       "id": "1198637970694098974",
@@ -72,28 +73,35 @@
       ],
       "totalMessages": 1
     },
-    "hyper": {
-      "id": "961302195087745034",
-      "username": "hyper0672",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
       "roles": [
-        "Helper",
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
         "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
         "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
       ],
-      "totalMessages": 24
+      "totalMessages": 643
     }
   }
 }

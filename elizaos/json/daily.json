@@ -1,25 +1,14 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-06",
+  "title": "Daily Report - 2026-07-07",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion and Developer Activity",
+      "title": "Discussion Channel Activity - July 7, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, community members expressed frustration over the decline of the Eliza token. One user attributed the token's collapse to a conflict with Elon Musk, noting that the price dropped from a billion-dollar valuation to near zero. The migration to Ethereum was also criticized for inflating the token supply while providing liquidity to the Ethereum network rather than benefiting holders. Sentiment in the channel was largely negative and demotivated. One user posted a hostile message dismissing the community as unproductive, which was met with minimal reaction from others.",
+          "text": "In the general discussion channel, Odilitime mentioned that the community had to migrate away from Ai16z, noting it was worth attempting to gain more traction elsewhere. Separately, a hostile exchange occurred between two users, with one making personal and inflammatory remarks toward another member. MDMnvest shared a link to a Ruby Trivia AI event on X, promoting a Thursday night stream at 9 PM where the top 3 players would win 0.1 SOL each with no entry required. Additionally, a user named Ginga posted asking if anyone in the community was looking to hire a developer.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783389228960-qwt9m9.png"
-          ]
-        },
-        {
-          "text": "In the coders channel, an AI engineer introduced themselves and expressed interest in contributing to projects being built within the ElizaOS ecosystem. The individual listed expertise in AI agents, agentic workflows, model training and fine tuning, retrieval-augmented generation, model context protocol, large language model integrations, multi-agent systems, AI automation, and AI-powered software as a service applications. They also noted full stack development experience and invited others to connect if they needed an additional engineer.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
           "videos": []
@@ -28,50 +17,45 @@
       "topic": "discordrawdata"
     }
   ],
-  "date": 1783296000,
+  "date": 1783382400,
   "nicknameMap": {
-    "lesusuly@": {
-      "id": "1513360796246216784",
-      "username": "lesusuly",
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "you.": {
-      "id": "817410655346622465",
-      "username": "you.0083",
-      "roles": [
-        "Trader",
-        "It",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
         "Verified",
-        "utility"
+        "Coder",
+        "utility",
+        "eliza"
       ],
-      "totalMessages": 182
+      "totalMessages": 21
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 22
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 25
     },
     "ZKR": {
       "id": "1198637970694098974",
@@ -83,28 +67,35 @@
       ],
       "totalMessages": 1
     },
-    "hyper": {
-      "id": "961302195087745034",
-      "username": "hyper0672",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
       "roles": [
-        "Helper",
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
         "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
         "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
         "Trader",
-        "Verified",
-        "utility",
-        "eliza"
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
       ],
-      "totalMessages": 24
+      "totalMessages": 643
     }
   }
 }
