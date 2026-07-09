@@ -1,0 +1,124 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-08",
+  "date": 1783468800,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 5
+  },
+  "categories": [
+    {
+      "channelId": "1301363808421543988",
+      "channelName": "🥇-partners",
+      "summary": "This Discord chat segment from the 🥇-partners channel contains minimal substantive content. The conversation consists of three brief social messages exchanged over approximately 17 hours. The first message from exeplata at 01:45 expresses missing community members. At 05:09, odilitime responds with a casual greeting. Later at 23:02, demian_dappcraft attempts to get someone's attention with a mention. There are no technical discussions, problem-solving activities, implementation details, or decisions documented in this segment. No code was shared, no bugs were reported or fixed, and no architectural or design conversations took place. The channel activity represents purely social interaction without any actionable technical content, feature discussions, or documentation needs.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 3
+    }
+  ],
+  "nicknameMap": {
+    "mackroute": {
+      "id": "212273574722011136",
+      "username": "mackroute",
+      "roles": [
+        "Trader",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
+      "roles": [
+        "Partner",
+        "Vanguard",
+        "NFT",
+        "Verified",
+        "Associate"
+      ],
+      "totalMessages": 11
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 106
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 644
+    },
+    "𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠": {
+      "id": "812814582594535494",
+      "username": "exeplata",
+      "roles": [
+        "Vanguard",
+        "VIP",
+        "NFT",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 1
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 23
+    },
+    "AIRDR0P IS N0W LIVE": {
+      "id": "1510501054775562413",
+      "username": "announcement_channel",
+      "roles": []
+    }
+  }
+}

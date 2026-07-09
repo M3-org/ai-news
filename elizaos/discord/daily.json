@@ -1,77 +1,60 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-07",
-  "date": 1783382400,
+  "title": "elizaOS Discord - 2026-07-08",
+  "date": 1783468800,
   "stats": {
-    "totalMessages": 4,
-    "totalUsers": 4
+    "totalMessages": 6,
+    "totalUsers": 5
   },
   "categories": [
     {
-      "channelId": "1253563209462448241",
-      "channelName": "💬-discussion",
-      "summary": "The chat segment shows minimal technical discussion. The primary technical point mentioned was a migration away from Ai16z platform, with odilitime noting they attempted to gain more traction elsewhere but had to migrate. One user (rsn6958) inquired about developer opportunities. The conversation also included non-technical content including inappropriate comments and a social media link share. Overall, this segment lacks substantial technical discussions, problem-solving activities, or concrete implementations to analyze.",
-      "faqs": [
-        {
-          "question": "Is there anyone looking for a developer?",
-          "askedBy": "rsn6958",
-          "answeredBy": "Unanswered"
-        }
-      ],
+      "channelId": "1301363808421543988",
+      "channelName": "🥇-partners",
+      "summary": "This Discord chat segment from the 🥇-partners channel contains minimal substantive content. The conversation consists of three brief social messages exchanged over approximately 17 hours. The first message from exeplata at 01:45 expresses missing community members. At 05:09, odilitime responds with a casual greeting. Later at 23:02, demian_dappcraft attempts to get someone's attention with a mention. There are no technical discussions, problem-solving activities, implementation details, or decisions documented in this segment. No code was shared, no bugs were reported or fixed, and no architectural or design conversations took place. The channel activity represents purely social interaction without any actionable technical content, feature discussions, or documentation needs.",
+      "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 4,
-      "userCount": 4
+      "messageCount": 3,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "mackroute": {
+      "id": "212273574722011136",
+      "username": "mackroute",
       "roles": [
-        "Verified",
+        "Trader",
+        "Fr",
+        "utility",
         "Coder",
-        "utility",
         "eliza"
       ],
-      "totalMessages": 21
+      "totalMessages": 2
     },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "auto.fun enjoyer",
-        "Trader",
-        "King",
-        "[WG] degenspartan",
-        "VIP",
+        "Partner",
+        "Vanguard",
+        "NFT",
         "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
+        "Associate"
       ],
-      "totalMessages": 22
+      "totalMessages": 11
     },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
       "roles": [
-        "Trader",
+        "Moderator",
+        "Labs Alumni",
         "Verified",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 25
-    },
-    "ZKR": {
-      "id": "1198637970694098974",
-      "username": "buccaner80_38572",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 106
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -101,7 +84,41 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 643
+      "totalMessages": 644
+    },
+    "𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠": {
+      "id": "812814582594535494",
+      "username": "exeplata",
+      "roles": [
+        "Vanguard",
+        "VIP",
+        "NFT",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 1
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 23
+    },
+    "AIRDR0P IS N0W LIVE": {
+      "id": "1510501054775562413",
+      "username": "announcement_channel",
+      "roles": []
     }
   }
 }

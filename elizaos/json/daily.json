@@ -1,74 +1,69 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-07",
+  "title": "Daily Report - 2026-07-08",
   "categories": [
     {
-      "title": "Discussion Channel Activity - July 7, 2026",
+      "title": "ElizaOS Discord Community Activity - July 8, 2026",
       "content": [
         {
-          "text": "In the general discussion channel, Odilitime mentioned that the community had to migrate away from Ai16z, noting it was worth attempting to gain more traction elsewhere. Separately, a hostile exchange occurred between two users, with one making personal and inflammatory remarks toward another member. MDMnvest shared a link to a Ruby Trivia AI event on X, promoting a Thursday night stream at 9 PM where the top 3 players would win 0.1 SOL each with no entry required. Additionally, a user named Ginga posted asking if anyone in the community was looking to hire a developer.",
+          "text": "A developer named mackroute announced a new plugin for Eliza agents designed to assess Solana token rug pull and honeypot risk before an agent executes a trade. The plugin returns a signed verdict with a score from 0 to 100 along with machine-readable reasons that can be verified offline. It operates on a pay-per-call model using USDC via x402, allowing agents to settle payments autonomously without requiring an account. A free lookup is available to test the model. The developer posted in the coders channel seeking feedback from developers who are actively running trading agents on Solana, specifically asking whether pre-trade risk checks would be useful or if they already handle risk assessment through other means.",
           "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "In the partners channel, community members exchanged casual greetings. One member expressed missing the group, which received positive reactions. Another member responded warmly, and a third tagged Shaw in a follow-up reply. Separately, in the general discussion channel, a message was flagged as spam by a community member in response to what appeared to be an airdrop announcement account.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1301363808421543988",
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783473880479-zgwzyg.png"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1783382400,
+  "date": 1783468800,
   "nicknameMap": {
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "mackroute": {
+      "id": "212273574722011136",
+      "username": "mackroute",
       "roles": [
-        "Verified",
+        "Trader",
+        "Fr",
+        "utility",
         "Coder",
-        "utility",
         "eliza"
       ],
-      "totalMessages": 21
+      "totalMessages": 2
     },
-    "MDMnvest": {
-      "id": "967553544754430072",
-      "username": "mdmnvest",
+    "DEMIAN | DAPPCRAFT | ai2^4z": {
+      "id": "436194365627695104",
+      "username": "demian_dappcraft",
       "roles": [
-        "auto.fun enjoyer",
-        "Trader",
-        "King",
-        "[WG] degenspartan",
-        "VIP",
+        "Partner",
+        "Vanguard",
+        "NFT",
         "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
+        "Associate"
       ],
-      "totalMessages": 22
+      "totalMessages": 11
     },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
       "roles": [
-        "Trader",
+        "Moderator",
+        "Labs Alumni",
         "Verified",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 25
-    },
-    "ZKR": {
-      "id": "1198637970694098974",
-      "username": "buccaner80_38572",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 106
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -98,7 +93,41 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 643
+      "totalMessages": 644
+    },
+    "𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠": {
+      "id": "812814582594535494",
+      "username": "exeplata",
+      "roles": [
+        "Vanguard",
+        "VIP",
+        "NFT",
+        "Verified",
+        "Booster",
+        "Designer"
+      ],
+      "totalMessages": 1
+    },
+    "MDMnvest": {
+      "id": "967553544754430072",
+      "username": "mdmnvest",
+      "roles": [
+        "auto.fun enjoyer",
+        "Trader",
+        "King",
+        "[WG] degenspartan",
+        "VIP",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 23
+    },
+    "AIRDR0P IS N0W LIVE": {
+      "id": "1510501054775562413",
+      "username": "announcement_channel",
+      "roles": []
     }
   }
 }
