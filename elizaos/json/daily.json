@@ -1,87 +1,149 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-09",
-  "categories": {
-    "title": "ElizaOS Community Update: Legal Resolution, Project Status, and Developer Activity",
-    "content": [
-      {
-        "text": "A major legal milestone was announced on July 9, 2026. Federal Judge Jed S. Rakoff signed a Stipulation and Order of Dismissal on July 8, 2026, formally resolving the case of Pikabea v. Walters et al. The order dismisses the plaintiff's individual claims with prejudice against all defendants, with no costs or attorneys' fees awarded to any party. The proposed class claims were dismissed without prejudice. The court retains jurisdiction for 30 days solely to enforce the settlement agreement. Community members celebrated this as the end of the legal issues surrounding Shaw (Walters) and the broader elizaOS ecosystem, with some expressing optimism that this marks the beginning of a new phase for the project and the $ELIZAOS token.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1783647069786-sr5dqr.png"
-      },
-      {
-        "text": "Despite the positive legal news, some community members raised concerns about the current state of the project. One user noted a lack of public announcements and minimal activity on social media, questioning whether the project was still active. In response, a core community member acknowledged that the marketing staff had been let go, and that the foundation and Shaw remain involved, with cloud described as the current strategic focus. Active community members were identified as the remaining operational presence.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "posters": "https://cdn.elizaos.news/posters/1783647089102-ei9u2e.jpg"
-      },
-      {
-        "text": "In the coders and discussion channels, several developers posted availability and collaboration offers. One senior AI and full-stack engineer advertised white-label technical partnership services for US agencies, covering AI, backend, automation, and voice-agent projects. Another engineer with AI and ML expertise listed capabilities including RAG systems, AI agents with memory and task automation, voice AI using STT and TTS tools, OCR, visual search, and full-stack SaaS platforms, using tools such as OpenAI, Claude, LangChain, LangGraph, Python, FastAPI, Next.js, and Node.js. Additionally, a separate post in the coders channel sought a non-technical person for a flexible, part-time opportunity.",
-        "sources": [
-          "https://discord.com/channels/1253563208833433701/1253563209462448241",
-          "https://discord.com/channels/1253563208833433701/1300025221834739744"
-        ],
-        "posters": "https://cdn.elizaos.news/posters/1783647116177-1jpchk.png"
-      },
-      {
-        "text": "An event was promoted in the discussion channel for MOI Builders number 5, a builder session focused on combining AI and Web3 development. The session involves using Claude to generate logic and deploying a live application on the MOI platform, walking participants through the process from idea to deployment in a single session. Builder bounties were to be announced live at the event.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/embed-thumbnail-1524747707221151870_a072eeed.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1783555200,
+  "title": "Daily Report - 2026-07-10",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion: Marketing, Token Strategy, and AI Agent Use Cases",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members discussed the role of the Eliza Foundation, which was clarified to be in charge of the token. A conversation around marketing strategy emerged, with one member suggesting that marketing efforts should be ramped up when market conditions improve. They proposed using a portion of the team's token allocation to fund marketing campaigns, potentially offering community members discounted tokens with a lock period to raise funds. Another member countered that product development and revenue generation should take priority over marketing, noting that a successful product will naturally attract attention and that marketing the brand and development progress is possible in the meantime. Separately, a developer posted that they are looking for work, and another member shared that Ruby Trivia, a crypto-related trivia game, is now live for download on Amazon. A contributor also shared the Zeroclaw open-source project, described as a fast, small, and fully autonomous AI personal assistant infrastructure compatible with any OS and platform, and invited community members to join as beta-testers.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HM4dkiyWwAA7Fik.jpg:large",
+            "https://opengraph.githubassets.com/e3dd2f37ec1346004bcf9d3007251173a2d0c621d3c70a0ab271f70451d4c386/zeroclaw-labs/zeroclaw"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer from Argentina introduced themselves and asked the community to explain practical and intuitive use cases for AI agents beyond the commonly known ones such as planning, code review, and testing. They expressed interest in understanding how others have integrated AI agents into their workflows in meaningful ways. The conversation was just getting started with greetings exchanged among members.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1783641600,
   "nicknameMap": {
-    "!                  - ☆ FAANG ☆ -": {
-      "id": "587057947537047562",
-      "username": "faang.dev",
+    "juanvan": {
+      "id": "1026903932171198465",
+      "username": "juanvancrypto",
+      "roles": [
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "sparrow": {
+      "id": "1180257462268469361",
+      "username": "spyro_60466",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
+        "It",
         "Verified",
         "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Fixer": {
-      "id": "1484634836864991336",
-      "username": "fixer1123.",
+    "Evan | CEX Listing Verify fast": {
+      "id": "929435159420358758",
+      "username": "evanlisting",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Sam": {
+      "id": "265949357885358083",
+      "username": "sam3746",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 53
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 22
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 122
+    },
+    "Pyrus": {
+      "id": "235119194323025920",
+      "username": "pyrus.c",
       "roles": [
         "Trader",
         "Creator",
+        "[WG] degenspartan",
         "Verified",
         "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 1
     },
-    "so": {
-      "id": "488766383836889111",
-      "username": "sososo7997",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 7
-    },
-    "g": {
-      "id": "900467006002835469",
-      "username": "gmo6940",
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
       "roles": [
         "Trader",
-        "Verified"
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
       ],
-      "totalMessages": 10
+      "totalMessages": 15
     },
     "Odilitime": {
       "id": "580487826420793364",
@@ -111,70 +173,13 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 647
+      "totalMessages": 650
     },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
       "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 23
-    },
-    "saypleaseno": {
-      "id": "363336212548943873",
-      "username": "saypleaseno",
-      "roles": [
-        "Helper",
         "Trader",
-        "agent dev school - self assign",
-        "Server Booster",
-        "[WG] degenspartan",
-        "Verified",
-        "Announcements",
-        "utility",
-        "Associate",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "年輕的": {
-      "id": "1034543937626583070",
-      "username": "melissa40510014541",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 120
-    },
-    "Sai Kiran": {
-      "id": "1166407890442145792",
-      "username": "saysaikiran",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
         "[WG] degenspartan",
         "Verified",
         "Designer",
@@ -182,34 +187,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "IAmSue": {
-      "id": "975459367761637477",
-      "username": "iamsue88",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 41
+      "totalMessages": 40
     }
   }
 }

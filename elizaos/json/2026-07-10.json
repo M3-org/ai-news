@@ -1,0 +1,193 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-07-10",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion: Marketing, Token Strategy, and AI Agent Use Cases",
+      "content": [
+        {
+          "text": "In the general discussion channel, community members discussed the role of the Eliza Foundation, which was clarified to be in charge of the token. A conversation around marketing strategy emerged, with one member suggesting that marketing efforts should be ramped up when market conditions improve. They proposed using a portion of the team's token allocation to fund marketing campaigns, potentially offering community members discounted tokens with a lock period to raise funds. Another member countered that product development and revenue generation should take priority over marketing, noting that a successful product will naturally attract attention and that marketing the brand and development progress is possible in the meantime. Separately, a developer posted that they are looking for work, and another member shared that Ruby Trivia, a crypto-related trivia game, is now live for download on Amazon. A contributor also shared the Zeroclaw open-source project, described as a fast, small, and fully autonomous AI personal assistant infrastructure compatible with any OS and platform, and invited community members to join as beta-testers.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/HM4dkiyWwAA7Fik.jpg:large",
+            "https://opengraph.githubassets.com/e3dd2f37ec1346004bcf9d3007251173a2d0c621d3c70a0ab271f70451d4c386/zeroclaw-labs/zeroclaw"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer from Argentina introduced themselves and asked the community to explain practical and intuitive use cases for AI agents beyond the commonly known ones such as planning, code review, and testing. They expressed interest in understanding how others have integrated AI agents into their workflows in meaningful ways. The conversation was just getting started with greetings exchanged among members.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1783641600,
+  "nicknameMap": {
+    "juanvan": {
+      "id": "1026903932171198465",
+      "username": "juanvancrypto",
+      "roles": [
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "sparrow": {
+      "id": "1180257462268469361",
+      "username": "spyro_60466",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Evan | CEX Listing Verify fast": {
+      "id": "929435159420358758",
+      "username": "evanlisting",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Sam": {
+      "id": "265949357885358083",
+      "username": "sam3746",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 53
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 22
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 122
+    },
+    "Pyrus": {
+      "id": "235119194323025920",
+      "username": "pyrus.c",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 15
+    },
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [
+        "God",
+        "platform - self assign",
+        "partner portal - self assign",
+        "Community Ops",
+        "Creator",
+        "Moderator",
+        "[WG] degenspartan",
+        "pmairca - self assign",
+        "Verified",
+        "Booster",
+        "Hoplite",
+        "Migration Support",
+        "Helper",
+        "Github - Contributor",
+        "Labs Alumni",
+        "Trader",
+        "Contributor",
+        "merch - self assign",
+        "events - self-assign",
+        "[WG] Elizacon - granted",
+        "Spartan Dev",
+        "Core Dev",
+        "Coder"
+      ],
+      "totalMessages": 650
+    },
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 40
+    }
+  }
+}
