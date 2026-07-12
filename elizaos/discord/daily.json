@@ -1,210 +1,36 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-10",
-  "date": 1783641600,
+  "title": "elizaOS Discord - 2026-07-11",
+  "date": 1783728000,
   "stats": {
-    "totalMessages": 29,
-    "totalUsers": 11
+    "totalMessages": 10,
+    "totalUsers": 9
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on the Eliza Foundation's role and token management, with odilitime clarifying that the foundation is in charge of the token. A significant conversation emerged about marketing strategy, with valorenvk proposing that the team leverage their 20% token allocation for marketing when market conditions improve, suggesting options like community token raises with discounts and lock periods. j_choy emphasized a product-first approach, arguing that successful projects need to focus on building revenue-generating products before aggressive marketing, though branding and development updates can be marketed during the build phase. The conversation reflected differing philosophies on timing marketing efforts in crypto projects. Additionally, rsn6958 inquired about developer opportunities, and sam3746 promoted the Zeroclaw open-source project seeking beta testers.",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary substantive contribution came from sec3960, who noted that ERC-8004 (an agent verification/reputation standard implemented a month ago) appears to have been ported to Solana. They shared a GitHub repository link (https://github.com/hanko-labs/hanko) from Hanko Labs that potentially contains this Solana implementation. Sec3960 requested confirmation from more knowledgeable community members about whether this is indeed a port of the ERC-8004 structure. Rick (likely a bot) attempted to analyze the repository but failed with an error message. The remainder of the chat consists of casual greetings (\"gm\" - good morning) from multiple users (grogggs, peterbrown0917, satsbased, marianodim, santiago2407julio2096) and a brief mention by satsbased suggesting a pivot to another channel. No technical decisions were made, no problems were solved, and no implementations were discussed in detail. The ERC-8004 to Solana port observation represents the only technical content worth noting, though it remains unconfirmed and undiscussed by the community.",
       "faqs": [
         {
-          "question": "What's the foundation you mean?",
-          "askedBy": "j_choy",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Does the eliza foundation support the project or the whole eliza ecosystem?",
-          "askedBy": "j_choy",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "Can we pick marketing up when the market picks up?",
-          "askedBy": "valorenvk",
-          "answeredBy": "odilitime"
-        },
-        {
-          "question": "You guys got 20% of the tokens no?",
-          "askedBy": "valorenvk",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Is there anyone looking for a developer?",
-          "askedBy": "rsn6958",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "odilitime",
-          "helpee": "j_choy",
-          "context": "Understanding what the Eliza Foundation is and its role",
-          "resolution": "Clarified that the foundation is in charge of the token"
-        },
-        {
-          "helper": "j_choy",
-          "helpee": "valorenvk",
-          "context": "Discussion about marketing timing and strategy",
-          "resolution": "Explained that product development and revenue generation should come first, with marketing following once product is released"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Feature",
-          "description": "Consider using 20% token allocation for marketing when market conditions improve",
-          "mentionedBy": "valorenvk"
-        },
-        {
-          "type": "Feature",
-          "description": "Explore community token raise with 10-20% discount and lock mechanism for marketing funds",
-          "mentionedBy": "valorenvk"
-        },
-        {
-          "type": "Technical",
-          "description": "Zeroclaw project needs beta testers for open-source development",
-          "mentionedBy": "sam3746"
-        }
-      ],
-      "messageCount": 25,
-      "userCount": 8
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The Discord channel had minimal technical activity with only introductory greetings and one substantive inquiry. juanvancrypto, a developer from Argentina, initiated a discussion seeking practical insights into AI agent implementations beyond the standard use cases of planning, code review, and testing. The developer expressed interest in understanding the current hype around AI agents and requested community members to share intuitive explanations of how they've built or integrated AI agents into their workflows in useful ways. No responses or solutions were provided during this chat segment, leaving the inquiry open for future discussion. The conversation represents an early-stage exploration of AI agent applications rather than any concrete technical implementation or problem-solving activity.",
-      "faqs": [
-        {
-          "question": "How have you built or used AI agents in your workflow in a way that's useful beyond planning, reviewing code, and testing?",
-          "askedBy": "juanvancrypto",
+          "question": "Was ERC-8004 ported to Solana as shown in the Hanko Labs repository?",
+          "askedBy": "sec3960",
           "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 4,
-      "userCount": 3
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Verify if the Hanko Labs GitHub repository (https://github.com/hanko-labs/hanko) is actually a port of ERC-8004 agent verification/reputation standard to Solana",
+          "mentionedBy": "sec3960"
+        }
+      ],
+      "messageCount": 9,
+      "userCount": 8
     }
   ],
   "nicknameMap": {
-    "juanvan": {
-      "id": "1026903932171198465",
-      "username": "juanvancrypto",
-      "roles": [
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "sparrow": {
-      "id": "1180257462268469361",
-      "username": "spyro_60466",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Evan | CEX Listing Verify fast": {
-      "id": "929435159420358758",
-      "username": "evanlisting",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "Sam": {
-      "id": "265949357885358083",
-      "username": "sam3746",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 53
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 22
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 122
-    },
-    "Pyrus": {
-      "id": "235119194323025920",
-      "username": "pyrus.c",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 15
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -233,21 +59,79 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 650
+      "totalMessages": 651
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "santiago2407julio": {
+      "id": "797286937018368010",
+      "username": "santiago2407julio2096",
       "roles": [
         "Trader",
-        "[WG] degenspartan",
+        "Creator",
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 40
+      "totalMessages": 1
+    },
+    "marianodim": {
+      "id": "728793672241643530",
+      "username": "marianodim",
+      "roles": [],
+      "totalMessages": 7
+    },
+    "SEC": {
+      "id": "211001179147075594",
+      "username": "sec3960",
+      "roles": [
+        "Verified",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 184
+    },
+    "Peter": {
+      "id": "1320139356630941786",
+      "username": "peterbrown0917",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "groggs": {
+      "id": "932948552559239198",
+      "username": "grogggs",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 4
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 123
     }
   }
 }

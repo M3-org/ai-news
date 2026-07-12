@@ -1,141 +1,44 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-10",
-  "categories": {
-    "title": "ElizaOS Community Discussion: Marketing, Token Strategy, and AI Agent Use Cases",
-    "content": [
-      {
-        "text": "In the general discussion channel, community members discussed the role of the Eliza Foundation, which was clarified to be in charge of the token. A conversation around marketing strategy emerged, with one member suggesting that marketing efforts should be ramped up when market conditions improve. They proposed using a portion of the team's token allocation to fund marketing campaigns, potentially offering community members discounted tokens with a lock period to raise funds. Another member countered that product development and revenue generation should take priority over marketing, noting that a successful product will naturally attract attention and that marketing the brand and development progress is possible in the meantime. Separately, a developer posted that they are looking for work, and another member shared that Ruby Trivia, a crypto-related trivia game, is now live for download on Amazon. A contributor also shared the Zeroclaw open-source project, described as a fast, small, and fully autonomous AI personal assistant infrastructure compatible with any OS and platform, and invited community members to join as beta-testers.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": [
-          "https://cdn.elizaos.news/elizaos-media/embed-image-1525187902043324587_da4c24de.jpg",
-          "https://cdn.elizaos.news/elizaos-media/zeroclaw_c6523e70.jpg"
-        ]
-      },
-      {
-        "text": "In the coders channel, a developer from Argentina introduced themselves and asked the community to explain practical and intuitive use cases for AI agents beyond the commonly known ones such as planning, code review, and testing. They expressed interest in understanding how others have integrated AI agents into their workflows in meaningful ways. The conversation was just getting started with greetings exchanged among members.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1783641600,
+  "title": "Daily Report - 2026-07-11",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion - July 11, 2026",
+      "content": [
+        {
+          "text": "A community member shared that the Ruby Trivia app, tagged under web3, gaming, elizaos, crypto, and memecoin categories, is now officially live on Amazon. The app was announced via a Farcaster post by user Magicyte.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/6cf49082-d160-47e1-c4f8-b10155ea2300/original"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A community member noted that ERC-8004, a standard for agent verification and reputation, was implemented about a month ago. They observed that someone appears to have ported the structure over to Solana in a project called HANKO by hanko-labs, described as a Solana agent trust registry with bond and slash mechanics. The member asked for confirmation from more knowledgeable community members. A bot attempted to analyze the repository but failed. The GitHub repository can be found at https://github.com/hanko-labs/hanko.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://opengraph.githubassets.com/3f01f96248835b6cc5547e2e03bfc820b7d1894c1e41f38e943c98067045b8cc/hanko-labs/hanko"
+          ],
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, Odilitime briefly commented that certain tools or features can be used for anything, though the specific context of the conversation was not fully captured in the available data.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1783728000,
   "nicknameMap": {
-    "juanvan": {
-      "id": "1026903932171198465",
-      "username": "juanvancrypto",
-      "roles": [
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "sparrow": {
-      "id": "1180257462268469361",
-      "username": "spyro_60466",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Evan | CEX Listing Verify fast": {
-      "id": "929435159420358758",
-      "username": "evanlisting",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "Sam": {
-      "id": "265949357885358083",
-      "username": "sam3746",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 53
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 22
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 122
-    },
-    "Pyrus": {
-      "id": "235119194323025920",
-      "username": "pyrus.c",
-      "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 15
-    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -164,21 +67,79 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 650
+      "totalMessages": 651
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "santiago2407julio": {
+      "id": "797286937018368010",
+      "username": "santiago2407julio2096",
       "roles": [
         "Trader",
-        "[WG] degenspartan",
+        "Creator",
         "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 40
+      "totalMessages": 1
+    },
+    "marianodim": {
+      "id": "728793672241643530",
+      "username": "marianodim",
+      "roles": [],
+      "totalMessages": 7
+    },
+    "SEC": {
+      "id": "211001179147075594",
+      "username": "sec3960",
+      "roles": [
+        "Verified",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 184
+    },
+    "Peter": {
+      "id": "1320139356630941786",
+      "username": "peterbrown0917",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "groggs": {
+      "id": "932948552559239198",
+      "username": "grogggs",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 4
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 123
     }
   }
 }
