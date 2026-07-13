@@ -1,29 +1,54 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-11",
-  "categories": {
-    "title": "ElizaOS Community Discussion - July 11, 2026",
-    "content": [
-      {
-        "text": "A community member shared that the Ruby Trivia app, tagged under web3, gaming, elizaos, crypto, and memecoin categories, is now officially live on Amazon. The app was announced via a Farcaster post by user Magicyte.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/original_a1ee4fde.jpg"
-      },
-      {
-        "text": "A community member noted that ERC-8004, a standard for agent verification and reputation, was implemented about a month ago. They observed that someone appears to have ported the structure over to Solana in a project called HANKO by hanko-labs, described as a Solana agent trust registry with bond and slash mechanics. The member asked for confirmation from more knowledgeable community members. A bot attempted to analyze the repository but failed. The GitHub repository can be found at https://github.com/hanko-labs/hanko.",
-        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
-        "images": "https://cdn.elizaos.news/elizaos-media/hanko_097072c6.jpg"
-      },
-      {
-        "text": "In the coders channel, Odilitime briefly commented that certain tools or features can be used for anything, though the specific context of the conversation was not fully captured in the available data.",
-        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
-        "posters": "https://cdn.elizaos.news/posters/1783819576607-w9bdi.jpg"
-      }
-    ],
-    "topic": "discordrawdata"
-  },
-  "date": 1783728000,
+  "title": "Daily Report - 2026-07-12",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion: Token Buybacks, Relaunch Speculation, and Technical Issues",
+      "content": [
+        {
+          "text": "On July 12, 2026, the ElizaOS Discord discussion channel saw several topics come up among community members. One user raised questions about token buybacks, asking whether there would be public reporting on buyback amounts once they begin, and whether revenue from Milady flows into the buyback pool or remains separate. The user expressed that this kind of transparency would help holders track progress rather than relying on trust alone. Another community member asked where the roadmap could be viewed and was directed to a dedicated channel, with a note referencing the version before the new logo. A separate exchange touched on profitability concerns, with one member simply asking whether there is any profit, receiving no detailed response. Two members speculated that ElizaOS may need a total relaunch starting from a v3 launch, citing too much dead weight currently in the project. On the technical side, a user reported persistent issues with ElizaOS failing with an 'Error generating text' message and always requiring a Groq API key despite using an Eliza Cloud key. The user had attempted rebuilding the repository multiple times using different AI keys including Eliza Cloud, OpenAI, and Groq, and had also tried running through Eliza Cloud directly. The system continued attempting to call the Groq model qwen-qwq-32b and returning an invalid API key error. A moderator suggested clearing the ~/.eliza directory and starting over, while another helper asked how long the issue had been occurring.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1783814400,
   "nicknameMap": {
+    "LuperMine": {
+      "id": "1310985134996066304",
+      "username": "lupermine0075",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "9zelinder": {
+      "id": "1514753864618868850",
+      "username": "9zelinder",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -52,35 +77,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 651
-    },
-    "santiago2407julio": {
-      "id": "797286937018368010",
-      "username": "santiago2407julio2096",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
-      "totalMessages": 7
-    },
-    "SEC": {
-      "id": "211001179147075594",
-      "username": "sec3960",
-      "roles": [
-        "Verified",
-        "Coder"
-      ],
-      "totalMessages": 1
+      "totalMessages": 652
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -93,35 +90,72 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 184
+      "totalMessages": 187
     },
-    "Peter": {
-      "id": "1320139356630941786",
-      "username": "peterbrown0917",
+    "Bets my love": {
+      "id": "1105141764064559115",
+      "username": "sethmylove.",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 26
+    },
+    "Dragonfly Tales | MythicSquad": {
+      "id": "707337456374251610",
+      "username": "dragonflytales",
       "roles": [
         "Trader",
+        "It",
         "Verified",
+        "Designer",
         "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Fian": {
+      "id": "1490414388572586076",
+      "username": "fian0861",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "groggs": {
-      "id": "932948552559239198",
-      "username": "grogggs",
-      "roles": "Verified",
-      "totalMessages": 4
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
+    "noraping": {
+      "id": "1525740818936103213",
+      "username": "noraping0090",
       "roles": [
-        "[WG] Want to Help",
+        "Helper",
         "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
         "utility",
         "eliza"
       ],
-      "totalMessages": 123
+      "totalMessages": 1
     }
   }
 }

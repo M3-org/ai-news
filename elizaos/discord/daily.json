@@ -1,36 +1,99 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-11",
-  "date": 1783728000,
+  "title": "elizaOS Discord - 2026-07-12",
+  "date": 1783814400,
   "stats": {
-    "totalMessages": 10,
-    "totalUsers": 9
+    "totalMessages": 17,
+    "totalUsers": 10
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal technical discussion. The primary substantive contribution came from sec3960, who noted that ERC-8004 (an agent verification/reputation standard implemented a month ago) appears to have been ported to Solana. They shared a GitHub repository link (https://github.com/hanko-labs/hanko) from Hanko Labs that potentially contains this Solana implementation. Sec3960 requested confirmation from more knowledgeable community members about whether this is indeed a port of the ERC-8004 structure. Rick (likely a bot) attempted to analyze the repository but failed with an error message. The remainder of the chat consists of casual greetings (\"gm\" - good morning) from multiple users (grogggs, peterbrown0917, satsbased, marianodim, santiago2407julio2096) and a brief mention by satsbased suggesting a pivot to another channel. No technical decisions were made, no problems were solved, and no implementations were discussed in detail. The ERC-8004 to Solana port observation represents the only technical content worth noting, though it remains unconfirmed and undiscussed by the community.",
+      "summary": "The discussion channel featured a significant technical support case where 9zelinder reported persistent issues with ElizaOS failing to initialize properly. The core problem involved ElizaOS repeatedly throwing 'Error generating text' errors and incorrectly requiring a Groq API key despite using a valid Eliza Cloud key. The user had attempted multiple troubleshooting steps including 5-10 rebuilds using different configurations, testing with various AI providers (Eliza Cloud, OpenAI, Groq), and running through Eliza Cloud directly. Authentication via 'elizaos login' was successful and the key was properly saved in .env, yet the system continued falling back to the Groq model (qwen-qwq-32b) and returning 'Invalid API Key' errors. Odilitime provided a potential solution suggesting clearing the ~/.eliza directory and starting fresh, indicating this might be a configuration persistence issue. The conversation also touched on token economics with dragonflytales requesting transparency around buyback reporting and revenue flow from Milady, seeking clarity on how holders can track these metrics. There was brief discussion about a potential v3 relaunch, with satsbased and dannynor suggesting ElizaOS might need a complete relaunch due to accumulated technical debt.",
       "faqs": [
         {
-          "question": "Was ERC-8004 ported to Solana as shown in the Hanko Labs repository?",
-          "askedBy": "sec3960",
+          "question": "Where can I view the roadmap?",
+          "askedBy": "fian0861",
+          "answeredBy": "dragonflytales"
+        },
+        {
+          "question": "Once buybacks start, will there be any public reporting (even just a monthly % amount), and does Milady's revenue flow into that pool or stay separate?",
+          "askedBy": "dragonflytales",
           "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Why does ElizaOS keep failing with 'Error generating text' and requiring a Groq API key even when using a valid Eliza Cloud key?",
+          "askedBy": "9zelinder",
+          "answeredBy": "odilitime"
         }
       ],
-      "helpInteractions": [],
+      "helpInteractions": [
+        {
+          "helper": "dragonflytales",
+          "helpee": "fian0861",
+          "context": "User needed to find the roadmap location",
+          "resolution": "Directed to channel #1415618174111449179, specifically the one before the new logo"
+        },
+        {
+          "helper": "odilitime",
+          "helpee": "9zelinder",
+          "context": "ElizaOS failing to accept Eliza Cloud key and falling back to Groq with authentication errors despite multiple rebuild attempts",
+          "resolution": "Suggested clearing ~/.eliza directory and starting over to resolve configuration persistence issue"
+        }
+      ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Verify if the Hanko Labs GitHub repository (https://github.com/hanko-labs/hanko) is actually a port of ERC-8004 agent verification/reputation standard to Solana",
-          "mentionedBy": "sec3960"
+          "description": "Investigate why ElizaOS local runtime ignores Eliza Cloud key and falls back to Groq model causing Invalid API Key errors",
+          "mentionedBy": "9zelinder"
+        },
+        {
+          "type": "Technical",
+          "description": "Consider total relaunch of ElizaOS from v3 launch to address accumulated technical debt",
+          "mentionedBy": "satsbased"
+        },
+        {
+          "type": "Documentation",
+          "description": "Provide public reporting mechanism for buyback amounts and clarify Milady revenue flow into buyback pool",
+          "mentionedBy": "dragonflytales"
         }
       ],
-      "messageCount": 9,
-      "userCount": 8
+      "messageCount": 17,
+      "userCount": 10
     }
   ],
   "nicknameMap": {
+    "LuperMine": {
+      "id": "1310985134996066304",
+      "username": "lupermine0075",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "9zelinder": {
+      "id": "1514753864618868850",
+      "username": "9zelinder",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
     "Odilitime": {
       "id": "580487826420793364",
       "username": "odilitime",
@@ -59,36 +122,7 @@
         "Core Dev",
         "Coder"
       ],
-      "totalMessages": 651
-    },
-    "santiago2407julio": {
-      "id": "797286937018368010",
-      "username": "santiago2407julio2096",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "marianodim": {
-      "id": "728793672241643530",
-      "username": "marianodim",
-      "roles": [],
-      "totalMessages": 7
-    },
-    "SEC": {
-      "id": "211001179147075594",
-      "username": "sec3960",
-      "roles": [
-        "Verified",
-        "Coder"
-      ],
-      "totalMessages": 1
+      "totalMessages": 652
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -101,37 +135,72 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 184
+      "totalMessages": 187
     },
-    "Peter": {
-      "id": "1320139356630941786",
-      "username": "peterbrown0917",
+    "Bets my love": {
+      "id": "1105141764064559115",
+      "username": "sethmylove.",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 26
+    },
+    "Dragonfly Tales | MythicSquad": {
+      "id": "707337456374251610",
+      "username": "dragonflytales",
       "roles": [
         "Trader",
+        "It",
         "Verified",
+        "Designer",
         "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Fian": {
+      "id": "1490414388572586076",
+      "username": "fian0861",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Designer",
+        "utility",
+        "Coder",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "groggs": {
-      "id": "932948552559239198",
-      "username": "grogggs",
+    "noraping": {
+      "id": "1525740818936103213",
+      "username": "noraping0090",
       "roles": [
-        "Verified"
-      ],
-      "totalMessages": 4
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
+        "Helper",
         "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
         "utility",
         "eliza"
       ],
-      "totalMessages": 123
+      "totalMessages": 1
     }
   }
 }
