@@ -1,30 +1,87 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-12",
+  "title": "Daily Report - 2026-07-13",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion: Token Buybacks, Relaunch Speculation, and Technical Issues",
+      "title": "ElizaOS Discord Community Activity - July 13, 2026",
       "content": [
         {
-          "text": "On July 12, 2026, the ElizaOS Discord discussion channel saw several topics come up among community members. One user raised questions about token buybacks, asking whether there would be public reporting on buyback amounts once they begin, and whether revenue from Milady flows into the buyback pool or remains separate. The user expressed that this kind of transparency would help holders track progress rather than relying on trust alone. Another community member asked where the roadmap could be viewed and was directed to a dedicated channel, with a note referencing the version before the new logo. A separate exchange touched on profitability concerns, with one member simply asking whether there is any profit, receiving no detailed response. Two members speculated that ElizaOS may need a total relaunch starting from a v3 launch, citing too much dead weight currently in the project. On the technical side, a user reported persistent issues with ElizaOS failing with an 'Error generating text' message and always requiring a Groq API key despite using an Eliza Cloud key. The user had attempted rebuilding the repository multiple times using different AI keys including Eliza Cloud, OpenAI, and Groq, and had also tried running through Eliza Cloud directly. The system continued attempting to call the Groq model qwen-qwq-32b and returning an invalid API key error. A moderator suggested clearing the ~/.eliza directory and starting over, while another helper asked how long the issue had been occurring.",
+          "text": "In the general discussion channel, a user posted a recruitment-style message advertising various paid roles including Beta Tester at $20/hour, Moderator at $350-400/week, Developer with negotiable rates for Rust, Python, or C++ skills, and Community Manager at $800/week, among others, asking interested parties to send a DM. Separately, a user shared a link to an X post and noted that elizaOS has very few updates on social media but believes the project is worth attention, also mentioning they discovered another project attempting to attract the elizaOS team's attention. Another user posted a lengthy proposal formatted as an AI evaluation request, pitching a nightlife and cultural event concept called Love Train Bronx targeting The Bronx, New York, framing it as an untapped web3 community market opportunity and requesting seed funding or a micro-grant. Odilitime briefly commented on a 0.x plugin appearing in 2026, suggesting some skepticism. General greetings and a shared X post link rounded out the channel activity.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783906058219-pn8xst.png"
-          ]
+          "videos": []
+        },
+        {
+          "text": "In the coders channel, a developer introduced themselves as building paralens.ai, described as a structured transaction understanding engine for onchain activity. They asked what data sources or APIs agents currently use to understand wallets and transactions, and whether transaction-level intelligence or wallet-level behavioral datasets would be more valuable. Odilitime responded that elizaOS currently supports Helius, Birdeye, CoinMarketCap, CoinGecko, and more. The developer followed up asking whether those integrations are sufficient for understanding complex DeFi transactions or if there is custom logic on top for interpreting user actions and behaviors, to which Odilitime replied that there is probably always room for more. Additionally, a software engineer with a background in healthcare, finance, education, SaaS, and game development posted an introduction seeking collaborators for business expansion and long-term partnership, regardless of prior development experience.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1783814400,
+  "date": 1783900800,
   "nicknameMap": {
-    "LuperMine": {
-      "id": "1310985134996066304",
-      "username": "lupermine0075",
+    "Odilitime": {
+      "id": "580487826420793364",
+      "username": "odilitime",
+      "roles": [],
+      "totalMessages": 655
+    },
+    "Praveen Matheesha": {
+      "id": "1332546121490235551",
+      "username": "hpms0x",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Kishark": {
+      "id": "1486456678869110795",
+      "username": "kishark0673",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Shagalz": {
+      "id": "433192210591383562",
+      "username": "shagalz",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Christopher Harrison": {
+      "id": "1521219476861751318",
+      "username": "christopherharrison432",
+      "roles": [
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "-shot--": {
+      "id": "1186489562982273114",
+      "username": "helen7557p",
       "roles": [
         "Helper",
         "Trader",
@@ -40,94 +97,31 @@
       ],
       "totalMessages": 2
     },
-    "9zelinder": {
-      "id": "1514753864618868850",
-      "username": "9zelinder",
+    "LoveTrain": {
+      "id": "1526284329146257449",
+      "username": "lovetrain111",
       "roles": [
-        "Helper",
+        "Trader",
         "Verified",
         "utility",
-        "Coder",
         "eliza"
       ],
-      "totalMessages": 2
-    },
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [
-        "God",
-        "platform - self assign",
-        "partner portal - self assign",
-        "Community Ops",
-        "Creator",
-        "Moderator",
-        "[WG] degenspartan",
-        "pmairca - self assign",
-        "Verified",
-        "Booster",
-        "Hoplite",
-        "Migration Support",
-        "Helper",
-        "Github - Contributor",
-        "Labs Alumni",
-        "Trader",
-        "Contributor",
-        "merch - self assign",
-        "events - self-assign",
-        "[WG] Elizacon - granted",
-        "Spartan Dev",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 652
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 187
-    },
-    "Bets my love": {
-      "id": "1105141764064559115",
-      "username": "sethmylove.",
-      "roles": [],
       "totalMessages": 1
     },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 26
-    },
-    "Dragonfly Tales | MythicSquad": {
-      "id": "707337456374251610",
-      "username": "dragonflytales",
+    "Lev :)": {
+      "id": "752511345987027075",
+      "username": "achmadfariz_",
       "roles": [
         "Trader",
-        "It",
-        "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 4
     },
-    "Fian": {
-      "id": "1490414388572586076",
-      "username": "fian0861",
+    "kim6erly": {
+      "id": "1163529573267427429",
+      "username": ".kim6erly.",
       "roles": [
         "Trader",
         "Creator",
@@ -136,29 +130,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "noraping": {
-      "id": "1525740818936103213",
-      "username": "noraping0090",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Uchi": {
-      "id": "1197891020290015242",
-      "username": "jjenuchi",
-      "roles": [
-        "Trader",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "totalMessages": 4
     }
   }
 }
