@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1783991835088-d0l2hb.png"
+          ]
         },
         {
           "text": "In the coders channel, a developer introduced themselves as building paralens.ai, described as a structured transaction understanding engine for onchain activity. They asked what data sources or APIs agents currently use to understand wallets and transactions, and whether transaction-level intelligence or wallet-level behavioral datasets would be more valuable. Odilitime responded that elizaOS currently supports Helius, Birdeye, CoinMarketCap, CoinGecko, and more. The developer followed up asking whether those integrations are sufficient for understanding complex DeFi transactions or if there is custom logic on top for interpreting user actions and behaviors, to which Odilitime replied that there is probably always room for more. Additionally, a software engineer with a background in healthcare, finance, education, SaaS, and game development posted an introduction seeking collaborators for business expansion and long-term partnership, regardless of prior development experience.",
