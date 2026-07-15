@@ -1,0 +1,224 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-14",
+  "date": 1783987200,
+  "stats": {
+    "totalMessages": 46,
+    "totalUsers": 12
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord channel segment was dominated by allegations of financial misconduct rather than technical discussions. User bangrrr2914 made detailed accusations claiming the Eliza Foundation engaged in circular funding by investing 750k CAD into Secure Blockchain Development Corp (a company connected to Sebastian Quinn-Watson, a defendant in an NY lawsuit), which then returned the funds as B2B revenue to create fake enterprise adoption metrics. The user cited SEDAR filings, Fasken Law Firm press releases, and corporate records as evidence. Community members j_choy and iamsue88 repeatedly requested direct proof/evidence links rather than descriptions of filings. The discussion devolved into a repetitive back-and-forth with bangrrr2914 insisting the information was publicly available in regulatory filings while others demanded specific document links. Additional community concerns included lack of official communication from the team about token price drops (-12.47%) and the absence of updates since May. One technical support request came from marathonmind regarding a merged plugin registry PR (#8574 for @human.tech/plugin-waap) not appearing in agent settings. A new member fabio7311 introduced themselves with expertise in AI/ML, full-stack development, Python, Node.js, Go, React, Next.js, computer vision, and NLP, expressing interest in collaboration.",
+      "faqs": [
+        {
+          "question": "Is the 750k CAD investment being returned to the foundation as revenue?",
+          "askedBy": "j_choy",
+          "answeredBy": "j_choy"
+        },
+        {
+          "question": "Are the allegations about circular funding true and proven with evidence?",
+          "askedBy": "j_choy",
+          "answeredBy": "bangrrr2914"
+        },
+        {
+          "question": "Why hasn't the team published anything about these financial arrangements?",
+          "askedBy": "paolin_62616",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Why is there no official information since May about the token's quotation?",
+          "askedBy": "paolin_62616",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Our registry PR (#8574) merged as @human.tech/plugin-waap but it's not showing in agent settings - is this expected for non-@elizaos/ namespace?",
+          "askedBy": "marathonmind",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Investigate why merged plugin registry PR #8574 (@human.tech/plugin-waap) is not appearing in agent settings for third-party namespace",
+          "mentionedBy": "marathonmind"
+        },
+        {
+          "type": "Documentation",
+          "description": "Provide official communication and transparency about the 750k CAD investment into Secure Blockchain Development Corp and B2B revenue arrangements",
+          "mentionedBy": "paolin_62616"
+        },
+        {
+          "type": "Documentation",
+          "description": "Publish official updates about token quotation and price performance since May",
+          "mentionedBy": "paolin_62616"
+        }
+      ],
+      "messageCount": 42,
+      "userCount": 8
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The Discord channel received three distinct messages with no technical discussions or problem-solving occurring. nyk_builderz announced a free alpha program for RPC Edge, a performance-focused RPC service for Solana traders and bot teams. The service offers Yellowstone gRPC, transaction sending capabilities, and dedicated infrastructure. The alpha is targeting users running trading bots, validator-adjacent systems, or latency-sensitive Solana applications, with the goal of gathering feedback on latency, reliability, missing features, and workflow requirements. solify020 expressed interest in ElizaOS and offered their skills as a blockchain, full-stack, and AI developer with 8+ years of experience, seeking collaboration opportunities. Two other messages were off-topic (political commentary and a social media link) and contained no technical content. No technical discussions, implementations, or problem-solving occurred in this segment.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "RPC Edge alpha testing for Solana traders and bot teams - seeking feedback on latency, reliability, and missing features",
+          "mentionedBy": "nyk_builderz"
+        },
+        {
+          "type": "Feature",
+          "description": "ElizaOS collaboration opportunity for blockchain/full-stack/AI development",
+          "mentionedBy": "solify020"
+        }
+      ],
+      "messageCount": 4,
+      "userCount": 4
+    }
+  ],
+  "nicknameMap": {
+    "Kim Diaz": {
+      "id": "1520952277249032322",
+      "username": "kimdiaz2162",
+      "roles": [
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Peter": {
+      "id": "1320139356630941786",
+      "username": "peterbrown0917",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Solify": {
+      "id": "1458856350221340683",
+      "username": "solify020",
+      "roles": [
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "nyk | builderz.dev": {
+      "id": "281463121619451905",
+      "username": "nyk_builderz",
+      "roles": [
+        "Trader",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "@fabio@": {
+      "id": "1119922199223087116",
+      "username": "fabio7311",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 37
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 14
+    },
+    "IAmSue": {
+      "id": "975459367761637477",
+      "username": "iamsue88",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 59
+    },
+    "Arunsajeev": {
+      "id": "785883436458967062",
+      "username": "marathonmind",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 188
+    }
+  }
+}

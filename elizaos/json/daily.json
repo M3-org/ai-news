@@ -1,139 +1,171 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-13",
+  "title": "Daily Report - 2026-07-14",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Activity - July 13, 2026",
+      "title": "ElizaOS Community Discussion: Fraud Allegations, Token Price Concerns, and Developer Activity",
       "content": [
         {
-          "text": "In the general discussion channel, a user posted a recruitment-style message advertising various paid roles including Beta Tester at $20/hour, Moderator at $350-400/week, Developer with negotiable rates for Rust, Python, or C++ skills, and Community Manager at $800/week, among others, asking interested parties to send a DM. Separately, a user shared a link to an X post and noted that elizaOS has very few updates on social media but believes the project is worth attention, also mentioning they discovered another project attempting to attract the elizaOS team's attention. Another user posted a lengthy proposal formatted as an AI evaluation request, pitching a nightlife and cultural event concept called Love Train Bronx targeting The Bronx, New York, framing it as an untapped web3 community market opportunity and requesting seed funding or a micro-grant. Odilitime briefly commented on a 0.x plugin appearing in 2026, suggesting some skepticism. General greetings and a shared X post link rounded out the channel activity.",
+          "text": "In the general discussion channel, community members expressed frustration over the token reaching new all-time lows with no official communication from the team. One user noted a single-day drop of over 12 percent with no response from the project. A user named Bangrrr raised serious fraud allegations, claiming that the Eliza Foundation used approximately 750,000 CAD of investor funds to invest in a public shell company called Secure Blockchain Development Corp, which then returned those funds back to Eliza under the guise of a B2B revenue contract. The user cited public SEDAR filings, a Fasken Law Firm press release dated April 10, 2026, and an active New York Southern District Court class action lawsuit (Case 1:26-cv-03238) naming Sebastian Quinn-Watson, a director of the acquired company Agentic Solutions, as a core defendant. The user described this as round-tripping, a deceptive accounting practice used to fabricate organic enterprise adoption. Other community members, particularly J_CHOY, repeatedly challenged the allegations and demanded direct evidence be posted in the channel, dismissing the claims as hearsay. Another user pointed out that the declining token price itself serves as evidence of underlying problems. A separate user named Arunsajeev from human.tech asked for technical support regarding a merged registry pull request for a third-party plugin that was not appearing in the agent settings. A new community member named Fabio also introduced himself, highlighting his background in AI, full-stack development, machine learning, and agent-based systems.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1783991835088-d0l2hb.png"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a developer introduced themselves as building paralens.ai, described as a structured transaction understanding engine for onchain activity. They asked what data sources or APIs agents currently use to understand wallets and transactions, and whether transaction-level intelligence or wallet-level behavioral datasets would be more valuable. Odilitime responded that elizaOS currently supports Helius, Birdeye, CoinMarketCap, CoinGecko, and more. The developer followed up asking whether those integrations are sufficient for understanding complex DeFi transactions or if there is custom logic on top for interpreting user actions and behaviors, to which Odilitime replied that there is probably always room for more. Additionally, a software engineer with a background in healthcare, finance, education, SaaS, and game development posted an introduction seeking collaborators for business expansion and long-term partnership, regardless of prior development experience.",
+          "text": "In the coders channel, a builder behind a project called RPC Edge announced a free alpha program for Solana traders and bot teams, offering access to performance-focused RPC infrastructure, Yellowstone gRPC, and transaction sending services in exchange for feedback on latency and reliability. A developer named Solify expressed interest in ElizaOS and noted over eight years of experience in blockchain, full-stack, and AI development, looking to collaborate. An unrelated political image was posted by a user named Peter. A link to an external post on X was also shared by Kim Diaz.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
-          "images": [],
+          "images": [
+            "https://cdn.discordapp.com/attachments/1300025221834739744/1526585449890582588/6.png?ex=6a578efd&is=6a563d7d&hm=f00de10bdebdaa5495705dff7ebe59493bdb3696eb7afd52cfc993c4017ec424&"
+          ],
           "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1783900800,
+  "date": 1783987200,
   "nicknameMap": {
-    "Odilitime": {
-      "id": "580487826420793364",
-      "username": "odilitime",
-      "roles": [],
-      "totalMessages": 655
-    },
-    "Praveen Matheesha": {
-      "id": "1332546121490235551",
-      "username": "hpms0x",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Kishark": {
-      "id": "1486456678869110795",
-      "username": "kishark0673",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Shagalz": {
-      "id": "433192210591383562",
-      "username": "shagalz",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Christopher Harrison": {
-      "id": "1521219476861751318",
-      "username": "christopherharrison432",
+    "Kim Diaz": {
+      "id": "1520952277249032322",
+      "username": "kimdiaz2162",
       "roles": [
         "utility",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "-shot--": {
-      "id": "1186489562982273114",
-      "username": "helen7557p",
+    "Peter": {
+      "id": "1320139356630941786",
+      "username": "peterbrown0917",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Solify": {
+      "id": "1458856350221340683",
+      "username": "solify020",
+      "roles": [
         "It",
         "Verified",
-        "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
+      "totalMessages": 3
+    },
+    "nyk | builderz.dev": {
+      "id": "281463121619451905",
+      "username": "nyk_builderz",
+      "roles": [
+        "Trader",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "@fabio@": {
+      "id": "1119922199223087116",
+      "username": "fabio7311",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
       "totalMessages": 2
     },
-    "LoveTrain": {
-      "id": "1526284329146257449",
-      "username": "lovetrain111",
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "J_CHOY 🔶": {
+      "id": "884414391276163072",
+      "username": "j_choy",
       "roles": [
         "Trader",
         "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 37
+    },
+    "Bangrrr": {
+      "id": "428410394453999616",
+      "username": "bangrrr2914",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 14
+    },
+    "IAmSue": {
+      "id": "975459367761637477",
+      "username": "iamsue88",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 59
+    },
+    "Arunsajeev": {
+      "id": "785883436458967062",
+      "username": "marathonmind",
+      "roles": [
+        "Verified",
+        "Coder",
         "utility",
         "eliza"
       ],
       "totalMessages": 1
     },
-    "Lev :)": {
-      "id": "752511345987027075",
-      "username": "achmadfariz_",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
       "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
       ],
-      "totalMessages": 4
-    },
-    "kim6erly": {
-      "id": "1163529573267427429",
-      "username": ".kim6erly.",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
+      "totalMessages": 188
     }
   }
 }

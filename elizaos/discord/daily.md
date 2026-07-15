@@ -1,65 +1,58 @@
-# elizaOS Discord - 2026-07-13
+# elizaOS Discord - 2026-07-14
 
 ## Summary
 
-### Job Opportunities and Recruitment
+### Financial Misconduct Allegations
 
-.kim6erly. announced multiple open positions for the elizaOS project including Beta Tester at $20/hour, Moderator at $350-400/week, Developer roles requiring Rust/Python/C++ skills, Community Manager at $800/week, and Artist, Advertiser, and Media/Ambassador positions with negotiable compensation.
+User bangrrr2914 made detailed accusations against the Eliza Foundation, claiming circular funding schemes involving a 750k CAD investment into Secure Blockchain Development Corp, a company allegedly connected to Sebastian Quinn-Watson who is named as a defendant in a New York lawsuit. The user alleged these funds were returned as B2B revenue to fabricate enterprise adoption metrics. Evidence cited included SEDAR filings, Fasken Law Firm press releases, and corporate records. Community members j_choy and iamsue88 repeatedly requested direct links to proof rather than descriptions of documents. The discussion became repetitive with bangrrr2914 insisting information was publicly available while others demanded specific documentation links.
 
-### Project Communication and Social Media Presence
+### Community Concerns
 
-achmadfariz_ expressed concerns about limited updates on elizaOS social media channels despite recognizing the project's potential value. They noted discovering other projects attempting to attract the team's attention while writing about elizaOS on X platform.
+Community members expressed concerns about lack of official communication from the team regarding token price drops of -12.47% and the absence of updates since May. The discussion reflected frustration with transparency and communication from project leadership.
 
-### Grant and Funding Proposals
+### Developer Introductions and Collaboration
 
-lovetrain111 submitted a detailed proposal for seed liquidity/event grant funding for "Love Train Bronx," a web3/community nightlife project targeting The Bronx, NYC. The proposal emphasized zero market saturation in the 1.4M population area, leveraging existing Instagram infrastructure for community engagement, and positioning as a Blue Ocean strategy compared to oversaturated Manhattan/Brooklyn markets. The proposal requested AI agent evaluation of regional arbitrage opportunity and funding criteria for a pilot event.
+Two developers introduced themselves seeking collaboration opportunities. fabio7311 presented expertise in AI/ML, full-stack development, Python, Node.js, Go, React, Next.js, computer vision, and NLP. solify020 offered skills as a blockchain, full-stack, and AI developer with 8+ years of experience and expressed interest in ElizaOS.
 
-### Blockchain Transaction Intelligence
+### Infrastructure Services
 
-hpms0x introduced paralens.ai as a structured transaction understanding engine for onchain activity and sought feedback on current methods agents use to understand wallets and transactions. Discussion focused on data sources, APIs, and whether transaction-level or wallet-level intelligence with behavioral datasets would be more valuable for interpreting complex DeFi transactions.
+nyk_builderz announced a free alpha program for RPC Edge, a performance-focused RPC service designed for Solana traders and bot teams. The service features Yellowstone gRPC, transaction sending capabilities, and dedicated infrastructure. The alpha targets users running trading bots, validator-adjacent systems, or latency-sensitive Solana applications, with goals of gathering feedback on latency, reliability, missing features, and workflow requirements.
 
-### Data Provider Integration
+### Plugin Registry Issues
 
-odilitime confirmed that their system supports multiple data providers including Helius, Birdeye, CoinMarketCap, and CoinGecko. When questioned about sufficiency for understanding complex DeFi transactions, odilitime acknowledged potential need for enhanced capabilities beyond current data sources.
-
-### Plugin Development
-
-odilitime made a brief comment referencing "0.x plugin in 2026" without additional context or elaboration.
+marathonmind reported a technical issue where a merged plugin registry PR (#8574 for @human.tech/plugin-waap) was not appearing in agent settings despite successful merge.
 
 ## FAQ
 
-**Q: What job positions are currently available for elizaOS?**
-A: Available positions include Beta Tester ($20/hour), Moderator ($350-400/week), Developer with Rust/Python/C++ skills, Community Manager ($800/week), Artist, Advertiser, and Media/Ambassador roles with negotiable rates.
+**Q: What is RPC Edge and who is it for?**
+A: RPC Edge is a performance-focused RPC service for Solana traders and bot teams. It offers Yellowstone gRPC, transaction sending capabilities, and dedicated infrastructure. The free alpha program targets users running trading bots, validator-adjacent systems, or latency-sensitive Solana applications.
 
-**Q: What data providers does elizaOS currently support?**
-A: The system supports multiple data providers including Helius, Birdeye, CoinMarketCap, and CoinGecko.
+**Q: What evidence was cited for the financial misconduct allegations?**
+A: The allegations cited SEDAR filings, Fasken Law Firm press releases, and corporate records as evidence of circular funding between the Eliza Foundation and Secure Blockchain Development Corp involving 750k CAD.
 
-**Q: What is paralens.ai?**
-A: paralens.ai is a structured transaction understanding engine for onchain activity that aims to help interpret blockchain transactions and wallet behaviors.
-
-**Q: Are current data sources sufficient for understanding complex DeFi transactions?**
-A: According to odilitime, the current capabilities could likely use enhancement, suggesting that existing data sources may not be fully sufficient for interpreting complex DeFi transactions and user behaviors.
-
-**Q: What is the Love Train Bronx project?**
-A: Love Train Bronx is a web3/community nightlife project targeting The Bronx, NYC area with 1.4M population. It leverages Instagram infrastructure for community engagement and positions itself as a Blue Ocean strategy in an area with zero market saturation compared to Manhattan/Brooklyn.
+**Q: Why is the merged plugin registry PR not appearing in agent settings?**
+A: marathonmind reported that PR #8574 for @human.tech/plugin-waap was merged but not appearing in agent settings. No resolution was provided in the discussion.
 
 ## Help Interactions
 
-**Helper:** odilitime
-**Helpee:** hpms0x
-**Resolution:** odilitime provided information about current data provider integrations (Helius, Birdeye, CoinMarketCap, CoinGecko) and acknowledged that additional capabilities for transaction interpretation would likely be beneficial. The interaction identified a gap in current transaction understanding capabilities but did not result in a complete solution.
+**Issue:** Plugin registry PR not appearing in agent settings
+**Helpee:** marathonmind
+**Helper:** None
+**Resolution:** Unresolved. marathonmind reported that merged PR #8574 for @human.tech/plugin-waap was not appearing in agent settings, but no community members provided assistance or solutions.
+
+**Issue:** Request for evidence links regarding financial allegations
+**Helpee:** bangrrr2914
+**Helper:** j_choy, iamsue88
+**Resolution:** Unresolved. Community members requested direct links to evidence documents, but bangrrr2914 only provided descriptions of where to find information rather than specific links.
 
 ## Action Items
 
 ### Technical
 
-- Evaluate enhanced transaction interpretation capabilities beyond current data providers for complex DeFi transactions (mentioned by odilitime in response to hpms0x)
-- Assess integration of behavioral datasets for wallet-level and transaction-level intelligence (mentioned by hpms0x)
-
-### Features
-
-- Consider implementing custom logic for interpreting user actions and behaviors in blockchain transactions (mentioned by hpms0x)
+- Investigate why merged plugin registry PR #8574 for @human.tech/plugin-waap is not appearing in agent settings (reported by marathonmind)
+- Gather feedback on RPC Edge alpha program regarding latency, reliability, missing features, and workflow requirements (mentioned by nyk_builderz)
 
 ### Documentation
 
-- Increase social media updates and communication about elizaOS project developments (mentioned by achmadfariz_)
+- Provide official communication addressing token price drops of -12.47% and lack of updates since May (community concern raised in discussion channel)
+- Clarify relationship between Eliza Foundation and Secure Blockchain Development Corp with transparent documentation (raised by bangrrr2914 allegations and community requests)
