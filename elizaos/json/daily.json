@@ -1,80 +1,67 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-15",
+  "title": "Daily Report - 2026-07-17",
   "categories": [
     {
-      "title": "ElizaOS Discord Community Activity - July 15, 2026",
+      "title": "ElizaOS Community Discussion and Developer Activity",
       "content": [
         {
-          "text": "In the general discussion channel, community members exchanged brief greetings. Users stg_trey, Othman, and Admiin each posted short hello messages in the evening hours, indicating light social activity in the server.",
+          "text": "On July 17, 2026, the ElizaOS community discussion channel saw a handful of brief interactions. A community call for a project called Zeroclaw was announced and taking place, with at least one member asking to join. One user expressed skepticism about the future of ElizaOS, stating that not even Justin Sun could save it. A developer posted asking if anyone was looking to hire a developer. Activity in the coders channel was minimal, consisting of a single emoji reply between two members.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1784251536574-1hz0z.png"
-          ]
-        },
-        {
-          "text": "In the coders channel, a developer named Ginga posted a message asking if anyone was looking to hire a developer. Later, Omid Sa replied to a separate conversation suggesting that contributors could solve open issues on the main ElizaOS GitHub repository as a way to get involved.",
-          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1784164963134-l04dqj.png",
-            "https://cdn.elizaos.news/posters/1784251556413-q7rveb.jpg"
-          ]
-        },
-        {
-          "text": "In the partners channel, user Burtiik posted a brief affirmative response, though the context of the original conversation was not available in the provided data.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1784164981431-xl1ya.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1784073600,
+  "date": 1784246400,
   "nicknameMap": {
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "Buuz.Ayhamo": {
+      "id": "971521251438911538",
+      "username": "ayhamo13724",
       "roles": [
+        "Helper",
         "Trader",
         "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
-      ],
-      "totalMessages": 19
-    },
-    "Solify": {
-      "id": "1458856350221340683",
-      "username": "solify020",
-      "roles": [
         "It",
-        "Verified",
+        "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 1
+    },
+    "lanbohe5188": {
+      "id": "788770007110123540",
+      "username": "lanbohe5188",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "batterysnoopy": {
+      "id": "806982592611614781",
+      "username": "batterysnoopy",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
     "Ginga": {
       "id": "800764682150477845",
@@ -85,51 +72,47 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 23
+      "totalMessages": 24
     },
-    "Burtiik": {
-      "id": "883850045433192519",
-      "username": "burtiik",
-      "roles": [
-        "partn3r",
-        "Verified"
-      ],
-      "totalMessages": 1
-    },
-    "Admiin": {
-      "id": "1174149872568500307",
-      "username": "libertyshilingford",
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
       "roles": [
         "Trader",
-        "utility"
+        "Verified",
+        "utility",
+        "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 26
     },
-    "Othman": {
-      "id": "1427606337038192681",
-      "username": "othman065369",
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
       "roles": [
-        "Helper",
         "Trader",
-        "Creator",
         "[WG] degenspartan",
-        "It",
+        "Verified",
         "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 41
     },
-    "stg_trey": {
-      "id": "1009232987038154774",
-      "username": "stg_trey4869",
+    "Sam": {
+      "id": "265949357885358083",
+      "username": "sam3746",
       "roles": [
+        "Helper",
+        "a-hack",
         "Trader",
+        "[WG] degenspartan",
+        "Verified",
         "utility",
+        "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     }
   }
 }

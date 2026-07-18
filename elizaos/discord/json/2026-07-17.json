@@ -1,0 +1,128 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-17",
+  "date": 1784246400,
+  "stats": {
+    "totalMessages": 6,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of a community call announcement for zeroclaw by sam3746, with valorenvk expressing interest in joining. The remaining messages include a negative comment about ElizaOS from hellspawnbarbarain, a job inquiry from rsn6958, and a greeting from batterysnoopy. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this brief exchange. The chat represents casual community interaction rather than substantive technical discourse.",
+      "faqs": [
+        {
+          "question": "Can I join the zeroclaw community call?",
+          "askedBy": "valorenvk",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Is there anyone looking for a developer?",
+          "askedBy": "rsn6958",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 5,
+      "userCount": 5
+    }
+  ],
+  "nicknameMap": {
+    "Buuz.Ayhamo": {
+      "id": "971521251438911538",
+      "username": "ayhamo13724",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "lanbohe5188": {
+      "id": "788770007110123540",
+      "username": "lanbohe5188",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "batterysnoopy": {
+      "id": "806982592611614781",
+      "username": "batterysnoopy",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 24
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "Dominiek": {
+      "id": "648092975855042560",
+      "username": "valorenvk",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 41
+    },
+    "Sam": {
+      "id": "265949357885358083",
+      "username": "sam3746",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    }
+  }
+}
