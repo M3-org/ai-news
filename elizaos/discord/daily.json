@@ -1,88 +1,50 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-17",
-  "date": 1784246400,
+  "title": "elizaOS Discord - 2026-07-18",
+  "date": 1784332800,
   "stats": {
-    "totalMessages": 6,
-    "totalUsers": 6
+    "totalMessages": 5,
+    "totalUsers": 3
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of a community call announcement for zeroclaw by sam3746, with valorenvk expressing interest in joining. The remaining messages include a negative comment about ElizaOS from hellspawnbarbarain, a job inquiry from rsn6958, and a greeting from batterysnoopy. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this brief exchange. The chat represents casual community interaction rather than substantive technical discourse.",
+      "summary": "This Discord chat segment contains minimal substantive technical discussion. The conversation consists primarily of brief, casual exchanges. One user (satsbased) makes a vague comment about something being funny without context. Another user (ola_nuel) greets the channel and asks for clarification. The only technical content appears when hellspawnbarbarain makes a speculative prediction about exchange delistings and price decline in two months. Ola_nuel responds by acknowledging that elizaOS is building good products but notes concerns about tokenomics. No concrete technical implementations, solutions, or detailed problem-solving discussions occurred in this segment. The conversation lacks depth in terms of development tasks, architectural decisions, or specific feature discussions that would constitute meaningful technical discourse.",
       "faqs": [
         {
-          "question": "Can I join the zeroclaw community call?",
-          "askedBy": "valorenvk",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "Is there anyone looking for a developer?",
-          "askedBy": "rsn6958",
+          "question": "What did you mean?",
+          "askedBy": "ola_nuel",
           "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
       "actionItems": [],
       "messageCount": 5,
-      "userCount": 5
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "Buuz.Ayhamo": {
-      "id": "971521251438911538",
-      "username": "ayhamo13724",
+    "Emmanuel": {
+      "id": "1186653824811810856",
+      "username": "ola_nuel",
       "roles": [
         "Helper",
+        "a-hack",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
         "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "lanbohe5188": {
-      "id": "788770007110123540",
-      "username": "lanbohe5188",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "batterysnoopy": {
-      "id": "806982592611614781",
-      "username": "batterysnoopy",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 24
+      "totalMessages": 3
     },
     "Alexander the cock": {
       "id": "183673299857833985",
@@ -93,36 +55,20 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 26
+      "totalMessages": 27
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
       "roles": [
-        "Trader",
-        "[WG] degenspartan",
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "utility"
       ],
-      "totalMessages": 41
-    },
-    "Sam": {
-      "id": "265949357885358083",
-      "username": "sam3746",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 189
     }
   }
 }

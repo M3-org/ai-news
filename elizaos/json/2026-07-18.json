@@ -1,0 +1,69 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-07-18",
+  "categories": [
+    {
+      "title": "ElizaOS Community Discussion and Token Sentiment",
+      "content": [
+        {
+          "text": "In the ElizaOS Discord discussion channel, a brief conversation took place on July 18, 2026 regarding the future of the ElizaOS token. One user expressed a bearish outlook, claiming that exchanges would delist the token within two months followed by a significant price decline. Another user pushed back on this sentiment, acknowledging that while the tokenomics may not look ideal, elizaOS is actively building and developing meaningful products. A third user reacted to the exchange with amusement. The coders channel had no activity recorded for the same date.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1784332800,
+  "nicknameMap": {
+    "Emmanuel": {
+      "id": "1186653824811810856",
+      "username": "ola_nuel",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 27
+    },
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 189
+    }
+  }
+}

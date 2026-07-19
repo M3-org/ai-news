@@ -1,81 +1,45 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-17",
+  "title": "Daily Report - 2026-07-18",
   "categories": [
     {
-      "title": "ElizaOS Community Discussion and Developer Activity",
+      "title": "ElizaOS Community Discussion and Token Sentiment",
       "content": [
         {
-          "text": "On July 17, 2026, the ElizaOS community discussion channel saw a handful of brief interactions. A community call for a project called Zeroclaw was announced and taking place, with at least one member asking to join. One user expressed skepticism about the future of ElizaOS, stating that not even Justin Sun could save it. A developer posted asking if anyone was looking to hire a developer. Activity in the coders channel was minimal, consisting of a single emoji reply between two members.",
+          "text": "In the ElizaOS Discord discussion channel, a brief conversation took place on July 18, 2026 regarding the future of the ElizaOS token. One user expressed a bearish outlook, claiming that exchanges would delist the token within two months followed by a significant price decline. Another user pushed back on this sentiment, acknowledging that while the tokenomics may not look ideal, elizaOS is actively building and developing meaningful products. A third user reacted to the exchange with amusement. The coders channel had no activity recorded for the same date.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1784337473419-2kzix.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1784246400,
+  "date": 1784332800,
   "nicknameMap": {
-    "Buuz.Ayhamo": {
-      "id": "971521251438911538",
-      "username": "ayhamo13724",
+    "Emmanuel": {
+      "id": "1186653824811810856",
+      "username": "ola_nuel",
       "roles": [
         "Helper",
+        "a-hack",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
         "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "lanbohe5188": {
-      "id": "788770007110123540",
-      "username": "lanbohe5188",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "batterysnoopy": {
-      "id": "806982592611614781",
-      "username": "batterysnoopy",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 24
+      "totalMessages": 3
     },
     "Alexander the cock": {
       "id": "183673299857833985",
@@ -86,36 +50,20 @@
         "utility",
         "eliza"
       ],
-      "totalMessages": 26
+      "totalMessages": 27
     },
-    "Dominiek": {
-      "id": "648092975855042560",
-      "username": "valorenvk",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
       "roles": [
-        "Trader",
-        "[WG] degenspartan",
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
+        "utility"
       ],
-      "totalMessages": 41
-    },
-    "Sam": {
-      "id": "265949357885358083",
-      "username": "sam3746",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
+      "totalMessages": 189
     }
   }
 }
