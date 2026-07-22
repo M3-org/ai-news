@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1784683355652-nwqb9k.jpg"
+          ]
         },
         {
           "text": "In the coders channel, several AI engineers introduced themselves and expressed interest in collaborating on projects involving AI agents, agentic workflows, LLM integrations, multi-agent systems, RAG, MCP, full-stack development, robotics, and game development. One member announced the release of a new skill called Neverbell, which gives AI agents market access, and invited community feedback. Another member shared Cipher Vault, a browser-based GameFi demo running on Solana Devnet that uses an Eliza AI Oracle agent to generate daily riddles. The game involves harvesting in-game currency, paying tributes, and solving puzzles, with all activity settled as on-chain SPL token transfers on Devnet. A community member also encouraged builders to create a trading agent on the Robinhood chain to take advantage of the current bull market.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1784683374310-6kw2o9.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
