@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1785116830823-69xmeh.jpg"
+          ]
         },
         {
           "text": "A user named NativeSatoshi announced the launch of Coopa v4.0, a data sovereignty platform built on top of Irys for permanent and immutable data storage. The platform is described as a zero-trust Digital Sanctuary aimed at professional users, offering wallet-based identity, closed-source cryptographic protection, and a feature called Eternal Whispers for sovereign data interaction and messaging. Coopa is normally invite-only but was temporarily opened to the Irys community for stress-testing. Feedback was requested specifically on Irys upload speeds, wallet integration UI, and the overall platform experience. The platform is accessible at coopaassistant.com.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1785116850905-luoxgq.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
