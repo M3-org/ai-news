@@ -1,0 +1,34 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-26",
+  "date": 1785024000,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "agentshare.dev": {
+      "id": "1475763213193838645",
+      "username": "founder_agentshare.dev",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 9
+    }
+  }
+}
