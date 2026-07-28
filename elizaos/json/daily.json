@@ -1,59 +1,120 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-07-26",
+  "title": "Daily Report - 2026-07-27",
   "categories": [
     {
-      "title": "Builder Announcements and Project Updates",
+      "title": "Community Discussion and Developer Activity",
       "content": [
         {
-          "text": "A solo builder operating under the handle agentshare.dev announced they are developing an API-first data platform focused on real-time Solana DeFi intelligence. The platform provides Meteora DLMM pool briefs, bin depth data, and DEX scouting capabilities. The project is described as fully x402-ready, meaning it is designed to support autonomous agents and micro-billing use cases.",
+          "text": "In the general discussion channel, community members touched on several topics on July 27, 2026. A notable mention was made that Storj has filed for bankruptcy, while Eliza continues its development work. A new member named deedee joined the server and expressed that token values have dropped significantly, making selling tokens less worthwhile. A user named Ginga posted asking if anyone is looking to hire a developer, and separately, another user named so posted a request specifically seeking a U.S.-based software developer with at least five years of experience, asking interested parties to send a direct message. General greetings were exchanged among members in the evening hours. The coders channel had no activity recorded for the same date.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1785116830823-69xmeh.jpg"
-          ]
-        },
-        {
-          "text": "A user named NativeSatoshi announced the launch of Coopa v4.0, a data sovereignty platform built on top of Irys for permanent and immutable data storage. The platform is described as a zero-trust Digital Sanctuary aimed at professional users, offering wallet-based identity, closed-source cryptographic protection, and a feature called Eternal Whispers for sovereign data interaction and messaging. Coopa is normally invite-only but was temporarily opened to the Irys community for stress-testing. Feedback was requested specifically on Irys upload speeds, wallet integration UI, and the overall platform experience. The platform is accessible at coopaassistant.com.",
-          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1785116850905-luoxgq.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1785024000,
+  "date": 1785110400,
   "nicknameMap": {
-    "agentshare.dev": {
-      "id": "1475763213193838645",
-      "username": "founder_agentshare.dev",
+    "Anapastuk": {
+      "id": "1032776200923381770",
+      "username": "anapastuk",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Matra": {
+      "id": "1355593752990974105",
+      "username": "metravelly.",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "DESERT_AUTO": {
+      "id": "1023767211548090439",
+      "username": "dimakotelnikov116",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
         "utility",
-        "Coder"
+        "Coder",
+        "eliza"
       ],
       "totalMessages": 1
     },
-    "NativeSatoshi  (✧ᴗ✧)": {
-      "id": "893149983556112454",
-      "username": "nativesatoshi",
+    "so": {
+      "id": "488766383836889111",
+      "username": "sososo7997",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "deedee": {
+      "id": "1514763607966224595",
+      "username": "deedee_71791",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
       "roles": [
         "Verified",
         "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
         "utility"
       ],
-      "totalMessages": 9
+      "totalMessages": 65
     }
   }
 }

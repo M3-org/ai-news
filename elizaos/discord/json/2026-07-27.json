@@ -1,0 +1,119 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-27",
+  "date": 1785110400,
+  "stats": {
+    "totalMessages": 8,
+    "totalUsers": 7
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary content consists of brief social interactions and job-related inquiries. valleybeyond7991 mentioned that Storj applied for bankruptcy while noting that Eliza continues development. rsn6958 and sososo7997 both posted job-seeking messages, with sososo7997 specifically requesting a U.S.-based software developer with at least five years of experience. deedee_71791 introduced themselves as a new member and commented on token value depreciation. The remaining messages were simple greetings from metravelly and anapastuk, plus a user mention from dimakotelnikov116. No technical problems were solved, no architectural decisions were made, and no concrete implementations were discussed during this segment.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 8,
+      "userCount": 7
+    }
+  ],
+  "nicknameMap": {
+    "Anapastuk": {
+      "id": "1032776200923381770",
+      "username": "anapastuk",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Matra": {
+      "id": "1355593752990974105",
+      "username": "metravelly.",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "DESERT_AUTO": {
+      "id": "1023767211548090439",
+      "username": "dimakotelnikov116",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "so": {
+      "id": "488766383836889111",
+      "username": "sososo7997",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "deedee": {
+      "id": "1514763607966224595",
+      "username": "deedee_71791",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 65
+    }
+  }
+}
