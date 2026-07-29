@@ -1,0 +1,156 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-28",
+  "date": 1785196800,
+  "stats": {
+    "totalMessages": 25,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion and is primarily focused on token price concerns and project activity speculation. The main technical point raised is that development activity is only visible on GitHub, with Shaw being noted as active there rather than on other platforms. Multiple users expressed concerns about the token's market cap decline from 2.4B to 4M, with discussions about whether the project is still viable. One user (osja) mentioned that 'the app is ready' but questioned why there are no announcements on the main X (Twitter) page. The conversation lacks substantive technical details, implementation discussions, or concrete problem-solving. Most exchanges revolve around market sentiment, exchange listings (Kraken mentioned), and speculation about the project's future rather than development work or technical challenges.",
+      "faqs": [
+        {
+          "question": "Do the Degenai building?",
+          "askedBy": "24130966",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Shaw left?",
+          "askedBy": "dannynor",
+          "answeredBy": "paolin_62616"
+        },
+        {
+          "question": "Is Eliza going to zero?",
+          "askedBy": "deedee_71791",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Is there any news, signs of life or anything from these jokers?",
+          "askedBy": "deedee_71791",
+          "answeredBy": "dannynor"
+        },
+        {
+          "question": "Is Eliza on any major exchange?",
+          "askedBy": "deedee_71791",
+          "answeredBy": "deedee_71791"
+        },
+        {
+          "question": "The app is ready but no anons on main x page. why?",
+          "askedBy": "osja",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "paolin_62616",
+          "helpee": "dannynor",
+          "context": "Question about whether Shaw left the project",
+          "resolution": "Clarified that Shaw is active on GitHub and working on the project, though not posting directly about elizaos elsewhere"
+        },
+        {
+          "helper": "dannynor",
+          "helpee": "deedee_71791",
+          "context": "Request for project updates and signs of activity",
+          "resolution": "Informed that only GitHub shows activity but expressed pessimism about token value recovery"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Announce completed app on main X page",
+          "mentionedBy": "osja"
+        }
+      ],
+      "messageCount": 25,
+      "userCount": 6
+    }
+  ],
+  "nicknameMap": {
+    "240309": {
+      "id": "727895042789867612",
+      "username": "24130966",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "mosjka": {
+      "id": "1415649024819597434",
+      "username": "osja",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 38
+    },
+    "deedee": {
+      "id": "1514763607966224595",
+      "username": "deedee_71791",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 14
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 63
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 65
+    },
+    "Angelon": {
+      "id": "905706229068873768",
+      "username": ".pavelek",
+      "roles": [
+        "partner portal - self assign",
+        "auto.fun enjoyer",
+        "Trader",
+        "workgroups - write perms",
+        "NFT",
+        "Verified",
+        "Poker",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 3
+    }
+  }
+}
