@@ -1,44 +1,69 @@
-# elizaOS Discord - 2026-07-28
+# elizaOS Discord - 2026-07-29
 
 ## Summary
 
-### Project Development Activity
+### Project Development Status
 
-Development work is primarily occurring on GitHub rather than public Discord channels. Shaw was specifically noted as being active on the GitHub repository. One user (osja) mentioned that "the app is ready," though this statement lacked specific details about what application was being referenced or its current state.
+ElizaOS v3 has been released and is available through the main GitHub repository. Shaw continues active development on GitHub, with the Eliza framework being utilized by many builders for additional projects. Development work on both Milady and the Eliza v3 app is ongoing, though no firm release dates have been announced. The project is currently seeking funding and investors for expansion purposes.
 
-### Token Market Performance
+### Community Communication Concerns
 
-The token's market capitalization experienced a significant decline from 2.4 billion to 4 million, which became a central concern in discussions. Multiple users questioned the viability of the project given this market performance. Kraken exchange was mentioned in the context of listings.
+Community members expressed frustration about the lack of updates on official communication channels. Multiple platforms including X/Twitter, Discord, and Farcaster were reported as inactive since late May 2026. This created a perceived communication gap between active development work happening on GitHub and community engagement on social channels. Shaw did post about the Eliza app on X/Twitter recently, though regular updates remain limited.
 
-### Communication and Announcements
+### Legal Resolution
 
-Users expressed frustration about the lack of announcements on the main X (formerly Twitter) page despite claims that development work is complete. There was confusion about why completed work was not being publicly communicated through official channels.
+A legal settlement was reached with the lawsuit dismissed with prejudice on July 8, 2026. The court retained 30-day jurisdiction to enforce the settlement terms.
 
-### Project Viability Concerns
+### Tokenomics Proposal
 
-Multiple participants questioned whether the project is still active and viable given the combination of reduced market cap, limited public communication, and unclear development status. The disconnect between claimed development progress and public visibility created uncertainty among community members.
+A community member proposed a new tokenomics model requiring users to purchase and lock tokens to access plugins and services. The suggested model aims to prevent sell-offs and increase token value through utility-based demand.
+
+### Team Structure
+
+Discussion included requests to bring odlitime back to the team to support ongoing development efforts.
 
 ## FAQ
 
-**Q: Where is the development activity happening?**
-A: Development activity is only visible on GitHub, with Shaw noted as being particularly active on the repository.
+**Q: Has ElizaOS v3 been released?**
+A: Yes, Eliza v3 has been released and is available by cloning the main repository on GitHub. It is receiving regular updates.
 
-**Q: Is the project still active?**
-A: While development appears to be ongoing on GitHub and one user claimed "the app is ready," there is uncertainty due to limited public communication and significant market cap decline.
+**Q: Why are the official communication channels inactive?**
+A: While development continues actively on GitHub, official channels like X/Twitter, Discord, and Farcaster have been largely inactive since late May 2026. The team is focused on development work rather than community updates.
 
-**Q: Why are there no announcements about completed work?**
-A: This question was raised by community members but not answered in the discussion. Users expressed confusion about the lack of updates on the main X page despite claims of completed development.
+**Q: What is the status of the lawsuit?**
+A: The lawsuit was dismissed with prejudice on July 8, 2026, following a legal settlement. The court retained 30-day jurisdiction to enforce the settlement.
 
-**Q: What happened to the token's market cap?**
-A: The token's market cap declined from 2.4 billion to 4 million, though the specific timeframe and reasons for this decline were not detailed in the discussion.
+**Q: When will Milady and Eliza v3 app be released?**
+A: Development continues on both projects, but no firm release dates have been announced.
+
+**Q: Is the ElizaOS framework being used by other developers?**
+A: Yes, many builders are using the Eliza framework for their own projects.
+
+**Q: Is the project seeking funding?**
+A: Yes, Shaw mentioned seeking funding and investors for expansion.
 
 ## Help Interactions
 
-No structured help interactions with clear resolutions were present in the provided channel summary. The discussions consisted primarily of questions and concerns without definitive answers or problem resolution.
+**Helper:** j_choy
+**Helpee:** paolin_62616
+**Resolution:** Clarified that Shaw is actively developing on GitHub and that development work is ongoing despite lack of communication on official channels.
+
+**Helper:** om1d_sa
+**Helpee:** Community
+**Resolution:** Confirmed that v3 has been released and is receiving updates, directing users to clone the main repository for access.
 
 ## Action Items
 
+### Technical
+
+- Seek funding and investors for project expansion (mentioned by Shaw)
+- Continue development on Milady and Eliza v3 app (ongoing work by Shaw)
+
+### Features
+
+- Consider implementing tokenomics model requiring users to buy and lock tokens to access plugins/services (proposed by paolin_62616)
+
 ### Documentation
 
-- Provide public announcements about completed development work on official X page (mentioned by osja and other community members)
-- Clarify current project status and development roadmap through official channels (mentioned by multiple users)
+- Improve communication on official channels including X/Twitter, Discord, and Farcaster (implied by paolin_62616's concerns)
+- Consider bringing odlitime back to the team (requested by om1d_sa)
