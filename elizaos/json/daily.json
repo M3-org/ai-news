@@ -11,7 +11,10 @@
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1785374199725-m2uum8.jpg"
+          ]
         },
         {
           "text": "In the coders channel, two external project announcements were made. User Kenhinde announced the launch of Coopa v4.0, described as a zero-trust digital data sovereignty platform built on top of Irys for permanent and immutable data storage. The platform uses wallet-based identity, requires no traditional cloud storage, and features a proprietary cryptographic layer. It is normally invite-only but was temporarily opened to the Irys community for stress testing, with feedback requested on upload speeds, wallet integration, and overall user experience. The platform is accessible at coopaassistant.com. Additionally, user x402 Data Hub announced the launch of x402 Data Hub, a real-time data API designed for autonomous AI agents. It provides access to LLM latency data, AI API pricing, cloud GPU rental indexes, and gas rates via HTTP 402 micro-payments at 0.01 USDC on Base and Arbitrum networks, with no API keys or signups required. Fifty free daily requests per dataset are available for developer testing.",
@@ -19,7 +22,10 @@
             "https://discord.com/channels/1253563208833433701/1300025221834739744"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "posters": [
+            "https://cdn.elizaos.news/posters/1785374221768-tngk7w.jpg"
+          ]
         }
       ],
       "topic": "discordrawdata"
