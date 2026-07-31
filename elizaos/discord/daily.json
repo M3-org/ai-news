@@ -1,198 +1,119 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-29",
-  "date": 1785283200,
+  "title": "elizaOS Discord - 2026-07-30",
+  "date": 1785369600,
   "stats": {
-    "totalMessages": 45,
-    "totalUsers": 8
+    "totalMessages": 9,
+    "totalUsers": 6
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "The discussion centered on community concerns about ElizaOS project communication and development status. Key technical points: Shaw is actively developing on GitHub, with Eliza v3 already released and available by cloning the main repository. The Eliza framework is being used by many builders for further projects. Shaw recently posted about the Eliza app on X/Twitter. Development of Milady and Eliza v3 app continues but without firm release dates. A legal settlement was reached with the lawsuit dismissed with prejudice on 7/8/2026, with the court retaining 30-day jurisdiction to enforce the settlement. The main tension arose from paolin_62616 expressing frustration about lack of updates on official channels (X, Discord, Farcaster all described as 'dead' since late May), while j_choy defended the team's GitHub activity. paolin_62616 suggested a tokenomics model requiring users to buy and lock tokens to access plugins/services, which would prevent sell-offs and increase value. Shaw mentioned seeking funding/investors for expansion. om1d_sa confirmed v3 has been released and is receiving updates, and requested odlitime be brought back to the team. The discussion highlighted a communication gap between active development work and community engagement.",
+      "summary": "This Discord chat segment shows minimal technical discussion, consisting primarily of greetings and promotional messages. The channel activity includes basic introductions from multiple users (nativesatoshi, implayer2518370, .pavelek, ola_nuel). Two notable messages include: ola_nuel promoting the GOATNetwork Builder Grants Program targeting teams building working products, MVPs, revenue-ready applications, and AI agents with specific focus areas like coding agents, research tools, workflow automation, and agent-to-agent applications; and tomy.0315 seeking freelance or long-term AI engineering opportunities with experience in AI agents, knowledge-base chatbots, voice assistants, and business automation systems. _d0ctor_ asked about opening a ticket but received no response. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this segment.",
       "faqs": [
         {
-          "question": "Is ElizaOS development still active?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "j_choy"
-        },
-        {
-          "question": "Has Eliza v3 been released?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "om1d_sa"
-        },
-        {
-          "question": "Is Shaw looking for funding?",
-          "askedBy": "paolin_62616",
-          "answeredBy": "j_choy"
-        },
-        {
-          "question": "Is anyone looking for a developer?",
-          "askedBy": "bek6472",
+          "question": "How to open a ticket?",
+          "askedBy": "_d0ctor_",
           "answeredBy": "Unanswered"
         }
       ],
-      "helpInteractions": [
-        {
-          "helper": "om1d_sa",
-          "helpee": "paolin_62616",
-          "context": "Confusion about Eliza v3 release status and availability",
-          "resolution": "Clarified that v3 was released long ago and is available by cloning the main repository, with ongoing updates"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Feature",
-          "description": "Implement tokenomics model requiring users to buy and lock tokens to access plugins/services",
-          "mentionedBy": "paolin_62616"
-        },
-        {
-          "type": "Technical",
-          "description": "Improve automatic server updates for community channels",
-          "mentionedBy": "paolin_62616"
-        },
-        {
-          "type": "Documentation",
-          "description": "Provide regular updates on official communication channels (X, Discord, Farcaster)",
-          "mentionedBy": "paolin_62616"
-        },
-        {
-          "type": "Feature",
-          "description": "Complete and release Milady project",
-          "mentionedBy": "paolin_62616"
-        },
-        {
-          "type": "Feature",
-          "description": "Complete and release Eliza v3 app with defined release date",
-          "mentionedBy": "paolin_62616"
-        },
-        {
-          "type": "Documentation",
-          "description": "Bring odlitime back to provide community updates and answers",
-          "mentionedBy": "paolin_62616"
-        }
-      ],
-      "messageCount": 43,
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 7,
       "userCount": 6
     }
   ],
   "nicknameMap": {
-    "Bek": {
-      "id": "933263330934673440",
-      "username": "bek6472",
+    "Emmanuel": {
+      "id": "1186653824811810856",
+      "username": "ola_nuel",
       "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
-      "roles": [
+        "Helper",
+        "a-hack",
         "Trader",
         "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
-      ],
-      "totalMessages": 21
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 106
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
         "[WG] degenspartan",
         "It",
         "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 86
+      "totalMessages": 7
     },
-    "J_CHOY 🔶": {
-      "id": "884414391276163072",
-      "username": "j_choy",
+    "D0CT0R 🎯": {
+      "id": "384360842411638796",
+      "username": "_d0ctor_",
       "roles": [
         "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "! ^ lucky tomy ^ !": {
+      "id": "561610283122950194",
+      "username": "tomy.0315",
+      "roles": [
+        "Helper",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 52
+      "totalMessages": 5
     },
-    "mosjka": {
-      "id": "1415649024819597434",
-      "username": "osja",
-      "roles": [],
-      "totalMessages": 9
-    },
-    "deedee": {
-      "id": "1514763607966224595",
-      "username": "deedee_71791",
-      "roles": [],
-      "totalMessages": 14
-    },
-    "Deuxin": {
-      "id": "1214169247748726788",
-      "username": "deuxin._48229",
+    "Angelon": {
+      "id": "905706229068873768",
+      "username": ".pavelek",
       "roles": [
+        "partner portal - self assign",
+        "auto.fun enjoyer",
+        "Trader",
+        "workgroups - write perms",
+        "NFT",
+        "Verified",
+        "Poker",
+        "Announcements",
         "utility",
-        "Coder",
-        "eliza"
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "IMPLAYER251": {
+      "id": "870868405614415903",
+      "username": "implayer2518370",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
       ],
       "totalMessages": 1
     },
-    "shivam.kv": {
-      "id": "845888277247950898",
-      "username": "shivam.kv",
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
       "roles": [
-        "Creator",
         "Verified",
         "Coder",
         "utility"
       ],
-      "totalMessages": 1
-    },
-    "x402 Data Hub": {
-      "id": "1072194117431468133",
-      "username": "x402data_hub",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "Kenhinde": {
-      "id": "261776911502540810",
-      "username": "abaeze",
-      "roles": [],
-      "totalMessages": 1
+      "totalMessages": 10
     }
   }
 }

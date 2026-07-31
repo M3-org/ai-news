@@ -1,0 +1,119 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-07-30",
+  "date": 1785369600,
+  "stats": {
+    "totalMessages": 9,
+    "totalUsers": 6
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment shows minimal technical discussion, consisting primarily of greetings and promotional messages. The channel activity includes basic introductions from multiple users (nativesatoshi, implayer2518370, .pavelek, ola_nuel). Two notable messages include: ola_nuel promoting the GOATNetwork Builder Grants Program targeting teams building working products, MVPs, revenue-ready applications, and AI agents with specific focus areas like coding agents, research tools, workflow automation, and agent-to-agent applications; and tomy.0315 seeking freelance or long-term AI engineering opportunities with experience in AI agents, knowledge-base chatbots, voice assistants, and business automation systems. _d0ctor_ asked about opening a ticket but received no response. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this segment.",
+      "faqs": [
+        {
+          "question": "How to open a ticket?",
+          "askedBy": "_d0ctor_",
+          "answeredBy": "Unanswered"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 7,
+      "userCount": 6
+    }
+  ],
+  "nicknameMap": {
+    "Emmanuel": {
+      "id": "1186653824811810856",
+      "username": "ola_nuel",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 7
+    },
+    "D0CT0R 🎯": {
+      "id": "384360842411638796",
+      "username": "_d0ctor_",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "! ^ lucky tomy ^ !": {
+      "id": "561610283122950194",
+      "username": "tomy.0315",
+      "roles": [
+        "Helper",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "Angelon": {
+      "id": "905706229068873768",
+      "username": ".pavelek",
+      "roles": [
+        "partner portal - self assign",
+        "auto.fun enjoyer",
+        "Trader",
+        "workgroups - write perms",
+        "NFT",
+        "Verified",
+        "Poker",
+        "Announcements",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 4
+    },
+    "IMPLAYER251": {
+      "id": "870868405614415903",
+      "username": "implayer2518370",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 10
+    }
+  }
+}
