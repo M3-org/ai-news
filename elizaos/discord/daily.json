@@ -1,119 +1,94 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-30",
-  "date": 1785369600,
+  "title": "elizaOS Discord - 2026-07-31",
+  "date": 1785456000,
   "stats": {
-    "totalMessages": 9,
-    "totalUsers": 6
+    "totalMessages": 7,
+    "totalUsers": 4
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment shows minimal technical discussion, consisting primarily of greetings and promotional messages. The channel activity includes basic introductions from multiple users (nativesatoshi, implayer2518370, .pavelek, ola_nuel). Two notable messages include: ola_nuel promoting the GOATNetwork Builder Grants Program targeting teams building working products, MVPs, revenue-ready applications, and AI agents with specific focus areas like coding agents, research tools, workflow automation, and agent-to-agent applications; and tomy.0315 seeking freelance or long-term AI engineering opportunities with experience in AI agents, knowledge-base chatbots, voice assistants, and business automation systems. _d0ctor_ asked about opening a ticket but received no response. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this segment.",
+      "summary": "This Discord chat segment from the 💬-discussion channel contains minimal substantive technical discussion. The conversation consists primarily of brief exchanges and a recruitment message. _d0ctor_ made two short statements denying something and clarifying that something is not official, though the context of what was being discussed is not present in this segment. A user named cryptoteam.out posted a recruitment message advertising positions for Community Managers, PM, HR/BD, and Growth/Marketing Managers for the Shape3 ecosystem with specified hourly rates. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this chat segment. The lack of context makes it impossible to determine what technical topic, if any, was being addressed by _d0ctor_'s responses.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 3,
+      "userCount": 2
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The channel had minimal technical discussion during this period. The primary technical contribution was from pnllabs_13084, who announced the release of a Solana trading plugin (@pnllabs/plugin-pnllabs). The plugin provides pre-transaction verification capabilities for Solana agents, including wallet trust scoring based on realized on-chain PnL, token safety checks, real trade cost analysis, and funding forensics. The team audited 30 tracked 'smart money' wallets and found that half were actually losing money. The plugin is available via npm, offers a free tier without API key requirements, and uses a pay-per-call model via x402 for additional usage. The developer is actively seeking community feedback on the implementation. The rest of the chat consisted of spam/recruitment messages and non-technical content that provided no substantive technical value.",
       "faqs": [
         {
-          "question": "How to open a ticket?",
-          "askedBy": "_d0ctor_",
-          "answeredBy": "Unanswered"
+          "question": "What does the @pnllabs/plugin-pnllabs plugin do?",
+          "askedBy": "Implicit",
+          "answeredBy": "pnllabs_13084"
         }
       ],
       "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 7,
-      "userCount": 6
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Released Solana trading plugin with pre-transaction verification including wallet trust scoring, token safety checks, trade cost analysis, and funding forensics",
+          "mentionedBy": "pnllabs_13084"
+        }
+      ],
+      "messageCount": 4,
+      "userCount": 3
     }
   ],
   "nicknameMap": {
-    "Emmanuel": {
-      "id": "1186653824811810856",
-      "username": "ola_nuel",
+    "PnL Labs": {
+      "id": "1532441787795505226",
+      "username": "pnllabs_13084",
       "roles": [
         "Helper",
-        "a-hack",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "I believe in angels": {
+      "id": "652495785312780308",
+      "username": "lm4389",
+      "roles": [
+        "Verified",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "Thehuuhs": {
+      "id": "1102037624744583239",
+      "username": "cryptoteam.out",
+      "roles": [
+        "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
-        "Verified",
-        "Dev School Student",
-        "Booster",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 7
+      "totalMessages": 3
     },
     "D0CT0R 🎯": {
       "id": "384360842411638796",
       "username": "_d0ctor_",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
+      "roles": [],
+      "totalMessages": 3
     },
-    "! ^ lucky tomy ^ !": {
-      "id": "561610283122950194",
-      "username": "tomy.0315",
-      "roles": [
-        "Helper",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 5
-    },
-    "Angelon": {
-      "id": "905706229068873768",
-      "username": ".pavelek",
-      "roles": [
-        "partner portal - self assign",
-        "auto.fun enjoyer",
-        "Trader",
-        "workgroups - write perms",
-        "NFT",
-        "Verified",
-        "Poker",
-        "Announcements",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 4
-    },
-    "IMPLAYER251": {
-      "id": "870868405614415903",
-      "username": "implayer2518370",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 1
-    },
-    "NativeSatoshi  (✧ᴗ✧)": {
-      "id": "893149983556112454",
-      "username": "nativesatoshi",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 10
+    "baeee": {
+      "id": "952500203406123038",
+      "username": "siltwater",
+      "roles": []
     }
   }
 }

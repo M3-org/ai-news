@@ -1,36 +1,42 @@
-# elizaOS Discord - 2026-07-30
+# elizaOS Discord - 2026-07-31
 
 ## Summary
 
-### Community Engagement
+### Solana Trading Plugin Release
 
-The channel saw basic community activity with multiple users introducing themselves (nativesatoshi, implayer2518370, .pavelek, ola_nuel). The discussion remained at a surface level with greetings and introductions rather than technical exchanges.
+pnllabs_13084 announced the release of a new Solana trading plugin (@pnllabs/plugin-pnllabs) designed to provide pre-transaction verification for Solana agents. The plugin offers several key features including wallet trust scoring based on realized on-chain profit and loss, token safety checks, real trade cost analysis, and funding forensics. The team conducted an audit of 30 tracked 'smart money' wallets and discovered that approximately half were actually losing money rather than profiting. The plugin is available through npm and offers a free tier that does not require an API key. For usage beyond the free tier, the plugin uses a pay-per-call pricing model via x402. The developer is actively seeking community feedback on the implementation.
 
-### Grant and Funding Opportunities
+### Channel Moderation and Clarifications
 
-ola_nuel announced the GOATNetwork Builder Grants Program targeting teams building production-ready applications. The program focuses on working products, MVPs, and revenue-ready applications, with specific interest in AI agents including coding agents, research tools, workflow automation, and agent-to-agent applications.
+_d0ctor_ made brief clarifying statements in the discussion channel, denying something and noting that something was not official, though the full context of these statements was not captured in the available chat logs.
 
-### Job Opportunities
+### Recruitment Activity
 
-tomy.0315 advertised availability for freelance or long-term AI engineering positions, highlighting experience in AI agents, knowledge-base chatbots, voice assistants, and business automation systems.
+cryptoteam.out posted recruitment messages advertising positions for Community Managers, PM, HR/BD, and Growth/Marketing Managers for the Shape3 ecosystem with specified hourly compensation rates.
 
 ## FAQ
 
-**Q: What is the GOATNetwork Builder Grants Program?**
-A: A grants program targeting teams building working products, MVPs, and revenue-ready applications, with specific focus on AI agents such as coding agents, research tools, workflow automation, and agent-to-agent applications.
+**Q: What is the @pnllabs/plugin-pnllabs plugin?**
+A: It is a Solana trading plugin that provides pre-transaction verification capabilities for Solana agents, including wallet trust scoring, token safety checks, trade cost analysis, and funding forensics.
 
-**Q: What AI engineering services is tomy.0315 offering?**
-A: Freelance or long-term opportunities in AI agents, knowledge-base chatbots, voice assistants, and business automation systems.
+**Q: How is the pnllabs plugin priced?**
+A: The plugin offers a free tier without requiring an API key, and uses a pay-per-call model via x402 for additional usage beyond the free tier.
+
+**Q: What did the pnllabs team discover about 'smart money' wallets?**
+A: After auditing 30 tracked 'smart money' wallets, they found that approximately half were actually losing money rather than making profits.
+
+**Q: How can I install the pnllabs Solana trading plugin?**
+A: The plugin is available via npm as @pnllabs/plugin-pnllabs.
 
 ## Help Interactions
 
-_d0ctor_ requested information about opening a ticket but received no response. The issue remains unresolved.
+No direct help interactions were documented in the provided channel summaries. The pnllabs_13084 announcement was informational and requested community feedback, but no specific help requests or resolutions were recorded.
 
 ## Action Items
 
 ### Technical
 
-None identified.
+- Gather community feedback on the @pnllabs/plugin-pnllabs implementation (mentioned by pnllabs_13084)
 
 ### Features
 
