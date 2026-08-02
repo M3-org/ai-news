@@ -1,94 +1,89 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-07-31",
-  "date": 1785456000,
+  "title": "elizaOS Discord - 2026-08-01",
+  "date": 1785542400,
   "stats": {
-    "totalMessages": 7,
+    "totalMessages": 4,
     "totalUsers": 4
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment from the 💬-discussion channel contains minimal substantive technical discussion. The conversation consists primarily of brief exchanges and a recruitment message. _d0ctor_ made two short statements denying something and clarifying that something is not official, though the context of what was being discussed is not present in this segment. A user named cryptoteam.out posted a recruitment message advertising positions for Community Managers, PM, HR/BD, and Growth/Marketing Managers for the Shape3 ecosystem with specified hourly rates. No technical problems were solved, no implementations were discussed, and no concrete decisions were made during this chat segment. The lack of context makes it impossible to determine what technical topic, if any, was being addressed by _d0ctor_'s responses.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 2
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The channel had minimal technical discussion during this period. The primary technical contribution was from pnllabs_13084, who announced the release of a Solana trading plugin (@pnllabs/plugin-pnllabs). The plugin provides pre-transaction verification capabilities for Solana agents, including wallet trust scoring based on realized on-chain PnL, token safety checks, real trade cost analysis, and funding forensics. The team audited 30 tracked 'smart money' wallets and found that half were actually losing money. The plugin is available via npm, offers a free tier without API key requirements, and uses a pay-per-call model via x402 for additional usage. The developer is actively seeking community feedback on the implementation. The rest of the chat consisted of spam/recruitment messages and non-technical content that provided no substantive technical value.",
+      "summary": "This Discord chat segment from the #💬-discussion channel contains minimal technical discussion. The primary content is a product announcement from nativesatoshi (Selcuk) introducing Coopa v4.0, a zero-trust digital sanctuary application deployed on Sepolia testnet. The system implements client-side encryption before storing files and messages on Irys/Arweave, ensuring server-side data privacy. The announcement requests community members to stress-test the architecture and provide UX feedback. Two other brief messages include a question about bridging from Base to Solana (from pusikurac___) which went unanswered, and two scam warnings from l.iamwallace97 and mai_0976 about specific user IDs. No technical discussions, problem-solving sessions, or implementation details were shared beyond the basic architectural description of Coopa's encryption approach.",
       "faqs": [
         {
-          "question": "What does the @pnllabs/plugin-pnllabs plugin do?",
-          "askedBy": "Implicit",
-          "answeredBy": "pnllabs_13084"
+          "question": "How to bridge from base to solana?",
+          "askedBy": "pusikurac___",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
       "actionItems": [
         {
+          "type": "Technical",
+          "description": "Stress-test Coopa v4.0 architecture on Sepolia testnet",
+          "mentionedBy": "nativesatoshi"
+        },
+        {
           "type": "Feature",
-          "description": "Released Solana trading plugin with pre-transaction verification including wallet trust scoring, token safety checks, trade cost analysis, and funding forensics",
-          "mentionedBy": "pnllabs_13084"
+          "description": "Collect UX feedback and feature ideas for Coopa v4.0",
+          "mentionedBy": "nativesatoshi"
         }
       ],
       "messageCount": 4,
-      "userCount": 3
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "PnL Labs": {
-      "id": "1532441787795505226",
-      "username": "pnllabs_13084",
+    "NativeSatoshi  (✧ᴗ✧)": {
+      "id": "893149983556112454",
+      "username": "nativesatoshi",
       "roles": [
-        "Helper",
         "Verified",
-        "utility",
         "Coder",
-        "eliza"
+        "utility"
       ],
-      "totalMessages": 1
+      "totalMessages": 11
     },
-    "I believe in angels": {
-      "id": "652495785312780308",
-      "username": "lm4389",
+    "Holo": {
+      "id": "787105602798747658",
+      "username": "mai_0976",
       "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 1
-    },
-    "Thehuuhs": {
-      "id": "1102037624744583239",
-      "username": "cryptoteam.out",
-      "roles": [
-        "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
-        "Designer",
+        "Verified",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 3
+      "totalMessages": 1
     },
-    "D0CT0R 🎯": {
-      "id": "384360842411638796",
-      "username": "_d0ctor_",
-      "roles": [],
-      "totalMessages": 3
+    "Liam": {
+      "id": "1179740430112411668",
+      "username": "l.iamwallace97",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 1
     },
-    "baeee": {
-      "id": "952500203406123038",
-      "username": "siltwater",
-      "roles": []
+    "OdNowk": {
+      "id": "421038291052134401",
+      "username": "pusikurac___",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
     }
   }
 }
