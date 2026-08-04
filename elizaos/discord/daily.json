@@ -1,60 +1,91 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-02",
-  "date": 1785628800,
+  "title": "elizaOS Discord - 2026-08-03",
+  "date": 1785715200,
   "stats": {
-    "totalMessages": 4,
-    "totalUsers": 4
+    "totalMessages": 16,
+    "totalUsers": 8
   },
   "categories": [
     {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical discussion. The conversation consists primarily of introductory messages from new community members. kadenschaeferol introduced themselves as new to the community. issaarts, a digital artist, offered their services for art, animations, and banners, asking if the team needs artistic support and offering to provide samples. mochinolabs inquired about how to begin contributing to eliza.army and asked if there is documentation to get started. zenithxxs provided a brief affirmative response to the documentation question. No technical implementations, problem-solving discussions, or concrete solutions were presented in this segment. The chat represents typical community onboarding interactions rather than substantive technical discourse.",
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord discussion segment shows a community dealing with project abandonment concerns and token utility questions. The primary technical discussion involves stoikwv questioning the development team about promised token-based utility features that were apparently not implemented. stoikwv expressed frustration about statements regarding token utility that seem unfulfilled. ross.ross.ross responded briefly indicating that users can add utility to the token and earn it, though no technical details were provided about implementation. The conversation took a negative turn when rsn6958 asked about developer opportunities, which was met with hostile responses from hellspawnbarbarain suggesting the project has been abandoned by its developers. sososo7997 posted a detailed professional profile showcasing expertise in AI/ML engineering, full-stack development, and production AI systems, including experience with LLMs, agentic AI, RAG systems, and various modern tech stacks including GPT, Claude, LangGraph, and cloud infrastructure. However, this appears to be a job-seeking post rather than a contribution to the ongoing discussion. The segment reveals community frustration with unfulfilled development promises and suggests potential project abandonment issues, though no concrete technical solutions or implementations were discussed in detail.",
       "faqs": [
         {
-          "question": "How do you start helping with eliza.army? Is there a start here docs?",
+          "question": "Is there anyone looking for a developer?",
+          "askedBy": "rsn6958",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "What happened with the promised token based utility?",
+          "askedBy": "stoikwv",
+          "answeredBy": "ross.ross.ross"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Feature",
+          "description": "Add utility to the token as previously promised",
+          "mentionedBy": "stoikwv"
+        }
+      ],
+      "messageCount": 8,
+      "userCount": 5
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment shows a brief exchange between dimakotelnikov116 and mochinolabs regarding team contact and documentation access. The conversation begins with dimakotelnikov116 asking if the team has contacted mochinolabs, who responds negatively. After being directed to check direct messages, mochinolabs requests information about online 'start here' documentation. The exchange concludes with mochinolabs requesting that future communication occur in the public channel rather than through direct messages. No technical implementations, solutions, or significant problem-solving occurred in this segment. The interaction appears to be primarily administrative in nature, focusing on communication channels and documentation location rather than substantive technical content.",
+      "faqs": [
+        {
+          "question": "Has the team get intouch with you?",
+          "askedBy": "dimakotelnikov116",
+          "answeredBy": "mochinolabs"
+        },
+        {
+          "question": "where is start here docs online",
           "askedBy": "mochinolabs",
-          "answeredBy": "zenithxxs"
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "zenithxxs",
+          "helper": "dimakotelnikov116",
           "helpee": "mochinolabs",
-          "context": "mochinolabs asked about getting started with contributing to eliza.army and whether documentation exists",
-          "resolution": "zenithxxs confirmed that documentation exists with an affirmative response"
+          "context": "mochinolabs was looking for start here documentation online",
+          "resolution": "dimakotelnikov116 directed them to check direct messages, though the specific documentation location was not resolved in the public channel"
         }
       ],
       "actionItems": [
         {
           "type": "Documentation",
-          "description": "Provide clear onboarding documentation for new contributors to eliza.army",
+          "description": "Provide accessible location for start here documentation online",
           "mentionedBy": "mochinolabs"
         }
       ],
-      "messageCount": 4,
-      "userCount": 4
+      "messageCount": 7,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
-    "ZENITHXXS.": {
-      "id": "1474337688273424395",
-      "username": "zenithxxs",
+    "Rabbidfly": {
+      "id": "136679971644112897",
+      "username": "rabbidfly",
       "roles": [
-        "Helper",
-        "Trader",
+        "Partner",
         "Creator",
-        "[WG] degenspartan",
-        "It",
+        "Vanguard",
+        "VIP",
+        "NFT",
         "Verified",
-        "Designer",
-        "Fr",
+        "Dev School Student",
         "utility",
         "Coder",
-        "eliza"
+        "Associate"
       ],
-      "totalMessages": 5
+      "totalMessages": 2
     },
     "MochinoLabs": {
       "id": "792098473725263912",
@@ -63,26 +94,16 @@
         "Verified",
         "Poker"
       ],
-      "totalMessages": 1
+      "totalMessages": 4
     },
-    "Issa_arts": {
-      "id": "1217012270287028286",
-      "username": "issaarts",
-      "roles": [
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 6
-    },
-    "micah lam": {
-      "id": "1214836883859972158",
-      "username": "kadenschaeferol",
+    "DESERT_AUTO": {
+      "id": "1023767211548090439",
+      "username": "dimakotelnikov116",
       "roles": [
         "Helper",
         "Trader",
+        "Creator",
+        "[WG] degenspartan",
         "It",
         "Designer",
         "Fr",
@@ -90,7 +111,72 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 5
+    },
+    "so": {
+      "id": "488766383836889111",
+      "username": "sososo7997",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 9
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 30
+    },
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 27
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 45
+    },
+    "stoikwv": {
+      "id": "720377795519447081",
+      "username": "stoikwv",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
     }
   }
 }
