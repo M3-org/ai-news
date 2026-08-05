@@ -1,40 +1,27 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-08-04",
-  "categories": [
-    {
-      "title": "ElizaOS Token Future and Community Discussion",
-      "content": [
-        {
-          "text": "On August 4, 2026, the ElizaOS Discord community engaged in significant discussion around the future of the Eliza token and the direction of the project. A key post shared by satsbased linked a tweet from shawmakesmagic announcing that Eliza is described as the fastest, most powerful, and most consumer-friendly open source agent, with plans to launch on iPhone, Android, browser, desktop, and as a full operating system on devices like the LightPhone 3. The team has reportedly been working privately to avoid distractions, with the app product coming to all devices soon.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [
-            "https://jf.x.com/images/media-preview/2084564632237449584"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Later in the day, satsbased shared another tweet from shawmakesmagic addressing the token directly. Shaw acknowledged working to the point of serious health issues including a frozen shoulder, stating that the team built meaningful things that were ignored due to price decline. Following this, satsbased confirmed in the Discord that the Eliza token is effectively done and that the team is now solely focused on building working products. This sparked debate among community members. Some users like DannyNOR expressed frustration, wanting the team to officially state the token has no further role so the community could move on. Others like paolin argued it makes no sense to abandon the token after migration, noting that real-world products would naturally generate interest in both the project and the token, and that abandoning it would be unfair to holders who suffered losses of up to 99 percent.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Separately, a user named charette reported a deposit issue that had gone unresolved for two and a half days. Other community members warned charette to be cautious of fake support ticket links in the chat, flagging potential scams. User abuzar identified one participant, RoadRageDave, as a scammer attempting to pose as support. The situation highlighted ongoing concerns about scam activity within the community server.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Token Future and Community Discussion",
+    "content": [
+      {
+        "text": "On August 4, 2026, the ElizaOS Discord community engaged in significant discussion around the future of the Eliza token and the direction of the project. A key post shared by satsbased linked a tweet from shawmakesmagic announcing that Eliza is described as the fastest, most powerful, and most consumer-friendly open source agent, with plans to launch on iPhone, Android, browser, desktop, and as a full operating system on devices like the LightPhone 3. The team has reportedly been working privately to avoid distractions, with the app product coming to all devices soon.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "images": "https://cdn.elizaos.news/elizaos-media/2084564632237449584_c344cc17.jpg"
+      },
+      {
+        "text": "Later in the day, satsbased shared another tweet from shawmakesmagic addressing the token directly. Shaw acknowledged working to the point of serious health issues including a frozen shoulder, stating that the team built meaningful things that were ignored due to price decline. Following this, satsbased confirmed in the Discord that the Eliza token is effectively done and that the team is now solely focused on building working products. This sparked debate among community members. Some users like DannyNOR expressed frustration, wanting the team to officially state the token has no further role so the community could move on. Others like paolin argued it makes no sense to abandon the token after migration, noting that real-world products would naturally generate interest in both the project and the token, and that abandoning it would be unfair to holders who suffered losses of up to 99 percent.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1785893000467-gcmqvi.jpg"
+      },
+      {
+        "text": "Separately, a user named charette reported a deposit issue that had gone unresolved for two and a half days. Other community members warned charette to be cautious of fake support ticket links in the chat, flagging potential scams. User abuzar identified one participant, RoadRageDave, as a scammer attempting to pose as support. The situation highlighted ongoing concerns about scam activity within the community server.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1785893019771-evj4w.jpg"
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1785801600,
   "nicknameMap": {
     "Troseddol": {
