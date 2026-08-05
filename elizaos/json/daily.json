@@ -1,95 +1,96 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-08-03",
+  "title": "Daily Report - 2026-08-04",
   "categories": [
     {
-      "title": "Community Discussion: Token Utility Concerns, Developer Outreach, and Project Activity",
+      "title": "ElizaOS Token Future and Community Discussion",
       "content": [
         {
-          "text": "In the general discussion channel, a community member raised concerns about previously promised token-based utility that has not been delivered, questioning whether those statements were genuine or still planned. Another community member responded that users can add utility to the token and earn it. Separately, a developer posted asking if anyone was looking to hire a developer, which was met with hostility from another user who dismissed the request and made negative remarks about the project's development team. A different user then posted a detailed profile advertising their skills as a Senior AI and ML Full-Stack Engineer, highlighting experience with LLMs, agentic AI, RAG, automation, and various frameworks including LangGraph and OpenAI Agents SDK, with a background delivering AI products in Finance, Healthcare, and SaaS.",
+          "text": "On August 4, 2026, the ElizaOS Discord community engaged in significant discussion around the future of the Eliza token and the direction of the project. A key post shared by satsbased linked a tweet from shawmakesmagic announcing that Eliza is described as the fastest, most powerful, and most consumer-friendly open source agent, with plans to launch on iPhone, Android, browser, desktop, and as a full operating system on devices like the LightPhone 3. The team has reportedly been working privately to avoid distractions, with the app product coming to all devices soon.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
+          ],
+          "images": [
+            "https://jf.x.com/images/media-preview/2084564632237449584"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Later in the day, satsbased shared another tweet from shawmakesmagic addressing the token directly. Shaw acknowledged working to the point of serious health issues including a frozen shoulder, stating that the team built meaningful things that were ignored due to price decline. Following this, satsbased confirmed in the Discord that the Eliza token is effectively done and that the team is now solely focused on building working products. This sparked debate among community members. Some users like DannyNOR expressed frustration, wanting the team to officially state the token has no further role so the community could move on. Others like paolin argued it makes no sense to abandon the token after migration, noting that real-world products would naturally generate interest in both the project and the token, and that abandoning it would be unfair to holders who suffered losses of up to 99 percent.",
           "sources": [
             "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1785806367933-t556ju.jpg"
-          ]
+          "videos": []
         },
         {
-          "text": "In the coders channel, a helper asked MochinoLabs whether the team had been in contact with them. MochinoLabs confirmed no contact had been made and asked where the getting started documentation was available online. The conversation moved to direct messages, though MochinoLabs later requested that communication return to the public channel or cease entirely.",
+          "text": "Separately, a user named charette reported a deposit issue that had gone unresolved for two and a half days. Other community members warned charette to be cautious of fake support ticket links in the chat, flagging potential scams. User abuzar identified one participant, RoadRageDave, as a scammer attempting to pose as support. The situation highlighted ongoing concerns about scam activity within the community server.",
           "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+            "https://discord.com/channels/1253563208833433701/1253563209462448241"
           ],
           "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1785806385489-3i4lk.jpg"
-          ]
-        },
-        {
-          "text": "In the partners channel, a community member with Partner and Vanguard roles noted signs of progress in the project repository, describing increased activity, models learning, harnesses merging, and suggesting that a significant development effort is underway.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1301363808421543988"
-          ],
-          "images": [],
-          "videos": [],
-          "posters": [
-            "https://cdn.elizaos.news/posters/1785806407946-jfah1a.jpg"
-          ]
+          "videos": []
         }
       ],
       "topic": "discordrawdata"
     }
   ],
-  "date": 1785715200,
+  "date": 1785801600,
   "nicknameMap": {
-    "Rabbidfly": {
-      "id": "136679971644112897",
-      "username": "rabbidfly",
-      "roles": [
-        "Partner",
-        "Creator",
-        "Vanguard",
-        "VIP",
-        "NFT",
-        "Verified",
-        "Dev School Student",
-        "utility",
-        "Coder",
-        "Associate"
-      ],
-      "totalMessages": 2
-    },
-    "MochinoLabs": {
-      "id": "792098473725263912",
-      "username": "mochinolabs",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 4
-    },
-    "DESERT_AUTO": {
-      "id": "1023767211548090439",
-      "username": "dimakotelnikov116",
+    "Troseddol": {
+      "id": "911672491141906453",
+      "username": "troseddol0787",
       "roles": [
         "Helper",
         "Trader",
         "Creator",
         "[WG] degenspartan",
         "It",
+        "Verified",
         "Designer",
         "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 3
     },
-    "so": {
-      "id": "488766383836889111",
-      "username": "sososo7997",
+    "charette": {
+      "id": "1479047686538661970",
+      "username": "charette6745",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 13
+    },
+    "abuzar": {
+      "id": "827159066169704499",
+      "username": "abuzar1553",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "RoadRageDave": {
+      "id": "1181587961385594891",
+      "username": "roadragedave",
       "roles": [
         "Verified",
         "Designer",
@@ -97,29 +98,22 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 9
+      "totalMessages": 7
     },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
+    "Bethany01": {
+      "id": "1443497875043516528",
+      "username": "bethroman01",
       "roles": [
         "Trader",
+        "Creator",
+        "It",
         "Verified",
+        "Designer",
+        "Fr",
         "utility",
-        "eliza"
+        "Coder"
       ],
-      "totalMessages": 30
-    },
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 27
+      "totalMessages": 2
     },
     "ross": {
       "id": "906787451438260236",
@@ -138,19 +132,80 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 45
+      "totalMessages": 46
     },
-    "stoikwv": {
-      "id": "720377795519447081",
-      "username": "stoikwv",
+    "satsbased": {
+      "id": "1184466248520699967",
+      "username": "satsbased",
+      "roles": [
+        "King",
+        "Mini Mod",
+        "VIP",
+        "Contributor",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 218
+    },
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
+      "roles": [
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 88
+    },
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 46
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 68
+    },
+    "Anapastuk": {
+      "id": "1032776200923381770",
+      "username": "anapastuk",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
+        "Poker"
+      ],
+      "totalMessages": 2
+    },
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
       "roles": [
         "Trader",
         "Verified",
-        "Designer",
         "utility",
-        "Coder"
+        "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 30
     }
   }
 }

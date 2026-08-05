@@ -1,54 +1,54 @@
-# elizaOS Discord - 2026-08-03
+# elizaOS Discord - 2026-08-04
 
 ## Summary
 
-### Project Development and Abandonment Concerns
+### Token Price Performance and Market Context
 
-Community members expressed significant concerns about the project's development status and whether it has been abandoned by its core team. hellspawnbarbarain suggested the project has been abandoned by developers when responding to questions about developer opportunities. This sentiment reflects broader frustration within the community about the project's direction and leadership engagement.
+valleybeyond7991 provided perspective on the ElizaOS token price decline, arguing that significant drawdowns do not indicate project failure. They cited examples of major cryptocurrencies experiencing similar declines during bear markets, including Doge, Shib, and SUI being down 87-90% from their peaks. The argument emphasized that price action alone should not be used to judge project viability.
 
-### Token Utility Implementation
+### Team Development Focus and Product Strategy
 
-stoikwv raised questions about promised token-based utility features that appear to have not been implemented as originally stated. The discussion centered on unfulfilled promises regarding token functionality and utility within the ecosystem. ross.ross.ross provided a brief response indicating users can add utility to the token and earn it, though no technical implementation details were shared.
+satsbased shared updates from Shaw indicating the team is working privately on an application product that will be released across all devices soon. The discussion revealed a strategic shift toward product development and revenue generation rather than token promotion. satsbased later shared information suggesting the eliza token development phase has concluded, with the team now focused exclusively on building functional products. The consensus among some community members was that the team is raising funds and developing products that will generate revenue and potentially restore attention to the token.
 
-### Developer Recruitment and Expertise
+### Token Future and Community Concerns
 
-sososo7997 posted a comprehensive professional profile highlighting expertise in AI/ML engineering, full-stack development, and production AI systems. The profile included experience with LLMs, agentic AI, RAG systems, and various modern technology stacks including GPT, Claude, LangGraph, and cloud infrastructure. This appears to be a job-seeking or availability announcement rather than a direct contribution to ongoing technical discussions.
+A significant debate emerged regarding the token's future direction. dannynor expressed frustration seeking clarity on whether the token has been abandoned by the team. paolin_62616 argued that abandoning the token after migration would damage the team's reputation and be unfair to holders who maintained belief in the project despite experiencing 99% losses. The community appeared divided between those accepting the product-focused pivot and those seeking explicit commitment to the token's future.
 
-### Communication and Documentation Access
+### Security Incident and Scam Attempts
 
-A brief administrative exchange occurred between dimakotelnikov116 and mochinolabs regarding team contact and documentation access. mochinolabs requested information about online start here documentation and expressed a preference for public channel communication over direct messages.
+charette6745 reported a missing deposit that had not appeared for 2.5 days. Community members responded with warnings about fraudulent support links. abuzar1553 identified specific scammers attempting to exploit the situation by posing as support personnel.
 
 ## FAQ
 
-**Q: Has the development team abandoned the project?**
-A: hellspawnbarbarain suggested the project has been abandoned by developers, though this was not confirmed by official team members. The community appears concerned about the lack of developer engagement.
+**Q: Does the ElizaOS token price decline mean the project is dead?**
+A: According to valleybeyond7991, price action alone does not indicate project failure. Major tokens like Doge, Shib, and SUI have experienced 87-90% declines during bear markets and recovered.
 
-**Q: What token utility features are available?**
-A: ross.ross.ross indicated that users can add utility to the token and earn it, but specific implementation details were not provided. stoikwv expressed frustration about unfulfilled promises regarding token utility.
+**Q: What is the team currently working on?**
+A: According to updates from Shaw shared by satsbased, the team is working privately on an application product that will be released across all devices soon.
 
-**Q: Where can I find start here documentation?**
-A: mochinolabs requested information about online start here documentation location, but no specific link or location was provided in the conversation.
+**Q: Is the ElizaOS token abandoned?**
+A: The situation is unclear and debated within the community. satsbased indicated the token development phase is complete and the team is focused on product building, while paolin_62616 argued abandoning the token would damage team reputation and be unfair to holders.
 
-**Q: Should communication happen in public channels or direct messages?**
-A: mochinolabs explicitly requested that future communication occur in public channels rather than through direct messages.
+**Q: What is the team's current strategy?**
+A: The team appears to be focused on product development and revenue generation rather than token promotion, with the goal of building functional products that may eventually bring attention back to the token.
 
 ## Help Interactions
 
-**Helper:** ross.ross.ross  
-**Helpee:** stoikwv  
-**Resolution:** Partial - ross.ross.ross responded that users can add utility to the token and earn it, but did not provide technical implementation details or address the specific concerns about unfulfilled promises.
-
-**Helper:** dimakotelnikov116  
-**Helpee:** mochinolabs  
-**Resolution:** Unresolved - mochinolabs was directed to check direct messages but requested public channel communication and documentation links, which were not provided in the visible conversation.
+**Helper:** Community members and abuzar1553
+**Helpee:** charette6745
+**Issue:** Missing deposit for 2.5 days
+**Resolution:** Community members warned about scam support links, and abuzar1553 identified specific scammers attempting to exploit the situation. No resolution to the actual deposit issue was documented.
 
 ## Action Items
 
-### Documentation
+### Technical
 
-- Provide accessible online start here documentation for new contributors and developers (mentioned by mochinolabs)
+None documented.
 
 ### Features
 
-- Clarify and implement promised token utility features that were previously announced (mentioned by stoikwv)
-- Provide technical details on how users can add utility to tokens and earn them (mentioned by ross.ross.ross)
+None documented.
+
+### Documentation
+
+None documented.
