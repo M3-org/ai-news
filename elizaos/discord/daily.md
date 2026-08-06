@@ -1,54 +1,67 @@
-# elizaOS Discord - 2026-08-04
+# elizaOS Discord - 2026-08-05
 
 ## Summary
 
-### Token Price Performance and Market Context
+### Project Status and Crisis
 
-valleybeyond7991 provided perspective on the ElizaOS token price decline, arguing that significant drawdowns do not indicate project failure. They cited examples of major cryptocurrencies experiencing similar declines during bear markets, including Doge, Shib, and SUI being down 87-90% from their peaks. The argument emphasized that price action alone should not be used to judge project viability.
+Shaw announced on August 5, 2026 that the Eliza token project is effectively dead. The project was sued by token holders, resulting in complete depletion of the Eliza fund used to pay settlements. Shaw stated there is no treasury remaining, he owns no tokens, and the foundation support system is gone. He advised token-focused community members to leave the project. The token dropped 20% in one day following this announcement, with market cap falling to $2M.
 
-### Team Development Focus and Product Strategy
+### Community Response and Criticism
 
-satsbased shared updates from Shaw indicating the team is working privately on an application product that will be released across all devices soon. The discussion revealed a strategic shift toward product development and revenue generation rather than token promotion. satsbased later shared information suggesting the eliza token development phase has concluded, with the team now focused exclusively on building functional products. The consensus among some community members was that the team is raising funds and developing products that will generate revenue and potentially restore attention to the token.
+The community response was deeply divided. Some members expressed anger and accusations of scamming, while others attempted constructive dialogue. Members noted 10 months without proper communication updates and questioned Shaw's leadership decisions. Multiple community members referenced Shaw's history of launching and abandoning tokens, with accusations of deliberate deception regarding token utility. Specific criticism focused on the Binance Alpha airdrop strategy that allegedly created artificial volume while holders sold immediately.
 
-### Token Future and Community Concerns
+### Technical Infrastructure
 
-A significant debate emerged regarding the token's future direction. dannynor expressed frustration seeking clarity on whether the token has been abandoned by the team. paolin_62616 argued that abandoning the token after migration would damage the team's reputation and be unfair to holders who maintained belief in the project despite experiencing 99% losses. The community appeared divided between those accepting the product-focused pivot and those seeking explicit commitment to the token's future.
+Despite the crisis, existing token infrastructure remains in place including DEX/CEX listings, CCIP integration, and established tokenomics. The token distribution includes 607M tokens allocated for liquidity, 275M for Protocol-Owned Liquidity, team vesting with 12-month cliff and 24-month linear schedule, and SAFT allocations held in locked multisig wallets.
 
-### Security Incident and Scam Attempts
+### Proposed Path Forward
 
-charette6745 reported a missing deposit that had not appeared for 2.5 days. Community members responded with warnings about fraudulent support links. abuzar1553 identified specific scammers attempting to exploit the situation by posing as support personnel.
+Zadayos proposed a separation model where Shaw could focus on open-source elizaos development while a separate entity handles commercialization and token operations. This model would generate revenue through IP licensing, equity, royalties, development contracts, cloud fees, and enterprise support. Xeno_thales argued that tokens cannot be killed and future Eliza products could potentially revive token value.
+
+### Previous Commitments
+
+Community members noted that Shaw had previously promoted a token migration and promised product launches but failed to deliver utility. This history contributed to the frustration and sense of betrayal expressed by token holders.
 
 ## FAQ
 
-**Q: Does the ElizaOS token price decline mean the project is dead?**
-A: According to valleybeyond7991, price action alone does not indicate project failure. Major tokens like Doge, Shib, and SUI have experienced 87-90% declines during bear markets and recovered.
+**Q: What happened to the Eliza token project?**
+A: Shaw announced the project is effectively dead after being sued by token holders. The Eliza fund was completely depleted paying settlements, leaving no treasury or foundation support system.
 
-**Q: What is the team currently working on?**
-A: According to updates from Shaw shared by satsbased, the team is working privately on an application product that will be released across all devices soon.
+**Q: Does Shaw own any Eliza tokens?**
+A: No, Shaw stated he owns no tokens and there is no treasury remaining.
 
-**Q: Is the ElizaOS token abandoned?**
-A: The situation is unclear and debated within the community. satsbased indicated the token development phase is complete and the team is focused on product building, while paolin_62616 argued abandoning the token would damage team reputation and be unfair to holders.
+**Q: What is the current token distribution?**
+A: 607M tokens are allocated for liquidity, 275M for Protocol-Owned Liquidity, with team vesting on a 12-month cliff and 24-month linear schedule, and SAFT allocations in locked multisig.
 
-**Q: What is the team's current strategy?**
-A: The team appears to be focused on product development and revenue generation rather than token promotion, with the goal of building functional products that may eventually bring attention back to the token.
+**Q: What infrastructure still exists for the token?**
+A: DEX/CEX listings, CCIP integration, and the established tokenomics structure remain in place.
+
+**Q: What is the proposed separation model?**
+A: Zadayos proposed Shaw focus on open-source elizaos development while a separate entity handles commercialization and token operations, generating revenue through IP licensing, equity, royalties, development contracts, cloud fees, and enterprise support.
+
+**Q: Can the token recover?**
+A: Xeno_thales argued that tokens cannot be killed and future Eliza products could potentially revive token value, though this remains speculative.
+
+**Q: How much has the token dropped?**
+A: The token dropped 20% in one day following Shaw's announcement, with market cap falling to $2M.
+
+**Q: What was the Binance Alpha airdrop strategy?**
+A: Community members accused Shaw of using the Binance Alpha airdrop to create artificial volume while holders sold immediately.
 
 ## Help Interactions
 
-**Helper:** Community members and abuzar1553
-**Helpee:** charette6745
-**Issue:** Missing deposit for 2.5 days
-**Resolution:** Community members warned about scam support links, and abuzar1553 identified specific scammers attempting to exploit the situation. No resolution to the actual deposit issue was documented.
+No substantive help interactions occurred in the provided channel summaries. The coders channel contained only brief social exchanges without technical problem-solving.
 
 ## Action Items
 
 ### Technical
 
-None documented.
+None identified in the provided summaries.
 
 ### Features
 
-None documented.
+None identified in the provided summaries.
 
 ### Documentation
 
-None documented.
+None identified in the provided summaries.
