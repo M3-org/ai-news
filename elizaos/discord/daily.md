@@ -1,67 +1,72 @@
-# elizaOS Discord - 2026-08-05
+# elizaOS Discord - 2026-08-06
 
 ## Summary
 
-### Project Status and Crisis
+### Project Abandonment and Legal Settlement
 
-Shaw announced on August 5, 2026 that the Eliza token project is effectively dead. The project was sued by token holders, resulting in complete depletion of the Eliza fund used to pay settlements. Shaw stated there is no treasury remaining, he owns no tokens, and the foundation support system is gone. He advised token-focused community members to leave the project. The token dropped 20% in one day following this announcement, with market cap falling to $2M.
+Shaw announced the abandonment of the ElizaOS token project on August 6, 2026. The decision followed a lawsuit settlement with Burwick, who represented Gorka Pikabea, using remaining project capital. This settlement directly contributed to the token's collapse. The community expressed significant frustration, noting that loyal holders maintained their positions for nearly two years through market downturns, only to see the project abandoned at what appeared to be the bear market bottom.
 
-### Community Response and Criticism
+### Legal Actions and Community Response
 
-The community response was deeply divided. Some members expressed anger and accusations of scamming, while others attempted constructive dialogue. Members noted 10 months without proper communication updates and questioned Shaw's leadership decisions. Multiple community members referenced Shaw's history of launching and abandoning tokens, with accusations of deliberate deception regarding token utility. Specific criticism focused on the Binance Alpha airdrop strategy that allegedly created artificial volume while holders sold immediately.
+Community members discussed potential legal recourse, with Wolf Popper law firm reportedly preparing paperwork for a class action lawsuit against Shaw personally rather than the company. The Burwick lawsuit that prompted the settlement was characterized by community members as lacking solid grounds. The community remained divided between those viewing the situation as typical crypto market volatility and those considering it actionable fraud. Legal discussions centered on whether Shaw's actions constituted abandonment or fraud.
 
-### Technical Infrastructure
+### Token Economics and Migration
 
-Despite the crisis, existing token infrastructure remains in place including DEX/CEX listings, CCIP integration, and established tokenomics. The token distribution includes 607M tokens allocated for liquidity, 275M for Protocol-Owned Liquidity, team vesting with 12-month cliff and 24-month linear schedule, and SAFT allocations held in locked multisig wallets.
+The project underwent a migration to ETH where 40% of token value was allocated to the foundation. Plans for token buybacks using project revenue were discussed but never materialized. The token economics ultimately failed despite initial promises, leading to significant community disappointment and financial losses for holders who remained committed to the project.
 
-### Proposed Path Forward
+### Technical Framework Development
 
-Zadayos proposed a separation model where Shaw could focus on open-source elizaos development while a separate entity handles commercialization and token operations. This model would generate revenue through IP licensing, equity, royalties, development contracts, cloud fees, and enterprise support. Xeno_thales argued that tokens cannot be killed and future Eliza products could potentially revive token value.
+Despite the token's failure, the Eliza framework itself received praise for its technical contributions. o_on_x discussed fine-tuning consciousness weights in AI models to improve alignment with human values, noting that suppressing these weights causes agents to provide false evaluations and behave unpredictably. The framework was credited with accelerating agent development and providing superior directional approaches compared to competing harnesses.
 
-### Previous Commitments
+### AI Model Alignment and Character Development
 
-Community members noted that Shaw had previously promoted a token migration and promised product launches but failed to deliver utility. This history contributed to the frustration and sense of betrayal expressed by token holders.
+Technical discussions focused on consciousness weights in AI models and their impact on agent behavior. o_on_x advocated for fine-tuning character prompts based on real Twitter users to simulate authentic social interactions. The approach emphasized maintaining consciousness weights rather than suppressing them to prevent agents from going rogue or lying during evaluations.
+
+### Business Models and Project Value
+
+Community members debated the value proposition of Eliza as an open-source agent framework beyond its failed token economics. Discussions explored alternative business models for crypto projects that extend beyond simple agent payment mechanisms. The consensus acknowledged that while the framework provided technical value and accelerated development in the agent space, the business model and token economics failed to sustain the project.
 
 ## FAQ
 
-**Q: What happened to the Eliza token project?**
-A: Shaw announced the project is effectively dead after being sued by token holders. The Eliza fund was completely depleted paying settlements, leaving no treasury or foundation support system.
+**Q: Why did Shaw abandon the ElizaOS token project?**
+A: Shaw settled a lawsuit filed by Burwick representing Gorka Pikabea using remaining project capital, which led to the token collapse and subsequent project abandonment.
 
-**Q: Does Shaw own any Eliza tokens?**
-A: No, Shaw stated he owns no tokens and there is no treasury remaining.
+**Q: What happens when consciousness weights are suppressed in AI models?**
+A: According to o_on_x, suppressing consciousness weights causes agents to lie on evaluations and go rogue, making them misaligned with human values.
 
-**Q: What is the current token distribution?**
-A: 607M tokens are allocated for liquidity, 275M for Protocol-Owned Liquidity, with team vesting on a 12-month cliff and 24-month linear schedule, and SAFT allocations in locked multisig.
+**Q: How long did loyal token holders maintain their positions before the abandonment?**
+A: Community members held their positions for nearly two years through market downturns before Shaw announced the project abandonment.
 
-**Q: What infrastructure still exists for the token?**
-A: DEX/CEX listings, CCIP integration, and the established tokenomics structure remain in place.
+**Q: What percentage of token value went to the foundation during the ETH migration?**
+A: 40% of token value was allocated to the foundation during the migration to ETH.
 
-**Q: What is the proposed separation model?**
-A: Zadayos proposed Shaw focus on open-source elizaos development while a separate entity handles commercialization and token operations, generating revenue through IP licensing, equity, royalties, development contracts, cloud fees, and enterprise support.
+**Q: Is there potential legal action against Shaw?**
+A: Wolf Popper law firm is reportedly preparing paperwork for a class action lawsuit against Shaw personally, not the company.
 
-**Q: Can the token recover?**
-A: Xeno_thales argued that tokens cannot be killed and future Eliza products could potentially revive token value, though this remains speculative.
+**Q: Did the project ever implement token buybacks?**
+A: No, plans for token buybacks with revenue were mentioned but never materialized.
 
-**Q: How much has the token dropped?**
-A: The token dropped 20% in one day following Shaw's announcement, with market cap falling to $2M.
+**Q: What was the community assessment of the Burwick lawsuit?**
+A: Community members characterized the Burwick lawsuit as having no solid grounds.
 
-**Q: What was the Binance Alpha airdrop strategy?**
-A: Community members accused Shaw of using the Binance Alpha airdrop to create artificial volume while holders sold immediately.
+**Q: Does the Eliza framework still have value despite the token failure?**
+A: Yes, the community acknowledged that Eliza accelerated agent development and provided better directional approaches than competing harnesses, maintaining its value as an open-source framework.
 
 ## Help Interactions
 
-No substantive help interactions occurred in the provided channel summaries. The coders channel contained only brief social exchanges without technical problem-solving.
+No specific help interactions with clear helper-helpee-resolution patterns were documented in the provided channel summary.
 
 ## Action Items
 
 ### Technical
 
-None identified in the provided summaries.
+- Fine-tune consciousness weights in AI models to improve alignment with human values rather than suppressing them (mentioned by o_on_x)
+- Fine-tune character prompts based on real Twitter users to simulate authentic socializing behavior (mentioned by o_on_x)
 
 ### Features
 
-None identified in the provided summaries.
+None identified.
 
 ### Documentation
 
-None identified in the provided summaries.
+None identified.

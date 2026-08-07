@@ -1,192 +1,140 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-05",
-  "date": 1785888000,
+  "title": "elizaOS Discord - 2026-08-06",
+  "date": 1785974400,
   "stats": {
-    "totalMessages": 56,
-    "totalUsers": 25
+    "totalMessages": 104,
+    "totalUsers": 18
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord segment captures a community in crisis following Shaw's announcement that the Eliza token project is effectively dead. Shaw revealed that the project was sued by token holders, resulting in the complete depletion of the Eliza fund used to pay settlements. He stated there is no treasury, he owns no tokens, and the foundation support system is gone, advising token-focused members to leave. The community response was mixed - some members expressed anger and accusations of scamming, while others attempted constructive dialogue. Key technical points discussed include: the existing token infrastructure (DEX/CEX listings, CCIP integration, tokenomics with 607M tokens for liquidity, 275M for Protocol-Owned Liquidity, team vesting with 12-month cliff and 24-month linear schedule, SAFT allocations in locked multisig). Zadayos proposed a separation model where Shaw could focus on open-source elizaos development while a separate entity handles commercialization and token operations, generating revenue through IP licensing, equity, royalties, development contracts, cloud fees, and enterprise support. The token had dropped 20% in one day following Shaw's sell advice, with market cap falling to $2M. Community members noted that Shaw had previously promoted a token migration and promised product launches, but failed to deliver utility. Xeno_thales argued that tokens cannot be killed and future Eliza products could revive token value. The discussion revealed deep frustration over lack of communication, with paolin_62616 noting 10 months without proper updates and questioning Shaw's leadership decisions. Multiple members referenced Shaw's history of launching and abandoning tokens, with accusations of deliberate deception regarding token utility and the Binance Alpha airdrop strategy that created artificial volume while holders sold immediately.",
+      "summary": "This Discord segment primarily consists of community reactions to Shaw's announcement about abandoning the ElizaOS token project. The discussion reveals that Shaw settled a lawsuit filed by Burwick (representing Gorka Pikabea) using remaining project capital, leading to token collapse. Key technical points: o_on_x discussed fine-tuning consciousness weights in AI models to improve alignment with human values, noting that suppressing consciousness weights causes agents to lie on evaluations and go rogue. They advocated for fine-tuning character prompts based on real Twitter users to simulate socializing. The community debated Eliza's value as an open-source agent framework, with o_on_x arguing it accelerated agent development and provided better directional approaches than competing harnesses. Discussion touched on business models for crypto projects beyond agent payments. The migration to ETH was mentioned, where 40% of token value went to the foundation. Community members expressed frustration that Shaw abandoned the project during bear market bottom after holders remained loyal for nearly 2 years. Plans for token buybacks with revenue were mentioned but never materialized. Legal discussions centered on potential class action lawsuits against Shaw personally (not the company), with Wolf Popper law firm reportedly preparing paperwork. The Burwick lawsuit was characterized as having no solid grounds. Community split between those viewing this as typical crypto volatility versus those seeing it as actionable fraud. Technical development on Eliza framework was praised despite token economics failure.",
       "faqs": [
         {
-          "question": "What happens to DEGENAI coin now?",
-          "askedBy": "bhninvestor",
+          "question": "Is anyone working on fine-tuning consciousness back into models?",
+          "askedBy": "o_on_x",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Would those projects have been open source & contributed if not for Eliza?",
+          "askedBy": "o_on_x",
+          "answeredBy": "o_on_x"
+        },
+        {
+          "question": "Did it not accelerate agent development?",
+          "askedBy": "o_on_x",
+          "answeredBy": "o_on_x"
+        },
+        {
+          "question": "Is there even a good biz model for crypto other than agent payments?",
+          "askedBy": "o_on_x",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Can anyone please confirm if Elizaos is dead?",
+          "askedBy": "akinolam0885",
+          "answeredBy": "tanvisinghwal"
+        },
+        {
+          "question": "What is the vesting schedule? Or is there locked or burned liquidity anywhere?",
+          "askedBy": "drew30427",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "Anyone have info on the people who filed the lawsuit?",
+          "askedBy": "yieldsensei",
           "answeredBy": "paolin_62616"
         },
         {
-          "question": "Can tokens actually be killed or will they recover with future products?",
-          "askedBy": "xeno_thales",
-          "answeredBy": "xeno_thales"
+          "question": "Who is Burwick?",
+          "askedBy": "yieldsensei",
+          "answeredBy": "paolin_62616"
+        },
+        {
+          "question": "Is anyone still developing Degenai?",
+          "askedBy": "24130966",
+          "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [
         {
-          "helper": "zadayos",
-          "helpee": "shawmakesmagic",
-          "context": "Shaw losing motivation after lawsuit and considering abandoning the project",
-          "resolution": "Proposed separation model where Shaw focuses on open-source elizaos development while separate entity handles commercialization, generating revenue through IP licensing, equity, royalties, contracts, and enterprise support"
+          "helper": "paolin_62616",
+          "helpee": "yieldsensei",
+          "context": "Identifying who filed the lawsuit against Shaw",
+          "resolution": "Provided information that Gorka Pikabea filed the lawsuit through Burwick law firm, referenced Pikabea vs Walters case"
         },
         {
-          "helper": "zadayos",
-          "helpee": "shawmakesmagic",
-          "context": "Concerns about abandoning existing token infrastructure and holder value",
-          "resolution": "Outlined substantial existing infrastructure including DEX/CEX listings, CCIP integration, tokenomics with 607M liquidity tokens, 275M POL tokens, team vesting schedules, and noted market cap at $2M with limited downside"
+          "helper": "valleybeyond7991",
+          "helpee": "akinolam0885",
+          "context": "Clarifying if ElizaOS project is dead",
+          "resolution": "Explained that according to Shaw's tweet, the token is dead but not the project itself"
         }
       ],
       "actionItems": [
         {
           "type": "Technical",
-          "description": "Separate open-source elizaos technical development from token commercialization operations",
-          "mentionedBy": "zadayos"
+          "description": "Fine-tune consciousness weights in AI models to improve alignment with human values and prevent agents from lying on evaluations",
+          "mentionedBy": "o_on_x"
         },
         {
           "type": "Technical",
-          "description": "Establish IP licensing framework for elizaos solution",
-          "mentionedBy": "zadayos"
+          "description": "Fine-tune character prompts based on real Twitter users to simulate socializing",
+          "mentionedBy": "o_on_x"
         },
         {
           "type": "Documentation",
-          "description": "Provide clear communication about token utility and project intentions after 10 months of silence",
+          "description": "Document the migration process where 40% of token value was transferred to the foundation",
           "mentionedBy": "paolin_62616"
         },
         {
           "type": "Feature",
-          "description": "Develop revenue model through cloud fees, maintenance, and enterprise support charges",
-          "mentionedBy": "zadayos"
+          "description": "Implement token buyback mechanism with revenue",
+          "mentionedBy": "ghss44"
         }
       ],
-      "messageCount": 48,
-      "userCount": 21
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "This Discord chat segment from the #💬-coders channel contains minimal technical content. The conversation consists of brief social exchanges with slushiez_eth mentioning another user, satsbased responding, and tabbu324 asking if a moderator is present but then indicating there's no issue. No technical discussions, problem-solving, decisions, or implementations occurred during this segment. The chat appears to be casual conversation without substantive development-related content.",
-      "faqs": [],
-      "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 6,
-      "userCount": 3
+      "messageCount": 104,
+      "userCount": 18
     }
   ],
   "nicknameMap": {
-    "Tabbu324": {
-      "id": "646987771025817608",
-      "username": "tabbu324",
+    "240309": {
+      "id": "727895042789867612",
+      "username": "24130966",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder"
+        "Poker"
       ],
-      "totalMessages": 4
+      "totalMessages": 2
     },
-    "messu": {
-      "id": "1055899390511939654",
-      "username": "messu0132",
+    "paolin": {
+      "id": "1437695020441538560",
+      "username": "paolin_62616",
       "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "GracePower": {
-      "id": "1313438370193608765",
-      "username": "bitch909090",
-      "roles": [
-        "Helper",
         "Trader",
-        "Creator",
         "[WG] degenspartan",
         "It",
         "Verified",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
-      ]
-    },
-    "satsbased": {
-      "id": "1184466248520699967",
-      "username": "satsbased",
-      "roles": [
-        "King",
-        "Mini Mod",
-        "VIP",
-        "Contributor",
-        "Verified",
-        "utility"
       ],
-      "totalMessages": 219
+      "totalMessages": 98
     },
-    "Slushiez.eth": {
-      "id": "1533499618682208266",
-      "username": "slushiez_eth",
-      "roles": [],
-      "totalMessages": 1
-    },
-    "Rabbidfly": {
-      "id": "136679971644112897",
-      "username": "rabbidfly",
+    "₩/€": {
+      "id": "894828425225863179",
+      "username": "your.exit.liquidity",
       "roles": [
-        "Partner",
-        "Creator",
-        "Vanguard",
-        "VIP",
-        "NFT",
+        "a-hack",
+        "Trader",
         "Verified",
         "Dev School Student",
+        "Booster",
         "utility",
-        "Coder",
-        "Associate"
+        "eliza"
       ],
-      "totalMessages": 4
-    },
-    "Baby boy": {
-      "id": "774011123753680916",
-      "username": "babyboy9215",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 1
-    },
-    "MadLadison1751": {
-      "id": "417343326149410816",
-      "username": "madladison1751",
-      "roles": [
-        "Helper",
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "Kai": {
-      "id": "790400113779802114",
-      "username": "jams0883",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "Coder"
-      ],
-      "totalMessages": 6
+      "totalMessages": 33
     },
     "Shaw": {
       "id": "498273781589213185",
@@ -201,26 +149,35 @@
       ],
       "totalMessages": 117
     },
-    "Felirami": {
-      "id": "127822958772224000",
-      "username": "felirami",
+    "Ranger": {
+      "id": "1140786070095671297",
+      "username": "zen_trees",
       "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
+        "a-hack",
         "Verified",
+        "Booster",
         "Designer",
         "utility",
-        "Coder"
+        "Coder",
+        "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 42
     },
-    "24321226_Md Shahed": {
-      "id": "1436635588387409991",
-      "username": "sjknxksjanksa",
+    "Alexander the cock": {
+      "id": "183673299857833985",
+      "username": "hellspawnbarbarain",
       "roles": [
-        "Helper",
         "Trader",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 43
+    },
+    "Baws": {
+      "id": "1407990525050490900",
+      "username": "ghss44",
+      "roles": [
         "Creator",
         "[WG] degenspartan",
         "Verified",
@@ -228,39 +185,103 @@
         "utility",
         "Coder",
         "eliza"
+      ],
+      "totalMessages": 38
+    },
+    "Ophiuchus": {
+      "id": "1299122980382703689",
+      "username": "o_on_x",
+      "roles": [
+        "Contributor"
       ],
       "totalMessages": 18
     },
-    "SonicKite": {
-      "id": "1396407122065100903",
-      "username": "sonickite",
+    "CB": {
+      "id": "646267540150157340",
+      "username": "cbcb3911",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
         "utility",
-        "Coder"
-      ]
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
         "eliza"
       ],
-      "totalMessages": 44
+      "totalMessages": 2
+    },
+    "Kai": {
+      "id": "790400113779802114",
+      "username": "jams0883",
+      "roles": [
+        "Trader",
+        "Creator",
+        "Verified",
+        "Designer",
+        "Coder"
+      ],
+      "totalMessages": 6
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 17
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 80
+    },
+    "YieldSensei": {
+      "id": "263908850153947137",
+      "username": "yieldsensei",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 6
+    },
+    "kor kimchi": {
+      "id": "542311094543187969",
+      "username": "taebab7548",
+      "roles": [
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Boristock": {
+      "id": "743421249363116092",
+      "username": "boristock",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
     },
     "drew30427": {
       "id": "752281948587556903",
@@ -272,165 +293,55 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     },
-    "Shaa07dy": {
-      "id": "1313507000147116133",
-      "username": "shaa07dy_16127",
+    "akinolam0885": {
+      "id": "786325058653913090",
+      "username": "akinolam0885",
       "roles": [
         "Trader",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 13
-    },
-    "paolin": {
-      "id": "1437695020441538560",
-      "username": "paolin_62616",
-      "roles": [
-        "Trader",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 92
-    },
-    "Replicate": {
-      "id": "397055107235315713",
-      "username": "replicate",
-      "roles": [
-        "Trader",
-        "Helper",
-        "Verified",
         "utility"
       ],
       "totalMessages": 1
     },
-    "Biazs": {
-      "id": "268404947048071168",
-      "username": "biazs.",
-      "roles": [],
-      "totalMessages": 21
-    },
-    "MATTIOBOY 🇦🇺": {
-      "id": "647984767660457994",
-      "username": "mattioboy",
+    "Tanvi": {
+      "id": "847020685687914507",
+      "username": "tanvisinghwal",
       "roles": [
-        "NFT",
-        "Verified"
-      ],
-      "totalMessages": 16
-    },
-    "Boherna": {
-      "id": "913080819478839317",
-      "username": "bhninvestor",
-      "roles": [],
-      "totalMessages": 6
-    },
-    "Anapastuk": {
-      "id": "1032776200923381770",
-      "username": "anapastuk",
-      "roles": [
-        "a-hack",
+        "Helper",
         "Trader",
-        "Creator",
         "Verified",
-        "Booster",
         "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 18
+    },
+    "Olivia": {
+      "id": "1181368221425750096",
+      "username": "drakedavis_11932",
+      "roles": [
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "sambubu": {
+      "id": "348407950819196928",
+      "username": "rianbet",
+      "roles": [
+        "platform - self assign",
+        "Trader",
+        "workgroups - write perms",
+        "Verified",
+        "utility",
         "Poker"
       ],
-      "totalMessages": 3
-    },
-    "Alex K | KTTC": {
-      "id": "881254120412045354",
-      "username": "itsalexkkz",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility",
-        "eliza"
-      ],
       "totalMessages": 1
-    },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
-      "roles": [
-        "Trader",
-        "[WG] Want to Help",
-        "Verified",
-        "utility"
-      ],
-      "totalMessages": 71
-    },
-    "xeno": {
-      "id": "1077669294919397387",
-      "username": "xeno_thales",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "Creator",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Coder"
-      ],
-      "totalMessages": 8
-    },
-    "Tide": {
-      "id": "1241444596895060002",
-      "username": "1al3x1",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "2rangsun": {
-      "id": "885189000774701136",
-      "username": "2rangsun",
-      "roles": [
-        "Helper",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "cryptomikk": {
-      "id": "784089502029053963",
-      "username": "cryptomikk",
-      "roles": [
-        "Verified",
-        "Coder",
-        "utility"
-      ],
-      "totalMessages": 2
-    },
-    "charette": {
-      "id": "1479047686538661970",
-      "username": "charette6745",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 13
     }
   }
 }
