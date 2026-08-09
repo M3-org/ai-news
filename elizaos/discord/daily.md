@@ -1,82 +1,61 @@
-# elizaOS Discord - 2026-08-07
+# elizaOS Discord - 2026-08-08
 
 ## Summary
 
-### Project Leadership and Token Status
+### Token Status and Project Pivot
 
-Shaw clarified his position regarding the ElizaOS token and project governance. He owns 0% of tokens and has no financial stake in the project. The foundation treasury is depleted, and his team left when funding ran out. Shaw has been living off savings for 6 months. He expressed strong desire to discontinue the token from the previous project, with Dannynor supporting this decision and noting the token was unrelated to current work. The Burwick lawsuit was settled for $400k due to insufficient legal funds, with only $400k available versus the $2M needed for full litigation.
+The ai16z/ElizaOS project has officially abandoned its token following a class-action lawsuit settlement in early August 2026. Shaw Walters publicly declared the token "dead" after the settlement depleted project resources. The foundation is winding down with no further buybacks or token support planned. This decision came after the project attempted a token rebranding, which was subsequently abandoned months later, leaving token holders without closure. The core team has pivoted to focus exclusively on open-source AI agent software development, completely decoupled from token economics.
 
-### Project Direction and Community Management
+### Team Restructuring and Development Philosophy
 
-Shaw announced ElizaOS development continues regardless of token status, focusing on building AI agent technology for normal users rather than crypto trading tools. He expressed burnout from token price speculation and negativity, threatening to delete or reset the server to focus on technical discussions only. Shaw proposed banning price talk and pivoting to a tech-focused community. The discussion revealed a community split between long-term builders who remain quiet and short-term speculators who complain vocally. Shaw solicited input on ElizaOS app features for normal users.
+Shaw Walters explained that during the bull market, the project faced exploitation from opportunistic contributors who joined for financial gain rather than genuine contribution. The team discovered that hiring mercenaries rather than committed builders cost more value than they created. The project has now restructured to a smaller, focused team moving forward without tokens or what Shaw termed "fuckery." Development is reportedly progressing rapidly under this new structure.
 
-### Strategic Partnerships and Product Vision
+### Community Response and Legal Concerns
 
-Shaw announced a partnership with a private compute company and phone company to make ElizaOS the native operating system. He confirmed keeping Web3 infrastructure but hiding it from the user-facing experience, advocating for seamless crypto integration without forcing wallet addresses on users. Dannynor noted that inference capital markets are positioned as a significant future development area. Any future token fundraising should maintain centralized control with Shaw retaining decision-making authority.
+Community members expressed significant frustration about the token rebranding followed by abandonment. Token holders are seeking clarity on the token's status, with several users pointing out inconsistencies between promoting a rebranded token and then abandoning it. Some community members threatened legal action over substantial financial losses. The community remains divided on whether the project truly abandoned the token or if there's potential for recovery. Despite these challenges, Shaw acknowledged that many community members lost money and expressed a desire to remedy the situation.
 
-### Feature Suggestions and Use Cases
+### Ongoing Development and New Interest
 
-Community members provided suggestions for ElizaOS applications targeting normal users. Proposals included health and fitness tracking, research assistants with document integration, tax optimization agents, and construction or DIY project assistants. Technical capabilities mentioned include deploying apps from conversation and custom social feeds. fleothyphon suggested creating a DAO-focused agent and shared a 7000 plus document GitHub repository on DAO governance.
+Despite the token situation, the underlying open-source AI agent software development continues. New members joined the community expressing interest in building Web3 agent tools. Existing members discussed the broader market recovery. The technical focus has shifted entirely to software development without token economics considerations.
 
-### DeFi Technical Development
+### Community Support and Redemption
 
-faouzi_122 shared progress on building a deterministic O(1) calculator for impermanent loss and breakeven corridor calculations in constant-product pools using pure algebraic methods rather than estimation. They posed a question to the DeFi agent development community about whether formula-based calculations are sufficient or if reproducible and verifiable calculation traces are needed for audit purposes in production systems. The emphasis was on deterministic, constant-time complexity solutions for financial calculations in automated market makers.
+In the partners channel, supportive community members acknowledged that Shaw was taken advantage of by others during the project's earlier phases. Long-time followers expressed understanding of the challenges faced and noted satisfaction that things are improving, referencing an ongoing "redemption arc" for the project leadership.
 
 ## FAQ
 
-**Q: Does Shaw own any ElizaOS tokens?**
-A: No, Shaw clarified he owns 0% of tokens and has no financial stake in the project.
+**Q: What is the current status of the ai16z/ElizaOS token?**
+A: The token has been officially declared "dead" by Shaw Walters in early August 2026 following a class-action lawsuit settlement that depleted project resources. The foundation is winding down with no further buybacks or token support planned.
 
-**Q: What happened to the foundation treasury?**
-A: The foundation treasury is depleted. Shaw's team left when funding ran out, and he has been living off savings for 6 months.
+**Q: Why did the project abandon the token?**
+A: The project faced a class-action lawsuit settlement that depleted resources. Additionally, Shaw explained that during the bull market, the team was exploited by opportunistic contributors who joined for financial gain rather than genuine contribution, costing more value than they created.
 
-**Q: Why was the Burwick lawsuit settled?**
-A: The lawsuit was settled for $400k due to insufficient legal funds. Only $400k was available versus the $2M needed for full litigation.
+**Q: Is the ElizaOS software development continuing?**
+A: Yes, the underlying open-source AI agent software development continues. The project has restructured to a smaller, focused team and development is reportedly progressing rapidly, now completely decoupled from token economics.
 
-**Q: Will ElizaOS development continue despite token issues?**
-A: Yes, Shaw confirmed ElizaOS development continues regardless of token status, focusing on AI agent technology for normal users.
+**Q: What happened with the token rebranding?**
+A: The project attempted a token rebranding but subsequently abandoned it months later, leaving token holders without closure. This inconsistency has been a major source of frustration in the community.
 
-**Q: What is the new partnership Shaw announced?**
-A: Shaw announced a partnership with a private compute company and phone company to make ElizaOS the native operating system.
+**Q: Will there be any compensation for token holders?**
+A: Shaw acknowledged that many community members lost money and expressed a desire to remedy the situation, but no specific compensation plans have been announced. The foundation is winding down with no further buybacks planned.
 
-**Q: Will Web3 features be removed from ElizaOS?**
-A: No, Shaw confirmed keeping Web3 infrastructure but hiding it from the user-facing experience for seamless integration without forcing wallet addresses on users.
-
-**Q: What approach did faouzi_122 use for impermanent loss calculations?**
-A: faouzi_122 built a deterministic O(1) calculator using pure algebraic methods rather than estimation for constant-product pools.
-
-**Q: What governance model is recommended for future token fundraising?**
-A: Dannynor advised maintaining centralized control with Shaw retaining decision-making authority for any future token initiatives.
+**Q: Can new contributors still join the project?**
+A: Yes, new members are joining and expressing interest in building Web3 agent tools. The project continues as an open-source software initiative focused on AI agents.
 
 ## Help Interactions
 
-**Helper:** faouzi_122
-**Helpee:** DeFi agent development community
-**Resolution:** faouzi_122 offered to share implementation details of their deterministic O(1) impermanent loss calculator with interested developers and posed a question about whether formula-based calculations are sufficient or if verifiable calculation traces are needed for audit purposes.
-
-**Helper:** fleothyphon
-**Helpee:** Community
-**Resolution:** fleothyphon shared a 7000 plus document GitHub repository on DAO governance and suggested creating a DAO-focused agent.
+**Helper:** dannynor
+**Helpee:** shawmakesmagic
+**Resolution:** Dannynor provided emotional support and community perspective, noting that long-time followers understand Shaw was taken advantage of by others and expressing satisfaction that things are improving with an ongoing "redemption arc."
 
 ## Action Items
 
 ### Technical
 
-- Build deterministic O(1) calculator for impermanent loss and breakeven corridor calculations using pure algebraic methods (mentioned by faouzi_122)
-- Determine whether reproducible and verifiable calculation traces are needed for DeFi audit purposes in production systems (mentioned by faouzi_122)
-- Implement seamless Web3 infrastructure that remains hidden from user-facing experience (mentioned by Shaw)
-
-### Features
-
-- Develop health and fitness tracking capabilities for normal users (mentioned by community members)
-- Create research assistant with document integration (mentioned by community members)
-- Build tax optimization agent (mentioned by community members)
-- Implement construction and DIY project assistant (mentioned by community members)
-- Enable deploying apps from conversation (mentioned by Shaw)
-- Create custom social feeds functionality (mentioned by Shaw)
-- Develop DAO-focused agent (mentioned by fleothyphon)
+- Continue open-source AI agent software development with restructured smaller team (mentioned by Shaw Walters)
+- Support new members interested in building Web3 agent tools (mentioned by community members)
 
 ### Documentation
 
-- Share implementation details of deterministic impermanent loss calculator with interested developers (mentioned by faouzi_122)
-- Reference 7000 plus document GitHub repository on DAO governance (mentioned by fleothyphon)
+- Provide formal closure and clarity on token status for remaining holders (mentioned by community members)
+- Document the project's pivot away from token economics to pure open-source development (implied by Shaw Walters)

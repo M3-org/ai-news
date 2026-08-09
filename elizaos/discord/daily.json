@@ -1,226 +1,66 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-07",
-  "date": 1786060800,
+  "title": "elizaOS Discord - 2026-08-08",
+  "date": 1786147200,
   "stats": {
-    "totalMessages": 199,
-    "totalUsers": 22
+    "totalMessages": 44,
+    "totalUsers": 18
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "Shaw (shawmakesmagic) addressed community tensions regarding the ElizaOS token and project direction. Key points: Shaw clarified he owns 0% of tokens, has no financial stake, and the foundation treasury is depleted. His team left when funding ran out, and he's been living off savings for 6 months. The Burwick lawsuit was settled for $400k due to insufficient legal funds ($400k available vs $2M needed). Shaw emphasized ElizaOS development continues regardless of token status - he's focused on building AI agent technology for normal users, not crypto trading tools. He announced a partnership with a private compute company and phone company to make ElizaOS the native OS. Shaw expressed burnout from token price speculation and negativity, threatening to delete/reset the server to focus on technical discussions only. He proposed banning price talk and pivoting to a tech-focused community. Community members like fleothyphon suggested creating a DAO-focused agent and shared a 7000+ doc GitHub repository on DAO governance. Shaw solicited input on ElizaOS app features for normal users, receiving suggestions for health/fitness tracking, research assistants with document integration, tax optimization agents, and construction/DIY project assistants. Technical capabilities mentioned include deploying apps from conversation and custom social feeds. The discussion revealed community split between long-term believers (quiet, still building) and short-term speculators (vocal complainers). Shaw confirmed keeping Web3 infrastructure but hiding it from user-facing experience, advocating for seamless crypto integration without forcing wallet addresses on users.",
+      "summary": "The discussion centers on the aftermath of the ai16z/ElizaOS token situation. Shaw Walters explained the project's pivot away from tokens, stating that during the bull market, the team faced exploitation from opportunistic contributors who joined for financial gain rather than genuine contribution. He emphasized that hiring mercenaries rather than committed builders cost more value than they created. Shaw announced the team is now smaller, focused, and moving forward without tokens or \"fuckery,\" with development progressing rapidly. A critical announcement emerged that in early August 2026, Shaw publicly declared the token \"dead\" following a class-action lawsuit settlement that depleted resources. The foundation is winding down with no further buybacks or token support planned, though the underlying open-source AI agent software development continues. Community members expressed frustration about the token rebranding and subsequent abandonment, with holders seeking clarity on the token's status. Several users pointed out inconsistencies between promoting a rebranded token and then abandoning it months later, leaving holders without closure. Some threatened legal action over significant financial losses. The community debated whether the project truly abandoned the token or if there's potential for recovery. New members joined expressing interest in building Web3 agent tools, while existing members discussed the broader market recovery with \"shitters\" leading the way. The core technical focus shifted entirely to the open-source software development, decoupled from any token economics.",
       "faqs": [
         {
-          "question": "If you were offered 100 million tokens right now to keep you motivated, how about we buy more tokens and send them to your wallet?",
-          "askedBy": "zadayos",
-          "answeredBy": "shawmakesmagic - declined, stating no interest in crypto or money, just wants to build AI agents"
+          "question": "Is the ElizaOS token completely dead?",
+          "askedBy": "noryfy",
+          "answeredBy": "batman8007"
         },
         {
-          "question": "Can I buy and hold tokens to use Elizao Cloud services? Are there any cloud benefits for Elizaos holders?",
-          "askedBy": "zadayos",
+          "question": "Will the GitHub repository continue to receive updates or will it be archived?",
+          "askedBy": "noryfy",
           "answeredBy": "Unanswered"
         },
         {
-          "question": "Has anyone here tried using ElizaOS with Replit or other vibe coding tools?",
-          "askedBy": "mooncake1988",
-          "answeredBy": "fifogarihafilag and chulylooly - confirmed Replit works fine for quick tests but not serious work"
-        },
-        {
-          "question": "What do you want to see from an Eliza app and assistant? No crypto/economic, boring normal stuff",
-          "askedBy": "shawmakesmagic",
-          "answeredBy": "Multiple users - suggestions included health/fitness buddy, research assistant with Word integration, tax optimization agent, construction DIY assistant"
-        },
-        {
-          "question": "Is google docs ok or need word for the research assistant?",
-          "askedBy": "shawmakesmagic",
-          "answeredBy": "om1d_sa - Word is much better"
-        },
-        {
-          "question": "Is the way the compute works similar to hello minds?",
-          "askedBy": "ross.ross.ross",
-          "answeredBy": "Unanswered"
-        },
-        {
-          "question": "How did all the og Eliza people meet? Just from building?",
-          "askedBy": "ross.ross.ross",
-          "answeredBy": "Unanswered"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "fleothyphon",
-          "helpee": "shawmakesmagic",
-          "context": "Suggested creating new server with strict no-token-price-discussion rule to maintain tech-only focus",
-          "resolution": "Shaw agreed with the approach"
-        },
-        {
-          "helper": "fleothyphon",
-          "helpee": "Community",
-          "context": "Shared GitHub repository with 7000+ docs on DAO governance and proposed building special agent for DAO community building",
-          "resolution": "Shaw confirmed he would check it out"
-        },
-        {
-          "helper": "ghss44",
-          "helpee": "shawmakesmagic",
-          "context": "Provided perspective that believers are quiet while complainers are noisy minority, suggested banning price talk but keeping server accessible",
-          "resolution": "Helped reframe Shaw's perception of community sentiment"
-        },
-        {
-          "helper": "fifogarihafilag and chulylooly",
-          "helpee": "mooncake1988",
-          "context": "Question about using ElizaOS with Replit",
-          "resolution": "Confirmed Replit works for quick tests but not serious work"
-        },
-        {
-          "helper": "fleothyphon",
-          "helpee": "shawmakesmagic",
-          "context": "Offered introduction to oliveeyay who he had talked to about Eliza a year ago",
-          "resolution": "Connection offered for potential collaboration"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Technical",
-          "description": "Partnership with private compute company and phone company to make ElizaOS native OS",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Turn on all the stuff built over the last year for new cool thing",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Build capability to spin up and deploy apps from conversation",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Implement custom social feeds feature - see what you want when you want",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Keep wallets, RPCs and Web3 infrastructure but hide from user-facing experience",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Technical",
-          "description": "Build payment functionality where users can say 'hey eliza pay danny' if Eliza knows who danny is",
-          "mentionedBy": "shawmakesmagic"
-        },
-        {
-          "type": "Feature",
-          "description": "Health and fitness buddy with workout optimization, macro-based meal suggestions, mood-based diet changes, peptide tracking, and grocery shopping optimization",
-          "mentionedBy": "dannynor"
-        },
-        {
-          "type": "Feature",
-          "description": "Research assistant that can write inside local Microsoft Word documents",
-          "mentionedBy": "om1d_sa"
-        },
-        {
-          "type": "Feature",
-          "description": "Tax optimization agent that retrieves local/applicable tax codes and presents legal paths to minimize taxes",
-          "mentionedBy": "magicyte"
-        },
-        {
-          "type": "Feature",
-          "description": "Construction assistant capable of drawing up bill of materials and schematic drawings based on minimal input/measurements for DIY projects",
-          "mentionedBy": "magicyte"
-        },
-        {
-          "type": "Documentation",
-          "description": "Create DAO-focused agent using 7000+ doc GitHub repository on DAO governance",
-          "mentionedBy": "fleothyphon"
-        },
-        {
-          "type": "Documentation",
-          "description": "Reset and reorganize server threads, implement ban agents for moderation",
-          "mentionedBy": "ghss44"
-        },
-        {
-          "type": "Documentation",
-          "description": "Create new server or wipe channels to establish tech-only space with strict no-price-discussion rule",
-          "mentionedBy": "shawmakesmagic and fleothyphon"
-        }
-      ],
-      "messageCount": 190,
-      "userCount": 21
-    },
-    {
-      "channelId": "1300025221834739744",
-      "channelName": "💬-coders",
-      "summary": "The channel discussion focused on DeFi development, specifically impermanent loss (IL) calculations for constant-product pools. faouzi_122 shared that they built a deterministic O(1) calculator for IL and breakeven corridor calculations using pure algebraic methods rather than estimation. They offered to share implementation details with interested developers. faouzi_122 also posed a question to the DeFi agent development community about whether formula-based calculations are sufficient or if reproducible/verifiable calculation traces are needed for audit purposes, suggesting this might be a pain point in production systems. The technical emphasis was on deterministic, constant-time complexity solutions for financial calculations in automated market makers. solify020 posted a service offering for blockchain and full-stack development work.",
-      "faqs": [
-        {
-          "question": "When your agent calculates impermanent loss and breakeven, is the formula alone enough, or do you need a reproducible/verifiable calculation trace for audit purposes?",
-          "askedBy": "faouzi_122",
+          "question": "What should holders do with their now worthless tokens?",
+          "askedBy": "shmotus",
           "answeredBy": "Unanswered"
         }
       ],
       "helpInteractions": [],
-      "actionItems": [],
-      "messageCount": 3,
-      "userCount": 2
+      "actionItems": [
+        {
+          "type": "Documentation",
+          "description": "Remove token links from ElizaOS X handle including Coingecko links and migration/allocation details from Eliza docs",
+          "mentionedBy": "valleybeyond7991"
+        },
+        {
+          "type": "Documentation",
+          "description": "Provide clear closure statement to token holders regarding final status of ai16z/ElizaOS token",
+          "mentionedBy": "valleybeyond7991"
+        },
+        {
+          "type": "Technical",
+          "description": "Continue development of open-source AI agent software without token integration",
+          "mentionedBy": "shawmakesmagic"
+        }
+      ],
+      "messageCount": 39,
+      "userCount": 17
     },
     {
       "channelId": "1301363808421543988",
       "channelName": "🥇-partners",
-      "summary": "This Discord chat segment from the partners channel contains a brief discussion about tokenomics and project governance. Shaw expressed strong negative sentiment about a token associated with a previous project, stating a desire to discontinue it. Dannynor affirmed this decision, noting that the token was unrelated to the current project and expressing support for Shaw's choice to eliminate it. The conversation touched on past experiences with individuals who exploited the project during its peak period, specifically mentioning the 'accelerate dao' initiative. Dannynor advised that any future token fundraising should maintain centralized control with Shaw retaining decision-making authority. The discussion concluded with a forward-looking statement about inference capital markets being positioned as a significant future development area. The conversation was primarily focused on lessons learned from past token experiences and governance considerations for future initiatives rather than active technical implementation or problem-solving.",
-      "faqs": [
-        {
-          "question": "What is the relationship between the token and the current project?",
-          "askedBy": "dannynor",
-          "answeredBy": "dannynor"
-        }
-      ],
-      "helpInteractions": [
-        {
-          "helper": "dannynor",
-          "helpee": "shawmakesmagic",
-          "context": "Providing validation and advice regarding token management and past negative experiences with token leechers",
-          "resolution": "Dannynor affirmed Shaw's decision to kill the token and advised maintaining control in any future token raises"
-        }
-      ],
-      "actionItems": [
-        {
-          "type": "Feature",
-          "description": "Ensure centralized power structure for any future token fundraising initiatives",
-          "mentionedBy": "dannynor"
-        },
-        {
-          "type": "Feature",
-          "description": "Develop inference capital markets as a strategic focus area",
-          "mentionedBy": "dannynor"
-        }
-      ],
-      "messageCount": 6,
+      "summary": "This Discord chat segment from the 🥇-partners channel contains a brief exchange between shawmakesmagic and dannynor. The conversation centers on community support and past challenges. Shawmakesmagic acknowledges the reality of their situation and expresses gratitude for community support, specifically mentioning that many community members lost money and expressing a desire to remedy that situation. Dannynor responds supportively, noting that those who followed from the beginning would understand that shawmakesmagic was taken advantage of by others. Dannynor expresses satisfaction that things are improving and references an ongoing 'redemption arc.' The exchange is brief and lacks technical discussions, implementation details, or problem-solving content. No specific technical decisions, code implementations, or architectural discussions are present in this segment. The conversation is primarily focused on community sentiment and past experiences rather than technical matters.",
+      "faqs": [],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 4,
       "userCount": 2
     }
   ],
   "nicknameMap": {
-    "240309": {
-      "id": "727895042789867612",
-      "username": "24130966",
-      "roles": [
-        "Verified",
-        "Poker"
-      ],
-      "totalMessages": 2
-    },
-    "DannyNOR NoFapArc": {
-      "id": "339480662895755274",
-      "username": "dannynor",
-      "roles": [
-        "VIP",
-        "Vanguard",
-        "Verified"
-      ],
-      "totalMessages": 55
-    },
     "Shaw": {
       "id": "498273781589213185",
       "username": "shawmakesmagic",
@@ -232,13 +72,7 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 219
-    },
-    "Solify": {
-      "id": "1458856350221340683",
-      "username": "solify020",
-      "roles": [],
-      "totalMessages": 5
+      "totalMessages": 232
     },
     "Faouzi122": {
       "id": "1509802771002687571",
@@ -252,16 +86,48 @@
       ],
       "totalMessages": 4
     },
-    "ValleyBeyond": {
-      "id": "294785651616907265",
-      "username": "valleybeyond7991",
+    "DannyNOR NoFapArc": {
+      "id": "339480662895755274",
+      "username": "dannynor",
+      "roles": [
+        "VIP",
+        "Vanguard",
+        "Verified"
+      ],
+      "totalMessages": 56
+    },
+    "shmotus": {
+      "id": "342024360556625922",
+      "username": "shmotus",
       "roles": [
         "Trader",
-        "[WG] Want to Help",
         "Verified",
-        "utility"
+        "utility",
+        "Coder",
+        "eliza"
       ],
-      "totalMessages": 93
+      "totalMessages": 1
+    },
+    "BATMAN": {
+      "id": "874178085413589023",
+      "username": "batman8007",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
     },
     "Zaday": {
       "id": "1194534149076299836",
@@ -276,23 +142,45 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 49
+      "totalMessages": 50
     },
-    "2rangsun": {
-      "id": "885189000774701136",
-      "username": "2rangsun",
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 98
+    },
+    "PlyDis": {
+      "id": "1189893406961442848",
+      "username": "dispin_17054",
       "roles": [
         "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
         "utility",
+        "Coder",
         "eliza"
-      ],
-      "totalMessages": 3
+      ]
     },
-    "Alexander the cock": {
-      "id": "183673299857833985",
-      "username": "hellspawnbarbarain",
-      "roles": [],
-      "totalMessages": 47
+    "Taco": {
+      "id": "654765979351646228",
+      "username": "crx92",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 19
     },
     "Gollo": {
       "id": "1345047486636757094",
@@ -303,60 +191,86 @@
         "Coder",
         "eliza"
       ],
+      "totalMessages": 2
+    },
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
+      "roles": [
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
+        "Creator",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
+        "Coder",
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 18
+    },
+    "Jayson": {
+      "id": "1289141755324792864",
+      "username": "jaysoncap",
+      "roles": []
+    },
+    "x402 Data Hub": {
+      "id": "1072194117431468133",
+      "username": "x402data_hub",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 2
+    },
+    "Alex": {
+      "id": "519075961891979265",
+      "username": "alxcnwy",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 2
+    },
+    "_human_on_earth_": {
+      "id": "567575655836024842",
+      "username": "_human_on_earth_",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder"
+      ],
       "totalMessages": 1
     },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
+    "Noryfyst": {
+      "id": "955785378609106995",
+      "username": "noryfy",
       "roles": [
-        "Trader",
-        "Creator",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 44
-    },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
+        "Helper",
         "Trader",
         "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 35
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 133
-    },
-    "YieldSensei": {
-      "id": "263908850153947137",
-      "username": "yieldsensei",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 8
-    },
-    "Mooncake": {
-      "id": "242666870438756352",
-      "username": "mooncake1988",
-      "roles": [
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 10
+      "totalMessages": 2
     },
     "satsbased": {
       "id": "1184466248520699967",
@@ -369,115 +283,33 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 221
+      "totalMessages": 223
     },
-    "Arceon": {
-      "id": "667765722939654147",
-      "username": "arceon3662",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
         "Trader",
-        "Creator",
-        "VIP",
-        "Contributor",
         "Verified",
-        "Designer",
-        "Announcements",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 3
-    },
-    "fleo-typhon": {
-      "id": "1468346793485140078",
-      "username": "fleothyphon",
-      "roles": [
-        "Helper",
-        "Trader",
-        "[WG] degenspartan",
-        "Verified",
-        "Fr",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 23
+      "totalMessages": 36
     },
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "Severus": {
+      "id": "719706161460543538",
+      "username": "severus9837",
       "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
+        "Verified"
       ],
-      "totalMessages": 24
-    },
-    "Baws": {
-      "id": "1407990525050490900",
-      "username": "ghss44",
-      "roles": [
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 41
-    },
-    "Tabbu324": {
-      "id": "646987771025817608",
-      "username": "tabbu324",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 5
-    },
-    "jin": {
-      "id": "213767993153290250",
-      "username": "dankvr",
-      "roles": [
-        "God",
-        "a-hack",
-        "regen",
-        "Trader",
-        "Creator",
-        "Moderator",
-        "Vanguard",
-        "Contributor",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "Core Dev",
-        "Coder"
-      ],
-      "totalMessages": 88
+      "totalMessages": 2
     },
     "MATTIOBOY 🇦🇺": {
       "id": "647984767660457994",
       "username": "mattioboy",
-      "roles": [
-        "NFT",
-        "Verified"
-      ],
-      "totalMessages": 17
+      "roles": [],
+      "totalMessages": 18
     },
     "ross": {
       "id": "906787451438260236",
