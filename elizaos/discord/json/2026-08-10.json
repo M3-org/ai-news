@@ -1,0 +1,135 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-08-10",
+  "date": 1786320000,
+  "stats": {
+    "totalMessages": 13,
+    "totalUsers": 7
+  },
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "This Discord chat segment contains minimal technical discussion. The primary topic revolves around the elizaOS token's market situation and exchange listings. One user (0x_cup) reported successfully implementing a transportation AI-agent using elizaOS, expressing confidence in the framework's future potential. The conversation otherwise focuses on token strategy, with users discussing whether to hold or sell positions. Multiple users mention that elizaOS token is listed on major exchanges including Bybit, MEXC, and KuCoin. There's frustration expressed about lack of progress over the past 9 months, with debate about next steps. The technical contribution is limited to the single implementation report without specific details about the transportation AI-agent architecture or implementation challenges.",
+      "faqs": [
+        {
+          "question": "When will elizaOS token be integrated at Jeju?",
+          "askedBy": "valleybeyond7991",
+          "answeredBy": "Unanswered"
+        },
+        {
+          "question": "What should we do about the current situation?",
+          "askedBy": "crx92",
+          "answeredBy": "valleybeyond7991"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Continue development and usage of elizaOS for AI-agent implementations to achieve excellent results",
+          "mentionedBy": "0x_cup"
+        }
+      ],
+      "messageCount": 13,
+      "userCount": 7
+    }
+  ],
+  "nicknameMap": {
+    "Gollo": {
+      "id": "1345047486636757094",
+      "username": "gollo0054",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 103
+    },
+    "Taco": {
+      "id": "654765979351646228",
+      "username": "crx92",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 27
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 46
+    },
+    "!0x_cup": {
+      "id": "1184804868892934184",
+      "username": "0x_cup",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [
+        "Moderator",
+        "Labs Alumni",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 232
+    },
+    "Johnson": {
+      "id": "951750794686906388",
+      "username": "johnson_2392",
+      "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "kojodollar#0000": {
+      "id": "1072467030667706479",
+      "username": "kojodollar",
+      "roles": [],
+      "totalMessages": 1
+    }
+  }
+}
