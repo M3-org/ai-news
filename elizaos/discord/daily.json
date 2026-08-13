@@ -1,200 +1,193 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-11",
-  "date": 1786406400,
+  "title": "elizaOS Discord - 2026-08-12",
+  "date": 1786492800,
   "stats": {
-    "totalMessages": 35,
-    "totalUsers": 12
+    "totalMessages": 95,
+    "totalUsers": 11
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord discussion segment primarily consists of community concerns and speculation regarding the ElizaOS token and project direction. The main technical discussion revolves around the potential transition from ElizaOS token to a MetaDAO structure. Key points include: Shaw's reported sale of $25M worth of ElizaOS tokens leaving him with only $40K, Bybit exchange threatening to delist ElizaOS with an ST (Special Treatment) tag indicating low liquidity, and community debate about whether ElizaOS is transitioning from a utility token to a memecoin. The MetaDAO concept is interpreted by some community members as potentially ending the ElizaOS token entirely, with Eliza becoming just an open-source engine without associated tokens. Community sentiment is largely negative, with members expressing concerns about token value drainage, lack of utility, and unclear project direction. There's speculation about whether Shaw will return to focus on the ElizaOS token through MetaDAO or if the token is being abandoned. The discussion lacks concrete technical implementations or solutions, focusing instead on tokenomics concerns and project governance questions.",
+      "summary": "Shaw announced a major strategic pivot away from web3/crypto, stating the team is leaving the token economy entirely and focusing on web2 consumer adoption. The ai16z token is effectively dead - the treasury was drained by legal costs and lawsuits from ex-holders. Shaw is now the sole remaining team member working without compensation. The project faced severe operational challenges: the $2.5B token had only $5M liquidity due to daos.fun creating a mintable token that prevented CEX listings. Multiple product launches failed - Milady team abandoned after getting bored, ElizaCloud had a lead dev on meth, auto.fun partners took payment then cloned the code for their own launchpad. Shaw admits critical mistakes: spreading too thin across projects, poor hiring decisions, trusting new people with major initiatives. Bull market hiring was disastrous - good engineers either launched their own tokens or left with in-house projects. The core Eliza framework remains in development with Shaw as sole designer/contributor - no external developers have added primitives. Shaw emphasizes he had only 1% ownership (donated), foundation had 10%, all went to zero preventing salary payments. The rebranding to ElizaOS and continued development gave holders false hope about token support. Shaw is attempting to launch an app store version in 4-6 weeks but token shilling in comments prevents mainstream adoption. He's frustrated by constant scammer accusations despite not selling his allocation (could have made $20M). The project is pivoting to traditional startup funding model to attract talent and build sustainable products.",
       "faqs": [
         {
-          "question": "What does MetaDAO mean for Eliza tokens?",
-          "askedBy": "Implied by community discussion",
-          "answeredBy": "boristock"
+          "question": "Why are you leaving web3 and pivoting to web2?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Token shilling under posts prevents normal user adoption, crypto culture turns off non-crypto people, constant scammer accusations, and inability to build consumer products in current crypto environment"
         },
         {
-          "question": "How much of Shaw's $25M in ElizaOS tokens does he have left?",
-          "askedBy": "tanvisinghwal",
-          "answeredBy": "tanvisinghwal"
+          "question": "What happened to the ai16z token and treasury?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Treasury completely drained by lawyers and ex-holders suing, team had no allocation at launch, some was donated but price went down so couldn't sustain operations, now completely cooked"
         },
         {
-          "question": "Should holders sell ElizaOS and buy AI16Z instead?",
-          "askedBy": "zadayos",
-          "answeredBy": "Unanswered"
+          "question": "Why couldn't you get CEX listings despite having a $2.5B token?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - daos.fun made a mintable token which prevented all CEX listings even though exchanges were initially on board, resulted in $2.5B token with only $5M liquidity"
         },
         {
-          "question": "What happens if Bybit delists ElizaOS?",
-          "askedBy": "tanvisinghwal",
-          "answeredBy": "Unanswered"
+          "question": "What happened to the ElizaCloud and Milady products?",
+          "askedBy": "davidhq",
+          "answeredBy": "shawmakesmagic - ElizaCloud lead dev was high on meth and fucking off, Milady team bailed once they got bored, products were impossible to build because people building them were insane"
         },
         {
-          "question": "Will Shaw bring real utilities and use cases to ElizaOS token?",
-          "askedBy": "tanvisinghwal",
-          "answeredBy": "Unanswered"
+          "question": "What happened with auto.fun partnership?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Paid external team for auto.fun with rev share, right after payment they used the code to launch another launchpad and left"
+        },
+        {
+          "question": "Why did good developers leave the project?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Good devs either launched their own tokens and left, or launched new products and took them when leaving, couldn't retain talent without equity to give"
+        },
+        {
+          "question": "How much ownership did you have in the token?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Had 1% donated by a holder, foundation had 10%, all from donations. In normal startup would have had $1M and 95% ownership"
+        },
+        {
+          "question": "When will the app be in the app store?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Trying to get app into app store in next 4-6 weeks"
+        },
+        {
+          "question": "Has anyone contributed to the core Eliza framework?",
+          "askedBy": "Community (implicit)",
+          "answeredBy": "shawmakesmagic - Nobody has added a single primitive to the framework to date, Shaw has been solo designer"
+        },
+        {
+          "question": "How old are you approximately?",
+          "askedBy": "davidhq",
+          "answeredBy": "shawmakesmagic - Unanswered (davidhq noted it's not public, valleybeyond7991 mentioned turning 30)"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "mooncake1988",
+          "helpee": "shawmakesmagic",
+          "context": "Shaw was emotionally distressed from constant attacks and criticism, expressing desire to delete everything and leave",
+          "resolution": "Advised to take a break, sleep on it, touch grass, use relaxation techniques, and let time pass to handle the impossible PR situation"
+        },
+        {
+          "helper": "davidhq",
+          "helpee": "shawmakesmagic",
+          "context": "Shaw struggling with team management, drug-addicted developers, and PR crisis",
+          "resolution": "Provided perspective that autistic people can attract problematic cohorts, validated Shaw's experience, suggested disconnecting and letting time pass, warned about health impacts"
+        },
+        {
+          "helper": "fifogarihafilag",
+          "helpee": "valleybeyond7991",
+          "context": "valleybeyond7991 mentioned turning 30 years old",
+          "resolution": "Wished happy birthday"
+        }
+      ],
+      "actionItems": [
+        {
+          "type": "Technical",
+          "description": "Launch app into app store within 4-6 weeks",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Technical",
+          "description": "Build something completely new beyond openclaw implementation",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Technical",
+          "description": "Focus exclusively on building Eliza core framework and cloud hosted version, avoid spreading thin",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Technical",
+          "description": "Add new primitives to core Eliza framework (currently has none from external contributors)",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Documentation",
+          "description": "Stop posting $elizaos token references under posts to enable mainstream adoption",
+          "mentionedBy": "shawmakesmagic"
+        },
+        {
+          "type": "Feature",
+          "description": "Implement proper hiring and vetting process to avoid problematic team members",
+          "mentionedBy": "shawmakesmagic"
+        }
+      ],
+      "messageCount": 92,
+      "userCount": 10
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "The chat segment contains minimal technical discussion. shawmakesmagic briefly mentioned plans to implement an agent to block unwanted content, though no implementation details were provided. x402data_hub announced the launch of x402 Data Hub, a Model Context Protocol (MCP) Server designed for zero-setup integration with AI agents and workflows including Claude, Cursor, and custom clients. The server provides three main datasets via MCP stdio tools: 1) saas/ai-api-pricing for live model costs and context windows from OpenRouter covering models like GPT-4o, Claude 3.5, and DeepSeek V3 with cost per 1M tokens, 2) events/v2ex-hot-topics for trending developer discussions, and 3) finance/gas-tracker for real-time Base and Arbitrum gas fees in Gwei from on-chain RPC nodes. The service is in free open beta without transaction verification requirements for local testing. Configuration requires adding a JSON entry to claude_desktop_config.json with command and args pointing to the mcp_server.py file path. The announcement included a request for community feedback on additional datasets needed for agent implementations.",
+      "faqs": [
+        {
+          "question": "Will you bring in an agent to block content?",
+          "askedBy": "Unknown",
+          "answeredBy": "shawmakesmagic"
         }
       ],
       "helpInteractions": [],
       "actionItems": [
         {
-          "type": "Feature",
-          "description": "Create ElizaDAO with ElizaOS token and 25% fees to foundation",
-          "mentionedBy": "valleybeyond7991"
+          "type": "Technical",
+          "description": "Implement agent to block unwanted content",
+          "mentionedBy": "shawmakesmagic"
         },
         {
-          "type": "Technical",
-          "description": "Address Bybit delisting threat and ST tag indicating low liquidity",
-          "mentionedBy": "tanvisinghwal"
+          "type": "Feature",
+          "description": "Launch Model Context Protocol (MCP) Server for live data integration with AI agents",
+          "mentionedBy": "x402data_hub"
         },
         {
           "type": "Documentation",
-          "description": "Clarify MetaDAO structure and its impact on ElizaOS token holders",
-          "mentionedBy": "boristock"
+          "description": "Provide configuration instructions for claude_desktop_config.json setup",
+          "mentionedBy": "x402data_hub"
         }
       ],
-      "messageCount": 35,
-      "userCount": 12
+      "messageCount": 3,
+      "userCount": 2
     }
   ],
   "nicknameMap": {
-    "Moreyra": {
-      "id": "1167835966417936487",
-      "username": "lari_moreyra",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 1
-    },
-    "lamby": {
-      "id": "974642795425980446",
-      "username": "lambyone",
-      "roles": [
-        "Verified"
-      ],
-      "totalMessages": 4
-    },
-    "ross": {
-      "id": "906787451438260236",
-      "username": "ross.ross.ross",
-      "roles": [
-        "Helper",
-        "a-hack",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Dev School Student",
-        "Booster",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 61
-    },
-    "Tanvi": {
-      "id": "847020685687914507",
-      "username": "tanvisinghwal",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 24
-    },
-    "!                           nubs": {
-      "id": "1284887060825509890",
-      "username": "1gig",
-      "roles": [
-        "a-hack",
-        "Trader",
-        "King",
-        "VIP",
-        "Verified",
-        "Dev School Student",
-        "Core Dev",
-        "Coder",
-        "Github - Contributor"
-      ],
-      "totalMessages": 1
-    },
-    "Stan ⚡": {
-      "id": "177801706963337216",
-      "username": "stan0473",
-      "roles": [
-        "Helper",
-        "platform - self assign",
-        "events - self-assign",
-        "Announcements",
-        "Moderator",
-        "Server Booster",
-        "King",
-        "Core Dev",
-        "VIP",
-        "Contributor",
-        "workgroups - write perms",
-        "Verified",
-        "Cloud",
-        "Fr",
-        "utility",
-        "Coder",
-        "Github - Contributor",
-        "Labs Alumni"
-      ],
-      "totalMessages": 61
-    },
-    "Zaday": {
-      "id": "1194534149076299836",
-      "username": "zadayos",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Designer",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 57
-    },
-    "Taco": {
-      "id": "654765979351646228",
-      "username": "crx92",
+    "x402 Data Hub": {
+      "id": "1072194117431468133",
+      "username": "x402data_hub",
       "roles": [
         "Verified",
         "Coder",
-        "utility"
-      ],
-      "totalMessages": 31
-    },
-    "Boristock": {
-      "id": "743421249363116092",
-      "username": "boristock",
-      "roles": [
-        "Trader",
         "utility",
         "eliza"
       ],
       "totalMessages": 3
+    },
+    "shaw": {
+      "id": "498273781589213185",
+      "username": "shawmakesmagic",
+      "roles": [],
+      "totalMessages": 288
+    },
+    "davidhq": {
+      "id": "97663671152410624",
+      "username": "davidhq",
+      "roles": [
+        "Verified"
+      ],
+      "totalMessages": 11
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 50
     },
     "ValleyBeyond": {
       "id": "294785651616907265",
@@ -205,73 +198,73 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 110
+      "totalMessages": 117
     },
-    "Gollo": {
-      "id": "1345047486636757094",
-      "username": "gollo0054",
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
       "roles": [
         "Trader",
+        "Verified",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 5
+      "totalMessages": 39
     },
-    "cute_pomelo_67374_93806": {
-      "id": "1500746968518099005",
-      "username": "cute_pomelo_67374_93806",
+    "Alexei": {
+      "id": "648599269951143936",
+      "username": "alexeill",
+      "roles": [],
+      "totalMessages": 25
+    },
+    "Uchi": {
+      "id": "1197891020290015242",
+      "username": "jjenuchi",
+      "roles": [
+        "Trader",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "ross": {
+      "id": "906787451438260236",
+      "username": "ross.ross.ross",
+      "roles": [],
+      "totalMessages": 69
+    },
+    "Noryfyst": {
+      "id": "955785378609106995",
+      "username": "noryfy",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
         "Verified",
-        "Designer",
         "utility",
         "Coder",
         "eliza"
-      ]
+      ],
+      "totalMessages": 2
     },
-    "Mr_Emi_Escobar_Defi": {
-      "id": "1116441054275715124",
-      "username": "mrescobar1923",
+    "PW": {
+      "id": "934900404003667989",
+      "username": "vivacious_lamb_02712",
       "roles": [
         "Trader",
         "Creator",
-        "It",
         "Verified",
-        "Booster",
         "Designer",
-        "Fr",
         "utility",
-        "Coder",
-        "eliza"
-      ]
-    },
-    "Shaw": {
-      "id": "498273781589213185",
-      "username": "shawmakesmagic",
-      "roles": [
-        "Moderator",
-        "Labs Alumni",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
+        "Coder"
       ],
-      "totalMessages": 232
+      "totalMessages": 1
     },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 135
+    "Mooncake": {
+      "id": "242666870438756352",
+      "username": "mooncake1988",
+      "roles": [],
+      "totalMessages": 13
     }
   }
 }
