@@ -1,33 +1,25 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-08-14",
-  "categories": [
-    {
-      "title": "ElizaOS Community Activity and Builder Introductions - August 14, 2026",
-      "content": [
-        {
-          "text": "In the general discussion channel, Sam announced that a Zeroclaw community call was taking place, inviting members interested in collaboration opportunities with the ElizaOS and broader DAO, crypto, and payments ecosystem, noting the project is open source. A separate user posted a vague pitch about an unnamed initiative seeking early interest, which another member noted was a very direct pitch. Other messages in the channel were largely greetings with no substantive discussion.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "In the coders channel, a user named Peter posted an image and asked if anyone was familiar with Beast Games. Aiden19 introduced himself as an AI engineer and full-stack developer with experience across AI systems, backend architecture, automation, agent-based systems, Unreal Engine, game development, and robotics. His core stack includes Python, AI and ML, LLMs, cloud infrastructure, and modern web technologies. He expressed openness to full-time roles, consulting, and collaborative projects. Praveen Matheesha shared an open-source project called paralens.ai, an EVM transaction analysis engine he has been building for a year. The tool reconstructs and classifies transactions from execution traces and is MIT licensed, available at https://github.com/MatheeshaMe/paralens. The bot Rick attempted to analyze the repository but returned a failure message.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://cdn.discordapp.com/attachments/1300025221834739744/1537774145214087198/5.png?ex=6a80ec06&is=6a7f9a86&hm=07037103768668666a5676f6766ecbb9b8089ce8b014a6da8c522cb7860b6d2f&",
-            "https://opengraph.githubassets.com/0215861b86816a5d15fc20f1c93e5f87b6f595b402884058340e3918c90f2d58/MatheeshaMe/paralens"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "discordrawdata"
-    }
-  ],
+  "categories": {
+    "title": "ElizaOS Community Activity and Builder Introductions - August 14, 2026",
+    "content": [
+      {
+        "text": "In the general discussion channel, Sam announced that a Zeroclaw community call was taking place, inviting members interested in collaboration opportunities with the ElizaOS and broader DAO, crypto, and payments ecosystem, noting the project is open source. A separate user posted a vague pitch about an unnamed initiative seeking early interest, which another member noted was a very direct pitch. Other messages in the channel were largely greetings with no substantive discussion.",
+        "sources": "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "posters": "https://cdn.elizaos.news/posters/1786754064320-hccjq.jpg"
+      },
+      {
+        "text": "In the coders channel, a user named Peter posted an image and asked if anyone was familiar with Beast Games. Aiden19 introduced himself as an AI engineer and full-stack developer with experience across AI systems, backend architecture, automation, agent-based systems, Unreal Engine, game development, and robotics. His core stack includes Python, AI and ML, LLMs, cloud infrastructure, and modern web technologies. He expressed openness to full-time roles, consulting, and collaborative projects. Praveen Matheesha shared an open-source project called paralens.ai, an EVM transaction analysis engine he has been building for a year. The tool reconstructs and classifies transactions from execution traces and is MIT licensed, available at https://github.com/MatheeshaMe/paralens. The bot Rick attempted to analyze the repository but returned a failure message.",
+        "sources": "https://discord.com/channels/1253563208833433701/1300025221834739744",
+        "images": [
+          "https://cdn.elizaos.news/elizaos-media/5_a7a30412.webp",
+          "https://cdn.elizaos.news/elizaos-media/paralens_e7495943.jpg"
+        ]
+      }
+    ],
+    "topic": "discordrawdata"
+  },
   "date": 1786665600,
   "nicknameMap": {
     "Praveen Matheesha": {
@@ -59,7 +51,6 @@
     "Peter": {
       "id": "1320139356630941786",
       "username": "peterbrown0917",
-      "roles": [],
       "totalMessages": 3
     },
     "Flávio Pontes / wmg": {
@@ -135,7 +126,6 @@
     "FUNGUIN": {
       "id": "314964321878933506",
       "username": "l1il1il1i1lil1l1",
-      "roles": [],
       "totalMessages": 1
     },
     "Ken": {
