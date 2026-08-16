@@ -1,25 +1,18 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-08-15",
-  "categories": [
-    {
-      "title": "Community Introductions and General Discussion",
-      "content": [
-        {
-          "text": "A user named Lychee introduced themselves to the community across both the general discussion channel and the coders channel on August 15, 2026, receiving multiple warm welcomes from other members. Separately, a tweet was shared in the discussion channel addressing elizamakesmagic, and a community member humorously suggested renaming ElizaOS to XOS.",
-          "sources": [
-            "https://discord.com/channels/1253563208833433701/1253563209462448241",
-            "https://discord.com/channels/1253563208833433701/1300025221834739744"
-          ],
-          "images": [
-            "https://jf.x.com/images/media-preview/2088430234676638100"
-          ],
-          "videos": []
-        }
+  "categories": {
+    "title": "Community Introductions and General Discussion",
+    "content": {
+      "text": "A user named Lychee introduced themselves to the community across both the general discussion channel and the coders channel on August 15, 2026, receiving multiple warm welcomes from other members. Separately, a tweet was shared in the discussion channel addressing elizamakesmagic, and a community member humorously suggested renaming ElizaOS to XOS.",
+      "sources": [
+        "https://discord.com/channels/1253563208833433701/1253563209462448241",
+        "https://discord.com/channels/1253563208833433701/1300025221834739744"
       ],
-      "topic": "discordrawdata"
-    }
-  ],
+      "images": "https://cdn.elizaos.news/elizaos-media/2088430234676638100_8efdb3a8.jpg"
+    },
+    "topic": "discordrawdata"
+  },
   "date": 1786752000,
   "nicknameMap": {
     "ღ Lychee ღ": {
