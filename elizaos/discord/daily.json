@@ -1,27 +1,114 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-15",
-  "date": 1786752000,
+  "title": "elizaOS Discord - 2026-08-16",
+  "date": 1786838400,
   "stats": {
-    "totalMessages": 8,
-    "totalUsers": 5
+    "totalMessages": 17,
+    "totalUsers": 9
   },
   "categories": [
     {
       "channelId": "1253563209462448241",
       "channelName": "💬-discussion",
-      "summary": "This Discord chat segment contains minimal technical content. The conversation consists primarily of social interactions, with a new member named lychee (glycheeg) joining the channel and receiving welcome messages from multiple community members (chulylooly and fifogarihafilag). Two other messages were shared: magicyte posted a Twitter/X link, and nullhxyz made a casual suggestion about renaming 'Elizaos to Xos'. No technical discussions, problem-solving, implementations, or decisions occurred during this segment. The chat represents typical community onboarding activity with no substantive technical content to analyze.",
+      "summary": "This Discord chat segment shows minimal technical discussion, primarily consisting of basic greetings and inquiries about the ELIZA token status. The main substantive exchange involved iamkunalr_99457 asking about ELIZA token updates and expressing concern about the token's low price and whether the project is still active. om1d_sa provided helpful guidance by directing the user to a specific channel for updates. There was brief discussion about the lack of clarity regarding Eliza OS development status from public channels. No technical implementations, code discussions, or concrete solutions were presented in this segment. The conversation was largely informational with users seeking project status updates rather than engaging in technical problem-solving or development discussions.",
+      "faqs": [
+        {
+          "question": "Is there any update about Eliza token?",
+          "askedBy": "iamkunalr_99457",
+          "answeredBy": "om1d_sa"
+        },
+        {
+          "question": "Is there any development ongoing in this project or it's dead?",
+          "askedBy": "iamkunalr_99457",
+          "answeredBy": "om1d_sa"
+        },
+        {
+          "question": "What is the source for the Eliza token update you're asking about?",
+          "askedBy": "fifogarihafilag",
+          "answeredBy": "iamkunalr_99457"
+        }
+      ],
+      "helpInteractions": [
+        {
+          "helper": "om1d_sa",
+          "helpee": "iamkunalr_99457",
+          "context": "User was asking about ELIZA token updates and project development status",
+          "resolution": "Directed user to check the updates channel for current information about the project"
+        }
+      ],
+      "actionItems": [],
+      "messageCount": 13,
+      "userCount": 7
+    },
+    {
+      "channelId": "1300025221834739744",
+      "channelName": "💬-coders",
+      "summary": "This Discord chat segment from the #💬-coders channel contains minimal substantive technical content. The conversation consists primarily of brief greetings and a scam alert. p05016 initiated with a simple greeting, followed by tthomas098's casual response. c0r0na_chan posted an empty message. The only notable event was om1d_sa issuing a scammer alert directed at a specific user ID (511809032588099594), warning the community about potential fraudulent activity. No technical discussions, problem-solving sessions, code implementations, or development decisions occurred during this segment. The chat represents routine community moderation activity rather than technical collaboration.",
       "faqs": [],
       "helpInteractions": [],
       "actionItems": [],
-      "messageCount": 7,
-      "userCount": 5
+      "messageCount": 4,
+      "userCount": 4
     }
   ],
   "nicknameMap": {
-    "ღ Lychee ღ": {
-      "id": "904156818031390741",
-      "username": "glycheeg",
+    "iamkunalr": {
+      "id": "1259150294206386180",
+      "username": "iamkunalr_99457",
+      "roles": [
+        "Trader",
+        "It",
+        "M",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 5
+    },
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
+      "roles": [
+        "Trader",
+        "Creator",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 55
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 26
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 41
+    },
+    "Greenlantern": {
+      "id": "1113194758131683542",
+      "username": "kilianchagiri6670",
       "roles": [
         "Helper",
         "Trader",
@@ -35,54 +122,49 @@
         "Coder",
         "eliza"
       ],
-      "totalMessages": 2
+      "totalMessages": 1
     },
-    "chulylooly": {
-      "id": "963012153026150501",
-      "username": "chulylooly",
+    "Pepe": {
+      "id": "1430770468561883250",
+      "username": "p05016",
       "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "[WG] degenspartan"
+      ],
+      "totalMessages": 4
+    },
+    "Nick quispeinche": {
+      "id": "951151690013343774",
+      "username": "nickquispeinche5787",
+      "roles": [
+        "Helper",
         "Trader",
         "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 54
+      "totalMessages": 1
     },
-    "enigma289": {
-      "id": "1163546195063480360",
-      "username": "fifogarihafilag",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 40
+    "Corona_Chan": {
+      "id": "511809032588099594",
+      "username": "c0r0na_chan",
+      "roles": [],
+      "totalMessages": 1
     },
-    "NintyNine": {
-      "id": "914424447040102420",
-      "username": "nullhxyz",
+    "Anderson Thomas": {
+      "id": "1387509863965397005",
+      "username": "tthomas098",
       "roles": [
-        "[WG] Want to Help",
         "Verified",
-        "utility",
-        "Coder",
-        "eliza"
+        "utility"
       ],
-      "totalMessages": 9
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 137
+      "totalMessages": 1
     }
   }
 }
