@@ -1,0 +1,34 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-08-19",
+  "date": 1787097600,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "Ginga": {
+      "id": "800764682150477845",
+      "username": "rsn6958",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 29
+    },
+    "D-Marinedev": {
+      "id": "959544662861971506",
+      "username": "mendy444",
+      "roles": [
+        "Trader",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
