@@ -1,34 +1,88 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-08-19",
-  "date": 1787097600,
+  "title": "elizaOS Discord - 2026-08-20",
+  "date": 1787184000,
   "stats": {
-    "totalMessages": 0,
-    "totalUsers": 0
+    "totalMessages": 5,
+    "totalUsers": 5
   },
-  "categories": [],
+  "categories": [
+    {
+      "channelId": "1253563209462448241",
+      "channelName": "💬-discussion",
+      "summary": "The discussion centered on Bybit's decision to delist $ELIZAOS token. satya.manhas announced the official delisting confirmation from Bybit, describing it as a sad but confirmed development. fifogarihafilag acknowledged the exchange's firm decision and the disappointment it brings. chulylooly noted the potential impact on liquidity that typically follows delistings. The conversation was brief with minimal technical depth, primarily consisting of community members reacting to the news. _adrianop_ checked in on the community's status, to which valleybeyond7991 responded negatively about the situation. No technical solutions, implementations, or problem-solving discussions occurred during this segment.",
+      "faqs": [
+        {
+          "question": "How is going brothers",
+          "askedBy": "_adrianop_",
+          "answeredBy": "valleybeyond7991"
+        }
+      ],
+      "helpInteractions": [],
+      "actionItems": [],
+      "messageCount": 5,
+      "userCount": 5
+    }
+  ],
   "nicknameMap": {
-    "Ginga": {
-      "id": "800764682150477845",
-      "username": "rsn6958",
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 119
+    },
+    "Adrian": {
+      "id": "1074752784806723595",
+      "username": "_adrianop_",
       "roles": [
         "Verified",
         "Coder",
         "utility",
         "eliza"
       ],
-      "totalMessages": 29
+      "totalMessages": 2
     },
-    "D-Marinedev": {
-      "id": "959544662861971506",
-      "username": "mendy444",
+    "chulylooly": {
+      "id": "963012153026150501",
+      "username": "chulylooly",
       "roles": [
         "Trader",
+        "Creator",
         "utility",
         "Coder",
         "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 57
+    },
+    "enigma289": {
+      "id": "1163546195063480360",
+      "username": "fifogarihafilag",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 43
+    },
+    "Idon Liu": {
+      "id": "881073597387505684",
+      "username": "satya.manhas",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 3
     }
   }
 }
