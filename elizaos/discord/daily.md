@@ -1,23 +1,43 @@
-# elizaOS Discord - 2026-08-20
+# elizaOS Discord - 2026-08-21
 
 ## Summary
 
-### Token Delisting
+### Community Engagement
 
-Bybit exchange officially confirmed the delisting of the $ELIZAOS token on August 20, 2026. satya.manhas announced the confirmation, describing it as unfortunate but definitive news. fifogarihafilag acknowledged the exchange's final decision and expressed disappointment about the outcome. chulylooly raised concerns about the typical liquidity impacts that follow token delistings from major exchanges. The community response reflected general disappointment, with valleybeyond7991 characterizing the situation negatively when _adrianop_ inquired about the community's status.
+sam3746 announced a community call for zeroclaw, an open-source project, inviting participants to share ideas and contribute to the discussion.
+
+### Token Economics and Market Performance
+
+helioofcl raised concerns about token utility, noting that despite being listed on multiple exchanges, the token price continues to decline. valleybeyond7991 referenced statements made by someone named Shaw that allegedly had a negative impact on the token situation.
+
+### Communication Issues
+
+The discussion channels experienced hostile exchanges between users and off-topic conversations that detracted from technical discussions. kenny05865 suggested reaching out to the team directly for clarification on token-related questions.
 
 ## FAQ
 
-**Q: Has Bybit officially delisted the $ELIZAOS token?**
-A: Yes, Bybit has officially confirmed the delisting of the $ELIZAOS token as announced on August 20, 2026.
+**Q: Why is the token price declining despite being listed on multiple exchanges?**
+A: helioofcl raised this concern but no definitive answer was provided. kenny05865 suggested reaching out to the team for clarification on token utility and market performance.
 
-**Q: What are the expected impacts of the Bybit delisting?**
-A: The delisting is expected to potentially impact liquidity for the token, which is a typical consequence when tokens are removed from major exchanges.
+**Q: When is the zeroclaw community call?**
+A: sam3746 announced a community call for the zeroclaw open-source project but specific timing details were not provided in the chat segment.
 
 ## Help Interactions
 
-No direct help interactions or technical support requests were documented in the discussions.
+**Helper:** kenny05865
+**Helpee:** helioofcl
+**Resolution:** kenny05865 suggested reaching out to the team directly for clarification regarding token utility concerns, though no direct resolution was achieved in the chat.
 
 ## Action Items
 
-No action items were identified in the discussions.
+### Technical
+
+None identified.
+
+### Features
+
+None identified.
+
+### Documentation
+
+None identified.
