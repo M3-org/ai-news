@@ -1,0 +1,49 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-08-26",
+  "categories": [
+    {
+      "title": "Discord Community Activity Summary",
+      "content": [
+        {
+          "text": "On August 26, 2026, activity in the general discussion channel was minimal, consisting only of brief morning greetings exchanged between two users, ValleyBeyond and James 4de. The coders channel, which directs users to the elizaos.ai documentation to get started, had no recorded messages or activity for the same date.",
+          "sources": [
+            "https://discord.com/channels/1253563208833433701/1253563209462448241",
+            "https://discord.com/channels/1253563208833433701/1300025221834739744"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "discordrawdata"
+    }
+  ],
+  "date": 1787702400,
+  "nicknameMap": {
+    "James 4de": {
+      "id": "1535355910015422495",
+      "username": "james4de",
+      "roles": [
+        "Helper",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 121
+    }
+  }
+}
