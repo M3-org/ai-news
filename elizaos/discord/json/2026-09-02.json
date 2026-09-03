@@ -1,0 +1,37 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-09-02",
+  "date": 1788307200,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "James 4de": {
+      "id": "1535355910015422495",
+      "username": "james4de",
+      "roles": [
+        "Helper",
+        "It",
+        "Verified",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 133
+    }
+  }
+}
