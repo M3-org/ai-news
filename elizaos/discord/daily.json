@@ -1,7 +1,7 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-03",
-  "date": 1788393600,
+  "title": "elizaOS Discord - 2026-09-04",
+  "date": 1788480000,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
@@ -17,7 +17,54 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 134
+      "totalMessages": 135
+    },
+    "Sam": {
+      "id": "265949357885358083",
+      "username": "sam3746",
+      "roles": [
+        "Helper",
+        "a-hack",
+        "Trader",
+        "[WG] degenspartan",
+        "Verified",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 8
+    },
+    "Sharkstang": {
+      "id": "795815095199727616",
+      "username": "njxaknxaiok",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "cj": {
+      "id": "1241743374386729001",
+      "username": "cj01101",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ]
     }
   }
 }
