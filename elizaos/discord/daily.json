@@ -1,7 +1,7 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-04",
-  "date": 1788480000,
+  "title": "elizaOS Discord - 2026-09-05",
+  "date": 1788566400,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
@@ -17,54 +17,50 @@
         "Verified",
         "utility"
       ],
-      "totalMessages": 135
+      "totalMessages": 137
     },
-    "Sam": {
-      "id": "265949357885358083",
-      "username": "sam3746",
+    "Digital Rocks": {
+      "id": "825099311770501200",
+      "username": "digitalrocks",
       "roles": [
-        "Helper",
-        "a-hack",
         "Trader",
-        "[WG] degenspartan",
         "Verified",
         "utility",
-        "Coder",
         "eliza"
       ],
-      "totalMessages": 8
+      "totalMessages": 1
     },
-    "Sharkstang": {
-      "id": "795815095199727616",
-      "username": "njxaknxaiok",
+    "Dr. Neuro": {
+      "id": "403574677164916746",
+      "username": "neuro023",
       "roles": [
-        "Helper",
-        "Trader",
+        "platform - self assign",
+        "trust - self assign",
+        "partner portal - self assign",
         "Creator",
-        "[WG] degenspartan",
+        "Moderator",
+        "nfts - self assign",
+        "pmairca - self assign",
+        "King",
         "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 2
-    },
-    "cj": {
-      "id": "1241743374386729001",
-      "username": "cj01101",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
+        "Dev School Student",
+        "Booster",
+        "Contributor",
+        "NFT",
+        "merch - self assign",
+        "events - self-assign",
+        "boom chad",
         "Coder",
-        "eliza"
-      ]
+        "swarms - self assign",
+        "VIP",
+        "Designer"
+      ],
+      "totalMessages": 21
+    },
+    "Founder_001🚀🚀": {
+      "id": "1545250476180774952",
+      "username": "coinfounder_1",
+      "roles": []
     }
   }
 }
