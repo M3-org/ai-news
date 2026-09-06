@@ -1,7 +1,6 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-09-05",
-  "categories": [],
   "date": 1788566400,
   "nicknameMap": {
     "ValleyBeyond": {
@@ -55,8 +54,7 @@
     },
     "Founder_001🚀🚀": {
       "id": "1545250476180774952",
-      "username": "coinfounder_1",
-      "roles": []
+      "username": "coinfounder_1"
     }
   }
 }
