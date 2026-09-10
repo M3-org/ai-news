@@ -1,45 +1,16 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-09-08",
+  "title": "Daily Report - 2026-09-09",
   "categories": [],
-  "date": 1788825600,
+  "date": 1788912000,
   "nicknameMap": {
-    "BysertK - Coredev": {
-      "id": "816144845458112533",
-      "username": "bysertkk",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "Edinho#5732": {
-      "id": "1005205026345582753",
-      "username": "edinho3754",
+    "Bek": {
+      "id": "933263330934673440",
+      "username": "bek6472",
       "roles": [
         "utility",
         "Coder",
         "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "𝔭𝔩𝔞𝔱𝔞 𝔑𝔬 𝔉𝔞𝔭 𝔞𝔯𝔠": {
-      "id": "812814582594535494",
-      "username": "exeplata",
-      "roles": [
-        "Vanguard",
-        "VIP",
-        "NFT",
-        "Verified",
-        "Booster",
-        "Designer"
       ],
       "totalMessages": 2
     }
