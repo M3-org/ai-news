@@ -1,0 +1,60 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-09-10",
+  "date": 1788998400,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "Rattatat": {
+      "id": "290679235448930305",
+      "username": "rattatat0256",
+      "roles": [
+        "Trader",
+        "Helper",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Aras80": {
+      "id": "895755095000621106",
+      "username": "aras80.",
+      "roles": [
+        "Trader",
+        "utility"
+      ],
+      "totalMessages": 4
+    },
+    "kenny05865": {
+      "id": "1211373393929183376",
+      "username": "kenny05865",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 3
+    },
+    "@@@$#$#^#%%#^": {
+      "id": "1170320503173558362",
+      "username": "dinosayr_94564",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
