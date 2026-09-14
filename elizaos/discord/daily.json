@@ -1,10 +1,29 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-12",
-  "date": 1789171200,
+  "title": "elizaOS Discord - 2026-09-13",
+  "date": 1789257600,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
   },
-  "categories": []
+  "categories": [],
+  "nicknameMap": {
+    "jack let": {
+      "id": "1511026363383943332",
+      "username": "jackli2",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    }
+  }
 }
