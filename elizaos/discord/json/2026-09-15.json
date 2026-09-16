@@ -1,0 +1,41 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-09-15",
+  "date": 1789430400,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "melissa": {
+      "id": "653480403155419139",
+      "username": "coolbky5166",
+      "roles": [
+        "Creator",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Kelvin_sol": {
+      "id": "1325974529046216736",
+      "username": "kelvinnewsome_1",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
