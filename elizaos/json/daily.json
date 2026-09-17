@@ -1,13 +1,84 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-09-15",
+  "title": "Daily Report - 2026-09-16",
   "categories": [],
-  "date": 1789430400,
+  "date": 1789516800,
   "nicknameMap": {
-    "melissa": {
-      "id": "653480403155419139",
-      "username": "coolbky5166",
+    "Madison Giggs | TAN": {
+      "id": "963145407020539954",
+      "username": "madison_giggs",
       "roles": [
+        "Helper",
+        "Trader",
+        "[WG] degenspartan",
+        "It",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Gabriel_cage": {
+      "id": "1548266732076929126",
+      "username": "gabriel_cage.",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 1
+    },
+    "Grafixart": {
+      "id": "1300465765748576267",
+      "username": "grafixart",
+      "roles": [
+        "partner portal - self assign",
+        "Verified",
+        "Dev School Student",
+        "Booster",
+        "Designer",
+        "Poker"
+      ],
+      "totalMessages": 1
+    },
+    "El.empresario": {
+      "id": "975069365273763850",
+      "username": "el.empresario1940",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Verified",
+        "Designer",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 33
+    },
+    "CROWN_ROLAND": {
+      "id": "970675489612103760",
+      "username": "crownroland",
+      "roles": [
+        "Trader",
         "Creator",
         "Verified",
         "Designer",
@@ -16,22 +87,20 @@
       ],
       "totalMessages": 1
     },
-    "Kelvin_sol": {
-      "id": "1325974529046216736",
-      "username": "kelvinnewsome_1",
+    "Kid Zula": {
+      "id": "544273837546668053",
+      "username": "kidzula",
       "roles": [
         "Helper",
         "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
         "Verified",
+        "Dev School Student",
         "Designer",
-        "Fr",
         "utility",
-        "Coder"
+        "Coder",
+        "eliza"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     }
   }
 }
