@@ -1,0 +1,23 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-09-20",
+  "date": 1789862400,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "Bahhdbunnie": {
+      "id": "1413640029472821421",
+      "username": "bahhdbunnie",
+      "roles": [
+        "Trader",
+        "Verified",
+        "Coder",
+        "utility"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
