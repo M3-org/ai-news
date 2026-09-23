@@ -1,37 +1,70 @@
 {
   "type": "elizaosDailySummary",
-  "title": "Daily Report - 2026-09-21",
+  "title": "Daily Report - 2026-09-22",
   "categories": [],
-  "date": 1789948800,
+  "date": 1790035200,
   "nicknameMap": {
-    "Omid Sa": {
-      "id": "1430561551169097791",
-      "username": "om1d_sa",
+    "0xCryptoCooker": {
+      "id": "340927178168598528",
+      "username": "cryptocookerdev",
       "roles": [
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Mini Mod",
-        "Verified",
-        "Dev School Student",
-        "Designer",
-        "utility",
-        "Coder",
-        "Hoplite",
-        "eliza"
+        "Verified"
       ],
-      "totalMessages": 34
+      "totalMessages": 1
     },
-    "Кеnk": {
-      "id": "1256572626206461956",
-      "username": "mrgnarthr",
+    "GAVIN♾": {
+      "id": "1053841591447597116",
+      "username": "gavin_4i958",
       "roles": [
         "Helper",
         "Trader",
+        "[WG] degenspartan",
+        "It",
         "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 4
+    },
+    "Socrathsh": {
+      "id": "1183439038301085706",
+      "username": "socrathsh0121_31932",
+      "roles": [
+        "a-hack",
+        "Trader",
+        "Creator",
+        "Verified",
+        "Booster",
+        "Designer",
         "utility",
         "Coder"
-      ]
+      ],
+      "totalMessages": 4
+    },
+    "BlackP21": {
+      "id": "1404920756990644245",
+      "username": "blackp21",
+      "roles": [
+        "Trader",
+        "Verified",
+        "utility",
+        "It"
+      ],
+      "totalMessages": 4
+    },
+    "Inhuman Resources": {
+      "id": "807727820355797062",
+      "username": "magicyte",
+      "roles": [
+        "[WG] Want to Help",
+        "Verified",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 140
     },
     "IT-VIP": {
       "id": "1550939291344052237",
@@ -42,54 +75,33 @@
         "Coder",
         "utility"
       ],
-      "totalMessages": 5
+      "totalMessages": 6
     },
-    "Gizmo(Collab Mgr.)": {
-      "id": "1118865473329700894",
-      "username": "gizmo6900",
+    "Edinho#5732": {
+      "id": "1005205026345582753",
+      "username": "edinho3754",
       "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
         "utility",
-        "Coder"
-      ],
-      "totalMessages": 2
-    },
-    "Arkantos": {
-      "id": "709852897965244524",
-      "username": "oatbreaker.",
-      "roles": [
-        "Verified",
         "Coder",
-        "utility",
         "eliza"
       ],
-      "totalMessages": 1
-    },
-    "TreeRoot": {
-      "id": "1027662851613151272",
-      "username": ".treeroot",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Dev School Student",
-        "Designer"
-      ],
       "totalMessages": 2
     },
-    "Emmyonchain": {
-      "id": "1529889773089456302",
-      "username": "emmyonchain_33468",
+    "!                           nubs": {
+      "id": "1284887060825509890",
+      "username": "1gig",
       "roles": [
-        "utility",
-        "Coder"
+        "a-hack",
+        "Trader",
+        "King",
+        "VIP",
+        "Verified",
+        "Dev School Student",
+        "Core Dev",
+        "Coder",
+        "Github - Contributor"
       ],
-      "totalMessages": 1
+      "totalMessages": 2
     }
   }
 }
