@@ -1,10 +1,21 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-26",
-  "date": 1790380800,
+  "title": "elizaOS Discord - 2026-09-27",
+  "date": 1790467200,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
   },
-  "categories": []
+  "categories": [],
+  "nicknameMap": {
+    "ozmij80": {
+      "id": "524358860211879937",
+      "username": "ozmij",
+      "roles": [
+        "Designer",
+        "Verified"
+      ],
+      "totalMessages": 1
+    }
+  }
 }
