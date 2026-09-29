@@ -1,0 +1,32 @@
+{
+  "type": "elizaosDailySummary",
+  "title": "Daily Report - 2026-09-28",
+  "categories": [],
+  "date": 1790553600,
+  "nicknameMap": {
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 35
+    },
+    "ozmij80": {
+      "id": "524358860211879937",
+      "username": "ozmij",
+      "roles": [],
+      "totalMessages": 1
+    }
+  }
+}

@@ -1,20 +1,35 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-27",
-  "date": 1790467200,
+  "title": "elizaOS Discord - 2026-09-28",
+  "date": 1790553600,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
   },
   "categories": [],
   "nicknameMap": {
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 35
+    },
     "ozmij80": {
       "id": "524358860211879937",
       "username": "ozmij",
-      "roles": [
-        "Designer",
-        "Verified"
-      ],
+      "roles": [],
       "totalMessages": 1
     }
   }
