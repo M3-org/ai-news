@@ -1,10 +1,29 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-09-29",
-  "date": 1790640000,
+  "title": "elizaOS Discord - 2026-09-30",
+  "date": 1790726400,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
   },
-  "categories": []
+  "categories": [],
+  "nicknameMap": {
+    "ags": {
+      "id": "648025540074143765",
+      "username": "ags5613",
+      "roles": [],
+      "totalMessages": 2
+    },
+    "!": {
+      "id": "247484060119597056",
+      "username": "thewaifuai",
+      "roles": [
+        "Coder",
+        "utility",
+        "Verified",
+        "Dev School Student"
+      ],
+      "totalMessages": 2
+    }
+  }
 }
