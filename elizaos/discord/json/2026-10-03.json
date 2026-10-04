@@ -1,0 +1,32 @@
+{
+  "server": "elizaOS",
+  "title": "elizaOS Discord - 2026-10-03",
+  "date": 1790985600,
+  "stats": {
+    "totalMessages": 0,
+    "totalUsers": 0
+  },
+  "categories": [],
+  "nicknameMap": {
+    "Sila Chern 473": {
+      "id": "1439600016401371300",
+      "username": "xsila_chern473",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    },
+    "bingus 💫": {
+      "id": "1439711349331595264",
+      "username": "toxickawaiix40",
+      "roles": [
+        "utility",
+        "Coder",
+        "eliza"
+      ],
+      "totalMessages": 1
+    }
+  }
+}
