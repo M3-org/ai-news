@@ -1,21 +1,110 @@
 {
   "server": "elizaOS",
-  "title": "elizaOS Discord - 2026-10-06",
-  "date": 1791244800,
+  "title": "elizaOS Discord - 2026-10-07",
+  "date": 1791331200,
   "stats": {
     "totalMessages": 0,
     "totalUsers": 0
   },
   "categories": [],
   "nicknameMap": {
-    "pinucko": {
-      "id": "1546961107300786186",
-      "username": "piuxun_y4u_60032",
+    "emotionull": {
+      "id": "189071158669213696",
+      "username": "emotionull",
+      "roles": [
+        "Designer",
+        "Verified"
+      ],
+      "totalMessages": 1
+    },
+    "Henry": {
+      "id": "1488913329907830817",
+      "username": "musk05742",
+      "roles": [
+        "Helper",
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "It",
+        "Verified",
+        "Designer",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 2
+    },
+    "Damian": {
+      "id": "1424057914204881016",
+      "username": "ty888damian",
+      "roles": [
+        "Helper",
+        "It",
+        "Fr",
+        "utility",
+        "Coder"
+      ],
+      "totalMessages": 1
+    },
+    "Balázs ⛓": {
+      "id": "1437266511281782824",
+      "username": "slavrapidxlord13",
       "roles": [
         "utility",
         "Coder"
       ],
       "totalMessages": 1
+    },
+    "ValleyBeyond": {
+      "id": "294785651616907265",
+      "username": "valleybeyond7991",
+      "roles": [
+        "Trader",
+        "[WG] Want to Help",
+        "Verified",
+        "utility"
+      ],
+      "totalMessages": 143
+    },
+    "Waxie": {
+      "id": "713930233723617291",
+      "username": "waxie_",
+      "roles": []
+    },
+    "Nessa": {
+      "id": "1074752784806723595",
+      "username": "0xness",
+      "roles": [
+        "Verified",
+        "Coder",
+        "utility",
+        "eliza"
+      ],
+      "totalMessages": 3
+    },
+    "darkstriderua": {
+      "id": "334118900394360834",
+      "username": "darkstriderua",
+      "roles": [],
+      "totalMessages": 1
+    },
+    "Omid Sa": {
+      "id": "1430561551169097791",
+      "username": "om1d_sa",
+      "roles": [
+        "Trader",
+        "Creator",
+        "[WG] degenspartan",
+        "Mini Mod",
+        "Verified",
+        "Dev School Student",
+        "Designer",
+        "utility",
+        "Coder",
+        "Hoplite",
+        "eliza"
+      ],
+      "totalMessages": 36
     },
     "Daniel🕊": {
       "id": "1053886425633923133",
@@ -35,121 +124,13 @@
       ],
       "totalMessages": 3
     },
-    "Kelvin": {
-      "id": "1214897173129596930",
-      "username": "kelvin3478_",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 3
-    },
-    "RicFlare": {
-      "id": "521848124440838159",
-      "username": "ricflare",
-      "roles": [
-        "Trader",
-        "utility"
-      ],
-      "totalMessages": 1
-    },
-    "joe": {
-      "id": "1094603728411172956",
-      "username": "jogan276k",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "It",
-        "Verified",
-        "Booster",
-        "Designer",
-        "Fr",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "Nascence™": {
-      "id": "1017400124592377857",
-      "username": "nascencey",
-      "roles": [
-        "Helper",
-        "Trader",
-        "Creator",
-        "[WG] degenspartan",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 4
-    },
-    "Kenshiro": {
-      "id": "524886397644177418",
-      "username": "kenshiro_28",
-      "roles": [
-        "Trader",
-        "Creator",
-        "Verified",
-        "Designer",
-        "utility",
-        "Coder"
-      ],
-      "totalMessages": 5
-    },
-    "shmotus": {
-      "id": "342024360556625922",
-      "username": "shmotus",
-      "roles": [
-        "Trader",
-        "Verified",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 4
-    },
-    "Gem Hunter": {
-      "id": "824234653384048710",
-      "username": "coingemhunter",
-      "roles": [
-        "Trader",
-        "utility",
-        "Coder",
-        "eliza"
-      ],
-      "totalMessages": 2
-    },
-    "johnsmith9647": {
-      "id": "839547774545428530",
-      "username": "johnsmith9647",
+    "ai1🥭6seventees": {
+      "id": "1046971226641408020",
+      "username": "coconutchoir",
       "roles": [
         "Verified"
       ],
       "totalMessages": 1
-    },
-    "Inhuman Resources": {
-      "id": "807727820355797062",
-      "username": "magicyte",
-      "roles": [
-        "[WG] Want to Help",
-        "Verified",
-        "utility",
-        "eliza"
-      ],
-      "totalMessages": 146
     }
   }
 }
