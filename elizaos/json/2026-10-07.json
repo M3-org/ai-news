@@ -1,7 +1,6 @@
 {
   "type": "elizaosDailySummary",
   "title": "Daily Report - 2026-10-07",
-  "categories": [],
   "date": 1791331200,
   "nicknameMap": {
     "emotionull": {
@@ -64,8 +63,7 @@
     },
     "Waxie": {
       "id": "713930233723617291",
-      "username": "waxie_",
-      "roles": []
+      "username": "waxie_"
     },
     "Nessa": {
       "id": "1074752784806723595",
@@ -81,7 +79,6 @@
     "darkstriderua": {
       "id": "334118900394360834",
       "username": "darkstriderua",
-      "roles": [],
       "totalMessages": 1
     },
     "Omid Sa": {
@@ -123,9 +120,7 @@
     "ai1🥭6seventees": {
       "id": "1046971226641408020",
       "username": "coconutchoir",
-      "roles": [
-        "Verified"
-      ],
+      "roles": "Verified",
       "totalMessages": 1
     }
   }
